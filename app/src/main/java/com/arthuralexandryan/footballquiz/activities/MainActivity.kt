@@ -1,17 +1,15 @@
-package com.arthuralexandryan.footballquiz.activities;
+package com.arthuralexandryan.footballquiz.activities
 
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import com.arthuralexandryan.footballquiz.databinding.ActivityMainBinding;
+import android.os.Bundle
+import com.arthuralexandryan.footballquiz.databinding.ActivityMainBinding
 
-public class MainActivity extends AppCompatActivity {
+class MainActivity : BaseActivity() {
 
-    private ActivityMainBinding binding;
+    private lateinit var binding: ActivityMainBinding
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }
