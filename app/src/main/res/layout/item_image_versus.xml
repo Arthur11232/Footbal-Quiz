@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vs_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Versus 1"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.arthuralexandryan.footballquiz.views.CircleImageView
+            android:id="@+id/vs_item"
+            android:layout_width="@dimen/ring_dimen"
+            android:layout_height="@dimen/ring_dimen"
+            android:onClick="startGame"
+            android:padding="16dp" />
+
+        <com.arthuralexandryan.footballquiz.views.CircleImageView
+            android:layout_width="@dimen/ring_dimen"
+            android:layout_height="@dimen/ring_dimen"
+            android:src="@drawable/round_gold" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vs_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Versus 2"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

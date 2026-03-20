@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/place"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/place_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="132dp"
+        android:src="@drawable/england_flag" />
+
+    <TextView
+        android:id="@+id/text_place_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place_flag"
+        android:layout_marginTop="-112dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/fq_colorWhite"
+        android:text="@string/text_date"
+        android:textSize="22sp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/opacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_opacity28" />
+
+    <TextView
+        android:id="@+id/text_place_position"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/opacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_position"
+        android:textStyle="bold"
+        android:textColor="@color/fq_colorWhite"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_place_confederation"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/text_place_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_confederation"
+        android:textColor="@color/fq_colorWhite"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:paddingEnd="54dp"
+        android:paddingStart="54dp"
+        android:id="@+id/text_place_federation"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/text_place_confederation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_federation"
+        android:textColor="@color/fq_colorWhite"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/text_place_league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/place_flag"
+        android:layout_below="@+id/text_place_federation"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/text_league"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

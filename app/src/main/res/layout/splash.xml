@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/football" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/loading_ball"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="214dp"
+        android:src="@drawable/ball" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="18sp" />
+
+</RelativeLayout>

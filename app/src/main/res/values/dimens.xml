@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="poligon_with">150dp</dimen>
+    <dimen name="poligon_height">160dp</dimen>
+    <dimen name="ring_dimen">120dp</dimen>
+    <dimen name="dimens_answers_top">4dp</dimen>
+    <dimen name="Idpi_quest_cou_size">25dp</dimen>
+    <dimen name="Idpi_quest_num_txtSize">14sp</dimen>
+</resources>

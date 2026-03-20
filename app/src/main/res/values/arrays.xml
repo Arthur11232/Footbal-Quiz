@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="Top5Titles">
+        <item> France  </item>
+        <item> Germany </item>
+        <item> Italy   </item>
+        <item> England </item>
+        <item> Spain   </item>
+    </string-array>
+
+    <string-array name="UFATitles" tools:ignore="InconsistentArrays">
+        <item> Super Cup             </item>
+        <item> Europa League         </item>
+        <item> Champions League      </item>
+        <item> European Championship </item>
+    </string-array>
+
+    <string-array name="WorldChampionship">
+        <item>World Championship</item>
+    </string-array>
+
+    <string-array name="Versus">
+        <item>Versus</item>
+    </string-array>
+
+    <string-array name="allPlaces">
+        <item> France  </item>
+        <item> Germany </item>
+        <item> Italy   </item>
+        <item> England </item>
+        <item> Spain   </item>
+        <item> Super Cup             </item>
+        <item> Europa League         </item>
+        <item> Champions League      </item>
+        <item> European Championship </item>
+        <item>World Championship</item>
+        <item>Versus</item>
+    </string-array>
+</resources>

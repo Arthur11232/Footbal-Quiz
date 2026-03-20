@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/vs_bg">
+
+    <include
+        android:id="@+id/scoreboard"
+        layout="@layout/scoreboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+    <include
+        android:id="@+id/real_madrid"
+        layout="@layout/item_image_versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_above="@+id/vs_text" />
+
+    <TextView
+        android:layout_marginTop="-16dp"
+        android:layout_marginBottom="-16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="VS"
+        android:typeface="normal"
+        android:textStyle="bold"
+        android:id="@+id/vs_text"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="72sp" />
+
+    <include
+        android:id="@+id/barcelona"
+        layout="@layout/item_image_versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/vs_text"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_opacity28" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/onBack"
+        android:layout_below="@+id/scoreboard"
+        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/baseline_keyboard_backspace_white_36"/>
+
+    <include
+        android:id="@+id/lock_screen"
+        layout="@layout/lock_layer"
+        android:background="#80000000"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

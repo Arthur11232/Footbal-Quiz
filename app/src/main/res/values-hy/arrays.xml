@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="Top5Titles">
+        <item>Ֆրանսիա</item>
+        <item>Գերմանիա</item>
+        <item>Իտալիա</item>
+        <item>Անգլիա</item>
+        <item>Իսպանիա</item>
+    </string-array>
+
+    <string-array name="UFATitles" tools:ignore="InconsistentArrays">
+        <item>Սուպեր Գավաթ</item>
+        <item>Եվրոպայի Լիգա</item>
+        <item>Եվրոպայի առաջնություն</item>
+        <item>Չեմպիոնների Լիգա</item>
+    </string-array>
+
+    <string-array name="WorldChampionship">
+        <item>Աշխարհի Առաջնություն</item>
+    </string-array>
+
+    <string-array name="Versus">
+        <item>Ընդդեմ</item>
+    </string-array>
+
+</resources>

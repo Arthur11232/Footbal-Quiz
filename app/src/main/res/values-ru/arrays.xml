@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Top5Titles">
+        <item>Франсиа</item>
+        <item>Германия</item>
+        <item>Италия</item>
+        <item>Англия</item>
+        <item>Испания</item>
+    </string-array>
+
+    <string-array name="UFATitles">
+        <item>Суперкубок</item>
+        <item>Лига Европы</item>
+        <item>Чемпионат Европы</item>
+        <item>Лига Чемпионов</item>
+    </string-array>
+
+    <string-array name="WorldChampionship">
+        <item>Чемпионат Mира</item>
+    </string-array>
+
+
+    <string-array name="Versus">
+        <item>Против</item>
+    </string-array>
+
+
+</resources>

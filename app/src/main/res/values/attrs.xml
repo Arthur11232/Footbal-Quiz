@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TintTargetImageView">
+        <attr name="tint_compat" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="VideoView">
+        <attr name="leftLabel" format="string" />
+        <attr name="rightLabel" format="string" />
+        <attr name="leftLabelStyle" format="reference" />
+        <attr name="rightLabelStyle" format="reference" />
+    </declare-styleable>
+
+    <!--<declare-styleable name="CircleProgressBar">-->
+        <!--<attr name="min" format="integer" />-->
+        <!--<attr name="max" format="integer" />-->
+        <!--<attr name="progress" format="integer" />-->
+        <!--<attr name="progressbarColor" format="color" />-->
+        <!--<attr name="barThickness" format="dimension" />-->
+        <!--<attr name="progressBarThickness" format="dimension" />-->
+    <!--</declare-styleable>-->
+
+</resources>

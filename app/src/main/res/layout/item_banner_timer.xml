@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:textColor="#7E0404"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:id="@+id/item_time"
+        android:background="@drawable/shape_timer_item"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fq_colorWhite"
+        android:text="Days"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

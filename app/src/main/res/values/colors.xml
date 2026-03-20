@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4e67f8</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <!--<color name="fq_colorPrimary">#406f0f</color>-->
+    <color name="fq_colorPrimary">#00692c</color>138
+    <color name="fq_colorPrimaryDark">#00692c</color>
+    <color name="fq_colorRightAnswer">#00692c</color>
+    <color name="fq_colorWrongAnswer">#690000</color>
+    <color name="fq_colorWaitingAnswer">#00b34b</color>
+    <color name="fq_colorAccent">#7e042e</color>
+    <color name="fq_colorBackground">#00692c</color>
+    <color name="fq_colorButtonText">#225404</color>
+    <color name="fq_colorButtonNormal">#fcae40</color>
+    <color name="fq_colorWhite">#ffffff</color>
+    <color name="fq_colorBlack">#000000</color>
+
+    <color name="fq_colorFranc">#0b1336</color>
+    <color name="fq_colorGermany">#a31b1f</color>
+    <color name="fq_colorItaly">#1c357f</color>
+    <color name="fq_colorEngland">#c00e4b</color>
+    <color name="fq_colorSpain">#a61b1f</color>
+
+    <color name="fq_colorSuperCup">#004520</color>
+    <color name="fq_colorEuropa">#09120e</color>
+    <color name="fq_colorChampions">#0b1336</color>
+    <color name="fq_colorEuro">#115c6b</color>
+
+    <color name="fq_colorWorld">#9b9c9c</color>
+</resources>

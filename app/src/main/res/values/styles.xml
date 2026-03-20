@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="FootballQuiz" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/fq_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/fq_colorPrimaryDark</item>
+        <item name="colorAccent">@color/fq_colorAccent</item>
+        <item name="android:windowBackground">@color/fq_colorBackground</item>
+        <item name="android:buttonStyle">@style/FQ_Buttons</item>
+        <item name="android:alertDialogTheme">@style/FQ_AlertDialog</item>
+    </style>
+
+    <style name="FQ_Buttons" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">@color/fq_colorButtonText</item>
+        <item name="android:colorButtonNormal">@color/fq_colorButtonNormal</item>
+    </style>
+
+    <style name="FQ_AlertDialog" parent="AlertDialog.AppCompat.Light">
+        <item name="android:windowBackground">@color/fq_colorBackground</item>
+    </style>
+
+    <style name="FootballQuiz.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FootballQuiz.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="FootballQuiz.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="FQ_ToolbarDarkOverflow" parent="ThemeOverlay.AppCompat.Dark">
+        <!-- android:textColorPrimary is the  color of the name text
+             in the Toolbar, in the Theme.AppCompat theme:  -->
+        <item name="android:textColorPrimary">@color/fq_colorWhite</item>
+
+        <!-- android:textColorPrimaryInverse is the  color of the name
+             text in the Toolbar, in the Theme.AppCompat.Light theme:  -->
+        <item name="android:textColorPrimaryInverse">@color/fq_colorWhite</item>
+    </style>
+</resources>
