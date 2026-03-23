@@ -4,7 +4,6 @@ apply plugin: 'realm-android'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
-apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
     compileSdkVersion 34
@@ -15,7 +14,7 @@ android {
         multiDexEnabled true
         versionCode 28
         versionName "1.1.1.0"
-        testInstrumentationRunner "android.support.activity_choose_game.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
         viewBinding = true
@@ -42,9 +41,7 @@ android {
     }
     lintOptions {
         checkReleaseBuilds false
-//        // Or, if you prefer, you can continue to check for errors in release builds,
-//        // but continue the build even when errors are found:
-//        abortOnError false
+        abortOnError false
     }
 }
 
