@@ -41,6 +41,9 @@
         <action
             android:id="@+id/action_choose_to_category"
             app:destination="@id/categoryPageFragment" />
+        <action
+            android:id="@+id/action_choose_to_versus"
+            app:destination="@id/versusFragment" />
     </fragment>
 
     <fragment
@@ -53,6 +56,16 @@
             app:argType="string" />
         <action
             android:id="@+id/action_category_to_play"
+            app:destination="@id/playFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/versusFragment"
+        android:name="com.arthuralexandryan.footballquiz.fragments.VersusFragment"
+        android:label="VersusFragment"
+        tools:layout="@layout/activity_versus">
+        <action
+            android:id="@+id/action_versus_to_play"
             app:destination="@id/playFragment" />
     </fragment>
 

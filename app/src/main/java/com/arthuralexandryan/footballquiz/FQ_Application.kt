@@ -18,21 +18,18 @@ class FQ_Application : Application() {
         super.onCreate()
         instance = this
         Realm.init(this)
-        MobileAds.initialize(this, getString(R.string.AdUser))
+        
+        // Инициализация MobileAds с пустым слушателем (современно)
+        MobileAds.initialize(this) {}
+
         val realmConfiguration = RealmConfiguration.Builder()
             .name("FootballQuiz")
             .allowWritesOnUiThread(true)
-             .schemaVersion(1)
-            // .migration(DB_Migration())
+            .schemaVersion(1)
             .build()
         Realm.getInstance(realmConfiguration)
         Realm.setDefaultConfiguration(realmConfiguration)
     }
-
-    // override fun onTerminate() {
-    //     Realm.getDefaultInstance().close()
-    //     super.onTerminate()
-    // }
 
     fun setDB(dbHelper: DB_Helper, questions: GetQuestions, isNew: Boolean) {
         dbHelper.setFranceQuestions(questions.getFrance().harcer)

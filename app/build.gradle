@@ -1,44 +1,51 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.google.firebase.crashlytics'
+// apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'realm-android'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
 android {
-    compileSdkVersion 34
+    namespace "com.arthuralexandryan.footballquiz"
+    compileSdkVersion 35
+    
     defaultConfig {
         applicationId "com.arthuralexandryan.footballquiz"
         minSdkVersion 21
-        targetSdkVersion 34
+        targetSdkVersion 35
         multiDexEnabled true
         versionCode 28
         versionName "1.1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    
     buildFeatures {
         viewBinding = true
     }
+    
     buildTypes {
+        debug {}
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     android.applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            outputFileName = "${"Football_Quiz"}_${variant.versionName}.apk"
+            outputFileName = "Football_Quiz_${variant.versionName}.apk"
         }
     }
+    
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
@@ -47,36 +54,37 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.core:core:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    androidTestImplementation 'junit:junit:4.13-beta-3'
+    
+    // Core & AppCompat (Обновлено для Android 15)
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.activity:activity-ktx:1.9.3'
+
     // Firebase
-    implementation platform('com.google.firebase:firebase-bom:32.7.0')
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-crashlytics'
-    implementation 'com.google.firebase:firebase-ads:18.1.1'
+    implementation 'com.google.android.gms:play-services-ads:23.5.0'
     implementation 'com.google.firebase:firebase-messaging'
 
-    implementation 'com.google.android.gms:play-services-ads:18.1.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
     // Navigation Component
-    def nav_version = "2.3.5"
+    def nav_version = "2.8.3"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    // Lifecycle + ViewModel
-    def lifecycle_version = "2.4.0"
+    // Lifecycle
+    def lifecycle_version = "2.8.7"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
     // Coroutines
-    def coroutines_version = "1.5.2"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0"
+    
+    androidTestImplementation 'junit:junit:4.13.2'
 }
+
 repositories {
     mavenCentral()
 }

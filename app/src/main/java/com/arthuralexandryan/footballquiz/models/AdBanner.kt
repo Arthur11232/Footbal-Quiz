@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
 
 class AdBanner(private val adView: AdView) {
 
@@ -12,7 +13,7 @@ class AdBanner(private val adView: AdView) {
     }
 
     private fun createBannerAdView() {
-        val adRequest = AdRequest.Builder().addTestDevice("5FB76465AA8B88DE6B66D105F23DF90D").build()
+        val adRequest = AdRequest.Builder().build()
         adView.adListener = adListener
         adView.loadAd(adRequest)
     }
@@ -22,10 +23,24 @@ class AdBanner(private val adView: AdView) {
     fun destroyLoading() = adView.destroy()
 
     private val adListener = object : AdListener() {
-        override fun onAdLoaded() { Log.e("mAdView", "onAdLoaded") }
-        override fun onAdFailedToLoad(errorCode: Int) { Log.e("mAdView", "onAdFailedToLoad") }
-        override fun onAdOpened() { Log.e("mAdView", "onAdOpened") }
-        override fun onAdLeftApplication() { Log.e("mAdView", "onAdLeftApplication") }
-        override fun onAdClosed() { Log.e("mAdView", "onAdClosed") }
+        override fun onAdLoaded() {
+            Log.e("mAdView", "onAdLoaded")
+        }
+
+        override fun onAdFailedToLoad(error: LoadAdError) {
+            Log.e("mAdView", "onAdFailedToLoad: ${error.message}")
+        }
+
+        override fun onAdOpened() {
+            Log.e("mAdView", "onAdOpened")
+        }
+
+        override fun onAdClosed() {
+            Log.e("mAdView", "onAdClosed")
+        }
+        
+        override fun onAdClicked() {
+            Log.e("mAdView", "onAdClicked")
+        }
     }
 }

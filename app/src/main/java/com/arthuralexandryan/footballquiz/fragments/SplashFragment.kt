@@ -13,7 +13,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.arthuralexandryan.footballquiz.BuildConfig
 import com.arthuralexandryan.footballquiz.FQ_Application
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
@@ -144,7 +143,13 @@ class SplashFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun initView() {
-        binding.textVersion.text = "${getString(R.string.version)} ${BuildConfig.VERSION_NAME}"
+        val versionName = try {
+            val pInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
+            pInfo.versionName
+        } catch (e: Exception) {
+            "1.0"
+        }
+        binding.textVersion.text = "${getString(R.string.version)} $versionName"
         dbHelper = DB_Helper()
         questions = GetQuestions(requireContext())
     }

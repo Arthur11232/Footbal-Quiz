@@ -1,7 +1,6 @@
 package com.arthuralexandryan.footballquiz.fragments
 
 import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -10,11 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
-import com.arthuralexandryan.footballquiz.constants.Constant.LOG_APP
 import com.arthuralexandryan.footballquiz.databinding.ActivityPlayNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.interfaces.ResetGame
@@ -25,15 +22,14 @@ import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.utils.Prefer
-import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.InterstitialAd
-import com.google.android.gms.ads.MobileAds
-import com.google.android.gms.ads.reward.RewardItem
-import com.google.android.gms.ads.reward.RewardedVideoAd
-import com.google.android.gms.ads.reward.RewardedVideoAdListener
-import java.io.Serializable
-import java.util.*
+import com.google.android.gms.ads.FullScreenContentCallback
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import java.util.Random
 
 class PlayFragment : Fragment(), ResetGame, ShowAds {
 
@@ -55,8 +51,8 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private var n: Int = 0
 
     private lateinit var adMob: AdBanner
-    private lateinit var mInterstitialAd: InterstitialAd
-    private lateinit var mRewardedVideoAd: RewardedVideoAd
+    private var mInterstitialAd: InterstitialAd? = null
+    private var mRewardedAd: RewardedAd? = null
     private var counter: Int = 0
     private var forceReloadBarrier: Int = 20
     private lateinit var adMobPresenter: AdMobPresenter
@@ -72,27 +68,50 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         adMobPresenter = AdMobPresenter(this)
         adMob = AdBanner(binding.FQBannerAdView)
         
-        mInterstitialAd = InterstitialAd(requireContext())
-        mInterstitialAd.adUnitId = getString(R.string.interstitial_ad_unit_id)
-        mInterstitialAd.loadAd(AdRequest.Builder().addTestDevice("5FB76465AA8B88DE6B66D105F23DF90D").build())
-        mInterstitialAd.adListener = object : AdListener() {
-            override fun onAdClosed() {
-                mInterstitialAd.loadAd(AdRequest.Builder().addTestDevice("5FB76465AA8B88DE6B66D105F23DF90D").build())
-            }
-        }
-
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(requireContext())
-        mRewardedVideoAd.rewardedVideoAdListener = videoAdListener
-        loadRewardedVideoAd()
+        loadInterstitialAd()
+        loadRewardedAd()
 
         arguments?.let {
             processArguments(it)
         }
     }
 
-    private fun loadRewardedVideoAd() {
-        mRewardedVideoAd.loadAd(getString(R.string.video_ad_unit_id),
-            AdRequest.Builder().addTestDevice("5FB76465AA8B88DE6B66D105F23DF90D").build())
+    private fun loadInterstitialAd() {
+        val adRequest = AdRequest.Builder().build()
+        InterstitialAd.load(requireContext(), getString(R.string.interstitial_ad_unit_id), adRequest,
+            object : InterstitialAdLoadCallback() {
+                override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                    mInterstitialAd = interstitialAd
+                    mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+                        override fun onAdDismissedFullScreenContent() {
+                            mInterstitialAd = null
+                            loadInterstitialAd()
+                        }
+                    }
+                }
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    mInterstitialAd = null
+                }
+            })
+    }
+
+    private fun loadRewardedAd() {
+        val adRequest = AdRequest.Builder().build()
+        RewardedAd.load(requireContext(), getString(R.string.video_ad_unit_id), adRequest,
+            object : RewardedAdLoadCallback() {
+                override fun onAdLoaded(rewardedAd: RewardedAd) {
+                    mRewardedAd = rewardedAd
+                    mRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+                        override fun onAdDismissedFullScreenContent() {
+                            mRewardedAd = null
+                            loadRewardedAd()
+                        }
+                    }
+                }
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    mRewardedAd = null
+                }
+            })
     }
 
     private fun processArguments(data: Bundle) {
@@ -115,11 +134,14 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         binding.forceReset.isEnabled = isResetEnable
         
         binding.forceReset.setOnClickListener {
-            if (mRewardedVideoAd.isLoaded) {
-                mRewardedVideoAd.show()
+            if (mRewardedAd != null) {
+                mRewardedAd?.show(requireActivity()) { rewardItem ->
+                    adMobPresenter.onShow(rewardItem.amount)
+                }
             } else {
                 dbHelper.resetPlace(placeScores.place_score_answer, this, true)
                 isResetEnable = false
+                loadRewardedAd()
             }
         }
         
@@ -223,10 +245,10 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
                 }
                 if (counter == 5) {
                     counter = 0
-                    if (mInterstitialAd.isLoaded) {
-                        mInterstitialAd.show()
+                    if (mInterstitialAd != null) {
+                        mInterstitialAd?.show(requireActivity())
                     } else {
-                        mInterstitialAd.loadAd(AdRequest.Builder().addTestDevice("5FB76465AA8B88DE6B66D105F23DF90D").build())
+                        loadInterstitialAd()
                     }
                 }
             }
@@ -280,10 +302,13 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         
         binding.finishGame.root.findViewById<ImageView>(R.id.reload_game).setOnClickListener {
             isResetEnable = false
-            if (mRewardedVideoAd.isLoaded) {
-                mRewardedVideoAd.show()
+            if (mRewardedAd != null) {
+                mRewardedAd?.show(requireActivity()) { rewardItem ->
+                    adMobPresenter.onShow(rewardItem.amount)
+                }
             } else {
                 dbHelper.resetPlace(placeScores.place_score_answer, this, false)
+                loadRewardedAd()
             }
         }
     }
@@ -332,21 +357,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     override fun onDestroyView() {
         super.onDestroyView()
         adMob.destroyLoading()
-        mRewardedVideoAd.destroy(requireContext())
         _binding = null
-    }
-
-    private val videoAdListener = object : RewardedVideoAdListener {
-        override fun onRewarded(reward: RewardItem) {
-            adMobPresenter.onShow(reward.amount)
-        }
-        override fun onRewardedVideoAdLeftApplication() {}
-        override fun onRewardedVideoAdClosed() { loadRewardedVideoAd() }
-        override fun onRewardedVideoAdFailedToLoad(errorCode: Int) {}
-        override fun onRewardedVideoAdLoaded() {}
-        override fun onRewardedVideoAdOpened() {}
-        override fun onRewardedVideoStarted() {}
-        override fun onRewardedVideoCompleted() { loadRewardedVideoAd() }
     }
 
     override fun show(amount: Int) {
