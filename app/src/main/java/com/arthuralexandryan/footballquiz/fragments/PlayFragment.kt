@@ -66,7 +66,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         super.onViewCreated(view, savedInstanceState)
         
         adMobPresenter = AdMobPresenter(this)
-        adMob = AdBanner(binding.FQBannerAdView)
+        adMob = AdBanner(requireActivity(), binding.FQBannerAdView as android.view.ViewGroup, getString(R.string.banner_ad_unit_id))
         
         loadInterstitialAd()
         loadRewardedAd()

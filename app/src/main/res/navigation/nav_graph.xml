@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_start_to_terms"
             app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_start_to_profile"
+            app:destination="@id/profileFragment" />
     </fragment>
 
     <fragment
@@ -102,5 +105,27 @@
         android:name="com.arthuralexandryan.footballquiz.fragments.TermsFragment"
         android:label="TermsFragment"
         tools:layout="@layout/activity_terms" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.arthuralexandryan.footballquiz.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.arthuralexandryan.footballquiz.fragments.TestFragment"
+        android:label="TestFragment"
+        tools:layout="@layout/activity_test">
+        <action
+            android:id="@+id/action_test_to_touch"
+            app:destination="@id/touchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/touchFragment"
+        android:name="com.arthuralexandryan.footballquiz.fragments.TouchFragment"
+        android:label="TouchFragment"
+        tools:layout="@layout/activity_touch" />
 
 </navigation>

@@ -16,6 +16,8 @@
     <string name="your_score">Your Score</string>
     <string name="answer_correct">Правильный</string>
     <string name="answer_incorect">Неправильный</string>
+    <string name="user">User</string>
+    <string name="login_with_google">Login With Google</string>
 
     // FRANSIA
 

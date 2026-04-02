@@ -66,6 +66,30 @@
         android:textColor="#fff"
         android:textStyle="bold" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_play"
+        android:visibility="visible"
+        android:drawableStart="@drawable/ic_google_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/agreement"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp"
+        android:text="@string/login_with_google"
+        style="@style/FQ_Buttons"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/my_account"
+        android:text="@string/user"
+        android:visibility="gone"
+        android:layout_above="@+id/agreement"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="14sp"
+        android:layout_marginBottom="54dp"/>
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_alignParentBottom="true"

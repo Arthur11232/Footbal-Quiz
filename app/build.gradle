@@ -7,15 +7,15 @@ apply plugin: 'kotlin-parcelize'
 
 android {
     namespace "com.arthuralexandryan.footballquiz"
-    compileSdkVersion 35
+    compileSdkVersion 36
     
     defaultConfig {
         applicationId "com.arthuralexandryan.footballquiz"
-        minSdkVersion 21
+        minSdkVersion 23 // Обновлено с 21 до 23 для совместимости с Firebase Auth
         targetSdkVersion 35
         multiDexEnabled true
         versionCode 28
-        versionName "1.1.1.0"
+        versionName "1.3.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     
@@ -27,7 +27,7 @@ android {
         debug {}
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     
@@ -39,52 +39,64 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
 
     android.applicationVariants.all { variant ->
         variant.outputs.all { output ->
             outputFileName = "Football_Quiz_${variant.versionName}.apk"
         }
     }
-    
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     
-    // Core & AppCompat (Обновлено для Android 15)
-    implementation 'androidx.core:core-ktx:1.15.0'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
-    implementation 'androidx.activity:activity-ktx:1.9.3'
+    // Core & AppCompat
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.activity.ktx
 
     // Firebase
-    implementation platform('com.google.firebase:firebase-bom:33.5.1')
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.android.gms:play-services-ads:23.5.0'
-    implementation 'com.google.firebase:firebase-messaging'
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.analytics
+    implementation libs.firebase.auth
+    implementation libs.firebase.messaging
+    implementation libs.play.services.auth
+    implementation libs.play.services.ads
 
     // Navigation Component
-    def nav_version = "2.8.3"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
 
     // Lifecycle
-    def lifecycle_version = "2.8.7"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.lifecycle.runtime.ktx
 
     // Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0"
-    
-    androidTestImplementation 'junit:junit:4.13.2'
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.firebase.firestore
+
+    // Jackson
+    implementation (
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1']
+    )
+
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
 
 repositories {
+    google()
     mavenCentral()
 }

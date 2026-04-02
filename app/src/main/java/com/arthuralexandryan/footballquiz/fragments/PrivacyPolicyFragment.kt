@@ -28,7 +28,7 @@ class PrivacyPolicyFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         
         setToolbar(getString(R.string.title_privacy_policy))
-        binding.privacyJustifiedText.setText(getString(R.string.fq_privacy_policy))
+        binding.privacyJustifiedText.text = getString(R.string.fq_privacy_policy)
         
         binding.toolbar.setNavigationIcon(R.drawable.baseline_keyboard_backspace_24)
         binding.toolbar.setNavigationOnClickListener {

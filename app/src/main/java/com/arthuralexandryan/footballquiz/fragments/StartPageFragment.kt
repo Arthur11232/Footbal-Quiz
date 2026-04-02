@@ -1,6 +1,5 @@
 package com.arthuralexandryan.footballquiz.fragments
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -21,9 +20,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.FQ_Application
 import com.arthuralexandryan.footballquiz.R
+import com.arthuralexandryan.footballquiz.auth.AuthManager
+import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.databinding.ActivityStartPageBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.models.GetQuestions
+import com.arthuralexandryan.footballquiz.models.IsSetQuestions
+import com.arthuralexandryan.footballquiz.models.FirestoreQuestionService
+import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import java.util.regex.Pattern
@@ -33,9 +36,35 @@ class StartPageFragment : Fragment(), View.OnClickListener {
     private var _binding: ActivityStartPageBinding? = null
     private val binding get() = _binding!!
     
-    private lateinit var questions: GetQuestions
+
+    private lateinit var firestoreService: FirestoreQuestionService
+    private lateinit var authManager: AuthManager
     private lateinit var dbHelper: DB_Helper
     private var isNew: Boolean = false
+    
+    private val signInLauncher = registerForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            val task = com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent(result.data)
+            try {
+                val account = task.getResult(com.google.android.gms.common.api.ApiException::class.java)
+                account.idToken?.let { token ->
+                    authManager.signInWithFirebase(token) { success: Boolean, user: com.google.firebase.auth.FirebaseUser? ->
+                        if (success) {
+                            updateUI(user)
+                        } else {
+                            android.widget.Toast.makeText(requireContext(), "Firebase Auth Failed", android.widget.Toast.LENGTH_SHORT).show()
+                            updateUI(null)
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                android.util.Log.e("StartPageFragment", "Sign-in failed", e)
+                updateUI(null)
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -54,9 +83,25 @@ class StartPageFragment : Fragment(), View.OnClickListener {
         binding.tvGame.setOnClickListener(this)
         binding.tvContinue.setOnClickListener(this)
         binding.tvLanguage.setOnClickListener(this)
+        binding.signInPlay.setOnClickListener(this)
+        binding.myAccount.setOnClickListener(this)
+
 
         initView()
         setAgreements()
+        updateUI(authManager.getCurrentUser())
+    }
+
+    private fun updateUI(user: com.google.firebase.auth.FirebaseUser?) {
+        if (_binding == null) return
+        if (user != null) {
+            binding.signInPlay.visibility = View.GONE
+            binding.myAccount.visibility = View.VISIBLE
+            binding.myAccount.text = user.email
+        } else {
+            binding.signInPlay.visibility = View.VISIBLE
+            binding.myAccount.visibility = View.GONE
+        }
     }
 
     private fun setToolbar(title: String) {
@@ -81,19 +126,67 @@ class StartPageFragment : Fragment(), View.OnClickListener {
 
     private fun initView() {
         dbHelper = DB_Helper()
-        questions = GetQuestions(requireContext())
+
+        firestoreService = FirestoreQuestionService.getInstance()
+        authManager = AuthManager(requireContext())
     }
 
-    fun onCheck(isNew: Boolean) {
-        questions.getAllQuestions()
-        FQ_Application.getInstance().setDB(dbHelper, questions, isNew)
+    fun fetchQuestionsFromFirestore() {
+        binding.tvGame.isEnabled = false
+        binding.tvGame.text = "Loading..."
+        
+        firestoreService.getQuestions(
+            Prefer.getStringPreference(requireContext(), Constants.Localization, "en") ?: "en"
+        ) { success, questionsList ->
+            if (success && questionsList != null) {
+                val mappedQuestions = questionsList.map { q ->
+                    com.arthuralexandryan.footballquiz.models.QuestionModel().apply {
+                        question = q.question ?: ""
+                        place = q.type ?: ""
+                        answered = q.isAnswered
+                        answers = com.arthuralexandryan.footballquiz.models.Answers().apply {
+                            A = q.answer_A ?: ""
+                            B = q.answer_B ?: ""
+                            C = q.answer_C ?: ""
+                            D = q.answer_D ?: ""
+                            right = q.right_answer ?: ""
+                        }
+                    }
+                }
+                
+                requireActivity().runOnUiThread {
+                    DB_Helper().setQuestionsToDB(mappedQuestions, isNew, IsSetQuestions {
+                        Prefer.setBooleanPreference(requireContext(), INIT_DB, true)
+                        binding.tvGame.isEnabled = true
+                        binding.tvGame.setText(R.string.new_game)
+                        newGame(requireContext(), false)
+                    })
+                }
+            } else {
+                requireActivity().runOnUiThread {
+                    binding.tvGame.isEnabled = true
+                    binding.tvGame.setText(R.string.new_game)
+                    android.widget.Toast.makeText(requireContext(), "Internet connection required for first-time setup.", android.widget.Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
+    private fun onCheck() {
+        val realm = io.realm.Realm.getDefaultInstance()
+        realm.executeTransaction { r -> DB_Helper().setDefaultAllScores(r) }
+        realm.close()
     }
 
     override fun onClick(view: View) {
         when (view.id) {
             R.id.tvGame -> {
                 if (isNew) {
-                    newGame(requireContext())
+                    if (Prefer.getBooleanPreference(requireContext(), INIT_DB, false)) {
+                        newGame(requireContext(), true)
+                    } else {
+                        fetchQuestionsFromFirestore()
+                    }
                 } else {
                     getNewGameDialog(requireContext()).show()
                 }
@@ -104,60 +197,83 @@ class StartPageFragment : Fragment(), View.OnClickListener {
             R.id.tvLanguage -> {
                 openLanguageDialog()
             }
+            R.id.sign_in_play -> {
+                signInLauncher.launch(authManager.getSignInIntent())
+            }
+            R.id.my_account -> {
+                findNavController().navigate(R.id.action_start_to_profile)
+            }
         }
     }
 
-    private fun newGame(context: Context) {
+    private fun newGame(context: Context, isFromDB: Boolean) {
         Prefer.setBooleanPreference(context, "isFirstPlay", false)
-        onCheck(true)
+        if (isFromDB) onCheck()
         findNavController().navigate(R.id.action_start_to_choose)
     }
 
-    private fun getNewGameDialog(context: Context): AlertDialog {
-        return AlertDialog.Builder(context).setTitle(R.string.new_game)
-            .setMessage(R.string.text_for_new_game)
-            .setPositiveButton(R.string.new_yes) { _, _ ->
-                newGame(context)
-            }
-            .setNegativeButton(R.string.new_no) { dialog, _ -> dialog.dismiss() }
-            .create()
+    private fun getNewGameDialog(context: Context): android.app.Dialog {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_new_game, null)
+        val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
+        dialog.setContentView(dialogView)
+        dialog.window?.apply {
+            setBackgroundDrawableResource(android.R.color.transparent)
+            setLayout(
+                (resources.displayMetrics.widthPixels * 0.9).toInt(),
+                android.view.WindowManager.LayoutParams.WRAP_CONTENT
+            )
+        }
+        dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn_yes).setOnClickListener {
+            dialog.dismiss()
+            newGame(context, true)
+        }
+        dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn_no).setOnClickListener {
+            dialog.dismiss()
+        }
+        return dialog
     }
 
     private fun openLanguageDialog() {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setView(R.layout.dialog_languages)
-        builder.setTitle(R.string.languages)
-        val dialog = builder.create()
-        dialog.setCanceledOnTouchOutside(false)
-        dialog.show()
+        val dialogView = layoutInflater.inflate(R.layout.dialog_language, null)
+        val dialog = android.app.Dialog(requireContext(), R.style.FQ_CustomDialog)
+        dialog.setContentView(dialogView)
+        dialog.setCanceledOnTouchOutside(true)
+        dialog.window?.apply {
+            setBackgroundDrawableResource(android.R.color.transparent)
+            setLayout(
+                (resources.displayMetrics.widthPixels * 0.9).toInt(),
+                android.view.WindowManager.LayoutParams.WRAP_CONTENT
+            )
+        }
 
-        val group = dialog.findViewById<RadioGroup>(R.id.app_languages)
-        if (group != null) {
-            group.check(Prefer.getIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian))
-            group.setOnCheckedChangeListener { radioGroup, i ->
-                var locale = "ru"
-                if (i == R.id.lng_armenian) {
+        val group = dialogView.findViewById<RadioGroup>(R.id.app_languages)
+        group.check(Prefer.getIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian))
+        group.setOnCheckedChangeListener { radioGroup, i ->
+            var locale = "ru"
+            when (i) {
+                R.id.lng_armenian -> {
                     locale = getString(R.string.local_armenian)
                     Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_armenian)
-                } else if (i == R.id.lng_russian) {
+                }
+                R.id.lng_russian -> {
                     locale = getString(R.string.local_russian)
                     Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian)
                 }
-                Prefer.setStringPreference(requireContext(), Constants.Localization, locale)
-
-                for (j in 0 until radioGroup.childCount) {
-                    radioGroup.getChildAt(j).isClickable = false
+                else -> {
+                    locale = "en"
+                    Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_english)
                 }
-
-                object : CountDownTimer(1000, 1000) {
-                    override fun onTick(millisUntilFinished: Long) {}
-                    override fun onFinish() {
-                        dialog.dismiss()
-                        requireActivity().recreate()
-                    }
-                }.start()
             }
+            Prefer.setStringPreference(requireContext(), Constants.Localization, locale)
+            for (j in 0 until radioGroup.childCount) radioGroup.getChildAt(j).isClickable = false
         }
+
+        dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.save_language).setOnClickListener {
+            dialog.dismiss()
+            requireActivity().recreate()
+        }
+
+        dialog.show()
     }
 
     private fun setAgreements() {
