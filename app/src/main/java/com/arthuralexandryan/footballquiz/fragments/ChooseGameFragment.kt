@@ -11,11 +11,12 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_UEFA_SCORE
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_WORLD_SCORE
 import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameBinding
+import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 
 class ChooseGameFragment : Fragment(), View.OnClickListener {
 
-    private var _binding: ActivityChooseGameBinding? = null
+    private var _binding: ActivityChooseGameNewBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var db: DB_Helper
@@ -26,7 +27,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = ActivityChooseGameBinding.inflate(inflater, container, false)
+        _binding = ActivityChooseGameNewBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -90,6 +90,9 @@ class StartPageFragment : Fragment(), View.OnClickListener {
         initView()
         setAgreements()
         updateUI(authManager.getCurrentUser())
+
+
+
     }
 
     private fun updateUI(user: com.google.firebase.auth.FirebaseUser?) {
