@@ -4,6 +4,7 @@
     <string name="new_game">Новая игра</string>
     <string name="Continue">Продолжить</string>
     <string name="Language">Язык</string>
+    <string name="loading">Загрузка...</string>
     <string name="top_5_tournament">Топ 5</string>
     <string name="uefa">УЕФА</string>
     <string name="world_championship">Чемпионат\nмира</string>

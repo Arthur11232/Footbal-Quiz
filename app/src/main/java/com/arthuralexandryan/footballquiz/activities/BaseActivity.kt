@@ -17,11 +17,19 @@ open class BaseActivity : AppCompatActivity() {
     protected var categoryType: String? = null
     protected var categoryName: String? = null
 
+    override fun attachBaseContext(newBase: android.content.Context) {
+        val lang = Prefer.getStringPreference(newBase, Constants.Localization, "ru") ?: "ru"
+        val locale = java.util.Locale(lang)
+        java.util.Locale.setDefault(locale)
+        val config = android.content.res.Configuration(newBase.resources.configuration)
+        config.setLocale(locale)
+        super.attachBaseContext(newBase.createConfigurationContext(config))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Установка локализации
         val lang = Prefer.getStringPreference(this, Constants.Localization, "ru") ?: "ru"
         setLocale(lang)
+        super.onCreate(savedInstanceState)
     }
 
     fun setToolbar(title: String?) {
@@ -33,7 +41,8 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     fun setLocale(localeName: String) {
-        val myLocale = Locale(localeName)
+        val myLocale = java.util.Locale(localeName)
+        java.util.Locale.setDefault(myLocale)
         val res = resources
         val dm = res.displayMetrics
         val conf = res.configuration

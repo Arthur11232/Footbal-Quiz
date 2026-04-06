@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -24,27 +25,27 @@ import com.arthuralexandryan.footballquiz.auth.AuthManager
 import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.databinding.ActivityStartPageBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
+import com.arthuralexandryan.footballquiz.models.Answers
 import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.FirestoreQuestionService
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
+import com.arthuralexandryan.footballquiz.models.QuestionModel
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import java.util.regex.Pattern
 
-class StartPageFragment : Fragment(), View.OnClickListener {
+class StartPageFragment : Fragment() {
 
     private var _binding: ActivityStartPageBinding? = null
     private val binding get() = _binding!!
-    
+
 
     private lateinit var firestoreService: FirestoreQuestionService
     private lateinit var authManager: AuthManager
     private lateinit var dbHelper: DB_Helper
     private var isNew: Boolean = false
-    
-    private val signInLauncher = registerForActivityResult(
-        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
-    ) { result ->
+
+    private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             val task = com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent(result.data)
             try {
@@ -67,9 +68,9 @@ class StartPageFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         _binding = ActivityStartPageBinding.inflate(inflater, container, false)
         return binding.root
@@ -80,19 +81,16 @@ class StartPageFragment : Fragment(), View.OnClickListener {
 
         setToolbar(getString(R.string.title_start_page))
 
-        binding.tvGame.setOnClickListener(this)
-        binding.tvContinue.setOnClickListener(this)
-        binding.tvLanguage.setOnClickListener(this)
-        binding.signInPlay.setOnClickListener(this)
-        binding.myAccount.setOnClickListener(this)
+        binding.tvGame.setOnClickListener { handleGameClick() }
+        binding.tvContinue.setOnClickListener{ handleContinueClick() }
+        binding.tvLanguage.setOnClickListener{ handleLanguageClick() }
+        binding.signInPlay.setOnClickListener{ handleSignInClick() }
+        binding.myAccount.setOnClickListener{ handleProfileClick() }
 
 
         initView()
         setAgreements()
         updateUI(authManager.getCurrentUser())
-
-
-
     }
 
     private fun updateUI(user: com.google.firebase.auth.FirebaseUser?) {
@@ -116,6 +114,10 @@ class StartPageFragment : Fragment(), View.OnClickListener {
 
     override fun onStart() {
         super.onStart()
+        refreshContinueButton()
+    }
+
+    private fun refreshContinueButton() {
         if (Prefer.getBooleanPreference(requireContext(), "isFirstPlay", true)) {
             binding.tvContinue.isEnabled = false
             binding.tvContinue.alpha = 0.33f
@@ -134,20 +136,35 @@ class StartPageFragment : Fragment(), View.OnClickListener {
         authManager = AuthManager(requireContext())
     }
 
-    fun fetchQuestionsFromFirestore() {
+    private fun showLoading() {
+        binding.loadingLayout.visibility = View.VISIBLE
         binding.tvGame.isEnabled = false
-        binding.tvGame.text = "Loading..."
+        binding.tvContinue.isEnabled = false
+        binding.tvLanguage.isEnabled = false
+        binding.signInPlay.isEnabled = false
+    }
+
+    private fun hideLoading() {
+        binding.loadingLayout.visibility = View.GONE
+        binding.tvGame.isEnabled = true
+        binding.tvLanguage.isEnabled = true
+        binding.signInPlay.isEnabled = true
+        refreshContinueButton()
+    }
+
+    private fun fetchQuestionsFromFirestore(onComplete: () -> Unit) {
+        val selectedLocale = Prefer.getStringPreference(requireContext(), Constants.Localization, "ru") ?: "ru"
         
-        firestoreService.getQuestions(
-            Prefer.getStringPreference(requireContext(), Constants.Localization, "en") ?: "en"
-        ) { success, questionsList ->
+        showLoading()
+
+        firestoreService.getQuestions(selectedLocale) { success, questionsList ->
             if (success && questionsList != null) {
                 val mappedQuestions = questionsList.map { q ->
-                    com.arthuralexandryan.footballquiz.models.QuestionModel().apply {
+                    QuestionModel().apply {
                         question = q.question ?: ""
                         place = q.type ?: ""
                         answered = q.isAnswered
-                        answers = com.arthuralexandryan.footballquiz.models.Answers().apply {
+                        answers = Answers().apply {
                             A = q.answer_A ?: ""
                             B = q.answer_B ?: ""
                             C = q.answer_C ?: ""
@@ -156,21 +173,36 @@ class StartPageFragment : Fragment(), View.OnClickListener {
                         }
                     }
                 }
-                
+
                 requireActivity().runOnUiThread {
                     DB_Helper().setQuestionsToDB(mappedQuestions, isNew, IsSetQuestions {
                         Prefer.setBooleanPreference(requireContext(), INIT_DB, true)
-                        binding.tvGame.isEnabled = true
-                        binding.tvGame.setText(R.string.new_game)
-                        newGame(requireContext(), false)
+                        // Track which language is actually in the database now
+                        Prefer.setStringPreference(requireContext(), "db_lang", selectedLocale)
+                        
+                        hideLoading()
+                        onComplete()
                     })
                 }
             } else {
                 requireActivity().runOnUiThread {
-                    binding.tvGame.isEnabled = true
-                    binding.tvGame.setText(R.string.new_game)
-                    android.widget.Toast.makeText(requireContext(), "Internet connection required for first-time setup.", android.widget.Toast.LENGTH_LONG).show()
+                    hideLoading()
+                    android.widget.Toast.makeText(requireContext(), "Internet connection required to download questions.", android.widget.Toast.LENGTH_LONG).show()
                 }
+            }
+        }
+    }
+
+    private fun ensureLocalizationSync(onReady: () -> Unit) {
+        val selectedLocale = Prefer.getStringPreference(requireContext(), Constants.Localization, "en") ?: "en"
+        val questionsLocale = Prefer.getStringPreference(requireContext(), "db_lang", "")
+        val isInitialized = Prefer.getBooleanPreference(requireContext(), INIT_DB, false)
+
+        if (isInitialized && selectedLocale == questionsLocale) {
+            onReady()
+        } else {
+            fetchQuestionsFromFirestore {
+                onReady()
             }
         }
     }
@@ -181,32 +213,32 @@ class StartPageFragment : Fragment(), View.OnClickListener {
         realm.close()
     }
 
-    override fun onClick(view: View) {
-        when (view.id) {
-            R.id.tvGame -> {
-                if (isNew) {
-                    if (Prefer.getBooleanPreference(requireContext(), INIT_DB, false)) {
-                        newGame(requireContext(), true)
-                    } else {
-                        fetchQuestionsFromFirestore()
-                    }
-                } else {
-                    getNewGameDialog(requireContext()).show()
-                }
-            }
-            R.id.tvContinue -> {
-                findNavController().navigate(R.id.action_start_to_choose)
-            }
-            R.id.tvLanguage -> {
-                openLanguageDialog()
-            }
-            R.id.sign_in_play -> {
-                signInLauncher.launch(authManager.getSignInIntent())
-            }
-            R.id.my_account -> {
-                findNavController().navigate(R.id.action_start_to_profile)
+    private fun handleGameClick() {
+        ensureLocalizationSync {
+            if (isNew) {
+                newGame(requireContext(), true)
+            } else {
+                getNewGameDialog(requireContext()).show()
             }
         }
+    }
+
+    private fun handleContinueClick() {
+        ensureLocalizationSync {
+            findNavController().navigate(R.id.action_start_to_choose)
+        }
+    }
+
+    private fun handleLanguageClick() {
+        openLanguageDialog()
+    }
+
+    private fun handleSignInClick() {
+        signInLauncher.launch(authManager.getSignInIntent())
+    }
+
+    private fun handleProfileClick() {
+        findNavController().navigate(R.id.action_start_to_profile)
     }
 
     private fun newGame(context: Context, isFromDB: Boolean) {
@@ -222,8 +254,8 @@ class StartPageFragment : Fragment(), View.OnClickListener {
         dialog.window?.apply {
             setBackgroundDrawableResource(android.R.color.transparent)
             setLayout(
-                (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                android.view.WindowManager.LayoutParams.WRAP_CONTENT
+                    (resources.displayMetrics.widthPixels * 0.9).toInt(),
+                    android.view.WindowManager.LayoutParams.WRAP_CONTENT
             )
         }
         dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn_yes).setOnClickListener {
@@ -244,27 +276,28 @@ class StartPageFragment : Fragment(), View.OnClickListener {
         dialog.window?.apply {
             setBackgroundDrawableResource(android.R.color.transparent)
             setLayout(
-                (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                android.view.WindowManager.LayoutParams.WRAP_CONTENT
+                    (resources.displayMetrics.widthPixels * 0.9).toInt(),
+                    android.view.WindowManager.LayoutParams.WRAP_CONTENT
             )
         }
 
         val group = dialogView.findViewById<RadioGroup>(R.id.app_languages)
         group.check(Prefer.getIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian))
         group.setOnCheckedChangeListener { radioGroup, i ->
-            var locale = "ru"
-            when (i) {
+            val locale = when (i) {
                 R.id.lng_armenian -> {
-                    locale = getString(R.string.local_armenian)
                     Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_armenian)
+                    "hy"
                 }
+
                 R.id.lng_russian -> {
-                    locale = getString(R.string.local_russian)
                     Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian)
+                    "ru"
                 }
+
                 else -> {
-                    locale = "en"
                     Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_english)
+                    "en"
                 }
             }
             Prefer.setStringPreference(requireContext(), Constants.Localization, locale)
@@ -288,11 +321,14 @@ class StartPageFragment : Fragment(), View.OnClickListener {
             val start = privacyMatcher.start()
             val end = privacyMatcher.end()
             agreementSpannable.setSpan(
-                ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.fq_colorBackground)),
-                start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+                    ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.fq_colorBackground)),
+                    start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
             )
             agreementSpannable.setSpan(object : ClickableSpan() {
-                override fun updateDrawState(ds: TextPaint) { ds.isUnderlineText = false }
+                override fun updateDrawState(ds: TextPaint) {
+                    ds.isUnderlineText = false
+                }
+
                 override fun onClick(widget: View) {
                     findNavController().navigate(R.id.action_start_to_privacy)
                 }
@@ -305,11 +341,14 @@ class StartPageFragment : Fragment(), View.OnClickListener {
             val start = termsMatcher.start()
             val end = termsMatcher.end()
             agreementSpannable.setSpan(
-                ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.fq_colorBackground)),
-                start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+                    ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.fq_colorBackground)),
+                    start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
             )
             agreementSpannable.setSpan(object : ClickableSpan() {
-                override fun updateDrawState(ds: TextPaint) { ds.isUnderlineText = false }
+                override fun updateDrawState(ds: TextPaint) {
+                    ds.isUnderlineText = false
+                }
+
                 override fun onClick(widget: View) {
                     findNavController().navigate(R.id.action_start_to_terms)
                 }

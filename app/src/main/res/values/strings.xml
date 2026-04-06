@@ -18,6 +18,7 @@
     <string name="answer_incorect">Неправильный</string>
     <string name="user">User</string>
     <string name="login_with_google">Login With Google</string>
+    <string name="loading">Loading...</string>
 
     // FRANSIA
 
