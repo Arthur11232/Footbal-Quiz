@@ -20,6 +20,31 @@
     <string name="login_with_google">Login With Google</string>
     <string name="loading">Loading...</string>
 
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_statistics">Statistics</string>
+    <string name="profile_sync">Sync Stats</string>
+    <string name="profile_sync_success">Stats synced successfully</string>
+    <string name="profile_sync_error">Sync failed: %s</string>
+    <string name="profile_restore_title">Restore Progress</string>
+    <string name="profile_restore_message">"We found cloud progress with a higher score (%d). Do you want to restore it?"</string>
+    <string name="profile_restore_confirm">Restore</string>
+    <string name="profile_restore_cancel">Cancel</string>
+    <string name="profile_sync_conflict_title">Sync Conflict</string>
+    <string name="profile_sync_conflict_message">"Cloud Score: %1$d | Local Score: %2$d. What would you like to do?"</string>
+    <string name="profile_sync_restore_button">Restore from Cloud</string>
+    <string name="profile_sync_overwrite_button">Overwrite Cloud</string>
+    <string name="profile_sync_up_to_date">Sync is up to date!</string>
+    <string name="profile_progress_restored">Progress restored!</string>
+    <string name="profile_cloud_backup_created">Cloud backup created</string>
+    <string name="profile_sync_generic_error">Unknown error</string>
+    <string name="profile_total_score">Total Score</string>
+    <string name="profile_questions_answered">Questions Answered</string>
+    <string name="profile_sign_out">Sign Out</string>
+    <string name="profile_edit_photo">Edit Photo</string>
+    <string name="profile_guest">Guest</string>
+    <string name="profile_not_signed_in">Not signed in</string>
+
     // FRANSIA
 
     <string name="franc_text_federation">Федерация футбола Франции</string>

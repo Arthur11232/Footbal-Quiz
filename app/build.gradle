@@ -79,9 +79,16 @@ dependencies {
     implementation libs.androidx.lifecycle.livedata.ktx
     implementation libs.androidx.lifecycle.runtime.ktx
 
-    // Coroutines
+    // Coroutines & Firestore
     implementation libs.kotlinx.coroutines.android
     implementation libs.firebase.firestore
+
+    // Firebase Storage
+    implementation libs.firebase.storage
+
+    // Glide
+    implementation libs.glide
+    annotationProcessor libs.glide.compiler
 
     // Jackson
     implementation (

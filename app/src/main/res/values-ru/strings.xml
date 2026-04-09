@@ -5,6 +5,31 @@
     <string name="Continue">Продолжить</string>
     <string name="Language">Язык</string>
     <string name="loading">Загрузка...</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Профиль</string>
+    <string name="profile_statistics">Статистика</string>
+    <string name="profile_sync">Синхронизировать</string>
+    <string name="profile_sync_success">Статистика синхронизирована</string>
+    <string name="profile_sync_error">Ошибка синхронизации: %s</string>
+    <string name="profile_restore_title">Восстановить прогресс</string>
+    <string name="profile_restore_message">"Найдены сохранения в облаке с большим счетом (%d). Желаете восстановить их?"</string>
+    <string name="profile_restore_confirm">Восстановить</string>
+    <string name="profile_restore_cancel">Отмена</string>
+    <string name="profile_sync_conflict_title">Конфликт синхронизации</string>
+    <string name="profile_sync_conflict_message">"Счет в облаке: %1$d | Локальный счет: %2$d. Что выберете?"</string>
+    <string name="profile_sync_restore_button">Скачать из облака</string>
+    <string name="profile_sync_overwrite_button">Загрузить в облако</string>
+    <string name="profile_sync_up_to_date">Синхронизация не требуется</string>
+    <string name="profile_progress_restored">Прогресс восстановлен</string>
+    <string name="profile_cloud_backup_created">Резервная копия сохранена в облаке</string>
+    <string name="profile_sync_generic_error">Неизвестная ошибка</string>
+    <string name="profile_total_score">Общий счет</string>
+    <string name="profile_questions_answered">Отвечено вопросов</string>
+    <string name="profile_sign_out">Выйти</string>
+    <string name="profile_edit_photo">Изменить фото</string>
+    <string name="profile_guest">Гость</string>
+    <string name="profile_not_signed_in">Не в сети</string>
     <string name="top_5_tournament">Топ 5</string>
     <string name="uefa">УЕФА</string>
     <string name="world_championship">Чемпионат\nмира</string>
@@ -2278,4 +2303,3 @@
     <string name="coming_soon_game">Динамо Киев\nпротив\nСпартак Москва</string>
 
 </resources>
-

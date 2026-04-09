@@ -18,6 +18,7 @@ import com.arthuralexandryan.footballquiz.interfaces.ResetGame
 import com.arthuralexandryan.footballquiz.interfaces.ShowAds
 import com.arthuralexandryan.footballquiz.models.AdBanner
 import com.arthuralexandryan.footballquiz.models.AdMobPresenter
+import com.arthuralexandryan.footballquiz.models.CloudSyncManager
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
@@ -29,6 +30,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import com.google.firebase.auth.FirebaseAuth
 import java.util.Random
 
 class PlayFragment : Fragment(), ResetGame, ShowAds {
@@ -351,6 +353,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     override fun onStop() {
         Prefer.setIntPreference(requireContext(), "save_question_state", n)
+        syncProgressIfSignedIn()
         super.onStop()
     }
 
@@ -362,5 +365,12 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     override fun show(amount: Int) {
         dbHelper.resetPlace(placeScores.place_score_answer, this, isResetEnable)
+    }
+
+    private fun syncProgressIfSignedIn() {
+        val user = FirebaseAuth.getInstance().currentUser ?: return
+        if (!isAdded) return
+
+        CloudSyncManager.uploadLocalStats(requireContext(), user) { _, _ -> }
     }
 }

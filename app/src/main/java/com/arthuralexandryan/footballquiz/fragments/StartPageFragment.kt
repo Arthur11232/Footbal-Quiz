@@ -9,10 +9,12 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioGroup
+import androidx.appcompat.widget.AppCompatButton
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -26,10 +28,12 @@ import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.databinding.ActivityStartPageBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.models.Answers
-import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.FirestoreQuestionService
+import com.arthuralexandryan.footballquiz.models.CloudSyncManager
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
+import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.QuestionModel
+import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import java.util.regex.Pattern
@@ -54,6 +58,7 @@ class StartPageFragment : Fragment() {
                     authManager.signInWithFirebase(token) { success: Boolean, user: com.google.firebase.auth.FirebaseUser? ->
                         if (success) {
                             updateUI(user)
+                            user?.let { maybeSyncCloudProgress(it) }
                         } else {
                             android.widget.Toast.makeText(requireContext(), "Firebase Auth Failed", android.widget.Toast.LENGTH_SHORT).show()
                             updateUI(null)
@@ -90,7 +95,8 @@ class StartPageFragment : Fragment() {
 
         initView()
         setAgreements()
-        updateUI(authManager.getCurrentUser())
+        val currentUser = authManager.getCurrentUser()
+        updateUI(currentUser)
     }
 
     private fun updateUI(user: com.google.firebase.auth.FirebaseUser?) {
@@ -115,6 +121,7 @@ class StartPageFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         refreshContinueButton()
+        authManager.getCurrentUser()?.let { maybeSyncCloudProgress(it) }
     }
 
     private fun refreshContinueButton() {
@@ -154,11 +161,12 @@ class StartPageFragment : Fragment() {
 
     private fun fetchQuestionsFromFirestore(onComplete: () -> Unit) {
         val selectedLocale = Prefer.getStringPreference(requireContext(), Constants.Localization, "ru") ?: "ru"
-        
+        Log.d("FQ_Log", "fetchQuestionsFromFirestore: locale=$selectedLocale, isNew=$isNew")
         showLoading()
 
         firestoreService.getQuestions(selectedLocale) { success, questionsList ->
             if (success && questionsList != null) {
+                Log.d("FQ_Log", "fetchQuestionsFromFirestore: loaded ${questionsList.size} questions for locale=$selectedLocale")
                 val mappedQuestions = questionsList.map { q ->
                     QuestionModel().apply {
                         question = q.question ?: ""
@@ -179,12 +187,13 @@ class StartPageFragment : Fragment() {
                         Prefer.setBooleanPreference(requireContext(), INIT_DB, true)
                         // Track which language is actually in the database now
                         Prefer.setStringPreference(requireContext(), "db_lang", selectedLocale)
-                        
+                        Log.d("FQ_Log", "fetchQuestionsFromFirestore: questions saved locally, locale=$selectedLocale")
                         hideLoading()
                         onComplete()
                     })
                 }
             } else {
+                Log.e("FQ_Log", "fetchQuestionsFromFirestore: failed to load questions for locale=$selectedLocale")
                 requireActivity().runOnUiThread {
                     hideLoading()
                     android.widget.Toast.makeText(requireContext(), "Internet connection required to download questions.", android.widget.Toast.LENGTH_LONG).show()
@@ -197,10 +206,16 @@ class StartPageFragment : Fragment() {
         val selectedLocale = Prefer.getStringPreference(requireContext(), Constants.Localization, "en") ?: "en"
         val questionsLocale = Prefer.getStringPreference(requireContext(), "db_lang", "")
         val isInitialized = Prefer.getBooleanPreference(requireContext(), INIT_DB, false)
+        Log.d(
+            "FQ_Log",
+            "ensureLocalizationSync: selectedLocale=$selectedLocale, questionsLocale=$questionsLocale, isInitialized=$isInitialized"
+        )
 
         if (isInitialized && selectedLocale == questionsLocale) {
+            Log.d("FQ_Log", "ensureLocalizationSync: local questions are up to date")
             onReady()
         } else {
+            Log.d("FQ_Log", "ensureLocalizationSync: refreshing questions from Firestore")
             fetchQuestionsFromFirestore {
                 onReady()
             }
@@ -214,10 +229,13 @@ class StartPageFragment : Fragment() {
     }
 
     private fun handleGameClick() {
+        Log.d("FQ_Log", "handleGameClick: user=${authManager.getCurrentUser()?.uid ?: "guest"}, isNew=$isNew")
         ensureLocalizationSync {
             if (isNew) {
+                Log.d("FQ_Log", "handleGameClick: starting a new game immediately")
                 newGame(requireContext(), true)
             } else {
+                Log.d("FQ_Log", "handleGameClick: showing new game dialog")
                 getNewGameDialog(requireContext()).show()
             }
         }
@@ -239,6 +257,80 @@ class StartPageFragment : Fragment() {
 
     private fun handleProfileClick() {
         findNavController().navigate(R.id.action_start_to_profile)
+    }
+
+    private fun maybeSyncCloudProgress(user: com.google.firebase.auth.FirebaseUser) {
+        if (_binding == null) return
+        Log.d("FQ_Log", "maybeSyncCloudProgress: checking cloud sync for user=${user.uid}")
+        CloudSyncManager.resolveSyncDecision(requireContext(), dbHelper, user) { decision ->
+            activity?.runOnUiThread {
+                when (decision) {
+                    is CloudSyncManager.SyncDecision.None -> {
+                        Log.d("FQ_Log", "maybeSyncCloudProgress: no sync action needed for user=${user.uid}")
+                    }
+                    is CloudSyncManager.SyncDecision.RestoreCloud -> {
+                        Log.d("FQ_Log", "maybeSyncCloudProgress: restore requested from cloud for user=${user.uid}")
+                        showRestoreProgressDialog(user.uid, decision.cloudStats)
+                    }
+                    is CloudSyncManager.SyncDecision.UploadLocal -> {
+                        Log.d("FQ_Log", "maybeSyncCloudProgress: uploading local progress for user=${user.uid}")
+                        CloudSyncManager.uploadLocalStats(requireContext(), decision.user) { success, _ ->
+                            if (success && isAdded) {
+                                activity?.runOnUiThread {
+                                    android.widget.Toast.makeText(
+                                        requireContext(),
+                                        getString(R.string.profile_cloud_backup_created),
+                                        android.widget.Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            }
+                            Log.d("FQ_Log", "maybeSyncCloudProgress: upload result success=$success for user=${user.uid}")
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun showRestoreProgressDialog(userId: String, cloudStats: UserStatsDTO) {
+        if (!isAdded) return
+
+        val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
+        val dialog = android.app.Dialog(requireContext(), R.style.FQ_CustomDialog)
+        dialog.setContentView(dialogView)
+        dialog.setCanceledOnTouchOutside(true)
+        dialog.window?.apply {
+            setBackgroundDrawableResource(android.R.color.transparent)
+            setLayout(
+                (resources.displayMetrics.widthPixels * 0.9).toInt(),
+                android.view.WindowManager.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_restore_title)
+        dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text =
+            getString(R.string.profile_restore_message, cloudStats.gameState.total)
+
+        dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
+            text = getString(R.string.profile_restore_confirm)
+            setOnClickListener {
+                dialog.dismiss()
+                CloudSyncManager.restoreCloudStats(requireContext(), dbHelper, userId, cloudStats)
+                refreshContinueButton()
+                android.widget.Toast.makeText(
+                    requireContext(),
+                    getString(R.string.profile_progress_restored),
+                    android.widget.Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+
+        dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
+            text = getString(R.string.profile_restore_cancel)
+            setOnClickListener { dialog.dismiss() }
+        }
+
+        dialog.show()
     }
 
     private fun newGame(context: Context, isFromDB: Boolean) {

@@ -1,5 +1,6 @@
 package com.arthuralexandryan.footballquiz.models
 
+import android.util.Log
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
@@ -22,11 +23,13 @@ class FirestoreQuestionService {
     private val mapper = ObjectMapper()
 
     fun getQuestions(localize: String, callback: OnGetFirestoreQuestions) {
+        Log.d("FQ_Log", "FirestoreQuestionService.getQuestions: locale=$localize")
         db.collection("questions")
             .whereEqualTo("translation", localize)
             .get()
             .addOnSuccessListener { result ->
                 if (result != null && !result.isEmpty) {
+                    Log.d("FQ_Log", "FirestoreQuestionService.getQuestions: success count=${result.size()} locale=$localize")
                     CoroutineScope(Dispatchers.IO).launch {
                         val questions = result.documents.map { doc ->
                             val qModel = mapper.convertValue(doc.data, FirestoreQuestionDTO::class.java)
@@ -45,10 +48,12 @@ class FirestoreQuestionService {
                         callback.onQuestionsLoaded(true, questions)
                     }
                 } else {
+                    Log.e("FQ_Log", "FirestoreQuestionService.getQuestions: empty result for locale=$localize")
                     callback.onQuestionsLoaded(false, null)
                 }
             }
-            .addOnFailureListener {
+            .addOnFailureListener { error ->
+                Log.e("FQ_Log", "FirestoreQuestionService.getQuestions: failed for locale=$localize", error)
                 callback.onQuestionsLoaded(false, null)
             }
     }

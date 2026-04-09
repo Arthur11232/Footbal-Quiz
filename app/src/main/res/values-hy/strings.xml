@@ -5,6 +5,31 @@
     <string name="Continue">Շարունակելի</string>
     <string name="Language">Լեզու</string>
     <string name="loading">Բեռնում...</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Պրոֆիլ</string>
+    <string name="profile_statistics">Վիճակագրություն</string>
+    <string name="profile_sync">Սինխրոնացնել</string>
+    <string name="profile_sync_success">Վիճակագրությունը սինխրոնացված է</string>
+    <string name="profile_sync_error">Սինխրոնացման սխալ: %s</string>
+    <string name="profile_restore_title">Վերականգնել առաջընթացը</string>
+    <string name="profile_restore_message">"Հայտնաբերվել է ամպային պահպանում ավելի բարձր միավորով (%d): Ցանկանու՞մ եք վերականգնել այն:"</string>
+    <string name="profile_restore_confirm">Վերականգնել</string>
+    <string name="profile_restore_cancel">Չեղարկել</string>
+    <string name="profile_sync_conflict_title">Սինխրոնացման անհամապատասխանություն</string>
+    <string name="profile_sync_conflict_message">"Ամպային միավոր: %1$d | Լոկալ միավոր: %2$d: Ի՞նչ եք ցանկանում անել:"</string>
+    <string name="profile_sync_restore_button">Վերականգնել ամպից</string>
+    <string name="profile_sync_overwrite_button">Վերագրել ամպը</string>
+    <string name="profile_sync_up_to_date">Տվյալները համընկնում են:</string>
+    <string name="profile_progress_restored">Առաջընթացը վերականգնված է</string>
+    <string name="profile_cloud_backup_created">Պահուստային պատճենը պահվել է ամպում</string>
+    <string name="profile_sync_generic_error">Անհայտ սխալ</string>
+    <string name="profile_total_score">Ընդհանուր միավոր</string>
+    <string name="profile_questions_answered">Պատասխանված հարցեր</string>
+    <string name="profile_sign_out">Դուրս գալ</string>
+    <string name="profile_edit_photo">Փոխել նկարը</string>
+    <string name="profile_guest">Հյուր</string>
+    <string name="profile_not_signed_in">Մուտք գործված չէ</string>
     <string name="top_5_tournament">Թոփ 5</string>
     <string name="uefa">ՈւԵՖԱ</string>
     <string name="world_championship">Աշխարհի\nԱռաջնություն</string>
