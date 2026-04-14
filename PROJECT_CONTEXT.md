@@ -17,55 +17,82 @@
 - **Язык:** Практически полная миграция на Kotlin.
 - **UI:** Поддержка Edge-to-Edge (Android 15), внедрены кастомные диалоги (New Game, Language) с дизайном из версии 1.8.
 - **Localization 2.0:** Реализован "Smart Sync" (авто-обновление вопросов при смене языка) и исправлено отображение локализованного UI через `BaseActivity` (`attachBaseContext`).
+- **Cloud Sync 2.0:** Реализовано автоматическое восстановление и резервное копирование прогресса через Firestore. При входе в аккаунт и каждом открытии стартового экрана приложение сравнивает локальный и облачный прогресс, предлагает восстановление при необходимости и автоматически выгружает локальные данные, если они новее.
+- **Recovery UX:** После восстановления прогресса автоматически разблокируется `Continue` (`isFirstPlay = false`), чтобы пользователь мог сразу продолжить игру после переустановки приложения или смены устройства.
+- **Custom Sync Dialogs:** Системные диалоги восстановления/конфликта синхронизации заменены на кастомный layout `dialog_cloud_sync.xml` в стиле проекта.
 - **Очистка:** Удалены устаревшие Java-классы (`TestActivity`, `TouchActivity`).
 - **Offline:** Реализована логика офлайн-игры (загрузка из Firestore -> сохранение в Realm).
+- **Debug Logging:** Добавлены точечные логи с тегом `FQ_Log` для сценариев `New Game`, загрузки вопросов из Firestore и cloud sync/recovery, чтобы упростить анализ `logcat`.
 
 ---
 
 ## 🚀 Текущий план модернизации (Backlog)
 
+1.  **Архитектура: ViewModel & Flow**
+    - **Задача:** Отказ от `GlobalScope` и переход на архитектурные компоненты (Coroutines, Flow, ViewModel).
+    - **Статус:** ⏳ В планах.
+
+---
+
+## 📚 История этапов
+
 1.  **AdMob: Адаптивные баннеры**
-    - **Задача:** Перенос логики `Adaptive Banner` из версии 1.8 в текущий проект.
+    - **Результат:** Логика `Adaptive Banner` перенесена из версии 1.8.
     - **Статус:** ✅ Завершено.
 
 2.  **Firebase: Localization & Firestore Sync**
-    - **Задача:** Автоматическая перекачка вопросов при смене языка с сохранением прогресса.
-    - **Статус:** ✅ Завершено (реализовано в `StartPageFragment`).
+    - **Результат:** Реализована автоматическая перекачка вопросов при смене языка с сохранением прогресса.
+    - **Статус:** ✅ Завершено.
 
 3.  **Auth: Google Sign-In**
-    - **Задача:** Реализация авторизации через Google для сохранения прогресса.
-    - **Статус:** ✅ Завершено (интегрировано в `AuthManager` и `StartPageFragment`).
+    - **Результат:** Google Sign-In интегрирован через `AuthManager` и `StartPageFragment`.
+    - **Статус:** ✅ Завершено.
 
 4.  **UI Modernization: Choose Game Screen**
-    - **Задача:** Реконструкция honeycomb-сетки на `ConstraintLayout` с 100% визуальным соответствием оригиналу.
-    - **Статус:** ✅ Завершено (реализован гибридный подход).
+    - **Результат:** Honeycomb-сетка реконструирована на `ConstraintLayout` с сохранением визуального соответствия оригиналу.
+    - **Статус:** ✅ Завершено.
 
 5.  **UI Modernization: Custom Dialogs**
-    - **Задача:** Замена стандартных `AlertDialog` на кастомные диалоги с дизайном оригинальной игры.
+    - **Результат:** Стандартные `AlertDialog` заменены на кастомные диалоги в стиле проекта.
     - **Статус:** ✅ Завершено.
 
 6.  **Контент: Аудит актуальности вопросов**
-    - **Задача:** Проверка всех футбольных вопросов на соответствие текущим фактам (трансферы, чемпионы, рекорды). Экспорт базы в JSON (EN, RU, HY).
-    - **Статус:** ✅ Завершено. Все **1938 вопросов** сохранены в `app/questions_audit.json`.
+    - **Результат:** Проверены и экспортированы все **1938 вопросов** в `app/questions_audit.json`. Дополнительно исправлен `categoryType` для всех вопросов `Europa League` (`UEFA`), а повторяющиеся формулировки с разными наборами ответов признаны допустимыми и вынесены в отдельную заметку для ручного контент-аудита.
+    - **Статус:** ✅ Завершено.
 
-7.  **UI Modernization: Google Sign-In Button (v1.8 style)**
-    - **Задача:** Перенос улучшенного дизайна кнопки из версии 1.8 и стандартизация стилей всех кнопок меню (170x40dp).
+7.  **UI Modernization: Google Sign-In Button**
+    - **Результат:** Перенесён дизайн кнопки входа из версии 1.8 и унифицированы размеры кнопок меню.
     - **Статус:** ✅ Завершено.
 
 8.  **Очистка проекта**
-    - **Задача:** Удаление лишних Java файлов (`TestActivity`, `TouchActivity`), перевод кастомных вью на Kotlin.
+    - **Результат:** Удалены лишние Java-файлы (`TestActivity`, `TouchActivity`), кастомные вью переведены на Kotlin.
     - **Статус:** ✅ Завершено.
 
-9.  **Архитектура: ViewModel & Flow**
-    - **Задача:** Отказ от `GlobalScope` и переход на архитектурные компоненты (Coroutines, Flow, ViewModel).
-    - **Статус:** ⏳ В планах.
+9.  **Cloud Sync: Manual -> Automatic**
+    - **Результат:** Ручная синхронизация перестала быть основным сценарием. Добавлены автопроверка на `StartPageFragment`, автозагрузка в cloud при выходе из `PlayFragment`, восстановление `Continue` после restore и кастомные recovery-диалоги.
+    - **Статус:** ✅ Завершено.
 
 ---
 
 ## 📝 Заметки
 - **Localization:** Для корректной смены языка без перезагрузки системы используется `attachBaseContext` в `BaseActivity`.
 - **Smart Sync:** Если `db_lang` в `SharedPreferences` не совпадает с выбранным языком, приложение автоматически скачивает новые вопросы при входе в игру ("New Game" или "Continue").
-- **Firestore:** Убедиться, что структура данных в Firestore соответствует `QuestionModel`.
+- **Firestore Questions:** Коллекция `questions` используется как публичный источник контента для локального кеширования в Realm. Для корректной работы гостевого режима правила Firestore должны разрешать чтение вопросов без авторизации.
+- **Cloud Progress:** Пользовательская статистика хранится отдельно и должна оставаться приватной (`users/{uid}` только для владельца). Логика сравнения прогресса вынесена в `CloudSyncManager`.
+- **Recovery Flow:** Восстановление прогресса больше не должно оставлять пользователя в состоянии "только New Game" после переустановки. После restore автоматически включается `Continue`.
+- **Debugging:** Для анализа проблем приложения использовать `adb logcat -s FQ_Log`. Это отсекает системный шум MIUI/Google Play Services и показывает только ключевой flow приложения.
+- **Question Audit JSON:** После локального анализа `questions_audit.json` пустой `categoryType` для `Europa League` устранён. Повторы формулировок вопроса с разными вариантами ответов не считаются ошибкой автоматически и требуют отдельной редакторской проверки.
+- **UEFA Currentness Review:** Начат поэтапный аудит актуальности вопросов. Для `Europa League` и `Champions League` внесены безопасные правки в `questions_audit.json`; во втором проходе после победы Tottenham `2024/25` обновлён ответ `Juventus, Tottenham` в вопросе among listed UEFA Cup / Europa League winners; детали зафиксированы в `app/questions_uefa_currentness_review.md`.
+- **World Championship Review:** Начат следующий этап аудита. Исправлены вопросы про большее число голов на ЧМ среди предложенных игроков (`Lionel Messi`), most appearances (`Lionel Messi`) и прохождение группы действующим чемпионом в XXI веке (`Brazil and France`); детали зафиксированы в `app/questions_world_currentness_review.md`.
+- **France Currentness Review:** Исправлены актуальные рекорды сборной Франции в `en/hy` по FFF: крупнейшая победа (`Gibraltar`), most caps (`Hugo Lloris`), top scorer (`Olivier Giroud`) и most matches as coach (`Didier Deschamps`); детали зафиксированы в `app/questions_france_currentness_review.md`.
+- **Germany Currentness Review:** Исправлены актуальные и явно ошибочные рекорды Germany/Bundesliga: `Manuel Neuer`, `RB Leipzig`, `Robert Lewandowski`, `Timo Konietzka`, `Charly Korbel`, coach count `12` и полный набор German World Cup Golden Boot winners; детали зафиксированы в `app/questions_germany_currentness_review.md`.
+- **Italy Currentness Review:** Исправлены актуальные рекорды Italy/Serie A: `Gianluigi Buffon`, `Juventus` в Supercoppa Italiana, `1968; 2020`, `Ciro Immobile` в рекорде одного сезона и `Dries Mertens` для Napoli; детали зафиксированы в `app/questions_italy_currentness_review.md`.
+- **Spain Currentness Review:** Исправлены актуальные рекорды Spain/La Liga: `4` EURO titles, `2` Olympic gold medals, `12` Olympic appearances, `Sergio Ramos`, `Lionel Messi` по Pichichi и два broken `right_answer`/варианта; детали зафиксированы в `app/questions_spain_currentness_review.md`.
+- **English Currentness Review:** Исправлены актуальные рекорды English/Premier League: `Liverpool, Manchester United`, `Tottenham`, `Manchester`, `Erling Haaland`, `Manchester United`, `Manchester City` и `Harry Kane`; детали зафиксированы в `app/questions_english_currentness_review.md`.
+- **vsRM Currentness Review:** Исправлены устаревшие и несинхронные ответы Ronaldo vs Messi по La Liga, UCL, World Cup, national team goals, Copa America, Club World Cup, Ballon d'Or / Golden Shoe и sponsor questions; последний global broken `right_answer` (`Brazil- Sweden`) приведён к варианту `Brazil - Sweden`; детали зафиксированы в `app/questions_vsrm_currentness_review.md`.
+- **vsRB Currentness Review:** Исправлены актуальные сравнения Real Madrid vs Barcelona по UEFA Super Cup `5+` (`Both`), LaLiga defeats `600+` (`Both`) и точному вопросу про `4` финала Club World Cup (`Barcelona`); детали зафиксированы в `app/questions_vsrb_currentness_review.md`.
+- **Super Cup Currentness Review:** Исправлены актуальные рекорды UEFA Super Cup после обновлений `2024/2025`: Real Madrid как лидер по титулам, Barcelona/Real Madrid по участиям, PSG/France case, `6` English clubs, `26` clubs total, Ancelotti, Carvajal/Modric, Diego Costa и проигранные Super Cup по Chelsea/Manchester United и Sevilla; детали зафиксированы в `app/questions_super_cup_currentness_review.md`.
+- **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 06.04.2026 (Локализация и рефакторинг UI завершены)*
+*Последнее обновление: 14.04.2026 (cloud sync/recovery, debug logging и поэтапный factual-audit вопросов продолжаются)*
