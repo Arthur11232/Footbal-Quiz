@@ -1,6 +1,8 @@
 package com.arthuralexandryan.footballquiz.fragments
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.SpannableString
@@ -422,7 +424,7 @@ class StartPageFragment : Fragment() {
                 }
 
                 override fun onClick(widget: View) {
-                    findNavController().navigate(R.id.action_start_to_privacy)
+                    openExternalLink(getString(R.string.privacy_policy_url))
                 }
             }, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         }
@@ -442,13 +444,20 @@ class StartPageFragment : Fragment() {
                 }
 
                 override fun onClick(widget: View) {
-                    findNavController().navigate(R.id.action_start_to_terms)
+                    openExternalLink(getString(R.string.terms_and_conditions_url))
                 }
             }, start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         }
 
         binding.agreement.text = agreementSpannable
         binding.agreement.movementMethod = LinkMovementMethod.getInstance()
+    }
+
+    private fun openExternalLink(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        if (intent.resolveActivity(requireContext().packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
     override fun onDestroyView() {

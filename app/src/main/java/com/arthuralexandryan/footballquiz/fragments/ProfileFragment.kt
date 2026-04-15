@@ -17,12 +17,16 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.auth.AuthManager
 import com.arthuralexandryan.footballquiz.databinding.FragmentProfileBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
+import com.arthuralexandryan.footballquiz.interfaces.Check
 import com.arthuralexandryan.footballquiz.models.CloudSyncManager
+import com.arthuralexandryan.footballquiz.models.UserStatsService
+import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.bumptech.glide.Glide
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
 import com.google.firebase.auth.GoogleAuthProvider
 import java.io.File
 import java.io.FileOutputStream
@@ -82,6 +86,10 @@ class ProfileFragment : Fragment() {
             }
         }
 
+        binding.btnDeleteAccount.setOnClickListener {
+            showDeleteAccountDialog()
+        }
+
         binding.btnEditPhoto.setOnClickListener {
             imagePickerLauncher.launch("image/*")
         }
@@ -114,6 +122,7 @@ class ProfileFragment : Fragment() {
             binding.btnSignOut.visibility = View.VISIBLE
             binding.btnEditPhoto.visibility = View.VISIBLE
             binding.btnSync.visibility = View.GONE
+            binding.btnDeleteAccount.visibility = View.VISIBLE
             
             checkCloudStats()
 
@@ -135,6 +144,7 @@ class ProfileFragment : Fragment() {
             binding.btnSignOut.visibility = View.GONE
             binding.btnEditPhoto.visibility = View.GONE
             binding.btnSync.visibility = View.GONE
+            binding.btnDeleteAccount.visibility = View.GONE
             
             if (localPhotoPath != null && File(localPhotoPath).exists()) {
                 Glide.with(this).load(localPhotoPath).into(binding.userPhoto)
@@ -230,6 +240,122 @@ class ProfileFragment : Fragment() {
         }
 
         dialog.show()
+    }
+
+    private fun showDeleteAccountDialog() {
+        val context = context ?: return
+        val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
+        val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
+        dialog.setContentView(dialogView)
+        dialog.setCanceledOnTouchOutside(true)
+        dialog.window?.apply {
+            setBackgroundDrawableResource(android.R.color.transparent)
+            setLayout(
+                (resources.displayMetrics.widthPixels * 0.9).toInt(),
+                android.view.WindowManager.LayoutParams.WRAP_CONTENT
+            )
+        }
+
+        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_delete_title)
+        dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text = getString(R.string.profile_delete_message)
+
+        dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
+            text = getString(R.string.profile_delete_confirm)
+            setOnClickListener {
+                dialog.dismiss()
+                deleteAccountAndData()
+            }
+        }
+
+        dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
+            text = getString(R.string.profile_delete_cancel)
+            setOnClickListener { dialog.dismiss() }
+        }
+
+        dialog.show()
+    }
+
+    private fun deleteAccountAndData() {
+        val user = authManager.getCurrentUser() ?: return
+        setDeleteInProgress(true)
+
+        UserStatsService.getInstance().deleteStats(user.uid) { cloudDeleted ->
+            activity?.runOnUiThread {
+                if (!cloudDeleted) {
+                    setDeleteInProgress(false)
+                    Toast.makeText(context, getString(R.string.profile_delete_error), Toast.LENGTH_LONG).show()
+                    return@runOnUiThread
+                }
+
+                clearLocalUserData(user.uid) {
+                    deleteFirebaseAccount(user)
+                }
+            }
+        }
+    }
+
+    private fun clearLocalUserData(userId: String, onComplete: () -> Unit) {
+        val context = context ?: return
+        val photoPath = Prefer.getStringPreference(context, Constants.UserPhotoKey + userId, null)
+        if (photoPath != null) {
+            File(photoPath).delete()
+        }
+        Prefer.getSharedPreferenceEditor(context)
+            .remove(Constants.UserPhotoKey + userId)
+            .remove(Constants.UserStatsLastSyncKeyPrefix + userId)
+            .putBoolean("isFirstPlay", true)
+            .apply()
+
+        dbHelper.deleteAll(object : Check {
+            override fun onCheck() {
+                activity?.runOnUiThread {
+                    onComplete()
+                }
+            }
+        }) {
+            activity?.runOnUiThread {
+                setDeleteInProgress(false)
+                Toast.makeText(context, getString(R.string.profile_delete_error), Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun deleteFirebaseAccount(user: com.google.firebase.auth.FirebaseUser) {
+        user.delete().addOnCompleteListener { task ->
+            val message = when {
+                task.isSuccessful -> getString(R.string.profile_delete_success)
+                task.exception is FirebaseAuthRecentLoginRequiredException -> getString(R.string.profile_delete_reauth_required)
+                else -> getString(R.string.profile_delete_auth_error)
+            }
+
+            authManager.signOut {
+                isCloudStatsChecked = false
+                activity?.runOnUiThread {
+                    setDeleteInProgress(false)
+                    updateUI()
+                    loadStatistics()
+                    Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+                    navigateBackToStartPage()
+                }
+            }
+        }
+    }
+
+    private fun navigateBackToStartPage() {
+        val navController = findNavController()
+        val poppedToStart = navController.popBackStack(R.id.startPageFragment, false)
+        if (!poppedToStart && navController.currentDestination?.id != R.id.startPageFragment) {
+            navController.navigate(R.id.startPageFragment)
+        }
+    }
+
+    private fun setDeleteInProgress(inProgress: Boolean) {
+        if (_binding == null) return
+        binding.uploadProgress.visibility = if (inProgress) View.VISIBLE else View.GONE
+        binding.btnDeleteAccount.isEnabled = !inProgress
+        binding.btnSignOut.isEnabled = !inProgress
+        binding.btnSignIn.isEnabled = !inProgress
+        binding.btnEditPhoto.isEnabled = !inProgress
     }
 
     private fun loadStatistics() {

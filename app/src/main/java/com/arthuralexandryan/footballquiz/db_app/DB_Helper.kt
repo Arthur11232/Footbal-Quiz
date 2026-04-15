@@ -291,9 +291,10 @@ class DB_Helper @JvmOverloads constructor(
         return getTotalScore().toString()
     }
 
-    private fun <T : RealmModel> disableAllAnswers(realm: Realm, tClass: Class<T>): RealmResults<T> {
+    private fun <T> disableAllAnswers(realm: Realm, tClass: Class<T>): RealmResults<T>
+            where T : RealmModel, T : DB_Base {
         val db = realm.where(tClass).findAll()
-        db.forEach { (it as DB_Base).isAnswered = false }
+        db.forEach { it.isAnswered = false }
         return db
     }
 
@@ -537,13 +538,32 @@ class DB_Helper @JvmOverloads constructor(
         realm.close()
     }
 
-    fun deleteAll(check: Check) {
+    fun deleteAll(check: Check, onError: ((Throwable) -> Unit)? = null) {
         val mRealm = Realm.getDefaultInstance()
         mRealm.executeTransactionAsync(Realm.Transaction { realm ->
             realm.where(FQ_Scores::class.java).findAll().deleteAllFromRealm()
+            disableAllAnswers(realm, DB_France::class.java)
+            disableAllAnswers(realm, DB_Germany::class.java)
+            disableAllAnswers(realm, DB_Italy::class.java)
+            disableAllAnswers(realm, DB_England::class.java)
+            disableAllAnswers(realm, DB_Spain::class.java)
+            disableAllAnswers(realm, DB_Super_Cup::class.java)
+            disableAllAnswers(realm, DB_Europa_League::class.java)
+            disableAllAnswers(realm, DB_Europ_Championship::class.java)
+            disableAllAnswers(realm, DB_Champions_League::class.java)
+            disableAllAnswers(realm, DB_World_Championship::class.java)
+            disableAllAnswers(realm, DB_VS_Ronaldo_Messi::class.java)
+            disableAllAnswers(realm, DB_VS_RealM_Barcelona::class.java)
+            setDefaultAllScores(realm)
         }, Realm.Transaction.OnSuccess {
             mRealm.close()
             check.onCheck()
+        }, Realm.Transaction.OnError { error ->
+            Log.e(LOG_DB, "deleteAll: failed to reset local Realm data", error)
+            if (!mRealm.isClosed) {
+                mRealm.close()
+            }
+            onError?.invoke(error)
         })
     }
 }

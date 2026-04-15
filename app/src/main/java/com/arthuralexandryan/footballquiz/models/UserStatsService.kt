@@ -50,4 +50,16 @@ class UserStatsService private constructor() {
                 onComplete(null)
             }
     }
+
+    fun deleteStats(userId: String, onComplete: (Boolean) -> Unit) {
+        db.collection(COLLECTION_USERS)
+            .document(userId)
+            .delete()
+            .addOnSuccessListener {
+                onComplete(true)
+            }
+            .addOnFailureListener {
+                onComplete(false)
+            }
+    }
 }
