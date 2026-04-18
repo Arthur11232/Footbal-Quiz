@@ -1,12 +1,18 @@
 package com.arthuralexandryan.footballquiz.fragments
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.DecelerateInterpolator
+import android.view.animation.OvershootInterpolator
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -58,6 +64,9 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private var counter: Int = 0
     private var forceReloadBarrier: Int = 20
     private lateinit var adMobPresenter: AdMobPresenter
+    private var goalAnimator: AnimatorSet? = null
+    private var flyingGoalBall: ImageView? = null
+    private var answerTimer: CountDownTimer? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = ActivityPlayNewBinding.inflate(inflater, container, false)
@@ -228,8 +237,10 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     private fun setTimerForChecking(answerView: View, answer: TextView) {
-        object : CountDownTimer(answerDelay, 1600) {
+        answerTimer?.cancel()
+        answerTimer = object : CountDownTimer(answerDelay, 1600) {
             override fun onTick(millisUntilFinished: Long) {
+                if (_binding == null) return
                 if (millisUntilFinished >= 1600) {
                     checkingAnswer(answer)
                     counter++
@@ -237,6 +248,9 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             }
 
             override fun onFinish() {
+                answerTimer = null
+                if (_binding == null || !isAdded) return
+
                 answerView.findViewById<ImageView>(R.id.answer_image).setImageResource(R.color.fq_colorWhite)
                 updateDBScores()
                 newGame()
@@ -264,17 +278,163 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             binding.answerIsCorrect.visibility = View.VISIBLE
             categoryScores.place_score_answer = categoryScores.place_score_answer + 1
             placeScores.place_score_answer = placeScores.place_score_answer + 1
-            binding.scoreboard.categoryAnswers.text = categoryScores.placeScoreAnswerText
-            binding.scoreboard.placeAnswer.text = placeScores.placeScoreAnswerText
             dbHelper.setCategoryScores()
+            setAnswered()
+            placeScores.place_score = placeScores.place_score - 1
+            shootBallToGoal {
+                if (_binding == null) return@shootBallToGoal
+                binding.scoreboard.categoryAnswers.text = categoryScores.placeScoreAnswerText
+                binding.scoreboard.placeAnswer.text = placeScores.placeScoreAnswerText
+                binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
+            }
         } else {
             binding.answerIsCorrect.setText(R.string.answer_incorect)
             binding.answerIsCorrect.setBackgroundResource(R.drawable.toast_shape_false)
             binding.answerIsCorrect.visibility = View.VISIBLE
+            setAnswered()
+            placeScores.place_score = placeScores.place_score - 1
+            binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
         }
-        setAnswered()
-        placeScores.place_score = placeScores.place_score - 1
-        binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
+    }
+
+    /**
+     * Uses a temporary overlay ball so the scoreboard's small nested layouts
+     * cannot clip the goal animation.
+     */
+    private fun shootBallToGoal(onGoal: () -> Unit) {
+        val currentBinding = _binding ?: return
+        val root = currentBinding.root as ViewGroup
+        val sourceBall = currentBinding.scoreboard.questionBall
+        val goal = currentBinding.scoreboard.answerBox
+
+        cancelGoalAnimation()
+
+        sourceBall.alpha = 0.25f
+        goal.scaleX = 1f
+        goal.scaleY = 1f
+
+        val rootLoc = IntArray(2)
+        val ballLoc = IntArray(2)
+        val goalLoc = IntArray(2)
+        root.getLocationOnScreen(rootLoc)
+        sourceBall.getLocationOnScreen(ballLoc)
+        goal.getLocationOnScreen(goalLoc)
+
+        val ballCenterX = ballLoc[0] + sourceBall.width / 2f
+        val ballCenterY = ballLoc[1] + sourceBall.height / 2f
+        val goalCenterX = goalLoc[0] + goal.width / 2f
+        val goalCenterY = goalLoc[1] + goal.height / 2f
+
+        val density = resources.displayMetrics.density
+        val ballSize = maxOf(sourceBall.width, sourceBall.height, (12f * density).toInt())
+        val startX = ballCenterX - rootLoc[0] - ballSize / 2f
+        val startY = ballCenterY - rootLoc[1] - ballSize / 2f
+        val endX = goalCenterX - rootLoc[0] - ballSize / 2f
+        val endY = goalCenterY - rootLoc[1] - ballSize / 2f
+        val arcHeight = maxOf(18f * density, kotlin.math.abs(endX - startX) * 0.12f)
+
+        val flyingBall = ImageView(requireContext()).apply {
+            setImageResource(R.drawable.ball)
+            scaleType = ImageView.ScaleType.FIT_CENTER
+            x = startX
+            y = startY
+            scaleX = 1.05f
+            scaleY = 1.05f
+            elevation = 12f * density
+        }
+        root.addView(flyingBall, ViewGroup.LayoutParams(ballSize, ballSize))
+        flyingGoalBall = flyingBall
+
+        val flight = ValueAnimator.ofFloat(0f, 1f).apply {
+            duration = 760
+            interpolator = DecelerateInterpolator()
+            addUpdateListener { animator ->
+                val t = animator.animatedValue as Float
+                val inverse = 1f - t
+                val controlX = (startX + endX) / 2f
+                val controlY = minOf(startY, endY) - arcHeight
+                flyingBall.x = inverse * inverse * startX + 2f * inverse * t * controlX + t * t * endX
+                flyingBall.y = inverse * inverse * startY + 2f * inverse * t * controlY + t * t * endY
+            }
+        }
+        val rotate = ObjectAnimator.ofFloat(flyingBall, "rotation", 0f, 540f).apply {
+            duration = 760
+        }
+        val scaleDown = ObjectAnimator.ofFloat(flyingBall, "scaleX", 1.05f, 0.9f).apply {
+            duration = 760
+        }
+        val scaleDownY = ObjectAnimator.ofFloat(flyingBall, "scaleY", 1.05f, 0.9f).apply {
+            duration = 760
+        }
+
+        val returnX = ObjectAnimator.ofFloat(flyingBall, "x", endX, startX)
+        val returnY = ObjectAnimator.ofFloat(flyingBall, "y", endY, startY)
+        val scaleUp = ObjectAnimator.ofFloat(flyingBall, "scaleX", 0.9f, 1f)
+        val scaleUpY = ObjectAnimator.ofFloat(flyingBall, "scaleY", 0.9f, 1f)
+        val rotateBack = ObjectAnimator.ofFloat(flyingBall, "rotation", 540f, 720f)
+
+        val goalPulse = AnimatorSet().apply {
+            playTogether(
+                ObjectAnimator.ofFloat(goal, "scaleX", 1f, 1.2f, 1f),
+                ObjectAnimator.ofFloat(goal, "scaleY", 1f, 1.2f, 1f)
+            )
+            duration = 260
+            interpolator = OvershootInterpolator()
+        }
+
+        val returnHome = AnimatorSet().apply {
+            startDelay = 120
+            playTogether(returnX, returnY, scaleUp, scaleUpY, rotateBack)
+            duration = 360
+            interpolator = DecelerateInterpolator()
+        }
+
+        val phase1 = AnimatorSet().apply {
+            playTogether(flight, rotate, scaleDown, scaleDownY)
+        }
+        var phaseOneCancelled = false
+        phase1.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationCancel(animation: Animator) {
+                phaseOneCancelled = true
+            }
+
+            override fun onAnimationEnd(animation: Animator) {
+                if (phaseOneCancelled || _binding == null) return
+                onGoal()
+                goalPulse.start()
+            }
+        })
+
+        goalAnimator = AnimatorSet().apply {
+            playSequentially(phase1/*, returnHome*/)
+            addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationEnd(animation: Animator) {
+                    sourceBall.alpha = 1f
+                    goal.scaleX = 1f
+                    goal.scaleY = 1f
+                    (flyingBall.parent as? ViewGroup)?.removeView(flyingBall)
+                    if (flyingGoalBall === flyingBall) {
+                        flyingGoalBall = null
+                    }
+                    if (goalAnimator === animation) {
+                        goalAnimator = null
+                    }
+                }
+            })
+            start()
+        }
+    }
+
+    private fun cancelGoalAnimation() {
+        goalAnimator?.cancel()
+        goalAnimator = null
+        flyingGoalBall?.let { flyingBall ->
+            (flyingBall.parent as? ViewGroup)?.removeView(flyingBall)
+        }
+        flyingGoalBall = null
+        _binding?.scoreboard?.questionBall?.alpha = 1f
+        _binding?.scoreboard?.answerBox?.scaleX = 1f
+        _binding?.scoreboard?.answerBox?.scaleY = 1f
     }
 
     private fun updateDBScores() {
@@ -358,9 +518,12 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
+        answerTimer?.cancel()
+        answerTimer = null
+        cancelGoalAnimation()
         adMob.destroyLoading()
         _binding = null
+        super.onDestroyView()
     }
 
     override fun show(amount: Int) {
