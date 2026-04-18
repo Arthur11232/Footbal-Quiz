@@ -18,6 +18,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
+import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.databinding.ActivityPlayNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.interfaces.ResetGame
@@ -58,7 +59,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private var isResetEnable: Boolean = false
     private var n: Int = 0
 
-    private lateinit var adMob: AdBanner
+    private var adMob: AdBanner? = null
     private var mInterstitialAd: InterstitialAd? = null
     private var mRewardedAd: RewardedAd? = null
     private var counter: Int = 0
@@ -76,11 +77,15 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        adMobPresenter = AdMobPresenter(this)
-        adMob = AdBanner(requireActivity(), binding.FQBannerAdView as android.view.ViewGroup, getString(R.string.banner_ad_unit_id))
-        
-        loadInterstitialAd()
-        loadRewardedAd()
+        binding.FQBannerAdView.visibility = View.GONE
+        if (Constant.ADS_ENABLED) {
+            binding.FQBannerAdView.visibility = View.VISIBLE
+            adMobPresenter = AdMobPresenter(this)
+            adMob = AdBanner(requireActivity(), binding.FQBannerAdView as android.view.ViewGroup, getString(R.string.banner_ad_unit_id))
+
+            loadInterstitialAd()
+            loadRewardedAd()
+        }
 
         arguments?.let {
             processArguments(it)
@@ -88,18 +93,26 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     private fun loadInterstitialAd() {
+        if (!Constant.ADS_ENABLED) return
+
+        val context = context ?: return
+        if (!isAdded || _binding == null) return
+
         val adRequest = AdRequest.Builder().build()
-        InterstitialAd.load(requireContext(), getString(R.string.interstitial_ad_unit_id), adRequest,
+        InterstitialAd.load(context, getString(R.string.interstitial_ad_unit_id), adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                    if (_binding == null) return
                     mInterstitialAd = interstitialAd
                     mInterstitialAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                         override fun onAdDismissedFullScreenContent() {
                             mInterstitialAd = null
+                            if (_binding == null || !isAdded) return
                             loadInterstitialAd()
                         }
                     }
                 }
+
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     mInterstitialAd = null
                 }
@@ -107,18 +120,26 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     private fun loadRewardedAd() {
+        if (!Constant.ADS_ENABLED) return
+
+        val context = context ?: return
+        if (!isAdded || _binding == null) return
+
         val adRequest = AdRequest.Builder().build()
-        RewardedAd.load(requireContext(), getString(R.string.video_ad_unit_id), adRequest,
+        RewardedAd.load(context, getString(R.string.video_ad_unit_id), adRequest,
             object : RewardedAdLoadCallback() {
                 override fun onAdLoaded(rewardedAd: RewardedAd) {
+                    if (_binding == null) return
                     mRewardedAd = rewardedAd
                     mRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                         override fun onAdDismissedFullScreenContent() {
                             mRewardedAd = null
+                            if (_binding == null || !isAdded) return
                             loadRewardedAd()
                         }
                     }
                 }
+
                 override fun onAdFailedToLoad(adError: LoadAdError) {
                     mRewardedAd = null
                 }
@@ -145,7 +166,10 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         binding.forceReset.isEnabled = isResetEnable
         
         binding.forceReset.setOnClickListener {
-            if (mRewardedAd != null) {
+            if (!Constant.ADS_ENABLED) {
+                dbHelper.resetPlace(placeScores.place_score_answer, this, true)
+                isResetEnable = false
+            } else if (mRewardedAd != null) {
                 mRewardedAd?.show(requireActivity()) { rewardItem ->
                     adMobPresenter.onShow(rewardItem.amount)
                 }
@@ -176,28 +200,39 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private fun newGame() {
         binding.answerIsCorrect.visibility = View.GONE
         flagForAnswer = true
-        if (placeScores.place_score > 0) {
-            answers = mutableListOf()
-            val random = Random()
-            while (true) {
-                val savedState = Prefer.getIntPreference(requireContext(), "save_question_state", -1)
-                if (savedState < 0) {
-                    n = random.nextInt(questions.size)
-                } else {
-                    n = savedState
-                    Prefer.setIntPreference(requireContext(), "save_question_state", -1)
-                    if (n >= questions.size) {
-                        n = random.nextInt(questions.size)
-                    }
-                }
-                if (!questions[n].isAnswered) {
-                    setAnswers()
-                    break
-                }
-            }
-        } else {
+
+        if (placeScores.place_score <= 0) {
             showFinishPage()
+            return
         }
+
+        val unansweredIndexes = questions.indices.filter { !questions[it].isAnswered }
+        if (unansweredIndexes.isEmpty()) {
+            placeScores.place_score = 0
+            binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
+            updateDBScores()
+            showFinishPage()
+            return
+        }
+
+        if (placeScores.place_score > unansweredIndexes.size) {
+            placeScores.place_score = unansweredIndexes.size
+            binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
+            updateDBScores()
+        }
+
+        answers = mutableListOf()
+        val savedStateKey = getSavedQuestionStateKey()
+        val savedState = Prefer.getIntPreference(requireContext(), savedStateKey, -1)
+        Prefer.setIntPreference(requireContext(), savedStateKey, -1)
+
+        n = if (savedState in questions.indices && !questions[savedState].isAnswered) {
+            savedState
+        } else {
+            unansweredIndexes[Random().nextInt(unansweredIndexes.size)]
+        }
+
+        setAnswers()
     }
 
     @SuppressLint("SetTextI18n")
@@ -261,9 +296,9 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
                 }
                 if (counter == 5) {
                     counter = 0
-                    if (mInterstitialAd != null) {
+                    if (Constant.ADS_ENABLED && mInterstitialAd != null) {
                         mInterstitialAd?.show(requireActivity())
-                    } else {
+                    } else if (Constant.ADS_ENABLED) {
                         loadInterstitialAd()
                     }
                 }
@@ -464,7 +499,9 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         
         binding.finishGame.root.findViewById<ImageView>(R.id.reload_game).setOnClickListener {
             isResetEnable = false
-            if (mRewardedAd != null) {
+            if (!Constant.ADS_ENABLED) {
+                dbHelper.resetPlace(placeScores.place_score_answer, this, false)
+            } else if (mRewardedAd != null) {
                 mRewardedAd?.show(requireActivity()) { rewardItem ->
                     adMobPresenter.onShow(rewardItem.amount)
                 }
@@ -512,7 +549,9 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     override fun onStop() {
-        Prefer.setIntPreference(requireContext(), "save_question_state", n)
+        if (this::questions.isInitialized && questions.isNotEmpty() && n in questions.indices && placeScores.place_score > 0) {
+            Prefer.setIntPreference(requireContext(), getSavedQuestionStateKey(), n)
+        }
         syncProgressIfSignedIn()
         super.onStop()
     }
@@ -521,12 +560,15 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         answerTimer?.cancel()
         answerTimer = null
         cancelGoalAnimation()
-        adMob.destroyLoading()
+        adMob?.destroyLoading()
+        mInterstitialAd = null
+        mRewardedAd = null
         _binding = null
         super.onDestroyView()
     }
 
     override fun show(amount: Int) {
+        if (_binding == null || !isAdded) return
         dbHelper.resetPlace(placeScores.place_score_answer, this, isResetEnable)
     }
 
@@ -535,5 +577,14 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         if (!isAdded) return
 
         CloudSyncManager.uploadLocalStats(requireContext(), user) { _, _ -> }
+    }
+
+    private fun getSavedQuestionStateKey(): String {
+        val placeType = if (this::questions.isInitialized) {
+            questions.firstOrNull()?.type
+        } else {
+            null
+        }
+        return "save_question_state_${categoryType ?: "unknown"}_${placeType ?: "unknown"}"
     }
 }

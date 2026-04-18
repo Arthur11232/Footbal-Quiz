@@ -41,7 +41,6 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
         binding.btnUefa.setOnClickListener(this)
         binding.btnChamp.setOnClickListener(this)
         binding.btnVersus.setOnClickListener(this)
-        binding.btnComing.setOnClickListener(this)
     }
 
     override fun onStart() {
@@ -96,9 +95,6 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
                 }
             }
             R.id.btnVersus -> {
-                destinationId = R.id.action_choose_to_versus
-            }
-            R.id.btn_coming -> {
                 destinationId = R.id.action_choose_to_versus
             }
         }

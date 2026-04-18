@@ -35,55 +35,59 @@ class DB_Helper @JvmOverloads constructor(
 
     fun setAnswered(question: String) {
         val db = Realm.getDefaultInstance()
-        when (type) {
-            "France" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_France::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
+        try {
+            when (type) {
+                "France" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_France::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Germany" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Germany::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Italy" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Italy::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "England" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_England::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Spain" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Spain::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Super Cup" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Super_Cup::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "European League" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Europa_League::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Champions League" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Champions_League::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Europe Championship" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_Europ_Championship::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "World Cup" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_World_Championship::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Versus R_M" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_VS_Ronaldo_Messi::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
+                "Versus R_B" -> db.executeTransaction { realm ->
+                    val item = realm.where(DB_VS_RealM_Barcelona::class.java).equalTo("question", question).findFirst()!!
+                    item.isAnswered = true; realm.insertOrUpdate(item)
+                }
             }
-            "Germany" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Germany::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Italy" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Italy::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "England" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_England::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Spain" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Spain::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Super Cup" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Super_Cup::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "European League" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Europa_League::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Champions League" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Champions_League::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Europe Championship" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_Europ_Championship::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "World Cup" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_World_Championship::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Versus R_M" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_VS_Ronaldo_Messi::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
-            "Versus R_B" -> db.executeTransaction { realm ->
-                val item = realm.where(DB_VS_RealM_Barcelona::class.java).equalTo("question", question).findFirst()!!
-                item.isAnswered = true; realm.insertOrUpdate(item)
-            }
+        } finally {
+            if (!db.isClosed) db.close()
         }
     }
 
@@ -111,19 +115,23 @@ class DB_Helper @JvmOverloads constructor(
 
     fun setCategoryScores() {
         val db = Realm.getDefaultInstance()
-        db.executeTransaction { realm ->
-            when (categoryType) {
-                CategoryType.TOP5 -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5_answered = fq_cores!!.top5_answered + 1 }
-                CategoryType.UEFA -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufa_answered = fq_cores!!.ufa_answered + 1 }
-                CategoryType.WORLD_CUP -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.world_answered = fq_cores!!.world_answered + 1 }
-                CategoryType.RON_MES -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRM_answered = fq_cores!!.vsRM_answered + 1 }
-                CategoryType.REAL_BARCE -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRB_answered = fq_cores!!.vsRB_answered + 1 }
-                null -> {}
+        try {
+            db.executeTransaction { realm ->
+                when (categoryType) {
+                    CategoryType.TOP5 -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5_answered = fq_cores!!.top5_answered + 1 }
+                    CategoryType.UEFA -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufa_answered = fq_cores!!.ufa_answered + 1 }
+                    CategoryType.WORLD_CUP -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.world_answered = fq_cores!!.world_answered + 1 }
+                    CategoryType.RON_MES -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRM_answered = fq_cores!!.vsRM_answered + 1 }
+                    CategoryType.REAL_BARCE -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRB_answered = fq_cores!!.vsRB_answered + 1 }
+                    null -> {}
+                }
+                realm.copyFromRealm(fq_cores!!)
             }
-            realm.copyFromRealm(fq_cores!!)
+            getTotalScore()
+            activity?.let { getOpenedPlace(fq_cores!!.fq_all, it) }
+        } finally {
+            if (!db.isClosed) db.close()
         }
-        getTotalScore()
-        getOpenedPlace(fq_cores!!.fq_all, activity ?: return)
     }
 
     fun deletePlaceScores(placeScoreAnswer: Int, placeScore: Int) {
