@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-// apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'realm-android'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
@@ -15,12 +14,18 @@ android {
         targetSdkVersion 35
         multiDexEnabled true
         versionCode 28
-        versionName "1.3.0"
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     
     buildFeatures {
         viewBinding = true
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
     }
     
     buildTypes {
@@ -40,8 +45,8 @@ android {
         jvmTarget = '17'
     }
     lint {
-        abortOnError false
-        checkReleaseBuilds false
+        abortOnError true
+        checkReleaseBuilds true
     }
 
     android.applicationVariants.all { variant ->
@@ -66,7 +71,6 @@ dependencies {
     implementation platform(libs.firebase.bom)
     implementation libs.firebase.analytics
     implementation libs.firebase.auth
-    implementation libs.firebase.messaging
     implementation libs.play.services.auth
     implementation libs.play.services.ads
 
@@ -83,19 +87,9 @@ dependencies {
     implementation libs.kotlinx.coroutines.android
     implementation libs.firebase.firestore
 
-    // Firebase Storage
-    implementation libs.firebase.storage
-
     // Glide
     implementation libs.glide
     annotationProcessor libs.glide.compiler
-
-    // Jackson
-    implementation (
-            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.4.1'],
-            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
-            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1']
-    )
 
     // Jackson
     implementation (

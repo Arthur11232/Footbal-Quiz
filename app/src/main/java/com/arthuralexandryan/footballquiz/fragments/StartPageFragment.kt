@@ -50,6 +50,7 @@ class StartPageFragment : Fragment() {
     private lateinit var authManager: AuthManager
     private lateinit var dbHelper: DB_Helper
     private var isNew: Boolean = false
+    private var restoreDialogShowing: Boolean = false
 
     private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == android.app.Activity.RESULT_OK) {
@@ -271,8 +272,12 @@ class StartPageFragment : Fragment() {
                         Log.d("FQ_Log", "maybeSyncCloudProgress: no sync action needed for user=${user.uid}")
                     }
                     is CloudSyncManager.SyncDecision.RestoreCloud -> {
-                        Log.d("FQ_Log", "maybeSyncCloudProgress: restore requested from cloud for user=${user.uid}")
-                        showRestoreProgressDialog(user.uid, decision.cloudStats)
+                        if (isAutoRestorePromptDismissed(user.uid)) {
+                            Log.d("FQ_Log", "maybeSyncCloudProgress: restore prompt already dismissed for user=${user.uid}")
+                        } else {
+                            Log.d("FQ_Log", "maybeSyncCloudProgress: restore requested from cloud for user=${user.uid}")
+                            showRestoreProgressDialog(user.uid, decision.cloudStats)
+                        }
                     }
                     is CloudSyncManager.SyncDecision.UploadLocal -> {
                         Log.d("FQ_Log", "maybeSyncCloudProgress: uploading local progress for user=${user.uid}")
@@ -294,13 +299,39 @@ class StartPageFragment : Fragment() {
         }
     }
 
+    private fun isAutoRestorePromptDismissed(userId: String): Boolean {
+        return Prefer.getBooleanPreference(
+            requireContext(),
+            Constants.UserStatsRestorePromptDismissedKeyPrefix + userId,
+            false
+        )
+    }
+
+    private fun dismissAutoRestorePrompt(userId: String) {
+        val context = context ?: return
+        Prefer.setBooleanPreference(
+            context,
+            Constants.UserStatsRestorePromptDismissedKeyPrefix + userId,
+            true
+        )
+    }
+
     private fun showRestoreProgressDialog(userId: String, cloudStats: UserStatsDTO) {
         if (!isAdded) return
+        if (restoreDialogShowing) return
+        restoreDialogShowing = true
 
         val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
         val dialog = android.app.Dialog(requireContext(), R.style.FQ_CustomDialog)
+        var handledByButton = false
         dialog.setContentView(dialogView)
         dialog.setCanceledOnTouchOutside(true)
+        dialog.setOnDismissListener {
+            if (!handledByButton) {
+                dismissAutoRestorePrompt(userId)
+            }
+            restoreDialogShowing = false
+        }
         dialog.window?.apply {
             setBackgroundDrawableResource(android.R.color.transparent)
             setLayout(
@@ -316,6 +347,7 @@ class StartPageFragment : Fragment() {
         dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
             text = getString(R.string.profile_restore_confirm)
             setOnClickListener {
+                handledByButton = true
                 dialog.dismiss()
                 CloudSyncManager.restoreCloudStats(requireContext(), dbHelper, userId, cloudStats)
                 refreshContinueButton()
@@ -329,7 +361,11 @@ class StartPageFragment : Fragment() {
 
         dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
             text = getString(R.string.profile_restore_cancel)
-            setOnClickListener { dialog.dismiss() }
+            setOnClickListener {
+                handledByButton = true
+                dismissAutoRestorePrompt(userId)
+                dialog.dismiss()
+            }
         }
 
         dialog.show()

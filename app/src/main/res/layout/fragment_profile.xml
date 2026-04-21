@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
     android:background="@drawable/football">
 
     <!-- Затемнение фона -->
@@ -123,13 +124,17 @@
 
             <TextView
                 android:id="@+id/tvStatsLabel"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_marginTop="24dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="@string/profile_statistics"
                 android:textColor="@color/fq_colorWhite"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/btnRestoreCloud"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
 
@@ -146,6 +151,36 @@
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@id/tvStatsLabel"
                 app:layout_constraintStart_toEndOf="@id/tvStatsLabel"
+                app:layout_constraintTop_toTopOf="@id/tvStatsLabel"
+                app:tint="@color/fq_colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnRestoreCloud"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_profile_icon_button"
+                android:contentDescription="@string/profile_manual_restore_cloud"
+                android:padding="8dp"
+                android:src="@drawable/ic_cloud_download"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tvStatsLabel"
+                app:layout_constraintStart_toEndOf="@id/tvStatsLabel"
+                app:layout_constraintTop_toTopOf="@id/tvStatsLabel"
+                app:tint="@color/fq_colorWhite" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnOverwriteCloud"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_profile_icon_button"
+                android:contentDescription="@string/profile_manual_overwrite_cloud"
+                android:padding="8dp"
+                android:src="@drawable/ic_cloud_upload"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tvStatsLabel"
+                app:layout_constraintStart_toEndOf="@id/btnRestoreCloud"
                 app:layout_constraintTop_toTopOf="@id/tvStatsLabel"
                 app:tint="@color/fq_colorWhite" />
 
@@ -179,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/profile_total_score"
+                    android:text="@string/profile_progress"
                     android:textColor="#B3FFFFFF"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -225,39 +260,175 @@
                     app:layout_constraintTop_toBottomOf="@id/tvAnsweredCountValue" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Кнопки Sign In / Sign Out -->
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/btnSignIn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardTotalScore" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnSignOut"
-                style="@style/FQ_Buttons"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:text="@string/profile_sign_out"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardTotalScore" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnDeleteAccount"
-                style="@style/FQ_Buttons"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardCategoryProgress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:text="@string/profile_delete_account"
-                android:visibility="gone"
+                android:background="@drawable/bg_stats_card"
+                android:padding="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnSignOut" />
+                app:layout_constraintTop_toBottomOf="@id/cardTotalScore">
+
+                <TextView
+                    android:id="@+id/tvCategoryProgressTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_category_progress"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTop5Label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/top_5_tournament"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/tvTop5Progress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCategoryProgressTitle" />
+
+                <TextView
+                    android:id="@+id/tvTop5Progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvTop5Label"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0/200" />
+
+                <TextView
+                    android:id="@+id/tvUefaLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/uefa"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/tvUefaProgress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTop5Label" />
+
+                <TextView
+                    android:id="@+id/tvUefaProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvUefaLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0/70" />
+
+                <TextView
+                    android:id="@+id/tvWorldProgressLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/world_championship"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/tvWorldProgress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvUefaLabel" />
+
+                <TextView
+                    android:id="@+id/tvWorldProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvWorldProgressLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0/30" />
+
+                <TextView
+                    android:id="@+id/tvVersusLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/versus_category"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/tvVersusProgress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWorldProgressLabel" />
+
+                <TextView
+                    android:id="@+id/tvVersusProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvVersusLabel"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0/100" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignOut"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_profile_icon_button"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@string/profile_sign_out"
+                android:textAllCaps="false"
+                android:textColor="@color/fq_colorWhite"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableTint="@color/fq_colorWhite"
+                app:layout_constraintEnd_toStartOf="@id/btnDeleteAccount"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCategoryProgress" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDeleteAccount"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_profile_icon_button_danger"
+                android:drawableStart="@drawable/ic_delete_account"
+                android:drawablePadding="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@string/profile_delete_account"
+                android:textAllCaps="false"
+                android:textColor="#FFFFD6D6"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:drawableTint="#FFFFD6D6"
+                app:layout_constraintBottom_toBottomOf="@id/btnSignOut"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/btnSignOut"
+                app:layout_constraintTop_toTopOf="@id/btnSignOut" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

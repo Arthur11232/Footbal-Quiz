@@ -76,13 +76,12 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         binding.FQBannerAdView.visibility = View.GONE
         if (Constant.ADS_ENABLED) {
             binding.FQBannerAdView.visibility = View.VISIBLE
             adMobPresenter = AdMobPresenter(this)
-            adMob = AdBanner(requireActivity(), binding.FQBannerAdView as android.view.ViewGroup, getString(R.string.banner_ad_unit_id))
-
+            adMob = AdBanner(requireActivity(), binding.FQBannerAdView as ViewGroup, getString(R.string.banner_ad_unit_id))
             loadInterstitialAd()
             loadRewardedAd()
         }
@@ -513,17 +512,17 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     @SuppressLint("SetTextI18n")
-    override fun reset(model: ScoreboardModel, isForce: Boolean) {
+    override fun reset(placeScore: ScoreboardModel, isForce: Boolean) {
         questions.forEach { it.isAnswered = false }
-        placeScores.place_score = model.placeScore
-        placeScores.place_score_answer = model.placeAnswered
-        categoryScores.place_score_answer = model.categoryAnswered
+        placeScores.place_score = placeScore.placeScore
+        placeScores.place_score_answer = placeScore.placeAnswered
+        categoryScores.place_score_answer = placeScore.categoryAnswered
         
-        binding.scoreboard.placeQuestion.text = "" + model.placeScore
-        binding.scoreboard.placeAnswer.text = "" + model.placeAnswered
-        binding.scoreboard.categoryAnswers.text = "" + model.categoryAnswered
-        binding.scoreboard.categoryScore.text = "" + model.categoryScore
-        binding.questionNumber.text = "" + model.placeScore
+        binding.scoreboard.placeQuestion.text = "" + placeScore.placeScore
+        binding.scoreboard.placeAnswer.text = "" + placeScore.placeAnswered
+        binding.scoreboard.categoryAnswers.text = "" + placeScore.categoryAnswered
+        binding.scoreboard.categoryScore.text = "" + placeScore.categoryScore
+        binding.questionNumber.text = "" + placeScore.placeScore
         
         if (!isForce) {
             binding.llHarcer.visibility = View.VISIBLE

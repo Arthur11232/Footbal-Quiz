@@ -27,7 +27,7 @@ class TestFragment : Fragment(), PlaceModelInterface {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         PlaceModel.PlaceModelBuilder(binding.testImage.root)
             .setImage(R.drawable.barcelona_logo)
             .setVersusFirst("Barcelona")

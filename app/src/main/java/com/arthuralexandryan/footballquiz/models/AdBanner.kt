@@ -4,7 +4,11 @@ import android.app.Activity
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.ViewGroup
-import com.google.android.gms.ads.*
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.LoadAdError
 
 class AdBanner(private val activity: Activity, private val container: ViewGroup, private val adUnitId: String) {
 
@@ -66,4 +70,3 @@ class AdBanner(private val activity: Activity, private val container: ViewGroup,
         }
     }
 }
-

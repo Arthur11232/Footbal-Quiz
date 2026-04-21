@@ -270,7 +270,9 @@ class DB_Helper @JvmOverloads constructor(
 
     fun getVersusAnsweredScores(): Int =
         Realm.getDefaultInstance().use { realm ->
-            realm.where(FQ_Scores::class.java).findFirst()?.vsRM_answered ?: 0
+            realm.where(FQ_Scores::class.java).findFirst()?.let {
+                it.vsRM_answered + it.vsRB_answered
+            } ?: 0
         }
 
     fun getTotalScore(): Int {
@@ -284,7 +286,8 @@ class DB_Helper @JvmOverloads constructor(
             }
             
             if (scores != null) {
-                allScore = scores.top5_answered + scores.ufa_answered + scores.world_answered + scores.vsRM_answered
+                allScore = scores.top5_answered + scores.ufa_answered + scores.world_answered +
+                    scores.vsRM_answered + scores.vsRB_answered
                 scores.fq_all = allScore
                 r.insertOrUpdate(scores)
             }

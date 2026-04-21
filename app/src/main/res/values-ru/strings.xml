@@ -4,6 +4,11 @@
     <string name="new_game">Новая игра</string>
     <string name="Continue">Продолжить</string>
     <string name="Language">Язык</string>
+    <string name="russian">Русский</string>
+    <string name="english">English</string>
+    <string name="armenian">Հայերեն</string>
+    <string name="user">Пользователь</string>
+    <string name="login_with_google">Войти через Google</string>
     <string name="loading">Загрузка...</string>
 
     <!-- Profile -->
@@ -14,17 +19,26 @@
     <string name="profile_sync_error">Ошибка синхронизации: %s</string>
     <string name="profile_restore_title">Восстановить прогресс</string>
     <string name="profile_restore_message">"Найдены сохранения в облаке с большим счетом (%d). Желаете восстановить их?"</string>
+    <string name="profile_manual_restore_message">"Счет в облаке: %d. Восстановить этот прогресс на устройстве?"</string>
     <string name="profile_restore_confirm">Восстановить</string>
     <string name="profile_restore_cancel">Отмена</string>
     <string name="profile_sync_conflict_title">Конфликт синхронизации</string>
     <string name="profile_sync_conflict_message">"Счет в облаке: %1$d | Локальный счет: %2$d. Что выберете?"</string>
     <string name="profile_sync_restore_button">Скачать из облака</string>
     <string name="profile_sync_overwrite_button">Загрузить в облако</string>
+    <string name="profile_manual_restore_cloud">Восстановить из облака</string>
+    <string name="profile_manual_overwrite_cloud">Загрузить текущий прогресс</string>
     <string name="profile_sync_up_to_date">Синхронизация не требуется</string>
     <string name="profile_progress_restored">Прогресс восстановлен</string>
     <string name="profile_cloud_backup_created">Резервная копия сохранена в облаке</string>
     <string name="profile_sync_generic_error">Неизвестная ошибка</string>
+    <string name="profile_no_cloud_progress">Облачный прогресс не найден</string>
+    <string name="profile_overwrite_cloud_title">Перезаписать облачный прогресс?</string>
+    <string name="profile_overwrite_cloud_message">"Это заменит сохранение в облаке текущим прогрессом на этом устройстве. Локальный счет: %1$d | Отвечено вопросов: %2$d."</string>
     <string name="profile_total_score">Общий счет</string>
+    <string name="profile_progress">Прогресс</string>
+    <string name="profile_progress_percent">%d%%</string>
+    <string name="profile_category_progress">Прогресс по категориям</string>
     <string name="profile_questions_answered">Отвечено вопросов</string>
     <string name="profile_sign_out">Выйти</string>
     <string name="profile_delete_account">Удалить аккаунт и данные</string>
@@ -2208,7 +2222,7 @@
         <item> Барселона </item>
     </string-array>
 
-    <string name="fq_privacy_policy">
+    <string name="fq_privacy_policy" formatted="false">
         #@ Политика конфиденциальности @#\n\n
         Артур Александрян создал приложение Football Quiz как бесплатное (Free). Данная УСЛУГА предоставляется Артуром Александряном бесплатно и предназначена для использования как есть.\n\n
         Эта страница используется для информирования посетителей о моей политике в отношении сбора, использования и раскрытия Личной информации, если кто-то решит воспользоваться моей Услугой.\n\n
@@ -2219,9 +2233,9 @@
         Приложение использует сторонние сервисы, которые могут собирать информацию, используемую для вашей идентификации.\n\n
         Ссылки на политику конфиденциальности сторонних поставщиков услуг, используемых приложением:\n
         &#8226; Google Play Services\n
-        &#8226; AdMob\n
         &#8226; Google Analytics for Firebase\n
-        &#8226; Firebase Crashlytics\n\n
+        &#8226; Firebase Authentication\n
+        &#8226; Firebase Cloud Firestore\n\n
         #@ Данные журналов (Log Data) @#\n\n
         Я хочу сообщить вам, что каждый раз, когда вы пользуетесь моей Услугой, в случае возникновения ошибки в приложении я собираю данные и информацию (через сторонние продукты) на вашем телефоне, называемые Данными журнала. Эти данные могут включать такую информацию, как IP-адрес вашего устройства, имя устройства, версию операционной системы, конфигурация приложения при использовании моей Услуги, время и дату использования вами Услуги и другую статистику.\n\n
         #@ Cookies @#\n\n

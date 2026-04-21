@@ -28,17 +28,26 @@
     <string name="profile_sync_error">Sync failed: %s</string>
     <string name="profile_restore_title">Restore Progress</string>
     <string name="profile_restore_message">"We found cloud progress with a higher score (%d). Do you want to restore it?"</string>
+    <string name="profile_manual_restore_message">"Cloud score: %d. Do you want to restore this progress on this device?"</string>
     <string name="profile_restore_confirm">Restore</string>
     <string name="profile_restore_cancel">Cancel</string>
     <string name="profile_sync_conflict_title">Sync Conflict</string>
     <string name="profile_sync_conflict_message">"Cloud Score: %1$d | Local Score: %2$d. What would you like to do?"</string>
     <string name="profile_sync_restore_button">Restore from Cloud</string>
     <string name="profile_sync_overwrite_button">Overwrite Cloud</string>
+    <string name="profile_manual_restore_cloud">Restore from Cloud</string>
+    <string name="profile_manual_overwrite_cloud">Upload Current Progress</string>
     <string name="profile_sync_up_to_date">Sync is up to date!</string>
     <string name="profile_progress_restored">Progress restored!</string>
     <string name="profile_cloud_backup_created">Cloud backup created</string>
     <string name="profile_sync_generic_error">Unknown error</string>
+    <string name="profile_no_cloud_progress">No cloud progress found</string>
+    <string name="profile_overwrite_cloud_title">Overwrite cloud progress?</string>
+    <string name="profile_overwrite_cloud_message">"This will replace your cloud save with the current progress on this device. Local score: %1$d | Answered questions: %2$d."</string>
     <string name="profile_total_score">Total Score</string>
+    <string name="profile_progress">Progress</string>
+    <string name="profile_progress_percent">%d%%</string>
+    <string name="profile_category_progress">Category Progress</string>
     <string name="profile_questions_answered">Questions Answered</string>
     <string name="profile_sign_out">Sign Out</string>
     <string name="profile_delete_account">Delete Account &amp; Data</string>
@@ -4244,10 +4253,10 @@
     <string name="agree_to"><![CDATA[Our Privacy Policy and Terms and Conditions]]></string>
     <string name="title_privacy_policy">Privacy Policy</string>
     <string name="title_terms_and_conditions">Terms and Conditions</string>
-    <string name="privacy_policy_url" translatable="false">https://github.com/Arthur11232/Football-Quiz-Web/blob/429fafe032498112556f36881363fabb95c8d630/privacy_policy.md</string>
-    <string name="terms_and_conditions_url" translatable="false">https://github.com/Arthur11232/Football-Quiz-Web/blob/429fafe032498112556f36881363fabb95c8d630/terms_and_conditions.md</string>
+    <string name="privacy_policy_url" translatable="false">https://github.com/Arthur11232/Football-Quiz-Web/blob/main/privacy_policy.md</string>
+    <string name="terms_and_conditions_url" translatable="false">https://github.com/Arthur11232/Football-Quiz-Web/blob/main/terms_and_conditions.md</string>
 
-    <string name="fq_privacy_policy">
+    <string name="fq_privacy_policy" formatted="false">
         #@ Privacy Policy @#\n\n
         Artur Aleksandryan built the Football Quiz app as a Free app. This SERVICE is provided by Artur Aleksandryan at no cost and is intended for use as is.\n\n
         This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.\n\n
@@ -4258,9 +4267,9 @@
         The app does use third party services that may collect information used to identify you.\n\n
         Link to privacy policy of third party service providers used by the app:\n
         &#8226; Google Play Services\n
-        &#8226; AdMob\n
         &#8226; Google Analytics for Firebase\n
-        &#8226; Firebase Crashlytics\n\n
+        &#8226; Firebase Authentication\n
+        &#8226; Firebase Cloud Firestore\n\n
         #@ Log Data @#\n\n
         I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.\n\n
         #@ Cookies @#\n\n

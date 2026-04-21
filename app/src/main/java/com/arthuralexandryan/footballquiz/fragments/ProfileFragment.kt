@@ -1,13 +1,10 @@
 package com.arthuralexandryan.footballquiz.fragments
 
-import android.app.Activity
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.RotateAnimation
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.AppCompatButton
@@ -23,11 +20,7 @@ import com.arthuralexandryan.footballquiz.models.UserStatsService
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.bumptech.glide.Glide
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
-import com.google.firebase.auth.GoogleAuthProvider
 import java.io.File
 import java.io.FileOutputStream
 
@@ -37,26 +30,6 @@ class ProfileFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var authManager: AuthManager
     private lateinit var dbHelper: DB_Helper
-
-    private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
-            try {
-                val account = task.getResult(ApiException::class.java)
-                val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-                FirebaseAuth.getInstance().signInWithCredential(credential)
-                    .addOnCompleteListener { authResult ->
-                        if (authResult.isSuccessful) {
-                            updateUI()
-                        } else {
-                            Toast.makeText(context, "Auth Failed", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-            } catch (e: ApiException) {
-                Toast.makeText(context, "Google Sign-In failed", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let { saveImageLocally(it) }
@@ -75,14 +48,13 @@ class ProfileFragment : Fragment() {
         updateUI()
         loadStatistics()
 
-        binding.btnSignIn.setOnClickListener {
-            signInLauncher.launch(authManager.getSignInIntent())
-        }
-
         binding.btnSignOut.setOnClickListener {
-            authManager.signOut { 
-                isCloudStatsChecked = false
-                updateUI() 
+            authManager.signOut {
+                activity?.runOnUiThread {
+                    updateUI()
+                    loadStatistics()
+                    navigateBackToStartPage()
+                }
             }
         }
 
@@ -94,8 +66,12 @@ class ProfileFragment : Fragment() {
             imagePickerLauncher.launch("image/*")
         }
 
-        binding.btnSync.setOnClickListener {
-            syncStats()
+        binding.btnRestoreCloud.setOnClickListener {
+            restoreFromCloudManually()
+        }
+
+        binding.btnOverwriteCloud.setOnClickListener {
+            showOverwriteCloudDialog()
         }
 
         binding.onBack.setOnClickListener { findNavController().navigateUp() }
@@ -118,13 +94,12 @@ class ProfileFragment : Fragment() {
         if (user != null) {
             binding.userName.text = user.displayName ?: getString(R.string.profile_guest)
             binding.userEmail.text = user.email ?: getString(R.string.profile_not_signed_in)
-            binding.btnSignIn.visibility = View.GONE
             binding.btnSignOut.visibility = View.VISIBLE
             binding.btnEditPhoto.visibility = View.VISIBLE
             binding.btnSync.visibility = View.GONE
+            binding.btnRestoreCloud.visibility = View.VISIBLE
+            binding.btnOverwriteCloud.visibility = View.VISIBLE
             binding.btnDeleteAccount.visibility = View.VISIBLE
-            
-            checkCloudStats()
 
             val imageSource = if (localPhotoPath != null && File(localPhotoPath).exists()) {
                 localPhotoPath
@@ -140,10 +115,11 @@ class ProfileFragment : Fragment() {
         } else {
             binding.userName.text = getString(R.string.profile_guest)
             binding.userEmail.text = getString(R.string.profile_not_signed_in)
-            binding.btnSignIn.visibility = View.VISIBLE
             binding.btnSignOut.visibility = View.GONE
             binding.btnEditPhoto.visibility = View.GONE
             binding.btnSync.visibility = View.GONE
+            binding.btnRestoreCloud.visibility = View.GONE
+            binding.btnOverwriteCloud.visibility = View.GONE
             binding.btnDeleteAccount.visibility = View.GONE
             
             if (localPhotoPath != null && File(localPhotoPath).exists()) {
@@ -190,20 +166,6 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun checkCloudStats() {
-        if (isCloudStatsChecked) return
-        val user = authManager.getCurrentUser() ?: return
-
-        CloudSyncManager.resolveSyncDecision(requireContext(), dbHelper, user) { decision ->
-            activity?.runOnUiThread {
-                if (decision is CloudSyncManager.SyncDecision.RestoreCloud) {
-                    showRestoreDialog(decision.cloudStats)
-                }
-                isCloudStatsChecked = true
-            }
-        }
-    }
-
     private fun showRestoreDialog(cloudStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO) {
         val context = context ?: return
         val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
@@ -220,7 +182,7 @@ class ProfileFragment : Fragment() {
 
         dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_restore_title)
         dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text =
-            getString(R.string.profile_restore_message, cloudStats.gameState.total)
+            getString(R.string.profile_manual_restore_message, cloudStats.gameState.total)
 
         dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
             text = getString(R.string.profile_restore_confirm)
@@ -303,6 +265,7 @@ class ProfileFragment : Fragment() {
         Prefer.getSharedPreferenceEditor(context)
             .remove(Constants.UserPhotoKey + userId)
             .remove(Constants.UserStatsLastSyncKeyPrefix + userId)
+            .remove(Constants.UserStatsRestorePromptDismissedKeyPrefix + userId)
             .putBoolean("isFirstPlay", true)
             .apply()
 
@@ -329,7 +292,6 @@ class ProfileFragment : Fragment() {
             }
 
             authManager.signOut {
-                isCloudStatsChecked = false
                 activity?.runOnUiThread {
                     setDeleteInProgress(false)
                     updateUI()
@@ -354,58 +316,74 @@ class ProfileFragment : Fragment() {
         binding.uploadProgress.visibility = if (inProgress) View.VISIBLE else View.GONE
         binding.btnDeleteAccount.isEnabled = !inProgress
         binding.btnSignOut.isEnabled = !inProgress
-        binding.btnSignIn.isEnabled = !inProgress
+        binding.btnEditPhoto.isEnabled = !inProgress
+        binding.btnRestoreCloud.isEnabled = !inProgress
+        binding.btnOverwriteCloud.isEnabled = !inProgress
+    }
+
+    private fun setSyncInProgress(inProgress: Boolean) {
+        if (_binding == null) return
+        binding.uploadProgress.visibility = if (inProgress) View.VISIBLE else View.GONE
+        binding.btnRestoreCloud.isEnabled = !inProgress
+        binding.btnOverwriteCloud.isEnabled = !inProgress
+        binding.btnSignOut.isEnabled = !inProgress
+        binding.btnDeleteAccount.isEnabled = !inProgress
         binding.btnEditPhoto.isEnabled = !inProgress
     }
 
     private fun loadStatistics() {
-        val totalScore = dbHelper.getTotalScore()
-        binding.tvTotalScoreValue.text = totalScore.toString()
+        val top5Total = scoreTarget(Constants.Top5)
+        val uefaTotal = scoreTarget(Constants.UFA)
+        val worldTotal = scoreTarget(Constants.World)
+        val versusTotal = scoreTarget(Constants.VSRM) + scoreTarget(Constants.VSRB)
+        val totalQuestions = top5Total + uefaTotal + worldTotal + versusTotal
 
-        val totalAnswered = dbHelper.top5AnsweredScores +
-                dbHelper.getUFAAnsweredScores() +
-                dbHelper.getWorldAnsweredScores() +
-                dbHelper.getVersusAnsweredScores()
+        val top5Answered = dbHelper.top5AnsweredScores
+        val uefaAnswered = dbHelper.getUFAAnsweredScores()
+        val worldAnswered = dbHelper.getWorldAnsweredScores()
+        val versusAnswered = dbHelper.getVersusAnsweredScores()
+        val totalAnswered = top5Answered + uefaAnswered + worldAnswered + versusAnswered
+        val progressPercent = if (totalQuestions > 0) {
+            (totalAnswered * 100) / totalQuestions
+        } else {
+            0
+        }
 
-        binding.tvAnsweredCountValue.text = totalAnswered.toString()
+        binding.tvTotalScoreValue.text = getString(R.string.profile_progress_percent, progressPercent)
+        binding.tvAnsweredCountValue.text = progressText(totalAnswered, totalQuestions)
+        binding.tvTop5Progress.text = progressText(top5Answered, top5Total)
+        binding.tvUefaProgress.text = progressText(uefaAnswered, uefaTotal)
+        binding.tvWorldProgress.text = progressText(worldAnswered, worldTotal)
+        binding.tvVersusProgress.text = progressText(versusAnswered, versusTotal)
     }
 
-    private fun syncStats() {
+    private fun scoreTarget(value: String): Int = value.toIntOrNull() ?: 0
+
+    private fun progressText(answered: Int, total: Int): String = "$answered/$total"
+
+    private fun restoreFromCloudManually() {
         val user = authManager.getCurrentUser() ?: return
+        setSyncInProgress(true)
 
-        // Animation
-        val rotate = RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f).apply {
-            duration = 1000
-            repeatCount = Animation.INFINITE
-        }
-        binding.btnSync.startAnimation(rotate)
-        binding.btnSync.isEnabled = false
-
-        CloudSyncManager.resolveSyncDecision(requireContext(), dbHelper, user) { decision ->
+        CloudSyncManager.downloadCloudStats(user) { cloudStats ->
             activity?.runOnUiThread {
-                binding.btnSync.clearAnimation()
-                binding.btnSync.isEnabled = true
-
-                when (decision) {
-                    is CloudSyncManager.SyncDecision.None -> {
-                        Toast.makeText(context, getString(R.string.profile_sync_up_to_date), Toast.LENGTH_SHORT).show()
-                    }
-                    is CloudSyncManager.SyncDecision.RestoreCloud -> {
-                        val localScore = dbHelper.getTotalScore()
-                        showSyncConflictDialog(decision.cloudStats, localScore)
-                    }
-                    is CloudSyncManager.SyncDecision.UploadLocal -> {
-                        performUpload(decision.user)
-                    }
+                setSyncInProgress(false)
+                if (cloudStats == null) {
+                    Toast.makeText(context, getString(R.string.profile_no_cloud_progress), Toast.LENGTH_SHORT).show()
+                } else {
+                    showRestoreDialog(cloudStats)
                 }
             }
         }
     }
 
     private fun performUpload(user: com.google.firebase.auth.FirebaseUser) {
+        setSyncInProgress(true)
         CloudSyncManager.uploadLocalStats(requireContext(), user) { success, error ->
             activity?.runOnUiThread {
+                setSyncInProgress(false)
                 if (success) {
+                    markAutoRestorePromptDismissed(user.uid)
                     Toast.makeText(context, getString(R.string.profile_sync_success), Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(
@@ -418,8 +396,14 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun showSyncConflictDialog(cloudStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO, localScore: Int) {
+    private fun showOverwriteCloudDialog() {
+        val user = authManager.getCurrentUser() ?: return
         val context = context ?: return
+        val localScore = dbHelper.getTotalScore()
+        val localAnswered = dbHelper.top5AnsweredScores +
+            dbHelper.getUFAAnsweredScores() +
+            dbHelper.getWorldAnsweredScores() +
+            dbHelper.getVersusAnsweredScores()
         val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
         val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
         dialog.setContentView(dialogView)
@@ -432,33 +416,19 @@ class ProfileFragment : Fragment() {
             )
         }
 
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_sync_conflict_title)
+        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_overwrite_cloud_title)
         dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text =
-            getString(R.string.profile_sync_conflict_message, cloudStats.gameState.total, localScore)
+            getString(R.string.profile_overwrite_cloud_message, localScore, localAnswered)
 
         dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
-            text = getString(R.string.profile_sync_restore_button)
+            text = getString(R.string.profile_sync_overwrite_button)
             setOnClickListener {
                 dialog.dismiss()
-                val userId = authManager.getCurrentUser()?.uid ?: return@setOnClickListener
-                CloudSyncManager.restoreCloudStats(requireContext(), dbHelper, userId, cloudStats)
-                updateUI()
-                loadStatistics()
-                Toast.makeText(context, getString(R.string.profile_progress_restored), Toast.LENGTH_SHORT).show()
+                performUpload(user)
             }
         }
 
         dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
-            text = getString(R.string.profile_sync_overwrite_button)
-            setOnClickListener {
-                dialog.dismiss()
-                val user = authManager.getCurrentUser()
-                if (user != null) performUpload(user)
-            }
-        }
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnTertiary).apply {
-            visibility = View.VISIBLE
             text = getString(R.string.profile_restore_cancel)
             setOnClickListener { dialog.dismiss() }
         }
@@ -466,12 +436,17 @@ class ProfileFragment : Fragment() {
         dialog.show()
     }
 
+    private fun markAutoRestorePromptDismissed(userId: String) {
+        val context = context ?: return
+        Prefer.setBooleanPreference(
+            context,
+            Constants.UserStatsRestorePromptDismissedKeyPrefix + userId,
+            true
+        )
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        private var isCloudStatsChecked = false
     }
 }

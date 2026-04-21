@@ -4,8 +4,8 @@
 
 ## 📌 Обзор проекта
 - **Название:** Football Quiz
-- **Версия:** 1.3.0
-- **Основной стек:** Kotlin, Android SDK (API 35/Android 15), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics, Messaging), Realm DB, Coroutines.
+- **Версия:** 1.0.0
+- **Основной стек:** Kotlin, Android SDK (target API 35/Android 15), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines.
 - **Цель:** Полная модернизация приложения, переход на SAA, внедрение Google Sign-In и динамическая загрузка контента из Firestore.
 
 ---
@@ -18,15 +18,20 @@
 - **UI:** Поддержка Edge-to-Edge (Android 15), внедрены кастомные диалоги (New Game, Language) с дизайном из версии 1.8.
 - **Localization 2.0:** Реализован "Smart Sync" (авто-обновление вопросов при смене языка) и исправлено отображение локализованного UI через `BaseActivity` (`attachBaseContext`).
 - **Cloud Sync 2.0:** Реализовано автоматическое восстановление и резервное копирование прогресса через Firestore. При входе в аккаунт и каждом открытии стартового экрана приложение сравнивает локальный и облачный прогресс, предлагает восстановление при необходимости и автоматически выгружает локальные данные, если они новее.
+- **Profile Action UI:** В профиле sync-действия signed-in пользователя оставлены компактными icon-actions рядом со статистикой, а `Sign Out` и `Delete Account` вынесены под статистику как аккуратные icon+text chips. Опасные действия по-прежнему требуют подтверждения через кастомный dialog.
+- **Profile Progress UI:** Профиль показывает понятный прогресс: общие `answered/total`, процент прохождения и отдельный блок по категориям `Top 5`, `UEFA`, `World Cup`, `Versus`. Расчёт `Versus` учитывает оба режима (`vsRM + vsRB`).
+- **One-Time Auto Restore Prompt:** Автоматическое предложение восстановления cloud-save на Start Page показывается только до первого отказа пользователя для конкретного `uid`; после cancel/back/outside tap приложение больше не повторяет restore prompt автоматически, оставляя ручной выбор в Profile.
 - **Recovery UX:** После восстановления прогресса автоматически разблокируется `Continue` (`isFirstPlay = false`), чтобы пользователь мог сразу продолжить игру после переустановки приложения или смены устройства.
 - **Custom Sync Dialogs:** Системные диалоги восстановления/конфликта синхронизации заменены на кастомный layout `dialog_cloud_sync.xml` в стиле проекта.
 - **GDPR / Data Deletion:** Добавлен сценарий удаления пользовательских данных из профиля: удаляются Firestore `users/{uid}`, локальный прогресс/Realm state, локальная custom profile photo и Firebase Auth user, после чего выполняется logout и переход на стартовый экран.
 - **Privacy & Terms:** Документы Privacy Policy и Terms & Conditions вынесены в отдельные Markdown/HTML-файлы для публикации, а приложение использует внешние ссылки на опубликованные документы.
+- **Web Legal Pages:** В `Arthur11232/Football-Quiz-Web` обновлены `privacy_policy.md`, `terms_and_conditions.md`, `privacy-policy.html`, `terms-and-conditions.html`; добавлены `data_deletion.md` и `data-deletion.html` для Play Console account/data deletion URL.
 - **PlayFragment Release Hardening:** Экран игры усилен перед релизом: устранён риск бесконечного выбора вопроса, `save_question_state` стал scoped по категории/месту, `CountDownTimer` и анимация корректно отменяются при destroy, ad callbacks защищены от detached fragment, Realm закрывается в горячих методах ответа.
-- **Ads Disabled for First Release:** Реклама временно полностью отключена через `Constant.ADS_ENABLED = false`. Banner скрывается, interstitial/rewarded не загружаются, reset/reload работают бесплатно. Код AdMob оставлен для последующего включения одной строкой.
+- **Ads Disabled in First Release:** Рекламная инфраструктура сохранена в проекте для будущего включения, но в версии 1.0.0 фактически выключена через `Constant.ADS_ENABLED = false`: баннеры скрыты, AdMob не инициализируется, interstitial/rewarded не загружаются, reset/reload работают бесплатно.
+- **Release Store Hygiene:** Включён строгий release lint (`abortOnError=true`, `checkReleaseBuilds=true`), отключены AAB language splits для in-app language switcher, добавлены backup/data extraction rules без восстановления локальных user data.
 - **Questions Firestore Update:** Коллекция Firestore `questions` обновлена из актуального `app/questions_audit.json`. Записано 1938 документов (`questions/0..1937`) в порядке `en, ru, hy`, пользовательский прогресс (`users/{uid}`) не затрагивался.
 - **Firestore Updater Tool:** Добавлен локальный инструмент `tools/update_firestore_questions.py` для `inspect`, `dry-run` и batch-обновления вопросов в Firestore. Service account хранится локально и игнорируется git-ом.
-- **Очистка:** Удалены устаревшие Java-классы (`TestActivity`, `TouchActivity`).
+- **Очистка:** Основной flow очищен перед релизом, но legacy/debug файлы (`TestActivity`, `TouchActivity`, `TestFragment`, `TouchFragment`, `VSFragment`, `FQ_Timer`) оставлены в проекте, чтобы не терять старый код до отдельного решения.
 - **Offline:** Реализована логика офлайн-игры (загрузка из Firestore -> сохранение в Realm).
 - **Debug Logging:** Добавлены точечные логи с тегом `FQ_Log` для сценариев `New Game`, загрузки вопросов из Firestore и cloud sync/recovery, чтобы упростить анализ `logcat`.
 
@@ -82,8 +87,8 @@
     - **Результат:** Создан updater `tools/update_firestore_questions.py`, проверена текущая структура Firestore (`answers.a/b/c/d/right`), выполнены `inspect` и `dry-run`, затем реальный `--commit` успешно перезаписал 1938 документов в коллекции `questions`. После записи выполнен контрольный `inspect`.
     - **Статус:** ✅ Завершено.
 
-11. **Release Prep: GDPR, PlayFragment, Ads**
-    - **Результат:** Добавлены удаление user data из профиля и legal links, усилен `PlayFragment` перед релизом, исправлен Realm lifecycle в методах ответа, улучшена анимация goal и временно полностью отключена реклама через feature flag.
+11. **Release Prep: GDPR, PlayFragment, Ads Disabled**
+    - **Результат:** Добавлены удаление user data из профиля и legal links, усилен `PlayFragment` перед релизом, исправлен Realm lifecycle в методах ответа, улучшена анимация goal, AdMob оставлен dormant-кодом и выключен через флаг в версии 1.0.0, `allowBackup=false` и backup/data extraction rules для корректного удаления локальных данных.
     - **Статус:** ✅ В работе / финальная ручная проверка на устройстве.
 
 ---
@@ -93,16 +98,18 @@
 - **Smart Sync:** Если `db_lang` в `SharedPreferences` не совпадает с выбранным языком, приложение автоматически скачивает новые вопросы при входе в игру ("New Game" или "Continue").
 - **Firestore Questions:** Коллекция `questions` используется как публичный источник контента для локального кеширования в Realm. Для корректной работы гостевого режима правила Firestore должны разрешать чтение вопросов без авторизации.
 - **Cloud Progress:** Пользовательская статистика хранится отдельно и должна оставаться приватной (`users/{uid}` только для владельца). Логика сравнения прогресса вынесена в `CloudSyncManager`.
+- **Manual Sync UX:** Если cloud-progress нежелателен, пользователь может отменить авто-восстановление один раз и продолжить играть локально. Позже в `ProfileFragment` доступны compact icon-actions: restore из cloud и overwrite cloud текущим прогрессом устройства.
 - **Recovery Flow:** Восстановление прогресса больше не должно оставлять пользователя в состоянии "только New Game" после переустановки. После restore автоматически включается `Continue`.
 - **Debugging:** Для анализа проблем приложения использовать `adb logcat -s FQ_Log`. Это отсекает системный шум MIUI/Google Play Services и показывает только ключевой flow приложения.
 - **User Data Deletion:** Основной GDPR-сценарий находится в `ProfileFragment`: пользователь может удалить данные из приложения. После успешного удаления локальные и cloud данные очищаются, Auth user удаляется при возможности, пользователь выходит из аккаунта и возвращается на Start Page.
 - **Profile Photo:** Custom profile photo хранится локально как path/string preference (`Constants.UserPhotoKey`), не синхронизируется в Firebase Storage и удаляется вместе с локальными user data.
-- **Ads Policy for First Release:** На первый релиз реклама отключена намеренно. `Constant.ADS_ENABLED = false` должен оставаться false до отдельного решения о монетизации. При false: banner hidden, interstitial/rewarded not loaded, reset/reload free.
+- **Ads Policy for First Release:** На первый релиз реклама не показывается. AdMob SDK, banner placeholders и interstitial/rewarded код сохранены, но все пути защищены `Constant.ADS_ENABLED = false`; `MobileAds.initialize()` не вызывается, ad requests не отправляются, баннеры скрыты, rewarded reset/reload заменены бесплатным действием. Если реклама будет включаться позже, нужно обновить consent/privacy wording и Play Console declarations до релиза.
 - **PlayFragment Release Notes:** `newGame()` больше не использует бесконечный `while(true)`, а выбирает из списка unanswered indexes. `save_question_state` больше не общий ключ, а scoped key по категории и place type. `CountDownTimer`, `goalAnimator` и temporary flying ball очищаются в `onDestroyView()`.
 - **Realm Lifecycle:** `DB_Helper.setAnswered()` и `DB_Helper.setCategoryScores()` теперь закрывают Realm в `finally`; это важно, потому что методы вызываются на каждом ответе.
 - **Question Audit JSON:** После локального анализа `questions_audit.json` пустой `categoryType` для `Europa League` устранён. Повторы формулировок вопроса с разными вариантами ответов не считаются ошибкой автоматически и требуют отдельной редакторской проверки.
 - **Firestore Questions Updater:** Для обновления production-вопросов использовать `python3 tools/update_firestore_questions.py update --service-account tools/service-account.local.json --language-order en,ru,hy --dry-run`, затем только после явного подтверждения `--commit`. Инструмент не удаляет коллекцию, а перезаписывает numbered docs `questions/0..1937`; `tools/service-account.local.json` и admin SDK ключи игнорируются git-ом.
 - **Firestore Question Shape:** Текущая структура Firestore для ответов использует lower-case ключи `answers.a`, `answers.b`, `answers.c`, `answers.d`, `answers.right`. Updater пишет именно в этом формате, чтобы не ломать существующее чтение вопросов.
+- **Release Verification:** После восстановления dormant Ads-кода `./gradlew :app:clean :app:assembleDebug` проходит успешно. Перед финальным релизным commit/push нужно заново прогнать `./gradlew :app:lintRelease :app:bundleRelease` в strict lint mode; сформированный локальный `app-release.aab` будет unsigned, пока не добавлен upload/release keystore и signing config.
 - **UEFA Currentness Review:** Начат поэтапный аудит актуальности вопросов. Для `Europa League` и `Champions League` внесены безопасные правки в `questions_audit.json`; во втором проходе после победы Tottenham `2024/25` обновлён ответ `Juventus, Tottenham` в вопросе among listed UEFA Cup / Europa League winners; детали зафиксированы в `app/questions_uefa_currentness_review.md`.
 - **World Championship Review:** Начат следующий этап аудита. Исправлены вопросы про большее число голов на ЧМ среди предложенных игроков (`Lionel Messi`), most appearances (`Lionel Messi`) и прохождение группы действующим чемпионом в XXI веке (`Brazil and France`); детали зафиксированы в `app/questions_world_currentness_review.md`.
 - **France Currentness Review:** Исправлены актуальные рекорды сборной Франции в `en/hy` по FFF: крупнейшая победа (`Gibraltar`), most caps (`Hugo Lloris`), top scorer (`Olivier Giroud`) и most matches as coach (`Didier Deschamps`); детали зафиксированы в `app/questions_france_currentness_review.md`.
@@ -116,4 +123,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 18.04.2026 (release prep: GDPR/data deletion, Privacy/Terms links, PlayFragment hardening, Realm lifecycle fixes, ads disabled for first release)*
+*Последнее обновление: 18.04.2026 (release prep: version 1.0.0, GDPR/data deletion, Privacy/Terms links, PlayFragment hardening, Realm lifecycle fixes, ads disabled but retained for future use)*

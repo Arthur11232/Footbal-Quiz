@@ -4,6 +4,11 @@
     <string name="new_game">Նոր Խաղ</string>
     <string name="Continue">Շարունակելի</string>
     <string name="Language">Լեզու</string>
+    <string name="russian">Русский</string>
+    <string name="english">English</string>
+    <string name="armenian">Հայերեն</string>
+    <string name="user">Օգտատեր</string>
+    <string name="login_with_google">Մուտք Google-ով</string>
     <string name="loading">Բեռնում...</string>
 
     <!-- Profile -->
@@ -14,17 +19,26 @@
     <string name="profile_sync_error">Սինխրոնացման սխալ: %s</string>
     <string name="profile_restore_title">Վերականգնել առաջընթացը</string>
     <string name="profile_restore_message">"Հայտնաբերվել է ամպային պահպանում ավելի բարձր միավորով (%d): Ցանկանու՞մ եք վերականգնել այն:"</string>
+    <string name="profile_manual_restore_message">"Ամպային միավոր: %d: Վերականգնե՞լ այս առաջընթացը սարքում:"</string>
     <string name="profile_restore_confirm">Վերականգնել</string>
     <string name="profile_restore_cancel">Չեղարկել</string>
     <string name="profile_sync_conflict_title">Սինխրոնացման անհամապատասխանություն</string>
     <string name="profile_sync_conflict_message">"Ամպային միավոր: %1$d | Լոկալ միավոր: %2$d: Ի՞նչ եք ցանկանում անել:"</string>
     <string name="profile_sync_restore_button">Վերականգնել ամպից</string>
     <string name="profile_sync_overwrite_button">Վերագրել ամպը</string>
+    <string name="profile_manual_restore_cloud">Վերականգնել ամպից</string>
+    <string name="profile_manual_overwrite_cloud">Վերբեռնել ընթացիկ առաջընթացը</string>
     <string name="profile_sync_up_to_date">Տվյալները համընկնում են:</string>
     <string name="profile_progress_restored">Առաջընթացը վերականգնված է</string>
     <string name="profile_cloud_backup_created">Պահուստային պատճենը պահվել է ամպում</string>
     <string name="profile_sync_generic_error">Անհայտ սխալ</string>
+    <string name="profile_no_cloud_progress">Ամպային առաջընթաց չի գտնվել</string>
+    <string name="profile_overwrite_cloud_title">Վերագրե՞լ ամպային առաջընթացը</string>
+    <string name="profile_overwrite_cloud_message">"Սա կփոխարինի ամպային պահպանումը այս սարքի ընթացիկ առաջընթացով: Լոկալ միավոր: %1$d | Պատասխանված հարցեր: %2$d:"</string>
     <string name="profile_total_score">Ընդհանուր միավոր</string>
+    <string name="profile_progress">Առաջընթաց</string>
+    <string name="profile_progress_percent">%d%%</string>
+    <string name="profile_category_progress">Առաջընթաց ըստ կատեգորիաների</string>
     <string name="profile_questions_answered">Պատասխանված հարցեր</string>
     <string name="profile_sign_out">Դուրս գալ</string>
     <string name="profile_delete_account">Ջնջել հաշիվը և տվյալները</string>
@@ -2200,7 +2214,7 @@
     <string name="title_privacy_policy">Գաղտնիության Քաղաքականություն</string>
     <string name="title_terms_and_conditions">Պայմաններ եւ Դրույթներ</string>
 
-    <string name="fq_privacy_policy">
+    <string name="fq_privacy_policy" formatted="false">
         #@ Գաղտնիության քաղաքականություն @#\n\n
         Արթուր Ալեքսանդրյանը ստեղծել է Football Quiz հավելվածը որպես անվճար (Free): Այս ԾԱՌԱՅՈՒԹՅՈՒՆԸ տրամադրվում է Արթուր Ալեքսանդրյանի կողմից անվճար և նախատեսված է օգտագործման համար «ինչպես կա»:\n\n
         Այս էջն օգտագործվում է այցելուներին տեղեկացնելու իմ քաղաքականության մասին՝ կապված անձնական տվյալների հավաքագրման, օգտագործման և բացահայտման հետ, եթե որևէ մեկը որոշի օգտվել իմ Ծառայությունից:\n\n
@@ -2211,9 +2225,9 @@
         Հավելվածն օգտագործում է երրորդ կողմի ծառայություններ, որոնք կարող են հավաքել ձեր ինքնությունը պարզելու համար օգտագործվող տեղեկատվություն:\n\n
         Հավելվածի կողմից օգտագործվող երրորդ կողմի ծառայությունների գաղտնիության քաղաքականության հղումները.\n
         &#8226; Google Play Services\n
-        &#8226; AdMob\n
         &#8226; Google Analytics for Firebase\n
-        &#8226; Firebase Crashlytics\n\n
+        &#8226; Firebase Authentication\n
+        &#8226; Firebase Cloud Firestore\n\n
         #@ Log Data @#\n\n
         Ուզում եմ տեղեկացնել ձեզ, որ ամեն անգամ, երբ դուք օգտվում եք իմ Ծառայությունից, հավելվածում սխալի դեպքում ես հավաքում եմ տվյալներ և տեղեկատվություն (երրորդ կողմի արտադրանքների միջոցով) ձեր հեռախոսում, որը կոչվում է Log Data: Այս տվյալները կարող են ներառել ձեր սարքի IP հասցեն, սարքի անունը, օպերացիոն համակարգի տարբերակը, հավելվածի կոնֆիգուրացիան իմ Ծառայությունից օգտվելու ժամանակ, օգտագործման ժամը և ամսաթիվը և այլ վիճակագրություն:\n\n
         #@ Cookies @#\n\n

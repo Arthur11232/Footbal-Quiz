@@ -24,17 +24,16 @@ public class TouchActivity extends AppCompatActivity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if (event.getAction() == MotionEvent.ACTION_DOWN){
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
             Log.e(getClass().getName(), "Touch Down");
             setX = new ArrayList<>();
             setY = new ArrayList<>();
         }
-        if (event.getAction() == MotionEvent.ACTION_MOVE){
-//            Log.e(getClass().getName(), "Touch MOVE: X = " + event.getX() + " Y = " + event.getY());
+        if (event.getAction() == MotionEvent.ACTION_MOVE) {
             setX.add(event.getX());
             setY.add(event.getY());
         }
-        if (event.getAction() == MotionEvent.ACTION_UP){
+        if (event.getAction() == MotionEvent.ACTION_UP) {
             Log.e(getClass().getName(), "Touch Up: " + setX.toString() + "\n " + setY.toString());
         }
         return super.onTouchEvent(event);

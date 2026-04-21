@@ -4,7 +4,6 @@ appcompat = "1.7.1"
 constraintlayout = "2.2.1"
 coreKtx = "1.18.0"
 firebaseBom = "34.11.0"
-firebaseCrashlyticsGradle = "3.0.6"
 googleServices = "4.4.4"
 gradle = "9.1.0"
 kotlinGradlePlugin = "2.3.20"
@@ -31,8 +30,6 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
-firebase-crashlytics-gradle = { group = "com.google.firebase", name = "firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsGradle" }
-firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }
 gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "gradle" }
 kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
@@ -42,7 +39,6 @@ play-services-ads = { group = "com.google.android.gms", name = "play-services-ad
 play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
 realm-gradle-plugin = { group = "io.realm", name = "realm-gradle-plugin", version.ref = "realmGradlePlugin" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
-firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
 

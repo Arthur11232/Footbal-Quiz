@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz
 
 import android.app.Application
+import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.google.android.gms.ads.MobileAds
 import io.realm.Realm
@@ -17,9 +18,10 @@ class FQ_Application : Application() {
         super.onCreate()
         instance = this
         Realm.init(this)
-        
-        // Инициализация MobileAds с пустым слушателем (современно)
-        MobileAds.initialize(this) {}
+
+        if (Constant.ADS_ENABLED) {
+            MobileAds.initialize(this) {}
+        }
 
         val realmConfiguration = RealmConfiguration.Builder()
             .name("FootballQuiz")

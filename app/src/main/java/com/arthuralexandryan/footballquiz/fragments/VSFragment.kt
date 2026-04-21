@@ -15,7 +15,7 @@ class VSFragment : Fragment() {
 
     private var _binding: LayoutVersusBinding? = null
     private val binding get() = _binding!!
-    
+
     private lateinit var dbHelper: DB_Helper
 
     override fun onCreateView(
@@ -30,10 +30,10 @@ class VSFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dbHelper = DB_Helper()
-        
+
         initViews()
         inflateView()
-        
+
         binding.onBack.setOnClickListener {
             findNavController().navigateUp()
         }

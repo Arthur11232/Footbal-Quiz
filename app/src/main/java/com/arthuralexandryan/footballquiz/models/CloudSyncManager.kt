@@ -145,6 +145,15 @@ object CloudSyncManager {
         setLocalSyncTimestamp(context, userId, cloudStats.gameState.lastSynced)
     }
 
+    fun downloadCloudStats(
+        user: FirebaseUser,
+        onComplete: (UserStatsDTO?) -> Unit
+    ) {
+        UserStatsService.getInstance().downloadStats(user.uid) { cloudStats ->
+            onComplete(cloudStats?.takeIf { it.hasProgress() })
+        }
+    }
+
     private fun UserStatsDTO.hasProgress(): Boolean {
         val state = gameState
         return state.total > 0 ||

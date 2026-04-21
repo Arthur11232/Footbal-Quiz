@@ -30,7 +30,7 @@ class TouchFragment : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         binding.root.setOnTouchListener { _, event ->
             handleTouch(event)
             true
