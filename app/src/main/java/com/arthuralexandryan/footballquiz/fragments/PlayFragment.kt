@@ -4,8 +4,8 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.animation.ValueAnimator
 import android.annotation.SuppressLint
+import android.graphics.RectF
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -18,6 +18,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
+import com.arthuralexandryan.footballquiz.animations.BallFlightAnimationManager
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.databinding.ActivityPlayNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
@@ -29,6 +30,7 @@ import com.arthuralexandryan.footballquiz.models.CloudSyncManager
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
+import com.arthuralexandryan.footballquiz.utils.GameSoundManager
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -68,6 +70,8 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private var goalAnimator: AnimatorSet? = null
     private var flyingGoalBall: ImageView? = null
     private var answerTimer: CountDownTimer? = null
+    private var soundManager: GameSoundManager? = null
+    private val random = Random()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = ActivityPlayNewBinding.inflate(inflater, container, false)
@@ -76,6 +80,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        soundManager = GameSoundManager(requireContext())
 
         binding.FQBannerAdView.visibility = View.GONE
         if (Constant.ADS_ENABLED) {
@@ -228,7 +233,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         n = if (savedState in questions.indices && !questions[savedState].isAnswered) {
             savedState
         } else {
-            unansweredIndexes[Random().nextInt(unansweredIndexes.size)]
+            unansweredIndexes[random.nextInt(unansweredIndexes.size)]
         }
 
         setAnswers()
@@ -256,7 +261,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         answerView.findViewById<TextView>(R.id.answer_number).text = number
         
         if (answers.isNotEmpty()) {
-            val x = Random().nextInt(answers.size)
+            val x = random.nextInt(answers.size)
             answerText.text = answers[x]
             answers.removeAt(x)
         }
@@ -327,7 +332,10 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             binding.answerIsCorrect.visibility = View.VISIBLE
             setAnswered()
             placeScores.place_score = placeScores.place_score - 1
-            binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
+            shootBallToGoal(isGoal = false) {
+                if (_binding == null) return@shootBallToGoal
+                binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
+            }
         }
     }
 
@@ -335,7 +343,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
      * Uses a temporary overlay ball so the scoreboard's small nested layouts
      * cannot clip the goal animation.
      */
-    private fun shootBallToGoal(onGoal: () -> Unit) {
+    private fun shootBallToGoal(isGoal: Boolean = true, onGoal: () -> Unit) {
         val currentBinding = _binding ?: return
         val root = currentBinding.root as ViewGroup
         val sourceBall = currentBinding.scoreboard.questionBall
@@ -363,9 +371,50 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         val ballSize = maxOf(sourceBall.width, sourceBall.height, (12f * density).toInt())
         val startX = ballCenterX - rootLoc[0] - ballSize / 2f
         val startY = ballCenterY - rootLoc[1] - ballSize / 2f
-        val endX = goalCenterX - rootLoc[0] - ballSize / 2f
-        val endY = goalCenterY - rootLoc[1] - ballSize / 2f
-        val arcHeight = maxOf(18f * density, kotlin.math.abs(endX - startX) * 0.12f)
+        val goalLeft = goalLoc[0] - rootLoc[0].toFloat()
+        val goalTop = goalLoc[1] - rootLoc[1].toFloat()
+        val goalRight = goalLeft + goal.width
+        val goalBottom = goalTop + goal.height
+        val goalBallCenterX = goalCenterX - rootLoc[0]
+        val goalBallCenterY = goalCenterY - rootLoc[1]
+
+        val targetRect = if (isGoal) {
+            BallFlightAnimationManager.createTargetRect(
+                centerX = goalBallCenterX,
+                centerY = goalBallCenterY,
+                spreadX = goal.width * 0.22f,
+                spreadY = goal.height * 0.16f
+            )
+        } else {
+            when (random.nextInt(3)) {
+                0 -> createMissTargetRect(
+                    centerX = goalLeft - ballSize * 0.55f - randomRange(6f * density, 20f * density),
+                    centerY = goalTop + goal.height * 0.45f,
+                    spreadX = 6f * density,
+                    spreadY = goal.height * 0.12f
+                )
+
+                1 -> createMissTargetRect(
+                    centerX = goalRight + ballSize * 0.55f + randomRange(6f * density, 20f * density),
+                    centerY = goalTop + goal.height * 0.45f,
+                    spreadX = 6f * density,
+                    spreadY = goal.height * 0.12f
+                )
+
+                else -> Pair(
+                    goalBallCenterX,
+                    goalTop - ballSize * 0.75f - randomRange(8f * density, 26f * density)
+                )
+                    .let { (centerX, centerY) ->
+                        createMissTargetRect(
+                            centerX = centerX,
+                            centerY = centerY,
+                            spreadX = goal.width * 0.18f,
+                            spreadY = 8f * density
+                        )
+                    }
+            }
+        }
 
         val flyingBall = ImageView(requireContext()).apply {
             setImageResource(R.drawable.ball)
@@ -379,33 +428,26 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         root.addView(flyingBall, ViewGroup.LayoutParams(ballSize, ballSize))
         flyingGoalBall = flyingBall
 
-        val flight = ValueAnimator.ofFloat(0f, 1f).apply {
-            duration = 760
+        val flightSpec = BallFlightAnimationManager.FlightSpec(
+            startCenterX = ballCenterX - rootLoc[0],
+            startCenterY = ballCenterY - rootLoc[1],
+            targetRect = targetRect,
+            durationMinMs = 640L,
+            durationMaxMs = 820L,
+            finalScaleMin = 0.88f,
+            finalScaleMax = 0.94f,
+            turnsMin = 1.35f,
+            turnsMax = 1.55f,
+            controlPointMin = 0.5f,
+            controlPointMax = 0.5f,
+            controlXOffsetMin = -14f * density,
+            controlXOffsetMax = 14f * density,
+            arcHeightBaseMin = 22f * density,
+            arcHeightDistanceFactor = 0.1f,
+            arcHeightExtraMin = 10f * density,
+            arcHeightExtraMax = 32f * density,
             interpolator = DecelerateInterpolator()
-            addUpdateListener { animator ->
-                val t = animator.animatedValue as Float
-                val inverse = 1f - t
-                val controlX = (startX + endX) / 2f
-                val controlY = minOf(startY, endY) - arcHeight
-                flyingBall.x = inverse * inverse * startX + 2f * inverse * t * controlX + t * t * endX
-                flyingBall.y = inverse * inverse * startY + 2f * inverse * t * controlY + t * t * endY
-            }
-        }
-        val rotate = ObjectAnimator.ofFloat(flyingBall, "rotation", 0f, 540f).apply {
-            duration = 760
-        }
-        val scaleDown = ObjectAnimator.ofFloat(flyingBall, "scaleX", 1.05f, 0.9f).apply {
-            duration = 760
-        }
-        val scaleDownY = ObjectAnimator.ofFloat(flyingBall, "scaleY", 1.05f, 0.9f).apply {
-            duration = 760
-        }
-
-        val returnX = ObjectAnimator.ofFloat(flyingBall, "x", endX, startX)
-        val returnY = ObjectAnimator.ofFloat(flyingBall, "y", endY, startY)
-        val scaleUp = ObjectAnimator.ofFloat(flyingBall, "scaleX", 0.9f, 1f)
-        val scaleUpY = ObjectAnimator.ofFloat(flyingBall, "scaleY", 0.9f, 1f)
-        val rotateBack = ObjectAnimator.ofFloat(flyingBall, "rotation", 540f, 720f)
+        )
 
         val goalPulse = AnimatorSet().apply {
             playTogether(
@@ -416,18 +458,18 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             interpolator = OvershootInterpolator()
         }
 
-        val returnHome = AnimatorSet().apply {
-            startDelay = 120
-            playTogether(returnX, returnY, scaleUp, scaleUpY, rotateBack)
-            duration = 360
-            interpolator = DecelerateInterpolator()
-        }
-
-        val phase1 = AnimatorSet().apply {
-            playTogether(flight, rotate, scaleDown, scaleDownY)
-        }
+        val flightPlan = BallFlightAnimationManager.buildPlan(flightSpec, random)
+        val phase1 = BallFlightAnimationManager.createAnimator(flyingBall, flightPlan, flightSpec.interpolator)
         var phaseOneCancelled = false
         phase1.addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationStart(animation: Animator) {
+                if (isGoal) {
+                    playGoalSound()
+                } else {
+                    playMissSound()
+                }
+            }
+
             override fun onAnimationCancel(animation: Animator) {
                 phaseOneCancelled = true
             }
@@ -435,12 +477,14 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             override fun onAnimationEnd(animation: Animator) {
                 if (phaseOneCancelled || _binding == null) return
                 onGoal()
-                goalPulse.start()
+                if (isGoal) {
+                    goalPulse.start()
+                }
             }
         })
 
         goalAnimator = AnimatorSet().apply {
-            playSequentially(phase1/*, returnHome*/)
+            playSequentially(phase1)
             addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
                     sourceBall.alpha = 1f
@@ -469,6 +513,26 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         _binding?.scoreboard?.questionBall?.alpha = 1f
         _binding?.scoreboard?.answerBox?.scaleX = 1f
         _binding?.scoreboard?.answerBox?.scaleY = 1f
+    }
+
+    private fun playGoalSound() {
+        soundManager?.playRightAnswer()
+    }
+
+    private fun playMissSound() {
+        soundManager?.playWrongAnswer()
+    }
+
+    private fun createMissTargetRect(centerX: Float, centerY: Float, spreadX: Float, spreadY: Float): RectF {
+        return BallFlightAnimationManager.createTargetRect(centerX, centerY, spreadX, spreadY)
+    }
+
+    private fun randomOffset(radius: Float): Float {
+        return randomRange(-radius, radius)
+    }
+
+    private fun randomRange(min: Float, max: Float): Float {
+        return min + random.nextFloat() * (max - min)
     }
 
     private fun updateDBScores() {
@@ -562,6 +626,8 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         adMob?.destroyLoading()
         mInterstitialAd = null
         mRewardedAd = null
+        soundManager?.release()
+        soundManager = null
         _binding = null
         super.onDestroyView()
     }
