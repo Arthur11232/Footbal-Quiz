@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextPaint
@@ -15,10 +14,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioGroup
-import androidx.appcompat.widget.AppCompatButton
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -37,6 +33,7 @@ import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.QuestionModel
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.utils.Constants
+import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import java.util.regex.Pattern
@@ -252,7 +249,12 @@ class StartPageFragment : Fragment() {
                 newGame(requireContext(), true)
             } else {
                 Log.d("FQ_Log", "handleGameClick: showing new game dialog")
-                getNewGameDialog(requireContext()).show()
+                DialogManager.showNewGameDialog(
+                    context = requireContext(),
+                    inflater = layoutInflater
+                ) {
+                    newGame(requireContext(), true)
+                }
             }
         }
     }
@@ -334,34 +336,23 @@ class StartPageFragment : Fragment() {
         if (restoreDialogShowing) return
         restoreDialogShowing = true
 
-        val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
-        val dialog = android.app.Dialog(requireContext(), R.style.FQ_CustomDialog)
         var handledByButton = false
-        dialog.setContentView(dialogView)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.setOnDismissListener {
-            if (!handledByButton) {
-                dismissAutoRestorePrompt(userId)
-            }
-            restoreDialogShowing = false
-        }
-        dialog.window?.apply {
-            setBackgroundDrawableResource(android.R.color.transparent)
-            setLayout(
-                (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                android.view.WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
-
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_restore_title)
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text =
-            getString(R.string.profile_restore_message, cloudStats.gameState.total)
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
-            text = getString(R.string.profile_restore_confirm)
-            setOnClickListener {
+        DialogManager.showActionDialog(
+            context = requireContext(),
+            inflater = layoutInflater,
+            title = getString(R.string.profile_restore_title),
+            message = getString(R.string.profile_restore_message, cloudStats.gameState.total),
+            primaryText = getString(R.string.profile_restore_confirm),
+            secondaryText = getString(R.string.profile_restore_cancel),
+            cancelOutside = true,
+            onDismiss = {
+                if (!handledByButton) {
+                    dismissAutoRestorePrompt(userId)
+                }
+                restoreDialogShowing = false
+            },
+            onPrimaryClick = {
                 handledByButton = true
-                dialog.dismiss()
                 CloudSyncManager.restoreCloudStats(requireContext(), dbHelper, userId, cloudStats)
                 refreshContinueButton()
                 android.widget.Toast.makeText(
@@ -369,19 +360,12 @@ class StartPageFragment : Fragment() {
                     getString(R.string.profile_progress_restored),
                     android.widget.Toast.LENGTH_SHORT
                 ).show()
-            }
-        }
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
-            text = getString(R.string.profile_restore_cancel)
-            setOnClickListener {
+            },
+            onSecondaryClick = {
                 handledByButton = true
                 dismissAutoRestorePrompt(userId)
-                dialog.dismiss()
             }
-        }
-
-        dialog.show()
+        )
     }
 
     private fun newGame(context: Context, isFromDB: Boolean) {
@@ -390,69 +374,35 @@ class StartPageFragment : Fragment() {
         findNavController().navigate(R.id.action_start_to_choose)
     }
 
-    private fun getNewGameDialog(context: Context): android.app.Dialog {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_new_game, null)
-        val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
-        dialog.setContentView(dialogView)
-        dialog.window?.apply {
-            setBackgroundDrawableResource(android.R.color.transparent)
-            setLayout(
-                    (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                    android.view.WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
-        dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn_yes).setOnClickListener {
-            dialog.dismiss()
-            newGame(context, true)
-        }
-        dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.btn_no).setOnClickListener {
-            dialog.dismiss()
-        }
-        return dialog
-    }
-
     private fun openLanguageDialog() {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_language, null)
-        val dialog = android.app.Dialog(requireContext(), R.style.FQ_CustomDialog)
-        dialog.setContentView(dialogView)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.window?.apply {
-            setBackgroundDrawableResource(android.R.color.transparent)
-            setLayout(
-                    (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                    android.view.WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
+        DialogManager.showLanguageDialog(
+            context = requireContext(),
+            inflater = layoutInflater,
+            checkedLanguageId = Prefer.getIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian),
+            onLanguageSelected = { radioGroup, checkedId ->
+                val locale = when (checkedId) {
+                    R.id.lng_armenian -> {
+                        Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_armenian)
+                        "hy"
+                    }
 
-        val group = dialogView.findViewById<RadioGroup>(R.id.app_languages)
-        group.check(Prefer.getIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian))
-        group.setOnCheckedChangeListener { radioGroup, i ->
-            val locale = when (i) {
-                R.id.lng_armenian -> {
-                    Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_armenian)
-                    "hy"
-                }
+                    R.id.lng_russian -> {
+                        Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian)
+                        "ru"
+                    }
 
-                R.id.lng_russian -> {
-                    Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_russian)
-                    "ru"
+                    else -> {
+                        Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_english)
+                        "en"
+                    }
                 }
-
-                else -> {
-                    Prefer.setIntPreference(requireContext(), Constants.CheckedLanguage, R.id.lng_english)
-                    "en"
-                }
+                Prefer.setStringPreference(requireContext(), Constants.Localization, locale)
+                for (j in 0 until radioGroup.childCount) radioGroup.getChildAt(j).isClickable = false
+            },
+            onSave = {
+                requireActivity().recreate()
             }
-            Prefer.setStringPreference(requireContext(), Constants.Localization, locale)
-            for (j in 0 until radioGroup.childCount) radioGroup.getChildAt(j).isClickable = false
-        }
-
-        dialogView.findViewById<androidx.appcompat.widget.AppCompatButton>(R.id.save_language).setOnClickListener {
-            dialog.dismiss()
-            requireActivity().recreate()
-        }
-
-        dialog.show()
+        )
     }
 
     private fun setAgreements() {

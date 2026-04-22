@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
@@ -18,6 +17,7 @@ import com.arthuralexandryan.footballquiz.interfaces.Check
 import com.arthuralexandryan.footballquiz.models.CloudSyncManager
 import com.arthuralexandryan.footballquiz.models.UserStatsService
 import com.arthuralexandryan.footballquiz.utils.Constants
+import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.bumptech.glide.Glide
@@ -179,73 +179,36 @@ class ProfileFragment : Fragment() {
 
     private fun showRestoreDialog(cloudStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO) {
         val context = context ?: return
-        val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
-        val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
-        dialog.setContentView(dialogView)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.window?.apply {
-            setBackgroundDrawableResource(android.R.color.transparent)
-            setLayout(
-                (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                android.view.WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
-
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_restore_title)
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text =
-            getString(R.string.profile_manual_restore_message, cloudStats.gameState.total)
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
-            text = getString(R.string.profile_restore_confirm)
-            setOnClickListener {
-                dialog.dismiss()
-                val userId = authManager.getCurrentUser()?.uid ?: return@setOnClickListener
+        DialogManager.showActionDialog(
+            context = context,
+            inflater = layoutInflater,
+            title = getString(R.string.profile_restore_title),
+            message = getString(R.string.profile_manual_restore_message, cloudStats.gameState.total),
+            primaryText = getString(R.string.profile_restore_confirm),
+            secondaryText = getString(R.string.profile_restore_cancel),
+            onPrimaryClick = {
+                val userId = authManager.getCurrentUser()?.uid ?: return@showActionDialog
                 CloudSyncManager.restoreCloudStats(requireContext(), dbHelper, userId, cloudStats)
                 updateUI()
                 loadStatistics()
                 Toast.makeText(context, getString(R.string.profile_progress_restored), Toast.LENGTH_SHORT).show()
             }
-        }
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
-            text = getString(R.string.profile_restore_cancel)
-            setOnClickListener { dialog.dismiss() }
-        }
-
-        dialog.show()
+        )
     }
 
     private fun showDeleteAccountDialog() {
         val context = context ?: return
-        val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
-        val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
-        dialog.setContentView(dialogView)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.window?.apply {
-            setBackgroundDrawableResource(android.R.color.transparent)
-            setLayout(
-                (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                android.view.WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
-
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_delete_title)
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text = getString(R.string.profile_delete_message)
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
-            text = getString(R.string.profile_delete_confirm)
-            setOnClickListener {
-                dialog.dismiss()
+        DialogManager.showActionDialog(
+            context = context,
+            inflater = layoutInflater,
+            title = getString(R.string.profile_delete_title),
+            message = getString(R.string.profile_delete_message),
+            primaryText = getString(R.string.profile_delete_confirm),
+            secondaryText = getString(R.string.profile_delete_cancel),
+            onPrimaryClick = {
                 deleteAccountAndData()
             }
-        }
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
-            text = getString(R.string.profile_delete_cancel)
-            setOnClickListener { dialog.dismiss() }
-        }
-
-        dialog.show()
+        )
     }
 
     private fun deleteAccountAndData() {
@@ -415,36 +378,17 @@ class ProfileFragment : Fragment() {
             dbHelper.getUFAAnsweredScores() +
             dbHelper.getWorldAnsweredScores() +
             dbHelper.getVersusAnsweredScores()
-        val dialogView = layoutInflater.inflate(R.layout.dialog_cloud_sync, null)
-        val dialog = android.app.Dialog(context, R.style.FQ_CustomDialog)
-        dialog.setContentView(dialogView)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.window?.apply {
-            setBackgroundDrawableResource(android.R.color.transparent)
-            setLayout(
-                (resources.displayMetrics.widthPixels * 0.9).toInt(),
-                android.view.WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
-
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogTitle).text = getString(R.string.profile_overwrite_cloud_title)
-        dialogView.findViewById<android.widget.TextView>(R.id.dialogMessage).text =
-            getString(R.string.profile_overwrite_cloud_message, localScore, localAnswered)
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnPrimary).apply {
-            text = getString(R.string.profile_sync_overwrite_button)
-            setOnClickListener {
-                dialog.dismiss()
+        DialogManager.showActionDialog(
+            context = context,
+            inflater = layoutInflater,
+            title = getString(R.string.profile_overwrite_cloud_title),
+            message = getString(R.string.profile_overwrite_cloud_message, localScore, localAnswered),
+            primaryText = getString(R.string.profile_sync_overwrite_button),
+            secondaryText = getString(R.string.profile_restore_cancel),
+            onPrimaryClick = {
                 performUpload(user)
             }
-        }
-
-        dialogView.findViewById<AppCompatButton>(R.id.btnSecondary).apply {
-            text = getString(R.string.profile_restore_cancel)
-            setOnClickListener { dialog.dismiss() }
-        }
-
-        dialog.show()
+        )
     }
 
     private fun markAutoRestorePromptDismissed(userId: String) {
