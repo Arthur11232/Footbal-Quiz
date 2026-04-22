@@ -19,6 +19,7 @@ import com.arthuralexandryan.footballquiz.models.CloudSyncManager
 import com.arthuralexandryan.footballquiz.models.UserStatsService
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
 import java.io.File
@@ -75,6 +76,16 @@ class ProfileFragment : Fragment() {
         }
 
         binding.onBack.setOnClickListener { findNavController().navigateUp() }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        SystemBarStyleHelper.applySampledDrawable(
+            fragment = this,
+            drawableResId = R.drawable.football,
+            matchNavigationToStatus = false,
+            lightSystemBarIcons = false
+        )
     }
 
     private fun updateUI() {

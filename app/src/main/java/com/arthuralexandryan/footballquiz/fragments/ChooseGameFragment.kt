@@ -13,6 +13,7 @@ import com.arthuralexandryan.footballquiz.constants.Constant.FOR_WORLD_SCORE
 import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameBinding
 import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 
 class ChooseGameFragment : Fragment(), View.OnClickListener {
 
@@ -46,6 +47,15 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
     override fun onStart() {
         super.onStart()
         updateScores()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        SystemBarStyleHelper.applySolidColorRes(
+            fragment = this,
+            colorResId = R.color.fq_colorPrimaryDark,
+            lightSystemBarIcons = false
+        )
     }
 
     private fun updateScores() {

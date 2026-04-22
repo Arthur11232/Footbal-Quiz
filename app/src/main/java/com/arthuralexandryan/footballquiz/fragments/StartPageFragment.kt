@@ -38,6 +38,7 @@ import com.arthuralexandryan.footballquiz.models.QuestionModel
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import java.util.regex.Pattern
 
 class StartPageFragment : Fragment() {
@@ -125,6 +126,16 @@ class StartPageFragment : Fragment() {
         super.onStart()
         refreshContinueButton()
         authManager.getCurrentUser()?.let { maybeSyncCloudProgress(it) }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        SystemBarStyleHelper.applySampledDrawable(
+            fragment = this,
+            drawableResId = R.drawable.football,
+            matchNavigationToStatus = false,
+            lightSystemBarIcons = false
+        )
     }
 
     private fun refreshContinueButton() {

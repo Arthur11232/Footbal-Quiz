@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.databinding.ActivityVersusBinding
 import com.arthuralexandryan.footballquiz.models.TarberakArrays
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.arthuralexandryan.footballquiz.versus.vsrb.FragmentRealBarc
 import com.arthuralexandryan.footballquiz.versus.vsrm.FragmentRonMessi
 
@@ -38,6 +39,16 @@ class VersusFragment : Fragment() {
         binding.onBack.setOnClickListener {
             findNavController().navigateUp()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        SystemBarStyleHelper.applySampledDrawable(
+            fragment = this,
+            drawableResId = R.drawable.vs_bg,
+            matchNavigationToStatus = false,
+            lightSystemBarIcons = false
+        )
     }
 
     private fun onClicks() {

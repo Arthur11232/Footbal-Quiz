@@ -25,6 +25,7 @@ import com.arthuralexandryan.footballquiz.models.TarberakArrays
 import com.arthuralexandryan.footballquiz.models.primeryColorModel.ColorModel
 import com.arthuralexandryan.footballquiz.utils.CategoryType
 import com.arthuralexandryan.footballquiz.utils.Constants
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import io.realm.Realm
 
 class CategoryPageFragment : Fragment(), ChooseGame {
@@ -84,6 +85,20 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     override fun onStart() {
         super.onStart()
         categoryType?.let { refreshScores() }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (categoryType.equals("vsRM", ignoreCase = true)) {
+            SystemBarStyleHelper.applySampledDrawable(
+                fragment = this,
+                drawableResId = R.drawable.vs_bg,
+                matchNavigationToStatus = false,
+                lightSystemBarIcons = false
+            )
+        } else {
+            initPrimaryColor(tab)
+        }
     }
 
     private fun refreshScores() {
@@ -237,7 +252,11 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     private fun initPrimaryColor(tab: Int) {
         if (darkPrimaryColorList.isEmpty() || tab >= darkPrimaryColorList.size) return
         val color: ColorModel = darkPrimaryColorList[tab]
-        activity?.window?.statusBarColor = Color.argb(color.alfa, color.red, color.green, color.blue)
+        SystemBarStyleHelper.applySolidColor(
+            fragment = this,
+            color = Color.argb(color.alfa, color.red, color.green, color.blue),
+            lightSystemBarIcons = false
+        )
     }
 
     private fun initTitleList() {

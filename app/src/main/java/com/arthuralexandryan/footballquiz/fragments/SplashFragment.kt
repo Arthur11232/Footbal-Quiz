@@ -18,8 +18,8 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.databinding.SplashBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.utils.GameSoundManager
 import com.arthuralexandryan.footballquiz.utils.Prefer
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import java.util.Random
 
 class SplashFragment : Fragment() {
@@ -31,10 +31,6 @@ class SplashFragment : Fragment() {
     private val splashImageWidth = 320f
     private val splashImageHeight = 480f
     private val goalBoundsOnSource = RectF(88f, 124f, 233f, 173f)
-    private var soundManager: GameSoundManager? = null
-    private var pendingSoundRunnable: Runnable? = null
-    private var isSplashAnimationFinished: Boolean = false
-    private var isSplashSoundFinished: Boolean = true
     private val random = Random()
 
     override fun onCreateView(
@@ -49,7 +45,6 @@ class SplashFragment : Fragment() {
     @Suppress("DEPRECATION")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        soundManager = GameSoundManager(requireContext())
         initView()
     }
 
@@ -61,6 +56,16 @@ class SplashFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        SystemBarStyleHelper.applySampledDrawable(
+            fragment = this,
+            drawableResId = R.drawable.football,
+            matchNavigationToStatus = false,
+            lightSystemBarIcons = false
+        )
+    }
+
     private fun initDBs() {
         if (Prefer.getBooleanPreference(requireContext(), INIT_DB, true)) {
             Prefer.setBooleanPreference(requireContext(), INIT_DB, false)
@@ -70,9 +75,6 @@ class SplashFragment : Fragment() {
     }
 
     private fun startSplashAnimation() {
-        isSplashAnimationFinished = false
-        isSplashSoundFinished = false
-
         val goalBounds = mapGoalBoundsToScreen() ?: run {
             if (isAdded) {
                 findNavController().navigate(R.id.action_splash_to_start)
@@ -111,57 +113,19 @@ class SplashFragment : Fragment() {
             addListener(object : Animator.AnimatorListener {
                 override fun onAnimationStart(animation: Animator) {
                     initDBs()
-                    scheduleGoalSound(startDelayMs = 2700L)
                 }
 
                 override fun onAnimationEnd(animation: Animator) {
-                    clearPendingSound()
-                    isSplashAnimationFinished = true
-                    navigateFromSplashIfReady()
+                    if (isAdded && findNavController().currentDestination?.id == R.id.splashFragment) {
+                        findNavController().navigate(R.id.action_splash_to_start)
+                    }
                 }
 
-                override fun onAnimationCancel(animation: Animator) {
-                    clearPendingSound()
-                    isSplashAnimationFinished = true
-                    isSplashSoundFinished = true
-                }
+                override fun onAnimationCancel(animation: Animator) {}
 
                 override fun onAnimationRepeat(animation: Animator) {}
             })
             start()
-        }
-    }
-
-    private fun scheduleGoalSound(startDelayMs: Long) {
-        clearPendingSound()
-        val rootView = _binding?.root ?: return
-        val runnable = Runnable {
-            if (_binding == null || !isAdded) return@Runnable
-            soundManager?.playRightAnswer {
-                activity?.runOnUiThread {
-                    isSplashSoundFinished = true
-                    navigateFromSplashIfReady()
-                }
-            }
-        }
-        pendingSoundRunnable = runnable
-        rootView.postDelayed(runnable, startDelayMs)
-    }
-
-    private fun clearPendingSound() {
-        val rootView = _binding?.root
-        val runnable = pendingSoundRunnable
-        if (rootView != null && runnable != null) {
-            rootView.removeCallbacks(runnable)
-        }
-        pendingSoundRunnable = null
-    }
-
-    private fun navigateFromSplashIfReady() {
-        if (!isAdded || _binding == null) return
-        if (!isSplashAnimationFinished || !isSplashSoundFinished) return
-        if (findNavController().currentDestination?.id == R.id.splashFragment) {
-            findNavController().navigate(R.id.action_splash_to_start)
         }
     }
 
@@ -208,11 +172,6 @@ class SplashFragment : Fragment() {
     override fun onDestroyView() {
         splashAnimator?.cancel()
         splashAnimator = null
-        clearPendingSound()
-        isSplashAnimationFinished = true
-        isSplashSoundFinished = true
-        soundManager?.release()
-        soundManager = null
         super.onDestroyView()
         _binding = null
     }
