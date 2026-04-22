@@ -29,6 +29,7 @@
 - **PlayFragment Release Hardening:** Экран игры усилен перед релизом: устранён риск бесконечного выбора вопроса, `save_question_state` стал scoped по категории/месту, `CountDownTimer` и анимация корректно отменяются при destroy, ad callbacks защищены от detached fragment, Realm закрывается в горячих методах ответа.
 - **Ads Disabled in First Release:** Рекламная инфраструктура сохранена в проекте для будущего включения, но в версии 1.0.0 фактически выключена через `Constant.ADS_ENABLED = false`: баннеры скрыты, AdMob не инициализируется, interstitial/rewarded не загружаются, reset/reload работают бесплатно.
 - **Release Store Hygiene:** Включён строгий release lint (`abortOnError=true`, `checkReleaseBuilds=true`), отключены AAB language splits для in-app language switcher, добавлены backup/data extraction rules без восстановления локальных user data.
+- **System Bars Styling:** Добавлен общий `SystemBarStyleHelper`; основные экраны (`Splash`, `StartPage`, `ChooseGame`, `CategoryPage`, `Play`, `Versus`, `Profile`, `Privacy`, `Terms`) теперь синхронно выставляют `status bar` и `navigation bar` под свой фон. Для экранов с изображением цвет берётся из верхней/нижней полосы drawable, для однотонных экранов используется целевой ресурс цвета.
 - **Questions Firestore Update:** Коллекция Firestore `questions` обновлена из актуального `app/questions_audit.json`. Записано 1938 документов (`questions/0..1937`) в порядке `en, ru, hy`, пользовательский прогресс (`users/{uid}`) не затрагивался.
 - **Firestore Updater Tool:** Добавлен локальный инструмент `tools/update_firestore_questions.py` для `inspect`, `dry-run` и batch-обновления вопросов в Firestore. Service account хранится локально и игнорируется git-ом.
 - **Очистка:** Основной flow очищен перед релизом, но legacy/debug файлы (`TestActivity`, `TouchActivity`, `TestFragment`, `TouchFragment`, `VSFragment`, `FQ_Timer`) оставлены в проекте, чтобы не терять старый код до отдельного решения.
@@ -91,6 +92,10 @@
     - **Результат:** Добавлены удаление user data из профиля и legal links, усилен `PlayFragment` перед релизом, исправлен Realm lifecycle в методах ответа, улучшена анимация goal, AdMob оставлен dormant-кодом и выключен через флаг в версии 1.0.0, `allowBackup=false` и backup/data extraction rules для корректного удаления локальных данных.
     - **Статус:** ✅ В работе / финальная ручная проверка на устройстве.
 
+12. **UI Polish: System Bars Consistency**
+    - **Результат:** Введён единый helper для системных панелей, чтобы `status bar` и `navigation bar` на основных экранах совпадали с фоном приложения. `PlayFragment` и `SplashFragment` используют sampled colors из background drawable; остальные ключевые экраны настроены через общий helper.
+    - **Статус:** ✅ Завершено.
+
 ---
 
 ## 📝 Заметки
@@ -104,6 +109,7 @@
 - **User Data Deletion:** Основной GDPR-сценарий находится в `ProfileFragment`: пользователь может удалить данные из приложения. После успешного удаления локальные и cloud данные очищаются, Auth user удаляется при возможности, пользователь выходит из аккаунта и возвращается на Start Page.
 - **Profile Photo:** Custom profile photo хранится локально как path/string preference (`Constants.UserPhotoKey`), не синхронизируется в Firebase Storage и удаляется вместе с локальными user data.
 - **Ads Policy for First Release:** На первый релиз реклама не показывается. AdMob SDK, banner placeholders и interstitial/rewarded код сохранены, но все пути защищены `Constant.ADS_ENABLED = false`; `MobileAds.initialize()` не вызывается, ad requests не отправляются, баннеры скрыты, rewarded reset/reload заменены бесплатным действием. Если реклама будет включаться позже, нужно обновить consent/privacy wording и Play Console declarations до релиза.
+- **Legal Status:** Актуальным источником Privacy Policy / Terms & Conditions считаются внешние документы в `docs/privacy_policy.md` и `docs/terms_and_conditions.md`, на которые ссылается `StartPageFragment` через `privacy_policy_url` и `terms_and_conditions_url`. Встроенные тексты `fq_privacy_policy` / `fq_terms_conditions` в `app/src/main/res/values*` синхронизированы с текущим поведением приложения: guest mode, Google Sign-In, Firestore cloud sync, ads disabled в `1.0.0`, локальное хранение custom profile photo и in-app delete account из `ProfileFragment`.
 - **PlayFragment Release Notes:** `newGame()` больше не использует бесконечный `while(true)`, а выбирает из списка unanswered indexes. `save_question_state` больше не общий ключ, а scoped key по категории и place type. `CountDownTimer`, `goalAnimator` и temporary flying ball очищаются в `onDestroyView()`.
 - **Realm Lifecycle:** `DB_Helper.setAnswered()` и `DB_Helper.setCategoryScores()` теперь закрывают Realm в `finally`; это важно, потому что методы вызываются на каждом ответе.
 - **Question Audit JSON:** После локального анализа `questions_audit.json` пустой `categoryType` для `Europa League` устранён. Повторы формулировок вопроса с разными вариантами ответов не считаются ошибкой автоматически и требуют отдельной редакторской проверки.
@@ -123,4 +129,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 18.04.2026 (release prep: version 1.0.0, GDPR/data deletion, Privacy/Terms links, PlayFragment hardening, Realm lifecycle fixes, ads disabled but retained for future use)*
+*Последнее обновление: 22.04.2026 (system bars helper on main screens, legal status re-checked, external and embedded Privacy/Terms synchronized with current app behavior)*

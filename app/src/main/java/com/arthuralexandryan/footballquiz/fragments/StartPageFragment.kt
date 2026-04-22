@@ -108,7 +108,7 @@ class StartPageFragment : Fragment() {
         if (user != null) {
             binding.signInPlay.visibility = View.GONE
             binding.myAccount.visibility = View.VISIBLE
-            binding.myAccount.text = user.email
+            binding.myAccountEmail.text = user.email ?: getString(R.string.profile_not_signed_in)
         } else {
             binding.signInPlay.visibility = View.VISIBLE
             binding.myAccount.visibility = View.GONE
@@ -163,6 +163,7 @@ class StartPageFragment : Fragment() {
         binding.tvContinue.isEnabled = false
         binding.tvLanguage.isEnabled = false
         binding.signInPlay.isEnabled = false
+        binding.myAccount.isEnabled = false
     }
 
     private fun hideLoading() {
@@ -170,6 +171,7 @@ class StartPageFragment : Fragment() {
         binding.tvGame.isEnabled = true
         binding.tvLanguage.isEnabled = true
         binding.signInPlay.isEnabled = true
+        binding.myAccount.isEnabled = true
         refreshContinueButton()
     }
 
