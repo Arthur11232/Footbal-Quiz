@@ -12,6 +12,7 @@ buildscript {
         classpath libs.realm.gradle.plugin
         classpath libs.kotlin.gradle.plugin
         classpath libs.google.services
+        classpath libs.firebase.crashlytics.gradle
         classpath libs.androidx.navigation.safe.args.gradle.plugin
 
         // NOTE: Do not place your application dependencies here; they belong

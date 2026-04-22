@@ -25,6 +25,10 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/AdUser" />
 
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+
         <activity
             android:name=".activities.MainActivity"
             android:exported="true"

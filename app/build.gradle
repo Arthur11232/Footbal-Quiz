@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
@@ -17,9 +18,27 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    flavorDimensions "environment"
+
+    productFlavors {
+        dev {
+            dimension "environment"
+            versionNameSuffix "-dev"
+            buildConfigField "String", "APP_ENV", "\"dev\""
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+        }
+
+        prod {
+            dimension "environment"
+            buildConfigField "String", "APP_ENV", "\"prod\""
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
+        }
+    }
     
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     bundle {
@@ -29,10 +48,20 @@ android {
     }
     
     buildTypes {
-        debug {}
-        release {
+        debug {
             minifyEnabled false
+            shrinkResources false
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            firebaseCrashlytics {
+                mappingFileUploadEnabled true
+            }
         }
     }
     
@@ -51,7 +80,7 @@ android {
 
     android.applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            outputFileName = "Football_Quiz_${variant.versionName}.apk"
+            outputFileName = "Football_Quiz_${variant.flavorName}_${variant.buildType.name}_${variant.versionName}.apk"
         }
     }
 
@@ -71,6 +100,7 @@ dependencies {
     implementation platform(libs.firebase.bom)
     implementation libs.firebase.analytics
     implementation libs.firebase.auth
+    implementation libs.firebase.crashlytics
     implementation libs.play.services.auth
     implementation libs.play.services.ads
 
