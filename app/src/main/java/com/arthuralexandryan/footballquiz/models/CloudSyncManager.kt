@@ -11,6 +11,10 @@ import com.google.firebase.auth.FirebaseUser
 import io.realm.Realm
 
 object CloudSyncManager {
+    internal var downloadStatsAction: (String, (UserStatsDTO?) -> Unit) -> Unit =
+        { userId, onComplete -> UserStatsService.getInstance().downloadStats(userId, onComplete) }
+    internal var uploadStatsAction: (String, UserStatsDTO, (Boolean) -> Unit) -> Unit =
+        { userId, stats, onComplete -> UserStatsService.getInstance().uploadStats(userId, stats, onComplete) }
 
     sealed class SyncDecision {
         data object None : SyncDecision()
@@ -52,49 +56,49 @@ object CloudSyncManager {
             "CloudSyncManager.resolveSyncDecision: user=${user.uid}, localScore=${localSnapshot.totalScore}, localAnswered=${localSnapshot.totalAnswered}, localLastSynced=${localSnapshot.lastSynced}"
         )
 
-        UserStatsService.getInstance().downloadStats(user.uid) { cloudStats ->
-            if (cloudStats == null || !cloudStats.hasProgress()) {
-                Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: no cloud progress for user=${user.uid}")
-                onComplete(
-                    if (localSnapshot.hasProgress) SyncDecision.UploadLocal(user) else SyncDecision.None
-                )
-                return@downloadStats
-            }
-
-            if (!localSnapshot.hasProgress) {
-                Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: local progress empty, restore from cloud for user=${user.uid}")
-                onComplete(SyncDecision.RestoreCloud(cloudStats))
-                return@downloadStats
-            }
-
-            val cloudScore = cloudStats.gameState.total
-            val localScore = localSnapshot.totalScore
-            val cloudLastSynced = cloudStats.gameState.lastSynced
-            Log.d(
-                "FQ_Log",
-                "CloudSyncManager.resolveSyncDecision: user=${user.uid}, cloudScore=$cloudScore, cloudLastSynced=$cloudLastSynced"
-            )
-
+        downloadStatsAction(user.uid) { cloudStats ->
             when {
-                cloudScore > localScore -> {
-                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=RestoreCloud by score for user=${user.uid}")
+                cloudStats == null || !cloudStats.hasProgress() -> {
+                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: no cloud progress for user=${user.uid}")
+                    onComplete(
+                        if (localSnapshot.hasProgress) SyncDecision.UploadLocal(user) else SyncDecision.None
+                    )
+                }
+                !localSnapshot.hasProgress -> {
+                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: local progress empty, restore from cloud for user=${user.uid}")
                     onComplete(SyncDecision.RestoreCloud(cloudStats))
-                }
-                localScore > cloudScore -> {
-                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=UploadLocal by score for user=${user.uid}")
-                    onComplete(SyncDecision.UploadLocal(user))
-                }
-                cloudLastSynced > localSnapshot.lastSynced -> {
-                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=RestoreCloud by timestamp for user=${user.uid}")
-                    onComplete(SyncDecision.RestoreCloud(cloudStats))
-                }
-                localSnapshot.lastSynced > cloudLastSynced -> {
-                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=UploadLocal by timestamp for user=${user.uid}")
-                    onComplete(SyncDecision.UploadLocal(user))
                 }
                 else -> {
-                    Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=None for user=${user.uid}")
-                    onComplete(SyncDecision.None)
+                    val cloudScore = cloudStats.gameState.total
+                    val localScore = localSnapshot.totalScore
+                    val cloudLastSynced = cloudStats.gameState.lastSynced
+                    Log.d(
+                        "FQ_Log",
+                        "CloudSyncManager.resolveSyncDecision: user=${user.uid}, cloudScore=$cloudScore, cloudLastSynced=$cloudLastSynced"
+                    )
+
+                    when {
+                        cloudScore > localScore -> {
+                            Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=RestoreCloud by score for user=${user.uid}")
+                            onComplete(SyncDecision.RestoreCloud(cloudStats))
+                        }
+                        localScore > cloudScore -> {
+                            Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=UploadLocal by score for user=${user.uid}")
+                            onComplete(SyncDecision.UploadLocal(user))
+                        }
+                        cloudLastSynced > localSnapshot.lastSynced -> {
+                            Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=RestoreCloud by timestamp for user=${user.uid}")
+                            onComplete(SyncDecision.RestoreCloud(cloudStats))
+                        }
+                        localSnapshot.lastSynced > cloudLastSynced -> {
+                            Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=UploadLocal by timestamp for user=${user.uid}")
+                            onComplete(SyncDecision.UploadLocal(user))
+                        }
+                        else -> {
+                            Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: decision=None for user=${user.uid}")
+                            onComplete(SyncDecision.None)
+                        }
+                    }
                 }
             }
         }
@@ -119,7 +123,7 @@ object CloudSyncManager {
         val syncTimestamp = statsDto.gameState.lastSynced
         Log.d("FQ_Log", "CloudSyncManager.uploadLocalStats: uploading total=${statsDto.gameState.total} for user=${user.uid}")
 
-        UserStatsService.getInstance().uploadStats(user.uid, statsDto) { success ->
+        uploadStatsAction(user.uid, statsDto) { success ->
             if (success) {
                 setLocalSyncTimestamp(context, user.uid, syncTimestamp)
             }
@@ -149,7 +153,7 @@ object CloudSyncManager {
         user: FirebaseUser,
         onComplete: (UserStatsDTO?) -> Unit
     ) {
-        UserStatsService.getInstance().downloadStats(user.uid) { cloudStats ->
+        downloadStatsAction(user.uid) { cloudStats ->
             onComplete(cloudStats?.takeIf { it.hasProgress() })
         }
     }

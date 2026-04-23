@@ -22,6 +22,8 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     private lateinit var db: DB_Helper
     private var score: Int = 0
+    internal var top5AnsweredProvider: () -> Int = { db.top5AnsweredScores }
+    internal var uefaAnsweredProvider: () -> Int = { db.getUFAAnsweredScores() }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -59,7 +61,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
     }
 
     private fun updateScores() {
-        score = db.top5AnsweredScores
+        score = top5AnsweredProvider()
         if (score < FOR_UEFA_SCORE) {
             binding.txtScoreUefa.text = getString(R.string.text_score_uefa, "$score")
             binding.txtScoreUefa.visibility = View.VISIBLE
@@ -67,7 +69,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
             binding.txtScoreUefa.visibility = View.GONE
         }
 
-        val totalScore = db.top5AnsweredScores + db.getUFAAnsweredScores()
+        val totalScore = top5AnsweredProvider() + uefaAnsweredProvider()
         if (totalScore < FOR_WORLD_SCORE) {
             binding.txtScoreWorld.text = getString(R.string.text_score_world, "$totalScore")
             binding.txtScoreWorld.visibility = View.VISIBLE
@@ -78,8 +80,8 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {
         var isOpen = true
-        val currentScore = db.top5AnsweredScores
-        val totalScore = db.top5AnsweredScores + db.getUFAAnsweredScores()
+        val currentScore = top5AnsweredProvider()
+        val totalScore = top5AnsweredProvider() + uefaAnsweredProvider()
 
         val args = Bundle()
         var destinationId = R.id.action_choose_to_category

@@ -31,6 +31,26 @@ class ProfileFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var authManager: AuthManager
     private lateinit var dbHelper: DB_Helper
+    internal var currentUserProvider: () -> com.google.firebase.auth.FirebaseUser? = { authManager.getCurrentUser() }
+    internal var signOutAction: ((() -> Unit) -> Unit) = { onComplete -> authManager.signOut(onComplete) }
+    internal var totalScoreProvider: () -> Int = { dbHelper.getTotalScore() }
+    internal var top5AnsweredProvider: () -> Int = { dbHelper.top5AnsweredScores }
+    internal var uefaAnsweredProvider: () -> Int = { dbHelper.getUFAAnsweredScores() }
+    internal var worldAnsweredProvider: () -> Int = { dbHelper.getWorldAnsweredScores() }
+    internal var versusAnsweredProvider: () -> Int = { dbHelper.getVersusAnsweredScores() }
+    internal var profileImageRenderer: (Any?) -> Unit = { imageSource ->
+        Glide.with(this)
+            .load(imageSource)
+            .placeholder(R.drawable.ronaldo)
+            .error(R.drawable.ronaldo)
+            .into(binding.userPhoto)
+    }
+    internal var localImageRenderer: (String) -> Unit = { imagePath ->
+        Glide.with(this).load(imagePath).into(binding.userPhoto)
+    }
+    internal var defaultImageRenderer: () -> Unit = {
+        binding.userPhoto.setImageResource(R.drawable.ronaldo)
+    }
 
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let { saveImageLocally(it) }
@@ -50,7 +70,7 @@ class ProfileFragment : Fragment() {
         loadStatistics()
 
         binding.btnSignOut.setOnClickListener {
-            authManager.signOut {
+            signOutAction {
                 activity?.runOnUiThread {
                     updateUI()
                     loadStatistics()
@@ -90,7 +110,7 @@ class ProfileFragment : Fragment() {
 
     private fun updateUI() {
         if (_binding == null) return
-        val user = authManager.getCurrentUser()
+        val user = currentUserProvider()
         
         // Priority: 
         // 1. Local saved photo path from Preferences
@@ -118,11 +138,7 @@ class ProfileFragment : Fragment() {
                 user.photoUrl
             }
 
-            Glide.with(this)
-                .load(imageSource)
-                .placeholder(R.drawable.ronaldo)
-                .error(R.drawable.ronaldo)
-                .into(binding.userPhoto)
+            profileImageRenderer(imageSource)
         } else {
             binding.userName.text = getString(R.string.profile_guest)
             binding.userEmail.text = getString(R.string.profile_not_signed_in)
@@ -134,15 +150,15 @@ class ProfileFragment : Fragment() {
             binding.btnDeleteAccount.visibility = View.GONE
             
             if (localPhotoPath != null && File(localPhotoPath).exists()) {
-                Glide.with(this).load(localPhotoPath).into(binding.userPhoto)
+                localImageRenderer(localPhotoPath)
             } else {
-                binding.userPhoto.setImageResource(R.drawable.ronaldo)
+                defaultImageRenderer()
             }
         }
     }
 
     private fun saveImageLocally(uri: Uri) {
-        val user = authManager.getCurrentUser()
+        val user = currentUserProvider()
         val userId = user?.uid ?: "guest"
         
         binding.uploadProgress.visibility = View.VISIBLE
@@ -187,7 +203,7 @@ class ProfileFragment : Fragment() {
             primaryText = getString(R.string.profile_restore_confirm),
             secondaryText = getString(R.string.profile_restore_cancel),
             onPrimaryClick = {
-                val userId = authManager.getCurrentUser()?.uid ?: return@showActionDialog
+                val userId = currentUserProvider()?.uid ?: return@showActionDialog
                 CloudSyncManager.restoreCloudStats(requireContext(), dbHelper, userId, cloudStats)
                 updateUI()
                 loadStatistics()
@@ -212,7 +228,7 @@ class ProfileFragment : Fragment() {
     }
 
     private fun deleteAccountAndData() {
-        val user = authManager.getCurrentUser() ?: return
+        val user = currentUserProvider() ?: return
         setDeleteInProgress(true)
 
         UserStatsService.getInstance().deleteStats(user.uid) { cloudDeleted ->
@@ -265,7 +281,7 @@ class ProfileFragment : Fragment() {
                 else -> getString(R.string.profile_delete_auth_error)
             }
 
-            authManager.signOut {
+            signOutAction {
                 activity?.runOnUiThread {
                     setDeleteInProgress(false)
                     updateUI()
@@ -312,10 +328,10 @@ class ProfileFragment : Fragment() {
         val versusTotal = scoreTarget(Constants.VSRM) + scoreTarget(Constants.VSRB)
         val totalQuestions = top5Total + uefaTotal + worldTotal + versusTotal
 
-        val top5Answered = dbHelper.top5AnsweredScores
-        val uefaAnswered = dbHelper.getUFAAnsweredScores()
-        val worldAnswered = dbHelper.getWorldAnsweredScores()
-        val versusAnswered = dbHelper.getVersusAnsweredScores()
+        val top5Answered = top5AnsweredProvider()
+        val uefaAnswered = uefaAnsweredProvider()
+        val worldAnswered = worldAnsweredProvider()
+        val versusAnswered = versusAnsweredProvider()
         val totalAnswered = top5Answered + uefaAnswered + worldAnswered + versusAnswered
         val progressPercent = if (totalQuestions > 0) {
             (totalAnswered * 100) / totalQuestions
@@ -336,7 +352,7 @@ class ProfileFragment : Fragment() {
     private fun progressText(answered: Int, total: Int): String = "$answered/$total"
 
     private fun restoreFromCloudManually() {
-        val user = authManager.getCurrentUser() ?: return
+        val user = currentUserProvider() ?: return
         setSyncInProgress(true)
 
         CloudSyncManager.downloadCloudStats(user) { cloudStats ->
@@ -371,13 +387,13 @@ class ProfileFragment : Fragment() {
     }
 
     private fun showOverwriteCloudDialog() {
-        val user = authManager.getCurrentUser() ?: return
+        val user = currentUserProvider() ?: return
         val context = context ?: return
-        val localScore = dbHelper.getTotalScore()
-        val localAnswered = dbHelper.top5AnsweredScores +
-            dbHelper.getUFAAnsweredScores() +
-            dbHelper.getWorldAnsweredScores() +
-            dbHelper.getVersusAnsweredScores()
+        val localScore = totalScoreProvider()
+        val localAnswered = top5AnsweredProvider() +
+            uefaAnsweredProvider() +
+            worldAnsweredProvider() +
+            versusAnsweredProvider()
         DialogManager.showActionDialog(
             context = context,
             inflater = layoutInflater,
