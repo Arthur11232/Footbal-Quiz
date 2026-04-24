@@ -51,6 +51,10 @@ captures/
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json
+service-account*.json
+firebase-admin*.json
+*-service-account.json
+*firebase-adminsdk*.json
 
 # Freeline
 freeline.py

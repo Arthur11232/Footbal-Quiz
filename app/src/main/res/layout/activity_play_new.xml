@@ -35,33 +35,29 @@
             <include
                 android:id="@+id/answer_A"
                 layout="@layout/item_answer"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:onClick="onClick" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <include
                 android:id="@+id/answer_B"
                 layout="@layout/item_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimens_answers_top"
-                android:onClick="onClick" />
+                android:layout_margin="@dimen/dimens_answers_top" />
 
             <include
                 android:id="@+id/answer_C"
                 layout="@layout/item_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimens_answers_top"
-                android:onClick="onClick" />
+                android:layout_margin="@dimen/dimens_answers_top" />
 
             <include
                 android:id="@+id/answer_D"
                 layout="@layout/item_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimens_answers_top"
-                android:onClick="onClick" />
+                android:layout_margin="@dimen/dimens_answers_top" />
 
         </LinearLayout>
     </LinearLayout>

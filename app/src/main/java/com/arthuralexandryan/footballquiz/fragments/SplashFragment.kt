@@ -13,13 +13,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.arthuralexandryan.footballquiz.BuildConfig
 import com.arthuralexandryan.footballquiz.FQ_Application
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.databinding.SplashBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.models.GetQuestions
 import com.arthuralexandryan.footballquiz.utils.Prefer
 
 class SplashFragment : Fragment() {
@@ -27,7 +25,6 @@ class SplashFragment : Fragment() {
     private var _binding: SplashBinding? = null
     private val binding get() = _binding!!
     
-    private lateinit var questions: GetQuestions
     private lateinit var dbHelper: DB_Helper
     private var mWidth: Float = 0f
     private var mHeight: Float = 0f
@@ -109,8 +106,7 @@ class SplashFragment : Fragment() {
         if (Prefer.getBooleanPreference(requireContext(), INIT_DB, true)) {
             Prefer.setBooleanPreference(requireContext(), INIT_DB, false)
             Log.e("DB", "Initialization DB")
-            questions.getAllQuestions()
-            FQ_Application.getInstance().setDB(dbHelper, questions, true)
+            FQ_Application.getInstance().setDB(dbHelper, true)
         }
     }
 
@@ -144,9 +140,14 @@ class SplashFragment : Fragment() {
 
     @SuppressLint("SetTextI18n")
     private fun initView() {
-        binding.textVersion.text = "${getString(R.string.version)} ${BuildConfig.VERSION_NAME}"
+        val versionName = try {
+            val pInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
+            pInfo.versionName
+        } catch (e: Exception) {
+            "1.0"
+        }
+        binding.textVersion.text = "${getString(R.string.version)} $versionName"
         dbHelper = DB_Helper()
-        questions = GetQuestions(requireContext())
     }
 
     override fun onDestroyView() {

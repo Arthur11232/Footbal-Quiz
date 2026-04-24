@@ -1,6 +1,5 @@
 package com.arthuralexandryan.footballquiz.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +11,12 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_UEFA_SCORE
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_WORLD_SCORE
 import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameBinding
+import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.versus.VersusActivity
 
 class ChooseGameFragment : Fragment(), View.OnClickListener {
 
-    private var _binding: ActivityChooseGameBinding? = null
+    private var _binding: ActivityChooseGameNewBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var db: DB_Helper
@@ -28,7 +27,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = ActivityChooseGameBinding.inflate(inflater, container, false)
+        _binding = ActivityChooseGameNewBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -42,7 +41,6 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
         binding.btnUefa.setOnClickListener(this)
         binding.btnChamp.setOnClickListener(this)
         binding.btnVersus.setOnClickListener(this)
-        binding.btnComing.setOnClickListener(this)
     }
 
     override fun onStart() {
@@ -74,6 +72,8 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
         val totalScore = db.top5AnsweredScores + db.getUFAAnsweredScores()
 
         val args = Bundle()
+        var destinationId = R.id.action_choose_to_category
+
         when (v.id) {
             R.id.btnTop -> {
                 args.putString("gameScore", "top5")
@@ -95,16 +95,12 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
                 }
             }
             R.id.btnVersus -> {
-                args.putString("gameScore", "vsRM")
-            }
-            R.id.btn_coming -> {
-                isOpen = false
-                startActivity(Intent(requireActivity(), VersusActivity::class.java))
+                destinationId = R.id.action_choose_to_versus
             }
         }
 
-        if (isOpen && !args.isEmpty) {
-            findNavController().navigate(R.id.action_choose_to_category, args)
+        if (isOpen) {
+            findNavController().navigate(destinationId, args)
         }
     }
 

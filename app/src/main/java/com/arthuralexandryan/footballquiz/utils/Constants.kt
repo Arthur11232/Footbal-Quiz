@@ -8,4 +8,6 @@ object Constants {
     var VSRB: String = "50"
     var Localization: String = "localization"
     var CheckedLanguage: String = "checked_language"
+    var UserPhotoKey: String = "user_photo_path"
+    var UserStatsLastSyncKeyPrefix: String = "user_stats_last_sync_"
 }

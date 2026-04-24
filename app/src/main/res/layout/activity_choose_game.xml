@@ -31,7 +31,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:background="@drawable/selet_game_black">
 
             <!--<ImageView-->
@@ -194,8 +193,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/select_game_grey"
-            android:onClick="onClick">
+            android:background="@drawable/select_game_grey">
 
             <!--<ImageView-->
                 <!--android:layout_width="match_parent"-->
@@ -216,7 +214,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:background="@drawable/select_game_grey">
 
             <!--<ImageView-->
@@ -342,7 +339,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:background="@drawable/select_game_grey">
 
             <!--<ImageView-->
@@ -366,7 +362,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
             android:background="@drawable/comin_soon_poligon">
 
             <!--<ImageView-->

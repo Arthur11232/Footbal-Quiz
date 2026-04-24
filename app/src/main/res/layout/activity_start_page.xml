@@ -28,43 +28,60 @@
 
     <Button
         android:id="@+id/tvGame"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:layout_marginTop="150dp"
-        android:background="@drawable/button_start_game"
         android:text="@string/new_game"
-        android:textColor="#fff"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        style="@style/FQ_Buttons" />
+
 
     <Button
         android:id="@+id/tvContinue"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
         android:layout_below="@+id/tvGame"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:layout_margin="15dp"
-        android:background="@drawable/button_start_game"
         android:text="@string/Continue"
-        android:textColor="#fff"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        style="@style/FQ_Buttons" />
+
 
     <Button
         android:id="@+id/tvLanguage"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
         android:layout_below="@+id/tvContinue"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/button_start_game"
         android:text="@string/Language"
-        android:textColor="#fff"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        style="@style/FQ_Buttons" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_play"
+        android:visibility="visible"
+        android:drawableStart="@drawable/ic_google_logo"
+        android:layout_above="@+id/agreement"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp"
+        android:text="@string/login_with_google"
+        style="@style/FQ_Buttons"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/my_account"
+        android:text="@string/user"
+        android:visibility="gone"
+        android:layout_above="@+id/agreement"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fq_colorWhite"
+        android:textSize="14sp"
+        android:layout_marginBottom="54dp"/>
 
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -81,5 +98,32 @@
         android:textColor="@color/fq_colorWhite"
         android:textSize="12sp" />
 
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/fq_colorWhite" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/loading"
+            android:textColor="@color/fq_colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </RelativeLayout>

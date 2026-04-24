@@ -1,31 +1,69 @@
 package com.arthuralexandryan.footballquiz.models
 
+import android.app.Activity
+import android.util.DisplayMetrics
 import android.util.Log
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
+import android.view.ViewGroup
+import com.google.android.gms.ads.*
 
-class AdBanner(private val adView: AdView) {
+class AdBanner(private val activity: Activity, private val container: ViewGroup, private val adUnitId: String) {
+
+    private var adView: AdView? = null
 
     init {
-        createBannerAdView()
+        loadBanner()
     }
 
-    private fun createBannerAdView() {
-        val adRequest = AdRequest.Builder().addTestDevice("5FB76465AA8B88DE6B66D105F23DF90D").build()
-        adView.adListener = adListener
-        adView.loadAd(adRequest)
+    private fun loadBanner() {
+        adView = AdView(activity)
+        adView?.adUnitId = adUnitId
+        adView?.setAdSize(getAdSize())
+
+        adView?.adListener = adListener
+
+        container.removeAllViews()
+        container.addView(adView)
+
+        val adRequest = AdRequest.Builder().build()
+        adView?.loadAd(adRequest)
     }
 
-    fun stopLoading() = adView.pause()
-    fun startLoading() = adView.resume()
-    fun destroyLoading() = adView.destroy()
+    private fun getAdSize(): AdSize {
+        val display = activity.windowManager.defaultDisplay
+        val outMetrics = DisplayMetrics()
+        display.getMetrics(outMetrics)
+
+        val density = outMetrics.density
+        val adWidthPixels = outMetrics.widthPixels.toFloat()
+        val adWidth = (adWidthPixels / density).toInt()
+
+        return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(activity, adWidth)
+    }
+
+    fun startLoading() = adView?.resume()
+    fun stopLoading() = adView?.pause()
+    fun destroyLoading() = adView?.destroy()
 
     private val adListener = object : AdListener() {
-        override fun onAdLoaded() { Log.e("mAdView", "onAdLoaded") }
-        override fun onAdFailedToLoad(errorCode: Int) { Log.e("mAdView", "onAdFailedToLoad") }
-        override fun onAdOpened() { Log.e("mAdView", "onAdOpened") }
-        override fun onAdLeftApplication() { Log.e("mAdView", "onAdLeftApplication") }
-        override fun onAdClosed() { Log.e("mAdView", "onAdClosed") }
+        override fun onAdLoaded() {
+            Log.d("AdBanner", "onAdLoaded")
+        }
+
+        override fun onAdFailedToLoad(error: LoadAdError) {
+            Log.e("AdBanner", "onAdFailedToLoad: ${error.message}")
+        }
+
+        override fun onAdOpened() {
+            Log.d("AdBanner", "onAdOpened")
+        }
+
+        override fun onAdClosed() {
+            Log.d("AdBanner", "onAdClosed")
+        }
+
+        override fun onAdClicked() {
+            Log.d("AdBanner", "onAdClicked")
+        }
     }
 }
+

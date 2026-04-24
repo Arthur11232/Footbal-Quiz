@@ -10,4 +10,6 @@ object Constant {
     const val FOR_WORLD_SCORE = 210
     const val FOR_RM_SCORE = 240
     const val FOR_RB_SCORE = 310
+
+    const val ADS_ENABLED = false
 }

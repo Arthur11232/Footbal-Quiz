@@ -28,7 +28,7 @@ class TermsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         
         setToolbar(getString(R.string.title_terms_and_conditions))
-        binding.privacyJustifiedText.setText(getString(R.string.fq_terms_conditions))
+        binding.privacyJustifiedText.text = getString(R.string.fq_terms_conditions)
         
         binding.toolbar.setNavigationIcon(R.drawable.baseline_keyboard_backspace_24)
         binding.toolbar.setNavigationOnClickListener {
