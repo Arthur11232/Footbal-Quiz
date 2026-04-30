@@ -1,8 +1,6 @@
 package com.arthuralexandryan.footballquiz.models
 
 import android.util.Log
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -20,7 +18,6 @@ class FirestoreQuestionService {
     }
 
     private val db = FirebaseFirestore.getInstance()
-    private val mapper = ObjectMapper()
 
     fun getQuestions(localize: String, callback: OnGetFirestoreQuestions) {
         Log.d("FQ_Log", "FirestoreQuestionService.getQuestions: locale=$localize")
@@ -32,17 +29,19 @@ class FirestoreQuestionService {
                     Log.d("FQ_Log", "FirestoreQuestionService.getQuestions: success count=${result.size()} locale=$localize")
                     CoroutineScope(Dispatchers.IO).launch {
                         val questions = result.documents.map { doc ->
-                            val qModel = mapper.convertValue(doc.data, FirestoreQuestionDTO::class.java)
+                            val questionData = doc.data.orEmpty()
+                            val place = questionData["place"] as? String ?: ""
+                            val answers = questionData["answers"] as? Map<*, *>
                             GameObjectSerializable(
-                                question = qModel.question,
-                                type = qModel.place,
-                                categoryType = mapToCategoryType(qModel.place),
-                                answer_A = qModel.answers?.A,
-                                answer_B = qModel.answers?.B,
-                                answer_C = qModel.answers?.C,
-                                answer_D = qModel.answers?.D,
-                                right_answer = qModel.answers?.right,
-                                isAnswered = qModel.answered
+                                question = questionData["question"] as? String,
+                                type = place,
+                                categoryType = mapToCategoryType(place),
+                                answer_A = answers?.get("a") as? String,
+                                answer_B = answers?.get("b") as? String,
+                                answer_C = answers?.get("c") as? String,
+                                answer_D = answers?.get("d") as? String,
+                                right_answer = answers?.get("right") as? String,
+                                isAnswered = questionData["answered"] as? Boolean ?: false
                             )
                         }
                         callback.onQuestionsLoaded(true, questions)
@@ -73,19 +72,3 @@ class FirestoreQuestionService {
 fun interface OnGetFirestoreQuestions {
     fun onQuestionsLoaded(success: Boolean, questions: List<GameObjectSerializable>?)
 }
-
-data class FirestoreQuestionDTO(
-    var question: String = "",
-    var translation: String = "",
-    var answered: Boolean = false,
-    var place: String = "",
-    var answers: FirestoreAnswersDTO? = null
-)
-
-data class FirestoreAnswersDTO(
-    var A: String = "",
-    var B: String = "",
-    var C: String = "",
-    var D: String = "",
-    var right: String = ""
-)

@@ -12,6 +12,7 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.models.PlaceModel
 import com.arthuralexandryan.footballquiz.models.PlaceModelInterface
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.arthuralexandryan.footballquiz.versus.OnCheckScoreboard
 import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
 
@@ -31,6 +32,11 @@ class FragmentRealBarc : Fragment(), OnCheckScoreboard, PlaceModelInterface {
         initScoreboard(view)
         initImages(view)
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        applyInsets(view)
     }
 
     @SuppressLint("SetTextI18n")
@@ -78,6 +84,18 @@ class FragmentRealBarc : Fragment(), OnCheckScoreboard, PlaceModelInterface {
         place_question = scoreboard.findViewById(R.id.place_question)
         category_answer = scoreboard.findViewById(R.id.category_answers)
         category_score = scoreboard.findViewById(R.id.category_score)
+    }
+
+    private fun applyInsets(view: View) {
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = view.findViewById(R.id.scoreboard),
+            applyTop = true
+        )
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = view.findViewById(R.id.onBack),
+            applyLeft = true,
+            applyTop = true
+        )
     }
 
     override fun onCheckScores(model: VS_ScoreboardModel) {

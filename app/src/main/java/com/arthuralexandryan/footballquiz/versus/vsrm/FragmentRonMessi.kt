@@ -13,6 +13,7 @@ import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.databinding.FragmentVsRmBinding
 import com.arthuralexandryan.footballquiz.models.PlaceModel
 import com.arthuralexandryan.footballquiz.models.PlaceModelInterface
+import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.arthuralexandryan.footballquiz.versus.OnCheckScoreboard
 import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
 
@@ -34,6 +35,7 @@ class FragmentRonMessi : Fragment(), OnCheckScoreboard, PlaceModelInterface {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initImages(view)
+        applyInsets()
 
         presenter = activity?.let { VSRM_ScoreboardPresenter(it, this) }
         if (presenter?.isReadyToPlay() == false) {
@@ -43,6 +45,18 @@ class FragmentRonMessi : Fragment(), OnCheckScoreboard, PlaceModelInterface {
             isActive = true
              binding.scoreboard.root.visibility = View.VISIBLE
         }
+    }
+
+    private fun applyInsets() {
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = binding.scoreboard.root,
+            applyTop = true
+        )
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = binding.onBack,
+            applyLeft = true,
+            applyTop = true
+        )
     }
 
     override fun onStart() {

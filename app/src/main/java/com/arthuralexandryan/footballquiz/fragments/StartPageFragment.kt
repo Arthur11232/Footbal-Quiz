@@ -51,25 +51,38 @@ class StartPageFragment : Fragment() {
     private var restoreDialogShowing: Boolean = false
 
     private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (_binding == null) return@registerForActivityResult
         if (result.resultCode == android.app.Activity.RESULT_OK) {
+            showLoading(R.string.signing_in)
             val task = com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent(result.data)
             try {
                 val account = task.getResult(com.google.android.gms.common.api.ApiException::class.java)
                 account.idToken?.let { token ->
                     authManager.signInWithFirebase(token) { success: Boolean, user: com.google.firebase.auth.FirebaseUser? ->
+                        activity?.runOnUiThread {
+                            hideLoading()
+                        }
                         if (success) {
                             updateUI(user)
                             user?.let { maybeSyncCloudProgress(it) }
                         } else {
-                            android.widget.Toast.makeText(requireContext(), "Firebase Auth Failed", android.widget.Toast.LENGTH_SHORT).show()
+                            android.widget.Toast.makeText(requireContext(), getString(R.string.sign_in_failed), android.widget.Toast.LENGTH_SHORT).show()
                             updateUI(null)
                         }
                     }
+                } ?: run {
+                    hideLoading()
+                    android.widget.Toast.makeText(requireContext(), getString(R.string.sign_in_failed), android.widget.Toast.LENGTH_SHORT).show()
+                    updateUI(null)
                 }
             } catch (e: Exception) {
                 android.util.Log.e("StartPageFragment", "Sign-in failed", e)
+                hideLoading()
+                android.widget.Toast.makeText(requireContext(), getString(R.string.sign_in_failed), android.widget.Toast.LENGTH_SHORT).show()
                 updateUI(null)
             }
+        } else {
+            hideLoading()
         }
     }
 
@@ -154,8 +167,9 @@ class StartPageFragment : Fragment() {
         authManager = AuthManager(requireContext())
     }
 
-    private fun showLoading() {
+    private fun showLoading(messageResId: Int = R.string.loading) {
         binding.loadingLayout.visibility = View.VISIBLE
+        binding.tvLoading.setText(messageResId)
         binding.tvGame.isEnabled = false
         binding.tvContinue.isEnabled = false
         binding.tvLanguage.isEnabled = false
@@ -165,6 +179,7 @@ class StartPageFragment : Fragment() {
 
     private fun hideLoading() {
         binding.loadingLayout.visibility = View.GONE
+        binding.tvLoading.setText(R.string.loading)
         binding.tvGame.isEnabled = true
         binding.tvLanguage.isEnabled = true
         binding.signInPlay.isEnabled = true
@@ -270,6 +285,7 @@ class StartPageFragment : Fragment() {
     }
 
     private fun handleSignInClick() {
+        showLoading(R.string.signing_in)
         signInLauncher.launch(authManager.getSignInIntent())
     }
 

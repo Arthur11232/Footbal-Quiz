@@ -5,6 +5,20 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-parcelize'
 
+def releaseKeystoreSecrets = [:]
+def releaseKeystoreSecretFile = rootProject.file("fq_keystore_key")
+if (releaseKeystoreSecretFile.exists()) {
+    releaseKeystoreSecretFile.eachLine { line ->
+        def trimmed = line.trim()
+        if (!trimmed.isEmpty()) {
+            def parts = trimmed.split(/\s+/, 2)
+            if (parts.length == 2) {
+                releaseKeystoreSecrets[parts[0]] = parts[1]
+            }
+        }
+    }
+}
+
 android {
     namespace "com.arthuralexandryan.footballquiz"
     compileSdkVersion 36
@@ -14,7 +28,7 @@ android {
         minSdkVersion 23 // Обновлено с 21 до 23 для совместимости с Firebase Auth
         targetSdkVersion 35
         multiDexEnabled true
-        versionCode 40
+        versionCode 44
         versionName "2.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -41,6 +55,17 @@ android {
         buildConfig = true
     }
 
+    signingConfigs {
+        release {
+            if (rootProject.file("fq_keystore.jks").exists()) {
+                storeFile rootProject.file("fq_keystore.jks")
+                storePassword releaseKeystoreSecrets["password"]
+                keyAlias releaseKeystoreSecrets["alias"]
+                keyPassword releaseKeystoreSecrets["password"]
+            }
+        }
+    }
+
     bundle {
         language {
             enableSplit = false
@@ -58,6 +83,7 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             firebaseCrashlytics {
                 mappingFileUploadEnabled true

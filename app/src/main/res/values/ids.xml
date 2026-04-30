@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="btnNext" type="id" />
+    <item name="system_bar_initial_padding" type="id" />
 </resources>

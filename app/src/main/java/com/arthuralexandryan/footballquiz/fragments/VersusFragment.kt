@@ -32,10 +32,11 @@ class VersusFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         initFragments()
+        applyInsets()
         onClicks()
-        
+
         binding.onBack.setOnClickListener {
             findNavController().navigateUp()
         }
@@ -47,7 +48,24 @@ class VersusFragment : Fragment() {
             fragment = this,
             drawableResId = R.drawable.vs_bg,
             matchNavigationToStatus = false,
+            applyInsetsToRoot = false,
             lightSystemBarIcons = false
+        )
+    }
+
+    private fun applyInsets() {
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = binding.onBack,
+            applyLeft = true,
+            applyTop = true
+        )
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = binding.backward,
+            applyLeft = true
+        )
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = binding.forward,
+            applyRight = true
         )
     }
 

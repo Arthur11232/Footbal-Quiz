@@ -62,7 +62,15 @@ class SplashFragment : Fragment() {
             fragment = this,
             drawableResId = R.drawable.football,
             matchNavigationToStatus = false,
+            applyDrawableToRoot = false,
+            applyInsetsToRoot = false,
             lightSystemBarIcons = false
+        )
+        SystemBarStyleHelper.applySystemBarPadding(
+            view = binding.textVersion,
+            applyLeft = true,
+            applyRight = true,
+            applyBottom = true
         )
     }
 
