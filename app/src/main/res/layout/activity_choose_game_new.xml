@@ -361,7 +361,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/comin_soon_poligon">
+            android:background="@drawable/gray_poligon">
 
             <!--<ImageView-->
             <!--android:layout_width="match_parent"-->
@@ -377,6 +377,7 @@
                 android:gravity="top|center"
                 android:text="@string/coming_soon"
                 android:textColor="#fff"
+                android:visibility="gone"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -387,6 +388,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="@string/coming_soon_game"
                 android:textColor="#fff"
                 android:textSize="12sp"
