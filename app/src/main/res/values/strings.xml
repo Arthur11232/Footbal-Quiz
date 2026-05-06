@@ -21,6 +21,7 @@
     <string name="loading">Loading...</string>
     <string name="signing_in">Signing in...</string>
     <string name="sign_in_failed">Sign-in failed</string>
+    <string name="sign_in_failed_with_reason">Sign-in failed: %1$s</string>
 
     <!-- Profile -->
     <string name="profile_title">Profile</string>

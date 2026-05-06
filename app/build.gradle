@@ -28,7 +28,7 @@ android {
         minSdkVersion 23 // Обновлено с 21 до 23 для совместимости с Firebase Auth
         targetSdkVersion 35
         multiDexEnabled true
-        versionCode 44
+        versionCode 48
         versionName "2.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

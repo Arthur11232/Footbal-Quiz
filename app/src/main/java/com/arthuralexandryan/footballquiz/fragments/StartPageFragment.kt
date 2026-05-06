@@ -52,37 +52,84 @@ class StartPageFragment : Fragment() {
 
     private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (_binding == null) return@registerForActivityResult
-        if (result.resultCode == android.app.Activity.RESULT_OK) {
-            showLoading(R.string.signing_in)
-            val task = com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent(result.data)
-            try {
-                val account = task.getResult(com.google.android.gms.common.api.ApiException::class.java)
-                account.idToken?.let { token ->
-                    authManager.signInWithFirebase(token) { success: Boolean, user: com.google.firebase.auth.FirebaseUser? ->
-                        activity?.runOnUiThread {
-                            hideLoading()
-                        }
-                        if (success) {
-                            updateUI(user)
-                            user?.let { maybeSyncCloudProgress(it) }
-                        } else {
-                            android.widget.Toast.makeText(requireContext(), getString(R.string.sign_in_failed), android.widget.Toast.LENGTH_SHORT).show()
-                            updateUI(null)
-                        }
+        showLoading(R.string.signing_in)
+        val signInData = result.data
+        if (signInData == null) {
+            Log.e("FQ_Auth", "Google sign-in returned null intent data. resultCode=${result.resultCode}")
+            hideLoading()
+            android.widget.Toast.makeText(
+                requireContext(),
+                getString(R.string.sign_in_failed_with_reason, "Google sign-in returned no data"),
+                android.widget.Toast.LENGTH_LONG
+            ).show()
+            updateUI(null)
+            return@registerForActivityResult
+        }
+
+        val task = com.google.android.gms.auth.api.signin.GoogleSignIn.getSignedInAccountFromIntent(signInData)
+        try {
+            val account = task.getResult(com.google.android.gms.common.api.ApiException::class.java)
+            Log.d(
+                "FQ_Auth",
+                "Google sign-in account received. resultCode=${result.resultCode}, email=${account.email}, hasIdToken=${!account.idToken.isNullOrEmpty()}"
+            )
+            account.idToken?.let { token ->
+                authManager.signInWithFirebase(token) { authResult ->
+                    activity?.runOnUiThread {
+                        hideLoading()
                     }
-                } ?: run {
-                    hideLoading()
-                    android.widget.Toast.makeText(requireContext(), getString(R.string.sign_in_failed), android.widget.Toast.LENGTH_SHORT).show()
-                    updateUI(null)
+                    if (authResult.success) {
+                        Log.d("FQ_Auth", "Firebase sign-in success. uid=${authResult.user?.uid}")
+                        updateUI(authResult.user)
+                        authResult.user?.let { maybeSyncCloudProgress(it) }
+                        android.widget.Toast.makeText(
+                            requireContext(),
+                            "Sign In Success",
+                            android.widget.Toast.LENGTH_LONG
+                        ).show()
+                    } else {
+                        val authError = authResult.errorMessage ?: "unknown firebase auth error"
+                        Log.e("FQ_Auth", "Firebase sign-in failed: $authError")
+                        android.widget.Toast.makeText(
+                            requireContext(),
+                            getString(R.string.sign_in_failed_with_reason, authError),
+                            android.widget.Toast.LENGTH_LONG
+                        ).show()
+                        updateUI(null)
+                    }
                 }
-            } catch (e: Exception) {
-                android.util.Log.e("StartPageFragment", "Sign-in failed", e)
+            } ?: run {
+                Log.e("FQ_Auth", "Google sign-in returned null idToken. resultCode=${result.resultCode}")
                 hideLoading()
-                android.widget.Toast.makeText(requireContext(), getString(R.string.sign_in_failed), android.widget.Toast.LENGTH_SHORT).show()
+                android.widget.Toast.makeText(
+                    requireContext(),
+                    getString(R.string.sign_in_failed_with_reason, "idToken is null"),
+                    android.widget.Toast.LENGTH_LONG
+                ).show()
                 updateUI(null)
             }
-        } else {
+        } catch (e: com.google.android.gms.common.api.ApiException) {
+            Log.e(
+                "FQ_Auth",
+                "Google sign-in ApiException. resultCode=${result.resultCode}, statusCode=${e.statusCode}, message=${e.localizedMessage}",
+                e
+            )
             hideLoading()
+            android.widget.Toast.makeText(
+                requireContext(),
+                getString(R.string.sign_in_failed_with_reason, "Google status ${e.statusCode}"),
+                android.widget.Toast.LENGTH_LONG
+            ).show()
+            updateUI(null)
+        } catch (e: Exception) {
+            Log.e("FQ_Auth", "Unexpected sign-in failure: ${e.localizedMessage}", e)
+            hideLoading()
+            android.widget.Toast.makeText(
+                requireContext(),
+                getString(R.string.sign_in_failed_with_reason, e.localizedMessage ?: "unexpected error"),
+                android.widget.Toast.LENGTH_LONG
+            ).show()
+            updateUI(null)
         }
     }
 
@@ -105,7 +152,6 @@ class StartPageFragment : Fragment() {
         binding.tvLanguage.setOnClickListener{ handleLanguageClick() }
         binding.signInPlay.setOnClickListener{ handleSignInClick() }
         binding.myAccount.setOnClickListener{ handleProfileClick() }
-
 
         initView()
         setAgreements()

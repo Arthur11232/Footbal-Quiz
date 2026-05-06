@@ -11,6 +11,12 @@ import com.google.firebase.auth.FirebaseUser
 
 class AuthManager(private val context: Context) {
 
+    data class AuthResult(
+        val success: Boolean,
+        val user: FirebaseUser? = null,
+        val errorMessage: String? = null
+    )
+
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     fun getSignInClient(): GoogleSignInClient {
@@ -34,14 +40,15 @@ class AuthManager(private val context: Context) {
 
     fun getSignInIntent(): Intent = getSignInClient().signInIntent
 
-    fun signInWithFirebase(idToken: String, onComplete: (Boolean, FirebaseUser?) -> Unit) {
+    fun signInWithFirebase(idToken: String, onComplete: (AuthResult) -> Unit) {
         val credential = com.google.firebase.auth.GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    onComplete(true, auth.currentUser)
+                    onComplete(AuthResult(success = true, user = auth.currentUser))
                 } else {
-                    onComplete(false, null)
+                    val errorMessage = task.exception?.localizedMessage ?: task.exception?.message
+                    onComplete(AuthResult(success = false, errorMessage = errorMessage))
                 }
             }
     }
