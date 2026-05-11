@@ -42,3 +42,14 @@
 # Keep NavGraph argument classes referenced by fully-qualified name in XML.
 -keep class com.arthuralexandryan.footballquiz.models.GameObjectSerializable { *; }
 -keep class com.arthuralexandryan.footballquiz.models.GameObjectScores { *; }
+
+# Keep Firestore cloud sync DTOs readable/stable in release builds.
+# Without this, R8 can rename fields to a/b/c... and break clear document structure.
+-keep class com.arthuralexandryan.footballquiz.models.UserStatsDTO { *; }
+-keep class com.arthuralexandryan.footballquiz.models.GameState { *; }
+-keep class com.arthuralexandryan.footballquiz.models.PlacesTop5DTO { *; }
+-keep class com.arthuralexandryan.footballquiz.models.PlacesUFADTO { *; }
+
+# Keep legacy Firestore question DTOs used by ObjectMapper / reflection.
+-keep class com.arthuralexandryan.footballquiz.models.QuestionModel { *; }
+-keep class com.arthuralexandryan.footballquiz.models.Answers { *; }
