@@ -59,8 +59,8 @@ class StartPageFragment : Fragment() {
             hideLoading()
             android.widget.Toast.makeText(
                 requireContext(),
-                getString(R.string.sign_in_failed_with_reason, "Google sign-in returned no data"),
-                android.widget.Toast.LENGTH_LONG
+                getString(R.string.sign_in_failed),
+                android.widget.Toast.LENGTH_SHORT
             ).show()
             updateUI(null)
             return@registerForActivityResult
@@ -82,18 +82,13 @@ class StartPageFragment : Fragment() {
                         Log.d("FQ_Auth", "Firebase sign-in success. uid=${authResult.user?.uid}")
                         updateUI(authResult.user)
                         authResult.user?.let { maybeSyncCloudProgress(it) }
-                        android.widget.Toast.makeText(
-                            requireContext(),
-                            "Sign In Success",
-                            android.widget.Toast.LENGTH_LONG
-                        ).show()
                     } else {
                         val authError = authResult.errorMessage ?: "unknown firebase auth error"
                         Log.e("FQ_Auth", "Firebase sign-in failed: $authError")
                         android.widget.Toast.makeText(
                             requireContext(),
-                            getString(R.string.sign_in_failed_with_reason, authError),
-                            android.widget.Toast.LENGTH_LONG
+                            getString(R.string.sign_in_failed),
+                            android.widget.Toast.LENGTH_SHORT
                         ).show()
                         updateUI(null)
                     }
@@ -103,8 +98,8 @@ class StartPageFragment : Fragment() {
                 hideLoading()
                 android.widget.Toast.makeText(
                     requireContext(),
-                    getString(R.string.sign_in_failed_with_reason, "idToken is null"),
-                    android.widget.Toast.LENGTH_LONG
+                    getString(R.string.sign_in_failed),
+                    android.widget.Toast.LENGTH_SHORT
                 ).show()
                 updateUI(null)
             }
@@ -117,8 +112,8 @@ class StartPageFragment : Fragment() {
             hideLoading()
             android.widget.Toast.makeText(
                 requireContext(),
-                getString(R.string.sign_in_failed_with_reason, "Google status ${e.statusCode}"),
-                android.widget.Toast.LENGTH_LONG
+                getString(R.string.sign_in_failed),
+                android.widget.Toast.LENGTH_SHORT
             ).show()
             updateUI(null)
         } catch (e: Exception) {
@@ -126,8 +121,8 @@ class StartPageFragment : Fragment() {
             hideLoading()
             android.widget.Toast.makeText(
                 requireContext(),
-                getString(R.string.sign_in_failed_with_reason, e.localizedMessage ?: "unexpected error"),
-                android.widget.Toast.LENGTH_LONG
+                getString(R.string.sign_in_failed),
+                android.widget.Toast.LENGTH_SHORT
             ).show()
             updateUI(null)
         }
