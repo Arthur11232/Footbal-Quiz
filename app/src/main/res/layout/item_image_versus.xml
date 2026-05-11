@@ -24,7 +24,6 @@
             android:id="@+id/vs_item"
             android:layout_width="@dimen/ring_dimen"
             android:layout_height="@dimen/ring_dimen"
-            android:onClick="startGame"
             android:padding="16dp" />
 
         <com.arthuralexandryan.footballquiz.views.CircleImageView

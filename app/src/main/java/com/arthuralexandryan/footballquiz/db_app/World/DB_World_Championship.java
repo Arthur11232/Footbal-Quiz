@@ -1,9 +1,11 @@
 package com.arthuralexandryan.footballquiz.db_app.World;
 
+import com.arthuralexandryan.footballquiz.db_app.DB_Base;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class DB_World_Championship extends RealmObject {
+public class DB_World_Championship extends RealmObject implements DB_Base {
     @PrimaryKey
     private int id;
     private String question;

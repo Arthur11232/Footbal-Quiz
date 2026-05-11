@@ -20,12 +20,25 @@
     </style>
 
     <style name="FQ_Buttons" parent="Base.Widget.AppCompat.Button">
-        <item name="android:textColor">@color/fq_colorButtonText</item>
-        <item name="android:colorButtonNormal">@color/fq_colorButtonNormal</item>
+        <item name="android:textColor">@color/fq_colorWhite</item>
+        <item name="android:background">@drawable/button_start_game</item>
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_height">40dp</item>
     </style>
+
 
     <style name="FQ_AlertDialog" parent="AlertDialog.AppCompat.Light">
         <item name="android:windowBackground">@color/fq_colorBackground</item>
+    </style>
+
+    <style name="FQ_CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.7</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
 
     <style name="FootballQuiz.NoActionBar">

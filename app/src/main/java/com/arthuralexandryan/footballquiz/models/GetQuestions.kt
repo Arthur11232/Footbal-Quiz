@@ -6,11 +6,13 @@ import com.arthuralexandryan.footballquiz.R
 class GetQuestions(private val context: Context) {
 
     private val allQuestions: MutableList<Harcer> = mutableListOf()
+    private val strBuilder = StringBuilder()
 
     private fun buildHarcer(place: String, questionsId: Int, answersId: Int, rightsId: Int): Harcer {
         val questions = context.resources.getStringArray(questionsId)
         val answers = context.resources.getStringArray(answersId)
         val rights = context.resources.getStringArray(rightsId)
+        strBuilder.append("${place}, ${buildHarcList(questions, answers, rights)}")
         return Harcer(place, buildHarcList(questions, answers, rights)).also { allQuestions.add(it) }
     }
 

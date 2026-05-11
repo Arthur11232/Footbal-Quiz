@@ -19,3 +19,37 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Navigation/FragmentContainerView instantiate fragments by class name
+# from the navigation graph at runtime, so fragment classes must survive R8.
+-keep class * extends androidx.fragment.app.Fragment
+-keepclassmembers class * extends androidx.fragment.app.Fragment {
+    public <init>();
+}
+
+# Keep custom views inflated from XML.
+-keep class * extends android.view.View
+-keepclassmembers class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+# Keep activities and application class names used by Android framework.
+-keep class * extends android.app.Activity
+-keep class * extends android.app.Application
+
+# Keep NavGraph argument classes referenced by fully-qualified name in XML.
+-keep class com.arthuralexandryan.footballquiz.models.GameObjectSerializable { *; }
+-keep class com.arthuralexandryan.footballquiz.models.GameObjectScores { *; }
+
+# Keep Firestore cloud sync DTOs readable/stable in release builds.
+# Without this, R8 can rename fields to a/b/c... and break clear document structure.
+-keep class com.arthuralexandryan.footballquiz.models.UserStatsDTO { *; }
+-keep class com.arthuralexandryan.footballquiz.models.GameState { *; }
+-keep class com.arthuralexandryan.footballquiz.models.PlacesTop5DTO { *; }
+-keep class com.arthuralexandryan.footballquiz.models.PlacesUFADTO { *; }
+
+# Keep legacy Firestore question DTOs used by ObjectMapper / reflection.
+-keep class com.arthuralexandryan.footballquiz.models.QuestionModel { *; }
+-keep class com.arthuralexandryan.footballquiz.models.Answers { *; }

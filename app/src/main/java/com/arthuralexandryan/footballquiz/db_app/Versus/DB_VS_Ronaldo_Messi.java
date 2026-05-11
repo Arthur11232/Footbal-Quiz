@@ -1,9 +1,10 @@
 package com.arthuralexandryan.footballquiz.db_app.Versus;
 
+import com.arthuralexandryan.footballquiz.db_app.DB_Base;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
-public class DB_VS_Ronaldo_Messi extends RealmObject {
+public class DB_VS_Ronaldo_Messi extends RealmObject implements DB_Base {
     @PrimaryKey
     private int id;
     private String question;

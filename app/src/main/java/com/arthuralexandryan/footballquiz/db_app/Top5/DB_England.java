@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz.db_app.Top5;
 
 import com.arthuralexandryan.footballquiz.db_app.DB_Base;
+
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
