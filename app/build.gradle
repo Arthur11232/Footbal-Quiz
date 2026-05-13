@@ -21,15 +21,15 @@ if (releaseKeystoreSecretFile.exists()) {
 
 android {
     namespace "com.arthuralexandryan.footballquiz"
-    compileSdkVersion 36
+    compileSdk 36
     
     defaultConfig {
         applicationId "com.arthuralexandryan.footballquiz"
-        minSdkVersion 23 // Обновлено с 21 до 23 для совместимости с Firebase Auth
-        targetSdkVersion 35
+        minSdk 23 // Обновлено с 21 до 23 для совместимости с Firebase Auth
+        targetSdk 36
         multiDexEnabled true
-        versionCode 49
-        versionName "2.0.1"
+        versionCode 50
+        versionName "2.0.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
