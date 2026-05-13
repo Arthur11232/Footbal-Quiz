@@ -4256,8 +4256,8 @@
     <string name="agree_to"><![CDATA[Our Privacy Policy and Terms and Conditions]]></string>
     <string name="title_privacy_policy">Privacy Policy</string>
     <string name="title_terms_and_conditions">Terms and Conditions</string>
-    <string name="privacy_policy_url" translatable="false">https://github.com/Arthur11232/Football-Quiz-Web/blob/main/privacy_policy.md</string>
-    <string name="terms_and_conditions_url" translatable="false">https://github.com/Arthur11232/Football-Quiz-Web/blob/main/terms_and_conditions.md</string>
+    <string name="privacy_policy_url" translatable="false">https://footballquiz.club/privacy-policy.html</string>
+    <string name="terms_and_conditions_url" translatable="false">https://footballquiz.club/terms-and-conditions.html</string>
 
     <string name="fq_privacy_policy" formatted="false">
         #@ Privacy Policy @#\n\n
