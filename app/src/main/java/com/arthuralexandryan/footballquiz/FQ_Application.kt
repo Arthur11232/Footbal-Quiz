@@ -3,9 +3,12 @@ package com.arthuralexandryan.footballquiz
 import android.app.Application
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
+import com.arthuralexandryan.footballquiz.di.footballQuizModules
 import com.google.android.gms.ads.MobileAds
 import io.realm.Realm
 import io.realm.RealmConfiguration
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class FQ_Application : Application() {
 
@@ -17,6 +20,12 @@ class FQ_Application : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+
+        startKoin {
+            androidContext(this@FQ_Application)
+            modules(footballQuizModules)
+        }
+
         Realm.init(this)
 
         if (Constant.ADS_ENABLED) {

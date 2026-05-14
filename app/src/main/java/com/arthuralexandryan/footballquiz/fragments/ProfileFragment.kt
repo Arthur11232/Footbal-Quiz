@@ -22,6 +22,7 @@ import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
+import org.koin.android.ext.android.inject
 import java.io.File
 import java.io.FileOutputStream
 
@@ -29,8 +30,9 @@ class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
-    private lateinit var authManager: AuthManager
-    private lateinit var dbHelper: DB_Helper
+    private val authManager: AuthManager by inject()
+    private val dbHelper: DB_Helper by inject()
+    private val userStatsService: UserStatsService by inject()
 
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let { saveImageLocally(it) }
@@ -43,9 +45,6 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        authManager = AuthManager(requireContext())
-        dbHelper = DB_Helper(requireActivity())
-
         updateUI()
         loadStatistics()
 
@@ -215,7 +214,7 @@ class ProfileFragment : Fragment() {
         val user = authManager.getCurrentUser() ?: return
         setDeleteInProgress(true)
 
-        UserStatsService.getInstance().deleteStats(user.uid) { cloudDeleted ->
+        userStatsService.deleteStats(user.uid) { cloudDeleted ->
             activity?.runOnUiThread {
                 if (!cloudDeleted) {
                     setDeleteInProgress(false)

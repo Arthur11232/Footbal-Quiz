@@ -10,13 +10,14 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.databinding.LayoutVersusBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.models.TarberakArrays
+import org.koin.android.ext.android.inject
 
 class VSFragment : Fragment() {
 
     private var _binding: LayoutVersusBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var dbHelper: DB_Helper
+    private val dbHelper: DB_Helper by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,8 +30,6 @@ class VSFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dbHelper = DB_Helper()
-
         initViews()
         inflateView()
 

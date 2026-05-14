@@ -10,17 +10,17 @@ import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_UEFA_SCORE
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_WORLD_SCORE
-import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameBinding
 import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import org.koin.android.ext.android.inject
 
 class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     private var _binding: ActivityChooseGameNewBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var db: DB_Helper
+    private val db: DB_Helper by inject()
     private var score: Int = 0
 
     override fun onCreateView(
@@ -34,8 +34,6 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        db = DB_Helper()
-
         binding.onBack.setOnClickListener { findNavController().navigateUp() }
 
         binding.btnTop.setOnClickListener(this)

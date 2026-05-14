@@ -3,20 +3,13 @@ package com.arthuralexandryan.footballquiz.models
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 
-class UserStatsService private constructor() {
+class UserStatsService(
+    private val db: FirebaseFirestore
+) {
 
     companion object {
-        @Volatile
-        private var instance: UserStatsService? = null
-
-        fun getInstance() = instance ?: synchronized(this) {
-            instance ?: UserStatsService().also { instance = it }
-        }
-        
         private const val COLLECTION_USERS = "users"
     }
-
-    private val db = FirebaseFirestore.getInstance()
 
     fun uploadStats(userId: String, stats: UserStatsDTO, onComplete: (Boolean) -> Unit) {
         db.collection(COLLECTION_USERS)

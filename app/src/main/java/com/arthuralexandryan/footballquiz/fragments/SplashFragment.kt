@@ -20,13 +20,14 @@ import com.arthuralexandryan.footballquiz.databinding.SplashBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import org.koin.android.ext.android.inject
 import java.util.Random
 
 class SplashFragment : Fragment() {
 
     private var _binding: SplashBinding? = null
     private val binding get() = _binding!!
-    private lateinit var dbHelper: DB_Helper
+    private val dbHelper: DB_Helper by inject()
     private var splashAnimator: AnimatorSet? = null
     private val splashImageWidth = 320f
     private val splashImageHeight = 480f
@@ -174,7 +175,6 @@ class SplashFragment : Fragment() {
             "1.0"
         }
         binding.textVersion.text = "${getString(R.string.version)} $versionName"
-        dbHelper = DB_Helper()
     }
 
     override fun onDestroyView() {

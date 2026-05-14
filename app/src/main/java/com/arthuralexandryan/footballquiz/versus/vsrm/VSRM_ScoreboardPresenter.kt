@@ -15,9 +15,13 @@ import com.arthuralexandryan.footballquiz.versus.AllCallBacks
 import com.arthuralexandryan.footballquiz.versus.OnCheckScoreboard
 import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
 import io.realm.Realm
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import java.io.Serializable
 
-class VSRM_ScoreboardPresenter(val context: Context, private val checkScoreboard: OnCheckScoreboard) : AllCallBacks.Presenter {
+class VSRM_ScoreboardPresenter(val context: Context, private val checkScoreboard: OnCheckScoreboard) : AllCallBacks.Presenter, KoinComponent {
+    private val dbHelper: DB_Helper by inject()
+
     override fun onButtonClick() {
         toPlay()
     }
@@ -28,18 +32,17 @@ class VSRM_ScoreboardPresenter(val context: Context, private val checkScoreboard
 
 
     fun getTotalScores(): Int {
-        return DB_Helper().getTotalScore()
+        return dbHelper.getTotalScore()
     }
 
     fun getTotalScoresText(): String {
-        return DB_Helper().getTotalScoreText()
+        return dbHelper.getTotalScoreText()
     }
 
     fun isReadyToPlay(): Boolean {
         return getTotalScores() >= 310
     }
     private fun getScoreboardScores() {
-        val dbHelper = DB_Helper()
         checkScoreboard.onCheckScores(VS_ScoreboardModel(
                 dbHelper.ronMessiScoreBoard.placeAnswered.toString(),
                 dbHelper.ronMessiScoreBoard.placeScore.toString(),

@@ -27,6 +27,7 @@ import com.arthuralexandryan.footballquiz.utils.CategoryType
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import io.realm.Realm
+import org.koin.android.ext.android.inject
 
 class CategoryPageFragment : Fragment(), ChooseGame {
 
@@ -36,7 +37,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     private var _versusBinding: LayoutVersusBinding? = null
     private val versusBinding get() = _versusBinding!!
 
-    private lateinit var dbHelper: DB_Helper
+    private val dbHelper: DB_Helper by inject()
     private lateinit var arrays: TarberakArrays
 
     private var slideImage: IntArray = intArrayOf()
@@ -75,7 +76,6 @@ class CategoryPageFragment : Fragment(), ChooseGame {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dbHelper = DB_Helper()
         arrays = TarberakArrays
 
         initTitleList()

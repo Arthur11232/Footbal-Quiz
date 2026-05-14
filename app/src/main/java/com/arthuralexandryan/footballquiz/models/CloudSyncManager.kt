@@ -9,8 +9,12 @@ import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.google.firebase.auth.FirebaseUser
 import io.realm.Realm
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
-object CloudSyncManager {
+object CloudSyncManager : KoinComponent {
+
+    private val userStatsService: UserStatsService by inject()
 
     sealed class SyncDecision {
         data object None : SyncDecision()
@@ -52,7 +56,7 @@ object CloudSyncManager {
             "CloudSyncManager.resolveSyncDecision: user=${user.uid}, localScore=${localSnapshot.totalScore}, localAnswered=${localSnapshot.totalAnswered}, localLastSynced=${localSnapshot.lastSynced}"
         )
 
-        UserStatsService.getInstance().downloadStats(user.uid) { cloudStats ->
+        userStatsService.downloadStats(user.uid) { cloudStats ->
             if (cloudStats == null || !cloudStats.hasProgress()) {
                 Log.d("FQ_Log", "CloudSyncManager.resolveSyncDecision: no cloud progress for user=${user.uid}")
                 onComplete(
@@ -119,7 +123,7 @@ object CloudSyncManager {
         val syncTimestamp = statsDto.gameState.lastSynced
         Log.d("FQ_Log", "CloudSyncManager.uploadLocalStats: uploading total=${statsDto.gameState.total} for user=${user.uid}")
 
-        UserStatsService.getInstance().uploadStats(user.uid, statsDto) { success ->
+        userStatsService.uploadStats(user.uid, statsDto) { success ->
             if (success) {
                 setLocalSyncTimestamp(context, user.uid, syncTimestamp)
             }
@@ -149,7 +153,7 @@ object CloudSyncManager {
         user: FirebaseUser,
         onComplete: (UserStatsDTO?) -> Unit
     ) {
-        UserStatsService.getInstance().downloadStats(user.uid) { cloudStats ->
+        userStatsService.downloadStats(user.uid) { cloudStats ->
             onComplete(cloudStats?.takeIf { it.hasProgress() })
         }
     }

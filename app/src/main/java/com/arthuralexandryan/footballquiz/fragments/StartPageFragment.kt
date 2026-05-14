@@ -19,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.arthuralexandryan.footballquiz.FQ_Application
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.auth.AuthManager
 import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
@@ -36,6 +35,7 @@ import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import org.koin.android.ext.android.inject
 import java.util.regex.Pattern
 
 class StartPageFragment : Fragment() {
@@ -44,9 +44,9 @@ class StartPageFragment : Fragment() {
     private val binding get() = _binding!!
 
 
-    private lateinit var firestoreService: FirestoreQuestionService
-    private lateinit var authManager: AuthManager
-    private lateinit var dbHelper: DB_Helper
+    private val firestoreService: FirestoreQuestionService by inject()
+    private val authManager: AuthManager by inject()
+    private val dbHelper: DB_Helper by inject()
     private var isNew: Boolean = false
     private var restoreDialogShowing: Boolean = false
 
@@ -202,10 +202,7 @@ class StartPageFragment : Fragment() {
     }
 
     private fun initView() {
-        dbHelper = DB_Helper()
-
-        firestoreService = FirestoreQuestionService.getInstance()
-        authManager = AuthManager(requireContext())
+        // Dependencies are provided by Koin.
     }
 
     private fun showLoading(messageResId: Int = R.string.loading) {
@@ -252,7 +249,7 @@ class StartPageFragment : Fragment() {
                 }
 
                 requireActivity().runOnUiThread {
-                    DB_Helper().setQuestionsToDB(mappedQuestions, isNew, IsSetQuestions {
+                    dbHelper.setQuestionsToDB(mappedQuestions, isNew, IsSetQuestions {
                         Prefer.setBooleanPreference(requireContext(), INIT_DB, true)
                         // Track which language is actually in the database now
                         Prefer.setStringPreference(requireContext(), "db_lang", selectedLocale)
@@ -293,7 +290,7 @@ class StartPageFragment : Fragment() {
 
     private fun onCheck() {
         val realm = io.realm.Realm.getDefaultInstance()
-        realm.executeTransaction { r -> DB_Helper().setDefaultAllScores(r) }
+        realm.executeTransaction { r -> dbHelper.setDefaultAllScores(r) }
         realm.close()
     }
 

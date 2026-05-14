@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.animations.BallFlightAnimationManager
+import com.arthuralexandryan.footballquiz.auth.AuthManager
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.databinding.ActivityPlayNewBinding
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
@@ -40,7 +41,10 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
-import com.google.firebase.auth.FirebaseAuth
+import org.koin.android.ext.android.inject
+import org.koin.android.ext.android.getKoin
+import org.koin.core.qualifier.named
+import org.koin.core.parameter.parametersOf
 import java.util.Random
 
 class PlayFragment : Fragment(), ResetGame, ShowAds {
@@ -53,6 +57,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private lateinit var placeScores: GameObjectScores
     private lateinit var categoryScores: GameObjectScores
     private lateinit var dbHelper: DB_Helper
+    private val authManager: AuthManager by inject()
     private var titleText: String? = null
     private var categoryType: String? = null
 
@@ -169,7 +174,9 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         categoryType = data.getString("category")
 
         if (questions.isNotEmpty()) {
-            dbHelper = DB_Helper(requireActivity(), questions[0].categoryType, questions[0].type)
+            dbHelper = getKoin().get(named("play_db_helper")) {
+                parametersOf(requireActivity(), questions[0].categoryType, questions[0].type)
+            }
             initUI()
             setViewsValues()
         }
@@ -567,7 +574,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         binding.lNumber.visibility = View.INVISIBLE
         
         val totalGoal = binding.finishGame.root.findViewById<TextView>(R.id.total_goal)
-        totalGoal.text = DB_Helper().getTotalScoreText()
+        totalGoal.text = dbHelper.getTotalScoreText()
         
         binding.finishGame.root.findViewById<ImageView>(R.id.exit_game).setOnClickListener {
             handleBackNavigation()
@@ -649,7 +656,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     private fun syncProgressIfSignedIn() {
-        val user = FirebaseAuth.getInstance().currentUser ?: return
+        val user = authManager.getCurrentUser() ?: return
         if (!isAdded) return
 
         CloudSyncManager.uploadLocalStats(requireContext(), user) { _, _ -> }

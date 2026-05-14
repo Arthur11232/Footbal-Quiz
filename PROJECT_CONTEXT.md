@@ -4,9 +4,9 @@
 
 ## 📌 Обзор проекта
 - **Название:** Football Quiz
-- **Версия:** 1.0.0
-- **Основной стек:** Kotlin, Android SDK (target API 35/Android 15), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines.
-- **Цель:** Полная модернизация приложения, переход на SAA, внедрение Google Sign-In и динамическая загрузка контента из Firestore.
+- **Версия:** 2.0.2
+- **Основной стек:** Kotlin, Android SDK (`compileSdk 36`, `targetSdk 36`), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines, Koin.
+- **Цель:** Переход от legacy feature-driven UI-логики к сильной MVVM-архитектуре с `ViewModel`, `Repository`, `UseCase`, DI через Koin и заделом на будущую многомодульность.
 
 ---
 
@@ -35,14 +35,58 @@
 - **Очистка:** Основной flow очищен перед релизом, но legacy/debug файлы (`TestActivity`, `TouchActivity`, `TestFragment`, `TouchFragment`, `VSFragment`, `FQ_Timer`) оставлены в проекте, чтобы не терять старый код до отдельного решения.
 - **Offline:** Реализована логика офлайн-игры (загрузка из Firestore -> сохранение в Realm).
 - **Debug Logging:** Добавлены точечные логи с тегом `FQ_Log` для сценариев `New Game`, загрузки вопросов из Firestore и cloud sync/recovery, чтобы упростить анализ `logcat`.
+- **Koin DI (Phase 1):** Подключён Koin и проверен на debug/release сборках. В контейнер вынесены `FirebaseAuth`, `FirebaseFirestore`, `AuthManager`, `FirestoreQuestionService`, `UserStatsService`, а также обычный и параметризованный `DB_Helper`. Основные экраны (`StartPage`, `Profile`, `Splash`, `ChooseGame`, `CategoryPage`, `Play`, `VS`) и versus score presenters переведены на DI вместо прямого ручного создания зависимостей.
 
 ---
 
 ## 🚀 Текущий план модернизации (Backlog)
 
-1.  **Архитектура: ViewModel & Flow**
-    - **Задача:** Отказ от `GlobalScope` и переход на архитектурные компоненты (Coroutines, Flow, ViewModel).
-    - **Статус:** ⏳ В планах.
+### Phase A. MVVM Foundation
+- [x] Подключить Koin и перевести первый слой сервисов/SDK на DI.
+- [ ] Ввести слои `data`, `domain`, `presentation`.
+- [ ] Создать отдельные Koin-модули: `firebaseModule`, `dataSourceModule`, `repositoryModule`, `useCaseModule`, `viewModelModule`.
+- [ ] Зафиксировать единый стиль `UiState / UiAction / UiEffect` для feature-экранов.
+
+### Phase B. Repository Layer
+- [ ] Ввести интерфейсы репозиториев:
+  - `AuthRepository`
+  - `QuestionsRepository`
+  - `UserStatsRepository`
+  - `SyncRepository`
+  - `GameProgressRepository`
+- [ ] Спрятать Firebase/Realm/Preferences за repository contracts.
+- [ ] Постепенно выводить legacy-логику из `DB_Helper` в более узкие local data sources.
+
+### Phase C. First MVVM Migration
+- [ ] Перевести `StartPageFragment` на `StartPageViewModel` как первую опорную feature.
+- [ ] Перевести `ProfileFragment` на `ProfileViewModel`.
+- [ ] Отдельно выделить sync/use-case flow из `CloudSyncManager`.
+
+### Phase D. Gameplay MVVM
+- [ ] Перевести `PlayFragment` на `PlaySessionViewModel`.
+- [ ] Отделить game session state от ad/UI callbacks.
+- [ ] Перевести `CategoryPage` и versus-flow на presentation слой с state-моделями.
+
+### Phase E. Многомодульность (подготовка)
+- [ ] Подготовить проект к разбиению на Gradle-модули без резкого переписывания.
+- [ ] После стабилизации MVVM выделить возможные будущие модули:
+  - `:core:common`
+  - `:core:ui`
+  - `:core:firebase`
+  - `:core:database`
+  - `:feature:start`
+  - `:feature:profile`
+  - `:feature:play`
+  - `:feature:versus`
+  - `:feature:legal`
+- [ ] Следить, чтобы новые repository/viewmodel пакеты уже проектировались с учётом будущего переезда в отдельные модули.
+
+### Ближайший execution plan
+1. Обновить `PROJECT_CONTEXT.md` и зафиксировать Koin integration.
+2. Создать базовую структуру `data/domain/presentation`.
+3. Ввести первые repository interfaces и реализации без ломки UI.
+4. Перевести `StartPage` на первый полноценный `ViewModel`.
+5. После стабилизации повторить паттерн для `Profile`.
 
 ---
 
@@ -96,6 +140,10 @@
     - **Результат:** Введён единый helper для системных панелей, чтобы `status bar` и `navigation bar` на основных экранах совпадали с фоном приложения. `PlayFragment` и `SplashFragment` используют sampled colors из background drawable; остальные ключевые экраны настроены через общий helper.
     - **Статус:** ✅ Завершено.
 
+13. **Architecture Modernization: Koin DI Phase 1**
+    - **Результат:** В проект добавлен Koin; основные сервисы и SDK вынесены в DI-контейнер, ручное создание зависимостей в ключевых фрагментах и presenters сокращено, `debug` и `prodRelease` сборки успешно проверены после интеграции.
+    - **Статус:** ✅ Завершено.
+
 ---
 
 ## 📝 Заметки
@@ -116,6 +164,9 @@
 - **Firestore Questions Updater:** Для обновления production-вопросов использовать `python3 tools/update_firestore_questions.py update --service-account tools/service-account.local.json --language-order en,ru,hy --dry-run`, затем только после явного подтверждения `--commit`. Инструмент не удаляет коллекцию, а перезаписывает numbered docs `questions/0..1937`; `tools/service-account.local.json` и admin SDK ключи игнорируются git-ом.
 - **Firestore Question Shape:** Текущая структура Firestore для ответов использует lower-case ключи `answers.a`, `answers.b`, `answers.c`, `answers.d`, `answers.right`. Updater пишет именно в этом формате, чтобы не ломать существующее чтение вопросов.
 - **Release Verification:** После восстановления dormant Ads-кода `./gradlew :app:clean :app:assembleDebug` проходит успешно. Перед финальным релизным commit/push нужно заново прогнать `./gradlew :app:lintRelease :app:bundleRelease` в strict lint mode; сформированный локальный `app-release.aab` будет unsigned, пока не добавлен upload/release keystore и signing config.
+- **Koin Verification:** После интеграции Koin успешно проходят `./gradlew :app:compileDevDebugKotlin`, `./gradlew :app:bundleProdRelease` и `./gradlew :app:assembleProdRelease`. На телефоне приложение запускается без fatal crash после qualifier-fix для параметризованного `DB_Helper`.
+- **MVVM Direction:** Следующий безопасный шаг — не переписывать всё сразу, а строить bridge-архитектуру: сначала `Repository` поверх текущих Firebase/Realm/Prefs сервисов, затем `ViewModel` для `StartPage`, потом `Profile`, затем игровые сценарии. Это снижает риск регрессий и одновременно подготавливает код к многомодульности.
+- **Multi-Module Direction:** Пока проект ещё single-module (`settings.gradle` включает только `:app`), но новые пакеты и DI-модули должны проектироваться так, будто они позже переедут в `core/*` и `feature/*` модули. Особенно важно избегать тесной связки UI с `DB_Helper` и Firebase SDK напрямую.
 - **UEFA Currentness Review:** Начат поэтапный аудит актуальности вопросов. Для `Europa League` и `Champions League` внесены безопасные правки в `questions_audit.json`; во втором проходе после победы Tottenham `2024/25` обновлён ответ `Juventus, Tottenham` в вопросе among listed UEFA Cup / Europa League winners; детали зафиксированы в `app/questions_uefa_currentness_review.md`.
 - **World Championship Review:** Начат следующий этап аудита. Исправлены вопросы про большее число голов на ЧМ среди предложенных игроков (`Lionel Messi`), most appearances (`Lionel Messi`) и прохождение группы действующим чемпионом в XXI веке (`Brazil and France`); детали зафиксированы в `app/questions_world_currentness_review.md`.
 - **France Currentness Review:** Исправлены актуальные рекорды сборной Франции в `en/hy` по FFF: крупнейшая победа (`Gibraltar`), most caps (`Hugo Lloris`), top scorer (`Olivier Giroud`) и most matches as coach (`Didier Deschamps`); детали зафиксированы в `app/questions_france_currentness_review.md`.
@@ -129,4 +180,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 22.04.2026 (system bars helper on main screens, legal status re-checked, external and embedded Privacy/Terms synchronized with current app behavior)*
+*Последнее обновление: 14.05.2026 (Koin DI phase 1 зафиксирован; добавлен MVVM + repository roadmap с учётом будущей многомодульности)*

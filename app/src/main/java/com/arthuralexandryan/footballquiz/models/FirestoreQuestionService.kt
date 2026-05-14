@@ -6,18 +6,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class FirestoreQuestionService {
-
-    companion object {
-        @Volatile
-        private var instance: FirestoreQuestionService? = null
-
-        fun getInstance() = instance ?: synchronized(this) {
-            instance ?: FirestoreQuestionService().also { instance = it }
-        }
-    }
-
-    private val db = FirebaseFirestore.getInstance()
+class FirestoreQuestionService(
+    private val db: FirebaseFirestore
+) {
 
     fun getQuestions(localize: String, callback: OnGetFirestoreQuestions) {
         Log.d("FQ_Log", "FirestoreQuestionService.getQuestions: locale=$localize")

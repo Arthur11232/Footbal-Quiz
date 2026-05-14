@@ -12,22 +12,25 @@ import com.arthuralexandryan.footballquiz.versus.AllCallBacks
 import com.arthuralexandryan.footballquiz.versus.OnCheckScoreboard
 import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
 import io.realm.Realm
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 internal class VSRB_ScoreboardPresenter(
     private val context: Context,
     private val checkScoreboard: OnCheckScoreboard
-) : AllCallBacks.Presenter {
+) : AllCallBacks.Presenter, KoinComponent {
+
+    private val dbHelper: DB_Helper by inject()
 
     init {
         getScoreboardScores()
     }
 
-    fun getTotalScores(): Int = DB_Helper().getTotalScore()
-    fun getTotalScoresText(): String = DB_Helper().getTotalScoreText()
+    fun getTotalScores(): Int = dbHelper.getTotalScore()
+    fun getTotalScoresText(): String = dbHelper.getTotalScoreText()
     fun isReadyToPlay(): Boolean = getTotalScores() >= 310
 
     private fun getScoreboardScores() {
-        val dbHelper = DB_Helper()
         checkScoreboard.onCheckScores(
             VS_ScoreboardModel(
                 dbHelper.realBarcScoreBoard.placeAnswered.toString(),
