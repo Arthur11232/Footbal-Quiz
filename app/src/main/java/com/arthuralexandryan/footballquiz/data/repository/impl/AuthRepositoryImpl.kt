@@ -28,4 +28,24 @@ class AuthRepositoryImpl(
     override fun signOut(onComplete: () -> Unit) {
         authManager.signOut(onComplete)
     }
+
+    override suspend fun signOut() {
+        return suspendCancellableCoroutine { continuation ->
+            authManager.signOut {
+                continuation.resume(Unit)
+            }
+        }
+    }
+
+    override suspend fun deleteUser(user: FirebaseUser): Result<Unit> {
+        return suspendCancellableCoroutine { continuation ->
+            user.delete().addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    continuation.resume(Result.success(Unit))
+                } else {
+                    continuation.resume(Result.failure(task.exception ?: IllegalStateException("Delete user failed")))
+                }
+            }
+        }
+    }
 }

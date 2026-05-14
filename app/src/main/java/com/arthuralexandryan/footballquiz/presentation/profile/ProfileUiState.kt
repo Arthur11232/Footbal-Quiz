@@ -1,0 +1,16 @@
+package com.arthuralexandryan.footballquiz.presentation.profile
+
+data class ProfileUiState(
+    val isLoading: Boolean = false,
+    val userName: String = "",
+    val userEmail: String = "",
+    val isSignedIn: Boolean = false,
+    val localPhotoPath: String? = null,
+    val remotePhotoUrl: String? = null,
+    val totalScoreText: String = "0%",
+    val answeredCountText: String = "0/0",
+    val top5ProgressText: String = "0/0",
+    val uefaProgressText: String = "0/0",
+    val worldProgressText: String = "0/0",
+    val versusProgressText: String = "0/0"
+)

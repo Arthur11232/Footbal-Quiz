@@ -10,4 +10,6 @@ interface AuthRepository {
     fun getSignInIntent(): Intent
     suspend fun signInWithFirebase(idToken: String): AuthManager.AuthResult
     fun signOut(onComplete: () -> Unit)
+    suspend fun signOut()
+    suspend fun deleteUser(user: FirebaseUser): Result<Unit>
 }
