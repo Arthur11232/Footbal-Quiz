@@ -19,7 +19,7 @@ val repositoryModule = module {
     single<SettingsRepository> { SettingsRepositoryImpl(androidContext()) }
     single<AuthRepository> { AuthRepositoryImpl(get()) }
     single<QuestionsRepository> { QuestionsRepositoryImpl(get(), get(), get()) }
-    single<SyncRepository> { SyncRepositoryImpl(androidContext(), get()) }
+    single<SyncRepository> { SyncRepositoryImpl(androidContext(), get(), get()) }
     single<UserStatsRepository> { UserStatsRepositoryImpl(get()) }
     single<GameProgressRepository> { GameProgressRepositoryImpl(androidContext(), get(), get()) }
 }

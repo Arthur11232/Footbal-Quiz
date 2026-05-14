@@ -2,51 +2,90 @@ package com.arthuralexandryan.footballquiz.data.repository.impl
 
 import android.content.Context
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.models.CloudSyncManager
+import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
+import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
+import com.arthuralexandryan.footballquiz.constants.Constant
+import com.arthuralexandryan.footballquiz.utils.Constants
+import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.google.firebase.auth.FirebaseUser
-import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlin.coroutines.resume
 
 class SyncRepositoryImpl(
     private val context: Context,
-    private val dbHelper: DB_Helper
+    private val gameStateLocalDataSource: GameStateLocalDataSource,
+    private val userStatsRepository: UserStatsRepository
 ) : SyncRepository {
 
     override suspend fun resolveSyncDecision(user: FirebaseUser): SyncRepository.SyncDecision {
-        return suspendCancellableCoroutine { continuation ->
-            CloudSyncManager.resolveSyncDecision(context, dbHelper, user) { decision ->
-                val mappedDecision = when (decision) {
-                    is CloudSyncManager.SyncDecision.None -> SyncRepository.SyncDecision.None
-                    is CloudSyncManager.SyncDecision.RestoreCloud -> SyncRepository.SyncDecision.RestoreCloud(
-                        userId = user.uid,
-                        cloudStats = decision.cloudStats
-                    )
-                    is CloudSyncManager.SyncDecision.UploadLocal -> SyncRepository.SyncDecision.UploadLocal(decision.user)
-                }
-                continuation.resume(mappedDecision)
+        val localSnapshot = gameStateLocalDataSource.getProgressSnapshot()
+        val cloudStats = userStatsRepository.downloadStats(user.uid)
+
+        if (cloudStats == null || !cloudStats.hasProgress()) {
+            return if (localSnapshot.hasProgress) {
+                SyncRepository.SyncDecision.UploadLocal(user)
+            } else {
+                SyncRepository.SyncDecision.None
             }
+        }
+
+        if (!localSnapshot.hasProgress) {
+            return SyncRepository.SyncDecision.RestoreCloud(
+                userId = user.uid,
+                cloudStats = cloudStats
+            )
+        }
+
+        val cloudScore = cloudStats.gameState.total
+        val localScore = localSnapshot.totalScore
+        val cloudLastSynced = cloudStats.gameState.lastSynced
+        val localLastSynced = getLocalSyncTimestamp(user.uid)
+
+        return when {
+            cloudScore > localScore -> SyncRepository.SyncDecision.RestoreCloud(user.uid, cloudStats)
+            localScore > cloudScore -> SyncRepository.SyncDecision.UploadLocal(user)
+            cloudLastSynced > localLastSynced -> SyncRepository.SyncDecision.RestoreCloud(user.uid, cloudStats)
+            localLastSynced > cloudLastSynced -> SyncRepository.SyncDecision.UploadLocal(user)
+            else -> SyncRepository.SyncDecision.None
         }
     }
 
     override suspend fun uploadLocalStats(user: FirebaseUser): Result<Unit> {
-        return suspendCancellableCoroutine { continuation ->
-            CloudSyncManager.uploadLocalStats(context, user) { success, error ->
-                if (success) {
-                    continuation.resume(Result.success(Unit))
-                } else {
-                    continuation.resume(
-                        Result.failure(
-                            IllegalStateException(error ?: "Cloud sync upload failed")
-                        )
-                    )
-                }
-            }
+        val stats = gameStateLocalDataSource.getUserStats(user)
+        return userStatsRepository.uploadStats(user.uid, stats).onSuccess {
+            setLocalSyncTimestamp(user.uid, stats.gameState.lastSynced)
         }
     }
 
     override fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO) {
-        CloudSyncManager.restoreCloudStats(context, dbHelper, userId, cloudStats)
+        gameStateLocalDataSource.restoreStats(cloudStats.gameState)
+        Prefer.setBooleanPreference(context, "isFirstPlay", false)
+        Prefer.setBooleanPreference(context, Constant.INIT_DB, true)
+        setLocalSyncTimestamp(userId, cloudStats.gameState.lastSynced)
+    }
+
+    private fun UserStatsDTO.hasProgress(): Boolean {
+        val state = gameState
+        return state.total > 0 ||
+            state.top5_answered > 0 ||
+            state.ufa_answered > 0 ||
+            state.world_answered > 0 ||
+            state.vsRM_answered > 0 ||
+            state.vsRB_answered > 0
+    }
+
+    private fun getLocalSyncTimestamp(userId: String): Long {
+        return Prefer.getLongPreference(
+            context,
+            Constants.UserStatsLastSyncKeyPrefix + userId,
+            0L
+        )
+    }
+
+    private fun setLocalSyncTimestamp(userId: String, timestamp: Long) {
+        Prefer.setLongPreference(
+            context,
+            Constants.UserStatsLastSyncKeyPrefix + userId,
+            timestamp
+        )
     }
 }

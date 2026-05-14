@@ -4,18 +4,15 @@ import android.content.Context
 import android.net.Uri
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.ProfileProgressSnapshot
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.interfaces.Check
+import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
-import kotlinx.coroutines.suspendCancellableCoroutine
 import java.io.File
 import java.io.FileOutputStream
-import kotlin.coroutines.resume
 
 class GameProgressRepositoryImpl(
     private val context: Context,
-    private val dbHelper: DB_Helper,
+    private val gameStateLocalDataSource: GameStateLocalDataSource,
     private val settingsRepository: com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 ) : GameProgressRepository {
 
@@ -26,11 +23,12 @@ class GameProgressRepositoryImpl(
         val versusTotal = (Constants.VSRM.toIntOrNull() ?: 0) + (Constants.VSRB.toIntOrNull() ?: 0)
         val totalQuestions = top5Total + uefaTotal + worldTotal + versusTotal
 
-        val top5Answered = dbHelper.top5AnsweredScores
-        val uefaAnswered = dbHelper.getUFAAnsweredScores()
-        val worldAnswered = dbHelper.getWorldAnsweredScores()
-        val versusAnswered = dbHelper.getVersusAnsweredScores()
-        val totalAnswered = top5Answered + uefaAnswered + worldAnswered + versusAnswered
+        val localSnapshot = gameStateLocalDataSource.getProgressSnapshot()
+        val top5Answered = localSnapshot.top5Answered
+        val uefaAnswered = localSnapshot.uefaAnswered
+        val worldAnswered = localSnapshot.worldAnswered
+        val versusAnswered = localSnapshot.versusAnswered
+        val totalAnswered = localSnapshot.totalAnswered
         val progressPercent = if (totalQuestions > 0) {
             (totalAnswered * 100) / totalQuestions
         } else {
@@ -49,7 +47,7 @@ class GameProgressRepositoryImpl(
             versusTotal = versusTotal,
             totalQuestions = totalQuestions,
             progressPercent = progressPercent,
-            totalScore = dbHelper.getTotalScore()
+            totalScore = localSnapshot.totalScore
         )
     }
 
@@ -84,16 +82,7 @@ class GameProgressRepositoryImpl(
             .putBoolean("isFirstPlay", true)
             .apply()
         settingsRepository.setFirstPlay(true)
-
-        return suspendCancellableCoroutine { continuation ->
-            dbHelper.deleteAll(object : Check {
-                override fun onCheck() {
-                    continuation.resume(Result.success(Unit))
-                }
-            }) {
-                continuation.resume(Result.failure(it))
-            }
-        }
+        return gameStateLocalDataSource.resetAllProgress()
     }
 
     override fun markAutoRestorePromptDismissed(userId: String) {

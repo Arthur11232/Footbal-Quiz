@@ -30,6 +30,7 @@ val serviceModule = module {
 val footballQuizModules = listOf(
     firebaseModule,
     serviceModule,
+    dataSourceModule,
     repositoryModule,
     useCaseModule,
     viewModelModule

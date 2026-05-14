@@ -22,6 +22,18 @@ class UserStatsRepositoryImpl(
         }
     }
 
+    override suspend fun uploadStats(userId: String, stats: UserStatsDTO): Result<Unit> {
+        return suspendCancellableCoroutine { continuation ->
+            userStatsService.uploadStats(userId, stats) { success ->
+                if (success) {
+                    continuation.resume(Result.success(Unit))
+                } else {
+                    continuation.resume(Result.failure(IllegalStateException("Failed to upload cloud stats")))
+                }
+            }
+        }
+    }
+
     override suspend fun downloadStats(userId: String): UserStatsDTO? {
         return suspendCancellableCoroutine { continuation ->
             userStatsService.downloadStats(userId) { stats ->
