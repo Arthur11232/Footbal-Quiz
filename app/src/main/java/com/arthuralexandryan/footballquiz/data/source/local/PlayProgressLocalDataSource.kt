@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz.data.source.local
 
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
+import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.utils.CategoryType
 
 interface PlayProgressLocalDataSource {
@@ -16,4 +17,10 @@ interface PlayProgressLocalDataSource {
         questionType: String,
         placeScores: GameObjectScores
     )
+
+    fun resetPlaceProgress(
+        questionType: String,
+        categoryType: CategoryType,
+        answeredScores: Int
+    ): ScoreboardModel
 }

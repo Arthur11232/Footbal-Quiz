@@ -24,14 +24,11 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.animations.BallFlightAnimationManager
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.databinding.ActivityPlayNewBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.interfaces.ResetGame
 import com.arthuralexandryan.footballquiz.interfaces.ShowAds
 import com.arthuralexandryan.footballquiz.models.AdBanner
 import com.arthuralexandryan.footballquiz.models.AdMobPresenter
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
-import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.presentation.play.PlayAnswerOption
 import com.arthuralexandryan.footballquiz.presentation.play.PlayEffect
 import com.arthuralexandryan.footballquiz.presentation.play.PlaySessionArgs
@@ -46,19 +43,15 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import kotlinx.coroutines.launch
-import org.koin.android.ext.android.getKoin
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import org.koin.core.qualifier.named
-import org.koin.core.parameter.parametersOf
 import java.util.Random
 
-class PlayFragment : Fragment(), ResetGame, ShowAds {
+class PlayFragment : Fragment(), ShowAds {
 
     private var _binding: ActivityPlayNewBinding? = null
     private val binding get() = _binding!!
 
     private val playViewModel: PlayViewModel by viewModel()
-    private lateinit var dbHelper: DB_Helper
     private var categoryKey: String? = null
     private var answerDelay: Long = 2000
 
@@ -72,6 +65,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     private val random = Random()
     private var pendingAnswerResult: Boolean? = null
     private var selectedAnswerView: View? = null
+    private var pendingRewardResetForce: Boolean = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = ActivityPlayNewBinding.inflate(inflater, container, false)
@@ -166,15 +160,15 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     private fun initUiActions() {
         binding.forceReset.setOnClickListener {
-            val answeredCount = playViewModel.getAnsweredCountForReset()
             if (!Constant.ADS_ENABLED) {
-                dbHelper.resetPlace(answeredCount, this, true)
+                playViewModel.resetSession(isForce = true)
             } else if (mRewardedAd != null) {
+                pendingRewardResetForce = true
                 mRewardedAd?.show(requireActivity()) { rewardItem ->
                     adMobPresenter.onShow(rewardItem.amount)
                 }
             } else {
-                dbHelper.resetPlace(answeredCount, this, true)
+                playViewModel.resetSession(isForce = true)
                 loadRewardedAd()
             }
         }
@@ -226,9 +220,6 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         categoryKey = data.getString("category")
 
         if (questions.isNotEmpty()) {
-            dbHelper = getKoin().get(named("play_db_helper")) {
-                parametersOf(requireActivity(), questions[0].categoryType, questions[0].type)
-            }
             playViewModel.initialize(
                 PlaySessionArgs(
                     questions = questions,
@@ -523,22 +514,18 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         }
         
         binding.finishGame.root.findViewById<ImageView>(R.id.reload_game).setOnClickListener {
-            val answeredCount = playViewModel.getAnsweredCountForReset()
             if (!Constant.ADS_ENABLED) {
-                dbHelper.resetPlace(answeredCount, this, false)
+                playViewModel.resetSession(isForce = false)
             } else if (mRewardedAd != null) {
+                pendingRewardResetForce = false
                 mRewardedAd?.show(requireActivity()) { rewardItem ->
                     adMobPresenter.onShow(rewardItem.amount)
                 }
             } else {
-                dbHelper.resetPlace(answeredCount, this, false)
+                playViewModel.resetSession(isForce = false)
                 loadRewardedAd()
             }
         }
-    }
-
-    override fun reset(placeScore: ScoreboardModel, isForce: Boolean) {
-        playViewModel.onResetApplied(placeScore, isForce)
     }
 
     private fun handleBackNavigation() {
@@ -570,6 +557,6 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     override fun show(amount: Int) {
         if (_binding == null || !isAdded) return
-        dbHelper.resetPlace(playViewModel.getAnsweredCountForReset(), this, playViewModel.uiState.value.isResetEnabled)
+        playViewModel.resetSession(isForce = pendingRewardResetForce)
     }
 }

@@ -15,6 +15,7 @@ import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_RealM_Barcelona
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_Ronaldo_Messi
 import com.arthuralexandryan.footballquiz.db_app.World.DB_World_Championship
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
+import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.utils.CategoryType
 import com.arthuralexandryan.footballquiz.utils.getOpenedPlace
 import io.realm.Realm
@@ -71,6 +72,96 @@ class RealmPlayProgressLocalDataSource(
                 updatePlaceScores(scores, questionType, placeScores)
                 transactionRealm.insertOrUpdate(scores)
             }
+        }
+    }
+
+    override fun resetPlaceProgress(
+        questionType: String,
+        categoryType: CategoryType,
+        answeredScores: Int
+    ): ScoreboardModel {
+        return Realm.getDefaultInstance().use { realm ->
+            var resetScoreboard = defaultResetScoreboard(categoryType)
+            realm.executeTransaction { transactionRealm ->
+                disableAllAnswers(transactionRealm, questionType)
+                val scores = transactionRealm.where(FQ_Scores::class.java).findFirst() ?: return@executeTransaction
+
+                resetScoreboard = when (questionType) {
+                    "France" -> {
+                        scores.top5Scores?.france_score = 40
+                        scores.top5Scores?.france_answered = 0
+                        scores.top5_answered = (scores.top5_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(40, 0, scores.top5_answered, scores.top5)
+                    }
+                    "Germany" -> {
+                        scores.top5Scores?.germany_score = 40
+                        scores.top5Scores?.germany_answered = 0
+                        scores.top5_answered = (scores.top5_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(40, 0, scores.top5_answered, scores.top5)
+                    }
+                    "Italy" -> {
+                        scores.top5Scores?.italy_score = 40
+                        scores.top5Scores?.italy_answered = 0
+                        scores.top5_answered = (scores.top5_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(40, 0, scores.top5_answered, scores.top5)
+                    }
+                    "England" -> {
+                        scores.top5Scores?.england_score = 40
+                        scores.top5Scores?.england_answered = 0
+                        scores.top5_answered = (scores.top5_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(40, 0, scores.top5_answered, scores.top5)
+                    }
+                    "Spain" -> {
+                        scores.top5Scores?.spain_score = 40
+                        scores.top5Scores?.spain_answered = 0
+                        scores.top5_answered = (scores.top5_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(40, 0, scores.top5_answered, scores.top5)
+                    }
+                    "Super Cup" -> {
+                        scores.ufaScores?.superCup_score = 20
+                        scores.ufaScores?.superCup_answered = 0
+                        scores.ufa_answered = (scores.ufa_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(20, 0, scores.ufa_answered, scores.ufa)
+                    }
+                    "European League" -> {
+                        scores.ufaScores?.europaLeague_score = 20
+                        scores.ufaScores?.europaLeague_answered = 0
+                        scores.ufa_answered = (scores.ufa_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(20, 0, scores.ufa_answered, scores.ufa)
+                    }
+                    "Champions League" -> {
+                        scores.ufaScores?.championsLeague_score = 20
+                        scores.ufaScores?.championsLeague_answered = 0
+                        scores.ufa_answered = (scores.ufa_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(20, 0, scores.ufa_answered, scores.ufa)
+                    }
+                    "Europe Championship" -> {
+                        scores.ufaScores?.europaChampionship_score = 10
+                        scores.ufaScores?.europaChampionship_answered = 0
+                        scores.ufa_answered = (scores.ufa_answered - answeredScores).coerceAtLeast(0)
+                        ScoreboardModel(10, 0, scores.ufa_answered, scores.ufa)
+                    }
+                    "World Cup" -> {
+                        scores.world = 30
+                        scores.world_answered = 0
+                        ScoreboardModel(30, 0, scores.world_answered, scores.world)
+                    }
+                    "Versus R_M" -> {
+                        scores.vsRM = 50
+                        scores.vsRM_answered = 0
+                        ScoreboardModel(50, 0, scores.vsRM_answered, scores.vsRM)
+                    }
+                    "Versus R_B" -> {
+                        scores.vsRB = 50
+                        scores.vsRB_answered = 0
+                        ScoreboardModel(50, 0, scores.vsRB_answered, scores.vsRB)
+                    }
+                    else -> resetScoreboard
+                }
+
+                transactionRealm.insertOrUpdate(scores)
+            }
+            resetScoreboard
         }
     }
 
@@ -134,6 +225,33 @@ class RealmPlayProgressLocalDataSource(
             CategoryType.WORLD_CUP -> scores.world_answered = scores.world_answered + 1
             CategoryType.RON_MES -> scores.vsRM_answered = scores.vsRM_answered + 1
             CategoryType.REAL_BARCE -> scores.vsRB_answered = scores.vsRB_answered + 1
+        }
+    }
+
+    private fun defaultResetScoreboard(categoryType: CategoryType): ScoreboardModel {
+        return when (categoryType) {
+            CategoryType.TOP5 -> ScoreboardModel(40, 0, 0, 200)
+            CategoryType.UEFA -> ScoreboardModel(20, 0, 0, 70)
+            CategoryType.WORLD_CUP -> ScoreboardModel(30, 0, 0, 30)
+            CategoryType.RON_MES,
+            CategoryType.REAL_BARCE -> ScoreboardModel(50, 0, 0, 50)
+        }
+    }
+
+    private fun disableAllAnswers(realm: Realm, questionType: String) {
+        when (questionType) {
+            "France" -> realm.where(DB_France::class.java).findAll().forEach { it.isAnswered = false }
+            "Germany" -> realm.where(DB_Germany::class.java).findAll().forEach { it.isAnswered = false }
+            "Italy" -> realm.where(DB_Italy::class.java).findAll().forEach { it.isAnswered = false }
+            "England" -> realm.where(DB_England::class.java).findAll().forEach { it.isAnswered = false }
+            "Spain" -> realm.where(DB_Spain::class.java).findAll().forEach { it.isAnswered = false }
+            "Super Cup" -> realm.where(DB_Super_Cup::class.java).findAll().forEach { it.isAnswered = false }
+            "European League" -> realm.where(DB_Europa_League::class.java).findAll().forEach { it.isAnswered = false }
+            "Champions League" -> realm.where(DB_Champions_League::class.java).findAll().forEach { it.isAnswered = false }
+            "Europe Championship" -> realm.where(DB_Europ_Championship::class.java).findAll().forEach { it.isAnswered = false }
+            "World Cup" -> realm.where(DB_World_Championship::class.java).findAll().forEach { it.isAnswered = false }
+            "Versus R_M" -> realm.where(DB_VS_Ronaldo_Messi::class.java).findAll().forEach { it.isAnswered = false }
+            "Versus R_B" -> realm.where(DB_VS_RealM_Barcelona::class.java).findAll().forEach { it.isAnswered = false }
         }
     }
 }

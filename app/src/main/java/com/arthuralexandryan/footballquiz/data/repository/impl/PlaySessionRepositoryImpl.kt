@@ -7,7 +7,9 @@ import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSo
 import com.arthuralexandryan.footballquiz.data.source.local.PlayProgressLocalDataSource
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
+import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.utils.Prefer
+import com.arthuralexandryan.footballquiz.utils.CategoryType
 import com.google.firebase.auth.FirebaseUser
 
 class PlaySessionRepositoryImpl(
@@ -46,6 +48,18 @@ class PlaySessionRepositoryImpl(
             categoryType = categoryType,
             placeScores = placeScores,
             isCorrect = isCorrect
+        )
+    }
+
+    override fun resetSession(
+        questionType: String,
+        categoryType: CategoryType,
+        answeredCount: Int
+    ): ScoreboardModel {
+        return playProgressLocalDataSource.resetPlaceProgress(
+            questionType = questionType,
+            categoryType = categoryType,
+            answeredScores = answeredCount
         )
     }
 

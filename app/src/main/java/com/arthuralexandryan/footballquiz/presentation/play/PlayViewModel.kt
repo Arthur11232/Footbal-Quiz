@@ -8,6 +8,7 @@ import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
+import com.arthuralexandryan.footballquiz.utils.CategoryType
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -34,6 +35,8 @@ class PlayViewModel(
     private var placeScores: GameObjectScores = GameObjectScores()
     private var categoryScores: GameObjectScores = GameObjectScores()
     private var categoryKey: String = ""
+    private var sessionQuestionType: String = ""
+    private var sessionCategoryType: CategoryType? = null
     private var forceReloadBarrier: Int = 0
     private var currentQuestionIndex: Int = -1
     private var answersSinceInterstitial: Int = 0
@@ -46,6 +49,8 @@ class PlayViewModel(
         placeScores = args.placeScores.copy()
         categoryScores = args.categoryScores.copy()
         categoryKey = args.categoryKey
+        sessionQuestionType = args.questions.firstOrNull()?.type.orEmpty()
+        sessionCategoryType = args.questions.firstOrNull()?.categoryType
         forceReloadBarrier = placeScores.place_score / 2
 
         _uiState.update {
@@ -132,6 +137,17 @@ class PlayViewModel(
             }
         }
         prepareNextQuestion()
+    }
+
+    fun resetSession(isForce: Boolean) {
+        val categoryType = sessionCategoryType ?: return
+        if (sessionQuestionType.isBlank()) return
+        val resetScoreboard = playSessionRepository.resetSession(
+            questionType = sessionQuestionType,
+            categoryType = categoryType,
+            answeredCount = getAnsweredCountForReset()
+        )
+        onResetApplied(resetScoreboard, isForce)
     }
 
     fun persistCurrentQuestionOnStop() {
