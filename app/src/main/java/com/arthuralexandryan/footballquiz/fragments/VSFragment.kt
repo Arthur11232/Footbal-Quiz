@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
+import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.databinding.LayoutVersusBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.models.TarberakArrays
 import org.koin.android.ext.android.inject
 
@@ -17,7 +17,7 @@ class VSFragment : Fragment() {
     private var _binding: LayoutVersusBinding? = null
     private val binding get() = _binding!!
 
-    private val dbHelper: DB_Helper by inject()
+    private val gameCatalogRepository: GameCatalogRepository by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,7 +45,7 @@ class VSFragment : Fragment() {
     }
 
     private fun inflateView() {
-        val scoreboardModel = dbHelper.realBarcScoreBoard
+        val scoreboardModel = gameCatalogRepository.getRealBarcaScoreboard()
         binding.scoreboard.placeQuestion.text = scoreboardModel.placeScore.toString()
         binding.scoreboard.placeAnswer.text = scoreboardModel.placeAnswered.toString()
         binding.scoreboard.categoryAnswers.text = scoreboardModel.categoryAnswered.toString()

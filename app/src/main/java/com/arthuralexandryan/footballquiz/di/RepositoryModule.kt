@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz.di
 
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
+import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
 import com.arthuralexandryan.footballquiz.data.repository.QuestionsRepository
@@ -8,6 +9,7 @@ import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.data.repository.impl.AuthRepositoryImpl
+import com.arthuralexandryan.footballquiz.data.repository.impl.GameCatalogRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.GameProgressRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.PlaySessionRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.QuestionsRepositoryImpl
@@ -20,6 +22,7 @@ import org.koin.dsl.module
 val repositoryModule = module {
     single<SettingsRepository> { SettingsRepositoryImpl(androidContext()) }
     single<AuthRepository> { AuthRepositoryImpl(get()) }
+    single<GameCatalogRepository> { GameCatalogRepositoryImpl(get(), get()) }
     single<QuestionsRepository> { QuestionsRepositoryImpl(get(), get(), get()) }
     single<SyncRepository> { SyncRepositoryImpl(androidContext(), get(), get()) }
     single<UserStatsRepository> { UserStatsRepositoryImpl(get()) }
