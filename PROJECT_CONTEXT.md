@@ -64,7 +64,7 @@
 ### Phase C. First MVVM Migration
 - [x] Перевести `StartPageFragment` на `StartPageViewModel` как первую опорную feature.
 - [x] Перевести `ProfileFragment` на `ProfileViewModel`.
-- [~] Отдельно выделить sync/use-case flow из `CloudSyncManager`.
+- [x] Отдельно выделить sync/use-case flow из legacy `CloudSyncManager` в `SyncRepository` / use case слой.
 
 ### Phase D. Gameplay MVVM
 - [x] Перевести `PlayFragment` на `PlaySessionViewModel`.
@@ -154,7 +154,7 @@
 - **Localization:** Для корректной смены языка без перезагрузки системы используется `attachBaseContext` в `BaseActivity`.
 - **Smart Sync:** Если `db_lang` в `SharedPreferences` не совпадает с выбранным языком, приложение автоматически скачивает новые вопросы при входе в игру ("New Game" или "Continue").
 - **Firestore Questions:** Коллекция `questions` используется как публичный источник контента для локального кеширования в Realm. Для корректной работы гостевого режима правила Firestore должны разрешать чтение вопросов без авторизации.
-- **Cloud Progress:** Пользовательская статистика хранится отдельно и должна оставаться приватной (`users/{uid}` только для владельца). Логика сравнения прогресса вынесена в `CloudSyncManager`.
+- **Cloud Progress:** Пользовательская статистика хранится отдельно и должна оставаться приватной (`users/{uid}` только для владельца). Логика сравнения прогресса, upload и restore уже вынесена в `SyncRepository` и start/profile use cases; legacy `CloudSyncManager` удалён.
 - **Manual Sync UX:** Если cloud-progress нежелателен, пользователь может отменить авто-восстановление один раз и продолжить играть локально. Позже в `ProfileFragment` доступны compact icon-actions: restore из cloud и overwrite cloud текущим прогрессом устройства.
 - **Recovery Flow:** Восстановление прогресса больше не должно оставлять пользователя в состоянии "только New Game" после переустановки. После restore автоматически включается `Continue`.
 - **Debugging:** Для анализа проблем приложения использовать `adb logcat -s FQ_Log`. Это отсекает системный шум MIUI/Google Play Services и показывает только ключевой flow приложения.
@@ -177,6 +177,7 @@
 - **Game Catalog Checkpoint:** Для selection/scoreboard flow введены `GameCatalogLocalDataSource` и `GameCatalogRepository`. Они инкапсулируют category totals, scoreboard модели и launch payload (`GameLaunchData`) для `top5`, `uefa`, `world`, `vsRM`, `vsRB`. `SliderAdapter` больше не строит payload из Realm, а отдаёт `entryKey`; `CategoryPageFragment` собирает navigation bundle через repository. `ChooseGameFragment`, `VSFragment`, `VSRM_ScoreboardPresenter` и `VSRB_ScoreboardPresenter` также переведены на repository-backed чтение scoreboard/progress данных.
 - **Play Reset Checkpoint:** `PlayFragment` больше не использует `DB_Helper.resetPlace()` и не держит `ResetGame` callback-path. Reset/reload сценарии вынесены в `PlaySessionRepository` и `PlayProgressLocalDataSource`: place reset, Realm question flags reset и scoreboard state rebuild теперь идут через data/repository слой. Rewarded reset также больше не смешивает `force reset` и `finish reload` через неявный state — тип reset передаётся явно.
 - **Gameplay Mutation Cleanup:** После play/session migration удалены последние мёртвые gameplay/category mutation-методы из `DB_Helper`: `setAnswered()`, `setPlaceScores()`, `setCategoryScores()`, `deletePlaceScores()`. Это закрепляет новый контракт: игровые write-path идут через local data sources и repositories, а `DB_Helper` остаётся только для question bootstrap, full reset/restore compatibility и ещё не мигрированных legacy snapshot-helper сценариев.
+- **Legacy Sync Cleanup:** Удалён неиспользуемый `CloudSyncManager`, а его обязанности окончательно закрыты `SyncRepository`, `GameStateLocalDataSource` и start/profile use cases. Заодно удалён пустой `FQ_Application.setDB()` bridge и no-op инициализация из `SplashFragment`, которая больше не участвует в question bootstrap.
 - **Release Build Note:** При первой release-проверке после Profile MVVM всплыл stale generated artifact `app/build/generated/updated_navigation_xml/prodRelease/navigation/nav_graph 2.xml`; проблема не была кодовой и исчезла после `clean`. Для следующих архитектурных миграций release-валидацию лучше сразу запускать как `./gradlew clean :app:bundleProdRelease`.
 - **MVVM Direction:** Следующий безопасный шаг — не переписывать всё сразу, а продолжать bridge-архитектуру: после `StartPage`, `Profile`, `Play`, game catalog bridge, play reset migration и gameplay mutation cleanup идти в декомпозицию оставшихся legacy stat/snapshot сценариев и постепенно уводить их от `DB_Helper`. Это снижает риск регрессий и одновременно подготавливает код к многомодульности.
 - **Multi-Module Direction:** Пока проект ещё single-module (`settings.gradle` включает только `:app`), но новые пакеты и DI-модули должны проектироваться так, будто они позже переедут в `core/*` и `feature/*` модули. Особенно важно избегать тесной связки UI с `DB_Helper` и Firebase SDK напрямую.
@@ -193,4 +194,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 18.05.2026 (Koin DI phase 1 зафиксирован; MVVM checkpoints для StartPage, Profile и Play внедрены; selection/scoreboard вынесены в GameCatalog repository; play reset/write path вынесен из PlayFragment; dead gameplay/category write methods удалены из DB_Helper; progress/sync/play/catalog/reset слои подтверждены debug/release сборками)*
+*Последнее обновление: 18.05.2026 (Koin DI phase 1 зафиксирован; MVVM checkpoints для StartPage, Profile и Play внедрены; selection/scoreboard вынесены в GameCatalog repository; play reset/write path вынесен из PlayFragment; dead gameplay/category write methods удалены из DB_Helper; legacy CloudSyncManager и пустой startup bridge удалены; progress/sync/play/catalog/reset слои подтверждены debug/release сборками)*

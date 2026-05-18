@@ -125,55 +125,6 @@ class DB_Helper {
             realm.insertOrUpdate(scores)
     }
 
-    val top5AnsweredScores: Int
-        get() = Realm.getDefaultInstance().use { realm ->
-            realm.where(FQ_Scores::class.java).findFirst()?.top5_answered ?: 0
-        }
-
-    fun getUFAAnsweredScores(): Int =
-        Realm.getDefaultInstance().use { realm ->
-            realm.where(FQ_Scores::class.java).findFirst()?.ufa_answered ?: 0
-        }
-
-    fun getWorldAnsweredScores(): Int =
-        Realm.getDefaultInstance().use { realm ->
-            realm.where(FQ_Scores::class.java).findFirst()?.world_answered ?: 0
-        }
-
-    fun getVersusAnsweredScores(): Int =
-        Realm.getDefaultInstance().use { realm ->
-            realm.where(FQ_Scores::class.java).findFirst()?.let {
-                it.vsRM_answered + it.vsRB_answered
-            } ?: 0
-        }
-
-    fun getTotalScore(): Int {
-        val realm = Realm.getDefaultInstance()
-        var allScore = 0
-        realm.executeTransaction { r ->
-            var scores = r.where(FQ_Scores::class.java).findFirst()
-            if (scores == null) {
-                setDefaultAllScores(r)
-                scores = r.where(FQ_Scores::class.java).findFirst()
-            }
-            
-            if (scores != null) {
-                allScore = scores.top5_answered + scores.ufa_answered + scores.world_answered +
-                    scores.vsRM_answered + scores.vsRB_answered
-                scores.fq_all = allScore
-                r.insertOrUpdate(scores)
-            }
-        }
-        Log.e("FQ_Log", "all score: $allScore")
-        realm.close()
-        return allScore
-    }
-
-    fun getTotalScoreText(): String {
-        Log.e("FQ_Log", getTotalScore().toString())
-        return getTotalScore().toString()
-    }
-
     private fun <T> disableAllAnswers(realm: Realm, tClass: Class<T>): RealmResults<T>
             where T : RealmModel, T : DB_Base {
         val db = realm.where(tClass).findAll()
