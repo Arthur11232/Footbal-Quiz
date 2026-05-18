@@ -23,8 +23,8 @@ import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.auth.AuthManager
 import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
+import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
 import com.arthuralexandryan.footballquiz.databinding.ActivityStartPageBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.start.StartPageEffect
 import com.arthuralexandryan.footballquiz.presentation.start.StartPageViewModel
@@ -42,7 +42,7 @@ class StartPageFragment : Fragment() {
 
 
     private val authManager: AuthManager by inject()
-    private val dbHelper: DB_Helper by inject()
+    private val gameStateLocalDataSource: GameStateLocalDataSource by inject()
     private val settingsRepository: SettingsRepository by inject()
     private val startPageViewModel: StartPageViewModel by viewModel()
     private var restoreDialogShowing: Boolean = false
@@ -141,9 +141,7 @@ class StartPageFragment : Fragment() {
     }
 
     private fun onCheck() {
-        val realm = io.realm.Realm.getDefaultInstance()
-        realm.executeTransaction { r -> dbHelper.setDefaultAllScores(r) }
-        realm.close()
+        gameStateLocalDataSource.resetScoresToDefault()
     }
 
     private fun handleSignInClick() {

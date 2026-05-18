@@ -21,6 +21,7 @@ data class LocalProgressSnapshot(
 interface GameStateLocalDataSource {
     fun getProgressSnapshot(): LocalProgressSnapshot
     fun getUserStats(user: FirebaseUser): UserStatsDTO
+    fun resetScoresToDefault()
     fun restoreStats(gameState: GameState)
     suspend fun resetAllProgress(): Result<Unit>
 }

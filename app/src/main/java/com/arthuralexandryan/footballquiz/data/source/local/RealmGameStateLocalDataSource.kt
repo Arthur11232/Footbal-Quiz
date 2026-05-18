@@ -104,6 +104,14 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
         }
     }
 
+    override fun resetScoresToDefault() {
+        Realm.getDefaultInstance().use { realm ->
+            realm.executeTransaction { transactionRealm ->
+                transactionRealm.insertOrUpdate(defaultScores())
+            }
+        }
+    }
+
     override fun restoreStats(gameState: GameState) {
         Realm.getDefaultInstance().use { realm ->
             realm.executeTransaction { transactionRealm ->

@@ -1,7 +1,5 @@
 package com.arthuralexandryan.footballquiz.db_app
 
-import android.util.Log
-import com.arthuralexandryan.footballquiz.constants.Constant.LOG_DB
 import com.arthuralexandryan.footballquiz.db_app.Score.FQ_Scores
 import com.arthuralexandryan.footballquiz.db_app.Score.Objects.PlacesTop5Obj
 import com.arthuralexandryan.footballquiz.db_app.Score.Objects.PlacesUFAObj
@@ -17,16 +15,13 @@ import com.arthuralexandryan.footballquiz.db_app.UFA.DB_Super_Cup
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_RealM_Barcelona
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_Ronaldo_Messi
 import com.arthuralexandryan.footballquiz.db_app.World.DB_World_Championship
-import com.arthuralexandryan.footballquiz.interfaces.Check
 import com.arthuralexandryan.footballquiz.models.Harc
 import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.QuestionModel
-import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.models.places
 import io.realm.Realm
 import io.realm.RealmList
 import io.realm.RealmModel
-import io.realm.RealmResults
 
 class DB_Helper {
     fun setQuestionsToDB(modelList: List<QuestionModel>, isNew: Boolean, isSet: IsSetQuestions) {
@@ -105,7 +100,7 @@ class DB_Helper {
         DB_VS_RealM_Barcelona().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
     }
 
-    fun setDefaultAllScores(realm: Realm) {
+    private fun setDefaultAllScores(realm: Realm) {
         val scores = FQ_Scores().apply {
                 id = 0; fq_all = 0; top5 = 200; top5_answered = 0
                 ufa = 70; ufa_answered = 0; world = 30; world_answered = 0
@@ -123,165 +118,5 @@ class DB_Helper {
                 }
             }
             realm.insertOrUpdate(scores)
-    }
-
-    private fun <T> disableAllAnswers(realm: Realm, tClass: Class<T>): RealmResults<T>
-            where T : RealmModel, T : DB_Base {
-        val db = realm.where(tClass).findAll()
-        db.forEach { it.isAnswered = false }
-        return db
-    }
-
-    val top5Scores: List<ScoreboardModel>
-        get() = listOf(getFranceScoreBoard(), getGermanyScoreBoard(), getItalyScoreBoard(), getEnglandScoreBoard(), getSpainScoreBoard())
-
-    fun getUFAScores(): List<ScoreboardModel> =
-        listOf(getSuperScoreBoard(), getEuropaLeagueScoreBoard(), getChampionsScoreBoard(), getEuroScoreBoard())
-
-    val worldScores: List<ScoreboardModel>
-        get() = listOf(getWorldScoreBoard())
-
-
-    private fun getFranceScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 200)
-        ScoreboardModel(it.top5Scores.france_score, it.top5Scores.france_answered, it.top5_answered, it.top5)
-    }
-
-    private fun getGermanyScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 200)
-        ScoreboardModel(it.top5Scores.germany_score, it.top5Scores.germany_answered, it.top5_answered, it.top5)
-    }
-
-    private fun getItalyScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 200)
-        ScoreboardModel(it.top5Scores.italy_score, it.top5Scores.italy_answered, it.top5_answered, it.top5)
-    }
-
-    private fun getEnglandScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 200)
-        ScoreboardModel(it.top5Scores.england_score, it.top5Scores.england_answered, it.top5_answered, it.top5)
-    }
-
-    private fun getSpainScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 200)
-        ScoreboardModel(it.top5Scores.spain_score, it.top5Scores.spain_answered, it.top5_answered, it.top5)
-    }
-
-    private fun getSuperScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 70)
-        ScoreboardModel(it.ufaScores.superCup_score, it.ufaScores.superCup_answered, it.ufa_answered, it.ufa)
-    }
-
-    private fun getEuropaLeagueScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 70)
-        ScoreboardModel(it.ufaScores.europaLeague_score, it.ufaScores.europaLeague_answered, it.ufa_answered, it.ufa)
-    }
-
-    private fun getChampionsScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 70)
-        ScoreboardModel(it.ufaScores.championsLeague_score, it.ufaScores.championsLeague_answered, it.ufa_answered, it.ufa)
-    }
-
-    private fun getEuroScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 70)
-        ScoreboardModel(it.ufaScores.europaChampionship_score, it.ufaScores.europaChampionship_answered, it.ufa_answered, it.ufa)
-    }
-
-    private fun getWorldScoreBoard() = Realm.getDefaultInstance().use { realm ->
-        val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 30)
-        ScoreboardModel(it.world, it.world_answered, it.world_answered, 30)
-    }
-
-    val ronMessiScoreBoard: ScoreboardModel
-        get() = Realm.getDefaultInstance().use { realm ->
-            val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 50)
-            ScoreboardModel(it.vsRM, it.vsRM_answered, it.vsRM_answered, 50)
-        }
-
-    val realBarcScoreBoard: ScoreboardModel
-        get() = Realm.getDefaultInstance().use { realm ->
-            val it = realm.where(FQ_Scores::class.java).findFirst() ?: return@use ScoreboardModel(0, 0, 0, 50)
-            ScoreboardModel(it.vsRB, it.vsRB_answered, it.vsRB_answered, 50)
-        }
-
-    fun restoreStats(gameState: com.arthuralexandryan.footballquiz.models.GameState) {
-        val realm = Realm.getDefaultInstance()
-        realm.executeTransaction { r ->
-            val scores = r.where(FQ_Scores::class.java).findFirst() ?: FQ_Scores().apply { id = 0 }
-            
-            scores.fq_all = gameState.total
-            scores.top5 = gameState.top5
-            scores.top5_answered = gameState.top5_answered
-            scores.ufa = gameState.ufa
-            scores.ufa_answered = gameState.ufa_answered
-            scores.world = gameState.world
-            scores.world_answered = gameState.world_answered
-            scores.vsRM = gameState.vsRM
-            scores.vsRM_answered = gameState.vsRM_answered
-            scores.vsRB = gameState.vsRB
-            scores.vsRB_answered = gameState.vsRB_answered
-            
-            // Restore Top 5 sub-scores
-            gameState.top5Scores?.let { dto ->
-                val top5 = scores.top5Scores ?: r.createObject(PlacesTop5Obj::class.java, 0)
-                top5.france_score = dto.france_score
-                top5.france_answered = dto.france_answered
-                top5.germany_score = dto.germany_score
-                top5.germany_answered = dto.germany_answered
-                top5.italy_score = dto.italy_score
-                top5.italy_answered = dto.italy_answered
-                top5.england_score = dto.england_score
-                top5.england_answered = dto.england_answered
-                top5.spain_score = dto.spain_score
-                top5.spain_answered = dto.spain_answered
-                scores.top5Scores = top5
-            }
-            
-            // Restore UEFA sub-scores
-            gameState.ufaScores?.let { dto ->
-                val ufa = scores.ufaScores ?: r.createObject(PlacesUFAObj::class.java, 0)
-                ufa.superCup_score = dto.superCup_score
-                ufa.superCup_answered = dto.superCup_answered
-                ufa.europaLeague_score = dto.europaLeague_score
-                ufa.europaLeague_answered = dto.europaLeague_answered
-                ufa.europaChampionship_score = dto.europaChampionship_score
-                ufa.europaChampionship_answered = dto.europaChampionship_answered
-                ufa.championsLeague_score = dto.championsLeague_score
-                ufa.championsLeague_answered = dto.championsLeague_answered
-                scores.ufaScores = ufa
-            }
-            
-            r.insertOrUpdate(scores)
-        }
-        realm.close()
-    }
-
-    fun deleteAll(check: Check, onError: ((Throwable) -> Unit)? = null) {
-        val mRealm = Realm.getDefaultInstance()
-        mRealm.executeTransactionAsync(Realm.Transaction { realm ->
-            realm.where(FQ_Scores::class.java).findAll().deleteAllFromRealm()
-            disableAllAnswers(realm, DB_France::class.java)
-            disableAllAnswers(realm, DB_Germany::class.java)
-            disableAllAnswers(realm, DB_Italy::class.java)
-            disableAllAnswers(realm, DB_England::class.java)
-            disableAllAnswers(realm, DB_Spain::class.java)
-            disableAllAnswers(realm, DB_Super_Cup::class.java)
-            disableAllAnswers(realm, DB_Europa_League::class.java)
-            disableAllAnswers(realm, DB_Europ_Championship::class.java)
-            disableAllAnswers(realm, DB_Champions_League::class.java)
-            disableAllAnswers(realm, DB_World_Championship::class.java)
-            disableAllAnswers(realm, DB_VS_Ronaldo_Messi::class.java)
-            disableAllAnswers(realm, DB_VS_RealM_Barcelona::class.java)
-            setDefaultAllScores(realm)
-        }, Realm.Transaction.OnSuccess {
-            mRealm.close()
-            check.onCheck()
-        }, Realm.Transaction.OnError { error ->
-            Log.e(LOG_DB, "deleteAll: failed to reset local Realm data", error)
-            if (!mRealm.isClosed) {
-                mRealm.close()
-            }
-            onError?.invoke(error)
-        })
     }
 }
