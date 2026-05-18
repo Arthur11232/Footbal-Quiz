@@ -1,13 +1,19 @@
 package com.arthuralexandryan.footballquiz.db_app
 
-import android.app.Activity
 import android.util.Log
 import com.arthuralexandryan.footballquiz.constants.Constant.LOG_DB
 import com.arthuralexandryan.footballquiz.db_app.Score.FQ_Scores
 import com.arthuralexandryan.footballquiz.db_app.Score.Objects.PlacesTop5Obj
 import com.arthuralexandryan.footballquiz.db_app.Score.Objects.PlacesUFAObj
-import com.arthuralexandryan.footballquiz.db_app.Top5.*
-import com.arthuralexandryan.footballquiz.db_app.UFA.*
+import com.arthuralexandryan.footballquiz.db_app.Top5.DB_England
+import com.arthuralexandryan.footballquiz.db_app.Top5.DB_France
+import com.arthuralexandryan.footballquiz.db_app.Top5.DB_Germany
+import com.arthuralexandryan.footballquiz.db_app.Top5.DB_Italy
+import com.arthuralexandryan.footballquiz.db_app.Top5.DB_Spain
+import com.arthuralexandryan.footballquiz.db_app.UFA.DB_Champions_League
+import com.arthuralexandryan.footballquiz.db_app.UFA.DB_Europ_Championship
+import com.arthuralexandryan.footballquiz.db_app.UFA.DB_Europa_League
+import com.arthuralexandryan.footballquiz.db_app.UFA.DB_Super_Cup
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_RealM_Barcelona
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_Ronaldo_Messi
 import com.arthuralexandryan.footballquiz.db_app.World.DB_World_Championship
@@ -17,144 +23,12 @@ import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.QuestionModel
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.models.places
-import com.arthuralexandryan.footballquiz.utils.CategoryType
-import com.arthuralexandryan.footballquiz.utils.getOpenedPlace
 import io.realm.Realm
 import io.realm.RealmList
 import io.realm.RealmModel
 import io.realm.RealmResults
 
-class DB_Helper @JvmOverloads constructor(
-    private val activity: Activity? = null,
-    private val categoryType: CategoryType? = null,
-    private val type: String? = null
-) {
-    private var fq_cores: FQ_Scores? = null
-
-    fun setAnswered(question: String) {
-        val db = Realm.getDefaultInstance()
-        try {
-            when (type) {
-                "France" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_France::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Germany" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Germany::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Italy" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Italy::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "England" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_England::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Spain" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Spain::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Super Cup" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Super_Cup::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "European League" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Europa_League::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Champions League" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Champions_League::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Europe Championship" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_Europ_Championship::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "World Cup" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_World_Championship::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Versus R_M" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_VS_Ronaldo_Messi::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-                "Versus R_B" -> db.executeTransaction { realm ->
-                    val item = realm.where(DB_VS_RealM_Barcelona::class.java).equalTo("question", question).findFirst()!!
-                    item.isAnswered = true; realm.insertOrUpdate(item)
-                }
-            }
-        } finally {
-            if (!db.isClosed) db.close()
-        }
-    }
-
-    fun setPlaceScores(placeScoreAnswer: Int, placeScore: Int) {
-        val db = Realm.getDefaultInstance()
-        db.executeTransaction { realm ->
-            when (type) {
-                "France" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5Scores.france_answered = placeScoreAnswer; fq_cores!!.top5Scores.france_score = placeScore }
-                "Germany" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5Scores.germany_answered = placeScoreAnswer; fq_cores!!.top5Scores.germany_score = placeScore }
-                "Italy" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5Scores.italy_answered = placeScoreAnswer; fq_cores!!.top5Scores.italy_score = placeScore }
-                "England" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5Scores.england_answered = placeScoreAnswer; fq_cores!!.top5Scores.england_score = placeScore }
-                "Spain" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5Scores.spain_answered = placeScoreAnswer; fq_cores!!.top5Scores.spain_score = placeScore }
-                "Super Cup" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufaScores.superCup_answered = placeScoreAnswer; fq_cores!!.ufaScores.superCup_score = placeScore }
-                "European League" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufaScores.europaLeague_answered = placeScoreAnswer; fq_cores!!.ufaScores.europaLeague_score = placeScore }
-                "Champions League" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufaScores.championsLeague_answered = placeScoreAnswer; fq_cores!!.ufaScores.championsLeague_score = placeScore }
-                "Europe Championship" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufaScores.europaChampionship_answered = placeScoreAnswer; fq_cores!!.ufaScores.europaChampionship_score = placeScore }
-                "World Cup" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.world_answered = placeScoreAnswer; fq_cores!!.world = placeScore }
-                "Versus R_M" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRM_answered = placeScoreAnswer; fq_cores!!.vsRM = placeScore }
-                "Versus R_B" -> { fq_cores = realm.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRB_answered = placeScoreAnswer; fq_cores!!.vsRB = placeScore }
-            }
-            realm.copyFromRealm(fq_cores!!)
-        }
-        if (!db.isClosed) db.close()
-    }
-
-    fun setCategoryScores() {
-        val db = Realm.getDefaultInstance()
-        try {
-            db.executeTransaction { realm ->
-                when (categoryType) {
-                    CategoryType.TOP5 -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.top5_answered = fq_cores!!.top5_answered + 1 }
-                    CategoryType.UEFA -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.ufa_answered = fq_cores!!.ufa_answered + 1 }
-                    CategoryType.WORLD_CUP -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.world_answered = fq_cores!!.world_answered + 1 }
-                    CategoryType.RON_MES -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRM_answered = fq_cores!!.vsRM_answered + 1 }
-                    CategoryType.REAL_BARCE -> { fq_cores = db.where(FQ_Scores::class.java).findFirst(); fq_cores!!.vsRB_answered = fq_cores!!.vsRB_answered + 1 }
-                    null -> {}
-                }
-                realm.copyFromRealm(fq_cores!!)
-            }
-            getTotalScore()
-            activity?.let { getOpenedPlace(fq_cores!!.fq_all, it) }
-        } finally {
-            if (!db.isClosed) db.close()
-        }
-    }
-
-    fun deletePlaceScores(placeScoreAnswer: Int, placeScore: Int) {
-        val db = Realm.getDefaultInstance()
-        db.executeTransaction { realm ->
-            val s = realm.where(FQ_Scores::class.java).findFirst()
-            if (s != null) {
-                when (type) {
-                    "France" -> realm.delete(DB_France::class.java)
-                    "Germany" -> { s.top5Scores.germany_answered = placeScoreAnswer; s.top5Scores.germany_score = placeScore }
-                    "Italy" -> { s.top5Scores.italy_answered = placeScoreAnswer; s.top5Scores.italy_score = placeScore }
-                    "England" -> { s.top5Scores.england_answered = placeScoreAnswer; s.top5Scores.england_score = placeScore }
-                    "Spain" -> { s.top5Scores.spain_answered = placeScoreAnswer; s.top5Scores.spain_score = placeScore }
-                    "Super Cup" -> { s.ufaScores.superCup_answered = placeScoreAnswer; s.ufaScores.superCup_score = placeScore }
-                    "European League" -> { s.ufaScores.europaLeague_score = placeScoreAnswer; s.ufaScores.europaLeague_score = placeScore }
-                    "Champions League" -> { s.ufaScores.championsLeague_answered = placeScoreAnswer; s.ufaScores.championsLeague_score = placeScore }
-                    "Europe Championship" -> { s.ufaScores.europaChampionship_answered = placeScoreAnswer; s.ufaScores.europaChampionship_score = placeScore }
-                    "World Cup" -> { s.world_answered = placeScoreAnswer; s.world = placeScore }
-                    "Versus R_M" -> { s.vsRM_answered = placeScoreAnswer; s.vsRM = placeScore }
-                }
-                realm.insertOrUpdate(s)
-            }
-        }
-        db.close()
-    }
+class DB_Helper {
     fun setQuestionsToDB(modelList: List<QuestionModel>, isNew: Boolean, isSet: IsSetQuestions) {
         val db = Realm.getDefaultInstance()
 
