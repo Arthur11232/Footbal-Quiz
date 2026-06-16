@@ -196,7 +196,8 @@ class PlayFragment : Fragment(), ShowAds {
                     when (effect) {
                         is PlayEffect.AnimateAnswer -> {
                             pendingAnswerResult = effect.isCorrect
-                            runAnswerTransition(effect.isCorrect)
+                            shootBallToGoal(isGoal = effect.isCorrect) {}
+                            runAnswerTransition()
                         }
                         PlayEffect.ShowInterstitialAd -> {
                             if (Constant.ADS_ENABLED && mInterstitialAd != null) {
@@ -283,7 +284,7 @@ class PlayFragment : Fragment(), ShowAds {
         }
     }
 
-    private fun runAnswerTransition(isCorrect: Boolean) {
+    private fun runAnswerTransition() {
         answerTimer?.cancel()
         answerTimer = object : CountDownTimer(answerDelay, 1600) {
             override fun onTick(millisUntilFinished: Long) = Unit
@@ -294,10 +295,8 @@ class PlayFragment : Fragment(), ShowAds {
 
                 selectedAnswerView?.findViewById<ImageView>(R.id.answer_image)?.setImageResource(R.color.fq_colorWhite)
                 selectedAnswerView = null
-                shootBallToGoal(isGoal = isCorrect) {
-                    if (_binding == null) return@shootBallToGoal
-                    playViewModel.onAnswerTransitionFinished()
-                }
+                pendingAnswerResult = null
+                playViewModel.onAnswerTransitionFinished()
             }
         }.start()
     }
