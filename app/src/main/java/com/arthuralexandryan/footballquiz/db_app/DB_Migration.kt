@@ -1,30 +1,30 @@
 package com.arthuralexandryan.footballquiz.db_app
 
-import android.util.Log
+import com.arthuralexandryan.footballquiz.db_app.migration.Migration0To1
+import com.arthuralexandryan.footballquiz.db_app.migration.Migration1To2
+import com.arthuralexandryan.footballquiz.db_app.migration.RealmMigrationStep
 import io.realm.DynamicRealm
-import io.realm.FieldAttribute
 import io.realm.RealmMigration
 
 class DB_Migration : RealmMigration {
-    override fun migrate(realm: DynamicRealm, oldVersion: Long, newVersion: Long) {
-        Log.e("FQ_DB", "oldVersion: $oldVersion newVersion: $newVersion")
-        val schema = realm.schema
-        if (oldVersion == 1L) {
-            val userSchema = schema.get("FQ_Scores")!!
-            userSchema.renameField("versus", "vsRM")
-            userSchema.renameField("versus_answered", "vsRM_answered")
-            userSchema.addField("vsRB", Int::class.java)
-            userSchema.addField("vsRB_answered", Int::class.java)
 
-            schema.create("DB_VS_RealM_Barcelona")
-                .addField("id", Int::class.java, FieldAttribute.PRIMARY_KEY)
-                .addField("question", String::class.java)
-                .addField("answer_A", String::class.java)
-                .addField("answer_B", String::class.java)
-                .addField("answer_C", String::class.java)
-                .addField("answer_D", String::class.java)
-                .addField("right_answer", String::class.java)
-                .addField("answered", Boolean::class.java)
+    override fun migrate(realm: DynamicRealm, oldVersion: Long, newVersion: Long) {
+        var version = oldVersion
+
+        while (version < newVersion) {
+            val step = migrationsByVersion[version]
+                ?: error("Missing Realm migration step for version $version")
+            step.migrate(realm)
+            version++
         }
+    }
+
+    companion object {
+        const val CURRENT_SCHEMA_VERSION = 2L
+
+        private val migrationsByVersion: Map<Long, RealmMigrationStep> = listOf(
+            Migration0To1,
+            Migration1To2
+        ).associateBy { it.fromVersion }
     }
 }

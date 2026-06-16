@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
+import com.arthuralexandryan.footballquiz.data.repository.QuestionSyncCompatibilityException
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.domain.usecase.start.BuildStartPageStateUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.EnsureLocalizationSyncUseCase
@@ -75,7 +76,12 @@ class StartPageViewModel(
                     }
                 }
                 .onFailure {
-                    _effects.emit(StartPageEffect.ShowToastRes(R.string.internet_connection_required))
+                    val messageRes = if (it is QuestionSyncCompatibilityException) {
+                        R.string.language_sync_not_ready
+                    } else {
+                        R.string.internet_connection_required
+                    }
+                    _effects.emit(StartPageEffect.ShowToastRes(messageRes))
                 }
         }
     }
@@ -90,7 +96,12 @@ class StartPageViewModel(
                     _effects.emit(StartPageEffect.NavigateToChoose(startNewGame = false))
                 }
                 .onFailure {
-                    _effects.emit(StartPageEffect.ShowToastRes(R.string.internet_connection_required))
+                    val messageRes = if (it is QuestionSyncCompatibilityException) {
+                        R.string.language_sync_not_ready
+                    } else {
+                        R.string.internet_connection_required
+                    }
+                    _effects.emit(StartPageEffect.ShowToastRes(messageRes))
                 }
         }
     }

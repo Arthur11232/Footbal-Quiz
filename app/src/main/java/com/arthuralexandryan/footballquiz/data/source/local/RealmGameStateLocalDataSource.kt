@@ -115,9 +115,9 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
     override fun restoreStats(gameState: GameState) {
         Realm.getDefaultInstance().use { realm ->
             realm.executeTransaction { transactionRealm ->
-                val scores = transactionRealm.where(FQ_Scores::class.java).findFirst() ?: FQ_Scores().apply { id = 0 }
+                val scores = transactionRealm.where(FQ_Scores::class.java).findFirst()
+                    ?: transactionRealm.createObject(FQ_Scores::class.java, gameState.id)
 
-                scores.id = gameState.id
                 scores.fq_all = gameState.total
                 scores.top5 = gameState.top5
                 scores.top5_answered = gameState.top5_answered
@@ -130,8 +130,8 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
                 scores.vsRB = gameState.vsRB
                 scores.vsRB_answered = gameState.vsRB_answered
 
+                val top5 = scores.top5Scores ?: transactionRealm.createObject(PlacesTop5Obj::class.java, 0)
                 gameState.top5Scores?.let { dto ->
-                    val top5 = scores.top5Scores ?: transactionRealm.createObject(PlacesTop5Obj::class.java, 0)
                     top5.france_score = dto.france_score
                     top5.france_answered = dto.france_answered
                     top5.germany_score = dto.germany_score
@@ -142,11 +142,22 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
                     top5.england_answered = dto.england_answered
                     top5.spain_score = dto.spain_score
                     top5.spain_answered = dto.spain_answered
-                    scores.top5Scores = top5
+                } ?: run {
+                    top5.france_score = 40
+                    top5.france_answered = 0
+                    top5.germany_score = 40
+                    top5.germany_answered = 0
+                    top5.italy_score = 40
+                    top5.italy_answered = 0
+                    top5.england_score = 40
+                    top5.england_answered = 0
+                    top5.spain_score = 40
+                    top5.spain_answered = 0
                 }
+                scores.top5Scores = top5
 
+                val ufa = scores.ufaScores ?: transactionRealm.createObject(PlacesUFAObj::class.java, 0)
                 gameState.ufaScores?.let { dto ->
-                    val ufa = scores.ufaScores ?: transactionRealm.createObject(PlacesUFAObj::class.java, 0)
                     ufa.superCup_score = dto.superCup_score
                     ufa.superCup_answered = dto.superCup_answered
                     ufa.europaLeague_score = dto.europaLeague_score
@@ -155,8 +166,17 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
                     ufa.europaChampionship_answered = dto.europaChampionship_answered
                     ufa.championsLeague_score = dto.championsLeague_score
                     ufa.championsLeague_answered = dto.championsLeague_answered
-                    scores.ufaScores = ufa
+                } ?: run {
+                    ufa.championsLeague_score = 20
+                    ufa.championsLeague_answered = 0
+                    ufa.europaChampionship_score = 10
+                    ufa.europaChampionship_answered = 0
+                    ufa.europaLeague_score = 20
+                    ufa.europaLeague_answered = 0
+                    ufa.superCup_score = 20
+                    ufa.superCup_answered = 0
                 }
+                scores.ufaScores = ufa
 
                 transactionRealm.insertOrUpdate(scores)
             }

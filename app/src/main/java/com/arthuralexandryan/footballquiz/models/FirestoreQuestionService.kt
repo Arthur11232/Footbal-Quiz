@@ -24,6 +24,7 @@ class FirestoreQuestionService(
                             val place = questionData["place"] as? String ?: ""
                             val answers = questionData["answers"] as? Map<*, *>
                             GameObjectSerializable(
+                                questionId = questionData["questionId"] as? String,
                                 question = questionData["question"] as? String,
                                 type = place,
                                 categoryType = mapToCategoryType(place),

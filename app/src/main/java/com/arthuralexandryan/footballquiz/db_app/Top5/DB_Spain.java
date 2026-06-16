@@ -7,6 +7,7 @@ import io.realm.annotations.PrimaryKey;
 public class DB_Spain extends RealmObject implements DB_Base {
     @PrimaryKey
     private int id;
+    private String questionId;
     private String question;
     private String answer_A;
     private String answer_B;
@@ -19,6 +20,11 @@ public class DB_Spain extends RealmObject implements DB_Base {
     public int getId() { return id; }
     @Override
     public void setId(int id) { this.id = id; }
+
+    @Override
+    public String getQuestionId() { return questionId; }
+    @Override
+    public void setQuestionId(String questionId) { this.questionId = questionId; }
 
     @Override
     public String getQuestion() { return question; }

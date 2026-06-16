@@ -6,6 +6,7 @@ import com.arthuralexandryan.footballquiz.utils.CategoryType
 
 interface PlayProgressLocalDataSource {
     fun persistAnswer(
+        questionId: String?,
         questionText: String,
         questionType: String,
         categoryType: CategoryType,

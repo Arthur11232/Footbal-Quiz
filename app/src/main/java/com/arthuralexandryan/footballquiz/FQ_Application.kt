@@ -2,6 +2,7 @@ package com.arthuralexandryan.footballquiz
 
 import android.app.Application
 import com.arthuralexandryan.footballquiz.constants.Constant
+import com.arthuralexandryan.footballquiz.db_app.DB_Migration
 import com.arthuralexandryan.footballquiz.di.footballQuizModules
 import com.google.android.gms.ads.MobileAds
 import io.realm.Realm
@@ -34,7 +35,8 @@ class FQ_Application : Application() {
         val realmConfiguration = RealmConfiguration.Builder()
             .name("FootballQuiz")
             .allowWritesOnUiThread(true)
-            .schemaVersion(1)
+            .schemaVersion(DB_Migration.CURRENT_SCHEMA_VERSION)
+            .migration(DB_Migration())
             .build()
         Realm.getInstance(realmConfiguration)
         Realm.setDefaultConfiguration(realmConfiguration)

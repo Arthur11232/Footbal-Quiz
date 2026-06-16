@@ -94,20 +94,20 @@ class StartPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         setToolbar(getString(R.string.title_start_page))
-
-        binding.tvGame.setOnClickListener { startPageViewModel.onGameClicked() }
-        binding.tvContinue.setOnClickListener{ startPageViewModel.onContinueClicked() }
-        binding.tvLanguage.setOnClickListener{ startPageViewModel.onLanguageClicked() }
-        binding.signInPlay.setOnClickListener{ handleSignInClick() }
-        binding.myAccount.setOnClickListener{ startPageViewModel.onProfileClicked() }
-
-        initView()
+        initListeners()
         observeUiState()
         observeEffects()
         setAgreements()
         startPageViewModel.refreshState()
+    }
+
+    private fun initListeners() = binding.run {
+        tvGame.setOnClickListener { startPageViewModel.onGameClicked() }
+        tvContinue.setOnClickListener { startPageViewModel.onContinueClicked() }
+        tvLanguage.setOnClickListener { startPageViewModel.onLanguageClicked() }
+        signInPlay.setOnClickListener { handleSignInClick() }
+        myAccount.setOnClickListener { startPageViewModel.onProfileClicked() }
     }
 
     private fun setToolbar(title: String) {
@@ -130,10 +130,6 @@ class StartPageFragment : Fragment() {
             matchNavigationToStatus = false,
             lightSystemBarIcons = false
         )
-    }
-
-    private fun initView() {
-        // Dependencies are provided by Koin.
     }
 
     private fun showLoading(messageResId: Int = R.string.loading) {

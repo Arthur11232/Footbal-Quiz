@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz.data.repository.impl
 
 import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
+import com.arthuralexandryan.footballquiz.data.repository.QuestionSyncCompatibilityException
 import com.arthuralexandryan.footballquiz.data.repository.QuestionsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.db_app.DB_Helper
@@ -8,6 +9,7 @@ import com.arthuralexandryan.footballquiz.models.Answers
 import com.arthuralexandryan.footballquiz.models.FirestoreQuestionService
 import com.arthuralexandryan.footballquiz.models.IsSetQuestions
 import com.arthuralexandryan.footballquiz.models.QuestionModel
+import android.util.Log
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
@@ -21,6 +23,9 @@ class QuestionsRepositoryImpl(
         val selectedLocale = settingsRepository.getSelectedLocale()
         val questionsLocale = settingsRepository.getQuestionsLocale()
         val isInitialized = settingsRepository.isQuestionsInitialized()
+        val answeredQuestionIds = if (isInitialized) dbHelper.getAnsweredQuestionIds() else emptySet()
+        val hasAnsweredProgress = if (isInitialized) dbHelper.hasAnsweredQuestions() else false
+        val isLocaleSwitch = isInitialized && selectedLocale != questionsLocale
 
         if (isInitialized && selectedLocale == questionsLocale) {
             return Result.success(Unit)
@@ -33,11 +38,25 @@ class QuestionsRepositoryImpl(
                     return@getQuestions
                 }
 
+                val hasIncompleteQuestionIds = questionsList.any { it.questionId.isNullOrBlank() }
+                if (isLocaleSwitch && hasAnsweredProgress && hasIncompleteQuestionIds) {
+                    Log.w(
+                        "FQ_Log",
+                        "QuestionsRepository.ensureLocalizationSync: blocked destructive locale sync. " +
+                            "selectedLocale=$selectedLocale, questionsLocale=$questionsLocale, " +
+                            "missingQuestionIds=true, answeredProgress=true"
+                    )
+                    continuation.resume(Result.failure(QuestionSyncCompatibilityException()))
+                    return@getQuestions
+                }
+
                 val mappedQuestions = questionsList.map { question ->
+                    val stableQuestionId = question.questionId?.takeIf { it.isNotBlank() }.orEmpty()
                     QuestionModel().apply {
+                        questionId = stableQuestionId
                         this.question = question.question ?: ""
                         place = question.type ?: ""
-                        answered = question.isAnswered
+                        answered = question.isAnswered || answeredQuestionIds.contains(stableQuestionId)
                         answers = Answers().apply {
                             A = question.answer_A ?: ""
                             B = question.answer_B ?: ""

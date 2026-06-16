@@ -39,10 +39,12 @@ class PlaySessionRepositoryImpl(
         placeScores: GameObjectScores,
         isCorrect: Boolean
     ): Int {
+        val questionId = question.questionId
         val questionText = question.question.orEmpty()
         val questionType = question.type.orEmpty()
         val categoryType = question.categoryType ?: return gameStateLocalDataSource.getProgressSnapshot().totalScore
         return playProgressLocalDataSource.persistAnswer(
+            questionId = questionId,
             questionText = questionText,
             questionType = questionType,
             categoryType = categoryType,

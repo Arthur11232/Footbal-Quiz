@@ -64,40 +64,76 @@ class DB_Helper {
     }
 
     fun setFranceQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_France().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_France().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setGermanyQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Germany().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Germany().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setItalyQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Italy().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Italy().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setEnglishQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_England().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_England().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setSpainQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Spain().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Spain().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setSuperCupQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Super_Cup().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Super_Cup().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setEuropeanLeagueQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Europa_League().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Europa_League().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setEuropeanChampeonQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Europ_Championship().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Europ_Championship().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setChampionsQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_Champions_League().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_Champions_League().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setWorldQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_World_Championship().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_World_Championship().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setRMVersusQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_VS_Ronaldo_Messi().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_VS_Ronaldo_Messi().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
     }
     fun setRBVersusQuestions(realm: Realm, modelList: List<QuestionModel>) = setQuestions(realm, modelList) { i, m ->
-        DB_VS_RealM_Barcelona().apply { id = i; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: "" }
+        DB_VS_RealM_Barcelona().apply { id = i; questionId = m.questionId; answer_A = m.answers?.A ?: ""; answer_B = m.answers?.B ?: ""; answer_C = m.answers?.C ?: ""; answer_D = m.answers?.D ?: ""; question = m.question; right_answer = m.answers?.right ?: ""; isAnswered = m.answered }
+    }
+
+    fun getAnsweredQuestionIds(): Set<String> {
+        return Realm.getDefaultInstance().use { realm ->
+            buildSet {
+                addAll(collectAnsweredQuestionIds(realm, DB_France::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Germany::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Italy::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_England::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Spain::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Super_Cup::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Europa_League::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Europ_Championship::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_Champions_League::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_World_Championship::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_VS_Ronaldo_Messi::class.java))
+                addAll(collectAnsweredQuestionIds(realm, DB_VS_RealM_Barcelona::class.java))
+            }
+        }
+    }
+
+    fun hasAnsweredQuestions(): Boolean {
+        return Realm.getDefaultInstance().use { realm ->
+            hasAnsweredQuestions(realm, DB_France::class.java) ||
+                hasAnsweredQuestions(realm, DB_Germany::class.java) ||
+                hasAnsweredQuestions(realm, DB_Italy::class.java) ||
+                hasAnsweredQuestions(realm, DB_England::class.java) ||
+                hasAnsweredQuestions(realm, DB_Spain::class.java) ||
+                hasAnsweredQuestions(realm, DB_Super_Cup::class.java) ||
+                hasAnsweredQuestions(realm, DB_Europa_League::class.java) ||
+                hasAnsweredQuestions(realm, DB_Europ_Championship::class.java) ||
+                hasAnsweredQuestions(realm, DB_Champions_League::class.java) ||
+                hasAnsweredQuestions(realm, DB_World_Championship::class.java) ||
+                hasAnsweredQuestions(realm, DB_VS_Ronaldo_Messi::class.java) ||
+                hasAnsweredQuestions(realm, DB_VS_RealM_Barcelona::class.java)
+        }
     }
 
     private fun setDefaultAllScores(realm: Realm) {
@@ -118,5 +154,20 @@ class DB_Helper {
                 }
             }
             realm.insertOrUpdate(scores)
+    }
+
+    private fun <T> collectAnsweredQuestionIds(realm: Realm, modelClass: Class<T>): Set<String>
+        where T : RealmModel, T : DB_Base {
+        return realm.where(modelClass)
+            .equalTo("isAnswered", true)
+            .findAll()
+            .mapNotNull { it.questionId?.takeIf(String::isNotBlank) }
+            .toSet()
+    }
+
+    private fun <T : RealmModel> hasAnsweredQuestions(realm: Realm, modelClass: Class<T>): Boolean {
+        return realm.where(modelClass)
+            .equalTo("isAnswered", true)
+            .count() > 0
     }
 }

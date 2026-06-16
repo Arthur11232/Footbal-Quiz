@@ -32,22 +32,24 @@ class RealmGameCatalogLocalDataSource : GameCatalogLocalDataSource {
 
     override fun getTop5Scoreboards(): List<ScoreboardModel> = Realm.getDefaultInstance().use { realm ->
         val scores = realm.where(FQ_Scores::class.java).findFirst() ?: return@use emptyList()
+        val top5 = scores.top5Scores
         listOf(
-            ScoreboardModel(scores.top5Scores.france_score, scores.top5Scores.france_answered, scores.top5_answered, scores.top5),
-            ScoreboardModel(scores.top5Scores.germany_score, scores.top5Scores.germany_answered, scores.top5_answered, scores.top5),
-            ScoreboardModel(scores.top5Scores.italy_score, scores.top5Scores.italy_answered, scores.top5_answered, scores.top5),
-            ScoreboardModel(scores.top5Scores.england_score, scores.top5Scores.england_answered, scores.top5_answered, scores.top5),
-            ScoreboardModel(scores.top5Scores.spain_score, scores.top5Scores.spain_answered, scores.top5_answered, scores.top5)
+            ScoreboardModel(top5?.france_score ?: 40, top5?.france_answered ?: 0, scores.top5_answered, scores.top5),
+            ScoreboardModel(top5?.germany_score ?: 40, top5?.germany_answered ?: 0, scores.top5_answered, scores.top5),
+            ScoreboardModel(top5?.italy_score ?: 40, top5?.italy_answered ?: 0, scores.top5_answered, scores.top5),
+            ScoreboardModel(top5?.england_score ?: 40, top5?.england_answered ?: 0, scores.top5_answered, scores.top5),
+            ScoreboardModel(top5?.spain_score ?: 40, top5?.spain_answered ?: 0, scores.top5_answered, scores.top5)
         )
     }
 
     override fun getUefaScoreboards(): List<ScoreboardModel> = Realm.getDefaultInstance().use { realm ->
         val scores = realm.where(FQ_Scores::class.java).findFirst() ?: return@use emptyList()
+        val ufa = scores.ufaScores
         listOf(
-            ScoreboardModel(scores.ufaScores.superCup_score, scores.ufaScores.superCup_answered, scores.ufa_answered, scores.ufa),
-            ScoreboardModel(scores.ufaScores.europaLeague_score, scores.ufaScores.europaLeague_answered, scores.ufa_answered, scores.ufa),
-            ScoreboardModel(scores.ufaScores.championsLeague_score, scores.ufaScores.championsLeague_answered, scores.ufa_answered, scores.ufa),
-            ScoreboardModel(scores.ufaScores.europaChampionship_score, scores.ufaScores.europaChampionship_answered, scores.ufa_answered, scores.ufa)
+            ScoreboardModel(ufa?.superCup_score ?: 20, ufa?.superCup_answered ?: 0, scores.ufa_answered, scores.ufa),
+            ScoreboardModel(ufa?.europaLeague_score ?: 20, ufa?.europaLeague_answered ?: 0, scores.ufa_answered, scores.ufa),
+            ScoreboardModel(ufa?.championsLeague_score ?: 20, ufa?.championsLeague_answered ?: 0, scores.ufa_answered, scores.ufa),
+            ScoreboardModel(ufa?.europaChampionship_score ?: 10, ufa?.europaChampionship_answered ?: 0, scores.ufa_answered, scores.ufa)
         )
     }
 
@@ -82,73 +84,73 @@ class RealmGameCatalogLocalDataSource : GameCatalogLocalDataSource {
         when (entryKey) {
             "fransia" -> GameLaunchData(
                 questions = realm.where(DB_France::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "France", CategoryType.TOP5)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "France", CategoryType.TOP5, it.questionId)
                 },
                 placeScores = getTop5PlaceScore(realm, entryKey)
             )
             "germania" -> GameLaunchData(
                 questions = realm.where(DB_Germany::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Germany", CategoryType.TOP5)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Germany", CategoryType.TOP5, it.questionId)
                 },
                 placeScores = getTop5PlaceScore(realm, entryKey)
             )
             "italia" -> GameLaunchData(
                 questions = realm.where(DB_Italy::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Italy", CategoryType.TOP5)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Italy", CategoryType.TOP5, it.questionId)
                 },
                 placeScores = getTop5PlaceScore(realm, entryKey)
             )
             "anglia" -> GameLaunchData(
                 questions = realm.where(DB_England::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "England", CategoryType.TOP5)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "England", CategoryType.TOP5, it.questionId)
                 },
                 placeScores = getTop5PlaceScore(realm, entryKey)
             )
             "ispania" -> GameLaunchData(
                 questions = realm.where(DB_Spain::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Spain", CategoryType.TOP5)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Spain", CategoryType.TOP5, it.questionId)
                 },
                 placeScores = getTop5PlaceScore(realm, entryKey)
             )
             "supercup" -> GameLaunchData(
                 questions = realm.where(DB_Super_Cup::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Super Cup", CategoryType.UEFA)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Super Cup", CategoryType.UEFA, it.questionId)
                 },
                 placeScores = getUefaPlaceScore(realm, entryKey)
             )
             "evropaliga" -> GameLaunchData(
                 questions = realm.where(DB_Europa_League::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "European League", CategoryType.UEFA)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "European League", CategoryType.UEFA, it.questionId)
                 },
                 placeScores = getUefaPlaceScore(realm, entryKey)
             )
             "ligachemp" -> GameLaunchData(
                 questions = realm.where(DB_Champions_League::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Champions League", CategoryType.UEFA)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Champions League", CategoryType.UEFA, it.questionId)
                 },
                 placeScores = getUefaPlaceScore(realm, entryKey)
             )
             "kubki" -> GameLaunchData(
                 questions = realm.where(DB_Europ_Championship::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Europe Championship", CategoryType.UEFA)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Europe Championship", CategoryType.UEFA, it.questionId)
                 },
                 placeScores = getUefaPlaceScore(realm, entryKey)
             )
             "kubok_mira" -> GameLaunchData(
                 questions = realm.where(DB_World_Championship::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "World Cup", CategoryType.WORLD_CUP)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "World Cup", CategoryType.WORLD_CUP, it.questionId)
                 },
                 placeScores = getCategoryScore("world")
             )
             "vsRM" -> GameLaunchData(
                 questions = realm.where(DB_VS_Ronaldo_Messi::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Versus R_M", CategoryType.RON_MES)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Versus R_M", CategoryType.RON_MES, it.questionId)
                 },
                 placeScores = getCategoryScore("vsRM")
             )
             "vsRB" -> GameLaunchData(
                 questions = realm.where(DB_VS_RealM_Barcelona::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Versus R_B", CategoryType.REAL_BARCE)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Versus R_B", CategoryType.REAL_BARCE, it.questionId)
                 },
                 placeScores = getCategoryScore("vsRB")
             )
@@ -158,23 +160,25 @@ class RealmGameCatalogLocalDataSource : GameCatalogLocalDataSource {
 
     private fun getTop5PlaceScore(realm: Realm, entryKey: String): GameObjectScores {
         val fq = realm.where(FQ_Scores::class.java).findFirst() ?: return GameObjectScores()
+        val top5 = fq.top5Scores
         return when (entryKey) {
-            "fransia" -> GameObjectScores(fq.top5Scores.france_score, fq.top5Scores.france_answered)
-            "germania" -> GameObjectScores(fq.top5Scores.germany_score, fq.top5Scores.germany_answered)
-            "italia" -> GameObjectScores(fq.top5Scores.italy_score, fq.top5Scores.italy_answered)
-            "anglia" -> GameObjectScores(fq.top5Scores.england_score, fq.top5Scores.england_answered)
-            "ispania" -> GameObjectScores(fq.top5Scores.spain_score, fq.top5Scores.spain_answered)
+            "fransia" -> GameObjectScores(top5?.france_score ?: 40, top5?.france_answered ?: 0)
+            "germania" -> GameObjectScores(top5?.germany_score ?: 40, top5?.germany_answered ?: 0)
+            "italia" -> GameObjectScores(top5?.italy_score ?: 40, top5?.italy_answered ?: 0)
+            "anglia" -> GameObjectScores(top5?.england_score ?: 40, top5?.england_answered ?: 0)
+            "ispania" -> GameObjectScores(top5?.spain_score ?: 40, top5?.spain_answered ?: 0)
             else -> GameObjectScores()
         }
     }
 
     private fun getUefaPlaceScore(realm: Realm, entryKey: String): GameObjectScores {
         val fq = realm.where(FQ_Scores::class.java).findFirst() ?: return GameObjectScores()
+        val ufa = fq.ufaScores
         return when (entryKey) {
-            "supercup" -> GameObjectScores(fq.ufaScores.superCup_score, fq.ufaScores.superCup_answered)
-            "evropaliga" -> GameObjectScores(fq.ufaScores.europaLeague_score, fq.ufaScores.europaLeague_answered)
-            "ligachemp" -> GameObjectScores(fq.ufaScores.championsLeague_score, fq.ufaScores.championsLeague_answered)
-            "kubki" -> GameObjectScores(fq.ufaScores.europaChampionship_score, fq.ufaScores.europaChampionship_answered)
+            "supercup" -> GameObjectScores(ufa?.superCup_score ?: 20, ufa?.superCup_answered ?: 0)
+            "evropaliga" -> GameObjectScores(ufa?.europaLeague_score ?: 20, ufa?.europaLeague_answered ?: 0)
+            "ligachemp" -> GameObjectScores(ufa?.championsLeague_score ?: 20, ufa?.championsLeague_answered ?: 0)
+            "kubki" -> GameObjectScores(ufa?.europaChampionship_score ?: 10, ufa?.europaChampionship_answered ?: 0)
             else -> GameObjectScores()
         }
     }

@@ -26,6 +26,7 @@ class RealmPlayProgressLocalDataSource(
 ) : PlayProgressLocalDataSource {
 
     override fun persistAnswer(
+        questionId: String?,
         questionText: String,
         questionType: String,
         categoryType: CategoryType,
@@ -37,18 +38,18 @@ class RealmPlayProgressLocalDataSource(
                 val scores = transactionRealm.where(FQ_Scores::class.java).findFirst() ?: return@executeTransaction
 
                 when (questionType) {
-                    "France" -> transactionRealm.where(DB_France::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Germany" -> transactionRealm.where(DB_Germany::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Italy" -> transactionRealm.where(DB_Italy::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "England" -> transactionRealm.where(DB_England::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Spain" -> transactionRealm.where(DB_Spain::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Super Cup" -> transactionRealm.where(DB_Super_Cup::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "European League" -> transactionRealm.where(DB_Europa_League::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Champions League" -> transactionRealm.where(DB_Champions_League::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Europe Championship" -> transactionRealm.where(DB_Europ_Championship::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "World Cup" -> transactionRealm.where(DB_World_Championship::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Versus R_M" -> transactionRealm.where(DB_VS_Ronaldo_Messi::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
-                    "Versus R_B" -> transactionRealm.where(DB_VS_RealM_Barcelona::class.java).equalTo("question", questionText).findFirst()?.isAnswered = true
+                    "France" -> findQuestionByIdentity(transactionRealm, DB_France::class.java, questionId, questionText)?.isAnswered = true
+                    "Germany" -> findQuestionByIdentity(transactionRealm, DB_Germany::class.java, questionId, questionText)?.isAnswered = true
+                    "Italy" -> findQuestionByIdentity(transactionRealm, DB_Italy::class.java, questionId, questionText)?.isAnswered = true
+                    "England" -> findQuestionByIdentity(transactionRealm, DB_England::class.java, questionId, questionText)?.isAnswered = true
+                    "Spain" -> findQuestionByIdentity(transactionRealm, DB_Spain::class.java, questionId, questionText)?.isAnswered = true
+                    "Super Cup" -> findQuestionByIdentity(transactionRealm, DB_Super_Cup::class.java, questionId, questionText)?.isAnswered = true
+                    "European League" -> findQuestionByIdentity(transactionRealm, DB_Europa_League::class.java, questionId, questionText)?.isAnswered = true
+                    "Champions League" -> findQuestionByIdentity(transactionRealm, DB_Champions_League::class.java, questionId, questionText)?.isAnswered = true
+                    "Europe Championship" -> findQuestionByIdentity(transactionRealm, DB_Europ_Championship::class.java, questionId, questionText)?.isAnswered = true
+                    "World Cup" -> findQuestionByIdentity(transactionRealm, DB_World_Championship::class.java, questionId, questionText)?.isAnswered = true
+                    "Versus R_M" -> findQuestionByIdentity(transactionRealm, DB_VS_Ronaldo_Messi::class.java, questionId, questionText)?.isAnswered = true
+                    "Versus R_B" -> findQuestionByIdentity(transactionRealm, DB_VS_RealM_Barcelona::class.java, questionId, questionText)?.isAnswered = true
                 }
 
                 updatePlaceScores(scores, questionType, placeScores)
@@ -252,6 +253,20 @@ class RealmPlayProgressLocalDataSource(
             "World Cup" -> realm.where(DB_World_Championship::class.java).findAll().forEach { it.isAnswered = false }
             "Versus R_M" -> realm.where(DB_VS_Ronaldo_Messi::class.java).findAll().forEach { it.isAnswered = false }
             "Versus R_B" -> realm.where(DB_VS_RealM_Barcelona::class.java).findAll().forEach { it.isAnswered = false }
+        }
+    }
+
+    private fun <T> findQuestionByIdentity(
+        realm: Realm,
+        modelClass: Class<T>,
+        questionId: String?,
+        questionText: String
+    ): T? where T : io.realm.RealmModel, T : com.arthuralexandryan.footballquiz.db_app.DB_Base {
+        return if (!questionId.isNullOrBlank()) {
+            realm.where(modelClass).equalTo("questionId", questionId).findFirst()
+                ?: realm.where(modelClass).equalTo("question", questionText).findFirst()
+        } else {
+            realm.where(modelClass).equalTo("question", questionText).findFirst()
         }
     }
 }
