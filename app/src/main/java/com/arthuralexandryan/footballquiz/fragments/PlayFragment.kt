@@ -196,7 +196,10 @@ class PlayFragment : Fragment(), ShowAds {
                     when (effect) {
                         is PlayEffect.AnimateAnswer -> {
                             pendingAnswerResult = effect.isCorrect
-                            shootBallToGoal(isGoal = effect.isCorrect) {}
+                            binding.root.post {
+                                if (_binding == null || !isAdded) return@post
+                                shootBallToGoal(isGoal = effect.isCorrect) {}
+                            }
                             runAnswerTransition()
                         }
                         PlayEffect.ShowInterstitialAd -> {
@@ -383,6 +386,7 @@ class PlayFragment : Fragment(), ShowAds {
             scaleType = ImageView.ScaleType.FIT_CENTER
             x = startX
             y = startY
+            alpha = 0f
             scaleX = 1.05f
             scaleY = 1.05f
             elevation = 12f * density
@@ -444,39 +448,47 @@ class PlayFragment : Fragment(), ShowAds {
         }
 
         val flightPlan = BallFlightAnimationManager.buildPlan(flightSpec, random)
-        val phase1 = BallFlightAnimationManager.createAnimator(flyingBall, flightPlan, flightSpec.interpolator)
-        var phaseOneCancelled = false
-        phase1.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationCancel(animation: Animator) {
-                phaseOneCancelled = true
-            }
+        root.post {
+            if (_binding == null || !isAdded || flyingGoalBall !== flyingBall) return@post
 
-            override fun onAnimationEnd(animation: Animator) {
-                if (phaseOneCancelled || _binding == null) return
-                onGoal()
-                if (isGoal) {
-                    goalPulse.start()
+            flyingBall.x = startX
+            flyingBall.y = startY
+            flyingBall.alpha = 1f
+
+            val phase1 = BallFlightAnimationManager.createAnimator(flyingBall, flightPlan, flightSpec.interpolator)
+            var phaseOneCancelled = false
+            phase1.addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationCancel(animation: Animator) {
+                    phaseOneCancelled = true
                 }
-            }
-        })
 
-        goalAnimator = AnimatorSet().apply {
-            playSequentially(phase1)
-            addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
-                    sourceBall.alpha = 1f
-                    goal.scaleX = 1f
-                    goal.scaleY = 1f
-                    (flyingBall.parent as? ViewGroup)?.removeView(flyingBall)
-                    if (flyingGoalBall === flyingBall) {
-                        flyingGoalBall = null
-                    }
-                    if (goalAnimator === animation) {
-                        goalAnimator = null
+                    if (phaseOneCancelled || _binding == null) return
+                    onGoal()
+                    if (isGoal) {
+                        goalPulse.start()
                     }
                 }
             })
-            start()
+
+            goalAnimator = AnimatorSet().apply {
+                playSequentially(phase1)
+                addListener(object : AnimatorListenerAdapter() {
+                    override fun onAnimationEnd(animation: Animator) {
+                        sourceBall.alpha = 1f
+                        goal.scaleX = 1f
+                        goal.scaleY = 1f
+                        (flyingBall.parent as? ViewGroup)?.removeView(flyingBall)
+                        if (flyingGoalBall === flyingBall) {
+                            flyingGoalBall = null
+                        }
+                        if (goalAnimator === animation) {
+                            goalAnimator = null
+                        }
+                    }
+                })
+                start()
+            }
         }
     }
 
