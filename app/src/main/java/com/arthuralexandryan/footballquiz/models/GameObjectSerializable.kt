@@ -14,5 +14,6 @@ data class GameObjectSerializable(
     val right_answer: String? = null,
     var isAnswered: Boolean = false,
     val type: String? = null,
-    val categoryType: CategoryType? = null
+    val categoryType: CategoryType? = null,
+    val questionId: String? = null
 ) : Parcelable

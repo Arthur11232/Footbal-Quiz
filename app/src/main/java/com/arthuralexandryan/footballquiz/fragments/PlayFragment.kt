@@ -17,21 +17,23 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.animations.BallFlightAnimationManager
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.databinding.ActivityPlayNewBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.interfaces.ResetGame
 import com.arthuralexandryan.footballquiz.interfaces.ShowAds
 import com.arthuralexandryan.footballquiz.models.AdBanner
 import com.arthuralexandryan.footballquiz.models.AdMobPresenter
-import com.arthuralexandryan.footballquiz.models.CloudSyncManager
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
-import com.arthuralexandryan.footballquiz.models.ScoreboardModel
-import com.arthuralexandryan.footballquiz.utils.Prefer
+import com.arthuralexandryan.footballquiz.presentation.play.PlayAnswerOption
+import com.arthuralexandryan.footballquiz.presentation.play.PlayEffect
+import com.arthuralexandryan.footballquiz.presentation.play.PlaySessionArgs
+import com.arthuralexandryan.footballquiz.presentation.play.PlayUiState
+import com.arthuralexandryan.footballquiz.presentation.play.PlayViewModel
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -40,38 +42,30 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
-import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.Random
 
-class PlayFragment : Fragment(), ResetGame, ShowAds {
+class PlayFragment : Fragment(), ShowAds {
 
     private var _binding: ActivityPlayNewBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var questions: List<GameObjectSerializable>
-    private var flagForAnswer: Boolean = false
-    private lateinit var placeScores: GameObjectScores
-    private lateinit var categoryScores: GameObjectScores
-    private lateinit var dbHelper: DB_Helper
-    private var titleText: String? = null
-    private var categoryType: String? = null
-
-    private var answers: MutableList<String> = mutableListOf()
-    private var nextQuestion: Int = 1
+    private val playViewModel: PlayViewModel by viewModel()
+    private var categoryKey: String? = null
     private var answerDelay: Long = 2000
-    private var isResetEnable: Boolean = false
-    private var n: Int = 0
 
     private var adMob: AdBanner? = null
     private var mInterstitialAd: InterstitialAd? = null
     private var mRewardedAd: RewardedAd? = null
-    private var counter: Int = 0
-    private var forceReloadBarrier: Int = 20
     private lateinit var adMobPresenter: AdMobPresenter
     private var goalAnimator: AnimatorSet? = null
     private var flyingGoalBall: ImageView? = null
     private var answerTimer: CountDownTimer? = null
     private val random = Random()
+    private var pendingAnswerResult: Boolean? = null
+    private var selectedAnswerView: View? = null
+    private var pendingRewardResetForce: Boolean = true
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = ActivityPlayNewBinding.inflate(inflater, container, false)
@@ -89,6 +83,10 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             loadInterstitialAd()
             loadRewardedAd()
         }
+
+        observeUiState()
+        observeEffects()
+        initUiActions()
 
         arguments?.let {
             processArguments(it)
@@ -160,193 +158,150 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             })
     }
 
-    private fun processArguments(data: Bundle) {
-        val harcerArr = data.getParcelableArray("harcer") as? Array<GameObjectSerializable>
-        questions = harcerArr?.toList() ?: emptyList()
-        placeScores = data.getParcelable<GameObjectScores>("achokner") ?: GameObjectScores()
-        categoryScores = data.getParcelable<GameObjectScores>("cat_score") ?: GameObjectScores()
-        titleText = data.getString("title")
-        categoryType = data.getString("category")
-
-        if (questions.isNotEmpty()) {
-            dbHelper = DB_Helper(requireActivity(), questions[0].categoryType, questions[0].type)
-            initUI()
-            setViewsValues()
-        }
-    }
-
-    private fun initUI() {
-        binding.forceReset.alpha = 0.2f
-        binding.forceReset.isEnabled = isResetEnable
-        
+    private fun initUiActions() {
         binding.forceReset.setOnClickListener {
             if (!Constant.ADS_ENABLED) {
-                dbHelper.resetPlace(placeScores.place_score_answer, this, true)
-                isResetEnable = false
+                playViewModel.resetSession(isForce = true)
             } else if (mRewardedAd != null) {
+                pendingRewardResetForce = true
                 mRewardedAd?.show(requireActivity()) { rewardItem ->
                     adMobPresenter.onShow(rewardItem.amount)
                 }
             } else {
-                dbHelper.resetPlace(placeScores.place_score_answer, this, true)
-                isResetEnable = false
+                playViewModel.resetSession(isForce = true)
                 loadRewardedAd()
             }
         }
-        
+
         binding.forceExit.setOnClickListener {
             handleBackNavigation()
         }
     }
 
-    private fun setViewsValues() {
-        binding.scoreboard.placeNameScores.text = titleText
-        binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
-        binding.scoreboard.placeAnswer.text = placeScores.placeScoreAnswerText
-        binding.scoreboard.categoryAnswers.text = categoryScores.placeScoreAnswerText
-        binding.scoreboard.categoryScore.text = categoryScores.category_score
-        
-        nextQuestion = placeScores.place_score
-        forceReloadBarrier = placeScores.place_score / 2
-        newGame()
-    }
-
-    private fun newGame() {
-        binding.answerIsCorrect.visibility = View.GONE
-        flagForAnswer = true
-
-        if (placeScores.place_score <= 0) {
-            showFinishPage()
-            return
-        }
-
-        val unansweredIndexes = questions.indices.filter { !questions[it].isAnswered }
-        if (unansweredIndexes.isEmpty()) {
-            placeScores.place_score = 0
-            binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
-            updateDBScores()
-            showFinishPage()
-            return
-        }
-
-        if (placeScores.place_score > unansweredIndexes.size) {
-            placeScores.place_score = unansweredIndexes.size
-            binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
-            updateDBScores()
-        }
-
-        answers = mutableListOf()
-        val savedStateKey = getSavedQuestionStateKey()
-        val savedState = Prefer.getIntPreference(requireContext(), savedStateKey, -1)
-        Prefer.setIntPreference(requireContext(), savedStateKey, -1)
-
-        n = if (savedState in questions.indices && !questions[savedState].isAnswered) {
-            savedState
-        } else {
-            unansweredIndexes[random.nextInt(unansweredIndexes.size)]
-        }
-
-        setAnswers()
-    }
-
-    @SuppressLint("SetTextI18n")
-    private fun setAnswers() {
-        answers.clear()
-        questions[n].answer_A?.let { answers.add(it) }
-        questions[n].answer_B?.let { answers.add(it) }
-        questions[n].answer_C?.let { answers.add(it) }
-        questions[n].answer_D?.let { answers.add(it) }
-        
-        binding.question.text = questions[n].question
-        binding.questionNumber.text = "" + nextQuestion--
-        
-        setupAnswerView(binding.answerA.root, "1")
-        setupAnswerView(binding.answerB.root, "2")
-        setupAnswerView(binding.answerC.root, "3")
-        setupAnswerView(binding.answerD.root, "4")
-    }
-
-    private fun setupAnswerView(answerView: View, number: String) {
-        val answerText = answerView.findViewById<TextView>(R.id.answer)
-        answerView.findViewById<TextView>(R.id.answer_number).text = number
-        
-        if (answers.isNotEmpty()) {
-            val x = random.nextInt(answers.size)
-            answerText.text = answers[x]
-            answers.removeAt(x)
-        }
-
-        answerView.setOnClickListener {
-            if (flagForAnswer) {
-                flagForAnswer = false
-                answerView.findViewById<ImageView>(R.id.answer_image).setImageResource(R.color.fq_colorWaitingAnswer)
-                setTimerForChecking(answerView, answerText)
-            }
-        }
-    }
-
-    private fun setTimerForChecking(answerView: View, answer: TextView) {
-        answerTimer?.cancel()
-        answerTimer = object : CountDownTimer(answerDelay, 1600) {
-            override fun onTick(millisUntilFinished: Long) {
-                if (_binding == null) return
-                if (millisUntilFinished >= 1600) {
-                    checkingAnswer(answer)
-                    counter++
+    private fun observeUiState() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
+                playViewModel.uiState.collect { state ->
+                    if (_binding == null) return@collect
+                    render(state)
                 }
             }
+        }
+    }
+
+    private fun observeEffects() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
+                playViewModel.effects.collect { effect ->
+                    when (effect) {
+                        is PlayEffect.AnimateAnswer -> {
+                            pendingAnswerResult = effect.isCorrect
+                            binding.root.post {
+                                if (_binding == null || !isAdded) return@post
+                                shootBallToGoal(isGoal = effect.isCorrect) {}
+                            }
+                            runAnswerTransition()
+                        }
+                        PlayEffect.ShowInterstitialAd -> {
+                            if (Constant.ADS_ENABLED && mInterstitialAd != null) {
+                                mInterstitialAd?.show(requireActivity())
+                            } else if (Constant.ADS_ENABLED) {
+                                loadInterstitialAd()
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun processArguments(data: Bundle) {
+        val questionArray = data.getParcelableArray("harcer") as? Array<GameObjectSerializable>
+        val questions = questionArray?.toList().orEmpty()
+        val placeScores = data.getParcelable<GameObjectScores>("achokner") ?: GameObjectScores()
+        val categoryScores = data.getParcelable<GameObjectScores>("cat_score") ?: GameObjectScores()
+        val titleText = data.getString("title").orEmpty()
+        categoryKey = data.getString("category")
+
+        if (questions.isNotEmpty()) {
+            playViewModel.initialize(
+                PlaySessionArgs(
+                    questions = questions,
+                    placeScores = placeScores,
+                    categoryScores = categoryScores,
+                    titleText = titleText,
+                    categoryKey = categoryKey.orEmpty()
+                )
+            )
+        }
+    }
+
+    private fun render(state: PlayUiState) {
+        binding.scoreboard.placeNameScores.text = state.titleText
+        binding.scoreboard.placeQuestion.text = state.placeQuestionText
+        binding.scoreboard.placeAnswer.text = state.placeAnswerText
+        binding.scoreboard.categoryAnswers.text = state.categoryAnswersText
+        binding.scoreboard.categoryScore.text = state.categoryScoreText
+        binding.question.text = state.questionText
+        binding.questionNumber.text = state.questionNumberText
+        binding.forceReset.alpha = state.forceResetAlpha
+        binding.forceReset.isEnabled = state.isResetEnabled
+
+        bindAnswerView(binding.answerA.root, state.answerOptions.getOrNull(0))
+        bindAnswerView(binding.answerB.root, state.answerOptions.getOrNull(1))
+        bindAnswerView(binding.answerC.root, state.answerOptions.getOrNull(2))
+        bindAnswerView(binding.answerD.root, state.answerOptions.getOrNull(3))
+
+        if (state.answerFeedbackResId != null && state.isAnswerCorrect != null) {
+            binding.answerIsCorrect.setText(state.answerFeedbackResId)
+            binding.answerIsCorrect.setBackgroundResource(
+                if (state.isAnswerCorrect) R.drawable.toast_shape_true else R.drawable.toast_shape_false
+            )
+            binding.answerIsCorrect.visibility = View.VISIBLE
+        } else {
+            binding.answerIsCorrect.visibility = View.GONE
+        }
+
+        if (state.showFinishScreen) {
+            showFinishPage(state.totalGoalText)
+        } else {
+            binding.llHarcer.visibility = View.VISIBLE
+            binding.finishGame.root.visibility = View.GONE
+            binding.lNumber.visibility = View.VISIBLE
+        }
+    }
+
+    private fun bindAnswerView(answerView: View, option: PlayAnswerOption?) {
+        val answerText = answerView.findViewById<TextView>(R.id.answer)
+        answerView.findViewById<TextView>(R.id.answer_number).text = option?.id.orEmpty()
+        answerText.text = option?.text.orEmpty()
+        answerView.isEnabled = option != null && playViewModel.uiState.value.isAnswerEnabled
+
+        answerView.setOnClickListener {
+            if (option != null && playViewModel.uiState.value.isAnswerEnabled) {
+                selectedAnswerView?.findViewById<ImageView>(R.id.answer_image)?.setImageResource(R.color.fq_colorWhite)
+                selectedAnswerView = answerView
+                answerView.findViewById<ImageView>(R.id.answer_image).setImageResource(R.color.fq_colorWaitingAnswer)
+                playViewModel.onAnswerSelected(option.text)
+            }
+        }
+    }
+
+    private fun runAnswerTransition() {
+        answerTimer?.cancel()
+        answerTimer = object : CountDownTimer(answerDelay, 1600) {
+            override fun onTick(millisUntilFinished: Long) = Unit
 
             override fun onFinish() {
                 answerTimer = null
                 if (_binding == null || !isAdded) return
 
-                answerView.findViewById<ImageView>(R.id.answer_image).setImageResource(R.color.fq_colorWhite)
-                updateDBScores()
-                newGame()
-                if (forceReloadBarrier > placeScores.place_score) {
-                    isResetEnable = true
-                    binding.forceReset.isEnabled = true
-                    binding.forceReset.alpha = 1f
-                }
-                if (counter == 5) {
-                    counter = 0
-                    if (Constant.ADS_ENABLED && mInterstitialAd != null) {
-                        mInterstitialAd?.show(requireActivity())
-                    } else if (Constant.ADS_ENABLED) {
-                        loadInterstitialAd()
-                    }
-                }
+                selectedAnswerView?.findViewById<ImageView>(R.id.answer_image)?.setImageResource(R.color.fq_colorWhite)
+                selectedAnswerView = null
+                pendingAnswerResult = null
+                playViewModel.onAnswerTransitionFinished()
             }
         }.start()
-    }
-
-    private fun checkingAnswer(answer: TextView) {
-        if (check(answer.text.toString())) {
-            binding.answerIsCorrect.setText(R.string.answer_correct)
-            binding.answerIsCorrect.setBackgroundResource(R.drawable.toast_shape_true)
-            binding.answerIsCorrect.visibility = View.VISIBLE
-            categoryScores.place_score_answer = categoryScores.place_score_answer + 1
-            placeScores.place_score_answer = placeScores.place_score_answer + 1
-            dbHelper.setCategoryScores()
-            setAnswered()
-            placeScores.place_score = placeScores.place_score - 1
-            shootBallToGoal {
-                if (_binding == null) return@shootBallToGoal
-                binding.scoreboard.categoryAnswers.text = categoryScores.placeScoreAnswerText
-                binding.scoreboard.placeAnswer.text = placeScores.placeScoreAnswerText
-                binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
-            }
-        } else {
-            binding.answerIsCorrect.setText(R.string.answer_incorect)
-            binding.answerIsCorrect.setBackgroundResource(R.drawable.toast_shape_false)
-            binding.answerIsCorrect.visibility = View.VISIBLE
-            setAnswered()
-            placeScores.place_score = placeScores.place_score - 1
-            shootBallToGoal(isGoal = false) {
-                if (_binding == null) return@shootBallToGoal
-                binding.scoreboard.placeQuestion.text = placeScores.placeScoreText
-            }
-        }
     }
 
     /**
@@ -431,6 +386,7 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
             scaleType = ImageView.ScaleType.FIT_CENTER
             x = startX
             y = startY
+            alpha = 0f
             scaleX = 1.05f
             scaleY = 1.05f
             elevation = 12f * density
@@ -492,39 +448,47 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         }
 
         val flightPlan = BallFlightAnimationManager.buildPlan(flightSpec, random)
-        val phase1 = BallFlightAnimationManager.createAnimator(flyingBall, flightPlan, flightSpec.interpolator)
-        var phaseOneCancelled = false
-        phase1.addListener(object : AnimatorListenerAdapter() {
-            override fun onAnimationCancel(animation: Animator) {
-                phaseOneCancelled = true
-            }
+        root.post {
+            if (_binding == null || !isAdded || flyingGoalBall !== flyingBall) return@post
 
-            override fun onAnimationEnd(animation: Animator) {
-                if (phaseOneCancelled || _binding == null) return
-                onGoal()
-                if (isGoal) {
-                    goalPulse.start()
+            flyingBall.x = startX
+            flyingBall.y = startY
+            flyingBall.alpha = 1f
+
+            val phase1 = BallFlightAnimationManager.createAnimator(flyingBall, flightPlan, flightSpec.interpolator)
+            var phaseOneCancelled = false
+            phase1.addListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationCancel(animation: Animator) {
+                    phaseOneCancelled = true
                 }
-            }
-        })
 
-        goalAnimator = AnimatorSet().apply {
-            playSequentially(phase1)
-            addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
-                    sourceBall.alpha = 1f
-                    goal.scaleX = 1f
-                    goal.scaleY = 1f
-                    (flyingBall.parent as? ViewGroup)?.removeView(flyingBall)
-                    if (flyingGoalBall === flyingBall) {
-                        flyingGoalBall = null
-                    }
-                    if (goalAnimator === animation) {
-                        goalAnimator = null
+                    if (phaseOneCancelled || _binding == null) return
+                    onGoal()
+                    if (isGoal) {
+                        goalPulse.start()
                     }
                 }
             })
-            start()
+
+            goalAnimator = AnimatorSet().apply {
+                playSequentially(phase1)
+                addListener(object : AnimatorListenerAdapter() {
+                    override fun onAnimationEnd(animation: Animator) {
+                        sourceBall.alpha = 1f
+                        goal.scaleX = 1f
+                        goal.scaleY = 1f
+                        (flyingBall.parent as? ViewGroup)?.removeView(flyingBall)
+                        if (flyingGoalBall === flyingBall) {
+                            flyingGoalBall = null
+                        }
+                        if (goalAnimator === animation) {
+                            goalAnimator = null
+                        }
+                    }
+                })
+                start()
+            }
         }
     }
 
@@ -548,74 +512,35 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
         return min + random.nextFloat() * (max - min)
     }
 
-    private fun updateDBScores() {
-        dbHelper.setPlaceScores(placeScores.place_score_answer, placeScores.place_score)
-    }
-
-    private fun setAnswered() {
-        questions[n].isAnswered = true
-        dbHelper.setAnswered(questions[n].question ?: "")
-    }
-
-    private fun check(answer: String): Boolean {
-        return questions[n].right_answer.equals(answer, ignoreCase = true)
-    }
-
-    private fun showFinishPage() {
+    private fun showFinishPage(totalScoreText: String) {
         binding.llHarcer.visibility = View.GONE
         binding.finishGame.root.visibility = View.VISIBLE
         binding.lNumber.visibility = View.INVISIBLE
         
         val totalGoal = binding.finishGame.root.findViewById<TextView>(R.id.total_goal)
-        totalGoal.text = DB_Helper().getTotalScoreText()
+        totalGoal.text = totalScoreText
         
         binding.finishGame.root.findViewById<ImageView>(R.id.exit_game).setOnClickListener {
             handleBackNavigation()
         }
         
         binding.finishGame.root.findViewById<ImageView>(R.id.reload_game).setOnClickListener {
-            isResetEnable = false
             if (!Constant.ADS_ENABLED) {
-                dbHelper.resetPlace(placeScores.place_score_answer, this, false)
+                playViewModel.resetSession(isForce = false)
             } else if (mRewardedAd != null) {
+                pendingRewardResetForce = false
                 mRewardedAd?.show(requireActivity()) { rewardItem ->
                     adMobPresenter.onShow(rewardItem.amount)
                 }
             } else {
-                dbHelper.resetPlace(placeScores.place_score_answer, this, false)
+                playViewModel.resetSession(isForce = false)
                 loadRewardedAd()
             }
         }
     }
 
-    @SuppressLint("SetTextI18n")
-    override fun reset(placeScore: ScoreboardModel, isForce: Boolean) {
-        questions.forEach { it.isAnswered = false }
-        placeScores.place_score = placeScore.placeScore
-        placeScores.place_score_answer = placeScore.placeAnswered
-        categoryScores.place_score_answer = placeScore.categoryAnswered
-        
-        binding.scoreboard.placeQuestion.text = "" + placeScore.placeScore
-        binding.scoreboard.placeAnswer.text = "" + placeScore.placeAnswered
-        binding.scoreboard.categoryAnswers.text = "" + placeScore.categoryAnswered
-        binding.scoreboard.categoryScore.text = "" + placeScore.categoryScore
-        binding.questionNumber.text = "" + placeScore.placeScore
-        
-        if (!isForce) {
-            binding.llHarcer.visibility = View.VISIBLE
-            binding.finishGame.root.visibility = View.GONE
-            binding.lNumber.visibility = View.VISIBLE
-        }
-        
-        isResetEnable = false
-        binding.forceReset.alpha = 0.2f
-        binding.forceReset.isEnabled = false
-        nextQuestion = placeScores.place_score
-        newGame()
-    }
-
     private fun handleBackNavigation() {
-        if (flagForAnswer) {
+        if (playViewModel.uiState.value.isAnswerEnabled) {
             findNavController().navigateUp()
         }
     }
@@ -625,10 +550,8 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
     }
 
     override fun onStop() {
-        if (this::questions.isInitialized && questions.isNotEmpty() && n in questions.indices && placeScores.place_score > 0) {
-            Prefer.setIntPreference(requireContext(), getSavedQuestionStateKey(), n)
-        }
-        syncProgressIfSignedIn()
+        playViewModel.persistCurrentQuestionOnStop()
+        playViewModel.syncProgressIfSignedIn()
         super.onStop()
     }
 
@@ -645,22 +568,6 @@ class PlayFragment : Fragment(), ResetGame, ShowAds {
 
     override fun show(amount: Int) {
         if (_binding == null || !isAdded) return
-        dbHelper.resetPlace(placeScores.place_score_answer, this, isResetEnable)
-    }
-
-    private fun syncProgressIfSignedIn() {
-        val user = FirebaseAuth.getInstance().currentUser ?: return
-        if (!isAdded) return
-
-        CloudSyncManager.uploadLocalStats(requireContext(), user) { _, _ -> }
-    }
-
-    private fun getSavedQuestionStateKey(): String {
-        val placeType = if (this::questions.isInitialized) {
-            questions.firstOrNull()?.type
-        } else {
-            null
-        }
-        return "save_question_state_${categoryType ?: "unknown"}_${placeType ?: "unknown"}"
+        playViewModel.resetSession(isForce = pendingRewardResetForce)
     }
 }

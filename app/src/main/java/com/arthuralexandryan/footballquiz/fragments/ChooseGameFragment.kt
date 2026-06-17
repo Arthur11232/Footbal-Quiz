@@ -10,17 +10,17 @@ import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_UEFA_SCORE
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_WORLD_SCORE
-import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameBinding
+import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.databinding.ActivityChooseGameNewBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import org.koin.android.ext.android.inject
 
 class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     private var _binding: ActivityChooseGameNewBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var db: DB_Helper
+    private val gameCatalogRepository: GameCatalogRepository by inject()
     private var score: Int = 0
 
     override fun onCreateView(
@@ -34,8 +34,6 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        db = DB_Helper()
-
         binding.onBack.setOnClickListener { findNavController().navigateUp() }
 
         binding.btnTop.setOnClickListener(this)
@@ -59,7 +57,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
     }
 
     private fun updateScores() {
-        score = db.top5AnsweredScores
+        score = gameCatalogRepository.getTop5Answered()
         if (score < FOR_UEFA_SCORE) {
             binding.txtScoreUefa.text = getString(R.string.text_score_uefa, "$score")
             binding.txtScoreUefa.visibility = View.VISIBLE
@@ -67,7 +65,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
             binding.txtScoreUefa.visibility = View.GONE
         }
 
-        val totalScore = db.top5AnsweredScores + db.getUFAAnsweredScores()
+        val totalScore = gameCatalogRepository.getTop5AndUefaAnswered()
         if (totalScore < FOR_WORLD_SCORE) {
             binding.txtScoreWorld.text = getString(R.string.text_score_world, "$totalScore")
             binding.txtScoreWorld.visibility = View.VISIBLE
@@ -78,8 +76,8 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     override fun onClick(v: View) {
         var isOpen = true
-        val currentScore = db.top5AnsweredScores
-        val totalScore = db.top5AnsweredScores + db.getUFAAnsweredScores()
+        val currentScore = gameCatalogRepository.getTop5Answered()
+        val totalScore = gameCatalogRepository.getTop5AndUefaAnswered()
 
         val args = Bundle()
         var destinationId = R.id.action_choose_to_category

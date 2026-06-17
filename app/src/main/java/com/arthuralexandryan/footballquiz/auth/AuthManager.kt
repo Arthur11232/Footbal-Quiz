@@ -9,15 +9,16 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
-class AuthManager(private val context: Context) {
+class AuthManager(
+    private val context: Context,
+    private val auth: FirebaseAuth
+) {
 
     data class AuthResult(
         val success: Boolean,
         val user: FirebaseUser? = null,
         val errorMessage: String? = null
     )
-
-    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
     fun getSignInClient(): GoogleSignInClient {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)

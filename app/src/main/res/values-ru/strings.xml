@@ -10,6 +10,7 @@
     <string name="user">Пользователь</string>
     <string name="login_with_google">Войти через Google</string>
     <string name="loading">Загрузка...</string>
+    <string name="language_sync_not_ready">Обновление вопросов для этого языка пока не готово. Попробуйте позже.</string>
 
     <!-- Profile -->
     <string name="profile_title">Профиль</string>

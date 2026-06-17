@@ -10,6 +10,7 @@
     <string name="user">Օգտատեր</string>
     <string name="login_with_google">Մուտք Google-ով</string>
     <string name="loading">Բեռնում...</string>
+    <string name="language_sync_not_ready">Այս լեզվի հարցերի թարմացումը դեռ պատրաստ չէ։ Խնդրում ենք փորձել ավելի ուշ։</string>
 
     <!-- Profile -->
     <string name="profile_title">Պրոֆիլ</string>

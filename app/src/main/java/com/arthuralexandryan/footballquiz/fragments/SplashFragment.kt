@@ -2,23 +2,17 @@ package com.arthuralexandryan.footballquiz.fragments
 
 import android.animation.Animator
 import android.animation.AnimatorSet
-import android.annotation.SuppressLint
 import android.graphics.Matrix
 import android.graphics.RectF
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.arthuralexandryan.footballquiz.animations.BallFlightAnimationManager
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.arthuralexandryan.footballquiz.FQ_Application
 import com.arthuralexandryan.footballquiz.R
-import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.databinding.SplashBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import java.util.Random
 
@@ -26,7 +20,6 @@ class SplashFragment : Fragment() {
 
     private var _binding: SplashBinding? = null
     private val binding get() = _binding!!
-    private lateinit var dbHelper: DB_Helper
     private var splashAnimator: AnimatorSet? = null
     private val splashImageWidth = 320f
     private val splashImageHeight = 480f
@@ -74,14 +67,6 @@ class SplashFragment : Fragment() {
         )
     }
 
-    private fun initDBs() {
-        if (Prefer.getBooleanPreference(requireContext(), INIT_DB, true)) {
-            Prefer.setBooleanPreference(requireContext(), INIT_DB, false)
-            Log.e("DB", "Initialization DB")
-            FQ_Application.getInstance().setDB(dbHelper, true)
-        }
-    }
-
     private fun startSplashAnimation() {
         val goalBounds = mapGoalBoundsToScreen() ?: run {
             if (isAdded) {
@@ -119,9 +104,7 @@ class SplashFragment : Fragment() {
             flightSpec.interpolator
         ).apply {
             addListener(object : Animator.AnimatorListener {
-                override fun onAnimationStart(animation: Animator) {
-                    initDBs()
-                }
+                override fun onAnimationStart(animation: Animator) = Unit
 
                 override fun onAnimationEnd(animation: Animator) {
                     if (isAdded && findNavController().currentDestination?.id == R.id.splashFragment) {
@@ -165,7 +148,6 @@ class SplashFragment : Fragment() {
         )
     }
 
-    @SuppressLint("SetTextI18n")
     private fun initView() {
         val versionName = try {
             val pInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
@@ -174,7 +156,6 @@ class SplashFragment : Fragment() {
             "1.0"
         }
         binding.textVersion.text = "${getString(R.string.version)} $versionName"
-        dbHelper = DB_Helper()
     }
 
     override fun onDestroyView() {

@@ -4,9 +4,9 @@
 
 ## 📌 Обзор проекта
 - **Название:** Football Quiz
-- **Версия:** 1.0.0
-- **Основной стек:** Kotlin, Android SDK (target API 35/Android 15), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines.
-- **Цель:** Полная модернизация приложения, переход на SAA, внедрение Google Sign-In и динамическая загрузка контента из Firestore.
+- **Версия:** 2.0.2
+- **Основной стек:** Kotlin, Android SDK (`compileSdk 36`, `targetSdk 36`), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines, Koin.
+- **Цель:** Переход от legacy feature-driven UI-логики к сильной MVVM-архитектуре с `ViewModel`, `Repository`, `UseCase`, DI через Koin и заделом на будущую многомодульность.
 
 ---
 
@@ -35,14 +35,62 @@
 - **Очистка:** Основной flow очищен перед релизом, но legacy/debug файлы (`TestActivity`, `TouchActivity`, `TestFragment`, `TouchFragment`, `VSFragment`, `FQ_Timer`) оставлены в проекте, чтобы не терять старый код до отдельного решения.
 - **Offline:** Реализована логика офлайн-игры (загрузка из Firestore -> сохранение в Realm).
 - **Debug Logging:** Добавлены точечные логи с тегом `FQ_Log` для сценариев `New Game`, загрузки вопросов из Firestore и cloud sync/recovery, чтобы упростить анализ `logcat`.
+- **Koin DI (Phase 1):** Подключён Koin и проверен на debug/release сборках. В контейнер вынесены `FirebaseAuth`, `FirebaseFirestore`, `AuthManager`, `FirestoreQuestionService`, `UserStatsService` и базовый `DB_Helper` для ещё не мигрированных legacy-path. Основные экраны (`StartPage`, `Profile`, `Splash`, `ChooseGame`, `CategoryPage`, `Play`, `VS`) и versus score presenters переведены на DI вместо прямого ручного создания зависимостей.
+- **MVVM Start Feature (Phase 2 / Step 1):** Созданы `data/domain/presentation` слои для первой feature-миграции. Добавлены `AuthRepository`, `QuestionsRepository`, `SettingsRepository`, `SyncRepository`, use cases для sign-in / localization sync / cloud sync и первый `StartPageViewModel`. `StartPageFragment` переведён на `UiState + UiEffect` flow: логика sign-in, загрузки вопросов и решений по cloud sync больше не живёт напрямую в UI-слое.
+- **Selection & Scoreboard Data Layer (Phase 2 / Step 4):** Добавлены `GameCatalogLocalDataSource` + `RealmGameCatalogLocalDataSource` и `GameCatalogRepository` для unified scoreboard/launch данных. `SliderAdapter`, `ChooseGameFragment`, `CategoryPageFragment`, `VSFragment` и legacy versus presenters больше не читают Realm/`DB_Helper` напрямую для selection/scoreboard сценариев: UI получает category scores, scoreboard модели и `GameLaunchData` через repository-границу.
 
 ---
 
 ## 🚀 Текущий план модернизации (Backlog)
 
-1.  **Архитектура: ViewModel & Flow**
-    - **Задача:** Отказ от `GlobalScope` и переход на архитектурные компоненты (Coroutines, Flow, ViewModel).
-    - **Статус:** ⏳ В планах.
+### Phase A. MVVM Foundation
+- [x] Подключить Koin и перевести первый слой сервисов/SDK на DI.
+- [x] Ввести слои `data`, `domain`, `presentation`.
+- [x] Создать отдельные Koin-модули: `firebaseModule`, `repositoryModule`, `useCaseModule`, `viewModelModule`.
+- [x] Выделить `dataSourceModule` после распила `DB_Helper` и Firebase-обёрток на более узкие local/remote sources.
+- [ ] Зафиксировать единый стиль `UiState / UiAction / UiEffect` для feature-экранов.
+
+### Phase B. Repository Layer
+- [~] Ввести интерфейсы репозиториев:
+  - `AuthRepository`
+  - `GameCatalogRepository`
+  - `QuestionsRepository`
+  - `SyncRepository`
+  - `UserStatsRepository`
+  - `GameProgressRepository`
+- [~] Спрятать Firebase/Realm/Preferences за repository contracts.
+- [~] Постепенно выводить legacy-логику из `DB_Helper` в более узкие local data sources.
+
+### Phase C. First MVVM Migration
+- [x] Перевести `StartPageFragment` на `StartPageViewModel` как первую опорную feature.
+- [x] Перевести `ProfileFragment` на `ProfileViewModel`.
+- [x] Отдельно выделить sync/use-case flow из legacy `CloudSyncManager` в `SyncRepository` / use case слой.
+
+### Phase D. Gameplay MVVM
+- [x] Перевести `PlayFragment` на `PlaySessionViewModel`.
+- [ ] Отделить game session state от ad/UI callbacks.
+- [~] Перевести `CategoryPage` и versus-flow на presentation слой с state-моделями.
+
+### Phase E. Многомодульность (подготовка)
+- [ ] Подготовить проект к разбиению на Gradle-модули без резкого переписывания.
+- [ ] После стабилизации MVVM выделить возможные будущие модули:
+  - `:core:common`
+  - `:core:ui`
+  - `:core:firebase`
+  - `:core:database`
+  - `:feature:start`
+  - `:feature:profile`
+  - `:feature:play`
+  - `:feature:versus`
+  - `:feature:legal`
+- [ ] Следить, чтобы новые repository/viewmodel пакеты уже проектировались с учётом будущего переезда в отдельные модули.
+
+### Ближайший execution plan
+1. Добить вынос последних legacy bootstrap/reset сценариев от `DB_Helper`, чтобы helper остался только question-loading adapter без stat/snapshot ответственности.
+2. Перевести `ChooseGame` / `CategoryPage` / `Versus` на полноценный presentation-state слой, а не только repository bridge.
+3. Нормализовать unified style для `UiState / UiEffect / UiAction` и обновить `ViewModel` DSL под новые импорты Koin.
+4. Подготовить multi-module-friendly границы `core-data`, `core-domain`, `feature-start`, `feature-profile`, `feature-play`, `feature-versus`.
+5. После стабилизации selection/gameplay flows планировать разрезание `:app` на Gradle-модули.
 
 ---
 
@@ -96,13 +144,17 @@
     - **Результат:** Введён единый helper для системных панелей, чтобы `status bar` и `navigation bar` на основных экранах совпадали с фоном приложения. `PlayFragment` и `SplashFragment` используют sampled colors из background drawable; остальные ключевые экраны настроены через общий helper.
     - **Статус:** ✅ Завершено.
 
+13. **Architecture Modernization: Koin DI Phase 1**
+    - **Результат:** В проект добавлен Koin; основные сервисы и SDK вынесены в DI-контейнер, ручное создание зависимостей в ключевых фрагментах и presenters сокращено, `debug` и `prodRelease` сборки успешно проверены после интеграции.
+    - **Статус:** ✅ Завершено.
+
 ---
 
 ## 📝 Заметки
 - **Localization:** Для корректной смены языка без перезагрузки системы используется `attachBaseContext` в `BaseActivity`.
 - **Smart Sync:** Если `db_lang` в `SharedPreferences` не совпадает с выбранным языком, приложение автоматически скачивает новые вопросы при входе в игру ("New Game" или "Continue").
 - **Firestore Questions:** Коллекция `questions` используется как публичный источник контента для локального кеширования в Realm. Для корректной работы гостевого режима правила Firestore должны разрешать чтение вопросов без авторизации.
-- **Cloud Progress:** Пользовательская статистика хранится отдельно и должна оставаться приватной (`users/{uid}` только для владельца). Логика сравнения прогресса вынесена в `CloudSyncManager`.
+- **Cloud Progress:** Пользовательская статистика хранится отдельно и должна оставаться приватной (`users/{uid}` только для владельца). Логика сравнения прогресса, upload и restore уже вынесена в `SyncRepository` и start/profile use cases; legacy `CloudSyncManager` удалён.
 - **Manual Sync UX:** Если cloud-progress нежелателен, пользователь может отменить авто-восстановление один раз и продолжить играть локально. Позже в `ProfileFragment` доступны compact icon-actions: restore из cloud и overwrite cloud текущим прогрессом устройства.
 - **Recovery Flow:** Восстановление прогресса больше не должно оставлять пользователя в состоянии "только New Game" после переустановки. После restore автоматически включается `Continue`.
 - **Debugging:** Для анализа проблем приложения использовать `adb logcat -s FQ_Log`. Это отсекает системный шум MIUI/Google Play Services и показывает только ключевой flow приложения.
@@ -111,11 +163,25 @@
 - **Ads Policy for First Release:** На первый релиз реклама не показывается. AdMob SDK, banner placeholders и interstitial/rewarded код сохранены, но все пути защищены `Constant.ADS_ENABLED = false`; `MobileAds.initialize()` не вызывается, ad requests не отправляются, баннеры скрыты, rewarded reset/reload заменены бесплатным действием. Если реклама будет включаться позже, нужно обновить consent/privacy wording и Play Console declarations до релиза.
 - **Legal Status:** Актуальным источником Privacy Policy / Terms & Conditions считаются внешние документы в `docs/privacy_policy.md` и `docs/terms_and_conditions.md`, на которые ссылается `StartPageFragment` через `privacy_policy_url` и `terms_and_conditions_url`. Встроенные тексты `fq_privacy_policy` / `fq_terms_conditions` в `app/src/main/res/values*` синхронизированы с текущим поведением приложения: guest mode, Google Sign-In, Firestore cloud sync, ads disabled в `1.0.0`, локальное хранение custom profile photo и in-app delete account из `ProfileFragment`.
 - **PlayFragment Release Notes:** `newGame()` больше не использует бесконечный `while(true)`, а выбирает из списка unanswered indexes. `save_question_state` больше не общий ключ, а scoped key по категории и place type. `CountDownTimer`, `goalAnimator` и temporary flying ball очищаются в `onDestroyView()`.
-- **Realm Lifecycle:** `DB_Helper.setAnswered()` и `DB_Helper.setCategoryScores()` теперь закрывают Realm в `finally`; это важно, потому что методы вызываются на каждом ответе.
+- **Realm Lifecycle:** gameplay/category write-path больше не живут в `DB_Helper`. Методы `setAnswered()`, `setPlaceScores()`, `setCategoryScores()` и `deletePlaceScores()` удалены как dead legacy-path после выноса игрового state в `PlayProgressLocalDataSource` и repository-слой.
 - **Question Audit JSON:** После локального анализа `questions_audit.json` пустой `categoryType` для `Europa League` устранён. Повторы формулировок вопроса с разными вариантами ответов не считаются ошибкой автоматически и требуют отдельной редакторской проверки.
 - **Firestore Questions Updater:** Для обновления production-вопросов использовать `python3 tools/update_firestore_questions.py update --service-account tools/service-account.local.json --language-order en,ru,hy --dry-run`, затем только после явного подтверждения `--commit`. Инструмент не удаляет коллекцию, а перезаписывает numbered docs `questions/0..1937`; `tools/service-account.local.json` и admin SDK ключи игнорируются git-ом.
 - **Firestore Question Shape:** Текущая структура Firestore для ответов использует lower-case ключи `answers.a`, `answers.b`, `answers.c`, `answers.d`, `answers.right`. Updater пишет именно в этом формате, чтобы не ломать существующее чтение вопросов.
 - **Release Verification:** После восстановления dormant Ads-кода `./gradlew :app:clean :app:assembleDebug` проходит успешно. Перед финальным релизным commit/push нужно заново прогнать `./gradlew :app:lintRelease :app:bundleRelease` в strict lint mode; сформированный локальный `app-release.aab` будет unsigned, пока не добавлен upload/release keystore и signing config.
+- **Koin Verification:** После интеграции Koin успешно проходят `./gradlew :app:compileDevDebugKotlin`, `./gradlew :app:bundleProdRelease` и `./gradlew :app:assembleProdRelease`. На телефоне приложение запускается без fatal crash после qualifier-fix для параметризованного `DB_Helper`.
+- **MVVM Verification:** Первый MVVM-срез для `StartPage` и второй чекпоинт для `Profile` успешно проходят `./gradlew :app:compileDevDebugKotlin` и `./gradlew clean :app:bundleProdRelease`. Текущий bridge-подход подтверждён рабочим: `Repository`, `UseCase` и `ViewModel` слои уже обслуживают sign-in, localization sync, start-level cloud sync и profile-level account/progress flows без поломки release build.
+- **Profile MVVM Checkpoint:** `ProfileFragment` переведён на state/effect flow через `ProfileViewModel`; добавлены `UserStatsRepository` и `GameProgressRepository`, которые инкапсулируют удаление cloud stats, restore/upload sync, локальный progress snapshot, profile photo storage и очистку локальных user data. Фрагмент больше не orchestrates Firebase/DB напрямую и готов к дальнейшему выносу в feature-layer.
+- **Local Data Source Checkpoint:** Введён первый `data/source/local` слой: `GameStateLocalDataSource` + `RealmGameStateLocalDataSource`. `GameProgressRepository` и `SyncRepository` больше не зависят от `DB_Helper` напрямую для progress/sync сценариев, а читают/восстанавливают `Realm` state через узкий интерфейс. Это первый реальный шаг к разрезанию `DB_Helper` и будущему `core-data` модулю.
+- **Play Session Checkpoint:** `PlayFragment` больше не хранит у себя игровой session engine. Добавлены `PlaySessionRepository`, `PlayProgressLocalDataSource`, `PlayViewModel`, `PlayUiState` и `PlayEffect`; выбор следующего вопроса, сохранение/восстановление `save_question_state`, answer evaluation, finish-state и interstitial cadence теперь живут вне UI. Во фрагменте остались binding, ad orchestration и goal animation; gameplay write/reset path уже вынесены из `DB_Helper`.
+- **Play Local Persistence:** Для play-flow введён отдельный Realm-backed `PlayProgressLocalDataSource`, который инкапсулирует mark-as-answered, place score updates и category answered increments. Это продолжает декомпозицию `DB_Helper`: игровой state уже уходит в local/domain слой, а helper остаётся только там, где ещё не мигрированы reset/scoreboard сценарии.
+- **Game Catalog Checkpoint:** Для selection/scoreboard flow введены `GameCatalogLocalDataSource` и `GameCatalogRepository`. Они инкапсулируют category totals, scoreboard модели и launch payload (`GameLaunchData`) для `top5`, `uefa`, `world`, `vsRM`, `vsRB`. `SliderAdapter` больше не строит payload из Realm, а отдаёт `entryKey`; `CategoryPageFragment` собирает navigation bundle через repository. `ChooseGameFragment`, `VSFragment`, `VSRM_ScoreboardPresenter` и `VSRB_ScoreboardPresenter` также переведены на repository-backed чтение scoreboard/progress данных.
+- **Play Reset Checkpoint:** `PlayFragment` больше не использует `DB_Helper.resetPlace()` и не держит `ResetGame` callback-path. Reset/reload сценарии вынесены в `PlaySessionRepository` и `PlayProgressLocalDataSource`: place reset, Realm question flags reset и scoreboard state rebuild теперь идут через data/repository слой. Rewarded reset также больше не смешивает `force reset` и `finish reload` через неявный state — тип reset передаётся явно.
+- **Gameplay Mutation Cleanup:** После play/session migration удалены последние мёртвые gameplay/category mutation-методы из `DB_Helper`: `setAnswered()`, `setPlaceScores()`, `setCategoryScores()`, `deletePlaceScores()`. Это закрепляет новый контракт: игровые write-path идут через local data sources и repositories.
+- **Legacy Sync Cleanup:** Удалён неиспользуемый `CloudSyncManager`, а его обязанности окончательно закрыты `SyncRepository`, `GameStateLocalDataSource` и start/profile use cases. Заодно удалён пустой `FQ_Application.setDB()` bridge и no-op инициализация из `SplashFragment`, которая больше не участвует в question bootstrap.
+- **Game State Cleanup:** `StartPage` reset-score path переведён с `DB_Helper.setDefaultAllScores()` на `GameStateLocalDataSource.resetScoresToDefault()`. После этого из `DB_Helper` удалены legacy scoreboard/snapshot/reset helper-методы (`top5Scores`, `getUFAScores()`, `worldScores`, `ronMessiScoreBoard`, `realBarcScoreBoard`, `restoreStats()`, `deleteAll()`), а их ответственность окончательно живёт в `RealmGameStateLocalDataSource`, `RealmGameCatalogLocalDataSource` и профильных repositories. По сути `DB_Helper` теперь сведён к question bootstrap-слою.
+- **Release Build Note:** При первой release-проверке после Profile MVVM всплыл stale generated artifact `app/build/generated/updated_navigation_xml/prodRelease/navigation/nav_graph 2.xml`; проблема не была кодовой и исчезла после `clean`. Для следующих архитектурных миграций release-валидацию лучше сразу запускать как `./gradlew clean :app:bundleProdRelease`.
+- **MVVM Direction:** Следующий безопасный шаг — не переписывать всё сразу, а продолжать bridge-архитектуру: после `StartPage`, `Profile`, `Play`, game catalog bridge, play reset migration, gameplay mutation cleanup и game-state cleanup добивать question bootstrap boundary и готовить вынос `DB_Helper` в ещё более узкий data adapter. Это снижает риск регрессий и одновременно подготавливает код к многомодульности.
+- **Multi-Module Direction:** Пока проект ещё single-module (`settings.gradle` включает только `:app`), но новые пакеты и DI-модули должны проектироваться так, будто они позже переедут в `core/*` и `feature/*` модули. Особенно важно избегать тесной связки UI с `DB_Helper` и Firebase SDK напрямую.
 - **UEFA Currentness Review:** Начат поэтапный аудит актуальности вопросов. Для `Europa League` и `Champions League` внесены безопасные правки в `questions_audit.json`; во втором проходе после победы Tottenham `2024/25` обновлён ответ `Juventus, Tottenham` в вопросе among listed UEFA Cup / Europa League winners; детали зафиксированы в `app/questions_uefa_currentness_review.md`.
 - **World Championship Review:** Начат следующий этап аудита. Исправлены вопросы про большее число голов на ЧМ среди предложенных игроков (`Lionel Messi`), most appearances (`Lionel Messi`) и прохождение группы действующим чемпионом в XXI веке (`Brazil and France`); детали зафиксированы в `app/questions_world_currentness_review.md`.
 - **France Currentness Review:** Исправлены актуальные рекорды сборной Франции в `en/hy` по FFF: крупнейшая победа (`Gibraltar`), most caps (`Hugo Lloris`), top scorer (`Olivier Giroud`) и most matches as coach (`Didier Deschamps`); детали зафиксированы в `app/questions_france_currentness_review.md`.
@@ -129,4 +195,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 22.04.2026 (system bars helper on main screens, legal status re-checked, external and embedded Privacy/Terms synchronized with current app behavior)*
+*Последнее обновление: 18.05.2026 (Koin DI phase 1 зафиксирован; MVVM checkpoints для StartPage, Profile и Play внедрены; selection/scoreboard вынесены в GameCatalog repository; play reset/write path вынесен из PlayFragment; dead gameplay/category write methods удалены из DB_Helper; legacy CloudSyncManager и пустой startup bridge удалены; default score reset и stat/snapshot/reset helper-слои вынесены в GameState/GameCatalog local data sources; progress/sync/play/catalog/reset слои подтверждены debug/release сборками)*

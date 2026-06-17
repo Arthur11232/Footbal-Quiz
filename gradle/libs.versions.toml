@@ -8,6 +8,7 @@ firebaseCrashlyticsGradle = "3.0.6"
 googleServices = "4.4.4"
 gradle = "9.1.0"
 kotlinGradlePlugin = "2.3.20"
+koinBom = "4.2.0"
 kotlinxCoroutinesAndroid = "1.10.2"
 lifecycle = "2.10.0"
 material = "1.13.0"
@@ -44,5 +45,7 @@ realm-gradle-plugin = { group = "io.realm", name = "realm-gradle-plugin", versio
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koinBom" }
+koin-android = { module = "io.insert-koin:koin-android" }
 
 [plugins]

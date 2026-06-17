@@ -21,6 +21,7 @@ class AllQuestions {
 }
 
 class QuestionModel {
+    var questionId = ""
     var question = ""
     var translation = ""
     var answered = false

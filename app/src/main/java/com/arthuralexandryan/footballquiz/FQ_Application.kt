@@ -2,10 +2,13 @@ package com.arthuralexandryan.footballquiz
 
 import android.app.Application
 import com.arthuralexandryan.footballquiz.constants.Constant
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
+import com.arthuralexandryan.footballquiz.db_app.DB_Migration
+import com.arthuralexandryan.footballquiz.di.footballQuizModules
 import com.google.android.gms.ads.MobileAds
 import io.realm.Realm
 import io.realm.RealmConfiguration
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class FQ_Application : Application() {
 
@@ -17,6 +20,12 @@ class FQ_Application : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
+
+        startKoin {
+            androidContext(this@FQ_Application)
+            modules(footballQuizModules)
+        }
+
         Realm.init(this)
 
         if (Constant.ADS_ENABLED) {
@@ -26,14 +35,10 @@ class FQ_Application : Application() {
         val realmConfiguration = RealmConfiguration.Builder()
             .name("FootballQuiz")
             .allowWritesOnUiThread(true)
-            .schemaVersion(1)
+            .schemaVersion(DB_Migration.CURRENT_SCHEMA_VERSION)
+            .migration(DB_Migration())
             .build()
         Realm.getInstance(realmConfiguration)
         Realm.setDefaultConfiguration(realmConfiguration)
-    }
-
-    fun setDB(dbHelper: DB_Helper, isNew: Boolean) {
-        // Migration: Firestore is now the source of truth, 
-        // so legacy synchronous local json loading is deprecated.
     }
 }

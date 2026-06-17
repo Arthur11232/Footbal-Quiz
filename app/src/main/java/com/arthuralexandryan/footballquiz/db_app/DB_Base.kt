@@ -2,6 +2,7 @@ package com.arthuralexandryan.footballquiz.db_app
 
 interface DB_Base {
     var id: Int
+    var questionId: String?
     var question: String?
     var answer_A: String?
     var answer_B: String?

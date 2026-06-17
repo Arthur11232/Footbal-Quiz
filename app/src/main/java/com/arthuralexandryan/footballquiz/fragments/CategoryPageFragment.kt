@@ -6,27 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavOptions
-import androidx.navigation.Navigator
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.adapters.SliderAdapter
+import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.databinding.ActivityCategoryPageBinding
 import com.arthuralexandryan.footballquiz.databinding.LayoutVersusBinding
 import com.arthuralexandryan.footballquiz.databinding.ScoreboardBinding
-import com.arthuralexandryan.footballquiz.db_app.DB_Helper
-import com.arthuralexandryan.footballquiz.db_app.Score.FQ_Scores
-import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_Ronaldo_Messi
 import com.arthuralexandryan.footballquiz.interfaces.ChooseGame
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
-import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.models.TarberakArrays
 import com.arthuralexandryan.footballquiz.models.primeryColorModel.ColorModel
-import com.arthuralexandryan.footballquiz.utils.CategoryType
-import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
-import io.realm.Realm
+import org.koin.android.ext.android.inject
 
 class CategoryPageFragment : Fragment(), ChooseGame {
 
@@ -36,7 +29,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     private var _versusBinding: LayoutVersusBinding? = null
     private val versusBinding get() = _versusBinding!!
 
-    private lateinit var dbHelper: DB_Helper
+    private val gameCatalogRepository: GameCatalogRepository by inject()
     private lateinit var arrays: TarberakArrays
 
     private var slideImage: IntArray = intArrayOf()
@@ -49,7 +42,6 @@ class CategoryPageFragment : Fragment(), ChooseGame {
 
     private var categoryType: String? = null
     private var categoryName: String = ""
-    private var itemScoreText: GameObjectScores? = null
 
     private var top5Titles: List<String> = emptyList()
     private var ufaTitles: List<String> = emptyList()
@@ -75,7 +67,6 @@ class CategoryPageFragment : Fragment(), ChooseGame {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dbHelper = DB_Helper()
         arrays = TarberakArrays
 
         initTitleList()
@@ -103,13 +94,13 @@ class CategoryPageFragment : Fragment(), ChooseGame {
 
     private fun refreshScores() {
         if (categoryType.equals("vsRM", ignoreCase = true)) {
-            scoreBoardScores = listOf(dbHelper.ronMessiScoreBoard)
+            scoreBoardScores = listOf(gameCatalogRepository.getRonMessiScoreboard())
             _versusBinding?.let { updateScoreboard(0, it.scoreboard) }
         } else {
             scoreBoardScores = when (categoryType) {
-                "top5" -> dbHelper.top5Scores
-                "uefa"  -> dbHelper.getUFAScores()
-                "world" -> dbHelper.worldScores
+                "top5" -> gameCatalogRepository.getTop5Scoreboards()
+                "uefa"  -> gameCatalogRepository.getUefaScoreboards()
+                "world" -> gameCatalogRepository.getWorldScoreboards()
                 else    -> emptyList()
             }
             _binding?.let { inflateScores(tab) }
@@ -142,7 +133,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
                 slideArrowsLeft = arrays.leftPlaceTop5
                 slideArrowsRight = arrays.rightPlaceTop5
                 binding.next.setBackgroundResource(slideArrowsRight[0])
-                scoreBoardScores = dbHelper.top5Scores
+                scoreBoardScores = gameCatalogRepository.getTop5Scoreboards()
                 initSlider(true)
                 darkPrimaryColorList = TarberakArrays.getPrimaryColorTop5()
             }
@@ -155,7 +146,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
                 slideArrowsLeft = arrays.leftPlaceUFA
                 slideArrowsRight = arrays.rightPlaceUFA
                 binding.next.setBackgroundResource(slideArrowsRight[0])
-                scoreBoardScores = dbHelper.getUFAScores()
+                scoreBoardScores = gameCatalogRepository.getUefaScoreboards()
                 initSlider(false)
                 darkPrimaryColorList = TarberakArrays.getPrimaryColorUEFA()
             }
@@ -165,7 +156,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
                 slideBg = arrays.world_bg
                 slideText = arrays.world_text
                 titles = worldTitles
-                scoreBoardScores = dbHelper.worldScores
+                scoreBoardScores = gameCatalogRepository.getWorldScoreboards()
                 initSlider(false)
                 darkPrimaryColorList = listOf(TarberakArrays.getPrimaryColorWorld())
             }
@@ -179,14 +170,14 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     private fun setupVersusMode() {
         _versusBinding ?: return
         categoryName = getString(R.string.versus)
-        scoreBoardScores = listOf(dbHelper.ronMessiScoreBoard)
+        scoreBoardScores = listOf(gameCatalogRepository.getRonMessiScoreboard())
 
         versusBinding.vs1.vsItem.setImageResource(arrays.rm_image[0])
         versusBinding.vs2.vsItem.setImageResource(arrays.rm_image[1])
 
         versusBinding.onBack.setOnClickListener { findNavController().navigateUp() }
 
-        val startVersus = View.OnClickListener { onChoose(getVersusQuestions(), getItemScore("vsRM"), 0) }
+        val startVersus = View.OnClickListener { onChoose("vsRM", 0) }
         versusBinding.vs1.root.setOnClickListener(startVersus)
         versusBinding.vs2.root.setOnClickListener(startVersus)
 
@@ -231,7 +222,6 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     }
 
     private fun updateWorkArea() {
-        itemScoreText = getItemScore(categoryType ?: return)
         inflateScores(0)
     }
 
@@ -266,50 +256,14 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     }
 
     private fun getItemScore(gameScore: String): GameObjectScores {
-        val score = GameObjectScores()
-        val realm = Realm.getDefaultInstance()
-        val fq = realm.where(FQ_Scores::class.java).findFirst() ?: return score
-
-        when (gameScore) {
-            "top5" -> {
-                score.place_score = fq.top5
-                score.place_score_answer = fq.top5_answered
-                score.category_score = Constants.Top5
-            }
-            "uefa" -> {
-                score.place_score = fq.ufa
-                score.place_score_answer = fq.ufa_answered
-                score.category_score = Constants.UFA
-            }
-            "world" -> {
-                score.place_score = fq.world
-                score.place_score_answer = fq.world_answered
-                score.category_score = Constants.World
-            }
-            "vsRM" -> {
-                score.place_score = fq.vsRM
-                score.place_score_answer = fq.vsRM_answered
-                score.category_score = Constants.VSRM
-            }
-        }
-        return score
+        return gameCatalogRepository.getCategoryScore(gameScore)
     }
 
-    private fun getVersusQuestions(): List<GameObjectSerializable> {
-        val results = Realm.getDefaultInstance().where(DB_VS_Ronaldo_Messi::class.java).findAll()
-        return results.map { item ->
-            GameObjectSerializable(
-                item.question, item.answer_A, item.answer_B,
-                item.answer_C, item.answer_D, item.right_answer,
-                item.isAnswered, "Versus R_M", CategoryType.RON_MES
-            )
-        }
-    }
-
-    override fun onChoose(question: List<GameObjectSerializable>, placeScores: GameObjectScores, position: Int) {
+    override fun onChoose(entryKey: String, position: Int) {
+        val launchData = gameCatalogRepository.getLaunchData(entryKey)
         val args = Bundle().apply {
-            putParcelableArray("harcer", question.toTypedArray())
-            putParcelable("achokner", placeScores)
+            putParcelableArray("harcer", launchData.questions.toTypedArray())
+            putParcelable("achokner", launchData.placeScores)
             putParcelable("cat_score", getItemScore(categoryType ?: return))
             putString("title", categoryName)
             putString("category", categoryType)
