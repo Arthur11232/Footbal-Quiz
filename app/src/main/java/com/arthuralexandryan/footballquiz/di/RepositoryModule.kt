@@ -4,6 +4,7 @@ import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.data.repository.ProgressionRepository
 import com.arthuralexandryan.footballquiz.data.repository.QuestionsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
@@ -12,6 +13,7 @@ import com.arthuralexandryan.footballquiz.data.repository.impl.AuthRepositoryImp
 import com.arthuralexandryan.footballquiz.data.repository.impl.GameCatalogRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.GameProgressRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.PlaySessionRepositoryImpl
+import com.arthuralexandryan.footballquiz.data.repository.impl.ProgressionRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.QuestionsRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.SettingsRepositoryImpl
 import com.arthuralexandryan.footballquiz.data.repository.impl.SyncRepositoryImpl
@@ -24,8 +26,9 @@ val repositoryModule = module {
     single<AuthRepository> { AuthRepositoryImpl(get()) }
     single<GameCatalogRepository> { GameCatalogRepositoryImpl(get(), get()) }
     single<QuestionsRepository> { QuestionsRepositoryImpl(get(), get(), get()) }
-    single<SyncRepository> { SyncRepositoryImpl(androidContext(), get(), get()) }
+    single<SyncRepository> { SyncRepositoryImpl(androidContext(), get(), get(), get()) }
     single<UserStatsRepository> { UserStatsRepositoryImpl(get()) }
     single<GameProgressRepository> { GameProgressRepositoryImpl(androidContext(), get(), get()) }
+    single<ProgressionRepository> { ProgressionRepositoryImpl(androidContext(), get()) }
     single<PlaySessionRepository> { PlaySessionRepositoryImpl(androidContext(), get(), get(), get()) }
 }

@@ -92,6 +92,19 @@
         <argument
             android:name="category"
             app:argType="string" />
+        <action
+            android:id="@+id/action_play_to_achievement_certificate"
+            app:destination="@id/achievementCertificateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/achievementCertificateFragment"
+        android:name="com.arthuralexandryan.footballquiz.fragments.AchievementCertificateFragment"
+        android:label="AchievementCertificateFragment"
+        tools:layout="@layout/fragment_achievement_certificate">
+        <argument
+            android:name="certificatePayload"
+            app:argType="com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload" />
     </fragment>
 
     <fragment

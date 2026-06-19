@@ -11,4 +11,5 @@ object Constants {
     var UserPhotoKey: String = "user_photo_path"
     var UserStatsLastSyncKeyPrefix: String = "user_stats_last_sync_"
     var UserStatsRestorePromptDismissedKeyPrefix: String = "user_stats_restore_prompt_dismissed_"
+    var ProgressionStageAchievedAtKeyPrefix: String = "progression_stage_achieved_at_"
 }

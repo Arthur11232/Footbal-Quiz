@@ -202,6 +202,9 @@ class PlayFragment : Fragment(), ShowAds {
                             }
                             runAnswerTransition()
                         }
+                        is PlayEffect.ShowAchievementCertificate -> {
+                            navigateToAchievementCertificate(effect.payload)
+                        }
                         PlayEffect.ShowInterstitialAd -> {
                             if (Constant.ADS_ENABLED && mInterstitialAd != null) {
                                 mInterstitialAd?.show(requireActivity())
@@ -213,6 +216,18 @@ class PlayFragment : Fragment(), ShowAds {
                 }
             }
         }
+    }
+
+    private fun navigateToAchievementCertificate(
+        payload: com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
+    ) {
+        val args = Bundle().apply {
+            putParcelable("certificatePayload", payload)
+        }
+        findNavController().navigate(
+            R.id.action_play_to_achievement_certificate,
+            args
+        )
     }
 
     private fun processArguments(data: Bundle) {

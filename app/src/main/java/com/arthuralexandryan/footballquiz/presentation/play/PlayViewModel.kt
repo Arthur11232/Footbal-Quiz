@@ -5,9 +5,13 @@ import androidx.lifecycle.viewModelScope
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
+import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
+import com.arthuralexandryan.footballquiz.presentation.progression.FreshlyCompletedStageUiModel
+import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
 import com.arthuralexandryan.footballquiz.utils.CategoryType
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,7 +25,8 @@ import kotlin.random.Random
 
 class PlayViewModel(
     private val playSessionRepository: PlaySessionRepository,
-    private val authRepository: AuthRepository
+    private val authRepository: AuthRepository,
+    private val refreshProgressionUseCase: RefreshProgressionUseCase
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -41,6 +46,7 @@ class PlayViewModel(
     private var currentQuestionIndex: Int = -1
     private var answersSinceInterstitial: Int = 0
     private var initialized = false
+    private var pendingAchievementCertificate: AchievementCertificatePayload? = null
 
     fun initialize(args: PlaySessionArgs) {
         if (initialized) return
@@ -82,6 +88,10 @@ class PlayViewModel(
             placeScores = placeScores.copy(),
             isCorrect = isCorrect
         )
+        val progressionSnapshot = refreshProgressionUseCase()
+        pendingAchievementCertificate = buildAchievementCertificatePayload(
+            ProgressionUiModelMapper.buildFreshlyCompletedStageUiModels(progressionSnapshot)
+        )
 
         val resetEnabled = forceReloadBarrier > placeScores.place_score
         _uiState.update {
@@ -106,7 +116,16 @@ class PlayViewModel(
 
     fun onAnswerTransitionFinished() {
         val shouldShowInterstitial = answersSinceInterstitial == 5
-        if (shouldShowInterstitial) {
+        val achievementCertificate = pendingAchievementCertificate
+        pendingAchievementCertificate = null
+        if (achievementCertificate != null) {
+            viewModelScope.launch {
+                _effects.emit(PlayEffect.ShowAchievementCertificate(achievementCertificate))
+            }
+            if (shouldShowInterstitial) {
+                answersSinceInterstitial = 0
+            }
+        } else if (shouldShowInterstitial) {
             answersSinceInterstitial = 0
             viewModelScope.launch {
                 _effects.emit(PlayEffect.ShowInterstitialAd)
@@ -236,5 +255,40 @@ class PlayViewModel(
                 isAnswerCorrect = null
             )
         }
+    }
+
+    private fun buildAchievementCertificatePayload(
+        stages: List<FreshlyCompletedStageUiModel>
+    ): AchievementCertificatePayload? {
+        val primaryStage = stages.firstOrNull() ?: return null
+        val user = authRepository.getCurrentUser()
+        val recipientName = user?.displayName
+            ?.takeIf { it.isNotBlank() }
+            ?: user?.email
+                ?.substringBefore("@")
+                ?.takeIf { it.isNotBlank() }
+            ?: "Guest"
+        val issuedAtMillis = primaryStage.achievedAtMillis
+        val certificateId = buildCertificateId(
+            stageKey = primaryStage.stageId.value,
+            issuedAtMillis = issuedAtMillis
+        )
+
+        return AchievementCertificatePayload(
+            primaryStageTitleResId = primaryStage.titleResId,
+            additionalStageTitleResIds = stages.drop(1).map { it.titleResId },
+            recipientName = recipientName,
+            issuedAtMillis = issuedAtMillis,
+            certificateId = certificateId
+        )
+    }
+
+    private fun buildCertificateId(stageKey: String, issuedAtMillis: Long): String {
+        val normalizedStageKey = stageKey
+            .replace("_", "-")
+            .uppercase()
+            .take(18)
+        val timeSuffix = issuedAtMillis.toString().takeLast(6)
+        return "FQ-$normalizedStageKey-$timeSuffix"
     }
 }

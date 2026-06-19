@@ -8,6 +8,9 @@ import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
+import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
+import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
+import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -23,7 +26,8 @@ class ProfileViewModel(
     private val authRepository: AuthRepository,
     private val gameProgressRepository: GameProgressRepository,
     private val syncRepository: SyncRepository,
-    private val userStatsRepository: UserStatsRepository
+    private val userStatsRepository: UserStatsRepository,
+    private val refreshProgressionUseCase: RefreshProgressionUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ProfileUiState())
@@ -33,8 +37,13 @@ class ProfileViewModel(
     val effects: SharedFlow<ProfileEffect> = _effects.asSharedFlow()
 
     fun loadProfile() {
+        val progressionSnapshot = refreshProgressionUseCase()
         val user = authRepository.getCurrentUser()
         val snapshot = gameProgressRepository.getProgressSnapshot()
+        val completedStages = ProgressionUiModelMapper.buildCompletedStageUiModels(
+            snapshot = progressionSnapshot,
+            profile = snapshot
+        )
         val userId = user?.uid ?: "guest"
         val localPhotoPath = gameProgressRepository.getProfilePhotoPath(userId)
 
@@ -51,7 +60,10 @@ class ProfileViewModel(
                 top5ProgressText = progressText(snapshot.top5Answered, snapshot.top5Total),
                 uefaProgressText = progressText(snapshot.uefaAnswered, snapshot.uefaTotal),
                 worldProgressText = progressText(snapshot.worldAnswered, snapshot.worldTotal),
-                versusProgressText = progressText(snapshot.versusAnswered, snapshot.versusTotal)
+                versusProgressText = progressText(snapshot.versusAnswered, snapshot.versusTotal),
+                completedStages = completedStages,
+                completedStagesCount = completedStages.size,
+                totalStagesCount = ProgressionStageId.entries.size
             )
         }
     }
@@ -149,6 +161,7 @@ class ProfileViewModel(
     fun onRestoreCloudConfirmed(cloudStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO) {
         val userId = authRepository.getCurrentUser()?.uid ?: return
         syncRepository.restoreCloudStats(userId, cloudStats)
+        refreshProgressionUseCase()
         loadProfile()
         viewModelScope.launch {
             _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_progress_restored))

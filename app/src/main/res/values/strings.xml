@@ -67,6 +67,39 @@
     <string name="profile_edit_photo">Edit Photo</string>
     <string name="profile_guest">Guest</string>
     <string name="profile_not_signed_in">Not signed in</string>
+    <string name="progression_completed_stages">Completed Stages</string>
+    <string name="progression_completed_stages_summary">%1$d/%2$d</string>
+    <string name="progression_no_completed_stages">Finish stages to see them here.</string>
+    <string name="progression_new_stage_completed">Stage completed: %1$s</string>
+    <string name="progression_new_stages_completed">Stages completed: %1$s</string>
+    <string name="progression_stage_top5_france">Top 5: France</string>
+    <string name="progression_stage_top5_germany">Top 5: Germany</string>
+    <string name="progression_stage_top5_italy">Top 5: Italy</string>
+    <string name="progression_stage_top5_england">Top 5: England</string>
+    <string name="progression_stage_top5_spain">Top 5: Spain</string>
+    <string name="progression_stage_top5_complete">Top 5 Complete</string>
+    <string name="progression_stage_uefa_super_cup">UEFA: Super Cup</string>
+    <string name="progression_stage_uefa_europa_league">UEFA: Europa League</string>
+    <string name="progression_stage_uefa_champions_league">UEFA: Champions League</string>
+    <string name="progression_stage_uefa_european_championship">UEFA: European Championship</string>
+    <string name="progression_stage_uefa_complete">UEFA Complete</string>
+    <string name="progression_stage_world_complete">World Complete</string>
+    <string name="progression_stage_versus_vsrm">Versus: Ronaldo vs Messi</string>
+    <string name="progression_stage_versus_vsrb">Versus: Real Madrid vs Barcelona</string>
+    <string name="progression_stage_versus_complete">Versus Complete</string>
+    <string name="progression_stage_app_complete">Football Quiz Complete</string>
+    <string name="certificate_headline">Congratulations!</string>
+    <string name="certificate_subheadline">A new Football Quiz achievement has been unlocked.</string>
+    <string name="certificate_title">Achievement Certificate</string>
+    <string name="certificate_awarded_to">Awarded to</string>
+    <string name="certificate_award_text">For successfully completing this stage in Football Quiz</string>
+    <string name="certificate_additional_stages">+%1$d more stages completed</string>
+    <string name="certificate_issued_on">Issued on</string>
+    <string name="certificate_id_label">Certificate ID</string>
+    <string name="certificate_signature_label">Signed by</string>
+    <string name="certificate_signature_name">Artur Aleksandryan</string>
+    <string name="certificate_signature_role">Creator, Football Quiz</string>
+    <string name="certificate_continue_button">Continue Quiz</string>
 
     // FRANSIA
 

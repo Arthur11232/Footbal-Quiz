@@ -17,6 +17,7 @@ import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileEffect
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileUiState
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileViewModel
+import com.arthuralexandryan.footballquiz.presentation.progression.CompletedStageUiModel
 import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.bumptech.glide.Glide
@@ -151,6 +152,27 @@ class ProfileFragment : Fragment() {
         binding.tvUefaProgress.text = state.uefaProgressText
         binding.tvWorldProgress.text = state.worldProgressText
         binding.tvVersusProgress.text = state.versusProgressText
+        binding.tvCompletedStagesSummary.text = getString(
+            R.string.progression_completed_stages_summary,
+            state.completedStagesCount,
+            state.totalStagesCount
+        )
+        binding.tvCompletedStagesEmpty.visibility = if (state.completedStages.isEmpty()) View.VISIBLE else View.GONE
+        renderCompletedStages(state.completedStages)
+    }
+
+    private fun renderCompletedStages(completedStages: List<CompletedStageUiModel>) {
+        binding.completedStagesContainer.removeAllViews()
+        completedStages.forEach { item ->
+            val itemView = layoutInflater.inflate(
+                R.layout.item_profile_completed_stage,
+                binding.completedStagesContainer,
+                false
+            )
+            itemView.findViewById<android.widget.TextView>(R.id.tvCompletedStageTitle).setText(item.titleResId)
+            itemView.findViewById<android.widget.TextView>(R.id.tvCompletedStageProgress).text = item.progressText
+            binding.completedStagesContainer.addView(itemView)
+        }
     }
 
     private fun showRestoreDialog(cloudStats: UserStatsDTO) {

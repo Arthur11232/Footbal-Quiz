@@ -1,5 +1,7 @@
 package com.arthuralexandryan.footballquiz.presentation.profile
 
+import com.arthuralexandryan.footballquiz.presentation.progression.CompletedStageUiModel
+
 data class ProfileUiState(
     val isLoading: Boolean = false,
     val userName: String = "",
@@ -12,5 +14,8 @@ data class ProfileUiState(
     val top5ProgressText: String = "0/0",
     val uefaProgressText: String = "0/0",
     val worldProgressText: String = "0/0",
-    val versusProgressText: String = "0/0"
+    val versusProgressText: String = "0/0",
+    val completedStages: List<CompletedStageUiModel> = emptyList(),
+    val completedStagesCount: Int = 0,
+    val totalStagesCount: Int = 0
 )

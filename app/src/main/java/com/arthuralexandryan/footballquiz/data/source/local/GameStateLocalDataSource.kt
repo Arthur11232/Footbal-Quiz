@@ -5,6 +5,17 @@ import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.google.firebase.auth.FirebaseUser
 
 data class LocalProgressSnapshot(
+    val franceAnswered: Int,
+    val germanyAnswered: Int,
+    val italyAnswered: Int,
+    val englandAnswered: Int,
+    val spainAnswered: Int,
+    val superCupAnswered: Int,
+    val europaLeagueAnswered: Int,
+    val championsLeagueAnswered: Int,
+    val europeanChampionshipAnswered: Int,
+    val vsrmAnswered: Int,
+    val vsrbAnswered: Int,
     val top5Answered: Int,
     val uefaAnswered: Int,
     val worldAnswered: Int,

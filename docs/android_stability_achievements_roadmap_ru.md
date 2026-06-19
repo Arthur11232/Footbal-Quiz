@@ -11,7 +11,7 @@
 
 Связанные документы:
 - [implementation_plan_android_stability_to_certificates_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/implementation_plan_android_stability_to_certificates_ru.md)
-- [task_phase1_android_stability_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase1_android_stability_ru.md)
+  - [task_phase1_android_stability_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase1_android_stability_ru.md)
 - [task_phase2_progression_foundation_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase2_progression_foundation_ru.md)
 - [task_phase3_notifications_foundation_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase3_notifications_foundation_ru.md)
 - [task_phase4_achievement_foundation_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase4_achievement_foundation_ru.md)

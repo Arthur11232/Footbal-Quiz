@@ -34,13 +34,35 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
     override fun getProgressSnapshot(): LocalProgressSnapshot {
         Realm.getDefaultInstance().use { realm ->
             val scores = ensureScores(realm)
+            val franceAnswered = scores.top5Scores?.france_answered ?: 0
+            val germanyAnswered = scores.top5Scores?.germany_answered ?: 0
+            val italyAnswered = scores.top5Scores?.italy_answered ?: 0
+            val englandAnswered = scores.top5Scores?.england_answered ?: 0
+            val spainAnswered = scores.top5Scores?.spain_answered ?: 0
+            val superCupAnswered = scores.ufaScores?.superCup_answered ?: 0
+            val europaLeagueAnswered = scores.ufaScores?.europaLeague_answered ?: 0
+            val championsLeagueAnswered = scores.ufaScores?.championsLeague_answered ?: 0
+            val europeanChampionshipAnswered = scores.ufaScores?.europaChampionship_answered ?: 0
+            val vsrmAnswered = scores.vsRM_answered
+            val vsrbAnswered = scores.vsRB_answered
             val top5Answered = scores.top5_answered
             val uefaAnswered = scores.ufa_answered
             val worldAnswered = scores.world_answered
-            val versusAnswered = scores.vsRM_answered + scores.vsRB_answered
+            val versusAnswered = vsrmAnswered + vsrbAnswered
             val totalScore = top5Answered + uefaAnswered + worldAnswered + versusAnswered
 
             return LocalProgressSnapshot(
+                franceAnswered = franceAnswered,
+                germanyAnswered = germanyAnswered,
+                italyAnswered = italyAnswered,
+                englandAnswered = englandAnswered,
+                spainAnswered = spainAnswered,
+                superCupAnswered = superCupAnswered,
+                europaLeagueAnswered = europaLeagueAnswered,
+                championsLeagueAnswered = championsLeagueAnswered,
+                europeanChampionshipAnswered = europeanChampionshipAnswered,
+                vsrmAnswered = vsrmAnswered,
+                vsrbAnswered = vsrbAnswered,
                 top5Answered = top5Answered,
                 uefaAnswered = uefaAnswered,
                 worldAnswered = worldAnswered,

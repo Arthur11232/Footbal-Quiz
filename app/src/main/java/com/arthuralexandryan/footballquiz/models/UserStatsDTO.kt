@@ -1,13 +1,25 @@
 package com.arthuralexandryan.footballquiz.models
 
 import com.arthuralexandryan.footballquiz.db_app.Score.FQ_Scores
+import com.arthuralexandryan.footballquiz.domain.progression.CompletedStageRecord
+import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.google.firebase.auth.FirebaseUser
 
 data class UserStatsDTO(
         val email: String = "",
         val gameState: GameState = GameState(),
         val name: String = "",
-        val regId: String = ""
+        val regId: String = "",
+        val progression: ProgressionStateDTO = ProgressionStateDTO()
+)
+
+data class ProgressionStateDTO(
+    var completedStages: List<CompletedStageDTO> = emptyList()
+)
+
+data class CompletedStageDTO(
+    var stageId: String = "",
+    var achievedAt: Long = 0L
 )
 
 data class GameState(
@@ -87,6 +99,26 @@ fun FQ_Scores.toDTO(user: FirebaseUser): UserStatsDTO {
         }
                     ),
             name = user.displayName.toString(),
-            regId = user.uid
+            regId = user.uid,
+            progression = ProgressionStateDTO()
     )
+}
+
+fun List<CompletedStageRecord>.toProgressionStateDTO(): ProgressionStateDTO {
+    return ProgressionStateDTO(
+        completedStages = map { record ->
+            CompletedStageDTO(
+                stageId = record.stageId.value,
+                achievedAt = record.achievedAtMillis
+            )
+        }
+    )
+}
+
+fun UserStatsDTO.toCompletedStageRecords(): List<CompletedStageRecord> {
+    return progression.completedStages.mapNotNull { stage ->
+        val stageId = ProgressionStageId.entries.firstOrNull { it.value == stage.stageId } ?: return@mapNotNull null
+        val achievedAt = stage.achievedAt.takeIf { it > 0L } ?: return@mapNotNull null
+        CompletedStageRecord(stageId = stageId, achievedAtMillis = achievedAt)
+    }
 }
