@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Quiz Certificate Preview Gallery</title>
+  <style>
+    :root {
+      --text: #f3f6fb;
+      --muted: #a8b4c7;
+      --line: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(88, 166, 255, 0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(255, 209, 102, 0.08), transparent 26%),
+        linear-gradient(180deg, #0d1117 0%, #0a0f15 100%);
+      color: var(--text);
+    }
+
+    .page {
+      width: min(1560px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .hero {
+      padding: 24px 28px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(18, 25, 34, 0.82);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-toolbar {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-copy {
+      flex: 1 1 720px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      gap: 8px;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      flex: 0 0 auto;
+    }
+
+    .lang-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .legend-chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title span {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 18px;
+    }
+
+    .preview-shell {
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+      min-height: 840px;
+      position: relative;
+    }
+
+    .preview-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.95;
+    }
+
+    .preview-inner {
+      position: relative;
+      z-index: 1;
+      min-height: 840px;
+      padding: 20px 20px 28px;
+    }
+
+    .preview-top {
+      position: relative;
+      min-height: 142px;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .trophy {
+      width: 56px;
+      height: 56px;
+      margin: 22px auto 0;
+      display: grid;
+      place-items: center;
+      font-size: 34px;
+      line-height: 1;
+      transform-origin: center;
+    }
+
+    .caption {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+    }
+
+    .headline {
+      margin-top: 2px;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .subheadline {
+      margin-top: 4px;
+      text-align: center;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .certificate-card {
+      margin-top: 22px;
+      border-radius: 28px;
+      padding: 20px;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ornament-line {
+      height: 1px;
+      flex: 1;
+    }
+
+    .ornament-diamond {
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      flex: 0 0 auto;
+    }
+
+    .label {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .recipient {
+      margin-top: 14px;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .divider {
+      width: 110px;
+      height: 2px;
+      margin: 8px auto 0;
+    }
+
+    .awarded,
+    .award-text {
+      text-align: center;
+    }
+
+    .awarded {
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    .award-text {
+      margin-top: 4px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .stage-chip {
+      margin-top: 14px;
+      padding: 10px 16px;
+      border-radius: 18px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .additional-title {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .additional-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .additional-chip {
+      border-radius: 16px;
+      padding: 8px 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .meta-divider,
+    .signature-divider {
+      height: 1px;
+      margin-top: 20px;
+    }
+
+    .signature-divider {
+      margin-top: 16px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      margin-top: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .meta-right {
+      text-align: right;
+    }
+
+    .signature-label {
+      margin-top: 14px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .signature-name {
+      margin-top: 4px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 700;
+      font-style: italic;
+    }
+
+    .signature-role {
+      margin-top: 2px;
+      font-size: 11px;
+    }
+
+    .continue-btn {
+      width: 100%;
+      height: 54px;
+      margin-top: 22px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: default;
+    }
+
+    .preview-meta {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .preview-key {
+      opacity: 0.86;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100%, calc(100% - 20px));
+        padding-top: 18px;
+      }
+
+      .hero {
+        padding: 20px;
+        border-radius: 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .preview-shell,
+      .preview-inner {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="hero-toolbar">
+        <div class="hero-copy">
+          <h1 id="heroTitle">Football Quiz Certificate Preview Gallery</h1>
+          <p id="heroText"></p>
+        </div>
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="ru" type="button">RU</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="hy" type="button">HY</button>
+        </div>
+      </div>
+      <div class="legend">
+        <div class="legend-chip" id="legend1"></div>
+        <div class="legend-chip" id="legend2"></div>
+        <div class="legend-chip" id="legend3"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2 id="sectionTitle"></h2>
+        <span id="sectionMeta"></span>
+      </div>
+      <div class="grid" id="gallery"></div>
+    </section>
+  </div>
+
+  <script>
+    const recipientName = "Artur Aleksandryan";
+    const orderedStageIds = [
+      "top5_france_complete",
+      "top5_germany_complete",
+      "top5_italy_complete",
+      "top5_england_complete",
+      "top5_spain_complete",
+      "top5_complete",
+      "uefa_super_cup_complete",
+      "uefa_europa_league_complete",
+      "uefa_champions_league_complete",
+      "uefa_european_championship_complete",
+      "uefa_complete",
+      "world_complete",
+      "versus_vsrm_complete",
+      "versus_vsrb_complete",
+      "versus_complete",
+      "app_complete"
+    ];
+
+    const themes = {
+      top5_france_complete: { screen: "#0B1336", cardFill: "#13204A", cardStroke: "#D9515A", primary: "#F7F2E8", secondary: "#D8E0E9", accent: "#D9515A", emphasis: "#F0C77D", chipFill: "#F7D68D", chipText: "#0B1336", buttonFill: "#F0C77D", buttonText: "#0B1336", major: false },
+      top5_germany_complete: { screen: "#A31B1F", cardFill: "#491315", cardStroke: "#1F1B1B", primary: "#FFF5EE", secondary: "#E3D6CF", accent: "#1F1B1B", emphasis: "#F2C14E", chipFill: "#F2C14E", chipText: "#2A0D0F", buttonFill: "#F2C14E", buttonText: "#2A0D0F", major: false },
+      top5_italy_complete: { screen: "#1C357F", cardFill: "#16306B", cardStroke: "#2E8B57", primary: "#F9F5EB", secondary: "#D6E0EF", accent: "#2E8B57", emphasis: "#E8C96A", chipFill: "#E8C96A", chipText: "#10224F", buttonFill: "#E8C96A", buttonText: "#10224F", major: false },
+      top5_england_complete: { screen: "#C00E4B", cardFill: "#5A1833", cardStroke: "#A62557", primary: "#FFF7F0", secondary: "#E7D6D8", accent: "#A62557", emphasis: "#EFC36A", chipFill: "#EFC36A", chipText: "#4A1024", buttonFill: "#EFC36A", buttonText: "#4A1024", major: false },
+      top5_spain_complete: { screen: "#A61B1F", cardFill: "#591618", cardStroke: "#8B1E22", primary: "#FFF7ED", secondary: "#E8DCCB", accent: "#8B1E22", emphasis: "#F0B323", chipFill: "#F0B323", chipText: "#4B130F", buttonFill: "#F0B323", buttonText: "#4B130F", major: false },
+      top5_complete: { screen: "#000000", cardFill: "#1D1F24", cardStroke: "#C38A1E", primary: "#FFF8EE", secondary: "#DCD4C8", accent: "#C38A1E", emphasis: "#F5C96A", chipFill: "#F5C96A", chipText: "#231A0C", buttonFill: "#F5C96A", buttonText: "#231A0C", major: true },
+      uefa_super_cup_complete: { screen: "#004520", cardFill: "#113624", cardStroke: "#2D8A52", primary: "#F4F7EE", secondary: "#C9D9CC", accent: "#2D8A52", emphasis: "#E7C66D", chipFill: "#E7C66D", chipText: "#0D2416", buttonFill: "#E7C66D", buttonText: "#0D2416", major: false },
+      uefa_europa_league_complete: { screen: "#09120E", cardFill: "#151B18", cardStroke: "#E67E22", primary: "#F4F0E8", secondary: "#CEC7B8", accent: "#E67E22", emphasis: "#F4B860", chipFill: "#F4B860", chipText: "#1B140E", buttonFill: "#F4B860", buttonText: "#1B140E", major: false },
+      uefa_champions_league_complete: { screen: "#0B1336", cardFill: "#14204B", cardStroke: "#4D79FF", primary: "#F5F7FF", secondary: "#D0DBEF", accent: "#4D79FF", emphasis: "#FFD166", chipFill: "#FFD166", chipText: "#101D49", buttonFill: "#FFD166", buttonText: "#101D49", major: false },
+      uefa_european_championship_complete: { screen: "#115C6B", cardFill: "#0F4048", cardStroke: "#4FD3D7", primary: "#F1FBFB", secondary: "#C7E6E8", accent: "#4FD3D7", emphasis: "#FFD166", chipFill: "#FFD166", chipText: "#083039", buttonFill: "#FFD166", buttonText: "#083039", major: false },
+      uefa_complete: { screen: "#0B1336", cardFill: "#141E46", cardStroke: "#54B8FF", primary: "#F3F7FF", secondary: "#D0DBEF", accent: "#54B8FF", emphasis: "#FFD166", chipFill: "#FFD166", chipText: "#102049", buttonFill: "#FFD166", buttonText: "#102049", major: true },
+      world_complete: { screen: "#9B9C9C", cardFill: "#2E343B", cardStroke: "#7FB3D5", primary: "#F5F7FA", secondary: "#D4DBE3", accent: "#7FB3D5", emphasis: "#F4C56A", chipFill: "#F4C56A", chipText: "#1A232D", buttonFill: "#F4C56A", buttonText: "#1A232D", major: true },
+      versus_vsrm_complete: { screen: "#7E042E", cardFill: "#3A1022", cardStroke: "#F45B69", primary: "#FFF6F8", secondary: "#E6CCD6", accent: "#F45B69", emphasis: "#FFD166", chipFill: "#FFD166", chipText: "#3A1022", buttonFill: "#FFD166", buttonText: "#3A1022", major: false },
+      versus_vsrb_complete: { screen: "#7E042E", cardFill: "#3A1022", cardStroke: "#F45B69", primary: "#FFF6F8", secondary: "#E6CCD6", accent: "#F45B69", emphasis: "#FFD166", chipFill: "#FFD166", chipText: "#3A1022", buttonFill: "#FFD166", buttonText: "#3A1022", major: false },
+      versus_complete: { screen: "#7E042E", cardFill: "#3A1022", cardStroke: "#F45B69", primary: "#FFF6F8", secondary: "#E6CCD6", accent: "#F45B69", emphasis: "#FFD166", chipFill: "#FFD166", chipText: "#3A1022", buttonFill: "#FFD166", buttonText: "#3A1022", major: true },
+      app_complete: { screen: "#00692C", cardFill: "#0F4024", cardStroke: "#3BC06A", primary: "#F2FFF6", secondary: "#D0E8D8", accent: "#3BC06A", emphasis: "#F8C85A", chipFill: "#F8C85A", chipText: "#10331D", buttonFill: "#F8C85A", buttonText: "#10331D", major: true }
+    };
+
+    const ui = {
+      ru: {
+        pageTitle: "Football Quiz Certificate Preview Gallery",
+        heroTitle: "Football Quiz Certificate Preview Gallery",
+        heroText: "Локальная визуальная галерея для всех achievement certificate тем. Здесь можно быстро сравнить category-stage, completion-stage и финальные major-achievement варианты до интеграции следующего UX слоя.",
+        legend1: "16 превью этапов",
+        legend2: "Runtime theme mapping",
+        legend3: "Top 5 / UEFA / World / Versus / App",
+        sectionTitle: "Все сертификаты",
+        sectionMeta: "Сгенерировано для review",
+        headline: "Поздравляем!",
+        label: "Сертификат достижения",
+        awarded: "Награждается",
+        awardText: "За успешное прохождение этого этапа в Football Quiz",
+        additional: (count) => `+ ещё ${count} этап(а) пройдено`,
+        issuedOnLabel: "Дата выдачи",
+        issuedOnValue: "19 июня 2026",
+        certificateIdLabel: "ID сертификата",
+        signatureLabel: "Подпись",
+        signatureRole: "Создатель Football Quiz",
+        continueButton: "Продолжить игру",
+        majorAchievement: "Крупное достижение",
+        stageAchievement: "Этап достижения"
+      },
+      en: {
+        pageTitle: "Football Quiz Certificate Preview Gallery",
+        heroTitle: "Football Quiz Certificate Preview Gallery",
+        heroText: "A local visual gallery for every achievement certificate theme. It lets you quickly compare category stages, completion stages, and final major-achievement variants before the next UX layer is integrated.",
+        legend1: "16 stage previews",
+        legend2: "Runtime theme mapping",
+        legend3: "Top 5 / UEFA / World / Versus / App",
+        sectionTitle: "All certificates",
+        sectionMeta: "Generated for review",
+        headline: "Congratulations!",
+        label: "Achievement Certificate",
+        awarded: "Awarded to",
+        awardText: "For successfully completing this stage in Football Quiz",
+        additional: (count) => `+ ${count} more stage(s) completed`,
+        issuedOnLabel: "Issued on",
+        issuedOnValue: "June 19, 2026",
+        certificateIdLabel: "Certificate ID",
+        signatureLabel: "Signed by",
+        signatureRole: "Creator, Football Quiz",
+        continueButton: "Continue Quiz",
+        majorAchievement: "Major achievement",
+        stageAchievement: "Stage achievement"
+      },
+      hy: {
+        pageTitle: "Football Quiz Certificate Preview Gallery",
+        heroTitle: "Football Quiz Certificate Preview Gallery",
+        heroText: "Սա բոլոր achievement certificate թեմաների տեղային տեսողական gallery-ն է։ Այստեղ կարելի է արագ համեմատել category-stage, completion-stage և final major-achievement տարբերակները մինչև հաջորդ UX շերտի ինտեգրումը։",
+        legend1: "16 փուլի preview",
+        legend2: "Runtime theme mapping",
+        legend3: "Top 5 / UEFA / World / Versus / App",
+        sectionTitle: "Բոլոր վկայագրերը",
+        sectionMeta: "Ստեղծված է review-ի համար",
+        headline: "Շնորհավորում ենք!",
+        label: "Ձեռքբերման վկայագիր",
+        awarded: "Շնորհվում է",
+        awardText: "Football Quiz-ում այս փուլը հաջողությամբ ավարտելու համար",
+        additional: (count) => `+ ավարտված է ևս ${count} փուլ`,
+        issuedOnLabel: "Տրման ամսաթիվ",
+        issuedOnValue: "19 հունիսի 2026",
+        certificateIdLabel: "Վկայագրի ID",
+        signatureLabel: "Ստորագրություն",
+        signatureRole: "Football Quiz-ի ստեղծող",
+        continueButton: "Շարունակել խաղը",
+        majorAchievement: "Խոշոր ձեռքբերում",
+        stageAchievement: "Փուլի ձեռքբերում"
+      }
+    };
+
+    const titles = {
+      ru: {
+        top5_france_complete: "Топ 5: Франция",
+        top5_germany_complete: "Топ 5: Германия",
+        top5_italy_complete: "Топ 5: Италия",
+        top5_england_complete: "Топ 5: Англия",
+        top5_spain_complete: "Топ 5: Испания",
+        top5_complete: "Топ 5 завершён",
+        uefa_super_cup_complete: "УЕФА: Суперкубок",
+        uefa_europa_league_complete: "УЕФА: Лига Европы",
+        uefa_champions_league_complete: "УЕФА: Лига чемпионов",
+        uefa_european_championship_complete: "УЕФА: Чемпионат Европы",
+        uefa_complete: "УЕФА завершён",
+        world_complete: "Мир завершён",
+        versus_vsrm_complete: "Против: Роналду vs Месси",
+        versus_vsrb_complete: "Против: Реал Мадрид vs Барселона",
+        versus_complete: "Против завершён",
+        app_complete: "Football Quiz завершён"
+      },
+      en: {
+        top5_france_complete: "Top 5: France",
+        top5_germany_complete: "Top 5: Germany",
+        top5_italy_complete: "Top 5: Italy",
+        top5_england_complete: "Top 5: England",
+        top5_spain_complete: "Top 5: Spain",
+        top5_complete: "Top 5 Complete",
+        uefa_super_cup_complete: "UEFA: Super Cup",
+        uefa_europa_league_complete: "UEFA: Europa League",
+        uefa_champions_league_complete: "UEFA: Champions League",
+        uefa_european_championship_complete: "UEFA: European Championship",
+        uefa_complete: "UEFA Complete",
+        world_complete: "World Complete",
+        versus_vsrm_complete: "Versus: Ronaldo vs Messi",
+        versus_vsrb_complete: "Versus: Real Madrid vs Barcelona",
+        versus_complete: "Versus Complete",
+        app_complete: "Football Quiz Complete"
+      },
+      hy: {
+        top5_france_complete: "Թոփ 5: Ֆրանսիա",
+        top5_germany_complete: "Թոփ 5: Գերմանիա",
+        top5_italy_complete: "Թոփ 5: Իտալիա",
+        top5_england_complete: "Թոփ 5: Անգլիա",
+        top5_spain_complete: "Թոփ 5: Իսպանիա",
+        top5_complete: "Թոփ 5 ավարտված է",
+        uefa_super_cup_complete: "ՈՒԵՖԱ: Սուպերգավաթ",
+        uefa_europa_league_complete: "ՈՒԵՖԱ: Եվրոպայի լիգա",
+        uefa_champions_league_complete: "ՈՒԵՖԱ: Չեմպիոնների լիգա",
+        uefa_european_championship_complete: "ՈՒԵՖԱ: Եվրոպայի առաջնություն",
+        uefa_complete: "ՈՒԵՖԱ ավարտված է",
+        world_complete: "Աշխարհը ավարտված է",
+        versus_vsrm_complete: "Ընդդեմ: Ռոնալդու vs Մեսսի",
+        versus_vsrb_complete: "Ընդդեմ: Ռեալ Մադրիդ vs Բարսելոնա",
+        versus_complete: "Ընդդեմ ավարտված է",
+        app_complete: "Football Quiz ավարտված է"
+      }
+    };
+
+    const captions = {
+      ru: { top5_stage: "ЭТАП TOP 5", top5_complete: "TOP 5 ЗАВЕРШЁН", uefa_stage: "ЭТАП УЕФА", uefa_complete: "УЕФА ЗАВЕРШЁН", world_complete: "МИР ЗАВЕРШЁН", versus_stage: "ЭТАП VERSUS", versus_complete: "VERSUS ЗАВЕРШЁН", app_complete: "ПОЛНОЕ ПРОХОЖДЕНИЕ" },
+      en: { top5_stage: "TOP 5 STAGE", top5_complete: "TOP 5 COMPLETE", uefa_stage: "UEFA STAGE", uefa_complete: "UEFA COMPLETE", world_complete: "WORLD COMPLETE", versus_stage: "VERSUS STAGE", versus_complete: "VERSUS COMPLETE", app_complete: "ULTIMATE COMPLETION" },
+      hy: { top5_stage: "TOP 5 ՓՈՒԼ", top5_complete: "TOP 5 ԱՎԱՐՏՎԱԾ Է", uefa_stage: "ՈՒԵՖԱ ՓՈՒԼ", uefa_complete: "ՈՒԵՖԱ ԱՎԱՐՏՎԱԾ Է", world_complete: "ԱՇԽԱՐՀԸ ԱՎԱՐՏՎԱԾ Է", versus_stage: "VERSUS ՓՈՒԼ", versus_complete: "VERSUS ԱՎԱՐՏՎԱԾ Է", app_complete: "ԱՄԲՈՂՋԱԿԱՆ ԱՎԱՐՏ" }
+    };
+
+    const subheadlines = {
+      ru: { top5_stage: "Завершён новый футбольный этап Top 5.", top5_complete: "Полностью завершена вся коллекция Top 5.", uefa_stage: "Завершён новый этап УЕФА.", uefa_complete: "Полностью завершена вся коллекция УЕФА.", world_complete: "Полностью завершён мировой блок.", versus_stage: "Завершён новый challenge один на один.", versus_complete: "Все Versus-челленджи полностью завершены.", app_complete: "Завершены все ключевые этапы Football Quiz." },
+      en: { top5_stage: "A new Top 5 football stage has been completed.", top5_complete: "The full Top 5 collection has been completed.", uefa_stage: "A new UEFA stage has been completed.", uefa_complete: "The full UEFA collection has been completed.", world_complete: "The World block has been fully completed.", versus_stage: "A new head-to-head challenge has been completed.", versus_complete: "All Versus challenges have been completed.", app_complete: "Every major Football Quiz stage has been completed." },
+      hy: { top5_stage: "Ավարտվել է Top 5-ի նոր ֆուտբոլային փուլը։", top5_complete: "Top 5-ի ամբողջ հավաքածուն ամբողջությամբ ավարտված է։", uefa_stage: "Ավարտվել է ՈՒԵՖԱ-ի նոր փուլը։", uefa_complete: "ՈՒԵՖԱ-ի ամբողջ հավաքածուն ամբողջությամբ ավարտված է։", world_complete: "Աշխարհի բլոկը ամբողջությամբ ավարտված է։", versus_stage: "Ավարտվել է նոր մեկ-մեկի challenge-ը։", versus_complete: "Versus-ի բոլոր challenge-ները ամբողջությամբ ավարտված են։", app_complete: "Football Quiz-ի բոլոր հիմնական փուլերը ավարտված են։" }
+    };
+
+    let currentLang = localStorage.getItem("fq-certificate-preview-lang") || "ru";
+
+    const blend = (hexA, hexB, amount) => {
+      const a = hexToRgb(hexA);
+      const b = hexToRgb(hexB);
+      return `rgb(${Math.round(a.r + (b.r - a.r) * amount)}, ${Math.round(a.g + (b.g - a.g) * amount)}, ${Math.round(a.b + (b.b - a.b) * amount)})`;
+    };
+
+    const withAlpha = (hex, alpha) => {
+      const { r, g, b } = hexToRgb(hex);
+      return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    };
+
+    function hexToRgb(hex) {
+      const normalized = hex.replace("#", "");
+      const value = normalized.length === 3
+        ? normalized.split("").map((part) => part + part).join("")
+        : normalized;
+      return {
+        r: parseInt(value.slice(0, 2), 16),
+        g: parseInt(value.slice(2, 4), 16),
+        b: parseInt(value.slice(4, 6), 16)
+      };
+    }
+
+    function stageKey(stageId) {
+      if (stageId === "top5_complete") return "top5_complete";
+      if (stageId.startsWith("top5_")) return "top5_stage";
+      if (stageId === "uefa_complete") return "uefa_complete";
+      if (stageId.startsWith("uefa_")) return "uefa_stage";
+      if (stageId === "world_complete") return "world_complete";
+      if (stageId === "versus_complete") return "versus_complete";
+      if (stageId.startsWith("versus_")) return "versus_stage";
+      return "app_complete";
+    }
+
+    function getAdditional(stageId) {
+      const mapping = {
+        top5_complete: ["top5_france_complete", "top5_germany_complete", "top5_italy_complete", "top5_england_complete", "top5_spain_complete"],
+        uefa_complete: ["uefa_super_cup_complete", "uefa_europa_league_complete", "uefa_champions_league_complete", "uefa_european_championship_complete"],
+        versus_complete: ["versus_vsrm_complete", "versus_vsrb_complete"],
+        app_complete: ["top5_complete", "uefa_complete", "world_complete", "versus_complete"]
+      };
+      return (mapping[stageId] || []).map((id) => titles[currentLang][id]);
+    }
+
+    function renderPreview(stageId) {
+      const theme = themes[stageId];
+      const text = ui[currentLang];
+      const overlayStart = blend(theme.screen, "#FFFFFF", theme.major ? 0.06 : 0.03);
+      const overlayEnd = blend(theme.screen, "#000000", theme.major ? 0.58 : 0.45);
+      const backFill = blend(theme.screen, "#FFFFFF", 0.10);
+      const addFill = blend(theme.cardFill, theme.accent, 0.18);
+      const stageFont = theme.major ? 18 : 17;
+      const headlineSize = theme.major ? 36 : 34;
+      const trophyScale = theme.major ? 1.12 : 1;
+      const additional = getAdditional(stageId);
+      const certId = `FQ-${stageId.replaceAll("_", "-").toUpperCase().slice(0, 18)}-240619`;
+
+      return `
+        <article class="preview-shell" style="background:${theme.screen}">
+          <div class="preview-overlay" style="background:linear-gradient(180deg, ${overlayStart} 0%, ${overlayEnd} 100%)"></div>
+          <div class="preview-inner">
+            <div class="preview-top">
+              <div class="back-btn" style="background:${backFill}; color:${theme.primary}; border-color:${withAlpha(theme.primary, 0.28)}">←</div>
+              <div class="trophy" style="color:${theme.emphasis}; transform:scale(${trophyScale})">🏆</div>
+              <div class="caption" style="color:${withAlpha(theme.primary, 0.76)}">${captions[currentLang][stageKey(stageId)]}</div>
+              <div class="headline" style="color:${theme.primary}; font-size:${headlineSize}px">${text.headline}</div>
+              <div class="subheadline" style="color:${theme.secondary}">${subheadlines[currentLang][stageKey(stageId)]}</div>
+            </div>
+
+            <div class="certificate-card" style="background:${theme.cardFill}; border:${theme.major ? 2.5 : 1.5}px solid ${theme.cardStroke}">
+              <div class="ornament">
+                <div class="ornament-line" style="background:${withAlpha(theme.accent, 0.40)}"></div>
+                <div class="ornament-diamond" style="background:${theme.accent}"></div>
+                <div class="ornament-line" style="background:${withAlpha(theme.accent, 0.40)}"></div>
+              </div>
+
+              <div class="label" style="color:${withAlpha(theme.primary, 0.68)}">${text.label}</div>
+              <div class="recipient" style="color:${theme.primary}">${recipientName}</div>
+              <div class="divider" style="background:${theme.accent}"></div>
+              <div class="awarded" style="color:${theme.secondary}">${text.awarded}</div>
+              <div class="award-text" style="color:${withAlpha(theme.secondary, 0.90)}">${text.awardText}</div>
+              <div class="stage-chip" style="background:${theme.chipFill}; color:${theme.chipText}; font-size:${stageFont}px">${titles[currentLang][stageId]}</div>
+
+              ${additional.length ? `
+                <div class="additional-title" style="color:${theme.emphasis}">${text.additional(additional.length)}</div>
+                <div class="additional-list">
+                  ${additional.map((item) => `
+                    <div class="additional-chip" style="background:${addFill}; color:${theme.primary}; border-color:${withAlpha(theme.primary, 0.22)}">${item}</div>
+                  `).join("")}
+                </div>
+              ` : ""}
+
+              <div class="meta-divider" style="background:${withAlpha(theme.primary, 0.24)}"></div>
+              <div class="meta-grid">
+                <div>
+                  <div class="meta-label" style="color:${withAlpha(theme.primary, 0.64)}">${text.issuedOnLabel}</div>
+                  <div class="meta-value" style="color:${theme.primary}">${text.issuedOnValue}</div>
+                </div>
+                <div class="meta-right">
+                  <div class="meta-label" style="color:${withAlpha(theme.primary, 0.64)}">${text.certificateIdLabel}</div>
+                  <div class="meta-value" style="color:${theme.primary}">${certId}</div>
+                </div>
+              </div>
+
+              <div class="signature-divider" style="background:${withAlpha(theme.accent, 0.25)}"></div>
+              <div class="signature-label" style="color:${withAlpha(theme.primary, 0.64)}">${text.signatureLabel}</div>
+              <div class="signature-name" style="color:${theme.emphasis}">${recipientName}</div>
+              <div class="signature-role" style="color:${withAlpha(theme.secondary, 0.86)}">${text.signatureRole}</div>
+
+              <div class="ornament" style="margin-top:16px">
+                <div class="ornament-line" style="background:${withAlpha(theme.accent, 0.40)}"></div>
+                <div class="ornament-diamond" style="background:${theme.accent}"></div>
+                <div class="ornament-line" style="background:${withAlpha(theme.accent, 0.40)}"></div>
+              </div>
+            </div>
+
+            <button class="continue-btn" style="background:linear-gradient(90deg, ${theme.buttonFill} 0%, ${blend(theme.buttonFill, "#FFFFFF", 0.08)} 100%); color:${theme.buttonText}; box-shadow:0 12px 26px ${withAlpha(theme.buttonFill, 0.18)}">${text.continueButton}</button>
+
+            <div class="preview-meta">
+              <span>${theme.major ? text.majorAchievement : text.stageAchievement}</span>
+              <span class="preview-key">${stageId}</span>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderStaticCopy() {
+      const text = ui[currentLang];
+      document.documentElement.lang = currentLang;
+      document.title = text.pageTitle;
+      document.getElementById("heroTitle").textContent = text.heroTitle;
+      document.getElementById("heroText").textContent = text.heroText;
+      document.getElementById("legend1").textContent = text.legend1;
+      document.getElementById("legend2").textContent = text.legend2;
+      document.getElementById("legend3").textContent = text.legend3;
+      document.getElementById("sectionTitle").textContent = text.sectionTitle;
+      document.getElementById("sectionMeta").textContent = text.sectionMeta;
+    }
+
+    function renderButtons() {
+      document.querySelectorAll(".lang-btn").forEach((button) => {
+        button.classList.toggle("active", button.dataset.lang === currentLang);
+      });
+    }
+
+    function renderGallery() {
+      document.getElementById("gallery").innerHTML = orderedStageIds.map(renderPreview).join("");
+    }
+
+    function setLanguage(lang) {
+      if (!ui[lang]) return;
+      currentLang = lang;
+      localStorage.setItem("fq-certificate-preview-lang", lang);
+      renderButtons();
+      renderStaticCopy();
+      renderGallery();
+    }
+
+    document.querySelectorAll(".lang-btn").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.lang));
+    });
+
+    setLanguage(ui[currentLang] ? currentLang : "ru");
+  </script>
+</body>
+</html>
