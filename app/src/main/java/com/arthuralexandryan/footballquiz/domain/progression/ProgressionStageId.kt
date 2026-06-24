@@ -16,5 +16,12 @@ enum class ProgressionStageId(val value: String) {
     VERSUS_VSRM_COMPLETE("versus_vsrm_complete"),
     VERSUS_VSRB_COMPLETE("versus_vsrb_complete"),
     VERSUS_COMPLETE("versus_complete"),
-    APP_COMPLETE("app_complete")
+    APP_COMPLETE("app_complete");
+
+    companion object {
+        fun fromValue(value: String?): ProgressionStageId? {
+            if (value.isNullOrBlank()) return null
+            return values().firstOrNull { it.value == value }
+        }
+    }
 }

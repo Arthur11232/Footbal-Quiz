@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
     android:background="@drawable/bg_certificate_chip_secondary"
+    android:gravity="center"
     android:paddingLeft="12dp"
     android:paddingTop="8dp"
     android:paddingRight="12dp"

@@ -36,10 +36,6 @@ class VersusFragment : Fragment() {
         initFragments()
         applyInsets()
         onClicks()
-
-        binding.onBack.setOnClickListener {
-            findNavController().navigateUp()
-        }
     }
 
     override fun onResume() {
@@ -54,11 +50,6 @@ class VersusFragment : Fragment() {
     }
 
     private fun applyInsets() {
-        SystemBarStyleHelper.applySystemBarPadding(
-            view = binding.onBack,
-            applyLeft = true,
-            applyTop = true
-        )
         SystemBarStyleHelper.applySystemBarPadding(
             view = binding.backward,
             applyLeft = true

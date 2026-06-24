@@ -6,7 +6,7 @@ import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 class RestoreStartCloudStatsUseCase(
     private val syncRepository: SyncRepository
 ) {
-    operator fun invoke(userId: String, cloudStats: UserStatsDTO) {
+    suspend operator fun invoke(userId: String, cloudStats: UserStatsDTO) {
         syncRepository.restoreCloudStats(userId, cloudStats)
     }
 }

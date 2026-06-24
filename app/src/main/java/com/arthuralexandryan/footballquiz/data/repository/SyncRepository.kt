@@ -20,5 +20,5 @@ interface SyncRepository {
 
     suspend fun uploadLocalStats(user: FirebaseUser): Result<Unit>
 
-    fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO)
+    suspend fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO)
 }

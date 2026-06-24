@@ -15,6 +15,8 @@ data class ProfileUiState(
     val uefaProgressText: String = "0/0",
     val worldProgressText: String = "0/0",
     val versusProgressText: String = "0/0",
+    val certificates: List<ProfileCertificateUiModel> = emptyList(),
+    val certificatesCount: Int = 0,
     val completedStages: List<CompletedStageUiModel> = emptyList(),
     val completedStagesCount: Int = 0,
     val totalStagesCount: Int = 0

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -15,6 +16,7 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.databinding.FragmentProfileBinding
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileEffect
+import com.arthuralexandryan.footballquiz.presentation.profile.ProfileCertificateUiModel
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileUiState
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileViewModel
 import com.arthuralexandryan.footballquiz.presentation.progression.CompletedStageUiModel
@@ -94,6 +96,9 @@ class ProfileFragment : Fragment() {
                         is ProfileEffect.ShowOverwriteDialog -> {
                             showOverwriteCloudDialog(effect.localScore, effect.localAnswered)
                         }
+                        is ProfileEffect.OpenCertificatePreview -> {
+                            openCertificatePreview(effect.payload)
+                        }
                         ProfileEffect.ShowDeleteAccountDialog -> {
                             showDeleteAccountDialog()
                         }
@@ -152,13 +157,36 @@ class ProfileFragment : Fragment() {
         binding.tvUefaProgress.text = state.uefaProgressText
         binding.tvWorldProgress.text = state.worldProgressText
         binding.tvVersusProgress.text = state.versusProgressText
+        binding.tvCertificatesSummary.text = state.certificatesCount.toString()
+        binding.tvCertificatesEmpty.visibility = if (state.certificates.isEmpty()) View.VISIBLE else View.GONE
+        binding.certificatesScroll.visibility = if (state.certificates.isEmpty()) View.GONE else View.VISIBLE
         binding.tvCompletedStagesSummary.text = getString(
             R.string.progression_completed_stages_summary,
             state.completedStagesCount,
             state.totalStagesCount
         )
         binding.tvCompletedStagesEmpty.visibility = if (state.completedStages.isEmpty()) View.VISIBLE else View.GONE
+        renderCertificates(state.certificates)
         renderCompletedStages(state.completedStages)
+    }
+
+    private fun renderCertificates(certificates: List<ProfileCertificateUiModel>) {
+        binding.certificatesContainer.removeAllViews()
+        certificates.forEach { item ->
+            val itemView = layoutInflater.inflate(
+                R.layout.item_profile_certificate,
+                binding.certificatesContainer,
+                false
+            )
+            itemView.findViewById<TextView>(R.id.tvCertificateStage).setText(item.stageTitleResId)
+            itemView.findViewById<TextView>(R.id.tvCertificateRecipient).text = item.recipientName
+            itemView.findViewById<TextView>(R.id.tvCertificateIssuedAt).text = item.issuedAtText
+            itemView.findViewById<TextView>(R.id.tvCertificateId).text = item.certificateId
+            itemView.setOnClickListener {
+                profileViewModel.onCertificateClicked(item)
+            }
+            binding.certificatesContainer.addView(itemView)
+        }
     }
 
     private fun renderCompletedStages(completedStages: List<CompletedStageUiModel>) {
@@ -185,6 +213,15 @@ class ProfileFragment : Fragment() {
             secondaryText = getString(R.string.profile_restore_cancel),
             onPrimaryClick = {
                 profileViewModel.onRestoreCloudConfirmed(cloudStats)
+            }
+        )
+    }
+
+    private fun openCertificatePreview(payload: com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload) {
+        findNavController().navigate(
+            R.id.achievementCertificateFragment,
+            Bundle().apply {
+                putParcelable("certificatePayload", payload)
             }
         )
     }

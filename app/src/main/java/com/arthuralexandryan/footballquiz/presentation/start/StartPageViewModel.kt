@@ -163,9 +163,11 @@ class StartPageViewModel(
     }
 
     fun onCloudRestoreConfirmed(userId: String, cloudStats: UserStatsDTO) {
-        restoreStartCloudStatsUseCase(userId, cloudStats)
-        refreshState()
-        emitToast(R.string.profile_progress_restored)
+        viewModelScope.launch {
+            restoreStartCloudStatsUseCase(userId, cloudStats)
+            refreshState()
+            emitToast(R.string.profile_progress_restored)
+        }
     }
 
     private suspend fun syncCloudProgressIfNeeded(user: FirebaseUser) {

@@ -31,7 +31,7 @@ object ProgressionUiModelMapper {
             .mapNotNull { status ->
                 status.achievedAtMillis?.let { achievedAt ->
                     CompletedStageUiModel(
-                        titleResId = titleResId(status.stageId),
+                        titleResId = titleResIdFor(status.stageId),
                         progressText = progressText(status, profile),
                         achievedAtMillis = achievedAt
                     )
@@ -43,10 +43,21 @@ object ProgressionUiModelMapper {
         return snapshot.newlyCompleted.map { record ->
             FreshlyCompletedStageUiModel(
                 stageId = record.stageId,
-                titleResId = titleResId(record.stageId),
+                titleResId = titleResIdFor(record.stageId),
                 achievedAtMillis = record.achievedAtMillis
             )
         }
+    }
+
+    fun buildFreshlyCompletedStageUiModel(
+        stageId: ProgressionStageId,
+        achievedAtMillis: Long
+    ): FreshlyCompletedStageUiModel {
+        return FreshlyCompletedStageUiModel(
+            stageId = stageId,
+            titleResId = titleResIdFor(stageId),
+            achievedAtMillis = achievedAtMillis
+        )
     }
 
     private fun progressText(status: ProgressionStageStatus, profile: ProfileProgressSnapshot): String {
@@ -83,7 +94,7 @@ object ProgressionUiModelMapper {
     }
 
     @StringRes
-    private fun titleResId(stageId: ProgressionStageId): Int {
+    fun titleResIdFor(stageId: ProgressionStageId): Int {
         return when (stageId) {
             ProgressionStageId.TOP5_FRANCE_COMPLETE -> R.string.progression_stage_top5_france
             ProgressionStageId.TOP5_GERMANY_COMPLETE -> R.string.progression_stage_top5_germany

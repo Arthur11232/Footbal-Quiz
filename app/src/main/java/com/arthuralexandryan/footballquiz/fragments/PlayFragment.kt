@@ -532,14 +532,13 @@ class PlayFragment : Fragment(), ShowAds {
         binding.finishGame.root.visibility = View.VISIBLE
         binding.lNumber.visibility = View.INVISIBLE
         
-        val totalGoal = binding.finishGame.root.findViewById<TextView>(R.id.total_goal)
-        totalGoal.text = totalScoreText
+        binding.finishGame.totalGoal.text = totalScoreText
         
-        binding.finishGame.root.findViewById<ImageView>(R.id.exit_game).setOnClickListener {
+        binding.finishGame.exitGame.setOnClickListener{
             handleBackNavigation()
         }
         
-        binding.finishGame.root.findViewById<ImageView>(R.id.reload_game).setOnClickListener {
+        binding.finishGame.reloadGame.setOnClickListener {
             if (!Constant.ADS_ENABLED) {
                 playViewModel.resetSession(isForce = false)
             } else if (mRewardedAd != null) {
@@ -555,9 +554,7 @@ class PlayFragment : Fragment(), ShowAds {
     }
 
     private fun handleBackNavigation() {
-        if (playViewModel.uiState.value.isAnswerEnabled) {
-            findNavController().navigateUp()
-        }
+        findNavController().navigateUp()
     }
 
     override fun onStart() {

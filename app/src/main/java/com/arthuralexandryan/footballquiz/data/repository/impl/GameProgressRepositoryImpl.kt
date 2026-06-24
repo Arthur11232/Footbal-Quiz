@@ -126,7 +126,12 @@ class GameProgressRepositoryImpl(
             .putBoolean("isFirstPlay", true)
             .apply {
                 com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId.entries
-                    .forEach { remove(Constants.ProgressionStageAchievedAtKeyPrefix + it.value) }
+                    .forEach {
+                        remove(Constants.ProgressionStageAchievedAtKeyPrefix + it.value)
+                        remove(Constants.CertificateIssuedAtKeyPrefix + it.value)
+                        remove(Constants.CertificateIdKeyPrefix + it.value)
+                        remove(Constants.CertificateRecipientNameKeyPrefix + it.value)
+                    }
             }
             .apply()
         settingsRepository.setFirstPlay(true)

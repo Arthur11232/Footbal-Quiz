@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz.data.repository.impl
 
 import android.content.Context
+import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.ProgressionRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
@@ -8,6 +9,7 @@ import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSo
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
+import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.models.toCompletedStageRecords
 import com.arthuralexandryan.footballquiz.models.toProgressionStateDTO
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
@@ -17,22 +19,37 @@ class SyncRepositoryImpl(
     private val context: Context,
     private val gameStateLocalDataSource: GameStateLocalDataSource,
     private val userStatsRepository: UserStatsRepository,
-    private val progressionRepository: ProgressionRepository
+    private val progressionRepository: ProgressionRepository,
+    private val certificateRepository: CertificateRepository
 ) : SyncRepository {
 
     override suspend fun resolveSyncDecision(user: FirebaseUser): SyncRepository.SyncDecision {
         val localSnapshot = gameStateLocalDataSource.getProgressSnapshot()
         val cloudStats = userStatsRepository.downloadStats(user.uid)
+        val localCertificatesBeforeMerge = certificateRepository.getIssuedCertificates()
+        val remoteCertificates = certificateRepository.downloadIssuedCertificates(user.uid)
+        mergeRemoteCertificatesIntoLocal(remoteCertificates)
+        val localCertificates = certificateRepository.getIssuedCertificates()
+        val localHasCertificatesMissingInCloud = hasCertificatesMissingInCloud(
+            localCertificates = localCertificates,
+            remoteCertificates = remoteCertificates
+        )
 
         if (cloudStats == null || !cloudStats.hasProgress()) {
-            return if (localSnapshot.hasProgress) {
+            return if (
+                remoteCertificates.isNotEmpty() &&
+                !localSnapshot.hasProgress &&
+                localCertificatesBeforeMerge.isEmpty()
+            ) {
+                SyncRepository.SyncDecision.None
+            } else if (localSnapshot.hasProgress || localCertificatesBeforeMerge.isNotEmpty()) {
                 SyncRepository.SyncDecision.UploadLocal(user)
             } else {
                 SyncRepository.SyncDecision.None
             }
         }
 
-        if (!localSnapshot.hasProgress) {
+        if (!localSnapshot.hasProgress && localCertificates.isEmpty()) {
             return SyncRepository.SyncDecision.RestoreCloud(
                 userId = user.uid,
                 cloudStats = cloudStats
@@ -49,6 +66,7 @@ class SyncRepositoryImpl(
             localScore > cloudScore -> SyncRepository.SyncDecision.UploadLocal(user)
             cloudLastSynced > localLastSynced -> SyncRepository.SyncDecision.RestoreCloud(user.uid, cloudStats)
             localLastSynced > cloudLastSynced -> SyncRepository.SyncDecision.UploadLocal(user)
+            localHasCertificatesMissingInCloud -> SyncRepository.SyncDecision.UploadLocal(user)
             else -> SyncRepository.SyncDecision.None
         }
     }
@@ -57,14 +75,32 @@ class SyncRepositoryImpl(
         val stats = gameStateLocalDataSource.getUserStats(user).copy(
             progression = progressionRepository.getCompletedStageRecords().toProgressionStateDTO()
         )
-        return userStatsRepository.uploadStats(user.uid, stats).onSuccess {
-            setLocalSyncTimestamp(user.uid, stats.gameState.lastSynced)
+        val statsUploadResult = userStatsRepository.uploadStats(user.uid, stats)
+        if (statsUploadResult.isFailure) {
+            return statsUploadResult
         }
+
+        val certificatesUploadResult = certificateRepository.uploadIssuedCertificates(
+            userId = user.uid,
+            recipientName = user.displayName?.takeIf { it.isNotBlank() }
+                ?: user.email?.substringBefore("@")?.takeIf { it.isNotBlank() }
+                ?: "Guest",
+            userEmail = user.email,
+            records = certificateRepository.getIssuedCertificates()
+        )
+        if (certificatesUploadResult.isFailure) {
+            return certificatesUploadResult
+        }
+
+        setLocalSyncTimestamp(user.uid, stats.gameState.lastSynced)
+        return Result.success(Unit)
     }
 
-    override fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO) {
+    override suspend fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO) {
         gameStateLocalDataSource.restoreStats(cloudStats.gameState)
         progressionRepository.replaceCompletedStageRecords(cloudStats.toCompletedStageRecords())
+        val remoteCertificates = certificateRepository.downloadIssuedCertificates(userId)
+        mergeRemoteCertificatesIntoLocal(remoteCertificates)
         Prefer.setBooleanPreference(context, "isFirstPlay", false)
         Prefer.setBooleanPreference(context, Constant.INIT_DB, true)
         setLocalSyncTimestamp(userId, cloudStats.gameState.lastSynced)
@@ -94,5 +130,27 @@ class SyncRepositoryImpl(
             Constants.UserStatsLastSyncKeyPrefix + userId,
             timestamp
         )
+    }
+
+    private fun mergeRemoteCertificatesIntoLocal(remoteCertificates: List<IssuedCertificateRecord>) {
+        if (remoteCertificates.isEmpty()) return
+        val mergedByStageId = buildMap {
+            certificateRepository.getIssuedCertificates().forEach { put(it.stageId, it) }
+            remoteCertificates.forEach { record ->
+                val existing = get(record.stageId)
+                if (existing == null || existing.issuedAtMillis <= 0L) {
+                    put(record.stageId, record)
+                }
+            }
+        }
+        certificateRepository.saveIssuedCertificates(mergedByStageId.values.toList())
+    }
+
+    private fun hasCertificatesMissingInCloud(
+        localCertificates: List<IssuedCertificateRecord>,
+        remoteCertificates: List<IssuedCertificateRecord>
+    ): Boolean {
+        val remoteStageIds = remoteCertificates.map { it.stageId }.toSet()
+        return localCertificates.any { it.stageId !in remoteStageIds }
     }
 }

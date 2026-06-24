@@ -9,7 +9,7 @@
     <string name="armenian">Հայերեն</string>
     <string name="top_5_tournament">Top 5</string>
     <string name="uefa">UEFA</string>
-    <string name="world_championship">World\nCip</string>
+    <string name="world_championship">World\nCup</string>
     <string name="versus_category">Versus</string>
     <string name="vs">"??? vs ???"</string>
     <string name="next">Next</string>
@@ -54,6 +54,10 @@
     <string name="profile_progress_percent">%d%%</string>
     <string name="profile_category_progress">Category Progress</string>
     <string name="profile_questions_answered">Questions Answered</string>
+    <string name="profile_certificates">Certificates</string>
+    <string name="profile_certificates_empty">Earn certificates to view them here.</string>
+    <string name="profile_certificate_badge">CERTIFICATE</string>
+    <string name="profile_certificate_preview">Open preview</string>
     <string name="profile_sign_out">Sign Out</string>
     <string name="profile_delete_account">Delete Account &amp; Data</string>
     <string name="profile_delete_title">Delete account and data?</string>
@@ -100,6 +104,25 @@
     <string name="certificate_signature_name">Artur Aleksandryan</string>
     <string name="certificate_signature_role">Creator, Football Quiz</string>
     <string name="certificate_continue_button">Continue Quiz</string>
+    <string name="certificate_back_button">Back</string>
+    <string name="certificate_achievement_caption">ACHIEVEMENT UNLOCKED</string>
+    <string name="certificate_official_seal">OFFICIAL\nSEAL</string>
+    <string name="certificate_caption_top5_stage">TOP 5 STAGE</string>
+    <string name="certificate_caption_top5_complete">TOP 5 COMPLETE</string>
+    <string name="certificate_caption_uefa_stage">UEFA STAGE</string>
+    <string name="certificate_caption_uefa_complete">UEFA COMPLETE</string>
+    <string name="certificate_caption_world_complete">WORLD COMPLETE</string>
+    <string name="certificate_caption_versus_stage">VERSUS STAGE</string>
+    <string name="certificate_caption_versus_complete">VERSUS COMPLETE</string>
+    <string name="certificate_caption_app_complete">ULTIMATE COMPLETION</string>
+    <string name="certificate_subheadline_top5_stage">A new Top 5 football stage has been completed.</string>
+    <string name="certificate_subheadline_top5_complete">The full Top 5 collection has been completed.</string>
+    <string name="certificate_subheadline_uefa_stage">A new UEFA stage has been completed.</string>
+    <string name="certificate_subheadline_uefa_complete">The full UEFA collection has been completed.</string>
+    <string name="certificate_subheadline_world_complete">The World block has been fully completed.</string>
+    <string name="certificate_subheadline_versus_stage">A new head-to-head challenge has been completed.</string>
+    <string name="certificate_subheadline_versus_complete">All Versus challenges have been completed.</string>
+    <string name="certificate_subheadline_app_complete">Every major Football Quiz stage has been completed.</string>
 
     // FRANSIA
 

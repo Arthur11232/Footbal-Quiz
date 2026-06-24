@@ -12,4 +12,7 @@ object Constants {
     var UserStatsLastSyncKeyPrefix: String = "user_stats_last_sync_"
     var UserStatsRestorePromptDismissedKeyPrefix: String = "user_stats_restore_prompt_dismissed_"
     var ProgressionStageAchievedAtKeyPrefix: String = "progression_stage_achieved_at_"
+    var CertificateIssuedAtKeyPrefix: String = "certificate_issued_at_"
+    var CertificateIdKeyPrefix: String = "certificate_id_"
+    var CertificateRecipientNameKeyPrefix: String = "certificate_recipient_name_"
 }

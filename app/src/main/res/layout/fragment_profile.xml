@@ -433,6 +433,73 @@
                     app:layout_constraintTop_toBottomOf="@id/tvCompletedStagesTitle" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardCertificates"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_stats_card"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCompletedStages">
+
+                <TextView
+                    android:id="@+id/tvCertificatesTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_certificates"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tvCertificatesSummary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCertificatesSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvCertificatesTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0" />
+
+                <TextView
+                    android:id="@+id/tvCertificatesEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/profile_certificates_empty"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificatesTitle"
+                    tools:text="Earn certificates to view them here" />
+
+                <HorizontalScrollView
+                    android:id="@+id/certificatesScroll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:clipToPadding="false"
+                    android:fadeScrollbars="false"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificatesTitle">
+
+                    <LinearLayout
+                        android:id="@+id/certificatesContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSignOut"
                 android:layout_width="0dp"
@@ -457,7 +524,7 @@
                 app:layout_constraintEnd_toStartOf="@id/btnDeleteAccount"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardCompletedStages" />
+                app:layout_constraintTop_toBottomOf="@id/cardCertificates" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDeleteAccount"

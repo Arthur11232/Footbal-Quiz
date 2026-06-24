@@ -4,13 +4,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
+import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
-import com.arthuralexandryan.footballquiz.presentation.progression.FreshlyCompletedStageUiModel
 import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
 import com.arthuralexandryan.footballquiz.utils.CategoryType
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -26,7 +27,8 @@ import kotlin.random.Random
 class PlayViewModel(
     private val playSessionRepository: PlaySessionRepository,
     private val authRepository: AuthRepository,
-    private val refreshProgressionUseCase: RefreshProgressionUseCase
+    private val refreshProgressionUseCase: RefreshProgressionUseCase,
+    private val certificateRepository: CertificateRepository
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -89,9 +91,45 @@ class PlayViewModel(
             isCorrect = isCorrect
         )
         val progressionSnapshot = refreshProgressionUseCase()
-        pendingAchievementCertificate = buildAchievementCertificatePayload(
-            ProgressionUiModelMapper.buildFreshlyCompletedStageUiModels(progressionSnapshot)
-        )
+        val recipientName = resolveRecipientName()
+        val newlyIssuedCertificates = progressionSnapshot.stages
+            .filter { it.isCurrentlyCompleted && it.achievedAtMillis != null }
+            .sortedBy { it.achievedAtMillis }
+            .mapNotNull { status ->
+                val achievedAtMillis = status.achievedAtMillis ?: return@mapNotNull null
+                if (certificateRepository.getIssuedCertificate(status.stageId) != null) return@mapNotNull null
+                IssuedCertificateRecord(
+                    stageId = status.stageId,
+                    certificateId = buildCertificateId(
+                        stageKey = status.stageId.value,
+                        issuedAtMillis = achievedAtMillis
+                    ),
+                    issuedAtMillis = achievedAtMillis,
+                    recipientName = recipientName
+                )
+            }
+
+        if (newlyIssuedCertificates.isNotEmpty()) {
+            certificateRepository.saveIssuedCertificates(newlyIssuedCertificates)
+            pendingAchievementCertificate = buildAchievementCertificatePayload(
+                records = newlyIssuedCertificates,
+                recipientName = recipientName
+            )
+
+            val user = authRepository.getCurrentUser()
+            if (user != null) {
+                viewModelScope.launch {
+                    certificateRepository.uploadIssuedCertificates(
+                        userId = user.uid,
+                        recipientName = recipientName,
+                        userEmail = user.email,
+                        records = newlyIssuedCertificates
+                    )
+                }
+            }
+        } else {
+            pendingAchievementCertificate = null
+        }
 
         val resetEnabled = forceReloadBarrier > placeScores.place_score
         _uiState.update {
@@ -258,29 +296,36 @@ class PlayViewModel(
     }
 
     private fun buildAchievementCertificatePayload(
-        stages: List<FreshlyCompletedStageUiModel>
+        records: List<IssuedCertificateRecord>,
+        recipientName: String
     ): AchievementCertificatePayload? {
+        val stages = records.map { record ->
+            ProgressionUiModelMapper.buildFreshlyCompletedStageUiModel(
+                stageId = record.stageId,
+                achievedAtMillis = record.issuedAtMillis
+            )
+        }
         val primaryStage = stages.firstOrNull() ?: return null
+        val primaryRecord = records.firstOrNull() ?: return null
+
+        return AchievementCertificatePayload(
+            primaryStageId = primaryStage.stageId.value,
+            primaryStageTitleResId = primaryStage.titleResId,
+            additionalStageTitleResIds = stages.drop(1).map { it.titleResId },
+            recipientName = recipientName,
+            issuedAtMillis = primaryRecord.issuedAtMillis,
+            certificateId = primaryRecord.certificateId
+        )
+    }
+
+    private fun resolveRecipientName(): String {
         val user = authRepository.getCurrentUser()
-        val recipientName = user?.displayName
+        return user?.displayName
             ?.takeIf { it.isNotBlank() }
             ?: user?.email
                 ?.substringBefore("@")
                 ?.takeIf { it.isNotBlank() }
             ?: "Guest"
-        val issuedAtMillis = primaryStage.achievedAtMillis
-        val certificateId = buildCertificateId(
-            stageKey = primaryStage.stageId.value,
-            issuedAtMillis = issuedAtMillis
-        )
-
-        return AchievementCertificatePayload(
-            primaryStageTitleResId = primaryStage.titleResId,
-            additionalStageTitleResIds = stages.drop(1).map { it.titleResId },
-            recipientName = recipientName,
-            issuedAtMillis = issuedAtMillis,
-            certificateId = certificateId
-        )
     }
 
     private fun buildCertificateId(stageKey: String, issuedAtMillis: Long): String {

@@ -5,6 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class AchievementCertificatePayload(
+    val primaryStageId: String,
     val primaryStageTitleResId: Int,
     val additionalStageTitleResIds: List<Int> = emptyList(),
     val recipientName: String,
