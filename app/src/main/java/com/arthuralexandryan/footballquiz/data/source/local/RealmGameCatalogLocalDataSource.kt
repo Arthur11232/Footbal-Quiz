@@ -132,7 +132,7 @@ class RealmGameCatalogLocalDataSource : GameCatalogLocalDataSource {
             )
             "kubki" -> GameLaunchData(
                 questions = realm.where(DB_Europ_Championship::class.java).findAll().map {
-                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "Europe Championship", CategoryType.UEFA, it.questionId)
+                    GameObjectSerializable(it.question, it.answer_A, it.answer_B, it.answer_C, it.answer_D, it.right_answer, it.isAnswered, "European Championship", CategoryType.UEFA, it.questionId)
                 },
                 placeScores = getUefaPlaceScore(realm, entryKey)
             )

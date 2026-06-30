@@ -136,6 +136,23 @@ class DB_Helper {
         }
     }
 
+    fun hasEmptyQuestionBuckets(): Boolean {
+        return Realm.getDefaultInstance().use { realm ->
+            hasNoQuestions(realm, DB_France::class.java) ||
+                hasNoQuestions(realm, DB_Germany::class.java) ||
+                hasNoQuestions(realm, DB_Italy::class.java) ||
+                hasNoQuestions(realm, DB_England::class.java) ||
+                hasNoQuestions(realm, DB_Spain::class.java) ||
+                hasNoQuestions(realm, DB_Super_Cup::class.java) ||
+                hasNoQuestions(realm, DB_Europa_League::class.java) ||
+                hasNoQuestions(realm, DB_Europ_Championship::class.java) ||
+                hasNoQuestions(realm, DB_Champions_League::class.java) ||
+                hasNoQuestions(realm, DB_World_Championship::class.java) ||
+                hasNoQuestions(realm, DB_VS_Ronaldo_Messi::class.java) ||
+                hasNoQuestions(realm, DB_VS_RealM_Barcelona::class.java)
+        }
+    }
+
     private fun setDefaultAllScores(realm: Realm) {
         val scores = FQ_Scores().apply {
                 id = 0; fq_all = 0; top5 = 200; top5_answered = 0
@@ -169,5 +186,10 @@ class DB_Helper {
         return realm.where(modelClass)
             .equalTo("isAnswered", true)
             .count() > 0
+    }
+
+    private fun <T : RealmModel> hasNoQuestions(realm: Realm, modelClass: Class<T>): Boolean {
+        return realm.where(modelClass)
+            .count() == 0L
     }
 }
