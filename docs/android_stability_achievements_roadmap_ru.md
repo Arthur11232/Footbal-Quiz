@@ -7,7 +7,7 @@
 - внедрение notifications;
 - внедрение поздравлений, сертификатов и email-доставки.
 
-Текущая дата фиксации плана: **30 июня 2026**
+Текущая дата фиксации плана: **1 июля 2026**
 
 Связанные документы:
 - [implementation_plan_android_stability_to_certificates_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/implementation_plan_android_stability_to_certificates_ru.md)
@@ -40,7 +40,7 @@
 - не сломать текущий продукт;
 - строить новые слои поверх стабильной базы.
 
-## 1.1. Актуальный статус на 30 июня 2026
+## 1.1. Актуальный статус на 1 июля 2026
 
 - `Phase 1 — Android Stability 95%+`:
   - считается завершённой по фактическому состоянию проекта;
@@ -52,10 +52,14 @@
   - технический foundation уже внедрён;
   - permission flow, FCM token lifecycle, device binding, auth-only sync, basic preferences и reward-ready local notification уже присутствуют в коде;
   - полноценный product/UI слой notifications осознанно отложен до завершения всех остальных core phase-ов roadmap.
-- `Phase 4-6`:
+- `Phase 4`:
+  - foundation-слой фактически завершён;
+  - reward idempotency, guest pending reward, post-auth consume flow и более безопасное restore/upload поведение уже внедрены;
+  - оставшаяся работа переносится не в foundation, а в product polishing следующих phase-ов.
+- `Phase 5-6`:
   - реализованы частично раньше плана;
   - achievement trigger, congratulations flow и in-app certificate experience уже присутствуют в кодовой базе;
-  - однако roadmap по-прежнему считает их не полностью закрытыми до завершения notification/email части и формального product polishing.
+  - однако product contract, единые правила выдачи и финальная UX-полировка ещё не закрыты.
 
 ### Практическая интерпретация roadmap
 
@@ -65,8 +69,9 @@
 2. `Phase 2` — done
 3. `Phase 3A` — technical foundation done
 4. `Phase 3B` — notification product/UI layer postponed until all other core phases are finished
-5. `Phase 4-6` — partially implemented, require polishing
-6. `Phase 7` — not started as a full delivery feature
+5. `Phase 4` — done on foundation level
+6. `Phase 5-6` — partially implemented, require polishing
+7. `Phase 7` — not started as a full delivery feature
 
 ---
 
@@ -287,7 +292,13 @@ Notifications лучше внедрять до сертификатов, пот�
 
 ### Статус
 
-Часть `Phase 4` уже реализована раньше плана, но фаза не считается формально закрытой как отдельный roadmap milestone.
+`Phase 4` на текущий момент считается завершённой как foundation milestone.
+
+Это означает:
+- completion/stage layer отделён от issued certificate layer заметно чище, чем раньше;
+- guest completion больше не выпускает certificate напрямую;
+- pending reward хранится отдельно и может быть дооформлен после authentication;
+- auth/local/cloud поведение стало устойчивее для перехода к следующим product phase-ам.
 
 ---
 
@@ -319,7 +330,10 @@ Notifications лучше внедрять до сертификатов, пот�
 
 ### Статус
 
-Основной congratulations flow уже существует в коде, но остаётся частью незавершённого общего reward pipeline и требует финального product polishing.
+Основной congratulations flow уже существует в коде, но требует финального product polishing:
+- нужно формально закрепить единые правила показа;
+- нужно выровнять guest/auth UX;
+- нужно определить финальный контракт между congratulations screen и certificate preview.
 
 ---
 
@@ -329,11 +343,11 @@ Notifications лучше внедрять до сертификатов, пот�
 
 Добавить персонализированный сертификат как награду за этап.
 
-### Первая версия (рекомендуется)
-
 ### Статус
 
 In-app certificate experience уже частично реализован и используется в текущем flow, включая preview и profile presentation.
+
+### Первая версия (рекомендуется)
 
 Сначала не PDF, а:
 - красивый in-app certificate preview;
@@ -354,6 +368,12 @@ In-app certificate experience уже частично реализован и и
 
 - пользователь после прохождения этапа видит персональный сертификат;
 - guest понимает, что для персонального сертификата нужна регистрация.
+
+### Что остаётся сделать
+
+- привести certificate preview к единым правилам для всех stage;
+- убедиться, что profile показывает сертификаты и completed stages без смысловых расхождений;
+- улучшить читаемость и product feel preview/profile experience при необходимости.
 
 ---
 
@@ -386,6 +406,15 @@ In-app certificate experience уже частично реализован и и
 - авторизованный пользователь получает сертификат на email;
 - guest может конвертироваться в authenticated и потом получить сертификат.
 
+### Статус
+
+`Phase 7` ещё не начата как полноценная delivery-feature.
+
+На текущий момент:
+- нет отдельного delivery orchestration слоя;
+- нет backend/email pipeline;
+- нет продуктавого статуса отправлено / не отправлено / ожидает отправки.
+
 ---
 
 ## 10. Что не делать слишком рано
@@ -413,16 +442,16 @@ In-app certificate experience уже частично реализован и и
 5. реализовать notifications technical foundation
 
 ### Current focus
-6. дополировать achievement / congratulations / certificate pipeline
-7. укрепить cloud/local behaviour вокруг reward and certificate state
-8. удерживать Android release-state в стабильном состоянии
+6. финализировать product contract для congratulations / certificate UX
+7. выровнять единые правила выдачи и показа сертификатов по всем stage
+8. удерживать cloud/local reward behaviour в стабильном состоянии
+9. удерживать Android release-state в стабильном состоянии
 
 ### Postponed after core phases
-9. реализовать notification product/UI layer
-10. сделать bell icon + notification center + history/read-model
+10. реализовать notification product/UI layer
+11. сделать bell icon + notification center + history/read-model
 
 ### Later
-11. сделать guest -> auth reward flow полностью бесшовным
 12. сделать email delivery
 
 ---

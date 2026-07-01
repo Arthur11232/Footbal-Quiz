@@ -38,40 +38,32 @@
 
 - progression stages уже считаются и имеют стабильные `stageId`;
 - completed stage определяется детерминированно;
-- idempotency уже частично обеспечивается через локально сохранённые issued certificates;
+- idempotency удерживается через локально сохранённые issued certificates и отдельный pending reward state;
 - certificate/reward trigger уже используется в `PlayViewModel`;
-- profile умеет тихо довыпускать недостающие сертификаты для уже достигнутых stages;
+- guest completion больше не выпускает certificate напрямую;
+- pending reward конвертируется в certificate после authentication;
+- `StartPageViewModel` и `ProfileViewModel` умеют consume pending rewards после auth;
+- profile recovery больше не обходит guest pending reward логику;
 - local/cloud certificate merge уже существует как часть текущего sync pipeline.
 
 ## Что остаётся незакрытым
 
-### 1. Явная domain-граница между сущностями
+### 1. Формально зафиксировать итоговый domain contract в docs
 
-Сейчас в проекте частично смешаны следующие понятия:
+Теперь важно удерживать в документации и в дальнейшей разработке разницу между сущностями:
 - `stage completed`
 - `achievement earned`
+- `pending reward`
 - `certificate issued`
 - `reward ready`
 
-Нужно формально зафиксировать и удерживать разницу между ними.
+### 2. Не размыть foundation во время product polishing
 
-### 2. Явный guest pending reward state
-
-Сейчас guest achievement flow работает, но не оформлен как отдельное понятное domain state.
-
-Нужно определить:
-- как хранится pending reward;
-- чем он отличается от уже выданного сертификата;
-- как он дооформляется после authentication;
-- как не допустить двойной выдачи после login/restore/sync.
-
-### 3. Более явная idempotency-модель
-
-Нужно убедиться, что для одного и того же `stageId`:
-- achievement не создаётся повторно;
-- pending reward не создаётся повторно;
-- certificate не перевыпускается бесконтрольно;
-- cloud restore не создаёт дублирующее состояние.
+Следующие phase-ы не должны снова смешать:
+- domain completion logic;
+- certificate issuance logic;
+- notification logic;
+- будущую email delivery logic.
 
 ## Acceptance Criteria
 
@@ -91,8 +83,9 @@
 
 ## Текущий статус
 
-`Phase 4` — частично реализована раньше плана, но формально ещё не закрыта.
+`Phase 4` — завершена как foundation milestone.
 
 Практически это означает:
 - базовый achievement/certificate pipeline уже есть;
-- следующая реальная задача внутри `Phase 4` — привести `guest pending reward` к явной и чистой domain-модели.
+- guest pending reward приведён к явной и чистой domain-модели;
+- следующая реальная работа лежит уже в `Phase 5-7`, а не внутри foundation.

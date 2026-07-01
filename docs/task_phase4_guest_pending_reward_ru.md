@@ -204,12 +204,24 @@
 - можно задублировать certificates при login + profile recovery;
 - можно сломать cloud merge, если не удержать idempotency на `stageId`.
 
+## Что фактически внедрено
+
+- создан `PendingRewardRepository` с локальным хранением;
+- в `PlayViewModel` добавлена guest/auth развилка для reward issuance;
+- guest completion больше не выпускает certificate напрямую;
+- после authentication pending rewards конвертируются в issued certificates;
+- start/profile flow умеют consume pending rewards;
+- profile recovery больше не выпускает сертификаты у guest в обход pending reward модели;
+- foundation подготовлена к следующему слою product polishing.
+
 ## Статус
 
-`Planned`
+`Completed`
 
-Следующий практический шаг после согласования этого task:
+## Следующий практический шаг
 
-1. создать `PendingRewardRepository`
-2. внедрить guest/auth branching в `PlayViewModel`
-3. добавить consume-flow после authentication
+Переходить к `Phase 5-6`:
+
+1. зафиксировать единые продуктовые правила показа congratulations screen;
+2. выровнять certificate preview UX между stage-ами;
+3. решить, как именно будет выглядеть переход к будущей email delivery.
