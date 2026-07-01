@@ -18,4 +18,30 @@ interface SettingsRepository {
 
     fun isAutoRestorePromptDismissed(userId: String): Boolean
     fun setAutoRestorePromptDismissed(userId: String, dismissed: Boolean)
+
+    fun getNotificationInstallationId(): String
+
+    fun getCachedNotificationToken(): String?
+    fun setCachedNotificationToken(token: String?)
+
+    fun getNotificationBoundUserId(): String?
+    fun setNotificationBoundUserId(userId: String?)
+
+    fun getNotificationLastSyncedAt(): Long
+    fun setNotificationLastSyncedAt(timestampMillis: Long)
+
+    fun areNotificationsEnabled(): Boolean
+    fun setNotificationsEnabled(enabled: Boolean)
+
+    fun areProgressNotificationsEnabled(): Boolean
+    fun setProgressNotificationsEnabled(enabled: Boolean)
+
+    fun areRewardNotificationsEnabled(): Boolean
+    fun setRewardNotificationsEnabled(enabled: Boolean)
+
+    fun areUpdateNotificationsEnabled(): Boolean
+    fun setUpdateNotificationsEnabled(enabled: Boolean)
+
+    fun isNotificationPermissionPromptShown(userId: String): Boolean
+    fun setNotificationPermissionPromptShown(userId: String, shown: Boolean)
 }

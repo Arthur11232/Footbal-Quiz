@@ -20,6 +20,7 @@
     <string name="profile_sync_error">Սինխրոնացման սխալ: %s</string>
     <string name="profile_restore_title">Վերականգնել առաջընթացը</string>
     <string name="profile_restore_message">"Հայտնաբերվել է ամպային պահպանում ավելի բարձր միավորով (%d): Ցանկանու՞մ եք վերականգնել այն:"</string>
+    <string name="profile_restore_conflict_message">"Հայտնաբերվել է ամպային պահպանված առաջընթաց (%1$d)։ Եթե այն չվերականգնեք և շարունակեք այս սարքի ընթացիկ առաջընթացով, նախորդ ամպային առաջընթացը ժամանակի ընթացքում կփոխարինվի այս սարքի առաջընթացով։"</string>
     <string name="profile_manual_restore_message">"Ամպային միավոր: %d: Վերականգնե՞լ այս առաջընթացը սարքում:"</string>
     <string name="profile_restore_confirm">Վերականգնել</string>
     <string name="profile_restore_cancel">Չեղարկել</string>
@@ -41,6 +42,17 @@
     <string name="profile_progress_percent">%d%%</string>
     <string name="profile_category_progress">Առաջընթաց ըստ կատեգորիաների</string>
     <string name="profile_questions_answered">Պատասխանված հարցեր</string>
+    <string name="profile_notifications">Ծանուցումներ</string>
+    <string name="profile_notifications_all">Բոլոր ծանուցումները</string>
+    <string name="profile_notifications_progress">Առաջընթացի հիշեցումներ</string>
+    <string name="profile_notifications_rewards">Պարգևներ և վկայագրեր</string>
+    <string name="profile_notifications_updates">Թարմացումներ և նոր փուլեր</string>
+    <string name="profile_notifications_status_on">Ակտիվ են</string>
+    <string name="profile_notifications_status_off">Անջատված են</string>
+    <string name="profile_notifications_status_permission_required">Պետք է թույլտվություն</string>
+    <string name="profile_notifications_permission_hint">Միացրեք համակարգային ծանուցումների թույլտվությունը, որպեսզի այս սարքում ստանաք զգուշացումներ։</string>
+    <string name="profile_notifications_sync_failed">Չհաջողվեց թարմացնել ծանուցումների կարգավորումները։ Խնդրում ենք կրկին փորձել։</string>
+    <string name="profile_notifications_permission_denied">Ծանուցումների թույլտվությունը դեռ անջատված է</string>
     <string name="profile_certificates">Վկայագրեր</string>
     <string name="profile_certificates_empty">Ստացեք վկայագրեր, որպեսզի դրանք երևան այստեղ։</string>
     <string name="profile_certificate_badge">ՎԿԱՅԱԳԻՐ</string>
@@ -2314,5 +2326,15 @@
     <string name="new_no">Ոչ</string>
     <string name="not_cong_title">Շնորհավորանքներ</string>
     <string name="not_cong_body">Դուք արդեն կարող եք խաղալ %s</string>
+    <string name="notifications_permission_title">Մնացեք խաղի մեջ</string>
+    <string name="notifications_permission_message">Թույլատրեք ծանուցումները, որպեսզի ստանաք առաջընթացի հիշեցումներ, պարգևների ազդանշաններ և նոր փուլերի թարմացումներ։</string>
+    <string name="notifications_permission_allow">Թույլատրել</string>
+    <string name="notifications_permission_not_now">Ոչ հիմա</string>
+    <string name="notifications_permission_enabled">Ծանուցումները միացված են</string>
+    <string name="notification_channel_name">Football Quiz</string>
+    <string name="notification_channel_description">Football Quiz-ի առաջընթացի, պարգևների և նոր փուլերի ծանուցումներ</string>
     <string name="coming_soon_game">Դինամո Կիև\nvs\nՍպարտակ Մոսկվա</string>
+    <string name="reward_notification_title">Նոր պարգևը պատրաստ է</string>
+    <string name="reward_notification_body_single">«%1$s» փուլի ձեր վկայագիրը արդեն սպասում է ձեզ Profile-ում։</string>
+    <string name="reward_notification_body_multiple">Profile-ում ձեզ սպասում են %1$d նոր վկայագրեր։</string>
 </resources>

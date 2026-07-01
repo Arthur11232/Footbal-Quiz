@@ -6,13 +6,18 @@ import androidx.lifecycle.viewModelScope
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.QuestionSyncCompatibilityException
+import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.MarkNotificationPermissionPromptShownUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShouldPromptNotificationPermissionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.BuildStartPageStateUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.EnsureLocalizationSyncUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.ResolveStartCloudSyncUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.RestoreStartCloudStatsUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.SignInWithGoogleTokenUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.UploadStartLocalStatsUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotificationSessionUseCase
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -26,12 +31,17 @@ import kotlinx.coroutines.launch
 
 class StartPageViewModel(
     private val authRepository: AuthRepository,
+    private val settingsRepository: SettingsRepository,
     private val buildStartPageStateUseCase: BuildStartPageStateUseCase,
     private val ensureLocalizationSyncUseCase: EnsureLocalizationSyncUseCase,
     private val signInWithGoogleTokenUseCase: SignInWithGoogleTokenUseCase,
     private val resolveStartCloudSyncUseCase: ResolveStartCloudSyncUseCase,
     private val uploadStartLocalStatsUseCase: UploadStartLocalStatsUseCase,
-    private val restoreStartCloudStatsUseCase: RestoreStartCloudStatsUseCase
+    private val restoreStartCloudStatsUseCase: RestoreStartCloudStatsUseCase,
+    private val syncNotificationSessionUseCase: SyncNotificationSessionUseCase,
+    private val shouldPromptNotificationPermissionUseCase: ShouldPromptNotificationPermissionUseCase,
+    private val markNotificationPermissionPromptShownUseCase: MarkNotificationPermissionPromptShownUseCase,
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(StartPageUiState())
@@ -145,7 +155,12 @@ class StartPageViewModel(
                 val user = authResult.user
                 applyState(user)
                 if (user != null) {
-                    syncCloudProgressIfNeeded(user)
+                    consumePendingRewardsAfterAuth(user)
+                    syncNotificationSessionUseCase(user)
+                    val cloudRestorePending = syncCloudProgressIfNeeded(user)
+                    if (!cloudRestorePending) {
+                        maybePromptNotificationPermission(user)
+                    }
                 }
             } else {
                 applyState(null)
@@ -158,36 +173,95 @@ class StartPageViewModel(
         refreshState()
         val currentUser = authRepository.getCurrentUser() ?: return
         viewModelScope.launch {
-            syncCloudProgressIfNeeded(currentUser)
+            consumePendingRewardsAfterAuth(currentUser)
+            syncNotificationSessionUseCase(currentUser)
+            val cloudRestorePending = syncCloudProgressIfNeeded(currentUser)
+            if (!cloudRestorePending) {
+                maybePromptNotificationPermission(currentUser)
+            }
         }
     }
 
     fun onCloudRestoreConfirmed(userId: String, cloudStats: UserStatsDTO) {
         viewModelScope.launch {
+            settingsRepository.setAutoRestorePromptDismissed(userId, false)
             restoreStartCloudStatsUseCase(userId, cloudStats)
             refreshState()
             emitToast(R.string.profile_progress_restored)
         }
     }
 
-    private suspend fun syncCloudProgressIfNeeded(user: FirebaseUser) {
-        when (val decision = resolveStartCloudSyncUseCase(user)) {
-            SyncRepository.SyncDecision.None -> Unit
-            is SyncRepository.SyncDecision.RestoreCloud -> {
+    fun onKeepLocalProgressConfirmed(userId: String) {
+        settingsRepository.setAutoRestorePromptDismissed(userId, true)
+    }
+
+    fun onNotificationPermissionResult(granted: Boolean) {
+        val currentUser = authRepository.getCurrentUser() ?: return
+        viewModelScope.launch {
+            syncNotificationSessionUseCase(currentUser)
+            if (granted) {
+                emitToast(R.string.notifications_permission_enabled)
+            }
+        }
+    }
+
+    private suspend fun syncCloudProgressIfNeeded(user: FirebaseUser): Boolean {
+        val decision = resolveStartCloudSyncUseCase(user)
+        if (
+            decision is SyncRepository.SyncDecision.PromptConflict &&
+            settingsRepository.isAutoRestorePromptDismissed(user.uid)
+        ) {
+            return false
+        }
+
+        when (decision) {
+            SyncRepository.SyncDecision.None -> return false
+            is SyncRepository.SyncDecision.AutoRestoreCloud -> {
+                restoreStartCloudStatsUseCase(decision.userId, decision.cloudStats)
+                refreshState()
+                _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_progress_restored))
+                return false
+            }
+            is SyncRepository.SyncDecision.PromptConflict -> {
                 _effects.emit(
                     StartPageEffect.PromptCloudRestore(
                         userId = decision.userId,
                         cloudStats = decision.cloudStats
                     )
                 )
+                return true
             }
             is SyncRepository.SyncDecision.UploadLocal -> {
                 uploadStartLocalStatsUseCase(decision.user)
                     .onSuccess {
                         _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_cloud_backup_created))
                     }
+                return false
             }
         }
+    }
+
+    private suspend fun maybePromptNotificationPermission(user: FirebaseUser) {
+        if (!shouldPromptNotificationPermissionUseCase(user.uid)) return
+        markNotificationPermissionPromptShownUseCase(user.uid)
+        _effects.emit(StartPageEffect.PromptNotificationPermission(user.uid))
+    }
+
+    private suspend fun consumePendingRewardsAfterAuth(user: FirebaseUser) {
+        consumePendingRewardsAfterAuthUseCase(
+            userId = user.uid,
+            recipientName = resolveRecipientName(user),
+            userEmail = user.email
+        )
+    }
+
+    private fun resolveRecipientName(user: FirebaseUser): String {
+        return user.displayName
+            ?.takeIf { it.isNotBlank() }
+            ?: user.email
+                ?.substringBefore("@")
+                ?.takeIf { it.isNotBlank() }
+            ?: "Player"
     }
 
     private fun applyState(user: FirebaseUser?) {

@@ -221,6 +221,7 @@ class PlayFragment : Fragment(), ShowAds {
     private fun navigateToAchievementCertificate(
         payload: com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
     ) {
+        playViewModel.onAchievementCertificateOpened()
         val args = Bundle().apply {
             putParcelable("certificatePayload", payload)
         }
@@ -562,6 +563,7 @@ class PlayFragment : Fragment(), ShowAds {
     }
 
     override fun onStop() {
+        playViewModel.onHostStopped()
         playViewModel.persistCurrentQuestionOnStop()
         playViewModel.syncProgressIfSignedIn()
         super.onStop()

@@ -25,12 +25,13 @@ object DialogManager {
         primaryText: CharSequence,
         secondaryText: CharSequence,
         cancelOutside: Boolean = true,
+        cancelable: Boolean = true,
         onDismiss: (() -> Unit)? = null,
         onPrimaryClick: () -> Unit,
         onSecondaryClick: (() -> Unit)? = null
     ): Dialog {
         val dialogView = inflater.inflate(R.layout.dialog_cloud_sync, null)
-        val dialog = createStyledDialog(context, dialogView, cancelOutside, onDismiss)
+        val dialog = createStyledDialog(context, dialogView, cancelOutside, cancelable, onDismiss)
 
         dialogView.findViewById<TextView>(R.id.dialogTitle).text = title
         dialogView.findViewById<TextView>(R.id.dialogMessage).text = message
@@ -61,7 +62,7 @@ object DialogManager {
         onConfirm: () -> Unit
     ): Dialog {
         val dialogView = inflater.inflate(R.layout.dialog_new_game, null)
-        val dialog = createStyledDialog(context, dialogView, cancelOutside = true)
+        val dialog = createStyledDialog(context, dialogView, cancelOutside = true, cancelable = true)
 
         dialogView.findViewById<AppCompatButton>(R.id.btn_yes).setOnClickListener {
             dialog.dismiss()
@@ -83,7 +84,7 @@ object DialogManager {
         onSave: () -> Unit
     ): Dialog {
         val dialogView = inflater.inflate(R.layout.dialog_language, null)
-        val dialog = createStyledDialog(context, dialogView, cancelOutside = true)
+        val dialog = createStyledDialog(context, dialogView, cancelOutside = true, cancelable = true)
 
         val group = dialogView.findViewById<RadioGroup>(R.id.app_languages)
         group.check(checkedLanguageId)
@@ -124,10 +125,12 @@ object DialogManager {
         context: Context,
         contentView: View,
         cancelOutside: Boolean,
+        cancelable: Boolean,
         onDismiss: (() -> Unit)? = null
     ): Dialog {
         return Dialog(context, R.style.FQ_CustomDialog).apply {
             setContentView(contentView)
+            setCancelable(cancelable)
             setCanceledOnTouchOutside(cancelOutside)
             setOnDismissListener { onDismiss?.invoke() }
             window?.apply {

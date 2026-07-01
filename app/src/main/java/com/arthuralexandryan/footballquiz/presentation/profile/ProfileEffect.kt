@@ -26,6 +26,7 @@ sealed class ProfileEffect {
         val payload: AchievementCertificatePayload
     ) : ProfileEffect()
 
+    data object RequestNotificationPermission : ProfileEffect()
     data object ShowDeleteAccountDialog : ProfileEffect()
     data object NavigateBackToStart : ProfileEffect()
 }

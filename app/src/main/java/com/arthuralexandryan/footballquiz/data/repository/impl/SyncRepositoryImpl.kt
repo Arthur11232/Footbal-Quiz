@@ -3,6 +3,7 @@ package com.arthuralexandryan.footballquiz.data.repository.impl
 import android.content.Context
 import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.ProgressionRepository
+import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
@@ -20,37 +21,27 @@ class SyncRepositoryImpl(
     private val gameStateLocalDataSource: GameStateLocalDataSource,
     private val userStatsRepository: UserStatsRepository,
     private val progressionRepository: ProgressionRepository,
-    private val certificateRepository: CertificateRepository
+    private val certificateRepository: CertificateRepository,
+    private val settingsRepository: SettingsRepository
 ) : SyncRepository {
 
     override suspend fun resolveSyncDecision(user: FirebaseUser): SyncRepository.SyncDecision {
         val localSnapshot = gameStateLocalDataSource.getProgressSnapshot()
         val cloudStats = userStatsRepository.downloadStats(user.uid)
-        val localCertificatesBeforeMerge = certificateRepository.getIssuedCertificates()
         val remoteCertificates = certificateRepository.downloadIssuedCertificates(user.uid)
         mergeRemoteCertificatesIntoLocal(remoteCertificates)
-        val localCertificates = certificateRepository.getIssuedCertificates()
-        val localHasCertificatesMissingInCloud = hasCertificatesMissingInCloud(
-            localCertificates = localCertificates,
-            remoteCertificates = remoteCertificates
-        )
+        val localHasProgress = localSnapshot.hasProgress
 
         if (cloudStats == null || !cloudStats.hasProgress()) {
-            return if (
-                remoteCertificates.isNotEmpty() &&
-                !localSnapshot.hasProgress &&
-                localCertificatesBeforeMerge.isEmpty()
-            ) {
-                SyncRepository.SyncDecision.None
-            } else if (localSnapshot.hasProgress || localCertificatesBeforeMerge.isNotEmpty()) {
+            return if (localHasProgress) {
                 SyncRepository.SyncDecision.UploadLocal(user)
             } else {
                 SyncRepository.SyncDecision.None
             }
         }
 
-        if (!localSnapshot.hasProgress && localCertificates.isEmpty()) {
-            return SyncRepository.SyncDecision.RestoreCloud(
+        if (!localHasProgress) {
+            return SyncRepository.SyncDecision.AutoRestoreCloud(
                 userId = user.uid,
                 cloudStats = cloudStats
             )
@@ -61,13 +52,10 @@ class SyncRepositoryImpl(
         val cloudLastSynced = cloudStats.gameState.lastSynced
         val localLastSynced = getLocalSyncTimestamp(user.uid)
 
-        return when {
-            cloudScore > localScore -> SyncRepository.SyncDecision.RestoreCloud(user.uid, cloudStats)
-            localScore > cloudScore -> SyncRepository.SyncDecision.UploadLocal(user)
-            cloudLastSynced > localLastSynced -> SyncRepository.SyncDecision.RestoreCloud(user.uid, cloudStats)
-            localLastSynced > cloudLastSynced -> SyncRepository.SyncDecision.UploadLocal(user)
-            localHasCertificatesMissingInCloud -> SyncRepository.SyncDecision.UploadLocal(user)
-            else -> SyncRepository.SyncDecision.None
+        return if (cloudScore == localScore && cloudLastSynced == localLastSynced) {
+            SyncRepository.SyncDecision.None
+        } else {
+            SyncRepository.SyncDecision.PromptConflict(user.uid, cloudStats)
         }
     }
 
@@ -93,6 +81,7 @@ class SyncRepositoryImpl(
         }
 
         setLocalSyncTimestamp(user.uid, stats.gameState.lastSynced)
+        settingsRepository.setAutoRestorePromptDismissed(user.uid, false)
         return Result.success(Unit)
     }
 
@@ -104,6 +93,7 @@ class SyncRepositoryImpl(
         Prefer.setBooleanPreference(context, "isFirstPlay", false)
         Prefer.setBooleanPreference(context, Constant.INIT_DB, true)
         setLocalSyncTimestamp(userId, cloudStats.gameState.lastSynced)
+        settingsRepository.setAutoRestorePromptDismissed(userId, false)
     }
 
     private fun UserStatsDTO.hasProgress(): Boolean {
@@ -144,13 +134,5 @@ class SyncRepositoryImpl(
             }
         }
         certificateRepository.saveIssuedCertificates(mergedByStageId.values.toList())
-    }
-
-    private fun hasCertificatesMissingInCloud(
-        localCertificates: List<IssuedCertificateRecord>,
-        remoteCertificates: List<IssuedCertificateRecord>
-    ): Boolean {
-        val remoteStageIds = remoteCertificates.map { it.stageId }.toSet()
-        return localCertificates.any { it.stageId !in remoteStageIds }
     }
 }

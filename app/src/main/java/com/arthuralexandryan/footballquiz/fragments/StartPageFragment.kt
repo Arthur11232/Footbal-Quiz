@@ -1,5 +1,6 @@
 package com.arthuralexandryan.footballquiz.fragments
 
+import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -46,6 +47,12 @@ class StartPageFragment : Fragment() {
     private val settingsRepository: SettingsRepository by inject()
     private val startPageViewModel: StartPageViewModel by viewModel()
     private var restoreDialogShowing: Boolean = false
+
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (_binding == null) return@registerForActivityResult
+            startPageViewModel.onNotificationPermissionResult(granted)
+        }
 
     private val signInLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (_binding == null) return@registerForActivityResult
@@ -156,13 +163,14 @@ class StartPageFragment : Fragment() {
             context = requireContext(),
             inflater = layoutInflater,
             title = getString(R.string.profile_restore_title),
-            message = getString(R.string.profile_restore_message, cloudStats.gameState.total),
+            message = getString(R.string.profile_restore_conflict_message, cloudStats.gameState.total),
             primaryText = getString(R.string.profile_restore_confirm),
             secondaryText = getString(R.string.profile_restore_cancel),
-            cancelOutside = true,
+            cancelOutside = false,
+            cancelable = false,
             onDismiss = {
                 if (!handledByButton) {
-                    settingsRepository.setAutoRestorePromptDismissed(userId, true)
+                    startPageViewModel.onKeepLocalProgressConfirmed(userId)
                 }
                 restoreDialogShowing = false
             },
@@ -172,7 +180,7 @@ class StartPageFragment : Fragment() {
             },
             onSecondaryClick = {
                 handledByButton = true
-                settingsRepository.setAutoRestorePromptDismissed(userId, true)
+                startPageViewModel.onKeepLocalProgressConfirmed(userId)
             }
         )
     }
@@ -272,6 +280,9 @@ class StartPageFragment : Fragment() {
                         StartPageEffect.OpenProfile -> {
                             findNavController().navigate(R.id.action_start_to_profile)
                         }
+                        is StartPageEffect.PromptNotificationPermission -> {
+                            showNotificationPermissionDialog()
+                        }
                         is StartPageEffect.PromptCloudRestore -> {
                             showRestoreProgressDialog(effect.userId, effect.cloudStats)
                         }
@@ -286,6 +297,21 @@ class StartPageFragment : Fragment() {
                 }
             }
         }
+    }
+
+    private fun showNotificationPermissionDialog() {
+        if (!isAdded) return
+        DialogManager.showActionDialog(
+            context = requireContext(),
+            inflater = layoutInflater,
+            title = getString(R.string.notifications_permission_title),
+            message = getString(R.string.notifications_permission_message),
+            primaryText = getString(R.string.notifications_permission_allow),
+            secondaryText = getString(R.string.notifications_permission_not_now),
+            onPrimaryClick = {
+                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        )
     }
 
     private fun setAgreements() {

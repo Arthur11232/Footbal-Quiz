@@ -1,5 +1,6 @@
 package com.arthuralexandryan.footballquiz.fragments
 
+import android.Manifest
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -32,10 +33,16 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private val profileViewModel: ProfileViewModel by viewModel()
+    private var isBindingNotificationSwitches: Boolean = false
 
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let { profileViewModel.onPhotoSelected(it) }
     }
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (_binding == null) return@registerForActivityResult
+            profileViewModel.onNotificationPermissionResult(granted)
+        }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
@@ -53,6 +60,7 @@ class ProfileFragment : Fragment() {
         binding.btnRestoreCloud.setOnClickListener { profileViewModel.onRestoreCloudClicked() }
         binding.btnOverwriteCloud.setOnClickListener { profileViewModel.onOverwriteCloudClicked() }
         binding.onBack.setOnClickListener { findNavController().navigateUp() }
+        initNotificationListeners()
 
         profileViewModel.loadProfile()
     }
@@ -99,6 +107,9 @@ class ProfileFragment : Fragment() {
                         is ProfileEffect.OpenCertificatePreview -> {
                             openCertificatePreview(effect.payload)
                         }
+                        ProfileEffect.RequestNotificationPermission -> {
+                            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                        }
                         ProfileEffect.ShowDeleteAccountDialog -> {
                             showDeleteAccountDialog()
                         }
@@ -108,6 +119,25 @@ class ProfileFragment : Fragment() {
                     }
                 }
             }
+        }
+    }
+
+    private fun initNotificationListeners() = binding.run {
+        switchNotificationsAll.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onNotificationsEnabledChanged(isChecked)
+        }
+        switchNotificationsProgress.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onProgressNotificationsEnabledChanged(isChecked)
+        }
+        switchNotificationsRewards.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onRewardNotificationsEnabledChanged(isChecked)
+        }
+        switchNotificationsUpdates.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onUpdateNotificationsEnabledChanged(isChecked)
         }
     }
 
@@ -139,6 +169,8 @@ class ProfileFragment : Fragment() {
             binding.btnDeleteAccount.visibility = View.GONE
         }
 
+        renderNotificationSettings(state)
+
         val localPhotoPath = state.localPhotoPath
         val imageSource = when {
             localPhotoPath != null && File(localPhotoPath).exists() -> localPhotoPath
@@ -168,6 +200,38 @@ class ProfileFragment : Fragment() {
         binding.tvCompletedStagesEmpty.visibility = if (state.completedStages.isEmpty()) View.VISIBLE else View.GONE
         renderCertificates(state.certificates)
         renderCompletedStages(state.completedStages)
+    }
+
+    private fun renderNotificationSettings(state: ProfileUiState) {
+        binding.run {
+            cardNotifications.visibility = if (state.showNotificationSettings) View.VISIBLE else View.GONE
+            if (!state.showNotificationSettings) return@run
+
+            val childSwitchesEnabled = state.notificationsEnabled && !state.isLoading
+            val permissionHintVisible = state.notificationsEnabled && !state.notificationPermissionGranted
+
+            isBindingNotificationSwitches = true
+            switchNotificationsAll.isChecked = state.notificationsEnabled
+            switchNotificationsAll.isEnabled = !state.isLoading
+            switchNotificationsProgress.isChecked = state.progressNotificationsEnabled
+            switchNotificationsProgress.isEnabled = childSwitchesEnabled
+            switchNotificationsRewards.isChecked = state.rewardNotificationsEnabled
+            switchNotificationsRewards.isEnabled = childSwitchesEnabled
+            switchNotificationsUpdates.isChecked = state.updateNotificationsEnabled
+            switchNotificationsUpdates.isEnabled = childSwitchesEnabled
+            isBindingNotificationSwitches = false
+
+            tvNotificationsStatus.text = getString(
+                if (!state.notificationsEnabled) {
+                    R.string.profile_notifications_status_off
+                } else if (state.notificationPermissionGranted) {
+                    R.string.profile_notifications_status_on
+                } else {
+                    R.string.profile_notifications_status_permission_required
+                }
+            )
+            tvNotificationPermissionHint.visibility = if (permissionHintVisible) View.VISIBLE else View.GONE
+        }
     }
 
     private fun renderCertificates(certificates: List<ProfileCertificateUiModel>) {

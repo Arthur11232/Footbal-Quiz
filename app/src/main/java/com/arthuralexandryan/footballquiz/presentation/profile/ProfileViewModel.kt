@@ -7,11 +7,16 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
+import com.arthuralexandryan.footballquiz.data.repository.NotificationRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.DeleteNotificationDevicesUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotificationSessionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.UnbindNotificationSessionUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
@@ -33,7 +38,12 @@ class ProfileViewModel(
     private val syncRepository: SyncRepository,
     private val certificateRepository: CertificateRepository,
     private val userStatsRepository: UserStatsRepository,
-    private val refreshProgressionUseCase: RefreshProgressionUseCase
+    private val notificationRepository: NotificationRepository,
+    private val refreshProgressionUseCase: RefreshProgressionUseCase,
+    private val syncNotificationSessionUseCase: SyncNotificationSessionUseCase,
+    private val unbindNotificationSessionUseCase: UnbindNotificationSessionUseCase,
+    private val deleteNotificationDevicesUseCase: DeleteNotificationDevicesUseCase,
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ProfileUiState())
@@ -43,39 +53,47 @@ class ProfileViewModel(
     val effects: SharedFlow<ProfileEffect> = _effects.asSharedFlow()
 
     fun loadProfile() {
-        val progressionSnapshot = refreshProgressionUseCase()
-        val user = authRepository.getCurrentUser()
-        val snapshot = gameProgressRepository.getProgressSnapshot()
-        val completedStages = ProgressionUiModelMapper.buildCompletedStageUiModels(
-            snapshot = progressionSnapshot,
-            profile = snapshot
-        )
-        val certificateRecipientFallback = user?.displayName
-            ?.takeIf { it.isNotBlank() }
-            ?: user?.email
-                ?.substringBefore("@")
-                ?.takeIf { it.isNotBlank() }
-            ?: "Guest"
-        val missingCertificates = progressionSnapshot.stages
-            .filter { it.isAchieved && it.achievedAtMillis != null }
-            .sortedBy { it.achievedAtMillis }
-            .mapNotNull { status ->
-                val achievedAtMillis = status.achievedAtMillis ?: return@mapNotNull null
-                if (certificateRepository.getIssuedCertificate(status.stageId) != null) return@mapNotNull null
-                IssuedCertificateRecord(
-                    stageId = status.stageId,
-                    certificateId = buildCertificateId(
-                        stageKey = status.stageId.value,
-                        issuedAtMillis = achievedAtMillis
-                    ),
-                    issuedAtMillis = achievedAtMillis,
-                    recipientName = certificateRecipientFallback
+        viewModelScope.launch {
+            val user = authRepository.getCurrentUser()
+            val certificateRecipientFallback = resolveRecipientName(user)
+
+            if (user != null) {
+                consumePendingRewardsAfterAuthUseCase(
+                    userId = user.uid,
+                    recipientName = certificateRecipientFallback,
+                    userEmail = user.email
                 )
             }
-        if (missingCertificates.isNotEmpty()) {
-            certificateRepository.saveIssuedCertificates(missingCertificates)
-            if (user != null) {
-                viewModelScope.launch {
+
+            val progressionSnapshot = refreshProgressionUseCase()
+            val snapshot = gameProgressRepository.getProgressSnapshot()
+            val completedStages = ProgressionUiModelMapper.buildCompletedStageUiModels(
+                snapshot = progressionSnapshot,
+                profile = snapshot
+            )
+            val missingCertificates = if (user != null) {
+                progressionSnapshot.stages
+                    .filter { it.isAchieved && it.achievedAtMillis != null }
+                    .sortedBy { it.achievedAtMillis }
+                    .mapNotNull { status ->
+                        val achievedAtMillis = status.achievedAtMillis ?: return@mapNotNull null
+                        if (certificateRepository.getIssuedCertificate(status.stageId) != null) return@mapNotNull null
+                        IssuedCertificateRecord(
+                            stageId = status.stageId,
+                            certificateId = buildCertificateId(
+                                stageKey = status.stageId.value,
+                                issuedAtMillis = achievedAtMillis
+                            ),
+                            issuedAtMillis = achievedAtMillis,
+                            recipientName = certificateRecipientFallback
+                        )
+                    }
+            } else {
+                emptyList()
+            }
+            if (missingCertificates.isNotEmpty()) {
+                certificateRepository.saveIssuedCertificates(missingCertificates)
+                if (user != null) {
                     certificateRepository.uploadIssuedCertificates(
                         userId = user.uid,
                         recipientName = certificateRecipientFallback,
@@ -84,33 +102,93 @@ class ProfileViewModel(
                     )
                 }
             }
-        }
-        val certificates = certificateRepository.getIssuedCertificates()
-            .sortedByDescending { it.issuedAtMillis }
-            .map { it.toProfileCertificateUiModel(certificateRecipientFallback) }
-        val userId = user?.uid ?: "guest"
-        val localPhotoPath = gameProgressRepository.getProfilePhotoPath(userId)
 
-        _uiState.update {
-            it.copy(
-                isLoading = false,
-                userName = user?.displayName ?: "",
-                userEmail = user?.email ?: "",
-                isSignedIn = user != null,
-                localPhotoPath = localPhotoPath,
-                remotePhotoUrl = user?.photoUrl?.toString(),
-                totalScoreText = "${snapshot.progressPercent}%",
-                answeredCountText = progressText(snapshot.totalAnswered, snapshot.totalQuestions),
-                top5ProgressText = progressText(snapshot.top5Answered, snapshot.top5Total),
-                uefaProgressText = progressText(snapshot.uefaAnswered, snapshot.uefaTotal),
-                worldProgressText = progressText(snapshot.worldAnswered, snapshot.worldTotal),
-                versusProgressText = progressText(snapshot.versusAnswered, snapshot.versusTotal),
-                certificates = certificates,
-                certificatesCount = certificates.size,
-                completedStages = completedStages,
-                completedStagesCount = completedStages.size,
-                totalStagesCount = ProgressionStageId.entries.size
-            )
+            val certificates = certificateRepository.getIssuedCertificates()
+                .sortedByDescending { it.issuedAtMillis }
+                .map { it.toProfileCertificateUiModel(certificateRecipientFallback) }
+            val userId = user?.uid ?: "guest"
+            val localPhotoPath = gameProgressRepository.getProfilePhotoPath(userId)
+
+            _uiState.update {
+                it.copy(
+                    isLoading = false,
+                    userName = user?.displayName ?: "",
+                    userEmail = user?.email ?: "",
+                    isSignedIn = user != null,
+                    showNotificationSettings = user != null,
+                    notificationsEnabled = notificationRepository.areNotificationsEnabled(),
+                    progressNotificationsEnabled = notificationRepository.areProgressNotificationsEnabled(),
+                    rewardNotificationsEnabled = notificationRepository.areRewardNotificationsEnabled(),
+                    updateNotificationsEnabled = notificationRepository.areUpdateNotificationsEnabled(),
+                    notificationPermissionGranted = notificationRepository.hasNotificationPermission(),
+                    localPhotoPath = localPhotoPath,
+                    remotePhotoUrl = user?.photoUrl?.toString(),
+                    totalScoreText = "${snapshot.progressPercent}%",
+                    answeredCountText = progressText(snapshot.totalAnswered, snapshot.totalQuestions),
+                    top5ProgressText = progressText(snapshot.top5Answered, snapshot.top5Total),
+                    uefaProgressText = progressText(snapshot.uefaAnswered, snapshot.uefaTotal),
+                    worldProgressText = progressText(snapshot.worldAnswered, snapshot.worldTotal),
+                    versusProgressText = progressText(snapshot.versusAnswered, snapshot.versusTotal),
+                    certificates = certificates,
+                    certificatesCount = certificates.size,
+                    completedStages = completedStages,
+                    completedStagesCount = completedStages.size,
+                    totalStagesCount = ProgressionStageId.entries.size
+                )
+            }
+        }
+    }
+
+    private fun resolveRecipientName(user: FirebaseUser?): String {
+        return user?.displayName
+            ?.takeIf { it.isNotBlank() }
+            ?: user?.email
+                ?.substringBefore("@")
+                ?.takeIf { it.isNotBlank() }
+            ?: "Guest"
+    }
+
+    fun onNotificationsEnabledChanged(enabled: Boolean) {
+        notificationRepository.setNotificationsEnabled(enabled)
+        updateNotificationState {
+            it.copy(notificationsEnabled = enabled)
+        }
+        syncNotificationsAfterPreferenceChange(requestPermissionIfNeeded = enabled)
+    }
+
+    fun onProgressNotificationsEnabledChanged(enabled: Boolean) {
+        notificationRepository.setProgressNotificationsEnabled(enabled)
+        updateNotificationState {
+            it.copy(progressNotificationsEnabled = enabled)
+        }
+        syncNotificationsAfterPreferenceChange()
+    }
+
+    fun onRewardNotificationsEnabledChanged(enabled: Boolean) {
+        notificationRepository.setRewardNotificationsEnabled(enabled)
+        updateNotificationState {
+            it.copy(rewardNotificationsEnabled = enabled)
+        }
+        syncNotificationsAfterPreferenceChange()
+    }
+
+    fun onUpdateNotificationsEnabledChanged(enabled: Boolean) {
+        notificationRepository.setUpdateNotificationsEnabled(enabled)
+        updateNotificationState {
+            it.copy(updateNotificationsEnabled = enabled)
+        }
+        syncNotificationsAfterPreferenceChange()
+    }
+
+    fun onNotificationPermissionResult(granted: Boolean) {
+        updateNotificationState {
+            it.copy(notificationPermissionGranted = granted)
+        }
+        syncNotificationsAfterPreferenceChange(showSuccessToast = granted)
+        if (!granted) {
+            viewModelScope.launch {
+                _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_notifications_permission_denied))
+            }
         }
     }
 
@@ -121,8 +199,10 @@ class ProfileViewModel(
     }
 
     fun onSignOutClicked() {
+        val currentUserId = authRepository.getCurrentUser()?.uid
         viewModelScope.launch {
             setLoading(true)
+            unbindNotificationSessionUseCase(currentUserId)
             authRepository.signOut()
             setLoading(false)
             loadProfile()
@@ -141,6 +221,13 @@ class ProfileViewModel(
         viewModelScope.launch {
             setLoading(true)
 
+            val cloudDevicesDeleted = deleteNotificationDevicesUseCase(user.uid)
+            if (cloudDevicesDeleted.isFailure) {
+                setLoading(false)
+                _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
+                return@launch
+            }
+
             val cloudDeleted = userStatsRepository.deleteStats(user.uid)
             if (cloudDeleted.isFailure) {
                 setLoading(false)
@@ -154,6 +241,8 @@ class ProfileViewModel(
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
                 return@launch
             }
+
+            notificationRepository.clearLocalSession()
 
             val localCleared = gameProgressRepository.clearLocalUserData(user.uid)
             if (localCleared.isFailure) {
@@ -265,6 +354,36 @@ class ProfileViewModel(
 
     private fun setLoading(isLoading: Boolean) {
         _uiState.update { it.copy(isLoading = isLoading) }
+    }
+
+    private fun updateNotificationState(update: (ProfileUiState) -> ProfileUiState) {
+        _uiState.update(update)
+    }
+
+    private fun syncNotificationsAfterPreferenceChange(
+        requestPermissionIfNeeded: Boolean = false,
+        showSuccessToast: Boolean = false
+    ) {
+        val user = authRepository.getCurrentUser() ?: return
+        viewModelScope.launch {
+            if (requestPermissionIfNeeded && !notificationRepository.hasNotificationPermission()) {
+                _effects.emit(ProfileEffect.RequestNotificationPermission)
+            }
+
+            val result = syncNotificationSessionUseCase(user)
+            updateNotificationState {
+                it.copy(notificationPermissionGranted = notificationRepository.hasNotificationPermission())
+            }
+
+            if (result.isFailure) {
+                _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_notifications_sync_failed))
+                return@launch
+            }
+
+            if (showSuccessToast) {
+                _effects.emit(ProfileEffect.ShowToastRes(R.string.notifications_permission_enabled))
+            }
+        }
     }
 
     private fun buildCertificateId(stageKey: String, issuedAtMillis: Long): String {

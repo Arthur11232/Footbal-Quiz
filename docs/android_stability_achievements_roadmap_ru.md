@@ -7,7 +7,7 @@
 - внедрение notifications;
 - внедрение поздравлений, сертификатов и email-доставки.
 
-Текущая дата фиксации плана: **16 июня 2026**
+Текущая дата фиксации плана: **30 июня 2026**
 
 Связанные документы:
 - [implementation_plan_android_stability_to_certificates_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/implementation_plan_android_stability_to_certificates_ru.md)
@@ -39,6 +39,34 @@
 - не распылиться;
 - не сломать текущий продукт;
 - строить новые слои поверх стабильной базы.
+
+## 1.1. Актуальный статус на 30 июня 2026
+
+- `Phase 1 — Android Stability 95%+`:
+  - считается завершённой по фактическому состоянию проекта;
+  - `questionId`, Firestore update path, restore/sync fixes, UEFA Euro catalog repair и release-critical Android fixes уже внедрены.
+- `Phase 2 — Progression Foundation`:
+  - считается завершённой;
+  - stage registry, completion rules, local/cloud persistence и profile presentation layer уже внедрены.
+- `Phase 3 — Notifications Foundation`:
+  - технический foundation уже внедрён;
+  - permission flow, FCM token lifecycle, device binding, auth-only sync, basic preferences и reward-ready local notification уже присутствуют в коде;
+  - полноценный product/UI слой notifications осознанно отложен до завершения всех остальных core phase-ов roadmap.
+- `Phase 4-6`:
+  - реализованы частично раньше плана;
+  - achievement trigger, congratulations flow и in-app certificate experience уже присутствуют в кодовой базе;
+  - однако roadmap по-прежнему считает их не полностью закрытыми до завершения notification/email части и формального product polishing.
+
+### Практическая интерпретация roadmap
+
+На текущий момент roadmap читается так:
+
+1. `Phase 1` — done
+2. `Phase 2` — done
+3. `Phase 3A` — technical foundation done
+4. `Phase 3B` — notification product/UI layer postponed until all other core phases are finished
+5. `Phase 4-6` — partially implemented, require polishing
+6. `Phase 7` — not started as a full delivery feature
 
 ---
 
@@ -104,6 +132,10 @@ Phase 1 считается завершённой, когда:
 - сценарий смены языка больше не сбрасывает answered progress в новой схеме;
 - restore/sync flow проходят без crash/regression.
 
+### Статус
+
+`Phase 1` на текущий момент считается завершённой.
+
 ---
 
 ## 4. Phase 2 — Progression Foundation
@@ -151,6 +183,10 @@ Phase 1 считается завершённой, когда:
 - completed stage можно восстановить после restart/restore;
 - один и тот же этап не триггерится повторно бесконтрольно.
 
+### Статус
+
+`Phase 2` на текущий момент считается завершённой.
+
 ---
 
 ## 5. Phase 3 — Notifications Foundation
@@ -164,28 +200,56 @@ Notifications лучше внедрять до сертификатов, пот�
 
 ### Что входит
 
-#### 5.1. Permission + token flow
+Для актуального состояния проекта Phase 3 лучше делить на два подэтапа:
+
+- `Phase 3A` — technical foundation
+- `Phase 3B` — product/UI layer
+
+#### 5.1. Phase 3A — Permission + token flow
 - запросить permission на notifications;
 - хранить FCM token только для authenticated/logged-in user;
 - определить стратегию:
   - что делать с guest users;
   - как вести себя при logout.
 
-#### 5.2. Notification preferences
+#### 5.2. Phase 3A — Notification preferences
 - подготовить минимальные настройки:
   - enable/disable
   - marketing/progress-type разделение опционально позже
 
-#### 5.3. Первые полезные сценарии
+#### 5.3. Phase 3A — Первые полезные сценарии
 - напоминание о незавершённом прогрессе;
 - сообщение о новом этапе/обновлении;
 - сообщение о том, что доступна награда или сертификат.
 
+#### 5.4. Phase 3B — Product/UI layer
+- bell icon только для authenticated user;
+- отдельный `Notifications` screen;
+- empty/disabled/filled states;
+- локальная history/read-model для notification cards;
+- более явный reward-first UX поверх уже существующего progression/certificate pipeline.
+
+Этот подэтап не является текущим приоритетом и переносится до завершения остальных core phase-ов roadmap:
+- achievement polishing;
+- congratulations/certificate polishing;
+- email certificate delivery.
+
 ### Definition of done
 
-- permission flow стабилен;
-- токен корректно живёт в lifecycle пользователя;
-- можно безопасно отправить progress notification зарегистрированному пользователю.
+- для `Phase 3A`:
+  - permission flow стабилен;
+  - токен корректно живёт в lifecycle пользователя;
+  - device binding не ломается при login/logout/account switch/delete account;
+  - можно безопасно отправить notification зарегистрированному пользователю.
+- для `Phase 3B`:
+  - у authenticated user есть понятная точка входа в notifications UX;
+  - notification center не конфликтует с reward/certificate flow;
+  - notification UI не выглядит инородным по отношению к продукту.
+
+### Статус
+
+- `Phase 3A` на текущий момент считается завершённой по foundation-слою.
+- `Phase 3B` осознанно отложена до завершения остальных core phase-ов roadmap.
 
 ---
 
@@ -221,6 +285,10 @@ Notifications лучше внедрять до сертификатов, пот�
 - achievement событие создаётся один раз;
 - можно отличить вручённую награду от pending reward.
 
+### Статус
+
+Часть `Phase 4` уже реализована раньше плана, но фаза не считается формально закрытой как отдельный roadmap milestone.
+
 ---
 
 ## 7. Phase 5 — Congratulations Screen
@@ -249,6 +317,10 @@ Notifications лучше внедрять до сертификатов, пот�
 - guest и authenticated flow различаются;
 - UX выглядит как награда, а не просто системный alert.
 
+### Статус
+
+Основной congratulations flow уже существует в коде, но остаётся частью незавершённого общего reward pipeline и требует финального product polishing.
+
 ---
 
 ## 8. Phase 6 — Certificate Experience
@@ -258,6 +330,10 @@ Notifications лучше внедрять до сертификатов, пот�
 Добавить персонализированный сертификат как награду за этап.
 
 ### Первая версия (рекомендуется)
+
+### Статус
+
+In-app certificate experience уже частично реализован и используется в текущем flow, включая preview и profile presentation.
 
 Сначала не PDF, а:
 - красивый in-app certificate preview;
@@ -329,21 +405,25 @@ Notifications лучше внедрять до сертификатов, пот�
 
 ## 11. Рекомендуемый порядок реализации
 
-### Short-term
+### Done
 1. завершить Android stability work
 2. обновить Firestore и rollout `questionId`
 3. проверить sync / language / restore
-
-### Mid-term
 4. реализовать progression model
-5. реализовать notifications foundation
-6. реализовать achievement event model
-7. сделать congratulations screen
+5. реализовать notifications technical foundation
 
-### After that
-8. сделать certificate preview
-9. сделать guest -> auth reward flow
-10. сделать email delivery
+### Current focus
+6. дополировать achievement / congratulations / certificate pipeline
+7. укрепить cloud/local behaviour вокруг reward and certificate state
+8. удерживать Android release-state в стабильном состоянии
+
+### Postponed after core phases
+9. реализовать notification product/UI layer
+10. сделать bell icon + notification center + history/read-model
+
+### Later
+11. сделать guest -> auth reward flow полностью бесшовным
+12. сделать email delivery
 
 ---
 
@@ -364,6 +444,7 @@ Notifications лучше внедрять до сертификатов, пот�
 
 Следующим рабочим шагом после фикса этого roadmap стоит считать:
 
-1. закрытие Android stability work;
-2. формализацию stage criteria в коде;
-3. отдельную implementation task для progression foundation.
+1. не развивать notification UI дальше в этом цикле;
+2. держать `Phase 3A` как завершённый foundation milestone;
+3. вернуться к `Phase 3B` только после завершения остальных core phase-ов roadmap;
+4. переключить основной фокус на polishing reward/certificate/cloud pipeline и общую Android-стабильность.

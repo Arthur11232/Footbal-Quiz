@@ -33,6 +33,7 @@
     <string name="profile_sync_error">Sync failed: %s</string>
     <string name="profile_restore_title">Restore Progress</string>
     <string name="profile_restore_message">"We found cloud progress with a higher score (%d). Do you want to restore it?"</string>
+    <string name="profile_restore_conflict_message">"We found saved cloud progress (%1$d). If you do not restore it and continue with the current progress on this device, the previous cloud progress will eventually be replaced by this device's progress."</string>
     <string name="profile_manual_restore_message">"Cloud score: %d. Do you want to restore this progress on this device?"</string>
     <string name="profile_restore_confirm">Restore</string>
     <string name="profile_restore_cancel">Cancel</string>
@@ -54,6 +55,17 @@
     <string name="profile_progress_percent">%d%%</string>
     <string name="profile_category_progress">Category Progress</string>
     <string name="profile_questions_answered">Questions Answered</string>
+    <string name="profile_notifications">Notifications</string>
+    <string name="profile_notifications_all">All notifications</string>
+    <string name="profile_notifications_progress">Progress reminders</string>
+    <string name="profile_notifications_rewards">Rewards and certificates</string>
+    <string name="profile_notifications_updates">Updates and new stages</string>
+    <string name="profile_notifications_status_on">Active</string>
+    <string name="profile_notifications_status_off">Off</string>
+    <string name="profile_notifications_status_permission_required">Permission required</string>
+    <string name="profile_notifications_permission_hint">Turn on system notification permission to receive alerts on this device.</string>
+    <string name="profile_notifications_sync_failed">Could not update notification settings. Please try again.</string>
+    <string name="profile_notifications_permission_denied">Notification permission is still disabled</string>
     <string name="profile_certificates">Certificates</string>
     <string name="profile_certificates_empty">Earn certificates to view them here.</string>
     <string name="profile_certificate_badge">CERTIFICATE</string>
@@ -4360,6 +4372,16 @@
     <string name="new_no">No</string>
     <string name="not_cong_title">Congratulation</string>
     <string name="not_cong_body">Already You can play %s</string>
+    <string name="notifications_permission_title">Stay in the game</string>
+    <string name="notifications_permission_message">Allow notifications to get progress reminders, reward alerts, and updates about new stages.</string>
+    <string name="notifications_permission_allow">Allow</string>
+    <string name="notifications_permission_not_now">Not now</string>
+    <string name="notifications_permission_enabled">Notifications enabled</string>
+    <string name="notification_channel_name">Football Quiz</string>
+    <string name="notification_channel_description">Football Quiz progress, reward, and update notifications</string>
+    <string name="reward_notification_title">New reward ready</string>
+    <string name="reward_notification_body_single">Your %1$s certificate is ready in Profile.</string>
+    <string name="reward_notification_body_multiple">%1$d new certificates are ready in Profile.</string>
     <string name="local_armenian" tools:ignore="MissingTranslation">hy</string>
     <string name="local_russian" tools:ignore="MissingTranslation">ru</string>
     <string name="coming_soon_game">Dinamo Kiev vs Spartak Moscow</string>

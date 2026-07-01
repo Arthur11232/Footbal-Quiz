@@ -20,6 +20,7 @@
     <string name="profile_sync_error">Ошибка синхронизации: %s</string>
     <string name="profile_restore_title">Восстановить прогресс</string>
     <string name="profile_restore_message">"Найдены сохранения в облаке с большим счетом (%d). Желаете восстановить их?"</string>
+    <string name="profile_restore_conflict_message">"Найден сохранённый облачный прогресс (%1$d). Если не восстанавливать его и продолжить с текущим прогрессом на этом устройстве, прежний облачный прогресс со временем будет заменён прогрессом этого устройства."</string>
     <string name="profile_manual_restore_message">"Счет в облаке: %d. Восстановить этот прогресс на устройстве?"</string>
     <string name="profile_restore_confirm">Восстановить</string>
     <string name="profile_restore_cancel">Отмена</string>
@@ -41,6 +42,17 @@
     <string name="profile_progress_percent">%d%%</string>
     <string name="profile_category_progress">Прогресс по категориям</string>
     <string name="profile_questions_answered">Отвечено вопросов</string>
+    <string name="profile_notifications">Уведомления</string>
+    <string name="profile_notifications_all">Все уведомления</string>
+    <string name="profile_notifications_progress">Напоминания о прогрессе</string>
+    <string name="profile_notifications_rewards">Награды и сертификаты</string>
+    <string name="profile_notifications_updates">Обновления и новые этапы</string>
+    <string name="profile_notifications_status_on">Активны</string>
+    <string name="profile_notifications_status_off">Выключены</string>
+    <string name="profile_notifications_status_permission_required">Нужно разрешение</string>
+    <string name="profile_notifications_permission_hint">Включите системное разрешение на уведомления, чтобы получать оповещения на этом устройстве.</string>
+    <string name="profile_notifications_sync_failed">Не удалось обновить настройки уведомлений. Попробуйте снова.</string>
+    <string name="profile_notifications_permission_denied">Разрешение на уведомления по-прежнему выключено</string>
     <string name="profile_certificates">Сертификаты</string>
     <string name="profile_certificates_empty">Получите сертификаты, чтобы увидеть их здесь.</string>
     <string name="profile_certificate_badge">СЕРТИФИКАТ</string>
@@ -2322,6 +2334,16 @@
     <string name="new_no">Нет</string>
     <string name="not_cong_title">Поздравления</string>
     <string name="not_cong_body">Теперь вы можете играть %s!</string>
+    <string name="notifications_permission_title">Оставайтесь в игре</string>
+    <string name="notifications_permission_message">Разрешите уведомления, чтобы получать напоминания о прогрессе, сигналы о наградах и новости о новых этапах.</string>
+    <string name="notifications_permission_allow">Разрешить</string>
+    <string name="notifications_permission_not_now">Не сейчас</string>
+    <string name="notifications_permission_enabled">Уведомления включены</string>
+    <string name="notification_channel_name">Football Quiz</string>
+    <string name="notification_channel_description">Уведомления Football Quiz о прогрессе, наградах и новых этапах</string>
+    <string name="reward_notification_title">Новая награда готова</string>
+    <string name="reward_notification_body_single">Ваш сертификат за этап «%1$s» уже ждёт вас в Profile.</string>
+    <string name="reward_notification_body_multiple">В Profile вас ждут %1$d новых сертификата.</string>
     <string name="coming_soon_game">Динамо Киев\nпротив\nСпартак Москва</string>
 
 </resources>
