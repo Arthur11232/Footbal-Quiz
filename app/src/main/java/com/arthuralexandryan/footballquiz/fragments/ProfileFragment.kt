@@ -190,6 +190,13 @@ class ProfileFragment : Fragment() {
         binding.tvWorldProgress.text = state.worldProgressText
         binding.tvVersusProgress.text = state.versusProgressText
         binding.tvCertificatesSummary.text = state.certificatesCount.toString()
+        binding.tvCertificatesEmpty.setText(
+            if (!state.isSignedIn && state.pendingRewardsCount > 0) {
+                R.string.profile_certificates_guest_pending
+            } else {
+                R.string.profile_certificates_empty
+            }
+        )
         binding.tvCertificatesEmpty.visibility = if (state.certificates.isEmpty()) View.VISIBLE else View.GONE
         binding.certificatesScroll.visibility = if (state.certificates.isEmpty()) View.GONE else View.VISIBLE
         binding.tvCompletedStagesSummary.text = getString(

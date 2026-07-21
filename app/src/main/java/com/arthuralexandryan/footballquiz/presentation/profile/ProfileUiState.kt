@@ -23,6 +23,7 @@ data class ProfileUiState(
     val versusProgressText: String = "0/0",
     val certificates: List<ProfileCertificateUiModel> = emptyList(),
     val certificatesCount: Int = 0,
+    val pendingRewardsCount: Int = 0,
     val completedStages: List<CompletedStageUiModel> = emptyList(),
     val completedStagesCount: Int = 0,
     val totalStagesCount: Int = 0

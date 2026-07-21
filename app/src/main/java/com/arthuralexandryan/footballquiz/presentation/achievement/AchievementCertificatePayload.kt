@@ -10,5 +10,6 @@ data class AchievementCertificatePayload(
     val additionalStageTitleResIds: List<Int> = emptyList(),
     val recipientName: String,
     val issuedAtMillis: Long,
-    val certificateId: String
+    val certificateId: String,
+    val isPendingAuthClaim: Boolean = false
 ) : Parcelable

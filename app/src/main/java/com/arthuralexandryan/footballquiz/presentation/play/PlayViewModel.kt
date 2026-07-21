@@ -10,6 +10,7 @@ import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShowRewardReadyNotificationUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
 import com.arthuralexandryan.footballquiz.domain.reward.PendingRewardRecord
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
@@ -33,7 +34,8 @@ class PlayViewModel(
     private val refreshProgressionUseCase: RefreshProgressionUseCase,
     private val certificateRepository: CertificateRepository,
     private val pendingRewardRepository: PendingRewardRepository,
-    private val showRewardReadyNotificationUseCase: ShowRewardReadyNotificationUseCase
+    private val showRewardReadyNotificationUseCase: ShowRewardReadyNotificationUseCase,
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -75,6 +77,7 @@ class PlayViewModel(
                 categoryScoreText = categoryScores.category_score.orEmpty()
             )
         }
+        consumePendingRewardsIfSignedIn()
         prepareNextQuestion()
     }
 
@@ -138,7 +141,8 @@ class PlayViewModel(
             certificateRepository.saveIssuedCertificates(newlyIssuedCertificates)
             pendingAchievementCertificate = buildAchievementCertificatePayload(
                 records = newlyIssuedCertificates.toIssuedRewardPreviewRecords(),
-                recipientName = recipientName
+                recipientName = recipientName,
+                isPendingAuthClaim = false
             )
             pendingRewardReadyNotification = pendingAchievementCertificate
             rewardReadyNotificationSent = false
@@ -157,7 +161,8 @@ class PlayViewModel(
             pendingRewardRepository.savePendingRewards(newlyPendingRewards)
             pendingAchievementCertificate = buildAchievementCertificatePayload(
                 records = newlyPendingRewards.toPendingRewardPreviewRecords(),
-                recipientName = recipientName
+                recipientName = recipientName,
+                isPendingAuthClaim = true
             )
             pendingRewardReadyNotification = null
             rewardReadyNotificationSent = false
@@ -332,6 +337,17 @@ class PlayViewModel(
         }
     }
 
+    private fun consumePendingRewardsIfSignedIn() {
+        val currentUser = authRepository.getCurrentUser() ?: return
+        viewModelScope.launch {
+            consumePendingRewardsAfterAuthUseCase(
+                userId = currentUser.uid,
+                recipientName = resolveRecipientName(currentUser),
+                userEmail = currentUser.email
+            )
+        }
+    }
+
     private fun finishSession(totalScore: Int) {
         _uiState.update {
             it.copy(
@@ -346,7 +362,8 @@ class PlayViewModel(
 
     private fun buildAchievementCertificatePayload(
         records: List<RewardPreviewRecord>,
-        recipientName: String
+        recipientName: String,
+        isPendingAuthClaim: Boolean
     ): AchievementCertificatePayload? {
         val stages = records.map { record ->
             ProgressionUiModelMapper.buildFreshlyCompletedStageUiModel(
@@ -363,7 +380,8 @@ class PlayViewModel(
             additionalStageTitleResIds = stages.drop(1).map { it.titleResId },
             recipientName = recipientName,
             issuedAtMillis = primaryRecord.earnedAtMillis,
-            certificateId = primaryRecord.certificateId
+            certificateId = primaryRecord.certificateId,
+            isPendingAuthClaim = isPendingAuthClaim
         )
     }
 

@@ -157,7 +157,10 @@ class StartPageViewModel(
                 if (user != null) {
                     consumePendingRewardsAfterAuth(user)
                     syncNotificationSessionUseCase(user)
-                    val cloudRestorePending = syncCloudProgressIfNeeded(user)
+                    val cloudRestorePending = syncCloudProgressIfNeeded(
+                        user = user,
+                        showUserFeedback = true
+                    )
                     if (!cloudRestorePending) {
                         maybePromptNotificationPermission(user)
                     }
@@ -175,7 +178,10 @@ class StartPageViewModel(
         viewModelScope.launch {
             consumePendingRewardsAfterAuth(currentUser)
             syncNotificationSessionUseCase(currentUser)
-            val cloudRestorePending = syncCloudProgressIfNeeded(currentUser)
+            val cloudRestorePending = syncCloudProgressIfNeeded(
+                user = currentUser,
+                showUserFeedback = false
+            )
             if (!cloudRestorePending) {
                 maybePromptNotificationPermission(currentUser)
             }
@@ -205,7 +211,10 @@ class StartPageViewModel(
         }
     }
 
-    private suspend fun syncCloudProgressIfNeeded(user: FirebaseUser): Boolean {
+    private suspend fun syncCloudProgressIfNeeded(
+        user: FirebaseUser,
+        showUserFeedback: Boolean
+    ): Boolean {
         val decision = resolveStartCloudSyncUseCase(user)
         if (
             decision is SyncRepository.SyncDecision.PromptConflict &&
@@ -219,7 +228,9 @@ class StartPageViewModel(
             is SyncRepository.SyncDecision.AutoRestoreCloud -> {
                 restoreStartCloudStatsUseCase(decision.userId, decision.cloudStats)
                 refreshState()
-                _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_progress_restored))
+                if (showUserFeedback) {
+                    _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_progress_restored))
+                }
                 return false
             }
             is SyncRepository.SyncDecision.PromptConflict -> {
@@ -234,7 +245,9 @@ class StartPageViewModel(
             is SyncRepository.SyncDecision.UploadLocal -> {
                 uploadStartLocalStatsUseCase(decision.user)
                     .onSuccess {
-                        _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_cloud_backup_created))
+                        if (showUserFeedback) {
+                            _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_cloud_backup_created))
+                        }
                     }
                 return false
             }

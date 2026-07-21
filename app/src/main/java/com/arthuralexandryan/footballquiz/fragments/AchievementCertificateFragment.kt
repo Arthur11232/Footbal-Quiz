@@ -67,8 +67,13 @@ class AchievementCertificateFragment : Fragment() {
     }
 
     private fun render(payload: AchievementCertificatePayload) {
+        applyRewardState(payload)
         binding.tvCertificateStage.setText(payload.primaryStageTitleResId)
-        binding.tvCertificateRecipient.text = payload.recipientName
+        binding.tvCertificateRecipient.text = if (payload.isPendingAuthClaim) {
+            getString(R.string.certificate_pending_recipient)
+        } else {
+            payload.recipientName
+        }
         binding.tvCertificateIssuedAt.text = formatIssuedAt(payload.issuedAtMillis)
         binding.tvCertificateId.text = payload.certificateId
 
@@ -104,6 +109,77 @@ class AchievementCertificateFragment : Fragment() {
                 binding.additionalStagesContainer.addView(itemView)
             }
         }
+    }
+
+    private fun applyRewardState(payload: AchievementCertificatePayload) {
+        val isPendingAuthClaim = payload.isPendingAuthClaim
+        binding.tvAchievementCaption.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_caption
+            } else {
+                requireNotNull(currentTheme).captionResId
+            }
+        )
+        binding.tvCertificateHeadline.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_headline
+            } else {
+                R.string.certificate_headline
+            }
+        )
+        binding.tvCertificateSubheadline.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_subheadline
+            } else {
+                requireNotNull(currentTheme).subheadlineResId
+            }
+        )
+        binding.tvCertificateStatusNote.visibility = if (isPendingAuthClaim) View.VISIBLE else View.GONE
+        if (isPendingAuthClaim) {
+            binding.tvCertificateStatusNote.setText(R.string.certificate_pending_status_note)
+        }
+        binding.tvCertificateLabel.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_title
+            } else {
+                R.string.certificate_title
+            }
+        )
+        binding.tvCertificateAwardedToLabel.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_awarded_to
+            } else {
+                R.string.certificate_awarded_to
+            }
+        )
+        binding.tvCertificateAwardText.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_award_text
+            } else {
+                R.string.certificate_award_text
+            }
+        )
+        binding.tvCertificateIssuedLabel.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_issued_on
+            } else {
+                R.string.certificate_issued_on
+            }
+        )
+        binding.tvCertificateIdLabel.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_id_label
+            } else {
+                R.string.certificate_id_label
+            }
+        )
+        binding.btnCertificateContinue.setText(
+            if (isPendingAuthClaim) {
+                R.string.certificate_pending_continue_button
+            } else {
+                R.string.certificate_continue_button
+            }
+        )
     }
 
     private fun readPayload(): AchievementCertificatePayload? {
@@ -149,10 +225,15 @@ class AchievementCertificateFragment : Fragment() {
         binding.ivTrophy.scaleY = if (theme.isMajorAchievement) 1.12f else 1f
 
         binding.tvAchievementCaption.setText(theme.captionResId)
-        binding.tvCertificateSubheadline.setText(theme.subheadlineResId)
         binding.tvAchievementCaption.setTextColor(withAlpha(theme.primaryTextColor, 0.76f))
         binding.tvCertificateHeadline.setTextColor(theme.primaryTextColor)
         binding.tvCertificateSubheadline.setTextColor(theme.secondaryTextColor)
+        binding.tvCertificateStatusNote.setTextColor(withAlpha(theme.primaryTextColor, 0.86f))
+        binding.tvCertificateStatusNote.background = createRoundedRectBackground(
+            fillColor = ColorUtils.blendARGB(theme.cardFillColor, theme.accentColor, 0.16f),
+            strokeColor = withAlpha(theme.primaryTextColor, 0.14f),
+            cornerRadiusDp = 16f
+        )
         binding.tvCertificateHeadline.setTextSize(
             TypedValue.COMPLEX_UNIT_SP,
             if (theme.isMajorAchievement) 36f else 34f

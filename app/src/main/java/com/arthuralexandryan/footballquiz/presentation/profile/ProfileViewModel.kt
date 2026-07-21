@@ -8,6 +8,7 @@ import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.NotificationRepository
+import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
@@ -39,6 +40,7 @@ class ProfileViewModel(
     private val certificateRepository: CertificateRepository,
     private val userStatsRepository: UserStatsRepository,
     private val notificationRepository: NotificationRepository,
+    private val pendingRewardRepository: PendingRewardRepository,
     private val refreshProgressionUseCase: RefreshProgressionUseCase,
     private val syncNotificationSessionUseCase: SyncNotificationSessionUseCase,
     private val unbindNotificationSessionUseCase: UnbindNotificationSessionUseCase,
@@ -106,6 +108,7 @@ class ProfileViewModel(
             val certificates = certificateRepository.getIssuedCertificates()
                 .sortedByDescending { it.issuedAtMillis }
                 .map { it.toProfileCertificateUiModel(certificateRecipientFallback) }
+            val pendingRewardsCount = pendingRewardRepository.getPendingRewards().size
             val userId = user?.uid ?: "guest"
             val localPhotoPath = gameProgressRepository.getProfilePhotoPath(userId)
 
@@ -131,6 +134,7 @@ class ProfileViewModel(
                     versusProgressText = progressText(snapshot.versusAnswered, snapshot.versusTotal),
                     certificates = certificates,
                     certificatesCount = certificates.size,
+                    pendingRewardsCount = pendingRewardsCount,
                     completedStages = completedStages,
                     completedStagesCount = completedStages.size,
                     totalStagesCount = ProgressionStageId.entries.size
@@ -410,7 +414,8 @@ class ProfileViewModel(
                 additionalStageTitleResIds = emptyList(),
                 recipientName = resolvedRecipientName,
                 issuedAtMillis = issuedAtMillis,
-                certificateId = certificateId
+                certificateId = certificateId,
+                isPendingAuthClaim = false
             )
         )
     }
