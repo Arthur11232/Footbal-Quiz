@@ -93,7 +93,20 @@
             android:name="category"
             app:argType="string" />
         <action
-            android:id="@+id/action_play_to_achievement_certificate"
+            android:id="@+id/action_play_to_achievement_congratulations"
+            app:destination="@id/achievementCongratulationsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/achievementCongratulationsFragment"
+        android:name="com.arthuralexandryan.footballquiz.fragments.AchievementCongratulationsFragment"
+        android:label="AchievementCongratulationsFragment"
+        tools:layout="@layout/fragment_achievement_congratulations">
+        <argument
+            android:name="certificatePayload"
+            app:argType="com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload" />
+        <action
+            android:id="@+id/action_achievement_congratulations_to_achievement_certificate"
             app:destination="@id/achievementCertificateFragment" />
     </fragment>
 

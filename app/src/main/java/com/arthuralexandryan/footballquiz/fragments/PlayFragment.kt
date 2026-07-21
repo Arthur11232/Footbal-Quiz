@@ -203,7 +203,7 @@ class PlayFragment : Fragment(), ShowAds {
                             runAnswerTransition()
                         }
                         is PlayEffect.ShowAchievementCertificate -> {
-                            navigateToAchievementCertificate(effect.payload)
+                            navigateToAchievementCongratulations(effect.payload)
                         }
                         PlayEffect.ShowInterstitialAd -> {
                             if (Constant.ADS_ENABLED && mInterstitialAd != null) {
@@ -218,7 +218,7 @@ class PlayFragment : Fragment(), ShowAds {
         }
     }
 
-    private fun navigateToAchievementCertificate(
+    private fun navigateToAchievementCongratulations(
         payload: com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
     ) {
         playViewModel.onAchievementCertificateOpened()
@@ -226,7 +226,7 @@ class PlayFragment : Fragment(), ShowAds {
             putParcelable("certificatePayload", payload)
         }
         findNavController().navigate(
-            R.id.action_play_to_achievement_certificate,
+            R.id.action_play_to_achievement_congratulations,
             args
         )
     }
