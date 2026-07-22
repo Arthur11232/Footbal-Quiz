@@ -12,6 +12,7 @@ import com.arthuralexandryan.footballquiz.domain.usecase.notifications.MarkNotif
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShouldPromptNotificationPermissionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.BuildStartPageStateUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.SyncIssuedCertificatesToCloudUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.EnsureLocalizationSyncUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.ResolveStartCloudSyncUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.RestoreStartCloudStatsUseCase
@@ -41,7 +42,8 @@ class StartPageViewModel(
     private val syncNotificationSessionUseCase: SyncNotificationSessionUseCase,
     private val shouldPromptNotificationPermissionUseCase: ShouldPromptNotificationPermissionUseCase,
     private val markNotificationPermissionPromptShownUseCase: MarkNotificationPermissionPromptShownUseCase,
-    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase,
+    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(StartPageUiState())
@@ -261,9 +263,15 @@ class StartPageViewModel(
     }
 
     private suspend fun consumePendingRewardsAfterAuth(user: FirebaseUser) {
+        val recipientName = resolveRecipientName(user)
         consumePendingRewardsAfterAuthUseCase(
             userId = user.uid,
-            recipientName = resolveRecipientName(user),
+            recipientName = recipientName,
+            userEmail = user.email
+        )
+        syncIssuedCertificatesToCloudUseCase(
+            userId = user.uid,
+            recipientName = recipientName,
             userEmail = user.email
         )
     }

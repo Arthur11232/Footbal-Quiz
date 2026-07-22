@@ -18,6 +18,7 @@ import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotif
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.UnbindNotificationSessionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.SyncIssuedCertificatesToCloudUseCase
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
@@ -45,7 +46,8 @@ class ProfileViewModel(
     private val syncNotificationSessionUseCase: SyncNotificationSessionUseCase,
     private val unbindNotificationSessionUseCase: UnbindNotificationSessionUseCase,
     private val deleteNotificationDevicesUseCase: DeleteNotificationDevicesUseCase,
-    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase,
+    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ProfileUiState())
@@ -61,6 +63,11 @@ class ProfileViewModel(
 
             if (user != null) {
                 consumePendingRewardsAfterAuthUseCase(
+                    userId = user.uid,
+                    recipientName = certificateRecipientFallback,
+                    userEmail = user.email
+                )
+                syncIssuedCertificatesToCloudUseCase(
                     userId = user.uid,
                     recipientName = certificateRecipientFallback,
                     userEmail = user.email

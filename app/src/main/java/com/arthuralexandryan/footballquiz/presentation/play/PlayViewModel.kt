@@ -11,6 +11,7 @@ import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRe
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShowRewardReadyNotificationUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.SyncIssuedCertificatesToCloudUseCase
 import com.arthuralexandryan.footballquiz.domain.reward.PendingRewardRecord
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
@@ -35,7 +36,8 @@ class PlayViewModel(
     private val certificateRepository: CertificateRepository,
     private val pendingRewardRepository: PendingRewardRepository,
     private val showRewardReadyNotificationUseCase: ShowRewardReadyNotificationUseCase,
-    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase,
+    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -340,9 +342,15 @@ class PlayViewModel(
     private fun consumePendingRewardsIfSignedIn() {
         val currentUser = authRepository.getCurrentUser() ?: return
         viewModelScope.launch {
+            val recipientName = resolveRecipientName(currentUser)
             consumePendingRewardsAfterAuthUseCase(
                 userId = currentUser.uid,
-                recipientName = resolveRecipientName(currentUser),
+                recipientName = recipientName,
+                userEmail = currentUser.email
+            )
+            syncIssuedCertificatesToCloudUseCase(
+                userId = currentUser.uid,
+                recipientName = recipientName,
                 userEmail = currentUser.email
             )
         }

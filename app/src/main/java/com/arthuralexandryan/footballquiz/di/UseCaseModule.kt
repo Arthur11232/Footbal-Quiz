@@ -8,6 +8,7 @@ import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotif
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.UnbindNotificationSessionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.SyncIssuedCertificatesToCloudUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.BuildStartPageStateUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.EnsureLocalizationSyncUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.ResolveStartCloudSyncUseCase
@@ -25,6 +26,7 @@ val useCaseModule = module {
     factory { MarkNotificationPermissionPromptShownUseCase(get()) }
     factory { ShowRewardReadyNotificationUseCase(get(), get()) }
     factory { ConsumePendingRewardsAfterAuthUseCase(get(), get()) }
+    factory { SyncIssuedCertificatesToCloudUseCase(get()) }
     factory { BuildStartPageStateUseCase(get()) }
     factory { EnsureLocalizationSyncUseCase(get()) }
     factory { SignInWithGoogleTokenUseCase(get()) }
