@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
@@ -34,7 +35,10 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.onBack.setOnClickListener { findNavController().navigateUp() }
+        binding.onBack.setOnClickListener { navigateBack() }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            navigateBack()
+        }
 
         binding.btnTop.setOnClickListener(this)
         binding.btnUefa.setOnClickListener(this)
@@ -115,5 +119,12 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun navigateBack() {
+        val navController = findNavController()
+        if (!navController.navigateUp()) {
+            navController.popBackStack()
+        }
     }
 }

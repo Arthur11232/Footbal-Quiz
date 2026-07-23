@@ -15,6 +15,7 @@ import android.view.animation.DecelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -87,6 +88,9 @@ class PlayFragment : Fragment(), ShowAds {
         observeUiState()
         observeEffects()
         initUiActions()
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            handleBackNavigation()
+        }
 
         arguments?.let {
             processArguments(it)
@@ -555,7 +559,10 @@ class PlayFragment : Fragment(), ShowAds {
     }
 
     private fun handleBackNavigation() {
-        findNavController().navigateUp()
+        val navController = findNavController()
+        if (!navController.navigateUp()) {
+            navController.popBackStack()
+        }
     }
 
     override fun onStart() {

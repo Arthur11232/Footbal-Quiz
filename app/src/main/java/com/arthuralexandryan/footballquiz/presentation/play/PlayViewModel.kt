@@ -114,14 +114,13 @@ class PlayViewModel(
 
         newlyCompletedStages.forEach { status ->
             val achievedAtMillis = status.achievedAtMillis ?: return@forEach
-            if (certificateRepository.getIssuedCertificate(status.stageId) != null) return@forEach
-            if (pendingRewardRepository.getPendingReward(status.stageId) != null) return@forEach
 
             val certificateId = buildCertificateId(
                 stageKey = status.stageId.value,
                 issuedAtMillis = achievedAtMillis
             )
             if (currentUser != null) {
+                if (certificateRepository.getIssuedCertificate(status.stageId) != null) return@forEach
                 newlyIssuedCertificates += IssuedCertificateRecord(
                     stageId = status.stageId,
                     certificateId = certificateId,
@@ -129,6 +128,7 @@ class PlayViewModel(
                     recipientName = recipientName
                 )
             } else {
+                if (pendingRewardRepository.getPendingReward(status.stageId) != null) return@forEach
                 newlyPendingRewards += PendingRewardRecord(
                     stageId = status.stageId,
                     certificateId = certificateId,

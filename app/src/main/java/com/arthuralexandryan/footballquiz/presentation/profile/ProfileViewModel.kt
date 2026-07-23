@@ -215,6 +215,7 @@ class ProfileViewModel(
             setLoading(true)
             unbindNotificationSessionUseCase(currentUserId)
             authRepository.signOut()
+            certificateRepository.clearLocalIssuedCertificates()
             setLoading(false)
             loadProfile()
             _effects.emit(ProfileEffect.NavigateBackToStart)

@@ -14,8 +14,8 @@
     <string name="vs">"??? vs ???"</string>
     <string name="next">Next</string>
     <string name="your_score">Your Score</string>
-    <string name="answer_correct">Правильный</string>
-    <string name="answer_incorect">Неправильный</string>
+    <string name="answer_correct">Correct</string>
+    <string name="answer_incorect">Incorrect</string>
     <string name="user">User</string>
     <string name="login_with_google">Login With Google</string>
     <string name="loading">Loading...</string>
@@ -163,11 +163,11 @@
 
     // FRANSIA
 
-    <string name="franc_text_federation">Федерация футбола Франции</string>
+    <string name="franc_text_federation">French Football Federation</string>
     <string name="franc_text_confederation">UEFA</string>
     <string name="franc_text_position">Les Bleus</string>
     <string name="franc_text_league">Ligue 1</string>
-    <string name="franc_text_date">Франция\n1932</string>
+    <string name="franc_text_date">France\n1932</string>
 
     <string-array name="france_answers">
 
@@ -566,11 +566,11 @@
 
     // GERMANIA
 
-    <string name="germany_text_federation">Немецкий футбольный союз</string>
+    <string name="germany_text_federation">German Football Association</string>
     <string name="germany_text_confederation">UEFA</string>
     <string name="germany_text_position">Nationalelf</string>
     <string name="germany_text_league">Bundesliga</string>
-    <string name="germany_text_date">Германия\n1963</string>
+    <string name="germany_text_date">Germany\n1963</string>
 
     <string-array name="germany_answers">
 
@@ -981,11 +981,11 @@
 
     // ITALIA
 
-    <string name="italy_text_federation">Итальянская федерация футбола</string>
+    <string name="italy_text_federation">Italian Football Federation</string>
     <string name="italy_text_confederation">UEFA</string>
     <string name="italy_text_position">Squadra Azzurra</string>
     <string name="italy_text_league">Serie A</string>
-    <string name="italy_text_date">Италия\n1898</string>
+    <string name="italy_text_date">Italy\n1898</string>
 
     <string-array name="italy_answers">
         <item>1898                           </item>
@@ -1414,11 +1414,11 @@
 
     // ENGLAND
 
-    <string name="england_text_federation">Футбольная ассоциация</string>
+    <string name="england_text_federation">The Football Association</string>
     <string name="england_text_confederation">UEFA</string>
     <string name="england_text_position">Three Lions</string>
     <string name="england_text_league">Premier League</string>
-    <string name="england_text_date">Англия\n1888</string>
+    <string name="england_text_date">England\n1888</string>
 
     <string-array name="english_answers">
         <item> 1888                       </item>
@@ -1881,11 +1881,11 @@
 
     // SPAIN
 
-    <string name="spain_text_federation">Королевская испанская футбольная федерация</string>
+    <string name="spain_text_federation">Royal Spanish Football Federation</string>
     <string name="spain_text_confederation">UEFA</string>
     <string name="spain_text_position">La Furia Roja</string>
     <string name="spain_text_league">Primera División</string>
-    <string name="spain_text_date">Испания\n1929</string>
+    <string name="spain_text_date">Spain\n1929</string>
 
     <string-array name="spain_answers">
         <item> Дания                        </item>
@@ -4324,23 +4324,23 @@
     </string-array>
 
     <string name="title_start_page">Football Quiz</string>
-    <string name="choose_game">Ընտրել Խաղը</string>
-    <string name="languages">Լեզուներ</string>
+    <string name="choose_game">Choose Game</string>
+    <string name="languages">Languages</string>
     <string name="coming_soon">Coming\nSoon</string>
     <string name="_200">\?? / 200</string>
     <string name="_40">40 | %s</string>
-    <string name="text_refresh">Duq karox eq xax@ versksel sexmelov refresh</string>
-    <string name="place_scores">Հաշիվ</string>
+    <string name="text_refresh">You can restart the game by pressing refresh</string>
+    <string name="place_scores">Score</string>
     <string name="question">Question</string>
     <string name="answer">Score</string>
     <string name="place">place</string>
-    <string name="versus">Ընդդեմ</string>
-    <string name="text_date">Իսպանիա\n1929</string>
-    <string name="text_federation">Королевская испанская футбольная федерация</string>
+    <string name="versus">Versus</string>
+    <string name="text_date">Spain\n1929</string>
+    <string name="text_federation">Royal Spanish Football Federation</string>
     <string name="text_confederation">UEFA</string>
     <string name="text_position">La Furia Roja</string>
     <string name="text_league">Primera División</string>
-    <string name="points_not_enough">Ձեր միավորները չեն բավարարում</string>
+    <string name="points_not_enough">Not enough points</string>
     <string name="text_score_real_barca" translatable="false">%s / 310</string>
     <string name="text_score_versus" translatable="false">%s / 240</string>
     <string name="text_score_world" translatable="false">%s / 210</string>
