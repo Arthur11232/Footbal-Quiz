@@ -41,6 +41,7 @@
 - **Progression Foundation (Phase 2):** Добавлены `ProgressionRepository`, `RefreshProgressionUseCase`, domain-модели progression и cloud-ready serialization completed stages в `UserStatsDTO`. Completion теперь считается детерминированно по granular и aggregate этапам (`Top 5`, `UEFA`, `World`, `Versus`, `App Complete`) и хранится локально через SharedPreferences с восстановлением через cloud sync.
 - **Profile Progression UI:** Профиль теперь показывает не только общий прогресс, но и список завершённых этапов (`completed stages`) с summary `done/total`. Для этого введён presentation-layer mapper `ProgressionSnapshot -> CompletedStageUiModel`.
 - **Achievement Certificate Flow:** Fresh completion event больше не ограничивается toast-сообщением. После нового completion `PlayViewModel` генерирует `AchievementCertificatePayload`, а `PlayFragment` открывает отдельный branded экран сертификата (`AchievementCertificateFragment`) с названием этапа, именем игрока, датой выдачи, `certificateId`, signature block и поддержкой случая нескольких completions за один ответ.
+- **Phase 5-6 App-Side Certificate UX:** Congratulations/certificate/profile flow считается закрытым на app-side уровне: guest completion, logged-in completion, post-login consume pending reward, certificate preview, profile preview, no duplicate issuance и logout isolation проверены вручную. Открытыми остаются cloud-resilience для certificate path и `Phase 7` email delivery.
 
 ---
 
@@ -205,4 +206,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 19.06.2026 (зафиксированы progression foundation, granular/aggregate stage completion, profile completed-stages UI и achievement certificate flow; MVVM/gameplay/catalog/sync/progression слои подтверждены `compileDevDebugKotlin`)*
+*Последнее обновление: 23.07.2026 (зафиксировано закрытие Phase 5-6 app-side certificate UX: guest/auth/post-login/profile/no-duplicate/logout isolation; следующим фокусом остаются cloud-resilience certificate path и Phase 7 email delivery)*

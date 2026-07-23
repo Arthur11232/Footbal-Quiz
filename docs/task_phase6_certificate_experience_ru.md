@@ -63,14 +63,28 @@
 
 ## Текущий статус
 
-`Partially implemented`
+`App-side complete`
 
-Основа уже существует:
+Основа реализована:
 - in-app certificate preview работает;
 - profile уже показывает сертификаты;
 - есть runtime themed certificate flow.
 
-Но phase ещё открыта, потому что:
-- нужен единый финальный product contract;
-- нужно выровнять preview/profile semantics;
-- нужно решить, что именно будет первой стабильной product-версией certificate experience.
+Текущий product contract:
+- сертификат считается app-side reward за завершённый stage;
+- issued certificate и completed stage не считаются одним и тем же состоянием;
+- guest reward может быть pending до authentication;
+- profile показывает доступные сертификаты и позволяет открыть preview;
+- local issued certificates очищаются при logout, чтобы не смешивать signed-in и guest state;
+- no duplicate issuance соблюдается в рамках текущей локальной/app-side модели.
+
+Проверено вручную:
+- guest completion;
+- logged-in completion;
+- profile preview.
+
+Out of scope для этой phase:
+- email delivery;
+- PDF/PNG export;
+- share action;
+- backend certificate generation.

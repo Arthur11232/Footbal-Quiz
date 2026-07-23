@@ -69,9 +69,23 @@
 
 ## Текущий статус
 
-`Partially implemented`
+`App-side complete`
 
-В коде уже есть рабочий congratulations/certificate flow, но phase остаётся открытой, потому что:
-- нет формально зафиксированного единого product contract;
-- guest/auth messaging ещё можно улучшить;
-- поведение по всем stage нужно выровнять и дополировать.
+В коде уже есть рабочий congratulations/certificate flow, и текущий app-side milestone считается закрытым.
+
+Закрытые правила:
+- congratulations screen показывается после фактического завершения stage;
+- guest completion создаёт pending reward opportunity;
+- authenticated completion ведёт к issued certificate flow;
+- post-login consume flow дооформляет pending reward;
+- повторная выдача одного и того же reward не должна происходить бесконтрольно;
+- пользователь может перейти к certificate preview после reward moment.
+
+Проверено вручную:
+- guest mode;
+- logged-in mode.
+
+Out of scope для этой phase:
+- email delivery сертификата;
+- backend/email pipeline;
+- notification product/UI layer.
