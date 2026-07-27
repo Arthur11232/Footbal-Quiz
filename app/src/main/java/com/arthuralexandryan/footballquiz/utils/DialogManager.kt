@@ -6,6 +6,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -88,8 +89,12 @@ object DialogManager {
 
         val group = dialogView.findViewById<RadioGroup>(R.id.app_languages)
         group.check(checkedLanguageId)
-        group.setOnCheckedChangeListener { radioGroup, checkedId ->
-            onLanguageSelected(radioGroup, checkedId)
+        for (index in 0 until group.childCount) {
+            val languageButton = group.getChildAt(index) as? RadioButton ?: continue
+            languageButton.setOnClickListener {
+                group.check(languageButton.id)
+                onLanguageSelected(group, languageButton.id)
+            }
         }
 
         dialogView.findViewById<AppCompatButton>(R.id.save_language).setOnClickListener {

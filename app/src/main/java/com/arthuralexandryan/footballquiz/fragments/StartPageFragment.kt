@@ -195,7 +195,7 @@ class StartPageFragment : Fragment() {
         DialogManager.showLanguageDialog(
             context = requireContext(),
             inflater = layoutInflater,
-            checkedLanguageId = settingsRepository.getCheckedLanguage(R.id.lng_russian),
+            checkedLanguageId = settingsRepository.getCheckedLanguage(R.id.lng_english),
             onLanguageSelected = { radioGroup, checkedId ->
                 val locale = when (checkedId) {
                     R.id.lng_armenian -> {
@@ -214,7 +214,6 @@ class StartPageFragment : Fragment() {
                     }
                 }
                 settingsRepository.setSelectedLocale(locale)
-                for (j in 0 until radioGroup.childCount) radioGroup.getChildAt(j).isClickable = false
             },
             onSave = {
                 requireActivity().recreate()
