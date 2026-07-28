@@ -9233,7 +9233,7 @@
     {
       "answer_A": "Dries Mertens",
       "answer_B": "José Callejón",
-      "answer_C": "Сусо",
+      "answer_C": "Suso",
       "answer_D": "Cristiano Ronaldo",
       "categoryType": "TOP5",
       "question": "Which of the listed in the season 2018–2019 became the best assistant of the Italian championship?",
@@ -10866,7 +10866,7 @@
       "answer_A": "Cristiano Ronaldo",
       "answer_B": "Lionel Messi",
       "answer_C": "Telmo Zarraonaindía",
-      "answer_D": "Ференц Пушкаш",
+      "answer_D": "Ferenc Puskás",
       "categoryType": "TOP5",
       "question": "Who scored the most goals in one season of the championship of Spain?",
       "right_answer": "Lionel Messi",
@@ -12448,7 +12448,7 @@
     },
     {
       "answer_A": "Cristiano Ronaldo",
-      "answer_B": "Райан Гиггз",
+      "answer_B": "Ryan Giggs",
       "answer_C": "Iker Casillas",
       "answer_D": "Xavi",
       "categoryType": "UEFA",
@@ -12461,7 +12461,7 @@
     {
       "answer_A": "Lionel Messi",
       "answer_B": "Cristiano Ronaldo",
-      "answer_C": "Филиппо Индзаги",
+      "answer_C": "Filippo Inzaghi",
       "answer_D": "Cristiano Ronaldo, Lionel Messi",
       "categoryType": "UEFA",
       "question": "Who became the authors of the \"hat trick \" in the Champions League (after 1992) the most?",
@@ -13083,13 +13083,13 @@
       "questionId": "france_044"
     },
     {
-      "answer_A": "Португалия",
-      "answer_B": "Мексика",
-      "answer_C": "Колумбия",
-      "answer_D": "Япония",
+      "answer_A": "Portugal",
+      "answer_B": "Mexico",
+      "answer_C": "Colombia",
+      "answer_D": "Japan",
       "categoryType": "WORLD_CUP",
       "question": "Which country in seven World Championships in a row dropped out of the draw at the 1/8 final stage?",
-      "right_answer": "Мексика",
+      "right_answer": "Mexico",
       "type": "World Championship",
       "answered": false,
       "questionId": "world_cup_018"
@@ -13110,10 +13110,10 @@
       "answer_A": "Brazil",
       "answer_B": "Uruguay",
       "answer_C": "Italy",
-      "answer_D": "Всем",
+      "answer_D": "All",
       "categoryType": "WORLD_CUP",
       "question": "Which country managed to win the World Cup by winning all matches?",
-      "right_answer": "Всем",
+      "right_answer": "All",
       "type": "World Championship",
       "answered": false,
       "questionId": "world_cup_020"
