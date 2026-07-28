@@ -58,6 +58,10 @@
 
 ## Current Checkpoint
 
+## Status
+
+`Phase 2` считается завершённой.
+
 - введён `ProgressionStageId` registry для:
   - `top5_france_complete`
   - `top5_germany_complete`
@@ -118,7 +122,6 @@
 
 ## Next Step
 
-- сохранить generated certificates как отдельные сущности/history
-- добавить auth-aware branch для guest:
-  - показать prompt на sign-in ради сохранения сертификата
-- затем переходить к notification + email certificate pipeline
+- использовать готовую progression/achievement основу как базу для `Phase 3 — Notifications Foundation`
+- не возвращаться к core progression rework без отдельной причины
+- дальнейшие улучшения делать уже как надстройку поверх существующего stage/completion слоя

@@ -184,7 +184,7 @@ Correct answer: of Germany
 
 ## 37. world_cup_037
 
-Question: Who is the oldest author "hat trick " in the World Championships?
+Question: Who is the oldestut ahor "hat trick " in the World Championships?
 Correct answer: Cristiano Ronaldo
 
 ## 38. world_cup_038

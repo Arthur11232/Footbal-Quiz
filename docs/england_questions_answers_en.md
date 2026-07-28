@@ -69,7 +69,7 @@ Correct answer: Preston North End
 
 ## 14. english_014
 
-Question: Which club managed to become the author of the "Golden Hat Trick "?
+Question: Which club managed to become the author of the "Golden Hat Trick"?
 Correct answer: Manchester United
 
 ## 15. english_015
@@ -134,17 +134,17 @@ Correct answer: Alan Shearer
 
 ## 27. english_027
 
-Question: Of those listed, who most won the prize "Best Footballer " Premier League season?
+Question: Of those listed, who most won the prize "Best Footballer" Premier League season?
 Correct answer: All three
 
 ## 28. english_028
 
-Question: Which country representatives won the prize "Best footballer " of the Premier League season most of all?
+Question: Which country representatives won the prize "Best footballer" of the Premier League season most of all?
 Correct answer: England
 
 ## 29. english_029
 
-Question: Which club representatives won the prize "Best Footballer " of the Premier League season most of all?
+Question: Which club representatives won the prize "Best Footballer" of the Premier League season most of all?
 Correct answer: Manchester United
 
 ## 30. english_030

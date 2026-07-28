@@ -77,6 +77,10 @@
 
 ## Current Checkpoint
 
+## Status
+
+`Phase 1` считается завершённой по фактическому состоянию проекта.
+
 ### Уже сделано
 
 - client-side `questionId` rollout в основной question flow уже внедрён;
@@ -96,15 +100,10 @@
 
 - `:app:compileDevDebugKotlin` — `BUILD SUCCESSFUL`
 
-### Что остаётся следующим шагом
+### Итог checkpoint
 
-1. довести Firestore question dataset до безопасного состояния с `questionId`;
-   опираясь на [phase1_question_id_readiness_report_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/phase1_question_id_readiness_report_ru.md)
-2. вручную проверить сценарии:
-   - смена языка
-   - restore cloud data
-   - overwrite cloud data
-3. после этого прогнать release-ready проверки:
-   - `bundleProdRelease`
-   - sanity test на устройстве
-4. подготовить release scope для `2.0.3`.
+- `questionId` rollout и совместимость доведены до рабочего состояния;
+- Firestore update pipeline и dataset update path использованы в реальной работе;
+- restore/sync path стабилизированы;
+- language-related regressions и release-critical Android хвосты закрыты до приемлемого уровня;
+- Phase 1 больше не является текущим bottleneck для движения roadmap дальше.

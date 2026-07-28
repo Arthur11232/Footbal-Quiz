@@ -184,12 +184,12 @@ Correct answer: 1
 
 ## 37. france_037
 
-Question: Which of the following 3 times in a row became the owner of the "Golden Ball "?
+Question: Which of the following 3 times in a row became the owner of the "Golden Ball"?
 Correct answer: Michel Platini
 
 ## 38. france_038
 
-Question: Which of the following became the first owner of the "Golden Ball "?
+Question: Which of the following became the first owner of the "Golden Ball"?
 Correct answer: Raymond Kopa
 
 ## 39. france_039
