@@ -127,6 +127,9 @@
     <string name="certificate_signature_role">Creator, Football Quiz</string>
     <string name="certificate_continue_button">Continue Quiz</string>
     <string name="certificate_pending_continue_button">Continue</string>
+    <string name="certificate_share_button">Share PNG</string>
+    <string name="certificate_share_chooser_title">Share certificate</string>
+    <string name="certificate_share_failed">Could not share certificate. Please try again.</string>
     <string name="certificate_back_button">Back</string>
     <string name="certificate_pending_recipient">Sign in required</string>
     <string name="congratulations_caption_awarded">STAGE COMPLETED</string>

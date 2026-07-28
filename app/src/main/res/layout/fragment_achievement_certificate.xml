@@ -430,10 +430,22 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/btnCertificateContinue"
+                android:id="@+id/btnCertificateShare"
                 android:layout_width="match_parent"
                 android:layout_height="54dp"
                 android:layout_marginTop="22dp"
+                android:text="@string/certificate_share_button"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:background="@drawable/bg_certificate_btn_new2"
+                tools:textColor="#0B1336" />
+
+            <Button
+                android:id="@+id/btnCertificateContinue"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="12dp"
                 android:text="@string/certificate_continue_button"
                 android:textAllCaps="false"
                 android:textSize="16sp"

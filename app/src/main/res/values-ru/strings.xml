@@ -114,6 +114,9 @@
     <string name="certificate_signature_role">Создатель Football Quiz</string>
     <string name="certificate_continue_button">Продолжить игру</string>
     <string name="certificate_pending_continue_button">Продолжить</string>
+    <string name="certificate_share_button">Поделиться PNG</string>
+    <string name="certificate_share_chooser_title">Поделиться сертификатом</string>
+    <string name="certificate_share_failed">Не удалось поделиться сертификатом. Попробуйте ещё раз.</string>
     <string name="certificate_back_button">Назад</string>
     <string name="certificate_pending_recipient">Нужен вход в аккаунт</string>
     <string name="congratulations_caption_awarded">ЭТАП ЗАВЕРШЁН</string>

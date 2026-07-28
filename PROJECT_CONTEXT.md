@@ -4,7 +4,7 @@
 
 ## 📌 Обзор проекта
 - **Название:** Football Quiz
-- **Версия:** 2.0.3
+- **Версия:** 2.1.0
 - **Основной стек:** Kotlin, Android SDK (`compileSdk 36`, `targetSdk 36`), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines, Koin.
 - **Цель:** Переход от legacy feature-driven UI-логики к сильной MVVM-архитектуре с `ViewModel`, `Repository`, `UseCase`, DI через Koin и заделом на будущую многомодульность.
 
@@ -30,7 +30,7 @@
 - **Ads Disabled in First Release:** Рекламная инфраструктура сохранена в проекте для будущего включения, но в версии 1.0.0 фактически выключена через `Constant.ADS_ENABLED = false`: баннеры скрыты, AdMob не инициализируется, interstitial/rewarded не загружаются, reset/reload работают бесплатно.
 - **Release Store Hygiene:** Включён строгий release lint (`abortOnError=true`, `checkReleaseBuilds=true`), отключены AAB language splits для in-app language switcher, добавлены backup/data extraction rules без восстановления локальных user data.
 - **System Bars Styling:** Добавлен общий `SystemBarStyleHelper`; основные экраны (`Splash`, `StartPage`, `ChooseGame`, `CategoryPage`, `Play`, `Versus`, `Profile`, `Privacy`, `Terms`) теперь синхронно выставляют `status bar` и `navigation bar` под свой фон. Для экранов с изображением цвет берётся из верхней/нижней полосы drawable, для однотонных экранов используется целевой ресурс цвета.
-- **Questions Firestore Update:** Коллекция Firestore `questions` обновлена из актуального `app/questions_audit.json`. Записано 1938 документов (`questions/0..1937`) в порядке `en, ru, hy`, пользовательский прогресс (`users/{uid}`) не затрагивался.
+- **Questions Firestore Update:** Коллекция Firestore `questions` обновлена из актуального `app/questions_audit.json`. Записано 2067 документов (`questions/0..2066`) в порядке `en, ru, hy`, пользовательский прогресс (`users/{uid}`) не затрагивался. Добавлены 30 новых вопросов по `Europa League`, `Champions League` и `World Cup` с локализациями EN/RU/HY.
 - **Firestore Updater Tool:** Добавлен локальный инструмент `tools/update_firestore_questions.py` для `inspect`, `dry-run` и batch-обновления вопросов в Firestore. Service account хранится локально и игнорируется git-ом.
 - **Очистка:** Основной flow очищен перед релизом, но legacy/debug файлы (`TestActivity`, `TouchActivity`, `TestFragment`, `TouchFragment`, `VSFragment`, `FQ_Timer`) оставлены в проекте, чтобы не терять старый код до отдельного решения.
 - **Offline:** Реализована логика офлайн-игры (загрузка из Firestore -> сохранение в Realm).
@@ -42,6 +42,7 @@
 - **Profile Progression UI:** Профиль теперь показывает не только общий прогресс, но и список завершённых этапов (`completed stages`) с summary `done/total`. Для этого введён presentation-layer mapper `ProgressionSnapshot -> CompletedStageUiModel`.
 - **Achievement Certificate Flow:** Fresh completion event больше не ограничивается toast-сообщением. После нового completion `PlayViewModel` генерирует `AchievementCertificatePayload`, а `PlayFragment` открывает отдельный branded экран сертификата (`AchievementCertificateFragment`) с названием этапа, именем игрока, датой выдачи, `certificateId`, signature block и поддержкой случая нескольких completions за один ответ.
 - **Phase 5-6 App-Side Certificate UX:** Congratulations/certificate/profile flow считается закрытым на app-side уровне: guest completion, logged-in completion, post-login consume pending reward, certificate preview, profile preview, no duplicate issuance и logout isolation проверены вручную. Открытыми остаются cloud-resilience для certificate path и `Phase 7` email delivery.
+- **Certificate PNG Share Branch:** На ветке `codex/certificate-png-share` добавлена функция `Share PNG` для выданных сертификатов: `AchievementCertificateFragment` рендерит `certificateCard` в PNG, сохраняет файл во временный cache и открывает системный Android share sheet через `FileProvider`. Pending/guest reward preview не шарится, потому что это ещё не выданный сертификат.
 
 ---
 

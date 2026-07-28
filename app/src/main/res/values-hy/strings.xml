@@ -114,6 +114,9 @@
     <string name="certificate_signature_role">Football Quiz-ի ստեղծող</string>
     <string name="certificate_continue_button">Շարունակել խաղը</string>
     <string name="certificate_pending_continue_button">Շարունակել</string>
+    <string name="certificate_share_button">Կիսվել PNG-ով</string>
+    <string name="certificate_share_chooser_title">Կիսվել վկայագրով</string>
+    <string name="certificate_share_failed">Չհաջողվեց կիսվել վկայագրով։ Փորձեք կրկին։</string>
     <string name="certificate_back_button">Հետ</string>
     <string name="certificate_pending_recipient">Պետք է մուտք գործել</string>
     <string name="congratulations_caption_awarded">ՓՈՒԼԸ ԱՎԱՐՏՎԱԾ Է</string>

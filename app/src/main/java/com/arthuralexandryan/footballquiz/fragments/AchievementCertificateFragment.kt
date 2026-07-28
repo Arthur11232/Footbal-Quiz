@@ -1,6 +1,10 @@
 package com.arthuralexandryan.footballquiz.fragments
 
+import android.content.ClipData
+import android.content.Intent
 import android.content.res.ColorStateList
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
@@ -10,7 +14,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import androidx.core.graphics.ColorUtils
 import androidx.core.widget.ImageViewCompat
 import androidx.fragment.app.Fragment
@@ -22,6 +28,8 @@ import com.arthuralexandryan.footballquiz.presentation.achievement.CertificateTh
 import com.arthuralexandryan.footballquiz.presentation.achievement.CertificateThemeMapper
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import java.io.File
+import java.io.FileOutputStream
 import java.text.DateFormat
 import java.util.Date
 
@@ -52,6 +60,9 @@ class AchievementCertificateFragment : Fragment() {
         }
         binding.btnCertificateClose.setOnClickListener {
             findNavController().navigateUp()
+        }
+        binding.btnCertificateShare.setOnClickListener {
+            shareCertificateAsPng(payload)
         }
 
         currentTheme = CertificateThemeMapper.themeFor(
@@ -180,6 +191,7 @@ class AchievementCertificateFragment : Fragment() {
                 R.string.certificate_continue_button
             }
         )
+        binding.btnCertificateShare.visibility = if (isPendingAuthClaim) View.GONE else View.VISIBLE
     }
 
     private fun readPayload(): AchievementCertificatePayload? {
@@ -290,8 +302,76 @@ class AchievementCertificateFragment : Fragment() {
             )
         )
         binding.btnCertificateContinue.setTextColor(theme.buttonTextColor)
+        binding.btnCertificateShare.background = createButtonBackground(
+            fillColor = theme.buttonFillColor,
+            strokeColor = ColorUtils.blendARGB(
+                theme.buttonFillColor,
+                theme.accentColor,
+                if (theme.isMajorAchievement) 0.45f else 0.30f
+            )
+        )
+        binding.btnCertificateShare.setTextColor(theme.buttonTextColor)
 
         applySystemBars(theme)
+    }
+
+    private fun shareCertificateAsPng(payload: AchievementCertificatePayload) {
+        val card = binding.certificateCard
+        if (card.width <= 0 || card.height <= 0) {
+            showShareError()
+            return
+        }
+
+        runCatching {
+            val bitmap = Bitmap.createBitmap(card.width, card.height, Bitmap.Config.ARGB_8888)
+            Canvas(bitmap).also(card::draw)
+
+            val outputFile = createCertificateShareFile(payload.certificateId)
+            FileOutputStream(outputFile).use { output ->
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, output)
+            }
+            bitmap.recycle()
+            sharePng(outputFile)
+        }.onFailure {
+            showShareError()
+        }
+    }
+
+    private fun createCertificateShareFile(certificateId: String): File {
+        val shareDir = File(requireContext().cacheDir, "shared_certificates").apply {
+            mkdirs()
+        }
+        val safeCertificateId = certificateId
+            .ifBlank { "certificate" }
+            .replace(Regex("[^A-Za-z0-9._-]"), "_")
+        return File(shareDir, "football_quiz_${safeCertificateId}.png")
+    }
+
+    private fun sharePng(file: File) {
+        val uri = FileProvider.getUriForFile(
+            requireContext(),
+            "${requireContext().packageName}.fileprovider",
+            file
+        )
+        val shareIntent = Intent(Intent.ACTION_SEND).apply {
+            type = "image/png"
+            putExtra(Intent.EXTRA_STREAM, uri)
+            clipData = ClipData.newUri(
+                requireContext().contentResolver,
+                "Football Quiz certificate",
+                uri
+            )
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+        startActivity(Intent.createChooser(shareIntent, getString(R.string.certificate_share_chooser_title)))
+    }
+
+    private fun showShareError() {
+        Toast.makeText(
+            requireContext(),
+            R.string.certificate_share_failed,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     private fun applySystemBars(theme: CertificateTheme) {
