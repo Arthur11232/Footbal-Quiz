@@ -1,11 +1,13 @@
 package com.arthuralexandryan.footballquiz.fragments
 
+import android.Manifest
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -15,8 +17,10 @@ import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.databinding.FragmentProfileBinding
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileEffect
+import com.arthuralexandryan.footballquiz.presentation.profile.ProfileCertificateUiModel
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileUiState
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileViewModel
+import com.arthuralexandryan.footballquiz.presentation.progression.CompletedStageUiModel
 import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.bumptech.glide.Glide
@@ -29,10 +33,16 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private val profileViewModel: ProfileViewModel by viewModel()
+    private var isBindingNotificationSwitches: Boolean = false
 
     private val imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let { profileViewModel.onPhotoSelected(it) }
     }
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            if (_binding == null) return@registerForActivityResult
+            profileViewModel.onNotificationPermissionResult(granted)
+        }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
@@ -50,6 +60,7 @@ class ProfileFragment : Fragment() {
         binding.btnRestoreCloud.setOnClickListener { profileViewModel.onRestoreCloudClicked() }
         binding.btnOverwriteCloud.setOnClickListener { profileViewModel.onOverwriteCloudClicked() }
         binding.onBack.setOnClickListener { findNavController().navigateUp() }
+        initNotificationListeners()
 
         profileViewModel.loadProfile()
     }
@@ -93,6 +104,12 @@ class ProfileFragment : Fragment() {
                         is ProfileEffect.ShowOverwriteDialog -> {
                             showOverwriteCloudDialog(effect.localScore, effect.localAnswered)
                         }
+                        is ProfileEffect.OpenCertificatePreview -> {
+                            openCertificatePreview(effect.payload)
+                        }
+                        ProfileEffect.RequestNotificationPermission -> {
+                            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                        }
                         ProfileEffect.ShowDeleteAccountDialog -> {
                             showDeleteAccountDialog()
                         }
@@ -102,6 +119,25 @@ class ProfileFragment : Fragment() {
                     }
                 }
             }
+        }
+    }
+
+    private fun initNotificationListeners() = binding.run {
+        switchNotificationsAll.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onNotificationsEnabledChanged(isChecked)
+        }
+        switchNotificationsProgress.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onProgressNotificationsEnabledChanged(isChecked)
+        }
+        switchNotificationsRewards.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onRewardNotificationsEnabledChanged(isChecked)
+        }
+        switchNotificationsUpdates.setOnCheckedChangeListener { _, isChecked ->
+            if (isBindingNotificationSwitches) return@setOnCheckedChangeListener
+            profileViewModel.onUpdateNotificationsEnabledChanged(isChecked)
         }
     }
 
@@ -133,6 +169,8 @@ class ProfileFragment : Fragment() {
             binding.btnDeleteAccount.visibility = View.GONE
         }
 
+        renderNotificationSettings(state)
+
         val localPhotoPath = state.localPhotoPath
         val imageSource = when {
             localPhotoPath != null && File(localPhotoPath).exists() -> localPhotoPath
@@ -151,6 +189,89 @@ class ProfileFragment : Fragment() {
         binding.tvUefaProgress.text = state.uefaProgressText
         binding.tvWorldProgress.text = state.worldProgressText
         binding.tvVersusProgress.text = state.versusProgressText
+        binding.tvCertificatesSummary.text = state.certificatesCount.toString()
+        binding.tvCertificatesEmpty.setText(
+            if (!state.isSignedIn && state.pendingRewardsCount > 0) {
+                R.string.profile_certificates_guest_pending
+            } else {
+                R.string.profile_certificates_empty
+            }
+        )
+        binding.tvCertificatesEmpty.visibility = if (state.certificates.isEmpty()) View.VISIBLE else View.GONE
+        binding.certificatesScroll.visibility = if (state.certificates.isEmpty()) View.GONE else View.VISIBLE
+        binding.tvCompletedStagesSummary.text = getString(
+            R.string.progression_completed_stages_summary,
+            state.completedStagesCount,
+            state.totalStagesCount
+        )
+        binding.tvCompletedStagesEmpty.visibility = if (state.completedStages.isEmpty()) View.VISIBLE else View.GONE
+        renderCertificates(state.certificates)
+        renderCompletedStages(state.completedStages)
+    }
+
+    private fun renderNotificationSettings(state: ProfileUiState) {
+        binding.run {
+            cardNotifications.visibility = if (state.showNotificationSettings) View.VISIBLE else View.GONE
+            if (!state.showNotificationSettings) return@run
+
+            val childSwitchesEnabled = state.notificationsEnabled && !state.isLoading
+            val permissionHintVisible = state.notificationsEnabled && !state.notificationPermissionGranted
+
+            isBindingNotificationSwitches = true
+            switchNotificationsAll.isChecked = state.notificationsEnabled
+            switchNotificationsAll.isEnabled = !state.isLoading
+            switchNotificationsProgress.isChecked = state.progressNotificationsEnabled
+            switchNotificationsProgress.isEnabled = childSwitchesEnabled
+            switchNotificationsRewards.isChecked = state.rewardNotificationsEnabled
+            switchNotificationsRewards.isEnabled = childSwitchesEnabled
+            switchNotificationsUpdates.isChecked = state.updateNotificationsEnabled
+            switchNotificationsUpdates.isEnabled = childSwitchesEnabled
+            isBindingNotificationSwitches = false
+
+            tvNotificationsStatus.text = getString(
+                if (!state.notificationsEnabled) {
+                    R.string.profile_notifications_status_off
+                } else if (state.notificationPermissionGranted) {
+                    R.string.profile_notifications_status_on
+                } else {
+                    R.string.profile_notifications_status_permission_required
+                }
+            )
+            tvNotificationPermissionHint.visibility = if (permissionHintVisible) View.VISIBLE else View.GONE
+        }
+    }
+
+    private fun renderCertificates(certificates: List<ProfileCertificateUiModel>) {
+        binding.certificatesContainer.removeAllViews()
+        certificates.forEach { item ->
+            val itemView = layoutInflater.inflate(
+                R.layout.item_profile_certificate,
+                binding.certificatesContainer,
+                false
+            )
+            itemView.findViewById<TextView>(R.id.tvCertificateStage).setText(item.stageTitleResId)
+            itemView.findViewById<TextView>(R.id.tvCertificateRecipient).text = item.recipientName
+            itemView.findViewById<TextView>(R.id.tvCertificateIssuedAt).text = item.issuedAtText
+            itemView.findViewById<TextView>(R.id.tvCertificateId).text = item.certificateId
+            itemView.setOnClickListener {
+                profileViewModel.onCertificateClicked(item)
+            }
+            binding.certificatesContainer.addView(itemView)
+        }
+    }
+
+    private fun renderCompletedStages(completedStages: List<CompletedStageUiModel>) {
+        binding.completedStagesContainer.removeAllViews()
+        completedStages.forEach { item ->
+            val itemView = layoutInflater.inflate(
+                R.layout.item_profile_completed_stage,
+                binding.completedStagesContainer,
+                false
+            )
+            itemView.findViewById<android.widget.TextView>(R.id.tvCompletedStageTitle).setText(item.titleResId)
+            itemView.findViewById<android.widget.TextView>(R.id.tvCompletedStageProgress).text = item.progressText
+            binding.completedStagesContainer.addView(itemView)
+        }
     }
 
     private fun showRestoreDialog(cloudStats: UserStatsDTO) {
@@ -163,6 +284,15 @@ class ProfileFragment : Fragment() {
             secondaryText = getString(R.string.profile_restore_cancel),
             onPrimaryClick = {
                 profileViewModel.onRestoreCloudConfirmed(cloudStats)
+            }
+        )
+    }
+
+    private fun openCertificatePreview(payload: com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload) {
+        findNavController().navigate(
+            R.id.achievementCertificateFragment,
+            Bundle().apply {
+                putParcelable("certificatePayload", payload)
             }
         )
     }

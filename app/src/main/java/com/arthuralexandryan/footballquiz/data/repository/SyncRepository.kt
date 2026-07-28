@@ -7,7 +7,11 @@ interface SyncRepository {
 
     sealed class SyncDecision {
         data object None : SyncDecision()
-        data class RestoreCloud(
+        data class AutoRestoreCloud(
+            val userId: String,
+            val cloudStats: UserStatsDTO
+        ) : SyncDecision()
+        data class PromptConflict(
             val userId: String,
             val cloudStats: UserStatsDTO
         ) : SyncDecision()
@@ -20,5 +24,5 @@ interface SyncRepository {
 
     suspend fun uploadLocalStats(user: FirebaseUser): Result<Unit>
 
-    fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO)
+    suspend fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO)
 }

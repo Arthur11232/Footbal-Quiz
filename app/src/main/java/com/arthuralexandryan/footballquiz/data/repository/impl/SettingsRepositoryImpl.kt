@@ -6,6 +6,7 @@ import com.arthuralexandryan.footballquiz.constants.Constant.INIT_DB
 import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
+import java.util.UUID
 
 class SettingsRepositoryImpl(
     private val context: Context
@@ -58,6 +59,82 @@ class SettingsRepositoryImpl(
             context,
             Constants.UserStatsRestorePromptDismissedKeyPrefix + userId,
             dismissed
+        )
+    }
+
+    override fun getNotificationInstallationId(): String {
+        val cached = Prefer.getStringPreference(context, Constants.NotificationInstallationIdKey, "")
+            ?.takeIf { it.isNotBlank() }
+        if (cached != null) return cached
+
+        val generated = UUID.randomUUID().toString()
+        Prefer.setStringPreference(context, Constants.NotificationInstallationIdKey, generated)
+        return generated
+    }
+
+    override fun getCachedNotificationToken(): String? =
+        Prefer.getStringPreference(context, Constants.NotificationCachedTokenKey, "")
+            ?.takeIf { it.isNotBlank() }
+
+    override fun setCachedNotificationToken(token: String?) {
+        Prefer.setStringPreference(context, Constants.NotificationCachedTokenKey, token.orEmpty())
+    }
+
+    override fun getNotificationBoundUserId(): String? =
+        Prefer.getStringPreference(context, Constants.NotificationBoundUserIdKey, "")
+            ?.takeIf { it.isNotBlank() }
+
+    override fun setNotificationBoundUserId(userId: String?) {
+        Prefer.setStringPreference(context, Constants.NotificationBoundUserIdKey, userId.orEmpty())
+    }
+
+    override fun getNotificationLastSyncedAt(): Long =
+        Prefer.getLongPreference(context, Constants.NotificationLastSyncedAtKey, 0L)
+
+    override fun setNotificationLastSyncedAt(timestampMillis: Long) {
+        Prefer.setLongPreference(context, Constants.NotificationLastSyncedAtKey, timestampMillis)
+    }
+
+    override fun areNotificationsEnabled(): Boolean =
+        Prefer.getBooleanPreference(context, Constants.NotificationGlobalEnabledKey, true)
+
+    override fun setNotificationsEnabled(enabled: Boolean) {
+        Prefer.setBooleanPreference(context, Constants.NotificationGlobalEnabledKey, enabled)
+    }
+
+    override fun areProgressNotificationsEnabled(): Boolean =
+        Prefer.getBooleanPreference(context, Constants.NotificationProgressEnabledKey, true)
+
+    override fun setProgressNotificationsEnabled(enabled: Boolean) {
+        Prefer.setBooleanPreference(context, Constants.NotificationProgressEnabledKey, enabled)
+    }
+
+    override fun areRewardNotificationsEnabled(): Boolean =
+        Prefer.getBooleanPreference(context, Constants.NotificationRewardEnabledKey, true)
+
+    override fun setRewardNotificationsEnabled(enabled: Boolean) {
+        Prefer.setBooleanPreference(context, Constants.NotificationRewardEnabledKey, enabled)
+    }
+
+    override fun areUpdateNotificationsEnabled(): Boolean =
+        Prefer.getBooleanPreference(context, Constants.NotificationUpdatesEnabledKey, true)
+
+    override fun setUpdateNotificationsEnabled(enabled: Boolean) {
+        Prefer.setBooleanPreference(context, Constants.NotificationUpdatesEnabledKey, enabled)
+    }
+
+    override fun isNotificationPermissionPromptShown(userId: String): Boolean =
+        Prefer.getBooleanPreference(
+            context,
+            Constants.NotificationPromptShownKeyPrefix + userId,
+            false
+        )
+
+    override fun setNotificationPermissionPromptShown(userId: String, shown: Boolean) {
+        Prefer.setBooleanPreference(
+            context,
+            Constants.NotificationPromptShownKeyPrefix + userId,
+            shown
         )
     }
 }

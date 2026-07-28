@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    fragment_achievement_certificate_new2.xml
+    Category-colored certificate concept.
+    Current preview theme: France / Ligue 1 inspired palette
+    with deep navy, warm ivory and subtle red accent.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fq_colorFranc">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_certificate_screen_overlay_new2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="28dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnCertificateClose"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_certificate_back_btn_new2"
+                    android:contentDescription="@string/certificate_back_button"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_keyboard_backspace_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#F7F2E8" />
+
+                <ImageView
+                    android:id="@+id/ivTrophy"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="22dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_trophy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="#F4D48A" />
+
+                <TextView
+                    android:id="@+id/tvAchievementCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:letterSpacing="0.20"
+                    android:text="@string/certificate_achievement_caption"
+                    android:textColor="#B9F7F2E8"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivTrophy" />
+
+                <TextView
+                    android:id="@+id/tvCertificateHeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="@string/certificate_headline"
+                    android:textColor="#F7F2E8"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAchievementCaption" />
+
+                <TextView
+                    android:id="@+id/tvCertificateSubheadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="@string/certificate_subheadline"
+                    android:textColor="#E8B9B8"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateHeadline" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_certificate_card_new2"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/cardOrnamentHeader"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#66D9515A" />
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#D9515A"
+                        android:rotation="45" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#66D9515A" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCertificateLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:letterSpacing="0.12"
+                    android:text="@string/certificate_title"
+                    android:textColor="#A8F7F2E8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardOrnamentHeader" />
+
+                <TextView
+                    android:id="@+id/tvCertificateRecipient"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:textColor="#F7F2E8"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateLabel"
+                    tools:text="Artur Aleksandryan" />
+
+                <View
+                    android:id="@+id/certificateDivider"
+                    android:layout_width="110dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#D9515A"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateRecipient" />
+
+                <TextView
+                    android:id="@+id/tvCertificateAwardedToLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/certificate_awarded_to"
+                    android:textColor="#D8E0E9"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/certificateDivider" />
+
+                <TextView
+                    android:id="@+id/tvCertificateAwardText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@string/certificate_award_text"
+                    android:textColor="#C4D0DB"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateAwardedToLabel" />
+
+                <TextView
+                    android:id="@+id/tvCertificateStage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_certificate_chip_new2"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#0B1336"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateAwardText"
+                    tools:text="Top 5: France" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalStages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:textColor="#F0C77D"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateStage"
+                    tools:text="+2 more stages completed" />
+
+                <LinearLayout
+                    android:id="@+id/additionalStagesContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAdditionalStages" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrierBelowStages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="additionalStagesContainer,tvAdditionalStages,tvCertificateStage" />
+
+                <View
+                    android:id="@+id/metaDivider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#44FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrierBelowStages" />
+
+                <TextView
+                    android:id="@+id/tvCertificateIssuedLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:letterSpacing="0.10"
+                    android:text="@string/certificate_issued_on"
+                    android:textColor="#99F7F2E8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tvCertificateIdLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/metaDivider"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCertificateIdLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="end"
+                    android:letterSpacing="0.10"
+                    android:text="@string/certificate_id_label"
+                    android:textColor="#99F7F2E8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvCertificateIssuedLabel"
+                    app:layout_constraintTop_toBottomOf="@id/metaDivider"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/tvCertificateIssuedAt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#F7F2E8"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tvCertificateId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateIssuedLabel"
+                    app:layout_constraintWidth_percent="0.5"
+                    tools:text="June 19, 2026" />
+
+                <TextView
+                    android:id="@+id/tvCertificateId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="end"
+                    android:textColor="#F7F2E8"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvCertificateIssuedAt"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateIdLabel"
+                    app:layout_constraintWidth_percent="0.5"
+                    tools:text="FQ-TOP5-FR-4821" />
+
+                <View
+                    android:id="@+id/signatureDivider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#33D9515A"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateIssuedAt" />
+
+                <TextView
+                    android:id="@+id/tvCertificateSignatureLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:letterSpacing="0.08"
+                    android:text="@string/certificate_signature_label"
+                    android:textColor="#99F7F2E8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/signatureDivider" />
+
+                <TextView
+                    android:id="@+id/tvCertificateSignature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="serif"
+                    android:text="@string/certificate_signature_name"
+                    android:textColor="#F0C77D"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateSignatureLabel" />
+
+                <TextView
+                    android:id="@+id/tvCertificateSignatureRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/certificate_signature_role"
+                    android:textColor="#B4C0CB"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateSignature" />
+
+                <LinearLayout
+                    android:id="@+id/cardOrnamentFooter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificateSignatureRole">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#66D9515A" />
+
+                    <View
+                        android:layout_width="6dp"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#D9515A"
+                        android:rotation="45" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#66D9515A" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnCertificateContinue"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_certificate_btn_new2"
+                android:text="@string/certificate_continue_button"
+                android:textAllCaps="false"
+                android:textColor="#0B1336"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

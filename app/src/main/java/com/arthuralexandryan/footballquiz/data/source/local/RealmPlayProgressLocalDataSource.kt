@@ -46,7 +46,7 @@ class RealmPlayProgressLocalDataSource(
                     "Super Cup" -> findQuestionByIdentity(transactionRealm, DB_Super_Cup::class.java, questionId, questionText)?.isAnswered = true
                     "European League" -> findQuestionByIdentity(transactionRealm, DB_Europa_League::class.java, questionId, questionText)?.isAnswered = true
                     "Champions League" -> findQuestionByIdentity(transactionRealm, DB_Champions_League::class.java, questionId, questionText)?.isAnswered = true
-                    "Europe Championship" -> findQuestionByIdentity(transactionRealm, DB_Europ_Championship::class.java, questionId, questionText)?.isAnswered = true
+                    "European Championship", "Europe Championship" -> findQuestionByIdentity(transactionRealm, DB_Europ_Championship::class.java, questionId, questionText)?.isAnswered = true
                     "World Cup" -> findQuestionByIdentity(transactionRealm, DB_World_Championship::class.java, questionId, questionText)?.isAnswered = true
                     "Versus R_M" -> findQuestionByIdentity(transactionRealm, DB_VS_Ronaldo_Messi::class.java, questionId, questionText)?.isAnswered = true
                     "Versus R_B" -> findQuestionByIdentity(transactionRealm, DB_VS_RealM_Barcelona::class.java, questionId, questionText)?.isAnswered = true
@@ -136,7 +136,7 @@ class RealmPlayProgressLocalDataSource(
                         scores.ufa_answered = (scores.ufa_answered - answeredScores).coerceAtLeast(0)
                         ScoreboardModel(20, 0, scores.ufa_answered, scores.ufa)
                     }
-                    "Europe Championship" -> {
+                    "European Championship", "Europe Championship" -> {
                         scores.ufaScores?.europaChampionship_score = 10
                         scores.ufaScores?.europaChampionship_answered = 0
                         scores.ufa_answered = (scores.ufa_answered - answeredScores).coerceAtLeast(0)
@@ -200,7 +200,7 @@ class RealmPlayProgressLocalDataSource(
                 scores.ufaScores?.championsLeague_answered = placeScores.place_score_answer
                 scores.ufaScores?.championsLeague_score = placeScores.place_score
             }
-            "Europe Championship" -> {
+            "European Championship", "Europe Championship" -> {
                 scores.ufaScores?.europaChampionship_answered = placeScores.place_score_answer
                 scores.ufaScores?.europaChampionship_score = placeScores.place_score
             }
@@ -249,7 +249,7 @@ class RealmPlayProgressLocalDataSource(
             "Super Cup" -> realm.where(DB_Super_Cup::class.java).findAll().forEach { it.isAnswered = false }
             "European League" -> realm.where(DB_Europa_League::class.java).findAll().forEach { it.isAnswered = false }
             "Champions League" -> realm.where(DB_Champions_League::class.java).findAll().forEach { it.isAnswered = false }
-            "Europe Championship" -> realm.where(DB_Europ_Championship::class.java).findAll().forEach { it.isAnswered = false }
+            "European Championship", "Europe Championship" -> realm.where(DB_Europ_Championship::class.java).findAll().forEach { it.isAnswered = false }
             "World Cup" -> realm.where(DB_World_Championship::class.java).findAll().forEach { it.isAnswered = false }
             "Versus R_M" -> realm.where(DB_VS_Ronaldo_Messi::class.java).findAll().forEach { it.isAnswered = false }
             "Versus R_B" -> realm.where(DB_VS_RealM_Barcelona::class.java).findAll().forEach { it.isAnswered = false }

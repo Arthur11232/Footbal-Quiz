@@ -28,11 +28,63 @@
 - дата получения
 - подпись автора/проекта
 
-### 3. Guest behavior
+### 3. Единообразие между stage-ами
+
+Нужно убедиться, что:
+
+- все stage используют один и тот же смысловой шаблон сертификата;
+- category-themed различия не ломают читаемость и узнаваемость сертификата;
+- certificate payload одинаково собирается для single-stage и multi-stage reward cases.
+
+### 4. Guest behavior
 - у guest нет полного персонального сертификата до auth
+- при этом пользователь должен понимать, что stage completion уже засчитан
+
+### 5. Profile experience
+
+Нужно довести profile presentation layer до более цельного поведения:
+
+- completed stages и issued certificates не должны визуально противоречить друг другу;
+- пользователь должен понимать, какие stage завершены, а какие сертификаты уже действительно выданы;
+- preview сертификата из profile должен ощущаться как повторный доступ к награде, а не как отдельный непонятный экран.
+
+## Product Decisions To Fix
+
+- что именно считаем финальным `certificate issued moment`;
+- показываем ли certificate preview сразу всегда или допускаем только profile revisit;
+- нужен ли отдельный статус для pending reward в profile сейчас или это останется скрытой внутренней моделью до следующего phase;
+- какие поля обязательны в preview первой стабильной версии.
 
 ## Acceptance Criteria
 
 - пользователь видит персонализированный сертификат в приложении
 - guest path мотивирует к регистрации
+- profile experience не расходится по смыслу с reward pipeline
 
+## Текущий статус
+
+`App-side complete`
+
+Основа реализована:
+- in-app certificate preview работает;
+- profile уже показывает сертификаты;
+- есть runtime themed certificate flow.
+
+Текущий product contract:
+- сертификат считается app-side reward за завершённый stage;
+- issued certificate и completed stage не считаются одним и тем же состоянием;
+- guest reward может быть pending до authentication;
+- profile показывает доступные сертификаты и позволяет открыть preview;
+- local issued certificates очищаются при logout, чтобы не смешивать signed-in и guest state;
+- no duplicate issuance соблюдается в рамках текущей локальной/app-side модели.
+
+Проверено вручную:
+- guest completion;
+- logged-in completion;
+- profile preview.
+
+Out of scope для этой phase:
+- email delivery;
+- PDF/PNG export;
+- share action;
+- backend certificate generation.

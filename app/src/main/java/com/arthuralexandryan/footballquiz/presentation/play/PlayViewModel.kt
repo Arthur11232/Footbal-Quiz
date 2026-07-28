@@ -4,10 +4,20 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
+import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
+import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
+import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShowRewardReadyNotificationUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRewardsAfterAuthUseCase
+import com.arthuralexandryan.footballquiz.domain.usecase.reward.SyncIssuedCertificatesToCloudUseCase
+import com.arthuralexandryan.footballquiz.domain.reward.PendingRewardRecord
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
+import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
+import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
 import com.arthuralexandryan.footballquiz.utils.CategoryType
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,7 +31,13 @@ import kotlin.random.Random
 
 class PlayViewModel(
     private val playSessionRepository: PlaySessionRepository,
-    private val authRepository: AuthRepository
+    private val authRepository: AuthRepository,
+    private val refreshProgressionUseCase: RefreshProgressionUseCase,
+    private val certificateRepository: CertificateRepository,
+    private val pendingRewardRepository: PendingRewardRepository,
+    private val showRewardReadyNotificationUseCase: ShowRewardReadyNotificationUseCase,
+    private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase,
+    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -41,6 +57,9 @@ class PlayViewModel(
     private var currentQuestionIndex: Int = -1
     private var answersSinceInterstitial: Int = 0
     private var initialized = false
+    private var pendingAchievementCertificate: AchievementCertificatePayload? = null
+    private var pendingRewardReadyNotification: AchievementCertificatePayload? = null
+    private var rewardReadyNotificationSent: Boolean = false
 
     fun initialize(args: PlaySessionArgs) {
         if (initialized) return
@@ -60,6 +79,7 @@ class PlayViewModel(
                 categoryScoreText = categoryScores.category_score.orEmpty()
             )
         }
+        consumePendingRewardsIfSignedIn()
         prepareNextQuestion()
     }
 
@@ -82,6 +102,77 @@ class PlayViewModel(
             placeScores = placeScores.copy(),
             isCorrect = isCorrect
         )
+        val progressionSnapshot = refreshProgressionUseCase()
+        val currentUser = authRepository.getCurrentUser()
+        val recipientName = resolveRecipientName(currentUser)
+        val newlyCompletedStages = progressionSnapshot.stages
+            .filter { it.isCurrentlyCompleted && it.achievedAtMillis != null }
+            .sortedBy { it.achievedAtMillis }
+
+        val newlyIssuedCertificates = mutableListOf<IssuedCertificateRecord>()
+        val newlyPendingRewards = mutableListOf<PendingRewardRecord>()
+
+        newlyCompletedStages.forEach { status ->
+            val achievedAtMillis = status.achievedAtMillis ?: return@forEach
+
+            val certificateId = buildCertificateId(
+                stageKey = status.stageId.value,
+                issuedAtMillis = achievedAtMillis
+            )
+            if (currentUser != null) {
+                if (certificateRepository.getIssuedCertificate(status.stageId) != null) return@forEach
+                newlyIssuedCertificates += IssuedCertificateRecord(
+                    stageId = status.stageId,
+                    certificateId = certificateId,
+                    issuedAtMillis = achievedAtMillis,
+                    recipientName = recipientName
+                )
+            } else {
+                if (pendingRewardRepository.getPendingReward(status.stageId) != null) return@forEach
+                newlyPendingRewards += PendingRewardRecord(
+                    stageId = status.stageId,
+                    certificateId = certificateId,
+                    earnedAtMillis = achievedAtMillis,
+                    recipientNameSnapshot = recipientName,
+                    createdAsGuest = true
+                )
+            }
+        }
+
+        if (newlyIssuedCertificates.isNotEmpty()) {
+            certificateRepository.saveIssuedCertificates(newlyIssuedCertificates)
+            pendingAchievementCertificate = buildAchievementCertificatePayload(
+                records = newlyIssuedCertificates.toIssuedRewardPreviewRecords(),
+                recipientName = recipientName,
+                isPendingAuthClaim = false
+            )
+            pendingRewardReadyNotification = pendingAchievementCertificate
+            rewardReadyNotificationSent = false
+
+            if (currentUser != null) {
+                viewModelScope.launch {
+                    certificateRepository.uploadIssuedCertificates(
+                        userId = currentUser.uid,
+                        recipientName = recipientName,
+                        userEmail = currentUser.email,
+                        records = newlyIssuedCertificates
+                    )
+                }
+            }
+        } else if (newlyPendingRewards.isNotEmpty()) {
+            pendingRewardRepository.savePendingRewards(newlyPendingRewards)
+            pendingAchievementCertificate = buildAchievementCertificatePayload(
+                records = newlyPendingRewards.toPendingRewardPreviewRecords(),
+                recipientName = recipientName,
+                isPendingAuthClaim = true
+            )
+            pendingRewardReadyNotification = null
+            rewardReadyNotificationSent = false
+        } else {
+            pendingAchievementCertificate = null
+            pendingRewardReadyNotification = null
+            rewardReadyNotificationSent = false
+        }
 
         val resetEnabled = forceReloadBarrier > placeScores.place_score
         _uiState.update {
@@ -106,7 +197,16 @@ class PlayViewModel(
 
     fun onAnswerTransitionFinished() {
         val shouldShowInterstitial = answersSinceInterstitial == 5
-        if (shouldShowInterstitial) {
+        val achievementCertificate = pendingAchievementCertificate
+        pendingAchievementCertificate = null
+        if (achievementCertificate != null) {
+            viewModelScope.launch {
+                _effects.emit(PlayEffect.ShowAchievementCertificate(achievementCertificate))
+            }
+            if (shouldShowInterstitial) {
+                answersSinceInterstitial = 0
+            }
+        } else if (shouldShowInterstitial) {
             answersSinceInterstitial = 0
             viewModelScope.launch {
                 _effects.emit(PlayEffect.ShowInterstitialAd)
@@ -165,6 +265,19 @@ class PlayViewModel(
         viewModelScope.launch {
             playSessionRepository.syncProgressIfSignedIn(user)
         }
+    }
+
+    fun onAchievementCertificateOpened() {
+        pendingRewardReadyNotification = null
+        rewardReadyNotificationSent = false
+    }
+
+    fun onHostStopped() {
+        if (rewardReadyNotificationSent) return
+        if (authRepository.getCurrentUser() == null) return
+        val achievementCertificate = pendingRewardReadyNotification ?: return
+        showRewardReadyNotificationUseCase(achievementCertificate)
+        rewardReadyNotificationSent = true
     }
 
     fun getAnsweredCountForReset(): Int = placeScores.place_score_answer
@@ -226,6 +339,23 @@ class PlayViewModel(
         }
     }
 
+    private fun consumePendingRewardsIfSignedIn() {
+        val currentUser = authRepository.getCurrentUser() ?: return
+        viewModelScope.launch {
+            val recipientName = resolveRecipientName(currentUser)
+            consumePendingRewardsAfterAuthUseCase(
+                userId = currentUser.uid,
+                recipientName = recipientName,
+                userEmail = currentUser.email
+            )
+            syncIssuedCertificatesToCloudUseCase(
+                userId = currentUser.uid,
+                recipientName = recipientName,
+                userEmail = currentUser.email
+            )
+        }
+    }
+
     private fun finishSession(totalScore: Int) {
         _uiState.update {
             it.copy(
@@ -237,4 +367,71 @@ class PlayViewModel(
             )
         }
     }
+
+    private fun buildAchievementCertificatePayload(
+        records: List<RewardPreviewRecord>,
+        recipientName: String,
+        isPendingAuthClaim: Boolean
+    ): AchievementCertificatePayload? {
+        val stages = records.map { record ->
+            ProgressionUiModelMapper.buildFreshlyCompletedStageUiModel(
+                stageId = record.stageId,
+                achievedAtMillis = record.earnedAtMillis
+            )
+        }
+        val primaryStage = stages.firstOrNull() ?: return null
+        val primaryRecord = records.firstOrNull() ?: return null
+
+        return AchievementCertificatePayload(
+            primaryStageId = primaryStage.stageId.value,
+            primaryStageTitleResId = primaryStage.titleResId,
+            additionalStageTitleResIds = stages.drop(1).map { it.titleResId },
+            recipientName = recipientName,
+            issuedAtMillis = primaryRecord.earnedAtMillis,
+            certificateId = primaryRecord.certificateId,
+            isPendingAuthClaim = isPendingAuthClaim
+        )
+    }
+
+    private fun resolveRecipientName(user: com.google.firebase.auth.FirebaseUser? = authRepository.getCurrentUser()): String {
+        return user?.displayName
+            ?.takeIf { it.isNotBlank() }
+            ?: user?.email
+                ?.substringBefore("@")
+                ?.takeIf { it.isNotBlank() }
+            ?: "Guest"
+    }
+
+    private fun buildCertificateId(stageKey: String, issuedAtMillis: Long): String {
+        val normalizedStageKey = stageKey
+            .replace("_", "-")
+            .uppercase()
+            .take(18)
+        val timeSuffix = issuedAtMillis.toString().takeLast(6)
+        return "FQ-$normalizedStageKey-$timeSuffix"
+    }
+
+    private fun List<IssuedCertificateRecord>.toIssuedRewardPreviewRecords(): List<RewardPreviewRecord> =
+        map { record ->
+            RewardPreviewRecord(
+                stageId = record.stageId,
+                certificateId = record.certificateId,
+                earnedAtMillis = record.issuedAtMillis
+            )
+        }
+
+    private fun List<PendingRewardRecord>.toPendingRewardPreviewRecords(): List<RewardPreviewRecord> =
+        map { record ->
+            RewardPreviewRecord(
+                stageId = record.stageId,
+                certificateId = record.certificateId,
+                earnedAtMillis = record.earnedAtMillis
+            )
+        }
+
+    private data class RewardPreviewRecord(
+        val stageId: com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId,
+        val certificateId: String,
+        val earnedAtMillis: Long
+    )
 }

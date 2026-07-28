@@ -9,13 +9,13 @@
     <string name="armenian">Հայերեն</string>
     <string name="top_5_tournament">Top 5</string>
     <string name="uefa">UEFA</string>
-    <string name="world_championship">World\nCip</string>
+    <string name="world_championship">World\nCup</string>
     <string name="versus_category">Versus</string>
     <string name="vs">"??? vs ???"</string>
     <string name="next">Next</string>
     <string name="your_score">Your Score</string>
-    <string name="answer_correct">Правильный</string>
-    <string name="answer_incorect">Неправильный</string>
+    <string name="answer_correct">Correct</string>
+    <string name="answer_incorect">Incorrect</string>
     <string name="user">User</string>
     <string name="login_with_google">Login With Google</string>
     <string name="loading">Loading...</string>
@@ -33,6 +33,7 @@
     <string name="profile_sync_error">Sync failed: %s</string>
     <string name="profile_restore_title">Restore Progress</string>
     <string name="profile_restore_message">"We found cloud progress with a higher score (%d). Do you want to restore it?"</string>
+    <string name="profile_restore_conflict_message">"We found saved cloud progress (%1$d). If you do not restore it and continue with the current progress on this device, the previous cloud progress will eventually be replaced by this device's progress."</string>
     <string name="profile_manual_restore_message">"Cloud score: %d. Do you want to restore this progress on this device?"</string>
     <string name="profile_restore_confirm">Restore</string>
     <string name="profile_restore_cancel">Cancel</string>
@@ -54,6 +55,22 @@
     <string name="profile_progress_percent">%d%%</string>
     <string name="profile_category_progress">Category Progress</string>
     <string name="profile_questions_answered">Questions Answered</string>
+    <string name="profile_notifications">Notifications</string>
+    <string name="profile_notifications_all">All notifications</string>
+    <string name="profile_notifications_progress">Progress reminders</string>
+    <string name="profile_notifications_rewards">Rewards and certificates</string>
+    <string name="profile_notifications_updates">Updates and new stages</string>
+    <string name="profile_notifications_status_on">Active</string>
+    <string name="profile_notifications_status_off">Off</string>
+    <string name="profile_notifications_status_permission_required">Permission required</string>
+    <string name="profile_notifications_permission_hint">Turn on system notification permission to receive alerts on this device.</string>
+    <string name="profile_notifications_sync_failed">Could not update notification settings. Please try again.</string>
+    <string name="profile_notifications_permission_denied">Notification permission is still disabled</string>
+    <string name="profile_certificates">Certificates</string>
+    <string name="profile_certificates_empty">Earn certificates to view them here.</string>
+    <string name="profile_certificates_guest_pending">You have completed rewards waiting to be claimed. Sign in to issue your certificates.</string>
+    <string name="profile_certificate_badge">CERTIFICATE</string>
+    <string name="profile_certificate_preview">Open preview</string>
     <string name="profile_sign_out">Sign Out</string>
     <string name="profile_delete_account">Delete Account &amp; Data</string>
     <string name="profile_delete_title">Delete account and data?</string>
@@ -67,14 +84,90 @@
     <string name="profile_edit_photo">Edit Photo</string>
     <string name="profile_guest">Guest</string>
     <string name="profile_not_signed_in">Not signed in</string>
+    <string name="progression_completed_stages">Completed Stages</string>
+    <string name="progression_completed_stages_summary">%1$d/%2$d</string>
+    <string name="progression_no_completed_stages">Finish stages to see them here.</string>
+    <string name="progression_new_stage_completed">Stage completed: %1$s</string>
+    <string name="progression_new_stages_completed">Stages completed: %1$s</string>
+    <string name="progression_stage_top5_france">Top 5: France</string>
+    <string name="progression_stage_top5_germany">Top 5: Germany</string>
+    <string name="progression_stage_top5_italy">Top 5: Italy</string>
+    <string name="progression_stage_top5_england">Top 5: England</string>
+    <string name="progression_stage_top5_spain">Top 5: Spain</string>
+    <string name="progression_stage_top5_complete">Top 5 Complete</string>
+    <string name="progression_stage_uefa_super_cup">UEFA: Super Cup</string>
+    <string name="progression_stage_uefa_europa_league">UEFA: Europa League</string>
+    <string name="progression_stage_uefa_champions_league">UEFA: Champions League</string>
+    <string name="progression_stage_uefa_european_championship">UEFA: European Championship</string>
+    <string name="progression_stage_uefa_complete">UEFA Complete</string>
+    <string name="progression_stage_world_complete">World Complete</string>
+    <string name="progression_stage_versus_vsrm">Versus: Ronaldo vs Messi</string>
+    <string name="progression_stage_versus_vsrb">Versus: Real Madrid vs Barcelona</string>
+    <string name="progression_stage_versus_complete">Versus Complete</string>
+    <string name="progression_stage_app_complete">Football Quiz Complete</string>
+    <string name="certificate_headline">Congratulations!</string>
+    <string name="certificate_subheadline">A new Football Quiz achievement has been unlocked.</string>
+    <string name="certificate_pending_caption">STAGE COMPLETED</string>
+    <string name="certificate_pending_headline">Reward Ready</string>
+    <string name="certificate_pending_subheadline">Sign in to claim your personal certificate for this stage.</string>
+    <string name="certificate_pending_status_note">Open Start or Profile, sign in with your account, and we will issue this certificate for you.</string>
+    <string name="certificate_title">Achievement Certificate</string>
+    <string name="certificate_pending_title">Reward Preview</string>
+    <string name="certificate_awarded_to">Awarded to</string>
+    <string name="certificate_pending_awarded_to">Certificate status</string>
+    <string name="certificate_award_text">For successfully completing this stage in Football Quiz</string>
+    <string name="certificate_pending_award_text">This stage is already completed. Your personal certificate will be issued after you sign in.</string>
+    <string name="certificate_additional_stages">+%1$d more stages completed</string>
+    <string name="certificate_issued_on">Issued on</string>
+    <string name="certificate_pending_issued_on">Unlocked on</string>
+    <string name="certificate_id_label">Certificate ID</string>
+    <string name="certificate_pending_id_label">Reward ID</string>
+    <string name="certificate_signature_label">Signed by</string>
+    <string name="certificate_signature_name">Artur Aleksandryan</string>
+    <string name="certificate_signature_role">Creator, Football Quiz</string>
+    <string name="certificate_continue_button">Continue Quiz</string>
+    <string name="certificate_pending_continue_button">Continue</string>
+    <string name="certificate_back_button">Back</string>
+    <string name="certificate_pending_recipient">Sign in required</string>
+    <string name="congratulations_caption_awarded">STAGE COMPLETED</string>
+    <string name="congratulations_caption_pending">REWARD READY</string>
+    <string name="congratulations_headline_awarded">Congratulations!</string>
+    <string name="congratulations_headline_pending">Great job!</string>
+    <string name="congratulations_body_awarded">You completed a new Football Quiz stage and unlocked your certificate moment.</string>
+    <string name="congratulations_body_pending">You completed this stage as a guest. The reward is saved and your personal certificate can be claimed after sign in.</string>
+    <string name="congratulations_awarded_note">You can open your certificate now and later find it again from Profile.</string>
+    <string name="congratulations_pending_note">Sign in later from Start or Profile and we will issue your personal certificate automatically.</string>
+    <string name="congratulations_recipient_label">Rewarded player</string>
+    <string name="congratulations_guest_recipient">Guest progress</string>
+    <string name="congratulations_cta_view_certificate">View certificate</string>
+    <string name="congratulations_cta_view_reward">Open reward preview</string>
+    <string name="congratulations_cta_continue">Continue quiz</string>
+    <string name="certificate_achievement_caption">ACHIEVEMENT UNLOCKED</string>
+    <string name="certificate_official_seal">OFFICIAL\nSEAL</string>
+    <string name="certificate_caption_top5_stage">TOP 5 STAGE</string>
+    <string name="certificate_caption_top5_complete">TOP 5 COMPLETE</string>
+    <string name="certificate_caption_uefa_stage">UEFA STAGE</string>
+    <string name="certificate_caption_uefa_complete">UEFA COMPLETE</string>
+    <string name="certificate_caption_world_complete">WORLD COMPLETE</string>
+    <string name="certificate_caption_versus_stage">VERSUS STAGE</string>
+    <string name="certificate_caption_versus_complete">VERSUS COMPLETE</string>
+    <string name="certificate_caption_app_complete">ULTIMATE COMPLETION</string>
+    <string name="certificate_subheadline_top5_stage">A new Top 5 football stage has been completed.</string>
+    <string name="certificate_subheadline_top5_complete">The full Top 5 collection has been completed.</string>
+    <string name="certificate_subheadline_uefa_stage">A new UEFA stage has been completed.</string>
+    <string name="certificate_subheadline_uefa_complete">The full UEFA collection has been completed.</string>
+    <string name="certificate_subheadline_world_complete">The World block has been fully completed.</string>
+    <string name="certificate_subheadline_versus_stage">A new head-to-head challenge has been completed.</string>
+    <string name="certificate_subheadline_versus_complete">All Versus challenges have been completed.</string>
+    <string name="certificate_subheadline_app_complete">Every major Football Quiz stage has been completed.</string>
 
     // FRANSIA
 
-    <string name="franc_text_federation">Федерация футбола Франции</string>
+    <string name="franc_text_federation">French Football Federation</string>
     <string name="franc_text_confederation">UEFA</string>
     <string name="franc_text_position">Les Bleus</string>
     <string name="franc_text_league">Ligue 1</string>
-    <string name="franc_text_date">Франция\n1932</string>
+    <string name="franc_text_date">France\n1932</string>
 
     <string-array name="france_answers">
 
@@ -473,11 +566,11 @@
 
     // GERMANIA
 
-    <string name="germany_text_federation">Немецкий футбольный союз</string>
+    <string name="germany_text_federation">German Football Association</string>
     <string name="germany_text_confederation">UEFA</string>
     <string name="germany_text_position">Nationalelf</string>
     <string name="germany_text_league">Bundesliga</string>
-    <string name="germany_text_date">Германия\n1963</string>
+    <string name="germany_text_date">Germany\n1963</string>
 
     <string-array name="germany_answers">
 
@@ -888,11 +981,11 @@
 
     // ITALIA
 
-    <string name="italy_text_federation">Итальянская федерация футбола</string>
+    <string name="italy_text_federation">Italian Football Federation</string>
     <string name="italy_text_confederation">UEFA</string>
     <string name="italy_text_position">Squadra Azzurra</string>
     <string name="italy_text_league">Serie A</string>
-    <string name="italy_text_date">Италия\n1898</string>
+    <string name="italy_text_date">Italy\n1898</string>
 
     <string-array name="italy_answers">
         <item>1898                           </item>
@@ -1321,11 +1414,11 @@
 
     // ENGLAND
 
-    <string name="england_text_federation">Футбольная ассоциация</string>
+    <string name="england_text_federation">The Football Association</string>
     <string name="england_text_confederation">UEFA</string>
     <string name="england_text_position">Three Lions</string>
     <string name="england_text_league">Premier League</string>
-    <string name="england_text_date">Англия\n1888</string>
+    <string name="england_text_date">England\n1888</string>
 
     <string-array name="english_answers">
         <item> 1888                       </item>
@@ -1788,11 +1881,11 @@
 
     // SPAIN
 
-    <string name="spain_text_federation">Королевская испанская футбольная федерация</string>
+    <string name="spain_text_federation">Royal Spanish Football Federation</string>
     <string name="spain_text_confederation">UEFA</string>
     <string name="spain_text_position">La Furia Roja</string>
     <string name="spain_text_league">Primera División</string>
-    <string name="spain_text_date">Испания\n1929</string>
+    <string name="spain_text_date">Spain\n1929</string>
 
     <string-array name="spain_answers">
         <item> Дания                        </item>
@@ -4231,23 +4324,23 @@
     </string-array>
 
     <string name="title_start_page">Football Quiz</string>
-    <string name="choose_game">Ընտրել Խաղը</string>
-    <string name="languages">Լեզուներ</string>
+    <string name="choose_game">Choose Game</string>
+    <string name="languages">Languages</string>
     <string name="coming_soon">Coming\nSoon</string>
     <string name="_200">\?? / 200</string>
     <string name="_40">40 | %s</string>
-    <string name="text_refresh">Duq karox eq xax@ versksel sexmelov refresh</string>
-    <string name="place_scores">Հաշիվ</string>
+    <string name="text_refresh">You can restart the game by pressing refresh</string>
+    <string name="place_scores">Score</string>
     <string name="question">Question</string>
     <string name="answer">Score</string>
     <string name="place">place</string>
-    <string name="versus">Ընդդեմ</string>
-    <string name="text_date">Իսպանիա\n1929</string>
-    <string name="text_federation">Королевская испанская футбольная федерация</string>
+    <string name="versus">Versus</string>
+    <string name="text_date">Spain\n1929</string>
+    <string name="text_federation">Royal Spanish Football Federation</string>
     <string name="text_confederation">UEFA</string>
     <string name="text_position">La Furia Roja</string>
     <string name="text_league">Primera División</string>
-    <string name="points_not_enough">Ձեր միավորները չեն բավարարում</string>
+    <string name="points_not_enough">Not enough points</string>
     <string name="text_score_real_barca" translatable="false">%s / 310</string>
     <string name="text_score_versus" translatable="false">%s / 240</string>
     <string name="text_score_world" translatable="false">%s / 210</string>
@@ -4304,6 +4397,16 @@
     <string name="new_no">No</string>
     <string name="not_cong_title">Congratulation</string>
     <string name="not_cong_body">Already You can play %s</string>
+    <string name="notifications_permission_title">Stay in the game</string>
+    <string name="notifications_permission_message">Allow notifications to get progress reminders, reward alerts, and updates about new stages.</string>
+    <string name="notifications_permission_allow">Allow</string>
+    <string name="notifications_permission_not_now">Not now</string>
+    <string name="notifications_permission_enabled">Notifications enabled</string>
+    <string name="notification_channel_name">Football Quiz</string>
+    <string name="notification_channel_description">Football Quiz progress, reward, and update notifications</string>
+    <string name="reward_notification_title">New reward ready</string>
+    <string name="reward_notification_body_single">Your %1$s certificate is ready in Profile.</string>
+    <string name="reward_notification_body_multiple">%1$d new certificates are ready in Profile.</string>
     <string name="local_armenian" tools:ignore="MissingTranslation">hy</string>
     <string name="local_russian" tools:ignore="MissingTranslation">ru</string>
     <string name="coming_soon_game">Dinamo Kiev vs Spartak Moscow</string>

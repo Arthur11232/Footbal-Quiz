@@ -2,10 +2,11 @@ package com.arthuralexandryan.footballquiz.presentation.profile
 
 import androidx.annotation.StringRes
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
+import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 
 sealed class ProfileEffect {
     data class ShowToastRes(
-        @StringRes val messageResId: Int
+        @param:StringRes val messageResId: Int
     ) : ProfileEffect()
 
     data class ShowToastText(
@@ -21,6 +22,11 @@ sealed class ProfileEffect {
         val localAnswered: Int
     ) : ProfileEffect()
 
+    data class OpenCertificatePreview(
+        val payload: AchievementCertificatePayload
+    ) : ProfileEffect()
+
+    data object RequestNotificationPermission : ProfileEffect()
     data object ShowDeleteAccountDialog : ProfileEffect()
     data object NavigateBackToStart : ProfileEffect()
 }

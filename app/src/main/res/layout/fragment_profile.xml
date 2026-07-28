@@ -376,6 +376,257 @@
                     tools:text="0/100" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardCompletedStages"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_stats_card"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCategoryProgress">
+
+                <TextView
+                    android:id="@+id/tvCompletedStagesTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progression_completed_stages"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tvCompletedStagesSummary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCompletedStagesSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvCompletedStagesTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0/16" />
+
+                <TextView
+                    android:id="@+id/tvCompletedStagesEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/progression_no_completed_stages"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCompletedStagesTitle"
+                    tools:text="Finish stages to see them here" />
+
+                <LinearLayout
+                    android:id="@+id/completedStagesContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCompletedStagesTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardCertificates"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_stats_card"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCompletedStages">
+
+                <TextView
+                    android:id="@+id/tvCertificatesTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_certificates"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tvCertificatesSummary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCertificatesSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvCertificatesTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="0" />
+
+                <TextView
+                    android:id="@+id/tvCertificatesEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/profile_certificates_empty"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificatesTitle"
+                    tools:text="Earn certificates to view them here" />
+
+                <HorizontalScrollView
+                    android:id="@+id/certificatesScroll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:clipToPadding="false"
+                    android:fadeScrollbars="false"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCertificatesTitle">
+
+                    <LinearLayout
+                        android:id="@+id/certificatesContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardNotifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_stats_card"
+                android:padding="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardCertificates">
+
+                <TextView
+                    android:id="@+id/tvNotificationsTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_notifications"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/tvNotificationsStatus"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNotificationsStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvNotificationsTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="Active" />
+
+                <TextView
+                    android:id="@+id/tvNotificationPermissionHint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/profile_notifications_permission_hint"
+                    android:textColor="#E3F3E8"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotificationsTitle"
+                    tools:text="Turn on system permission to receive notifications."
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvNotificationsAllLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/profile_notifications_all"
+                    android:textColor="@color/fq_colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/switchNotificationsAll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotificationPermissionHint" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchNotificationsAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvNotificationsAllLabel"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNotificationsProgressLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/profile_notifications_progress"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/switchNotificationsProgress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotificationsAllLabel" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchNotificationsProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvNotificationsProgressLabel"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNotificationsRewardsLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/profile_notifications_rewards"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/switchNotificationsRewards"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotificationsProgressLabel" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchNotificationsRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvNotificationsRewardsLabel"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvNotificationsUpdatesLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/profile_notifications_updates"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/switchNotificationsUpdates"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNotificationsRewardsLabel" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchNotificationsUpdates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvNotificationsUpdatesLabel"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSignOut"
                 android:layout_width="0dp"
@@ -400,7 +651,7 @@
                 app:layout_constraintEnd_toStartOf="@id/btnDeleteAccount"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cardCategoryProgress" />
+                app:layout_constraintTop_toBottomOf="@id/cardNotifications" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDeleteAccount"

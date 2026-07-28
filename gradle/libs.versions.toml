@@ -43,6 +43,7 @@ play-services-ads = { group = "com.google.android.gms", name = "play-services-ad
 play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
 realm-gradle-plugin = { group = "io.realm", name = "realm-gradle-plugin", version.ref = "realmGradlePlugin" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koinBom" }

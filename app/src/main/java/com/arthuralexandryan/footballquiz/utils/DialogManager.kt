@@ -6,6 +6,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -25,12 +26,13 @@ object DialogManager {
         primaryText: CharSequence,
         secondaryText: CharSequence,
         cancelOutside: Boolean = true,
+        cancelable: Boolean = true,
         onDismiss: (() -> Unit)? = null,
         onPrimaryClick: () -> Unit,
         onSecondaryClick: (() -> Unit)? = null
     ): Dialog {
         val dialogView = inflater.inflate(R.layout.dialog_cloud_sync, null)
-        val dialog = createStyledDialog(context, dialogView, cancelOutside, onDismiss)
+        val dialog = createStyledDialog(context, dialogView, cancelOutside, cancelable, onDismiss)
 
         dialogView.findViewById<TextView>(R.id.dialogTitle).text = title
         dialogView.findViewById<TextView>(R.id.dialogMessage).text = message
@@ -61,7 +63,7 @@ object DialogManager {
         onConfirm: () -> Unit
     ): Dialog {
         val dialogView = inflater.inflate(R.layout.dialog_new_game, null)
-        val dialog = createStyledDialog(context, dialogView, cancelOutside = true)
+        val dialog = createStyledDialog(context, dialogView, cancelOutside = true, cancelable = true)
 
         dialogView.findViewById<AppCompatButton>(R.id.btn_yes).setOnClickListener {
             dialog.dismiss()
@@ -83,12 +85,16 @@ object DialogManager {
         onSave: () -> Unit
     ): Dialog {
         val dialogView = inflater.inflate(R.layout.dialog_language, null)
-        val dialog = createStyledDialog(context, dialogView, cancelOutside = true)
+        val dialog = createStyledDialog(context, dialogView, cancelOutside = true, cancelable = true)
 
         val group = dialogView.findViewById<RadioGroup>(R.id.app_languages)
         group.check(checkedLanguageId)
-        group.setOnCheckedChangeListener { radioGroup, checkedId ->
-            onLanguageSelected(radioGroup, checkedId)
+        for (index in 0 until group.childCount) {
+            val languageButton = group.getChildAt(index) as? RadioButton ?: continue
+            languageButton.setOnClickListener {
+                group.check(languageButton.id)
+                onLanguageSelected(group, languageButton.id)
+            }
         }
 
         dialogView.findViewById<AppCompatButton>(R.id.save_language).setOnClickListener {
@@ -124,10 +130,12 @@ object DialogManager {
         context: Context,
         contentView: View,
         cancelOutside: Boolean,
+        cancelable: Boolean,
         onDismiss: (() -> Unit)? = null
     ): Dialog {
         return Dialog(context, R.style.FQ_CustomDialog).apply {
             setContentView(contentView)
+            setCancelable(cancelable)
             setCanceledOnTouchOutside(cancelOutside)
             setOnDismissListener { onDismiss?.invoke() }
             window?.apply {

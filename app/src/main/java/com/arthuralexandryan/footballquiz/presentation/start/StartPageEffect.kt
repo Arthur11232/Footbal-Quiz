@@ -8,6 +8,9 @@ sealed class StartPageEffect {
     data object ShowNewGameDialog : StartPageEffect()
     data object OpenLanguageDialog : StartPageEffect()
     data object OpenProfile : StartPageEffect()
+    data class PromptNotificationPermission(
+        val userId: String
+    ) : StartPageEffect()
     data class PromptCloudRestore(
         val userId: String,
         val cloudStats: UserStatsDTO

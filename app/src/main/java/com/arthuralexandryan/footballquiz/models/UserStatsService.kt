@@ -9,6 +9,8 @@ class UserStatsService(
 
     companion object {
         private const val COLLECTION_USERS = "users"
+        private const val COLLECTION_CERTIFICATES = "certificates"
+        private const val COLLECTION_DEVICES = "devices"
     }
 
     fun uploadStats(userId: String, stats: UserStatsDTO, onComplete: (Boolean) -> Unit) {
@@ -44,12 +46,164 @@ class UserStatsService(
             }
     }
 
+    fun uploadCertificates(
+        userId: String,
+        certificates: List<UserCertificateDTO>,
+        onComplete: (Boolean) -> Unit
+    ) {
+        if (certificates.isEmpty()) {
+            onComplete(true)
+            return
+        }
+
+        val batch = db.batch()
+        val userDocument = db.collection(COLLECTION_USERS).document(userId)
+        certificates.forEach { certificate ->
+            val certificateDocument = userDocument
+                .collection(COLLECTION_CERTIFICATES)
+                .document(certificate.stageId)
+            batch.set(certificateDocument, certificate, SetOptions.merge())
+        }
+        batch.commit()
+            .addOnSuccessListener {
+                onComplete(true)
+            }
+            .addOnFailureListener {
+                onComplete(false)
+            }
+    }
+
+    fun downloadCertificates(
+        userId: String,
+        onComplete: (List<UserCertificateDTO>) -> Unit
+    ) {
+        db.collection(COLLECTION_USERS)
+            .document(userId)
+            .collection(COLLECTION_CERTIFICATES)
+            .get()
+            .addOnSuccessListener { snapshot ->
+                val certificates = snapshot.documents.mapNotNull { document ->
+                    try {
+                        document.toObject(UserCertificateDTO::class.java)
+                    } catch (_: Exception) {
+                        null
+                    }
+                }
+                onComplete(certificates)
+            }
+            .addOnFailureListener {
+                onComplete(emptyList())
+            }
+    }
+
     fun deleteStats(userId: String, onComplete: (Boolean) -> Unit) {
         db.collection(COLLECTION_USERS)
             .document(userId)
             .delete()
             .addOnSuccessListener {
                 onComplete(true)
+            }
+            .addOnFailureListener {
+                onComplete(false)
+            }
+    }
+
+    fun deleteCertificates(userId: String, onComplete: (Boolean) -> Unit) {
+        val certificatesCollection = db.collection(COLLECTION_USERS)
+            .document(userId)
+            .collection(COLLECTION_CERTIFICATES)
+
+        certificatesCollection
+            .get()
+            .addOnSuccessListener { snapshot ->
+                if (snapshot.isEmpty) {
+                    onComplete(true)
+                    return@addOnSuccessListener
+                }
+
+                val batch = db.batch()
+                snapshot.documents.forEach { document ->
+                    batch.delete(document.reference)
+                }
+                batch.commit()
+                    .addOnSuccessListener {
+                        onComplete(true)
+                    }
+                    .addOnFailureListener {
+                        onComplete(false)
+                    }
+            }
+            .addOnFailureListener {
+                onComplete(false)
+            }
+    }
+
+    fun uploadNotificationDevice(
+        userId: String,
+        device: UserNotificationDeviceDTO,
+        onComplete: (Boolean) -> Unit
+    ) {
+        db.collection(COLLECTION_USERS)
+            .document(userId)
+            .collection(COLLECTION_DEVICES)
+            .document(device.installationId)
+            .set(device, SetOptions.merge())
+            .addOnSuccessListener {
+                onComplete(true)
+            }
+            .addOnFailureListener {
+                onComplete(false)
+            }
+    }
+
+    fun deactivateNotificationDevice(
+        userId: String,
+        installationId: String,
+        updatedAtMillis: Long,
+        onComplete: (Boolean) -> Unit
+    ) {
+        val payload = mapOf(
+            "installationId" to installationId,
+            "active" to false,
+            "updatedAtMillis" to updatedAtMillis
+        )
+        db.collection(COLLECTION_USERS)
+            .document(userId)
+            .collection(COLLECTION_DEVICES)
+            .document(installationId)
+            .set(payload, SetOptions.merge())
+            .addOnSuccessListener {
+                onComplete(true)
+            }
+            .addOnFailureListener {
+                onComplete(false)
+            }
+    }
+
+    fun deleteNotificationDevices(userId: String, onComplete: (Boolean) -> Unit) {
+        val devicesCollection = db.collection(COLLECTION_USERS)
+            .document(userId)
+            .collection(COLLECTION_DEVICES)
+
+        devicesCollection
+            .get()
+            .addOnSuccessListener { snapshot ->
+                if (snapshot.isEmpty) {
+                    onComplete(true)
+                    return@addOnSuccessListener
+                }
+
+                val batch = db.batch()
+                snapshot.documents.forEach { document ->
+                    batch.delete(document.reference)
+                }
+                batch.commit()
+                    .addOnSuccessListener {
+                        onComplete(true)
+                    }
+                    .addOnFailureListener {
+                        onComplete(false)
+                    }
             }
             .addOnFailureListener {
                 onComplete(false)

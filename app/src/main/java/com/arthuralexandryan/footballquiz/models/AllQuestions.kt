@@ -72,7 +72,7 @@ enum class places(val place: String) {
     SPAIN("Spain"),
     SUPER_CUP("Super Cup"),
     EUROPA_LEAGUE("Europa League"),
-    EUROPA_CHAMPIONS("\"European Championship"),
+    EUROPA_CHAMPIONS("European Championship"),
     CHAMPIONS("Champions League"),
     WORLD("World Championship"),
     RON_MESSI("vsRM"),

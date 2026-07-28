@@ -15,6 +15,7 @@ import android.view.animation.DecelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -87,6 +88,9 @@ class PlayFragment : Fragment(), ShowAds {
         observeUiState()
         observeEffects()
         initUiActions()
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            handleBackNavigation()
+        }
 
         arguments?.let {
             processArguments(it)
@@ -202,6 +206,9 @@ class PlayFragment : Fragment(), ShowAds {
                             }
                             runAnswerTransition()
                         }
+                        is PlayEffect.ShowAchievementCertificate -> {
+                            navigateToAchievementCongratulations(effect.payload)
+                        }
                         PlayEffect.ShowInterstitialAd -> {
                             if (Constant.ADS_ENABLED && mInterstitialAd != null) {
                                 mInterstitialAd?.show(requireActivity())
@@ -213,6 +220,19 @@ class PlayFragment : Fragment(), ShowAds {
                 }
             }
         }
+    }
+
+    private fun navigateToAchievementCongratulations(
+        payload: com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
+    ) {
+        playViewModel.onAchievementCertificateOpened()
+        val args = Bundle().apply {
+            putParcelable("certificatePayload", payload)
+        }
+        findNavController().navigate(
+            R.id.action_play_to_achievement_congratulations,
+            args
+        )
     }
 
     private fun processArguments(data: Bundle) {
@@ -517,14 +537,13 @@ class PlayFragment : Fragment(), ShowAds {
         binding.finishGame.root.visibility = View.VISIBLE
         binding.lNumber.visibility = View.INVISIBLE
         
-        val totalGoal = binding.finishGame.root.findViewById<TextView>(R.id.total_goal)
-        totalGoal.text = totalScoreText
+        binding.finishGame.totalGoal.text = totalScoreText
         
-        binding.finishGame.root.findViewById<ImageView>(R.id.exit_game).setOnClickListener {
+        binding.finishGame.exitGame.setOnClickListener{
             handleBackNavigation()
         }
         
-        binding.finishGame.root.findViewById<ImageView>(R.id.reload_game).setOnClickListener {
+        binding.finishGame.reloadGame.setOnClickListener {
             if (!Constant.ADS_ENABLED) {
                 playViewModel.resetSession(isForce = false)
             } else if (mRewardedAd != null) {
@@ -540,8 +559,9 @@ class PlayFragment : Fragment(), ShowAds {
     }
 
     private fun handleBackNavigation() {
-        if (playViewModel.uiState.value.isAnswerEnabled) {
-            findNavController().navigateUp()
+        val navController = findNavController()
+        if (!navController.navigateUp()) {
+            navController.popBackStack()
         }
     }
 
@@ -550,6 +570,7 @@ class PlayFragment : Fragment(), ShowAds {
     }
 
     override fun onStop() {
+        playViewModel.onHostStopped()
         playViewModel.persistCurrentQuestionOnStop()
         playViewModel.syncProgressIfSignedIn()
         super.onStop()

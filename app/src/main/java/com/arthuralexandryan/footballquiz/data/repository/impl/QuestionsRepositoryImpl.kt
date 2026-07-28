@@ -25,10 +25,19 @@ class QuestionsRepositoryImpl(
         val isInitialized = settingsRepository.isQuestionsInitialized()
         val answeredQuestionIds = if (isInitialized) dbHelper.getAnsweredQuestionIds() else emptySet()
         val hasAnsweredProgress = if (isInitialized) dbHelper.hasAnsweredQuestions() else false
+        val hasEmptyQuestionBuckets = if (isInitialized) dbHelper.hasEmptyQuestionBuckets() else false
         val isLocaleSwitch = isInitialized && selectedLocale != questionsLocale
 
-        if (isInitialized && selectedLocale == questionsLocale) {
+        if (isInitialized && selectedLocale == questionsLocale && !hasEmptyQuestionBuckets) {
             return Result.success(Unit)
+        }
+
+        if (hasEmptyQuestionBuckets) {
+            Log.w(
+                "FQ_Log",
+                "QuestionsRepository.ensureLocalizationSync: repairing incomplete local question catalog. " +
+                    "selectedLocale=$selectedLocale, questionsLocale=$questionsLocale"
+            )
         }
 
         return suspendCancellableCoroutine { continuation ->

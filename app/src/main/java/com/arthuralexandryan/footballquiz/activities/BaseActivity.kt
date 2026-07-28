@@ -18,7 +18,7 @@ open class BaseActivity : AppCompatActivity() {
     protected var categoryName: String? = null
 
     override fun attachBaseContext(newBase: android.content.Context) {
-        val lang = Prefer.getStringPreference(newBase, Constants.Localization, "ru") ?: "ru"
+        val lang = Prefer.getStringPreference(newBase, Constants.Localization, "en") ?: "en"
         val locale = java.util.Locale(lang)
         java.util.Locale.setDefault(locale)
         val config = android.content.res.Configuration(newBase.resources.configuration)
@@ -27,7 +27,7 @@ open class BaseActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        val lang = Prefer.getStringPreference(this, Constants.Localization, "ru") ?: "ru"
+        val lang = Prefer.getStringPreference(this, Constants.Localization, "en") ?: "en"
         setLocale(lang)
         super.onCreate(savedInstanceState)
     }

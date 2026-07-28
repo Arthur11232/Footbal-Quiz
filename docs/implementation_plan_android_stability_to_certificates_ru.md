@@ -38,6 +38,9 @@ Android Stability 95%+
 Выход:
 - кандидат на `2.0.3`.
 
+Статус:
+- завершено.
+
 ### Phase 2
 Progression Foundation
 
@@ -46,6 +49,9 @@ Progression Foundation
 
 Выход:
 - система умеет понимать, что именно пользователь завершил.
+
+Статус:
+- завершено.
 
 ### Phase 3
 Notifications Foundation
@@ -56,6 +62,9 @@ Notifications Foundation
 Выход:
 - можно безопасно слать notifications зарегистрированным пользователям.
 
+Статус:
+- technical foundation завершён; product/UI слой notifications отложен до завершения остальных core phase-ов.
+
 ### Phase 4
 Achievement Foundation
 
@@ -64,6 +73,9 @@ Achievement Foundation
 
 Выход:
 - completion этапа превращается в rewardable domain event.
+
+Статус:
+- foundation milestone завершён.
 
 ### Phase 5
 Congratulations Screen
@@ -74,6 +86,9 @@ Congratulations Screen
 Выход:
 - пользователь получает экран поздравления за завершённый этап.
 
+Статус:
+- app-side milestone завершён.
+
 ### Phase 6
 Certificate Experience
 
@@ -83,6 +98,18 @@ Certificate Experience
 Выход:
 - есть визуальный certificate preview и guest/auth branching.
 
+Статус:
+- app-side milestone завершён.
+
+Покрыто текущим app-side контрактом:
+- guest completion;
+- authenticated completion;
+- post-login consume pending reward;
+- certificate preview;
+- profile preview;
+- no duplicate issuance;
+- logout isolation между signed-in и guest state.
+
 ### Phase 7
 Email Certificate Delivery
 
@@ -91,6 +118,9 @@ Email Certificate Delivery
 
 Выход:
 - полный completion -> congratulations -> certificate -> email flow.
+
+Статус:
+- не начато как полноценная delivery-feature.
 
 ---
 
@@ -169,10 +199,12 @@ Email Certificate Delivery
 
 ## 6. Current Recommended Focus
 
-На текущий момент главным фокусом остаётся:
-- завершить [task_phase1_android_stability_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase1_android_stability_ru.md)
+На текущий момент главным фокусом становится:
+- удерживать Android release-state стабильным после закрытия Phase 5-6 app-side UX;
+- закрыть cloud-resilience для certificate path;
+- подготовить переход к [task_phase7_email_certificate_delivery_ru.md](/Users/Arthu/Documents/GitHub/Footbal-Quiz/docs/task_phase7_email_certificate_delivery_ru.md).
 
-Пока эта задача не закрыта, остальные task-фазы не переходят в активную реализацию.
+Notification product/UI layer остаётся отложенным: technical foundation уже есть, но bell icon, notification center и history/read-model возвращаются после остальных core phase-ов.
 
 ---
 
@@ -184,4 +216,3 @@ Email Certificate Delivery
 - achievement reward работает для auth и guest paths;
 - guest registration incentive реально встроен в продукт;
 - notifications и certificate delivery усиливают retention, а не усложняют систему хаотично.
-

@@ -21,9 +21,18 @@
 ### 1. Зафиксировать stage registry
 - `top5_france_complete`
 - `top5_germany_complete`
+- `top5_italy_complete`
+- `top5_england_complete`
+- `top5_spain_complete`
 - `top5_complete`
+- `uefa_super_cup_complete`
+- `uefa_europa_league_complete`
+- `uefa_champions_league_complete`
+- `uefa_european_championship_complete`
 - `uefa_complete`
 - `world_complete`
+- `versus_vsrm_complete`
+- `versus_vsrb_complete`
 - `versus_complete`
 - `app_complete`
 
@@ -47,3 +56,72 @@
 - completed stages сохраняются и восстанавливаются
 - этап не награждается повторно без отдельной логики
 
+## Current Checkpoint
+
+## Status
+
+`Phase 2` считается завершённой.
+
+- введён `ProgressionStageId` registry для:
+  - `top5_france_complete`
+  - `top5_germany_complete`
+  - `top5_italy_complete`
+  - `top5_england_complete`
+  - `top5_spain_complete`
+  - `top5_complete`
+  - `uefa_super_cup_complete`
+  - `uefa_europa_league_complete`
+  - `uefa_champions_league_complete`
+  - `uefa_european_championship_complete`
+  - `uefa_complete`
+  - `world_complete`
+  - `versus_vsrm_complete`
+  - `versus_vsrb_complete`
+  - `versus_complete`
+  - `app_complete`
+- добавлен `ProgressionRepository` с local persistence через SharedPreferences
+- completion хранится как persisted `achievedAt` timestamp и не теряется при обычном reset progress
+- добавлен `RefreshProgressionUseCase`
+- progression refresh уже вызывается:
+  - после ответа в `PlayViewModel`
+  - при загрузке `ProfileViewModel`
+  - после restore cloud progress
+- добавлен cloud-ready serialization contract:
+  - `UserStatsDTO.progression`
+  - `ProgressionStateDTO`
+  - `CompletedStageDTO`
+- completed stages теперь:
+  - загружаются в cloud upload payload
+  - восстанавливаются из cloud restore payload
+- расширен progress snapshot granular-данными:
+  - `France/Germany/Italy/England/Spain`
+  - `Super Cup/Europa League/Champions League/European Championship`
+  - `Versus RM-Messi / Versus Real Madrid-Barcelona`
+- completion rules теперь покрывают и мелкие этапы, и aggregate-этапы
+- добавлен presentation read-model слой для completed stages:
+  - mapper `ProgressionSnapshot -> CompletedStageUiModel`
+  - profile UI теперь показывает список завершённых этапов и summary `done/total`
+- добавлен отдельный `PlayEffect` для freshly completed stages
+- play flow теперь умеет отдавать новый completion event отдельно от answer animation
+- completion event поднят до achievement trigger:
+  - `PlayViewModel` теперь генерирует `AchievementCertificatePayload`
+  - trigger срабатывает только на genuinely new stage completion
+- добавлен отдельный congratulations flow:
+  - новый `AchievementCertificateFragment`
+  - navigation из `PlayFragment` после freshly completed stage
+- сертификат теперь генерируется как отдельный branded screen:
+  - stage title
+  - player name
+  - issue date
+  - certificate id
+  - signature block
+  - support для нескольких stage completion за один ответ
+- compile check:
+  - `./gradlew :app:compileDevDebugKotlin --no-daemon --console=plain`
+  - `BUILD SUCCESSFUL`
+
+## Next Step
+
+- использовать готовую progression/achievement основу как базу для `Phase 3 — Notifications Foundation`
+- не возвращаться к core progression rework без отдельной причины
+- дальнейшие улучшения делать уже как надстройку поверх существующего stage/completion слоя

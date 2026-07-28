@@ -4,6 +4,7 @@ import android.app.Application
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.db_app.DB_Migration
 import com.arthuralexandryan.footballquiz.di.footballQuizModules
+import com.arthuralexandryan.footballquiz.utils.ensureDefaultNotificationChannel
 import com.google.android.gms.ads.MobileAds
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -40,5 +41,7 @@ class FQ_Application : Application() {
             .build()
         Realm.getInstance(realmConfiguration)
         Realm.setDefaultConfiguration(realmConfiguration)
+
+        ensureDefaultNotificationChannel(this)
     }
 }

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Quiz Notification Flow</title>
+  <style>
+    :root {
+      --bg: #07140d;
+      --bg-soft: #0d2418;
+      --card: #13311f;
+      --card-2: #1a402a;
+      --line: rgba(255,255,255,0.08);
+      --text: #f5f8f3;
+      --muted: #b8c6bb;
+      --brand: #00692c;
+      --brand-2: #0b8d43;
+      --gold: #f5b24c;
+      --danger: #8d3737;
+      --shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(245,178,76,0.15), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(11,141,67,0.18), transparent 30%),
+        linear-gradient(180deg, #06110c 0%, #091812 100%);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1580px;
+      margin: 0 auto;
+      padding: 40px 28px 64px;
+    }
+
+    .hero {
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(245,178,76,0.12);
+      border: 1px solid rgba(245,178,76,0.28);
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 10px;
+      font-size: 44px;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+
+    .lead {
+      max-width: 880px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .notes {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      font-size: 14px;
+      color: #dbe6dc;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+      align-items: start;
+    }
+
+    .phone-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .label {
+      color: #d6e3d8;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      min-height: 36px;
+    }
+
+    .phone {
+      position: relative;
+      min-height: 550px;
+      border-radius: 34px;
+      overflow: hidden;
+      padding: 18px 16px 18px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)),
+        linear-gradient(180deg, #0a1a13 0%, #10261a 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 110px;
+      height: 18px;
+      transform: translateX(-50%);
+      border-radius: 0 0 16px 16px;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .screen {
+      height: 100%;
+      border-radius: 26px;
+      padding: 22px 18px 18px;
+      background:
+        radial-gradient(circle at top right, rgba(245,178,76,0.12), transparent 25%),
+        linear-gradient(180deg, #0b1f16 0%, #123021 100%);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding-top: 10px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bell {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+    }
+
+    .bell .dot {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245,178,76,0.18);
+    }
+
+    .hero-card {
+      padding: 18px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(0,105,44,0.85), rgba(8,45,24,0.95));
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 16px;
+    }
+
+    .hero-card h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: #e4efe5;
+      line-height: 1.45;
+      font-size: 14px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      padding: 14px 14px 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+
+    .item span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .soft-prompt {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(15,50,31,0.95), rgba(10,31,20,0.98));
+      border: 1px solid rgba(245,178,76,0.25);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.25);
+    }
+
+    .soft-prompt h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .soft-prompt p {
+      margin: 0 0 16px;
+      color: #dae7dd;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      flex: 1;
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #201404;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .back {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 18px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .section-title h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+      font-size: 13px;
+    }
+
+    .card {
+      padding: 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      margin-bottom: 12px;
+    }
+
+    .card.reward {
+      background: linear-gradient(180deg, rgba(245,178,76,0.12), rgba(255,255,255,0.04));
+      border-color: rgba(245,178,76,0.25);
+    }
+
+    .card.disabled {
+      background: linear-gradient(180deg, rgba(141,55,55,0.18), rgba(255,255,255,0.04));
+      border-color: rgba(255,112,112,0.25);
+    }
+
+    .card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .meta {
+      margin-top: 10px;
+      color: #dfeae0;
+      font-size: 12px;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 1000px;
+    }
+
+    @media (max-width: 900px) {
+      h1 { font-size: 34px; }
+      .page { padding: 28px 18px 42px; }
+      .phone { min-height: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <span class="eyebrow">Phase 3 Preview</span>
+      <h1>Notification Flow For Football Quiz</h1>
+      <p class="lead">
+        Рекомендуемый UX-подход: bell icon появляется только после авторизации, permission
+        запрашивается только у logged-in пользователя, а по клику открывается отдельный экран
+        `Notifications` с reward-first логикой.
+      </p>
+      <div class="notes">
+        <div class="pill">Guest не видит bell icon</div>
+        <div class="pill">Soft prompt до system permission</div>
+        <div class="pill">Отдельный Notifications screen</div>
+        <div class="pill">Сначала rewards, потом reminders</div>
+      </div>
+    </div>
+
+    <div class="flow-grid">
+      <div class="phone-wrap">
+        <div class="label">1. Guest state</div>
+        <div class="sub">До логина иконка уведомлений не показывается вообще.</div>
+        <div class="phone">
+          <div class="screen">
+            <div class="topbar">
+              <div class="brand">Football Quiz</div>
+              <div class="icon-row">
+                <div class="bell" style="opacity:.25;">★</div>
+              </div>
+            </div>
+            <div class="hero-card">
+              <h3>Играй как гость</h3>
+              <p>Прогресс доступен локально. Bell icon и notification center появятся после авторизации.</p>
+            </div>
+            <div class="mini-list">
+              <div class="item">
+                <strong>Top 5</strong>
+                <span>Продолжай играть без лишних отвлечений.</span>
+              </div>
+              <div class="item">
+                <strong>UEFA</strong>
+                <span>Уведомления станут доступны после входа в аккаунт.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="label">2. Logged-in state</div>
+        <div class="sub">После логина bell icon появляется справа сверху. Badge показывает unread.</div>
+        <div class="phone">
+          <div class="screen">
+            <div class="topbar">
+              <div class="brand">Football Quiz</div>
+              <div class="icon-row">
+                <div class="bell">🔔<span class="dot"></span></div>
+              </div>
+            </div>
+            <div class="hero-card">
+              <h3>Добро пожаловать, Artur</h3>
+              <p>Теперь мы можем показывать награды, напоминания и важные обновления через notification center.</p>
+            </div>
+            <div class="mini-list">
+              <div class="item">
+                <strong>Пройдено 2 новых этапа</strong>
+                <span>Появился reason зайти в notifications и посмотреть reward flow.</span>
+              </div>
+              <div class="item">
+                <strong>Сертификаты уже в профиле</strong>
+                <span>Notifications позже будут усиливать этот flow.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="label">3. Soft prompt</div>
+        <div class="sub">Сначала аккуратный in-app prompt, потом system permission.</div>
+        <div class="phone">
+          <div class="screen">
+            <div class="topbar">
+              <div class="brand">Football Quiz</div>
+              <div class="icon-row">
+                <div class="bell">🔔</div>
+              </div>
+            </div>
+            <div class="soft-prompt">
+              <h3>Не пропускай свой прогресс</h3>
+              <p>
+                Получай уведомления о завершённых этапах, наградах и важных обновлениях Football Quiz.
+              </p>
+              <div class="actions">
+                <div class="btn btn-primary">Включить</div>
+                <div class="btn btn-secondary">Позже</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="label">4. Notification center</div>
+        <div class="sub">Отдельный экран с reward-first карточками и history.</div>
+        <div class="phone">
+          <div class="screen">
+            <div class="nav">
+              <div class="back">←</div>
+              <div class="brand" style="font-size:22px;">Notifications</div>
+            </div>
+            <div class="section-title">
+              <h3>Новые</h3>
+              <span>Отметить как прочитанные</span>
+            </div>
+            <div class="card reward">
+              <b>Этап завершён: France</b>
+              <p>Сертификат уже доступен в профиле. Можно открыть и посмотреть награду.</p>
+              <div class="meta">2 минуты назад</div>
+            </div>
+            <div class="card reward">
+              <b>Разблокирован Ronaldo vs Messi</b>
+              <p>Ты достиг нужного порога. Новый Versus-челлендж уже открыт.</p>
+              <div class="meta">10 минут назад</div>
+            </div>
+            <div class="card">
+              <b>Новые вопросы уже в игре</b>
+              <p>Мы обновили футбольный контент и добавили свежие вопросы.</p>
+              <div class="meta">Сегодня</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phone-wrap">
+        <div class="label">5. Disabled permission state</div>
+        <div class="sub">Если system permission отклонён, screen остаётся полезным и даёт CTA в settings.</div>
+        <div class="phone">
+          <div class="screen">
+            <div class="nav">
+              <div class="back">←</div>
+              <div class="brand" style="font-size:22px;">Notifications</div>
+            </div>
+            <div class="card disabled" style="margin-top: 28px;">
+              <b>Уведомления выключены</b>
+              <p>Чтобы получать награды, напоминания и важные обновления, включи уведомления в настройках устройства.</p>
+              <div class="meta" style="margin-top:14px; color:#fff;">Открыть настройки</div>
+            </div>
+            <div class="card" style="margin-top: 18px;">
+              <b>Пока пусто</b>
+              <p>Когда уведомления будут доступны, здесь появятся rewards, reminders и update cards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      Рекомендуемый порядок реализации после согласования дизайна: bell icon только для authenticated user,
+      отдельный `NotificationsFragment`, soft prompt до system permission, затем локальная read-model логика,
+      и только после этого полноценный FCM token lifecycle и delivery pipeline.
+    </p>
+  </div>
+</body>
+</html>

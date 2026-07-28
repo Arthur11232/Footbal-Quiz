@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
@@ -68,6 +69,9 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arrays = TarberakArrays
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            navigateBack()
+        }
 
         initTitleList()
         processArguments(arguments)
@@ -121,7 +125,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
     private fun setupCategoryMode() {
         _binding ?: return
 
-        binding.onBack.setOnClickListener { findNavController().navigateUp() }
+        binding.onBack.setOnClickListener { navigateBack() }
 
         when (categoryType) {
             "top5" -> {
@@ -175,7 +179,7 @@ class CategoryPageFragment : Fragment(), ChooseGame {
         versusBinding.vs1.vsItem.setImageResource(arrays.rm_image[0])
         versusBinding.vs2.vsItem.setImageResource(arrays.rm_image[1])
 
-        versusBinding.onBack.setOnClickListener { findNavController().navigateUp() }
+        versusBinding.onBack.setOnClickListener { navigateBack() }
 
         val startVersus = View.OnClickListener { onChoose("vsRM", 0) }
         versusBinding.vs1.root.setOnClickListener(startVersus)
@@ -269,6 +273,13 @@ class CategoryPageFragment : Fragment(), ChooseGame {
             putString("category", categoryType)
         }
         findNavController().navigate(R.id.action_category_to_play, args)
+    }
+
+    private fun navigateBack() {
+        val navController = findNavController()
+        if (!navController.navigateUp()) {
+            navController.popBackStack()
+        }
     }
 
     override fun onDestroyView() {
