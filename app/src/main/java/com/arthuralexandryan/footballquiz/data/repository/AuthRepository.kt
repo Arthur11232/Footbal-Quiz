@@ -1,15 +1,15 @@
 package com.arthuralexandryan.footballquiz.data.repository
 
 import android.content.Intent
-import com.arthuralexandryan.footballquiz.auth.AuthManager
-import com.google.firebase.auth.FirebaseUser
+import com.arthuralexandryan.footballquiz.domain.auth.AuthSignInResult
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 
 interface AuthRepository {
-    fun getCurrentUser(): FirebaseUser?
+    fun getCurrentUser(): AuthenticatedUser?
     fun isUserSignedIn(): Boolean
     fun getSignInIntent(): Intent
-    suspend fun signInWithFirebase(idToken: String): AuthManager.AuthResult
+    suspend fun signInWithFirebase(idToken: String): AuthSignInResult
     fun signOut(onComplete: () -> Unit)
     suspend fun signOut()
-    suspend fun deleteUser(user: FirebaseUser): Result<Unit>
+    suspend fun deleteCurrentUser(): Result<Unit>
 }

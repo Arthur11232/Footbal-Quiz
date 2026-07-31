@@ -3,8 +3,8 @@ package com.arthuralexandryan.footballquiz.data.repository.impl
 import android.content.Context
 import android.net.Uri
 import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
-import com.arthuralexandryan.footballquiz.data.repository.ProfileProgressSnapshot
 import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
+import com.arthuralexandryan.footballquiz.domain.progression.ProfileProgressSnapshot
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import java.io.File

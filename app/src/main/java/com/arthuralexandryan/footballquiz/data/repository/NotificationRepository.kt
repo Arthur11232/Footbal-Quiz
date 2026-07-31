@@ -1,9 +1,9 @@
 package com.arthuralexandryan.footballquiz.data.repository
 
-import com.google.firebase.auth.FirebaseUser
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 
 interface NotificationRepository {
-    suspend fun syncSignedInUser(user: FirebaseUser): Result<Unit>
+    suspend fun syncSignedInUser(user: AuthenticatedUser): Result<Unit>
     suspend fun handleNewToken(token: String): Result<Unit>
     suspend fun unbindCurrentDevice(userId: String?): Result<Unit>
     suspend fun deleteDevices(userId: String): Result<Unit>

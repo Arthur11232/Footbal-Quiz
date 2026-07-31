@@ -7,6 +7,7 @@ import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShowRewardReadyNotificationUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
@@ -152,7 +153,7 @@ class PlayViewModel(
             if (currentUser != null) {
                 viewModelScope.launch {
                     certificateRepository.uploadIssuedCertificates(
-                        userId = currentUser.uid,
+                        userId = currentUser.id,
                         recipientName = recipientName,
                         userEmail = currentUser.email,
                         records = newlyIssuedCertificates
@@ -344,12 +345,12 @@ class PlayViewModel(
         viewModelScope.launch {
             val recipientName = resolveRecipientName(currentUser)
             consumePendingRewardsAfterAuthUseCase(
-                userId = currentUser.uid,
+                userId = currentUser.id,
                 recipientName = recipientName,
                 userEmail = currentUser.email
             )
             syncIssuedCertificatesToCloudUseCase(
-                userId = currentUser.uid,
+                userId = currentUser.id,
                 recipientName = recipientName,
                 userEmail = currentUser.email
             )
@@ -393,14 +394,8 @@ class PlayViewModel(
         )
     }
 
-    private fun resolveRecipientName(user: com.google.firebase.auth.FirebaseUser? = authRepository.getCurrentUser()): String {
-        return user?.displayName
-            ?.takeIf { it.isNotBlank() }
-            ?: user?.email
-                ?.substringBefore("@")
-                ?.takeIf { it.isNotBlank() }
-            ?: "Guest"
-    }
+    private fun resolveRecipientName(user: AuthenticatedUser? = authRepository.getCurrentUser()): String =
+        user?.recipientName() ?: "Guest"
 
     private fun buildCertificateId(stageKey: String, issuedAtMillis: Long): String {
         val normalizedStageKey = stageKey

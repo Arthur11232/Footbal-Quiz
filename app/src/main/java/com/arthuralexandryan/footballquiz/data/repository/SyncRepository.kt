@@ -1,7 +1,7 @@
 package com.arthuralexandryan.footballquiz.data.repository
 
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
-import com.google.firebase.auth.FirebaseUser
 
 interface SyncRepository {
 
@@ -16,13 +16,13 @@ interface SyncRepository {
             val cloudStats: UserStatsDTO
         ) : SyncDecision()
         data class UploadLocal(
-            val user: FirebaseUser
+            val user: AuthenticatedUser
         ) : SyncDecision()
     }
 
-    suspend fun resolveSyncDecision(user: FirebaseUser): SyncDecision
+    suspend fun resolveSyncDecision(user: AuthenticatedUser): SyncDecision
 
-    suspend fun uploadLocalStats(user: FirebaseUser): Result<Unit>
+    suspend fun uploadLocalStats(user: AuthenticatedUser): Result<Unit>
 
     suspend fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO)
 }

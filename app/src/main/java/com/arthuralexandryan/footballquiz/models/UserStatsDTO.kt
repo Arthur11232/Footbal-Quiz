@@ -1,9 +1,9 @@
 package com.arthuralexandryan.footballquiz.models
 
 import com.arthuralexandryan.footballquiz.db_app.Score.FQ_Scores
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.progression.CompletedStageRecord
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
-import com.google.firebase.auth.FirebaseUser
 
 data class UserStatsDTO(
         val email: String = "",
@@ -64,9 +64,9 @@ data class PlacesUFADTO(
     var championsLeague_answered: Int = 0
 )
 
-fun FQ_Scores.toDTO(user: FirebaseUser): UserStatsDTO {
+fun FQ_Scores.toDTO(user: AuthenticatedUser): UserStatsDTO {
     return UserStatsDTO(
-            email = user.email.toString(),
+            email = user.email.orEmpty(),
             GameState(
         id = this.id,
         total = this.fq_all,
@@ -98,8 +98,8 @@ fun FQ_Scores.toDTO(user: FirebaseUser): UserStatsDTO {
             )
         }
                     ),
-            name = user.displayName.toString(),
-            regId = user.uid,
+            name = user.displayName.orEmpty(),
+            regId = user.id,
             progression = ProgressionStateDTO()
     )
 }
