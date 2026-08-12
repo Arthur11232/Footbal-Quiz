@@ -27,4 +27,6 @@ interface SyncRepository {
     suspend fun uploadLocalStats(user: AuthenticatedUser): Result<Unit>
 
     suspend fun restoreCloudProgress(userId: String, cloudProgress: CloudProgressSnapshot)
+
+    suspend fun deleteCloudProgress(userId: String): Result<Unit>
 }

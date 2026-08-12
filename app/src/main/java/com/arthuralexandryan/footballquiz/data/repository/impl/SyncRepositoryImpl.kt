@@ -98,6 +98,10 @@ class SyncRepositoryImpl(
         settingsRepository.setAutoRestorePromptDismissed(userId, false)
     }
 
+    override suspend fun deleteCloudProgress(userId: String): Result<Unit> {
+        return userStatsRepository.deleteStats(userId)
+    }
+
     private fun getLocalSyncTimestamp(userId: String): Long {
         return Prefer.getLongPreference(
             context,

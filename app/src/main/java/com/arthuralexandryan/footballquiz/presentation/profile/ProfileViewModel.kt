@@ -10,7 +10,6 @@ import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.NotificationRepository
 import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
-import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
@@ -40,7 +39,6 @@ class ProfileViewModel(
     private val gameProgressRepository: GameProgressRepository,
     private val syncRepository: SyncRepository,
     private val certificateRepository: CertificateRepository,
-    private val userStatsRepository: UserStatsRepository,
     private val notificationRepository: NotificationRepository,
     private val pendingRewardRepository: PendingRewardRepository,
     private val refreshProgressionUseCase: RefreshProgressionUseCase,
@@ -235,7 +233,7 @@ class ProfileViewModel(
                 return@launch
             }
 
-            val cloudDeleted = userStatsRepository.deleteStats(user.id)
+            val cloudDeleted = syncRepository.deleteCloudProgress(user.id)
             if (cloudDeleted.isFailure) {
                 setLoading(false)
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
