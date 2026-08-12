@@ -20,7 +20,7 @@ import com.arthuralexandryan.footballquiz.domain.usecase.start.SignInWithGoogleT
 import com.arthuralexandryan.footballquiz.domain.usecase.start.UploadStartLocalStatsUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotificationSessionUseCase
 import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -190,10 +190,10 @@ class StartPageViewModel(
         }
     }
 
-    fun onCloudRestoreConfirmed(userId: String, cloudStats: UserStatsDTO) {
+    fun onCloudRestoreConfirmed(userId: String, cloudProgress: CloudProgressSnapshot) {
         viewModelScope.launch {
             settingsRepository.setAutoRestorePromptDismissed(userId, false)
-            restoreStartCloudStatsUseCase(userId, cloudStats)
+            restoreStartCloudStatsUseCase(userId, cloudProgress)
             refreshState()
             emitToast(R.string.profile_progress_restored)
         }
@@ -228,7 +228,7 @@ class StartPageViewModel(
         when (decision) {
             SyncRepository.SyncDecision.None -> return false
             is SyncRepository.SyncDecision.AutoRestoreCloud -> {
-                restoreStartCloudStatsUseCase(decision.userId, decision.cloudStats)
+                restoreStartCloudStatsUseCase(decision.userId, decision.cloudProgress)
                 refreshState()
                 if (showUserFeedback) {
                     _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_progress_restored))
@@ -239,7 +239,7 @@ class StartPageViewModel(
                 _effects.emit(
                     StartPageEffect.PromptCloudRestore(
                         userId = decision.userId,
-                        cloudStats = decision.cloudStats
+                        cloudProgress = decision.cloudProgress
                     )
                 )
                 return true

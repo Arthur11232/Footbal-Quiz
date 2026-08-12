@@ -14,6 +14,7 @@ import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.DeleteNotificationDevicesUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotificationSessionUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
@@ -302,20 +303,20 @@ class ProfileViewModel(
         val user = authRepository.getCurrentUser() ?: return
         viewModelScope.launch {
             setLoading(true)
-            val cloudStats = userStatsRepository.downloadStats(user.id)
+            val cloudProgress = syncRepository.downloadCloudProgress(user.id)
             setLoading(false)
-            if (cloudStats == null) {
+            if (cloudProgress == null) {
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_no_cloud_progress))
             } else {
-                _effects.emit(ProfileEffect.ShowRestoreDialog(cloudStats))
+                _effects.emit(ProfileEffect.ShowRestoreDialog(cloudProgress))
             }
         }
     }
 
-    fun onRestoreCloudConfirmed(cloudStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO) {
+    fun onRestoreCloudConfirmed(cloudProgress: CloudProgressSnapshot) {
         val userId = authRepository.getCurrentUser()?.id ?: return
         viewModelScope.launch {
-            syncRepository.restoreCloudStats(userId, cloudStats)
+            syncRepository.restoreCloudProgress(userId, cloudProgress)
             refreshProgressionUseCase()
             loadProfile()
             _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_progress_restored))

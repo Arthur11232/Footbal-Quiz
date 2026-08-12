@@ -1,7 +1,7 @@
 package com.arthuralexandryan.footballquiz.presentation.start
 
 import androidx.annotation.StringRes
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 
 sealed class StartPageEffect {
     data class NavigateToChoose(val startNewGame: Boolean) : StartPageEffect()
@@ -13,7 +13,7 @@ sealed class StartPageEffect {
     ) : StartPageEffect()
     data class PromptCloudRestore(
         val userId: String,
-        val cloudStats: UserStatsDTO
+        val cloudProgress: CloudProgressSnapshot
     ) : StartPageEffect()
     data class ShowToastRes(
         @StringRes val messageResId: Int

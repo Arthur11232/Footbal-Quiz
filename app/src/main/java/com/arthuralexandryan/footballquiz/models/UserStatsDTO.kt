@@ -2,8 +2,6 @@ package com.arthuralexandryan.footballquiz.models
 
 import com.arthuralexandryan.footballquiz.db_app.Score.FQ_Scores
 import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
-import com.arthuralexandryan.footballquiz.domain.progression.CompletedStageRecord
-import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 
 data class UserStatsDTO(
         val email: String = "",
@@ -102,23 +100,4 @@ fun FQ_Scores.toDTO(user: AuthenticatedUser): UserStatsDTO {
             regId = user.id,
             progression = ProgressionStateDTO()
     )
-}
-
-fun List<CompletedStageRecord>.toProgressionStateDTO(): ProgressionStateDTO {
-    return ProgressionStateDTO(
-        completedStages = map { record ->
-            CompletedStageDTO(
-                stageId = record.stageId.value,
-                achievedAt = record.achievedAtMillis
-            )
-        }
-    )
-}
-
-fun UserStatsDTO.toCompletedStageRecords(): List<CompletedStageRecord> {
-    return progression.completedStages.mapNotNull { stage ->
-        val stageId = ProgressionStageId.entries.firstOrNull { it.value == stage.stageId } ?: return@mapNotNull null
-        val achievedAt = stage.achievedAt.takeIf { it > 0L } ?: return@mapNotNull null
-        CompletedStageRecord(stageId = stageId, achievedAtMillis = achievedAt)
-    }
 }

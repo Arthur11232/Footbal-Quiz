@@ -341,6 +341,16 @@ Certificate preview/share flow выглядит лучшим первым UI-к�
 - заменить `UserStatsDTO` в sync contract на domain sync model;
 - явно описать local/cloud progress decision.
 
+Статус:
+
+- выполнен первый sync cleanup slice;
+- добавлен `domain/sync/CloudProgressSnapshot`;
+- добавлены mapper functions `UserStatsDTO -> CloudProgressSnapshot` и `CloudProgressSnapshot -> GameState`;
+- `SyncRepository.SyncDecision` больше не отдаёт `UserStatsDTO` наружу;
+- restore/start/profile UI paths переведены на `CloudProgressSnapshot`;
+- `UserStatsDTO` остался в Firebase/data/local DTO boundary;
+- проверено: `./gradlew :app:compileDevDebugKotlin` проходит успешно.
+
 Почему второй:
 
 - sync самый рискованный продуктовый сценарий;

@@ -366,6 +366,7 @@ Output:
 - первый code slice выполнен: `AuthenticatedUser` введён, `FirebaseUser` убран из основных repository/usecase/ViewModel contracts, Kotlin compile проходит.
 - `ProfileProgressSnapshot` перенесён в domain/progression.
 - Добавлен future-only questions catalog contract: `QuestionCatalogRepository`, `CatalogQuestion`, `ContentVersion`.
+- Sync boundary cleanup started: добавлен `CloudProgressSnapshot`, `UserStatsDTO` убран из `SyncRepository`/restore UI contracts.
 
 ### Task 2. Domain Model Checklist
 
