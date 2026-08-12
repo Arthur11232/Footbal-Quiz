@@ -1,12 +1,25 @@
 # Web / Android Chat Sync
 
-Статус: updated после backend/cPanel deploy.
+Статус: updated после backend/cPanel deploy, Android questions alignment audit и правила обязательной синхронизации.
 
-Дата обновления: 2026-08-04.
+Дата обновления: 2026-08-07.
 
 Цель документа: держать общий контекст между Android/backend архитектурным чатом и отдельным web-чатом по `footballquiz.club`, чтобы landing, backend API и Android app не расходились в решениях.
 
 Этот документ не является Android implementation plan. Это рабочая синхронизация для web/backend процесса.
+
+## Правило Обновления Sync Doc
+
+Каждый раз, когда в web/backend/Android чатах меняется что-то из перечисленного ниже, нужно обновлять этот документ в том же рабочем проходе:
+
+- question catalog / question model;
+- файлы вокруг вопросов: `questions_audit`, `questions_structured`, `questions_structured_aligned_candidate`, будущий canonical production import;
+- backend API contract;
+- content version/import/switch plan;
+- web/backend/Android границы ответственности;
+- production/deploy факты, которые могут повлиять на дальнейшую разработку.
+
+Цель правила: этот файл должен оставаться чистой синхронизированной памятью между чатами, а не устаревшей заметкой.
 
 ## Текущая Картина
 
@@ -100,6 +113,73 @@ https://play.google.com/store/apps/details?id=com.arthuralexandryan.footballquiz
 
 Важно: Chromium navigation однажды показал `net::ERR_BLOCKED_BY_CLIENT`, но server-side `curl` из cPanel успешно вернул `200 OK`. Это похоже на client/browser extension issue, а не на backend failure.
 
+### Legal API
+
+Принято решение добавить публичный read-only Legal API для Android/Web clients.
+
+Подготовлены и deployed endpoints:
+
+```text
+GET /v1/legal/documents
+GET /v1/legal/privacy-policy
+GET /v1/legal/privacy-policy?locale=ru
+GET /v1/legal/terms
+```
+
+Правила:
+
+- публичные HTML страницы на `footballquiz.club` остаются для Play Store, SEO и обычных пользователей;
+- backend Legal API нужен для клиентов, чтобы получать актуальные Privacy/Terms через единый API contract;
+- первый этап read-only и без auth;
+- user acceptance/status endpoints пока не добавляются;
+- legal markdown sources добавлены в backend repo в `content/legal/`;
+- localization file-based: `privacy-policy.{locale}.md` и `terms.{locale}.md`;
+- сейчас доступен только `en`, запросы `ru/hy` должны возвращать fallback на `en`;
+- когда будут добавлены `privacy-policy.ru.md`, `privacy-policy.hy.md`, `terms.ru.md`, `terms.hy.md`, backend должен начать отдавать эти locale без изменения API contract;
+- deployed на сервер `2026-08-11`;
+- backend commit: `246765e Add canonical questions and legal API`;
+- live checks:
+  - `/v1/legal/documents?locale=hy` -> `success=true`, `documents=2`, fallback на `en`;
+  - `/v1/legal/terms?locale=ru` -> `success=true`, `locale=en`, `fallback_locale=en`;
+  - `/v1/legal/privacy-policy?locale=ru` -> `success=true`, `locale=en`, `fallback_locale=en`;
+  - `/v1/legal/terms-and-conditions` как API alias не используется и возвращает `404`.
+
+### Scoring Rules API
+
+Принято решение сохранить главный смысл игры как offline-first/offline gaming.
+
+Backend не должен быть обязательным online-судьёй каждого ответа. Android/Web могут считать score локально, а backend должен отдавать только стабильные scoring rules и score boundaries для web application / будущих клиентов.
+
+Локально подготовлен endpoint:
+
+```text
+GET /v1/scoring/rules
+```
+
+Назначение:
+
+- публичный read-only endpoint;
+- без auth;
+- не сохраняет user score;
+- не проверяет отдельные ответы пользователя;
+- не ломает Android offline-first gameplay;
+- отдаёт `content_version`, `rules_version`, scoring model, max score по категориям и unlock boundaries;
+- `max_score` считается от active backend question catalog;
+- `points_per_correct_answer = 1`;
+- `points_per_wrong_answer = 0`.
+
+Текущие unlock boundaries перенесены из Android logic:
+
+```text
+TOP5       -> initially unlocked
+UEFA       -> TOP5 score >= 150
+WORLD_CUP  -> TOP5 + UEFA score >= 210
+RON_MES    -> overall score >= 240
+REAL_BARCE -> overall score >= 310
+```
+
+Важно: это rules/catalog endpoint для web, а не backend-owned score/progress endpoint.
+
 ### Backend repository
 
 Backend теперь отдельный private repository:
@@ -123,13 +203,26 @@ https://github.com/Arthur11232/Football-Quiz-Backend
 - проще позже мигрировать на другой stack;
 - легче контролировать secrets, `.env`, DB credentials и Firebase service account.
 
-Текущий backend skeleton:
+Текущая backend структура:
 
 ```text
 Football-Quiz-Backend
 ├── public/
 │   ├── index.php
 │   └── .htaccess
+├── src/
+│   ├── Application.php
+│   ├── Auth/
+│   ├── Config/
+│   ├── Content/
+│   ├── Database/
+│   ├── Http/
+│   ├── Questions/
+│   └── Support/
+├── database/
+│   ├── schema.sql
+│   ├── seed_initial.sql
+│   └── seed_questions_2026_08_001.sql
 ├── composer.json
 ├── .cpanel.yml
 ├── .env.example
@@ -153,10 +246,13 @@ deployment:
 
 - Backend repo клонирован на сервер в `/home/ixvldavx/repositories/Football-Quiz-Backend`.
 - cPanel Git Version Control зарегистрировал backend repo.
-- SSH access cPanel -> GitHub работает.
-- Deploy делается через cPanel Git interface: `Update from Remote`, затем `Deploy HEAD Commit`.
-- Последний проверенный backend commit: `e473dd334420efb6bc195f501d5d07bf0b46aefb`.
+- Обычный deploy-path может быть через cPanel Git interface: `Update from Remote`, затем `Deploy HEAD Commit`.
+- Последний deploy `2026-08-11` был сделан через cPanel Terminal archive transfer, потому что локальный GitHub push не был авторизован из CLI.
+- Deployed backend content source: local commit `246765e Add canonical questions and legal API`.
+- Важно: из-за отсутствия GitHub CLI auth этот deploy обновил server working tree через archive transfer, но GitHub remote/server `.git` history может оставаться позади до отдельного GitHub Desktop push + server Git reconciliation.
 - После deploy `/health` возвращает `200 OK`.
+- Последний проверенный server-side API state включает `/health`, `/v1/content/active`, `/v1/questions`, `/v1/legal/privacy-policy`, `/v1/legal/terms`.
+- Перед следующим deploy нужно сверить локальный backend commit, GitHub remote и server repo, потому что часть работы теперь выполняется локально, а не напрямую через GitHub connector.
 
 Осталось отдельно почистить старые/ошибочные read-only deploy keys и временный public-key файл на сервере, если пользователь явно подтвердит cleanup. Это не блокирует текущий backend deploy.
 
@@ -177,7 +273,16 @@ User: ixvldavx_fq_api
 - `.env.example` должен показывать форму переменных без secret values;
 - DB user должен иметь privileges только на нужную DB.
 
-Backend пока не использует DB в health endpoint. Подключение MySQL нужно делать следующим этапом, когда появится schema и первый реальный endpoint.
+MySQL уже подключён к backend через server-side private env.
+
+Уже сделано:
+
+- schema импортирована в `ixvldavx_fq_db`;
+- active content seed `2026.08.001` импортирован;
+- `/v1/content/active` возвращает DB-backed active content version;
+- `/v1/questions` существует и возвращает questions catalog envelope, но текущая DB schema ещё использует старую модель `answer_key`/translations и не готова для полного canonical import.
+
+Следующий DB шаг: обновить schema под canonical question/options model с `correct_option_key`.
 
 ## Backend Stack Decision
 
@@ -269,6 +374,181 @@ Admin/content panel нужен, но не первым шагом backend MVP.
 - `content_version` отвечает за набор вопросов;
 - клиент должен брать активную content version, совместимую с текущей app version.
 
+### Текущие Android question artifacts
+
+В Android repo сейчас есть три важных файла вокруг questions catalog:
+
+```text
+app/questions_audit.json
+app/questions_audit_fixed_2026_08_001.json
+app/questions_structured.json
+app/questions_structured_aligned_candidate.json
+app/questions_canonical_2026_08_001.json
+```
+
+Роли файлов:
+
+- `app/questions_audit.json` - raw export / audit source из текущего Firestore/legacy buckets. Это источник для проверки, но не финальный backend import-файл.
+- `app/questions_audit_fixed_2026_08_001.json` - fixed audit в той же legacy Firestore-структуре, но с исправлениями из `app/questions_structured_aligned_candidate.json`. Это основной кандидат для безопасного обновления текущего Firestore без перехода production app на новую canonical model.
+- `app/questions_structured.json` - первый structured baseline на schema version 3. В нём 689 вопросов, но только 578 `import_ready`, а 111 остаются `needs_review`. Его нельзя использовать как production import без alignment fixes.
+- `app/questions_structured_aligned_candidate.json` - текущий рабочий import-candidate на schema version 4. В нём 689/689 вопросов имеют `import_ready`, missing EN/RU/HY = 0, ошибок `correct_option_key` = 0. Этот файл создан после ручной alignment-работы и является главным чистым синхронизированным источником для дальнейшей backend/web работы.
+- `app/questions_canonical_2026_08_001.json` - clean canonical production artifact для backend import. Создан из `app/questions_structured_aligned_candidate.json`; удаляет legacy/review/alignment поля; содержит только контрактную модель вопросов и стабильные смысловые `option_key` / `correct_option_key`.
+
+Текущее фактическое состояние `app/questions_structured_aligned_candidate.json`:
+
+```text
+questions: 689
+import_ready: 689
+spot_check_not_modified: 539
+manually_aligned_from_shifted_locales: 54
+manually_completed_missing_locale: 96
+missing locales: 0
+bad correct_option_key: 0
+```
+
+Текущее фактическое состояние `app/questions_canonical_2026_08_001.json`:
+
+```text
+schema_version: 1
+questions: 689
+question_translations: 2067
+options: 2756
+option_translations: 8268
+validation errors: 0
+option_a/option_b style keys: 0
+difficulty: medium for 689 questions
+```
+
+Текущее фактическое состояние `app/questions_audit_fixed_2026_08_001.json`:
+
+```text
+locales: hy, en, ru
+questions per locale: 689
+same questionId set across locales: true
+right_answer exists in answer_A/B/C/D: true
+empty required fields: 0
+candidate mapping errors: 0
+```
+
+Текущий Firestore backup перед fixed update:
+
+```text
+app/questions_audit_backup_2026_08_07_before_fixed_update.json
+```
+
+Контрольный Firestore backup после fixed update:
+
+```text
+app/questions_audit_backup_2026_08_07_after_fixed_update.json
+```
+
+Статус backup/update:
+
+```text
+backup before update created: yes
+backup before update validation errors: 0
+update dry-run prepared docs: 2067
+update commit wrote to Firestore: yes
+update commit wrote docs: 2067
+backup after update created: yes
+backup after update matches fixed audit: true
+changed records:
+  en: 116
+  ru: 45
+  hy: 22
+```
+
+Что было исправлено:
+
+- закрыты 111 старых `needs_review` из `app/questions_structured.json`;
+- восстановлены недостающие EN/RU/HY тексты;
+- исправлены скрытые сдвиги, где EN вопрос/варианты были от другого вопроса, а RU/HY уже были синхронизированной парой;
+- исправлены точечные option-text ошибки вроде неправильного варианта в `world_cup_002`, `italy_059`, `spain_013`, `spain_068`, `germany_067`, `vsrb_025`.
+
+Остаточный content-quality риск:
+
+- есть точные дубли вопросов внутри некоторых тем, например `france_010/france_064`, `france_036/france_041`, `france_054/france_058`, `germany_031/germany_061`, `germany_032/germany_062`, `germany_033/germany_063`, `germany_034/germany_064`, `germany_036/germany_066`, `spain_020/spain_050`;
+- это уже не language-alignment ошибка, а решение по качеству каталога: оставить legacy-дубли или заменить один из дублей новым вопросом.
+
+Правило для backend/web чата:
+
+- для backend dry-run/import ориентироваться на `app/questions_structured_aligned_candidate.json`;
+- для clean backend import использовать `app/questions_canonical_2026_08_001.json`;
+- для прямого Firestore legacy update ориентироваться на `app/questions_audit_fixed_2026_08_001.json`;
+- `app/questions_structured.json` считать baseline/audit artifact;
+- production artifact должен содержать только контрактные поля: `question_id`, `content_version`, `category`, `topic`, `difficulty`, `question`, `options`, `correct_option_key`, `explanation`;
+- перед production switch сделать dry-run import и отдельно решить судьбу точных дублей;
+- текущий Firestore production source уже обновлён fixed legacy audit-файлом, но это не является backend/canonical switch.
+
+Firestore backup/update правило:
+
+- backup вопросов не должен выполняться внутри Android app при старте приложения;
+- production app не должен иметь прав читать весь question catalog и писать backup-документы;
+- backup/update делается только admin/local tool через service account;
+- текущий tool: `tools/update_firestore_questions.py`;
+- перед любым update запускать `backup`, затем `update --dry-run`, и только потом `update --commit`.
+
+Команды:
+
+```bash
+python3 tools/update_firestore_questions.py backup \
+  --service-account tools/service-account.local.json \
+  --output app/questions_audit_backup_YYYY_MM_DD.json \
+  --language-order en,ru,hy \
+  --require-question-id
+
+python3 tools/update_firestore_questions.py update \
+  --service-account tools/service-account.local.json \
+  --audit app/questions_audit_fixed_2026_08_001.json \
+  --language-order en,ru,hy \
+  --require-question-id \
+  --dry-run
+
+python3 tools/update_firestore_questions.py update \
+  --service-account tools/service-account.local.json \
+  --audit app/questions_audit_fixed_2026_08_001.json \
+  --language-order en,ru,hy \
+  --require-question-id \
+  --commit
+```
+
+Принятая canonical question model:
+
+```json
+{
+  "question_id": "france_001",
+  "content_version": "2026.08.001",
+  "category": "TOP5",
+  "topic": "France",
+  "difficulty": "medium",
+  "question": {
+    "en": "...",
+    "ru": "...",
+    "hy": "..."
+  },
+  "options": [
+    {
+      "option_key": "psg",
+      "text": {
+        "en": "...",
+        "ru": "...",
+        "hy": "..."
+      }
+    }
+  ],
+  "correct_option_key": "psg",
+  "explanation": {}
+}
+```
+
+Важно:
+
+- backend не должен сравнивать правильный ответ по тексту;
+- backend не должен считать `A/B/C/D` из legacy Firestore стабильной истиной;
+- клиент может перемешивать `options`, потому что правильность привязана к `correct_option_key`;
+- `sort_order` и `is_active` не входят в canonical JSON model для вопросов;
+- `difficulty` остаётся в модели, даже если пока всем вопросам временно присвоено `medium`.
+
 ## Android Связь С Web / Backend
 
 В Android repo уже началась подготовка к backend:
@@ -294,7 +574,7 @@ Admin/content panel нужен, но не первым шагом backend MVP.
 - Web landing не должен смешиваться с backend API.
 - `api.footballquiz.club` уже работает как PHP endpoint.
 - Future Web app должен использовать backend API, а не напрямую Firestore.
-- Любой новый web feature, который требует user data, progress, certificates или questions, должен сначала получить backend contract.
+- Любой новый web feature, который требует user data, progress, certificates, questions или legal documents, должен сначала получить backend contract.
 
 ## Android Chat Должен Знать
 
@@ -306,6 +586,53 @@ Admin/content panel нужен, но не первым шагом backend MVP.
 - Backend MVP будет PHP + MySQL + Firebase token verification.
 - MySQL база и user уже созданы, но реальные secrets остаются вне Git/docs.
 - Backend deploy уже работает через cPanel Git deployment.
+
+## Backend First Priority
+
+Первый backend foundation уже частично сделан:
+
+- минимальный router и единый JSON response/error format;
+- `/health`;
+- Composer/Firebase verification foundation;
+- server-side private env;
+- MySQL connection;
+- базовая schema;
+- `/v1/content/active`;
+- первый `/v1/questions` endpoint.
+- deployed read-only `/v1/legal/...` API для Privacy/Terms.
+- локально подготовлен read-only `/v1/scoring/rules` API для offline-first scoring rules / score boundaries.
+
+Новая ближайшая backend priority:
+
+1. Backend canonical schema под `correct_option_key` и отдельные option keys/translations подготовлена и deployed.
+2. Backend copy `database/questions_canonical_2026_08_001.json` добавлен и deployed.
+3. Importer/dry-run validator `bin/import_questions.php` добавлен и deployed.
+4. `GET /v1/questions` repository обновлён под canonical response model и deployed.
+5. Read-only Legal API для Privacy/Terms добавлен и deployed.
+6. Локально подготовлен read-only Scoring Rules API: `GET /v1/scoring/rules`.
+7. Server migration/import выполнены без DB backup по отдельному решению владельца проекта.
+8. Следующий backend шаг: либо deploy scoring rules, либо progress/certificates sync endpoints.
+
+Локальные backend проверки после canonical preparation:
+
+```text
+questions import dry-run: OK
+questions: 689
+question_translations: 2067
+options: 2756
+option_translations: 8268
+PHP lint: OK
+legal API local route lint: OK
+backend content source commit: 246765e Add canonical questions and legal API
+deploy/server import: OK, 2026-08-11
+live /v1/questions?locale=ru: OK, questions=689, content_version=2026.08.001
+live /v1/content/active: OK, content_version=2026.08.001
+live /v1/legal/terms?locale=ru: OK, fallback en
+live /v1/legal/privacy-policy?locale=ru: OK, fallback en
+local /v1/scoring/rules PHP lint: OK
+```
+
+Admin panel и полноценный content management нужны, но после стабильного import/API contract.
 
 ## Ближайшие Логичные Следующие Шаги
 
@@ -319,13 +646,13 @@ Admin/content panel нужен, но не первым шагом backend MVP.
 
 ### Для backend foundation
 
-1. Добавить минимальный router слой для PHP API.
-2. Добавить server-side `.env` на cPanel, не в Git.
-3. Подготовить Composer dependency для Firebase token verification.
-4. Подготовить MySQL schema draft.
-5. Добавить первый DB-backed endpoint, например `/v1/content/versions` или `/v1/questions`.
-6. Добавить basic error response format.
-7. После каждого backend deploy проверять `/health`.
+1. Backend canonical schema/importer/questions API/legal API уже закоммичены локально и deployed на сервер.
+2. Server migration выполнена.
+3. Server importer dry-run и `--commit` выполнены.
+4. Live checks выполнены: `/health`, `/v1/content/active`, `/v1/questions`, `/v1/legal/privacy-policy`, `/v1/legal/terms`.
+5. Локально подготовленный `GET /v1/scoring/rules` можно закоммитить/deploy отдельным шагом.
+6. Следующий backend этап после scoring rules: progress/certificates sync endpoints.
+7. Не делать production switch Android на backend questions без отдельного подтверждения.
 
 ### Для Android chat
 
