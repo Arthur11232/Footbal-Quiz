@@ -150,10 +150,16 @@ GET /v1/legal/terms
 
 Backend не должен быть обязательным online-судьёй каждого ответа. Android/Web могут считать score локально, а backend должен отдавать только стабильные scoring rules и score boundaries для web application / будущих клиентов.
 
-Локально подготовлен endpoint:
+Локально подготовлен и закоммичен endpoint:
 
 ```text
 GET /v1/scoring/rules
+```
+
+Backend commit:
+
+```text
+6b080c6 Add scoring rules endpoint
 ```
 
 Назначение:
@@ -180,6 +186,14 @@ REAL_BARCE -> overall score >= 310
 
 Важно: это rules/catalog endpoint для web, а не backend-owned score/progress endpoint.
 
+Deploy status:
+
+- локальный commit есть;
+- archive для cPanel deploy собран: `/private/tmp/football-quiz-backend-6b080c6.tar.gz`;
+- live `/v1/scoring/rules` проверен `2026-09-03` и возвращает `200 OK`;
+- live response содержит `content_version=2026.08.001`, `rules_version=2026.08.001.scoring.001`;
+- live max scores: `TOP5=350`, `UEFA=143`, `WORLD_CUP=54`, `RON_MES=71`, `REAL_BARCE=71`.
+
 ### Backend repository
 
 Backend теперь отдельный private repository:
@@ -193,6 +207,19 @@ GitHub URL:
 ```text
 https://github.com/Arthur11232/Football-Quiz-Backend
 ```
+
+Backend context file:
+
+```text
+/Users/Arthu/Documents/GitHub/Football-Quiz-Backend/PROJECT_CONTEXT.md
+```
+
+Статус:
+
+- создан `2026-09-03`;
+- локальный backend commit: `43e57b9 Add backend project context`;
+- backend repo после commit: `main...origin/main [ahead 1]`;
+- назначение: новый backend-chat должен прочитать `PROJECT_CONTEXT.md` и `README.md`, чтобы понять project scope, live endpoints, deploy notes, secrets rules, canonical questions, scoring rules и next steps.
 
 Почему отдельно:
 
@@ -600,7 +627,8 @@ python3 tools/update_firestore_questions.py update \
 - `/v1/content/active`;
 - первый `/v1/questions` endpoint.
 - deployed read-only `/v1/legal/...` API для Privacy/Terms.
-- локально подготовлен read-only `/v1/scoring/rules` API для offline-first scoring rules / score boundaries.
+- deployed read-only `/v1/scoring/rules` API для offline-first scoring rules / score boundaries.
+- создан backend-only `PROJECT_CONTEXT.md` для новых backend чатов.
 
 Новая ближайшая backend priority:
 
@@ -609,9 +637,10 @@ python3 tools/update_firestore_questions.py update \
 3. Importer/dry-run validator `bin/import_questions.php` добавлен и deployed.
 4. `GET /v1/questions` repository обновлён под canonical response model и deployed.
 5. Read-only Legal API для Privacy/Terms добавлен и deployed.
-6. Локально подготовлен read-only Scoring Rules API: `GET /v1/scoring/rules`.
+6. Read-only Scoring Rules API deployed: `GET /v1/scoring/rules` (`6b080c6 Add scoring rules endpoint`).
 7. Server migration/import выполнены без DB backup по отдельному решению владельца проекта.
-8. Следующий backend шаг: либо deploy scoring rules, либо progress/certificates sync endpoints.
+8. Backend context file создан и закоммичен локально: `43e57b9 Add backend project context`.
+9. Следующий backend шаг: GitHub/server git reconciliation, затем progress/certificates sync endpoints.
 
 Локальные backend проверки после canonical preparation:
 
@@ -630,6 +659,9 @@ live /v1/content/active: OK, content_version=2026.08.001
 live /v1/legal/terms?locale=ru: OK, fallback en
 live /v1/legal/privacy-policy?locale=ru: OK, fallback en
 local /v1/scoring/rules PHP lint: OK
+scoring rules backend commit: 6b080c6 Add scoring rules endpoint
+live /v1/scoring/rules: OK, 200, content_version=2026.08.001, rules_version=2026.08.001.scoring.001
+backend PROJECT_CONTEXT.md commit: 43e57b9 Add backend project context
 ```
 
 Admin panel и полноценный content management нужны, но после стабильного import/API contract.
@@ -650,9 +682,10 @@ Admin panel и полноценный content management нужны, но пос
 2. Server migration выполнена.
 3. Server importer dry-run и `--commit` выполнены.
 4. Live checks выполнены: `/health`, `/v1/content/active`, `/v1/questions`, `/v1/legal/privacy-policy`, `/v1/legal/terms`.
-5. Локально подготовленный `GET /v1/scoring/rules` можно закоммитить/deploy отдельным шагом.
-6. Следующий backend этап после scoring rules: progress/certificates sync endpoints.
-7. Не делать production switch Android на backend questions без отдельного подтверждения.
+5. В новом backend project/chat первым делом читать `PROJECT_CONTEXT.md`.
+6. Синхронизировать backend GitHub remote / cPanel server repo, если GitHub Desktop/remote отстаёт от локального `main`.
+7. Следующий backend этап после scoring rules: progress/certificates sync endpoints.
+8. Не делать production switch Android на backend questions без отдельного подтверждения.
 
 ### Для Android chat
 

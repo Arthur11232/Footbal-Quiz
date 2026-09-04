@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Update Firestore `questions` from app/questions_audit.json.
+Backup or update Firestore `questions` using audit-format JSON files.
 
 Recommended flow:
   1. Download a Firebase service account JSON from Firebase Console.
@@ -10,15 +10,25 @@ Recommended flow:
   4. Inspect current numeric Firestore docs:
        python3 tools/update_firestore_questions.py inspect \
          --service-account tools/service-account.local.json
-  5. Dry-run the update:
+  5. Back up current Firestore docs before any update:
+       python3 tools/update_firestore_questions.py backup \
+         --service-account tools/service-account.local.json \
+         --output app/questions_audit_backup_YYYY_MM_DD.json \
+         --language-order en,ru,hy \
+         --require-question-id
+  6. Dry-run the update:
        python3 tools/update_firestore_questions.py update \
          --service-account tools/service-account.local.json \
+         --audit app/questions_audit_fixed_2026_08_001.json \
          --language-order en,ru,hy \
+         --require-question-id \
          --dry-run
-  6. Apply:
+  7. Apply:
        python3 tools/update_firestore_questions.py update \
          --service-account tools/service-account.local.json \
+         --audit app/questions_audit_fixed_2026_08_001.json \
          --language-order en,ru,hy \
+         --require-question-id \
          --commit
 """
 
@@ -28,6 +38,7 @@ import argparse
 import json
 import sys
 from collections import Counter, defaultdict
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 import xml.etree.ElementTree as ET
@@ -57,6 +68,20 @@ QUESTION_ARRAY_BY_GROUP = {
     ("WORLD_CUP", "World Championship"): "world_cup_questions",
     ("RON_MES", "vsRM"): "ron_mes_questions",
     ("REAL_BARCE", "vsRB"): "real_barce_questions",
+}
+CATEGORY_TYPE_BY_PLACE = {
+    "France": "TOP5",
+    "Germany": "TOP5",
+    "Italy": "TOP5",
+    "English": "TOP5",
+    "Spain": "TOP5",
+    "Super Cup": "UEFA",
+    "Europa League": "UEFA",
+    "Champions League": "UEFA",
+    "European Championship": "UEFA",
+    "World Championship": "WORLD_CUP",
+    "vsRM": "RON_MES",
+    "vsRB": "REAL_BARCE",
 }
 
 
@@ -166,6 +191,32 @@ def to_firestore_document(lang: str, item: dict[str, Any]) -> dict[str, Any]:
     return payload
 
 
+def from_firestore_document(payload: dict[str, Any]) -> dict[str, Any]:
+    answers = payload.get("answers") or {}
+    place = str(payload.get("place", "")).strip()
+    category_type = str(payload.get("categoryType", "")).strip() or CATEGORY_TYPE_BY_PLACE.get(place, "")
+    item = {
+        "answer_A": answers.get("a", ""),
+        "answer_B": answers.get("b", ""),
+        "answer_C": answers.get("c", ""),
+        "answer_D": answers.get("d", ""),
+        "categoryType": category_type,
+        "question": payload.get("question", ""),
+        "right_answer": answers.get("right", ""),
+        "type": place,
+        "answered": bool(payload.get("answered", False)),
+    }
+    question_id = str(payload.get(QUESTION_ID_FIELD, "")).strip()
+    if question_id:
+        item[QUESTION_ID_FIELD] = question_id
+    return item
+
+
+def default_backup_output_path() -> Path:
+    timestamp = datetime.now().strftime("%Y_%m_%d_%H%M%S")
+    return Path(f"app/questions_audit_backup_{timestamp}.json")
+
+
 def summarize_question_id_readiness(
     data: dict[str, list[dict[str, Any]]],
     languages: list[str],
@@ -257,6 +308,18 @@ def inspect_numbered_docs(db, collection: str, sample_ids: list[str]) -> None:
         )
 
 
+def fetch_numbered_docs(db, collection: str) -> list[tuple[int, dict[str, Any]]]:
+    docs: list[tuple[int, dict[str, Any]]] = []
+    for snap in db.collection(collection).stream():
+        try:
+            doc_number = int(snap.id)
+        except ValueError:
+            continue
+        docs.append((doc_number, snap.to_dict() or {}))
+    docs.sort(key=lambda item: item[0])
+    return docs
+
+
 def commit_batches(db, collection: str, docs: list[tuple[str, dict[str, Any]]]) -> None:
     for offset in range(0, len(docs), BATCH_LIMIT):
         batch = db.batch()
@@ -293,6 +356,39 @@ def command_update(args: argparse.Namespace) -> None:
     db = init_firestore(args.service_account)
     commit_batches(db, args.collection, docs)
     print("Done.")
+
+
+def command_backup(args: argparse.Namespace) -> None:
+    languages = parse_language_order(args.language_order)
+    output = args.output or default_backup_output_path()
+
+    db = init_firestore(args.service_account)
+    numbered_docs = fetch_numbered_docs(db, args.collection)
+    if not numbered_docs:
+        raise SystemExit(f"No numeric docs found in collection `{args.collection}`")
+
+    data: dict[str, list[dict[str, Any]]] = {lang: [] for lang in languages}
+    unknown_languages: Counter[str] = Counter()
+    for doc_number, payload in numbered_docs:
+        lang = str(payload.get("translation", "")).strip()
+        if lang not in data:
+            unknown_languages[lang or "<missing>"] += 1
+            continue
+        data[lang].append(from_firestore_document(payload))
+
+    if unknown_languages:
+        print(f"Skipped docs with unknown languages: {dict(unknown_languages)}")
+
+    validate_audit(data, languages, require_question_id=args.require_question_id)
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    print(f"Wrote Firestore backup to {output}")
+    print(f"Collection: {args.collection}")
+    print(f"Numeric docs read: {len(numbered_docs)}")
+    for lang in languages:
+        print(f"{lang}: {len(data[lang])}")
 
 
 def command_question_id_status(args: argparse.Namespace) -> None:
@@ -496,6 +592,17 @@ def main() -> None:
     update_parser.add_argument("--commit", action="store_true")
     update_parser.add_argument("--require-question-id", action="store_true")
     update_parser.set_defaults(func=command_update)
+
+    backup_parser = subparsers.add_parser(
+        "backup",
+        help="Read numbered Firestore question docs and write a local audit-format JSON backup",
+    )
+    backup_parser.add_argument("--service-account", type=Path, required=True)
+    backup_parser.add_argument("--output", type=Path)
+    backup_parser.add_argument("--collection", default=DEFAULT_COLLECTION)
+    backup_parser.add_argument("--language-order", default=DEFAULT_LANGUAGE_ORDER)
+    backup_parser.add_argument("--require-question-id", action="store_true")
+    backup_parser.set_defaults(func=command_backup)
 
     status_parser = subparsers.add_parser("question-id-status", help="Report questionId readiness in audit JSON")
     status_parser.add_argument("--audit", type=Path, default=DEFAULT_AUDIT_PATH)
