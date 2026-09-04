@@ -44,4 +44,13 @@ interface SettingsRepository {
 
     fun isNotificationPermissionPromptShown(userId: String): Boolean
     fun setNotificationPermissionPromptShown(userId: String, shown: Boolean)
+
+    fun getAppReviewPositiveAnswers(): Int
+    fun setAppReviewPositiveAnswers(count: Int)
+
+    fun getAppReviewPromptCount(): Int
+    fun setAppReviewPromptCount(count: Int)
+
+    fun getAppReviewLastPromptedAt(): Long
+    fun setAppReviewLastPromptedAt(timestampMillis: Long)
 }

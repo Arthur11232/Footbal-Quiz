@@ -8,6 +8,7 @@ import android.annotation.SuppressLint
 import android.graphics.RectF
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,6 +44,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import com.google.android.play.core.review.ReviewManagerFactory
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.Random
@@ -216,9 +218,34 @@ class PlayFragment : Fragment(), ShowAds {
                                 loadInterstitialAd()
                             }
                         }
+                        PlayEffect.RequestAppReview -> requestAppReview()
                     }
                 }
             }
+        }
+    }
+
+    private fun requestAppReview() {
+        val currentActivity = activity ?: return
+        Log.d(REVIEW_LOG_TAG, "Requesting Play in-app review from Play screen.")
+
+        val reviewManager = ReviewManagerFactory.create(currentActivity)
+        reviewManager.requestReviewFlow().addOnCompleteListener { request ->
+            if (_binding == null || !isAdded) return@addOnCompleteListener
+            if (!request.isSuccessful) {
+                Log.e(REVIEW_LOG_TAG, "ReviewInfo request failed.", request.exception)
+                return@addOnCompleteListener
+            }
+
+            Log.d(REVIEW_LOG_TAG, "ReviewInfo request succeeded. Launching review flow.")
+            reviewManager.launchReviewFlow(currentActivity, request.result)
+                .addOnCompleteListener { launch ->
+                    if (launch.isSuccessful) {
+                        Log.d(REVIEW_LOG_TAG, "Review flow completed.")
+                    } else {
+                        Log.e(REVIEW_LOG_TAG, "Review flow failed.", launch.exception)
+                    }
+                }
         }
     }
 
@@ -590,5 +617,9 @@ class PlayFragment : Fragment(), ShowAds {
     override fun show(amount: Int) {
         if (_binding == null || !isAdded) return
         playViewModel.resetSession(isForce = pendingRewardResetForce)
+    }
+
+    private companion object {
+        const val REVIEW_LOG_TAG = "FQ_Review"
     }
 }

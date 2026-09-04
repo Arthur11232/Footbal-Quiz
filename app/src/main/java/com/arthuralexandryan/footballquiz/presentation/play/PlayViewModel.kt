@@ -7,6 +7,7 @@ import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShowRewardReadyNotificationUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
@@ -37,7 +38,8 @@ class PlayViewModel(
     private val pendingRewardRepository: PendingRewardRepository,
     private val showRewardReadyNotificationUseCase: ShowRewardReadyNotificationUseCase,
     private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase,
-    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase
+    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -60,6 +62,7 @@ class PlayViewModel(
     private var pendingAchievementCertificate: AchievementCertificatePayload? = null
     private var pendingRewardReadyNotification: AchievementCertificatePayload? = null
     private var rewardReadyNotificationSent: Boolean = false
+    private var pendingAppReviewRequest: Boolean = false
 
     fun initialize(args: PlaySessionArgs) {
         if (initialized) return
@@ -94,6 +97,7 @@ class PlayViewModel(
         if (isCorrect) {
             categoryScores.place_score_answer += 1
             placeScores.place_score_answer += 1
+            trackPositiveAnswerForReview()
         }
         placeScores.place_score -= 1
 
@@ -205,6 +209,14 @@ class PlayViewModel(
             }
             if (shouldShowInterstitial) {
                 answersSinceInterstitial = 0
+            }
+        } else if (pendingAppReviewRequest) {
+            pendingAppReviewRequest = false
+            if (shouldShowInterstitial) {
+                answersSinceInterstitial = 0
+            }
+            viewModelScope.launch {
+                _effects.emit(PlayEffect.RequestAppReview)
             }
         } else if (shouldShowInterstitial) {
             answersSinceInterstitial = 0
@@ -357,6 +369,7 @@ class PlayViewModel(
     }
 
     private fun finishSession(totalScore: Int) {
+        val shouldRequestAppReview = maybeQueueAppReviewRequest(ignorePositiveAnswerThreshold = true)
         _uiState.update {
             it.copy(
                 isAnswerEnabled = false,
@@ -366,6 +379,39 @@ class PlayViewModel(
                 isAnswerCorrect = null
             )
         }
+        if (shouldRequestAppReview) {
+            pendingAppReviewRequest = false
+            viewModelScope.launch {
+                _effects.emit(PlayEffect.RequestAppReview)
+            }
+        }
+    }
+
+    private fun trackPositiveAnswerForReview() {
+        val positiveAnswers = settingsRepository.getAppReviewPositiveAnswers() + 1
+        settingsRepository.setAppReviewPositiveAnswers(positiveAnswers)
+        if (positiveAnswers >= MIN_POSITIVE_ANSWERS_FOR_APP_REVIEW) {
+            maybeQueueAppReviewRequest()
+        }
+    }
+
+    private fun maybeQueueAppReviewRequest(ignorePositiveAnswerThreshold: Boolean = false): Boolean {
+        if (pendingAppReviewRequest) return false
+        val positiveAnswers = settingsRepository.getAppReviewPositiveAnswers()
+        if (!ignorePositiveAnswerThreshold && positiveAnswers < MIN_POSITIVE_ANSWERS_FOR_APP_REVIEW) return false
+
+        val promptCount = settingsRepository.getAppReviewPromptCount()
+        if (promptCount >= MAX_APP_REVIEW_PROMPTS) return false
+
+        val now = System.currentTimeMillis()
+        val lastPromptedAt = settingsRepository.getAppReviewLastPromptedAt()
+        if (lastPromptedAt > 0 && now - lastPromptedAt < APP_REVIEW_COOLDOWN_MILLIS) return false
+
+        settingsRepository.setAppReviewPromptCount(promptCount + 1)
+        settingsRepository.setAppReviewLastPromptedAt(now)
+        settingsRepository.setAppReviewPositiveAnswers(0)
+        pendingAppReviewRequest = true
+        return true
     }
 
     private fun buildAchievementCertificatePayload(
@@ -434,4 +480,10 @@ class PlayViewModel(
         val certificateId: String,
         val earnedAtMillis: Long
     )
+
+    private companion object {
+        const val MIN_POSITIVE_ANSWERS_FOR_APP_REVIEW = 15
+        const val MAX_APP_REVIEW_PROMPTS = 3
+        const val APP_REVIEW_COOLDOWN_MILLIS = 14L * 24L * 60L * 60L * 1000L
+    }
 }
