@@ -1,7 +1,7 @@
 package com.arthuralexandryan.footballquiz.data.repository
 
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
-import com.google.firebase.auth.FirebaseUser
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 
 interface SyncRepository {
 
@@ -9,20 +9,24 @@ interface SyncRepository {
         data object None : SyncDecision()
         data class AutoRestoreCloud(
             val userId: String,
-            val cloudStats: UserStatsDTO
+            val cloudProgress: CloudProgressSnapshot
         ) : SyncDecision()
         data class PromptConflict(
             val userId: String,
-            val cloudStats: UserStatsDTO
+            val cloudProgress: CloudProgressSnapshot
         ) : SyncDecision()
         data class UploadLocal(
-            val user: FirebaseUser
+            val user: AuthenticatedUser
         ) : SyncDecision()
     }
 
-    suspend fun resolveSyncDecision(user: FirebaseUser): SyncDecision
+    suspend fun resolveSyncDecision(user: AuthenticatedUser): SyncDecision
 
-    suspend fun uploadLocalStats(user: FirebaseUser): Result<Unit>
+    suspend fun downloadCloudProgress(userId: String): CloudProgressSnapshot?
 
-    suspend fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO)
+    suspend fun uploadLocalStats(user: AuthenticatedUser): Result<Unit>
+
+    suspend fun restoreCloudProgress(userId: String, cloudProgress: CloudProgressSnapshot)
+
+    suspend fun deleteCloudProgress(userId: String): Result<Unit>
 }

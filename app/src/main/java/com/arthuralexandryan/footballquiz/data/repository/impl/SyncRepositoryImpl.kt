@@ -7,14 +7,15 @@ import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
+import com.arthuralexandryan.footballquiz.data.mapper.toCloudProgressSnapshot
+import com.arthuralexandryan.footballquiz.data.mapper.toGameStateDTO
+import com.arthuralexandryan.footballquiz.data.mapper.toProgressionStateDTO
 import com.arthuralexandryan.footballquiz.constants.Constant
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
-import com.arthuralexandryan.footballquiz.models.toCompletedStageRecords
-import com.arthuralexandryan.footballquiz.models.toProgressionStateDTO
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
-import com.google.firebase.auth.FirebaseUser
 
 class SyncRepositoryImpl(
     private val context: Context,
@@ -25,14 +26,14 @@ class SyncRepositoryImpl(
     private val settingsRepository: SettingsRepository
 ) : SyncRepository {
 
-    override suspend fun resolveSyncDecision(user: FirebaseUser): SyncRepository.SyncDecision {
+    override suspend fun resolveSyncDecision(user: AuthenticatedUser): SyncRepository.SyncDecision {
         val localSnapshot = gameStateLocalDataSource.getProgressSnapshot()
-        val cloudStats = userStatsRepository.downloadStats(user.uid)
-        val remoteCertificates = certificateRepository.downloadIssuedCertificates(user.uid)
+        val cloudProgress = downloadCloudProgress(user.id)
+        val remoteCertificates = certificateRepository.downloadIssuedCertificates(user.id)
         mergeRemoteCertificatesIntoLocal(remoteCertificates)
         val localHasProgress = localSnapshot.hasProgress
 
-        if (cloudStats == null || !cloudStats.hasProgress()) {
+        if (cloudProgress == null || !cloudProgress.hasProgress) {
             return if (localHasProgress) {
                 SyncRepository.SyncDecision.UploadLocal(user)
             } else {
@@ -42,37 +43,38 @@ class SyncRepositoryImpl(
 
         if (!localHasProgress) {
             return SyncRepository.SyncDecision.AutoRestoreCloud(
-                userId = user.uid,
-                cloudStats = cloudStats
+                userId = user.id,
+                cloudProgress = cloudProgress
             )
         }
 
-        val cloudScore = cloudStats.gameState.total
+        val cloudScore = cloudProgress.totalScore
         val localScore = localSnapshot.totalScore
-        val cloudLastSynced = cloudStats.gameState.lastSynced
-        val localLastSynced = getLocalSyncTimestamp(user.uid)
+        val cloudLastSynced = cloudProgress.lastSyncedMillis
+        val localLastSynced = getLocalSyncTimestamp(user.id)
 
         return if (cloudScore == localScore && cloudLastSynced == localLastSynced) {
             SyncRepository.SyncDecision.None
         } else {
-            SyncRepository.SyncDecision.PromptConflict(user.uid, cloudStats)
+            SyncRepository.SyncDecision.PromptConflict(user.id, cloudProgress)
         }
     }
 
-    override suspend fun uploadLocalStats(user: FirebaseUser): Result<Unit> {
+    override suspend fun downloadCloudProgress(userId: String): CloudProgressSnapshot? =
+        userStatsRepository.downloadStats(userId)?.toCloudProgressSnapshot()
+
+    override suspend fun uploadLocalStats(user: AuthenticatedUser): Result<Unit> {
         val stats = gameStateLocalDataSource.getUserStats(user).copy(
             progression = progressionRepository.getCompletedStageRecords().toProgressionStateDTO()
         )
-        val statsUploadResult = userStatsRepository.uploadStats(user.uid, stats)
+        val statsUploadResult = userStatsRepository.uploadStats(user.id, stats)
         if (statsUploadResult.isFailure) {
             return statsUploadResult
         }
 
         val certificatesUploadResult = certificateRepository.uploadIssuedCertificates(
-            userId = user.uid,
-            recipientName = user.displayName?.takeIf { it.isNotBlank() }
-                ?: user.email?.substringBefore("@")?.takeIf { it.isNotBlank() }
-                ?: "Guest",
+            userId = user.id,
+            recipientName = user.recipientName(),
             userEmail = user.email,
             records = certificateRepository.getIssuedCertificates()
         )
@@ -80,30 +82,24 @@ class SyncRepositoryImpl(
             return certificatesUploadResult
         }
 
-        setLocalSyncTimestamp(user.uid, stats.gameState.lastSynced)
-        settingsRepository.setAutoRestorePromptDismissed(user.uid, false)
+        setLocalSyncTimestamp(user.id, stats.gameState.lastSynced)
+        settingsRepository.setAutoRestorePromptDismissed(user.id, false)
         return Result.success(Unit)
     }
 
-    override suspend fun restoreCloudStats(userId: String, cloudStats: UserStatsDTO) {
-        gameStateLocalDataSource.restoreStats(cloudStats.gameState)
-        progressionRepository.replaceCompletedStageRecords(cloudStats.toCompletedStageRecords())
+    override suspend fun restoreCloudProgress(userId: String, cloudProgress: CloudProgressSnapshot) {
+        gameStateLocalDataSource.restoreStats(cloudProgress.toGameStateDTO())
+        progressionRepository.replaceCompletedStageRecords(cloudProgress.completedStages)
         val remoteCertificates = certificateRepository.downloadIssuedCertificates(userId)
         mergeRemoteCertificatesIntoLocal(remoteCertificates)
         Prefer.setBooleanPreference(context, "isFirstPlay", false)
         Prefer.setBooleanPreference(context, Constant.INIT_DB, true)
-        setLocalSyncTimestamp(userId, cloudStats.gameState.lastSynced)
+        setLocalSyncTimestamp(userId, cloudProgress.lastSyncedMillis)
         settingsRepository.setAutoRestorePromptDismissed(userId, false)
     }
 
-    private fun UserStatsDTO.hasProgress(): Boolean {
-        val state = gameState
-        return state.total > 0 ||
-            state.top5_answered > 0 ||
-            state.ufa_answered > 0 ||
-            state.world_answered > 0 ||
-            state.vsRM_answered > 0 ||
-            state.vsRB_answered > 0
+    override suspend fun deleteCloudProgress(userId: String): Result<Unit> {
+        return userStatsRepository.deleteStats(userId)
     }
 
     private fun getLocalSyncTimestamp(userId: String): Long {

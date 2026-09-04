@@ -16,12 +16,15 @@ import androidx.core.widget.ImageViewCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
+import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.databinding.FragmentAchievementCertificateBinding
+import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 import com.arthuralexandryan.footballquiz.presentation.achievement.CertificateTheme
 import com.arthuralexandryan.footballquiz.presentation.achievement.CertificateThemeMapper
-import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import com.google.android.play.core.review.ReviewManagerFactory
+import org.koin.android.ext.android.inject
 import java.text.DateFormat
 import java.util.Date
 
@@ -29,7 +32,9 @@ class AchievementCertificateFragment : Fragment() {
 
     private var _binding: FragmentAchievementCertificateBinding? = null
     private val binding get() = _binding!!
+    private val settingsRepository: SettingsRepository by inject()
     private var currentTheme: CertificateTheme? = null
+    private var isClosing: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,12 +52,8 @@ class AchievementCertificateFragment : Fragment() {
             return
         }
 
-        binding.btnCertificateContinue.setOnClickListener {
-            findNavController().navigateUp()
-        }
-        binding.btnCertificateClose.setOnClickListener {
-            findNavController().navigateUp()
-        }
+        binding.btnCertificateContinue.setOnClickListener { closeWithOptionalReview() }
+        binding.btnCertificateClose.setOnClickListener { closeWithOptionalReview() }
 
         currentTheme = CertificateThemeMapper.themeFor(
             ProgressionStageId.fromValue(payload.primaryStageId)
@@ -194,6 +195,53 @@ class AchievementCertificateFragment : Fragment() {
 
     private fun formatIssuedAt(issuedAtMillis: Long): String {
         return DateFormat.getDateInstance(DateFormat.LONG).format(Date(issuedAtMillis))
+    }
+
+    private fun closeWithOptionalReview() {
+        if (isClosing) return
+        isClosing = true
+        binding.btnCertificateContinue.isEnabled = false
+        binding.btnCertificateClose.isEnabled = false
+
+        if (!shouldRequestAppReviewAfterCertificate()) {
+            navigateUpSafely()
+            return
+        }
+
+        val currentActivity = activity ?: run {
+            navigateUpSafely()
+            return
+        }
+        val manager = ReviewManagerFactory.create(currentActivity)
+        manager.requestReviewFlow()
+            .addOnCompleteListener { request ->
+                if (_binding == null || !isAdded || !request.isSuccessful) {
+                    navigateUpSafely()
+                    return@addOnCompleteListener
+                }
+                manager.launchReviewFlow(currentActivity, request.result)
+                    .addOnCompleteListener {
+                        navigateUpSafely()
+                    }
+            }
+    }
+
+    private fun shouldRequestAppReviewAfterCertificate(): Boolean {
+        val promptCount = settingsRepository.getAppReviewPromptCount()
+        if (promptCount >= MAX_APP_REVIEW_PROMPT_COUNT) return false
+
+        val now = System.currentTimeMillis()
+        val lastPromptedAt = settingsRepository.getAppReviewLastPromptedAt()
+        if (lastPromptedAt > 0L && now - lastPromptedAt < APP_REVIEW_PROMPT_COOLDOWN_MILLIS) return false
+
+        settingsRepository.setAppReviewPromptCount(promptCount + 1)
+        settingsRepository.setAppReviewLastPromptedAt(now)
+        return true
+    }
+
+    private fun navigateUpSafely() {
+        if (_binding == null || !isAdded) return
+        findNavController().navigateUp()
     }
 
     private fun applyTheme(theme: CertificateTheme) {
@@ -344,6 +392,11 @@ class AchievementCertificateFragment : Fragment() {
     private fun Float.dp(): Float = this * resources.displayMetrics.density
 
     private fun Float.dpInt(): Int = dp().toInt().coerceAtLeast(1)
+
+    private companion object {
+        const val MAX_APP_REVIEW_PROMPT_COUNT = 3
+        const val APP_REVIEW_PROMPT_COOLDOWN_MILLIS = 14L * 24L * 60L * 60L * 1000L
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

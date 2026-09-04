@@ -9,9 +9,9 @@ import com.arthuralexandryan.footballquiz.BuildConfig
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.NotificationRepository
 import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.models.UserNotificationDeviceDTO
 import com.arthuralexandryan.footballquiz.models.UserStatsService
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
@@ -23,9 +23,9 @@ class NotificationRepositoryImpl(
     private val authRepository: AuthRepository
 ) : NotificationRepository {
 
-    override suspend fun syncSignedInUser(user: FirebaseUser): Result<Unit> {
+    override suspend fun syncSignedInUser(user: AuthenticatedUser): Result<Unit> {
         val previousBoundUserId = settingsRepository.getNotificationBoundUserId()
-        if (!previousBoundUserId.isNullOrBlank() && previousBoundUserId != user.uid) {
+        if (!previousBoundUserId.isNullOrBlank() && previousBoundUserId != user.id) {
             val unbindResult = unbindCurrentDevice(previousBoundUserId)
             if (unbindResult.isFailure) {
                 return unbindResult
@@ -147,7 +147,7 @@ class NotificationRepositoryImpl(
     override fun getBoundUserId(): String? =
         settingsRepository.getNotificationBoundUserId()
 
-    private suspend fun uploadDevice(user: FirebaseUser, token: String): Result<Unit> {
+    private suspend fun uploadDevice(user: AuthenticatedUser, token: String): Result<Unit> {
         val now = System.currentTimeMillis()
         val payload = UserNotificationDeviceDTO(
             installationId = settingsRepository.getNotificationInstallationId(),
@@ -162,13 +162,13 @@ class NotificationRepositoryImpl(
             rewardNotificationsEnabled = areRewardNotificationsEnabled(),
             updatesNotificationsEnabled = areUpdateNotificationsEnabled(),
             permissionGranted = hasNotificationPermission(),
-            permissionPromptShown = settingsRepository.isNotificationPermissionPromptShown(user.uid),
+            permissionPromptShown = settingsRepository.isNotificationPermissionPromptShown(user.id),
             active = true,
             updatedAtMillis = now
         )
 
         val result = suspendCancellableCoroutine<Result<Unit>> { continuation ->
-            userStatsService.uploadNotificationDevice(user.uid, payload) { success ->
+            userStatsService.uploadNotificationDevice(user.id, payload) { success ->
                 continuation.resume(
                     if (success) {
                         Result.success(Unit)
@@ -181,7 +181,7 @@ class NotificationRepositoryImpl(
 
         if (result.isSuccess) {
             settingsRepository.setCachedNotificationToken(token)
-            settingsRepository.setNotificationBoundUserId(user.uid)
+            settingsRepository.setNotificationBoundUserId(user.id)
             settingsRepository.setNotificationLastSyncedAt(now)
         }
 

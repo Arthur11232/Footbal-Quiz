@@ -5,12 +5,12 @@ import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
 import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
 import com.arthuralexandryan.footballquiz.data.source.local.PlayProgressLocalDataSource
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.utils.CategoryType
-import com.google.firebase.auth.FirebaseUser
 
 class PlaySessionRepositoryImpl(
     private val context: Context,
@@ -73,7 +73,7 @@ class PlaySessionRepositoryImpl(
         return gameStateLocalDataSource.getProgressSnapshot().totalScore.toString()
     }
 
-    override suspend fun syncProgressIfSignedIn(user: FirebaseUser): Result<Unit> {
+    override suspend fun syncProgressIfSignedIn(user: AuthenticatedUser): Result<Unit> {
         return syncRepository.uploadLocalStats(user)
     }
 

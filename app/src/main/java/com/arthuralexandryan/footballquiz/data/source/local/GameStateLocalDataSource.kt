@@ -1,8 +1,8 @@
 package com.arthuralexandryan.footballquiz.data.source.local
 
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.models.GameState
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
-import com.google.firebase.auth.FirebaseUser
 
 data class LocalProgressSnapshot(
     val franceAnswered: Int,
@@ -31,7 +31,7 @@ data class LocalProgressSnapshot(
 
 interface GameStateLocalDataSource {
     fun getProgressSnapshot(): LocalProgressSnapshot
-    fun getUserStats(user: FirebaseUser): UserStatsDTO
+    fun getUserStats(user: AuthenticatedUser): UserStatsDTO
     fun resetScoresToDefault()
     fun restoreStats(gameState: GameState)
     suspend fun resetAllProgress(): Result<Unit>

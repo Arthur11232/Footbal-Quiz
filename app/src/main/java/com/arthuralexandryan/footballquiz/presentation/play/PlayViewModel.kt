@@ -7,6 +7,8 @@ import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
 import com.arthuralexandryan.footballquiz.data.repository.CertificateRepository
 import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.PlaySessionRepository
+import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.ShowRewardReadyNotificationUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.progression.RefreshProgressionUseCase
@@ -37,7 +39,8 @@ class PlayViewModel(
     private val pendingRewardRepository: PendingRewardRepository,
     private val showRewardReadyNotificationUseCase: ShowRewardReadyNotificationUseCase,
     private val consumePendingRewardsAfterAuthUseCase: ConsumePendingRewardsAfterAuthUseCase,
-    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase
+    private val syncIssuedCertificatesToCloudUseCase: SyncIssuedCertificatesToCloudUseCase,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val random = Random.Default
@@ -60,11 +63,12 @@ class PlayViewModel(
     private var pendingAchievementCertificate: AchievementCertificatePayload? = null
     private var pendingRewardReadyNotification: AchievementCertificatePayload? = null
     private var rewardReadyNotificationSent: Boolean = false
+    private var pendingAppReviewRequest: Boolean = false
 
     fun initialize(args: PlaySessionArgs) {
         if (initialized) return
         initialized = true
-        questions = args.questions.toMutableList()
+        questions = propagateAnsweredDuplicates(args.questions)
         placeScores = args.placeScores.copy()
         categoryScores = args.categoryScores.copy()
         categoryKey = args.categoryKey
@@ -90,10 +94,11 @@ class PlayViewModel(
         val currentQuestion = questions[currentIndex]
         val isCorrect = currentQuestion.right_answer.equals(answer, ignoreCase = true)
 
-        questions[currentIndex] = currentQuestion.copy(isAnswered = true)
+        markQuestionAnswered(currentQuestion)
         if (isCorrect) {
             categoryScores.place_score_answer += 1
             placeScores.place_score_answer += 1
+            trackPositiveAnswerForReview()
         }
         placeScores.place_score -= 1
 
@@ -152,7 +157,7 @@ class PlayViewModel(
             if (currentUser != null) {
                 viewModelScope.launch {
                     certificateRepository.uploadIssuedCertificates(
-                        userId = currentUser.uid,
+                        userId = currentUser.id,
                         recipientName = recipientName,
                         userEmail = currentUser.email,
                         records = newlyIssuedCertificates
@@ -206,13 +211,26 @@ class PlayViewModel(
             if (shouldShowInterstitial) {
                 answersSinceInterstitial = 0
             }
+            prepareNextQuestion()
+            return
+        }
+
+        prepareNextQuestion()
+
+        if (pendingAppReviewRequest) {
+            pendingAppReviewRequest = false
+            if (shouldShowInterstitial) {
+                answersSinceInterstitial = 0
+            }
+            viewModelScope.launch {
+                _effects.emit(PlayEffect.RequestAppReview)
+            }
         } else if (shouldShowInterstitial) {
             answersSinceInterstitial = 0
             viewModelScope.launch {
                 _effects.emit(PlayEffect.ShowInterstitialAd)
             }
         }
-        prepareNextQuestion()
     }
 
     fun onResetApplied(placeScore: ScoreboardModel, isForce: Boolean) {
@@ -339,17 +357,62 @@ class PlayViewModel(
         }
     }
 
+    private fun markQuestionAnswered(answeredQuestion: GameObjectSerializable) {
+        val answeredQuestionId = answeredQuestion.questionId?.takeIf { it.isNotBlank() }
+        val answeredQuestionTextKey = answeredQuestion.question.sessionQuestionKey()
+        questions = questions.map { question ->
+            val hasSameQuestionId = answeredQuestionId != null && question.questionId == answeredQuestionId
+            val hasSameVisibleText = answeredQuestionTextKey.isNotBlank() &&
+                question.question.sessionQuestionKey() == answeredQuestionTextKey
+
+            if (hasSameQuestionId || hasSameVisibleText) {
+                question.copy(isAnswered = true)
+            } else {
+                question
+            }
+        }.toMutableList()
+    }
+
+    private fun propagateAnsweredDuplicates(source: List<GameObjectSerializable>): MutableList<GameObjectSerializable> {
+        val answeredQuestionIds = source
+            .filter { it.isAnswered }
+            .mapNotNull { it.questionId?.takeIf(String::isNotBlank) }
+            .toSet()
+        val answeredQuestionTextKeys = source
+            .filter { it.isAnswered }
+            .map { it.question.sessionQuestionKey() }
+            .filter(String::isNotBlank)
+            .toSet()
+
+        return source.map { question ->
+            val isDuplicateAnswered = answeredQuestionIds.contains(question.questionId) ||
+                answeredQuestionTextKeys.contains(question.question.sessionQuestionKey())
+            if (isDuplicateAnswered) {
+                question.copy(isAnswered = true)
+            } else {
+                question
+            }
+        }.toMutableList()
+    }
+
+    private fun String?.sessionQuestionKey(): String {
+        return orEmpty()
+            .lowercase()
+            .replace(Regex("\\s+"), " ")
+            .trim()
+    }
+
     private fun consumePendingRewardsIfSignedIn() {
         val currentUser = authRepository.getCurrentUser() ?: return
         viewModelScope.launch {
             val recipientName = resolveRecipientName(currentUser)
             consumePendingRewardsAfterAuthUseCase(
-                userId = currentUser.uid,
+                userId = currentUser.id,
                 recipientName = recipientName,
                 userEmail = currentUser.email
             )
             syncIssuedCertificatesToCloudUseCase(
-                userId = currentUser.uid,
+                userId = currentUser.id,
                 recipientName = recipientName,
                 userEmail = currentUser.email
             )
@@ -357,6 +420,7 @@ class PlayViewModel(
     }
 
     private fun finishSession(totalScore: Int) {
+        maybeQueueAppReviewRequest(ignorePositiveAnswerThreshold = true)
         _uiState.update {
             it.copy(
                 isAnswerEnabled = false,
@@ -393,14 +457,8 @@ class PlayViewModel(
         )
     }
 
-    private fun resolveRecipientName(user: com.google.firebase.auth.FirebaseUser? = authRepository.getCurrentUser()): String {
-        return user?.displayName
-            ?.takeIf { it.isNotBlank() }
-            ?: user?.email
-                ?.substringBefore("@")
-                ?.takeIf { it.isNotBlank() }
-            ?: "Guest"
-    }
+    private fun resolveRecipientName(user: AuthenticatedUser? = authRepository.getCurrentUser()): String =
+        user?.recipientName() ?: "Guest"
 
     private fun buildCertificateId(stageKey: String, issuedAtMillis: Long): String {
         val normalizedStageKey = stageKey
@@ -409,6 +467,41 @@ class PlayViewModel(
             .take(18)
         val timeSuffix = issuedAtMillis.toString().takeLast(6)
         return "FQ-$normalizedStageKey-$timeSuffix"
+    }
+
+    private fun trackPositiveAnswerForReview() {
+        val positiveAnswers = settingsRepository.getAppReviewPositiveAnswers() + 1
+        settingsRepository.setAppReviewPositiveAnswers(positiveAnswers)
+
+        if (positiveAnswers >= MIN_POSITIVE_ANSWERS_FOR_APP_REVIEW) {
+            maybeQueueAppReviewRequest()
+        }
+    }
+
+    private fun maybeQueueAppReviewRequest(ignorePositiveAnswerThreshold: Boolean = false) {
+        if (pendingAppReviewRequest) return
+        if (!ignorePositiveAnswerThreshold &&
+            settingsRepository.getAppReviewPositiveAnswers() < MIN_POSITIVE_ANSWERS_FOR_APP_REVIEW
+        ) {
+            return
+        }
+
+        val promptCount = settingsRepository.getAppReviewPromptCount()
+        if (promptCount >= MAX_APP_REVIEW_PROMPT_COUNT) return
+
+        val now = System.currentTimeMillis()
+        val lastPromptedAt = settingsRepository.getAppReviewLastPromptedAt()
+        if (lastPromptedAt > 0L && now - lastPromptedAt < APP_REVIEW_PROMPT_COOLDOWN_MILLIS) return
+
+        settingsRepository.setAppReviewPromptCount(promptCount + 1)
+        settingsRepository.setAppReviewLastPromptedAt(now)
+        pendingAppReviewRequest = true
+    }
+
+    private companion object {
+        const val MIN_POSITIVE_ANSWERS_FOR_APP_REVIEW = 15
+        const val MAX_APP_REVIEW_PROMPT_COUNT = 3
+        const val APP_REVIEW_PROMPT_COOLDOWN_MILLIS = 14L * 24L * 60L * 60L * 1000L
     }
 
     private fun List<IssuedCertificateRecord>.toIssuedRewardPreviewRecords(): List<RewardPreviewRecord> =

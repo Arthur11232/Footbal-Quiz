@@ -223,9 +223,9 @@ class RealmPlayProgressLocalDataSource(
         when (categoryType) {
             CategoryType.TOP5 -> scores.top5_answered = scores.top5_answered + 1
             CategoryType.UEFA -> scores.ufa_answered = scores.ufa_answered + 1
-            CategoryType.WORLD_CUP -> scores.world_answered = scores.world_answered + 1
-            CategoryType.RON_MES -> scores.vsRM_answered = scores.vsRM_answered + 1
-            CategoryType.REAL_BARCE -> scores.vsRB_answered = scores.vsRB_answered + 1
+            CategoryType.WORLD_CUP,
+            CategoryType.RON_MES,
+            CategoryType.REAL_BARCE -> Unit
         }
     }
 

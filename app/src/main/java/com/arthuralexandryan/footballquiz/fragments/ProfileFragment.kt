@@ -15,7 +15,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.databinding.FragmentProfileBinding
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileEffect
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileCertificateUiModel
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileUiState
@@ -99,7 +99,7 @@ class ProfileFragment : Fragment() {
                             Toast.makeText(requireContext(), effect.message, Toast.LENGTH_LONG).show()
                         }
                         is ProfileEffect.ShowRestoreDialog -> {
-                            showRestoreDialog(effect.cloudStats)
+                            showRestoreDialog(effect.cloudProgress)
                         }
                         is ProfileEffect.ShowOverwriteDialog -> {
                             showOverwriteCloudDialog(effect.localScore, effect.localAnswered)
@@ -274,16 +274,16 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun showRestoreDialog(cloudStats: UserStatsDTO) {
+    private fun showRestoreDialog(cloudProgress: CloudProgressSnapshot) {
         DialogManager.showActionDialog(
             context = requireContext(),
             inflater = layoutInflater,
             title = getString(R.string.profile_restore_title),
-            message = getString(R.string.profile_manual_restore_message, cloudStats.gameState.total),
+            message = getString(R.string.profile_manual_restore_message, cloudProgress.totalScore),
             primaryText = getString(R.string.profile_restore_confirm),
             secondaryText = getString(R.string.profile_restore_cancel),
             onPrimaryClick = {
-                profileViewModel.onRestoreCloudConfirmed(cloudStats)
+                profileViewModel.onRestoreCloudConfirmed(cloudProgress)
             }
         )
     }

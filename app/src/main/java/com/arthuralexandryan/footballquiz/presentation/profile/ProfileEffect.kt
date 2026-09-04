@@ -1,7 +1,7 @@
 package com.arthuralexandryan.footballquiz.presentation.profile
 
 import androidx.annotation.StringRes
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 
 sealed class ProfileEffect {
@@ -14,7 +14,7 @@ sealed class ProfileEffect {
     ) : ProfileEffect()
 
     data class ShowRestoreDialog(
-        val cloudStats: UserStatsDTO
+        val cloudProgress: CloudProgressSnapshot
     ) : ProfileEffect()
 
     data class ShowOverwriteDialog(

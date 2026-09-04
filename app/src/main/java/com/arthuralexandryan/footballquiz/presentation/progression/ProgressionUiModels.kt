@@ -2,7 +2,7 @@ package com.arthuralexandryan.footballquiz.presentation.progression
 
 import androidx.annotation.StringRes
 import com.arthuralexandryan.footballquiz.R
-import com.arthuralexandryan.footballquiz.data.repository.ProfileProgressSnapshot
+import com.arthuralexandryan.footballquiz.domain.progression.ProfileProgressSnapshot
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionSnapshot
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageStatus

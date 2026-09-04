@@ -10,6 +10,7 @@ import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+@Deprecated("Legacy bridge. Use VersusEntryViewModel for Versus entry screens.")
 class VSRM_ScoreboardPresenter(val context: Context, private val checkScoreboard: OnCheckScoreboard) : AllCallBacks.Presenter, KoinComponent {
     private val gameCatalogRepository: GameCatalogRepository by inject()
 

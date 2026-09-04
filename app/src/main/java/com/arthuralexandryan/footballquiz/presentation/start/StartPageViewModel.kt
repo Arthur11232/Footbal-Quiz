@@ -19,8 +19,8 @@ import com.arthuralexandryan.footballquiz.domain.usecase.start.RestoreStartCloud
 import com.arthuralexandryan.footballquiz.domain.usecase.start.SignInWithGoogleTokenUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.start.UploadStartLocalStatsUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotificationSessionUseCase
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
-import com.google.firebase.auth.FirebaseUser
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSnapshot
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -190,10 +190,11 @@ class StartPageViewModel(
         }
     }
 
-    fun onCloudRestoreConfirmed(userId: String, cloudStats: UserStatsDTO) {
+    fun onCloudRestoreConfirmed(userId: String, cloudProgress: CloudProgressSnapshot) {
         viewModelScope.launch {
             settingsRepository.setAutoRestorePromptDismissed(userId, false)
-            restoreStartCloudStatsUseCase(userId, cloudStats)
+            restoreStartCloudStatsUseCase(userId, cloudProgress)
+            settingsRepository.setAutoRestorePromptCompleted(userId, true)
             refreshState()
             emitToast(R.string.profile_progress_restored)
         }
@@ -214,13 +215,13 @@ class StartPageViewModel(
     }
 
     private suspend fun syncCloudProgressIfNeeded(
-        user: FirebaseUser,
+        user: AuthenticatedUser,
         showUserFeedback: Boolean
     ): Boolean {
         val decision = resolveStartCloudSyncUseCase(user)
         if (
             decision is SyncRepository.SyncDecision.PromptConflict &&
-            settingsRepository.isAutoRestorePromptDismissed(user.uid)
+            settingsRepository.hasHandledAutoRestorePrompt(user.id)
         ) {
             return false
         }
@@ -228,7 +229,7 @@ class StartPageViewModel(
         when (decision) {
             SyncRepository.SyncDecision.None -> return false
             is SyncRepository.SyncDecision.AutoRestoreCloud -> {
-                restoreStartCloudStatsUseCase(decision.userId, decision.cloudStats)
+                restoreStartCloudStatsUseCase(decision.userId, decision.cloudProgress)
                 refreshState()
                 if (showUserFeedback) {
                     _effects.emit(StartPageEffect.ShowToastRes(R.string.profile_progress_restored))
@@ -239,7 +240,7 @@ class StartPageViewModel(
                 _effects.emit(
                     StartPageEffect.PromptCloudRestore(
                         userId = decision.userId,
-                        cloudStats = decision.cloudStats
+                        cloudProgress = decision.cloudProgress
                     )
                 )
                 return true
@@ -256,36 +257,31 @@ class StartPageViewModel(
         }
     }
 
-    private suspend fun maybePromptNotificationPermission(user: FirebaseUser) {
-        if (!shouldPromptNotificationPermissionUseCase(user.uid)) return
-        markNotificationPermissionPromptShownUseCase(user.uid)
-        _effects.emit(StartPageEffect.PromptNotificationPermission(user.uid))
+    private fun SettingsRepository.hasHandledAutoRestorePrompt(userId: String): Boolean {
+        return isAutoRestorePromptDismissed(userId) || isAutoRestorePromptCompleted(userId)
     }
 
-    private suspend fun consumePendingRewardsAfterAuth(user: FirebaseUser) {
-        val recipientName = resolveRecipientName(user)
+    private suspend fun maybePromptNotificationPermission(user: AuthenticatedUser) {
+        if (!shouldPromptNotificationPermissionUseCase(user.id)) return
+        markNotificationPermissionPromptShownUseCase(user.id)
+        _effects.emit(StartPageEffect.PromptNotificationPermission(user.id))
+    }
+
+    private suspend fun consumePendingRewardsAfterAuth(user: AuthenticatedUser) {
+        val recipientName = user.recipientName(fallback = "Player")
         consumePendingRewardsAfterAuthUseCase(
-            userId = user.uid,
+            userId = user.id,
             recipientName = recipientName,
             userEmail = user.email
         )
         syncIssuedCertificatesToCloudUseCase(
-            userId = user.uid,
+            userId = user.id,
             recipientName = recipientName,
             userEmail = user.email
         )
     }
 
-    private fun resolveRecipientName(user: FirebaseUser): String {
-        return user.displayName
-            ?.takeIf { it.isNotBlank() }
-            ?: user.email
-                ?.substringBefore("@")
-                ?.takeIf { it.isNotBlank() }
-            ?: "Player"
-    }
-
-    private fun applyState(user: FirebaseUser?) {
+    private fun applyState(user: AuthenticatedUser?) {
         val newState = buildStartPageStateUseCase(user)
         _uiState.update { currentState ->
             currentState.copy(
