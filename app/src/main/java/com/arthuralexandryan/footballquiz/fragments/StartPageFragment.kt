@@ -156,6 +156,7 @@ class StartPageFragment : Fragment() {
         if (!isAdded) return
         if (restoreDialogShowing) return
         if (settingsRepository.isAutoRestorePromptDismissed(userId)) return
+        if (settingsRepository.isAutoRestorePromptCompleted(userId)) return
         restoreDialogShowing = true
 
         var handledByButton = false

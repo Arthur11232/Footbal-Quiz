@@ -123,6 +123,7 @@ class GameProgressRepositoryImpl(
             .remove(Constants.UserPhotoKey + userId)
             .remove(Constants.UserStatsLastSyncKeyPrefix + userId)
             .remove(Constants.UserStatsRestorePromptDismissedKeyPrefix + userId)
+            .remove(Constants.UserStatsRestorePromptCompletedKeyPrefix + userId)
             .putBoolean("isFirstPlay", true)
             .apply {
                 com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId.entries

@@ -1,55 +1,45 @@
 package com.arthuralexandryan.footballquiz.versus.vsrm
 
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
-import com.arthuralexandryan.footballquiz.constants.Constant
-import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.databinding.FragmentVsRmBinding
 import com.arthuralexandryan.footballquiz.models.PlaceModel
 import com.arthuralexandryan.footballquiz.models.PlaceModelInterface
+import com.arthuralexandryan.footballquiz.presentation.versus.VersusEntryUiState
+import com.arthuralexandryan.footballquiz.presentation.versus.VersusEntryViewModel
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
-import com.arthuralexandryan.footballquiz.versus.OnCheckScoreboard
-import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
+import kotlinx.coroutines.launch
 import kotlin.math.min
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class FragmentRonMessi : Fragment(), OnCheckScoreboard, PlaceModelInterface {
+class FragmentRonMessi : Fragment(), PlaceModelInterface {
     private lateinit var binding: FragmentVsRmBinding
 
-    private val gameCatalogRepository: GameCatalogRepository by inject()
-    private var presenter: VSRM_ScoreboardPresenter? = null
+    private val versusEntryViewModel: VersusEntryViewModel by viewModel()
     private var isActive: Boolean = false
 
-    @SuppressLint("InflateParams")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        // Inflate the layout for this fragment
-        binding = FragmentVsRmBinding.inflate(layoutInflater)
+        binding = FragmentVsRmBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initImages(view)
+        initImages()
         applyInsets()
-
-        presenter = activity?.let { VSRM_ScoreboardPresenter(it, this) }
-        if (presenter?.isReadyToPlay() == false) {
-            isActive = false
-            initLockScreen(presenter!!)
-        } else {
-            isActive = true
-            binding.lockScreen.root.visibility = View.GONE
-            binding.scoreboard.root.visibility = View.VISIBLE
-        }
+        observeUiState()
+        versusEntryViewModel.load(VersusEntryViewModel.ENTRY_RONALDO_MESSI)
     }
 
     private fun applyInsets() {
@@ -64,21 +54,43 @@ class FragmentRonMessi : Fragment(), OnCheckScoreboard, PlaceModelInterface {
         )
     }
 
-    private fun initLockScreen(presenter: VSRM_ScoreboardPresenter) {
-        binding.lockScreen.root.visibility = View.VISIBLE
-        binding.scoreboard.root.visibility = View.INVISIBLE
-        binding.lockScreen.seekBar.max = Constant.FOR_RM_SCORE
-        binding.lockScreen.seekBar.progress = min(presenter.getTotalScores(), Constant.FOR_RM_SCORE)
-        binding.lockScreen.seekBar.setOnTouchListener { _, event ->
+    private fun observeUiState() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                versusEntryViewModel.uiState.collect(::renderUiState)
+            }
+        }
+    }
+
+    private fun renderUiState(state: VersusEntryUiState) {
+        if (!state.isLoaded) return
+
+        isActive = state.isReady
+        renderScoreboard(state)
+
+        if (state.isReady) binding.run {
+            lockScreen.root.visibility = View.GONE
+            scoreboard.root.visibility = View.VISIBLE
+        } else {
+            initLockScreen(state)
+        }
+    }
+
+    private fun initLockScreen(state: VersusEntryUiState) = binding.run {
+        lockScreen.root.visibility = View.VISIBLE
+        scoreboard.root.visibility = View.INVISIBLE
+        lockScreen.seekBar.max = state.unlockThreshold
+        lockScreen.seekBar.progress = min(state.totalScore, state.unlockThreshold)
+        lockScreen.seekBar.setOnTouchListener { _, event ->
             event.action == MotionEvent.ACTION_DOWN ||
                 event.action == MotionEvent.ACTION_MOVE ||
                 event.action == MotionEvent.ACTION_UP
         }
-        binding.lockScreen.currentCoins.text = presenter.getTotalScoresText()
-        binding.lockScreen.neededCoins.text = Constant.FOR_RM_SCORE.toString()
+        lockScreen.currentCoins.text = state.totalScoreText
+        lockScreen.neededCoins.text = state.unlockThreshold.toString()
     }
 
-    private fun initImages(view: View) {
+    private fun initImages() {
         PlaceModel.PlaceModelBuilder(binding.ronaldo.root)
                 .setListener(this)
                 .setImage(R.drawable.ronaldo)
@@ -94,25 +106,25 @@ class FragmentRonMessi : Fragment(), OnCheckScoreboard, PlaceModelInterface {
         }
     }
 
-    override fun onCheckScores(model: VS_ScoreboardModel) {
-        binding.scoreboard.placeAnswer.text = model.placeAnswer
-        binding.scoreboard.placeQuestion.text = model.placeQuest
-        binding.scoreboard.categoryAnswers.text = model.catAnswer
-        binding.scoreboard.categoryScore.text = model.catScore
+    private fun renderScoreboard(state: VersusEntryUiState) = binding.scoreboard.run {
+        placeAnswer.text = state.placeAnswerText
+        placeQuestion.text = state.placeQuestionText
+        categoryAnswers.text = state.categoryAnswerText
+        categoryScore.text = state.categoryScoreText
     }
 
     override fun onClickPlace() {
         if (isActive) {
-            startVersusGame("vsRM")
+            startVersusGame(VersusEntryViewModel.ENTRY_RONALDO_MESSI)
         }
     }
 
     private fun startVersusGame(entryKey: String) {
-        val launchData = gameCatalogRepository.getLaunchData(entryKey)
+        val launchData = versusEntryViewModel.getLaunchData(entryKey)
         val args = Bundle().apply {
             putParcelableArray("harcer", launchData.questions.toTypedArray())
             putParcelable("achokner", launchData.placeScores)
-            putParcelable("cat_score", gameCatalogRepository.getCategoryScore(entryKey))
+            putParcelable("cat_score", versusEntryViewModel.getCategoryScore(entryKey))
             putString("title", getString(R.string.versus))
             putString("category", entryKey)
         }

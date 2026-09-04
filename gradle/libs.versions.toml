@@ -15,6 +15,7 @@ material = "1.13.0"
 navigation = "2.9.7"
 playServicesAds = "25.1.0"
 playServicesAuth = "21.5.1"
+playReview = "2.0.2"
 realmGradlePlugin = "10.19.0"
 glide = "4.16.0"
 
@@ -41,6 +42,8 @@ kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 play-services-ads = { group = "com.google.android.gms", name = "play-services-ads", version.ref = "playServicesAds" }
 play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+play-review = { group = "com.google.android.play", name = "review", version.ref = "playReview" }
+play-review-ktx = { group = "com.google.android.play", name = "review-ktx", version.ref = "playReview" }
 realm-gradle-plugin = { group = "io.realm", name = "realm-gradle-plugin", version.ref = "realmGradlePlugin" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }

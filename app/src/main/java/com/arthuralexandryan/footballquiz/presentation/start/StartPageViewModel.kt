@@ -194,6 +194,7 @@ class StartPageViewModel(
         viewModelScope.launch {
             settingsRepository.setAutoRestorePromptDismissed(userId, false)
             restoreStartCloudStatsUseCase(userId, cloudProgress)
+            settingsRepository.setAutoRestorePromptCompleted(userId, true)
             refreshState()
             emitToast(R.string.profile_progress_restored)
         }
@@ -220,7 +221,7 @@ class StartPageViewModel(
         val decision = resolveStartCloudSyncUseCase(user)
         if (
             decision is SyncRepository.SyncDecision.PromptConflict &&
-            settingsRepository.isAutoRestorePromptDismissed(user.id)
+            settingsRepository.hasHandledAutoRestorePrompt(user.id)
         ) {
             return false
         }
@@ -254,6 +255,10 @@ class StartPageViewModel(
                 return false
             }
         }
+    }
+
+    private fun SettingsRepository.hasHandledAutoRestorePrompt(userId: String): Boolean {
+        return isAutoRestorePromptDismissed(userId) || isAutoRestorePromptCompleted(userId)
     }
 
     private suspend fun maybePromptNotificationPermission(user: AuthenticatedUser) {

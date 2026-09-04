@@ -43,6 +43,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
+import com.google.android.play.core.review.ReviewManagerFactory
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.Random
@@ -216,10 +217,23 @@ class PlayFragment : Fragment(), ShowAds {
                                 loadInterstitialAd()
                             }
                         }
+                        PlayEffect.RequestAppReview -> {
+                            requestAppReview()
+                        }
                     }
                 }
             }
         }
+    }
+
+    private fun requestAppReview() {
+        val currentActivity = activity ?: return
+        val manager = ReviewManagerFactory.create(currentActivity)
+        manager.requestReviewFlow()
+            .addOnCompleteListener { request ->
+                if (_binding == null || !isAdded || !request.isSuccessful) return@addOnCompleteListener
+                manager.launchReviewFlow(currentActivity, request.result)
+            }
     }
 
     private fun navigateToAchievementCongratulations(

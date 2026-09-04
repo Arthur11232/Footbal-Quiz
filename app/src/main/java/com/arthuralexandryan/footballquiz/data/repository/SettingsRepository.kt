@@ -19,6 +19,9 @@ interface SettingsRepository {
     fun isAutoRestorePromptDismissed(userId: String): Boolean
     fun setAutoRestorePromptDismissed(userId: String, dismissed: Boolean)
 
+    fun isAutoRestorePromptCompleted(userId: String): Boolean
+    fun setAutoRestorePromptCompleted(userId: String, completed: Boolean)
+
     fun getNotificationInstallationId(): String
 
     fun getCachedNotificationToken(): String?
@@ -44,4 +47,13 @@ interface SettingsRepository {
 
     fun isNotificationPermissionPromptShown(userId: String): Boolean
     fun setNotificationPermissionPromptShown(userId: String, shown: Boolean)
+
+    fun getAppReviewPositiveAnswers(): Int
+    fun setAppReviewPositiveAnswers(count: Int)
+
+    fun getAppReviewPromptCount(): Int
+    fun setAppReviewPromptCount(count: Int)
+
+    fun getAppReviewLastPromptedAt(): Long
+    fun setAppReviewLastPromptedAt(timestampMillis: Long)
 }

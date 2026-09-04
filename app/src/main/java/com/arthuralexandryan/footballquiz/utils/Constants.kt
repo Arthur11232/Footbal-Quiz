@@ -11,6 +11,7 @@ object Constants {
     var UserPhotoKey: String = "user_photo_path"
     var UserStatsLastSyncKeyPrefix: String = "user_stats_last_sync_"
     var UserStatsRestorePromptDismissedKeyPrefix: String = "user_stats_restore_prompt_dismissed_"
+    var UserStatsRestorePromptCompletedKeyPrefix: String = "user_stats_restore_prompt_completed_"
     var ProgressionStageAchievedAtKeyPrefix: String = "progression_stage_achieved_at_"
     var CertificateIssuedAtKeyPrefix: String = "certificate_issued_at_"
     var CertificateIdKeyPrefix: String = "certificate_id_"
@@ -28,4 +29,7 @@ object Constants {
     var NotificationRewardEnabledKey: String = "notification_reward_enabled"
     var NotificationUpdatesEnabledKey: String = "notification_updates_enabled"
     var NotificationPromptShownKeyPrefix: String = "notification_prompt_shown_"
+    var AppReviewPositiveAnswersKey: String = "app_review_positive_answers"
+    var AppReviewPromptCountKey: String = "app_review_prompt_count"
+    var AppReviewLastPromptedAtKey: String = "app_review_last_prompted_at"
 }

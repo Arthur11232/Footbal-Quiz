@@ -130,6 +130,8 @@ dependencies {
     implementation libs.firebase.messaging
     implementation libs.play.services.auth
     implementation libs.play.services.ads
+    implementation libs.play.review
+    implementation libs.play.review.ktx
 
     // Dependency Injection
     implementation platform(libs.koin.bom)

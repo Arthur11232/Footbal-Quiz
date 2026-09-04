@@ -1,30 +1,30 @@
 package com.arthuralexandryan.footballquiz.versus.vsrb
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
-import com.arthuralexandryan.footballquiz.constants.Constant
-import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.databinding.FragmentVsRbBinding
 import com.arthuralexandryan.footballquiz.models.PlaceModel
 import com.arthuralexandryan.footballquiz.models.PlaceModelInterface
+import com.arthuralexandryan.footballquiz.presentation.versus.VersusEntryUiState
+import com.arthuralexandryan.footballquiz.presentation.versus.VersusEntryViewModel
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
-import com.arthuralexandryan.footballquiz.versus.OnCheckScoreboard
-import com.arthuralexandryan.footballquiz.versus.VS_ScoreboardModel
+import kotlinx.coroutines.launch
 import kotlin.math.min
-import org.koin.android.ext.android.inject
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class FragmentRealBarc : Fragment(), OnCheckScoreboard, PlaceModelInterface {
+class FragmentRealBarc : Fragment(), PlaceModelInterface {
 
-    private val gameCatalogRepository: GameCatalogRepository by inject()
+    private val versusEntryViewModel: VersusEntryViewModel by viewModel()
     private lateinit var binding: FragmentVsRbBinding
-    private lateinit var presenter: VSRB_ScoreboardPresenter
     private var isActive = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -36,34 +36,44 @@ class FragmentRealBarc : Fragment(), OnCheckScoreboard, PlaceModelInterface {
         super.onViewCreated(view, savedInstanceState)
         initImages()
         applyInsets()
+        observeUiState()
+        versusEntryViewModel.load(VersusEntryViewModel.ENTRY_REAL_BARCELONA)
     }
 
-    @SuppressLint("SetTextI18n")
-    private fun initLockScreen(presenter: VSRB_ScoreboardPresenter) {
-        binding.lockScreen.root.visibility = View.VISIBLE
-        binding.scoreboard.root.visibility = View.INVISIBLE
-        binding.lockScreen.seekBar.max = Constant.FOR_RB_SCORE
-        binding.lockScreen.seekBar.progress = min(presenter.getTotalScores(), Constant.FOR_RB_SCORE)
-        binding.lockScreen.seekBar.setOnTouchListener { _, event ->
+    private fun initLockScreen(state: VersusEntryUiState) = binding.run {
+        lockScreen.root.visibility = View.VISIBLE
+        scoreboard.root.visibility = View.INVISIBLE
+        lockScreen.seekBar.max = state.unlockThreshold
+        lockScreen.seekBar.progress = min(state.totalScore, state.unlockThreshold)
+        lockScreen.seekBar.setOnTouchListener { _, event ->
             event.action == MotionEvent.ACTION_DOWN ||
                 event.action == MotionEvent.ACTION_MOVE ||
                 event.action == MotionEvent.ACTION_UP
         }
-        binding.lockScreen.currentCoins.text = presenter.getTotalScoresText()
-        binding.lockScreen.neededCoins.text = Constant.FOR_RB_SCORE.toString()
+        lockScreen.currentCoins.text = state.totalScoreText
+        lockScreen.neededCoins.text = state.unlockThreshold.toString()
     }
 
-    override fun onStart() {
-        presenter = VSRB_ScoreboardPresenter(requireActivity(), this)
-        if (!presenter.isReadyToPlay()) {
-            isActive = false
-            initLockScreen(presenter)
-        } else {
-            isActive = true
-            binding.lockScreen.root.visibility = View.GONE
-            binding.scoreboard.root.visibility = View.VISIBLE
+    private fun observeUiState() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                versusEntryViewModel.uiState.collect(::renderUiState)
+            }
         }
-        super.onStart()
+    }
+
+    private fun renderUiState(state: VersusEntryUiState) {
+        if (!state.isLoaded) return
+
+        isActive = state.isReady
+        renderScoreboard(state)
+
+        if (state.isReady) binding.run {
+            lockScreen.root.visibility = View.GONE
+            scoreboard.root.visibility = View.VISIBLE
+        } else {
+            initLockScreen(state)
+        }
     }
 
     private fun initImages() {
@@ -96,25 +106,25 @@ class FragmentRealBarc : Fragment(), OnCheckScoreboard, PlaceModelInterface {
         )
     }
 
-    override fun onCheckScores(model: VS_ScoreboardModel) {
-        binding.scoreboard.placeAnswer.text = model.placeAnswer
-        binding.scoreboard.placeQuestion.text = model.placeQuest
-        binding.scoreboard.categoryAnswers.text = model.catAnswer
-        binding.scoreboard.categoryScore.text = model.catScore
+    private fun renderScoreboard(state: VersusEntryUiState) = binding.scoreboard.run {
+        placeAnswer.text = state.placeAnswerText
+        placeQuestion.text = state.placeQuestionText
+        categoryAnswers.text = state.categoryAnswerText
+        categoryScore.text = state.categoryScoreText
     }
 
     override fun onClickPlace() {
         if (isActive) {
-            startVersusGame("vsRB")
+            startVersusGame(VersusEntryViewModel.ENTRY_REAL_BARCELONA)
         }
     }
 
     private fun startVersusGame(entryKey: String) {
-        val launchData = gameCatalogRepository.getLaunchData(entryKey)
+        val launchData = versusEntryViewModel.getLaunchData(entryKey)
         val args = Bundle().apply {
             putParcelableArray("harcer", launchData.questions.toTypedArray())
             putParcelable("achokner", launchData.placeScores)
-            putParcelable("cat_score", gameCatalogRepository.getCategoryScore(entryKey))
+            putParcelable("cat_score", versusEntryViewModel.getCategoryScore(entryKey))
             putString("title", getString(R.string.versus))
             putString("category", entryKey)
         }
