@@ -12,4 +12,6 @@ sealed interface PlayEffect {
     ) : PlayEffect
 
     data object ShowInterstitialAd : PlayEffect
+
+    data object RequestAppReview : PlayEffect
 }

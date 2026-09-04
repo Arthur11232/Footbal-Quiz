@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -16,12 +17,15 @@ import androidx.core.widget.ImageViewCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
+import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.databinding.FragmentAchievementCertificateBinding
+import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 import com.arthuralexandryan.footballquiz.presentation.achievement.CertificateTheme
 import com.arthuralexandryan.footballquiz.presentation.achievement.CertificateThemeMapper
-import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
+import com.google.android.play.core.review.ReviewManagerFactory
+import org.koin.android.ext.android.inject
 import java.text.DateFormat
 import java.util.Date
 
@@ -29,7 +33,9 @@ class AchievementCertificateFragment : Fragment() {
 
     private var _binding: FragmentAchievementCertificateBinding? = null
     private val binding get() = _binding!!
+    private val settingsRepository: SettingsRepository by inject()
     private var currentTheme: CertificateTheme? = null
+    private var isClosing: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,12 +53,8 @@ class AchievementCertificateFragment : Fragment() {
             return
         }
 
-        binding.btnCertificateContinue.setOnClickListener {
-            findNavController().navigateUp()
-        }
-        binding.btnCertificateClose.setOnClickListener {
-            findNavController().navigateUp()
-        }
+        binding.btnCertificateContinue.setOnClickListener { closeWithOptionalReview() }
+        binding.btnCertificateClose.setOnClickListener { closeWithOptionalReview() }
 
         currentTheme = CertificateThemeMapper.themeFor(
             ProgressionStageId.fromValue(payload.primaryStageId)
@@ -180,6 +182,65 @@ class AchievementCertificateFragment : Fragment() {
                 R.string.certificate_continue_button
             }
         )
+    }
+
+    private fun closeWithOptionalReview() {
+        if (isClosing) return
+        isClosing = true
+        binding.btnCertificateContinue.isEnabled = false
+        binding.btnCertificateClose.isEnabled = false
+
+        if (!shouldRequestAppReviewAfterCertificate()) {
+            navigateUpSafely()
+            return
+        }
+
+        val currentActivity = activity
+        if (currentActivity == null) {
+            navigateUpSafely()
+            return
+        }
+
+        Log.d(REVIEW_LOG_TAG, "Requesting Play in-app review after certificate.")
+        val reviewManager = ReviewManagerFactory.create(currentActivity)
+        reviewManager.requestReviewFlow().addOnCompleteListener { request ->
+            if (_binding == null || !isAdded) return@addOnCompleteListener
+            if (!request.isSuccessful) {
+                Log.e(REVIEW_LOG_TAG, "Certificate ReviewInfo request failed.", request.exception)
+                navigateUpSafely()
+                return@addOnCompleteListener
+            }
+
+            Log.d(REVIEW_LOG_TAG, "Certificate ReviewInfo request succeeded. Launching review flow.")
+            reviewManager.launchReviewFlow(currentActivity, request.result)
+                .addOnCompleteListener { launch ->
+                    if (launch.isSuccessful) {
+                        Log.d(REVIEW_LOG_TAG, "Certificate review flow completed.")
+                    } else {
+                        Log.e(REVIEW_LOG_TAG, "Certificate review flow failed.", launch.exception)
+                    }
+                    navigateUpSafely()
+                }
+        }
+    }
+
+    private fun shouldRequestAppReviewAfterCertificate(): Boolean {
+        val promptCount = settingsRepository.getAppReviewPromptCount()
+        if (promptCount >= MAX_APP_REVIEW_PROMPTS) return false
+
+        val now = System.currentTimeMillis()
+        val lastPromptedAt = settingsRepository.getAppReviewLastPromptedAt()
+        if (lastPromptedAt > 0 && now - lastPromptedAt < APP_REVIEW_COOLDOWN_MILLIS) return false
+
+        settingsRepository.setAppReviewPromptCount(promptCount + 1)
+        settingsRepository.setAppReviewLastPromptedAt(now)
+        settingsRepository.setAppReviewPositiveAnswers(0)
+        return true
+    }
+
+    private fun navigateUpSafely() {
+        if (_binding == null || !isAdded) return
+        findNavController().navigateUp()
     }
 
     private fun readPayload(): AchievementCertificatePayload? {
@@ -349,5 +410,11 @@ class AchievementCertificateFragment : Fragment() {
         super.onDestroyView()
         currentTheme = null
         _binding = null
+    }
+
+    private companion object {
+        const val REVIEW_LOG_TAG = "FQ_Review"
+        const val MAX_APP_REVIEW_PROMPTS = 3
+        const val APP_REVIEW_COOLDOWN_MILLIS = 14L * 24L * 60L * 60L * 1000L
     }
 }

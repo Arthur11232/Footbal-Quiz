@@ -137,4 +137,25 @@ class SettingsRepositoryImpl(
             shown
         )
     }
+
+    override fun getAppReviewPositiveAnswers(): Int =
+        Prefer.getIntPreference(context, Constants.AppReviewPositiveAnswersKey, 0)
+
+    override fun setAppReviewPositiveAnswers(count: Int) {
+        Prefer.setIntPreference(context, Constants.AppReviewPositiveAnswersKey, count)
+    }
+
+    override fun getAppReviewPromptCount(): Int =
+        Prefer.getIntPreference(context, Constants.AppReviewPromptCountKey, 0)
+
+    override fun setAppReviewPromptCount(count: Int) {
+        Prefer.setIntPreference(context, Constants.AppReviewPromptCountKey, count)
+    }
+
+    override fun getAppReviewLastPromptedAt(): Long =
+        Prefer.getLongPreference(context, Constants.AppReviewLastPromptedAtKey, 0L)
+
+    override fun setAppReviewLastPromptedAt(timestampMillis: Long) {
+        Prefer.setLongPreference(context, Constants.AppReviewLastPromptedAtKey, timestampMillis)
+    }
 }

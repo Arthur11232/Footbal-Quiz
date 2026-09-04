@@ -28,4 +28,7 @@ object Constants {
     var NotificationRewardEnabledKey: String = "notification_reward_enabled"
     var NotificationUpdatesEnabledKey: String = "notification_updates_enabled"
     var NotificationPromptShownKeyPrefix: String = "notification_prompt_shown_"
+    var AppReviewPositiveAnswersKey: String = "app_review_positive_answers"
+    var AppReviewPromptCountKey: String = "app_review_prompt_count"
+    var AppReviewLastPromptedAtKey: String = "app_review_last_prompted_at"
 }
