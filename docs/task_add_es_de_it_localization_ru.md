@@ -123,7 +123,7 @@ app/questions_audit_backup_BEFORE_es_de_it_2026_09_09.json
 app/questions_translation_workbench_es_de_it_2026_09_09.json
 ```
 
-Workbench построен от Firestore backup, а не от локального архивного `app/questions_audit.json`. В нём 689 items, каждый item содержит:
+Workbench построен от Firestore backup, а не от локального архивного `app/questions_audit_archive_2026_09_09.json`. В нём 689 items, каждый item содержит:
 
 - `questionId`;
 - `categoryType`;
@@ -142,9 +142,15 @@ Workbench построен от Firestore backup, а не от локально�
 - `export-translation-workbench`: подготовка рабочего файла для перевода target languages;
 - `build-audit-from-workbench`: сборка финального audit из заполненного workbench. Команда намеренно падает, если хотя бы один target-перевод пустой.
 
-Важно: свежий Firestore backup не полностью совпадает с локальным `app/questions_audit.json`, поэтому для `es/de/it` источником истины на этом этапе считается именно backup из Firestore, а `app/questions_audit.json` остаётся архивным локальным snapshot до отдельного решения.
+Важно: свежий Firestore backup не полностью совпадает со старым локальным audit-файлом. Поэтому для `es/de/it` источником истины на этом этапе считается именно backup из Firestore.
 
-Краткая сверка backup vs local `questions_audit.json`:
+Старый локальный файл переименован в архив:
+
+```text
+app/questions_audit_archive_2026_09_09.json
+```
+
+Краткая сверка backup vs archive audit:
 
 - `en`: отличается 116 items, в основном `France`, `Germany`, 1 item `vsRB`;
 - `ru`: отличается 45 items, в основном `France`, `Germany`, `Italy`, `English`, `Spain`;

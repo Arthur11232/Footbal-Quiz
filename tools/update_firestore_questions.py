@@ -39,7 +39,7 @@ from typing import Any
 import xml.etree.ElementTree as ET
 
 
-DEFAULT_AUDIT_PATH = Path("app/questions_audit.json")
+DEFAULT_AUDIT_PATH = Path("app/questions_audit_backup_BEFORE_es_de_it_2026_09_09.json")
 DEFAULT_COLLECTION = "questions"
 DEFAULT_LANGUAGE_ORDER = "en,ru,hy"
 BATCH_LIMIT = 450
@@ -73,7 +73,7 @@ def load_audit(path: Path) -> dict[str, list[dict[str, Any]]]:
     with path.open("r", encoding="utf-8") as fh:
         data = json.load(fh)
     if not isinstance(data, dict):
-        raise ValueError("questions_audit.json must be an object with language keys")
+        raise ValueError("audit file must be an object with language keys")
     return data
 
 
@@ -765,7 +765,7 @@ def command_export_question_id_report(args: argparse.Namespace) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Update Firestore questions from questions_audit.json")
+    parser = argparse.ArgumentParser(description="Back up and update Firestore questions from audit JSON")
     subparsers = parser.add_subparsers(required=True)
 
     inspect_parser = subparsers.add_parser("inspect", help="Inspect current numbered Firestore docs")

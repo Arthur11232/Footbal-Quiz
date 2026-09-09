@@ -1,6 +1,6 @@
 # Phase 1 Question ID Readiness Report
 
-Source audit: `app/questions_audit.json`
+Source audit: `app/questions_audit_archive_2026_09_09.json`
 
 All languages checked: `en, ru, hy`
 Resource-assisted languages: `en, ru, hy`
