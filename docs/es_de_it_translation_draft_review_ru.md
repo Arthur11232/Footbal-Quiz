@@ -168,6 +168,28 @@ python3 tools/update_firestore_questions.py update \
 - Не трогаем backend/PHP/KMP/Compose.
 - Не отправляем вопросы во внешний переводчик без явного разрешения владельца проекта.
 
+## Machine Draft Helper
+
+Добавлен локальный helper для создания machine-draft batch-файлов:
+
+```text
+tools/draft_translate_question_batches.py
+```
+
+Он сохраняет результат в отдельную output-папку и помечает batch как `machine_draft_needs_review`. Helper не должен использоваться для production update без ручной проверки.
+
+Пример запуска после явного разрешения на внешний machine translation:
+
+```bash
+env PYTHONPATH=/tmp/fq_translate_deps python3 tools/draft_translate_question_batches.py \
+  --batch-dir app/question_translation_batches_es_de_it_2026_09_09 \
+  --output-dir app/question_translation_batches_es_de_it_2026_09_09_machine_draft \
+  --cache app/question_translation_batches_es_de_it_2026_09_09_machine_draft_cache.json \
+  --only uefa_european_championship.json \
+  --sleep-seconds 0.05 \
+  --retries 2
+```
+
 ## Следующий Практический Шаг
 
 Начать с первого High-priority batch:
