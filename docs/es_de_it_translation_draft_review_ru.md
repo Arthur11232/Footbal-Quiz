@@ -72,7 +72,7 @@ app/questions_translation_workbench_es_de_it_2026_09_09.json
 
 | Batch file | Questions | Priority | Status |
 | --- | ---: | --- | --- |
-| `app/question_translation_batches_es_de_it_2026_09_09/top5_spain.json` | 71 | High | translation needed |
+| `app/question_translation_batches_es_de_it_2026_09_09_manual_draft/top5_spain.json` | 71 | High | manual AI draft ready for review |
 | `app/question_translation_batches_es_de_it_2026_09_09/top5_germany.json` | 67 | High | translation needed |
 | `app/question_translation_batches_es_de_it_2026_09_09/top5_italy.json` | 70 | High | translation needed |
 | `app/question_translation_batches_es_de_it_2026_09_09/top5_france.json` | 66 | Medium | translation needed |
@@ -195,12 +195,31 @@ env PYTHONPATH=/tmp/fq_translate_deps python3 tools/draft_translate_question_bat
 Начать с первого High-priority batch:
 
 ```text
-app/question_translation_batches_es_de_it_2026_09_09/top5_spain.json
+app/question_translation_batches_es_de_it_2026_09_09_manual_draft/top5_spain.json
 ```
 
 После заполнения `top5_spain.json` нужно:
 
-1. применить batch обратно в workbench через `apply-translation-batch --require-complete`;
-2. проверить, что команда не падает;
+1. проверить тексты вручную;
+2. если всё хорошо, применить batch обратно в workbench через `apply-translation-batch --require-complete`;
 3. перейти к `top5_germany.json`;
 4. затем к `top5_italy.json`.
+
+## Ready For Manual Review
+
+### TOP5 / Spain
+
+Файл:
+
+```text
+app/question_translation_batches_es_de_it_2026_09_09_manual_draft/top5_spain.json
+```
+
+Статус:
+
+- 71 questions;
+- 213 translated target blocks (`es`, `de`, `it`);
+- missing fields: 0;
+- invalid `right_answer`: 0;
+- `apply-translation-batch --require-complete` проходит на test output;
+- статус файла: `manual_ai_draft_needs_review`.
