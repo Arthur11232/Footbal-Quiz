@@ -1,0 +1,4567 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "TOP5",
+  "type": "France",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "translation_batch",
+  "items": [
+    {
+      "questionId": "france_001",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In what the club played Zlatan Ibrahimović ?",
+          "answer_A": "Nice",
+          "answer_B": "Bordeaux",
+          "answer_C": "Lyon",
+          "answer_D": "PSG",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "В каком клубе выступал Златан Ибрагимович ?",
+          "answer_A": "Ницца",
+          "answer_B": "Бордо",
+          "answer_C": "Лион",
+          "answer_D": "ПСЖ",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում է հանդես եկել Զլատան Իբրահիմովիչը:",
+          "answer_A": "Նիցցա",
+          "answer_B": "Բորդո",
+          "answer_C": "Լիոն",
+          "answer_D": "ՊՍԺ",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_001"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_001"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_001"
+        }
+      }
+    },
+    {
+      "questionId": "france_002",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "How many clubs participate in the championship of France?",
+          "answer_A": "17",
+          "answer_B": "20",
+          "answer_C": "18",
+          "answer_D": "16",
+          "right_answer": "18"
+        },
+        "ru": {
+          "question": "Сколько клубов участвуют в чемпионате Франции ?",
+          "answer_A": "17",
+          "answer_B": "20",
+          "answer_C": "18",
+          "answer_D": "16",
+          "right_answer": "18"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է մասնակցում Ֆրանսիայի առաջնությանը:",
+          "answer_A": "17",
+          "answer_B": "20",
+          "answer_C": "18",
+          "answer_D": "16",
+          "right_answer": "18"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_002"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_002"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_002"
+        }
+      }
+    },
+    {
+      "questionId": "france_003",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club did Franck Ribéry play for?",
+          "answer_A": "Lyon",
+          "answer_B": "Bordeaux",
+          "answer_C": "PSG",
+          "answer_D": "Marseille",
+          "right_answer": "Marseille"
+        },
+        "ru": {
+          "question": "В каком клубе выступал Франк Рибери ?",
+          "answer_A": "Лион",
+          "answer_B": "Бордо",
+          "answer_C": "ПСЖ",
+          "answer_D": "Марсель",
+          "right_answer": "Марсель"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում է հանդես եկել Ֆրանկ Ռիբերին:",
+          "answer_A": "Լիոն",
+          "answer_B": "Բորդո",
+          "answer_C": "ՊՍԺ",
+          "answer_D": "Մարսել",
+          "right_answer": "Մարսել"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_003"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_003"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_003"
+        }
+      }
+    },
+    {
+      "questionId": "france_004",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who is the record transfer in French championship history?",
+          "answer_A": "Neymar",
+          "answer_B": "Kylian Mbappe",
+          "answer_C": "Dimitri Payet",
+          "answer_D": "David Beckham",
+          "right_answer": "Neymar"
+        },
+        "ru": {
+          "question": "Кто является рекордным трансфером в истории чемпионата Франции?",
+          "answer_A": "Неймар",
+          "answer_B": "Килиан Мбаппе",
+          "answer_C": "Димитри Пайет",
+          "answer_D": "Дэвид Бэкхем",
+          "right_answer": "Неймар"
+        },
+        "hy": {
+          "question": "Ո՞վ է հանդիսանում Ֆրանսիայի առաջնության պատմության ամենաթանկարժեք տրանսֆերը:",
+          "answer_A": "Նեյմար",
+          "answer_B": "Կիլիան Մբապպե",
+          "answer_C": "Դիմիտրի Պայետ",
+          "answer_D": "Դեվիդ Բեքհեմ",
+          "right_answer": "Նեյմար"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_004"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_004"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_004"
+        }
+      }
+    },
+    {
+      "questionId": "france_005",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which French club did David Beckham play for?",
+          "answer_A": "Marseille",
+          "answer_B": "Monaco",
+          "answer_C": "Bordeaux",
+          "answer_D": "PSG",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "В каком французском клубе выступал Дэвид Бэкхэм ?",
+          "answer_A": "Марсель",
+          "answer_B": "Монако",
+          "answer_C": "Бордо",
+          "answer_D": "ПСЖ",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ֆրանսիական ո՞ր ակումբում է հանդես եկել Դեվիդ Բեքհեմը:",
+          "answer_A": "Մարսել",
+          "answer_B": "Մոնակո",
+          "answer_C": "Բորդո",
+          "answer_D": "ՊՍԺ",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_005"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_005"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_005"
+        }
+      }
+    },
+    {
+      "questionId": "france_006",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club has won the French championship the most?",
+          "answer_A": "Saint-Etienne",
+          "answer_B": "Marseille",
+          "answer_C": "Lyon",
+          "answer_D": "PSG",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем чемпионатa Франции ?",
+          "answer_A": "Сент-Этьен",
+          "answer_B": "Марсель",
+          "answer_C": "Лион",
+          "answer_D": "ПСЖ",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Ֆրանսիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Սենտ-Էտիեն",
+          "answer_B": "Մարսել",
+          "answer_C": "Լիոն",
+          "answer_D": "ՊՍԺ",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_006"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_006"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_006"
+        }
+      }
+    },
+    {
+      "questionId": "france_007",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "How many times in a row did Lyon win the French Championship?",
+          "answer_A": "4",
+          "answer_B": "7",
+          "answer_C": "3",
+          "answer_D": "5",
+          "right_answer": "7"
+        },
+        "ru": {
+          "question": "Сколько раз подряд Лион стал победителем чемпионатa Франции ?",
+          "answer_A": "4",
+          "answer_B": "7",
+          "answer_C": "3",
+          "answer_D": "5",
+          "right_answer": "7"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է անընդմեջ Լիոնը նվաճել Ֆրանսիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "4",
+          "answer_B": "7",
+          "answer_C": "3",
+          "answer_D": "5",
+          "right_answer": "7"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_007"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_007"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_007"
+        }
+      }
+    },
+    {
+      "questionId": "france_008",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who is PSG's all-time top scorer?",
+          "answer_A": "Zlatan Ibrahimović",
+          "answer_B": "Pedro Pauleta",
+          "answer_C": "Carlos Bianchi",
+          "answer_D": "Kylian Mbappé",
+          "right_answer": "Kylian Mbappé"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир ПСЖ ?",
+          "answer_A": "Златан Ибрагимович",
+          "answer_B": "Педру Паулета",
+          "answer_C": "Карлос Бьянки",
+          "answer_D": "Килиан Мбаппе",
+          "right_answer": "Килиан Мбаппе"
+        },
+        "hy": {
+          "question": "Ո՞վ է ՊՍԺ-ի լավագույն ռմբարկուն:",
+          "answer_A": "Զլատան Իբրահիմովիչ",
+          "answer_B": "Պեդրու Պաուլետա",
+          "answer_C": "Կառլոս Բիանկի",
+          "answer_D": "Կիլիան Մբապպե",
+          "right_answer": "Կիլիան Մբապպե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_008"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_008"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_008"
+        }
+      }
+    },
+    {
+      "questionId": "france_009",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club or clubs did Mickaël Landreau play for?",
+          "answer_A": "PSG",
+          "answer_B": "Lille",
+          "answer_C": "Nantes",
+          "answer_D": "All listed clubs",
+          "right_answer": "All listed clubs"
+        },
+        "ru": {
+          "question": "В каком клубе (клубах) выступал Микаэль Ландро ?",
+          "answer_A": "ПСЖ",
+          "answer_B": "Лилль",
+          "answer_C": "Нант",
+          "answer_D": "Во всех перечисленных клубах",
+          "right_answer": "Во всех перечисленных клубах"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում (ակումբներում) է հանդես եկել Միքայել Լանդրոն:",
+          "answer_A": "ՊՍԺ",
+          "answer_B": "Լիլ",
+          "answer_C": "Նանտ",
+          "answer_D": "Նշված բոլոր ակումբներում",
+          "right_answer": "Նշված բոլոր ակումբներում"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_009"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_009"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_009"
+        }
+      }
+    },
+    {
+      "questionId": "france_010",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French Championship in the 2016–2017 season?",
+          "answer_A": "Monaco",
+          "answer_B": "Lyon",
+          "answer_C": "PSG",
+          "answer_D": "Montpellier",
+          "right_answer": "Monaco"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2016–2017 стал победителем чемпионатa Франции ?",
+          "answer_A": "Монако",
+          "answer_B": "Лион",
+          "answer_C": "ПСЖ",
+          "answer_D": "Монпелье",
+          "right_answer": "Монако"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Ֆրանսիայի 2016–2017 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Մոնակո",
+          "answer_B": "Լիոն",
+          "answer_C": "ՊՍԺ",
+          "answer_D": "Մոնպելյե",
+          "right_answer": "Մոնակո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_010"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_010"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_010"
+        }
+      }
+    },
+    {
+      "questionId": "france_011",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club did Ronaldinho play for?",
+          "answer_A": "PSG",
+          "answer_B": "Lyon",
+          "answer_C": "Bordeaux",
+          "answer_D": "Lille",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "В каком клубе выступал Роналдиньо ?",
+          "answer_A": "ПСЖ",
+          "answer_B": "Лион",
+          "answer_C": "Бордо",
+          "answer_D": "Лилль",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում է հանդես եկել Ռոնալդինյոն:",
+          "answer_A": "ՊՍԺ",
+          "answer_B": "Լիոն",
+          "answer_C": "Բորդո",
+          "answer_D": "Լիլ",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_011"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_011"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_011"
+        }
+      }
+    },
+    {
+      "questionId": "france_012",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who was the top assist provider in the French Championship in the 2017-2018 season?",
+          "answer_A": "Thomas Lemar",
+          "answer_B": "Neymar",
+          "answer_C": "Nabil Fekir",
+          "answer_D": "Florian Thauvin",
+          "right_answer": "Neymar"
+        },
+        "ru": {
+          "question": "Кто из перечисленных в сезоне 2017–2018 стал лучшим ассистентом чемпионатa Франции ?",
+          "answer_A": "Тома Лемар",
+          "answer_B": "Неймар",
+          "answer_C": "Набиль Фекир",
+          "answer_D": "Флорьян Товен",
+          "right_answer": "Неймар"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլային փոխանցում կատարել Ֆրանսիայի 2017–2018 թթ.առաջնությունում:",
+          "answer_A": "Տոմա Լեմար",
+          "answer_B": "Նեյմար",
+          "answer_C": "Նաբիլ Ֆեկիր",
+          "answer_D": "Ֆլորյան Տովեն",
+          "right_answer": "Նեյմար"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_012"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_012"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_012"
+        }
+      }
+    },
+    {
+      "questionId": "france_013",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who was the top scorer in the French Championship in the 2014–2015 season?",
+          "answer_A": "Edinson Cavani",
+          "answer_B": "Zlatan Ibrahimović",
+          "answer_C": "André-Pierre Gignac",
+          "answer_D": "Alexandre Lacazette",
+          "right_answer": "Alexandre Lacazette"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2014–2015 стал лучшим бомбардиром чемпионатa Франции ?",
+          "answer_A": "Эдинсон Кавани",
+          "answer_B": "Златан Ибрагимович",
+          "answer_C": "Андре-Пьер Жиньяк",
+          "answer_D": "Александр Ляказетт",
+          "right_answer": "Александр Ляказетт"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ֆրանսիայի 2014–2015 թթ. առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Էդինսոն Կավանի",
+          "answer_B": "Զլատան Իբրահիմովիչ",
+          "answer_C": "Անդրե-Պիեր Ժինյակ",
+          "answer_D": "Ալեքսանդր Լյակազետ",
+          "right_answer": "Ալեքսանդր Լյակազետ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_013"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_013"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_013"
+        }
+      }
+    },
+    {
+      "questionId": "france_014",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which clubs did Zinedine Zidane play for?",
+          "answer_A": "Lyon, Bordeaux",
+          "answer_B": "Bordeaux, Caen",
+          "answer_C": "Caen, Marseille",
+          "answer_D": "Marseille, Lille",
+          "right_answer": "Bordeaux, Caen"
+        },
+        "ru": {
+          "question": "В каких клубах выступал Зинедин Зидан ?",
+          "answer_A": "Лион, Бордо",
+          "answer_B": "Бордо, Кан",
+          "answer_C": "Кан, Марсель",
+          "answer_D": "Марсель, Лилль",
+          "right_answer": "Бордо, Кан"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբներում է հանդես եկել Զինեդին Զիդանը:",
+          "answer_A": "Լիոն, Բորդո",
+          "answer_B": "Բորդո, Կան",
+          "answer_C": "Կան, Մարսել",
+          "answer_D": "Մարսել, Լիլ",
+          "right_answer": "Բորդո, Կան"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_014"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_014"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_014"
+        }
+      }
+    },
+    {
+      "questionId": "france_015",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club did Eden Hazard move from to Chelsea?",
+          "answer_A": "Lille",
+          "answer_B": "Lyon",
+          "answer_C": "Rennes",
+          "answer_D": "Lens",
+          "right_answer": "Lille"
+        },
+        "ru": {
+          "question": "Из какого клуба Эден Азар перешел в Челси ?",
+          "answer_A": "Лилль",
+          "answer_B": "Лион",
+          "answer_C": "Рен",
+          "answer_D": "Ланс",
+          "right_answer": "Лилль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբից է Էդեն Ազարը տեղափոխվել Չելսի:",
+          "answer_A": "Լիլ",
+          "answer_B": "Լիոն",
+          "answer_C": "Ռեն",
+          "answer_D": "Լանս",
+          "right_answer": "Լիլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_015"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_015"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_015"
+        }
+      }
+    },
+    {
+      "questionId": "france_016",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club did Patrick Kluivert play for?",
+          "answer_A": "Nice",
+          "answer_B": "PSG",
+          "answer_C": "Rennais",
+          "answer_D": "Lille",
+          "right_answer": "Lille"
+        },
+        "ru": {
+          "question": "В каком клубе выступал Патрик Клюйверт ?",
+          "answer_A": "Ницца",
+          "answer_B": "ПСЖ",
+          "answer_C": "Рен",
+          "answer_D": "Лилль",
+          "right_answer": "Лилль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում է հանդես եկել Պատրիկ Կլյուվերտը:",
+          "answer_A": "Նիցցա",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Ռեն",
+          "answer_D": "Լիլ",
+          "right_answer": "Լիլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_016"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_016"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_016"
+        }
+      }
+    },
+    {
+      "questionId": "france_017",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who was the top scorer in the French Championship in the 2017-2018 season?",
+          "answer_A": "Neymar",
+          "answer_B": "Florian Thauvin",
+          "answer_C": "Nabil Fekir",
+          "answer_D": "Edinson Cavani",
+          "right_answer": "Edinson Cavani"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2017–2018 стал лучшим бомбардиром чемпионатa Франции ?",
+          "answer_A": "Неймар",
+          "answer_B": "Флорьян Товен",
+          "answer_C": "Набиль Фекир",
+          "answer_D": "Эдинсон Кавани",
+          "right_answer": "Эдинсон Кавани"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ֆրանսիայի 2017–2018 թթ. առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Նեյմար",
+          "answer_B": "Ֆլորյան Տովեն",
+          "answer_C": "Նաբիլ Ֆեկիր",
+          "answer_D": "Էդինսոն Կավանի",
+          "right_answer": "Էդինսոն Կավանի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_017"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_017"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_017"
+        }
+      }
+    },
+    {
+      "questionId": "france_018",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club has won the French Championship the most in the 21st century?",
+          "answer_A": "Lyon",
+          "answer_B": "Monaco",
+          "answer_C": "PSG",
+          "answer_D": "Marseille",
+          "right_answer": "Lyon"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем чемпионатa Франции в XXI веке ?",
+          "answer_A": "Лион",
+          "answer_B": "Монако",
+          "answer_C": "ПСЖ",
+          "answer_D": "Марсель",
+          "right_answer": "Лион"
+        },
+        "hy": {
+          "question": "Ո՞վ է ավելի շատ նվաճել Ֆրանսիայի առաջնության չեմպիոնի տիտղոսը XXI դարում:",
+          "answer_A": "Լիոն",
+          "answer_B": "Մոնակո",
+          "answer_C": "ՊՍԺ",
+          "answer_D": "Մարսել",
+          "right_answer": "Լիոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_018"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_018"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_018"
+        }
+      }
+    },
+    {
+      "questionId": "france_019",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French Cup the most?",
+          "answer_A": "PSG",
+          "answer_B": "Saint-Étienne",
+          "answer_C": "Lyon",
+          "answer_D": "Marseille",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок Франции ?",
+          "answer_A": "ПСЖ",
+          "answer_B": "Сент-Этьен",
+          "answer_C": "Лион",
+          "answer_D": "Марсель",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Ֆրանսիայի գավաթը:",
+          "answer_A": "ՊՍԺ",
+          "answer_B": "Սենտ-Էտիեն",
+          "answer_C": "Լիոն",
+          "answer_D": "Մարսել",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_019"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_019"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_019"
+        }
+      }
+    },
+    {
+      "questionId": "france_020",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club has never won the championship of France?",
+          "answer_A": "Montpellier",
+          "answer_B": "Lens",
+          "answer_C": "Toulouse",
+          "answer_D": "Auxerre",
+          "right_answer": "Toulouse"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал чемпионат Франции ?",
+          "answer_A": "Монпелье",
+          "answer_B": "Ланс",
+          "answer_C": "Тулуза",
+          "answer_D": "Осер",
+          "right_answer": "Тулуза"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը երբեք չի նվաճել Ֆրանսիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Մոնպելյե",
+          "answer_B": "Լանս",
+          "answer_C": "Թուլուզ",
+          "answer_D": "Օսեր",
+          "right_answer": "Թուլուզ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_020"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_020"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_020"
+        }
+      }
+    },
+    {
+      "questionId": "france_021",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club became the silver medalist of the French championship the most?",
+          "answer_A": "Marseille",
+          "answer_B": "Lyon",
+          "answer_C": "PSG",
+          "answer_D": "Bordeaux",
+          "right_answer": "Marseille"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал серебряным призером чемпионата Франции ?",
+          "answer_A": "Марсель",
+          "answer_B": "Лион",
+          "answer_C": "ПСЖ",
+          "answer_D": "Бордо",
+          "right_answer": "Марсель"
+        },
+        "hy": {
+          "question": "Ֆրանսիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել արծաթե մեդալակիր:",
+          "answer_A": "Մարսել",
+          "answer_B": "Լիոն",
+          "answer_C": "ՊՍԺ",
+          "answer_D": "Բորդո",
+          "right_answer": "Մարսել"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_021"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_021"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_021"
+        }
+      }
+    },
+    {
+      "questionId": "france_022",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club was the most bronze medalist in France?",
+          "answer_A": "Monaco",
+          "answer_B": "Lille",
+          "answer_C": "Marseille",
+          "answer_D": "Lyon",
+          "right_answer": "Monaco"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал бронзовым призером чемпионата Франции ?",
+          "answer_A": "Монако",
+          "answer_B": "Лилль",
+          "answer_C": "Марсель",
+          "answer_D": "Лион",
+          "right_answer": "Монако"
+        },
+        "hy": {
+          "question": "Ֆրանսիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել բրոնզե մեդալակիր:",
+          "answer_A": "Մոնակո",
+          "answer_B": "Լիլ",
+          "answer_C": "Մարսել",
+          "answer_D": "Լիոն",
+          "right_answer": "Մոնակո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_022"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_022"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_022"
+        }
+      }
+    },
+    {
+      "questionId": "france_023",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the French championship the most?",
+          "answer_A": "Nantes",
+          "answer_B": "Lyon",
+          "answer_C": "Lille",
+          "answer_D": "Bordeaux",
+          "right_answer": "Nantes"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех стал победителем чемпионатa Франции ?",
+          "answer_A": "Нант",
+          "answer_B": "Лион",
+          "answer_C": "Лилль",
+          "answer_D": "Бордо",
+          "right_answer": "Нант"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել Ֆրանսիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Նանտ",
+          "answer_B": "Լիոն",
+          "answer_C": "Լիլ",
+          "answer_D": "Բորդո",
+          "right_answer": "Նանտ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_023"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_023"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_023"
+        }
+      }
+    },
+    {
+      "questionId": "france_024",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of the championship of France of all time?",
+          "answer_A": "Roger Courtois",
+          "answer_B": "Delio Onnis",
+          "answer_C": "Carlos Bianchi",
+          "answer_D": "Bernard Lacombe",
+          "right_answer": "Delio Onnis"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир чемпионатa Франции всех времен ?",
+          "answer_A": "Роже Куртуа",
+          "answer_B": "Делио Онис",
+          "answer_C": "Карлос Бьянки",
+          "answer_D": "Бернар Лякомб",
+          "right_answer": "Делио Онис"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ֆրանսիայի առաջնության բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ռոժե Կուրտուա",
+          "answer_B": "Դելիո Օնիս",
+          "answer_C": "Կառլոս Բիանկի",
+          "answer_D": "Բեռնար Լյակոմբ",
+          "right_answer": "Դելիո Օնիս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_024"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_024"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_024"
+        }
+      }
+    },
+    {
+      "questionId": "france_025",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who played the most matches in the championship of France?",
+          "answer_A": "Mickaël Landreau",
+          "answer_B": "Henri Michel",
+          "answer_C": "Alain Giresse",
+          "answer_D": "Dominique Dropsy",
+          "right_answer": "Mickaël Landreau"
+        },
+        "ru": {
+          "question": "Кто больше всех провел матчей в чемпионате Франции ?",
+          "answer_A": "Микаель Ландро",
+          "answer_B": "Анри Мишель",
+          "answer_C": "Ален Жиресс",
+          "answer_D": "Доминик Дропси",
+          "right_answer": "Микаель Ландро"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ խաղ անցկացրել Ֆրանսիայի առաջնություններում:",
+          "answer_A": "Միքայել Լանդրո",
+          "answer_B": "Անրի Միշել",
+          "answer_C": "Ալեն Ժիրես",
+          "answer_D": "Դոմինիկ Դրոպսի",
+          "right_answer": "Միքայել Լանդրո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_025"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_025"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_025"
+        }
+      }
+    },
+    {
+      "questionId": "france_026",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Since what year has the French Championship been held?",
+          "answer_A": "1930",
+          "answer_B": "1932",
+          "answer_C": "1935",
+          "answer_D": "1936",
+          "right_answer": "1932"
+        },
+        "ru": {
+          "question": "С какого года проводится чемпионат Франции ?",
+          "answer_A": "1930",
+          "answer_B": "1932",
+          "answer_C": "1935",
+          "answer_D": "1936",
+          "right_answer": "1932"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Ֆրանսիայի առաջնությունը:",
+          "answer_A": "1930",
+          "answer_B": "1932",
+          "answer_C": "1935",
+          "answer_D": "1936",
+          "right_answer": "1932"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_026"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_026"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_026"
+        }
+      }
+    },
+    {
+      "questionId": "france_027",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "The Football Player of the Year nomination in France was awarded the most …",
+          "answer_A": "Thierry Henry",
+          "answer_B": "Karim Benzema",
+          "answer_C": "Zinedine Zidane",
+          "answer_D": "Franck Ribéry",
+          "right_answer": "Thierry Henry"
+        },
+        "ru": {
+          "question": "Номинации \"Футболист года\" во Франции больше всех удостоился …",
+          "answer_A": "Тьерри Анри",
+          "answer_B": "Карим Бензема",
+          "answer_C": "Зинедин Зидан",
+          "answer_D": "Франк Рибери",
+          "right_answer": "Тьерри Анри"
+        },
+        "hy": {
+          "question": "Ֆրանսիայում \"Տարվա ֆուտբոլիստ\" մրցանակին բոլորից շատ արժանացել է …",
+          "answer_A": "Թիերի Անրին",
+          "answer_B": "Կարիմ Բենզեման",
+          "answer_C": "Զինեդին Զիդանը",
+          "answer_D": "Ֆրանկ Ռիբերին",
+          "right_answer": "Թիերի Անրին"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_027"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_027"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_027"
+        }
+      }
+    },
+    {
+      "questionId": "france_028",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who did Zinedine Zidane call the pearl of French football?",
+          "answer_A": "Kylian Mbappé",
+          "answer_B": "Franck Ribéry",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Antoine Griezmann",
+          "right_answer": "Franck Ribéry"
+        },
+        "ru": {
+          "question": "Кого Зинедин Зидан назвал \"жемчужиной\" французского футбола ?",
+          "answer_A": "Килиан Мбаппе",
+          "answer_B": "Франк Рибери",
+          "answer_C": "Тьерри Анри",
+          "answer_D": "Антуан Гризманн",
+          "right_answer": "Франк Рибери"
+        },
+        "hy": {
+          "question": "Ու՞մ է Զինեդին Զիդանը անվանել ֆրանսիական ֆուտբոլի \"մարգարիտ\":",
+          "answer_A": "Կիլիան Մբապպե",
+          "answer_B": "Ֆրանկ Ռիբերի",
+          "answer_C": "Թիերի Անրի",
+          "answer_D": "Անտուան Գրիզման",
+          "right_answer": "Ֆրանկ Ռիբերի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_028"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_028"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_028"
+        }
+      }
+    },
+    {
+      "questionId": "france_029",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who won the Footballer of the Year award in France in 2000?",
+          "answer_A": "Zinedine Zidane",
+          "answer_B": "David Trezeguet",
+          "answer_C": "Sylvain Wiltord",
+          "answer_D": "Thierry Henry",
+          "right_answer": "Thierry Henry"
+        },
+        "ru": {
+          "question": "Кто в 2000 г. победил в номинации \"Футболист года\" во Франции ?",
+          "answer_A": "Зинедин Зидан",
+          "answer_B": "Давид Трезеге",
+          "answer_C": "Сильвен Вильтор",
+          "answer_D": "Тьерри Анри",
+          "right_answer": "Тьерри Анри"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2000 թ. ֆրանսիայի \"Տարվա ֆուտբոլիստ\" մրցանակի դափնեկիրը:",
+          "answer_A": "Զինեդին Զիդան",
+          "answer_B": "Դավիդ Տրեզեգե",
+          "answer_C": "Սիլվիեն Վիլտոր",
+          "answer_D": "Թիերի Անրի",
+          "right_answer": "Թիերի Անրի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_029"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_029"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_029"
+        }
+      }
+    },
+    {
+      "questionId": "france_030",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in one season of the French championship?",
+          "answer_A": "Zlatan Ibrahimović",
+          "answer_B": "Edinson Cavani",
+          "answer_C": "Josip Skoblar",
+          "answer_D": "Just Fontaine",
+          "right_answer": "Josip Skoblar"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в одном сезоне чемпионата Франции?",
+          "answer_A": "Златан Ибрагимович",
+          "answer_B": "Эдинсон Кавани",
+          "answer_C": "Иосип Скоблар",
+          "answer_D": "Жюст Фонтэн",
+          "right_answer": "Иосип Скоблар"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ գոլի հեղինակ դարձել Ֆրանսիայի առաջնության մեկ մրցաշրջանում :",
+          "answer_A": "Զլատան Իբրահիմովիչ",
+          "answer_B": "Էդինսոն Կավանի",
+          "answer_C": "Յոսիպ Սկոբլար",
+          "answer_D": "Ժյուստ Ֆոնտեն",
+          "right_answer": "Յոսիպ Սկոբլար"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_030"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_030"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_030"
+        }
+      }
+    },
+    {
+      "questionId": "france_031",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Since what year the championship of France was named Ligue 1?",
+          "answer_A": "2000",
+          "answer_B": "2002",
+          "answer_C": "1998",
+          "answer_D": "1992",
+          "right_answer": "2002"
+        },
+        "ru": {
+          "question": "С какого года чемпионат Франции получил название Лига 1 ?",
+          "answer_A": "2000",
+          "answer_B": "2002",
+          "answer_C": "1998",
+          "answer_D": "1992",
+          "right_answer": "2002"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Ֆրանսիայի առաջնությունը ստացել \"Լիգա 1\" անվանումը:",
+          "answer_A": "2000",
+          "answer_B": "2002",
+          "answer_C": "1998",
+          "answer_D": "1992",
+          "right_answer": "2002"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_031"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_031"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_031"
+        }
+      }
+    },
+    {
+      "questionId": "france_032",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "How many times has the French national team won the World Cup?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "0",
+          "right_answer": "2"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Франции стала чемпионом Мира ?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "0",
+          "right_answer": "2"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Ֆրանսիայի հավաքականը նվաճել Աշխարհի առաջնության գավաթը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "0",
+          "right_answer": "2"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_032"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_032"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_032"
+        }
+      }
+    },
+    {
+      "questionId": "france_033",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "How many times did the French team become the champion of Europe?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Франции стала чемпионом Европы ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Ֆրանսիայի հավաքականը նվաճել Եվրոպայի առաջնության գավաթը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_033"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_033"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_033"
+        }
+      }
+    },
+    {
+      "questionId": "france_034",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "France won the Confederation Cup …",
+          "answer_A": "0 times",
+          "answer_B": "1 time",
+          "answer_C": "2 times",
+          "answer_D": "3 times",
+          "right_answer": "2 times"
+        },
+        "ru": {
+          "question": "Сборная Франции выиграла Кубок Конфедерации …",
+          "answer_A": "0 раз",
+          "answer_B": "1 раз",
+          "answer_C": "2 раза",
+          "answer_D": "3 раза",
+          "right_answer": "2 раза"
+        },
+        "hy": {
+          "question": "Ֆրանսիայի հավաքականը Կոնֆեդերացիայի գավաթը նվաճել է …",
+          "answer_A": "0 անգամ",
+          "answer_B": "1 անգամ",
+          "answer_C": "2 անգամ",
+          "answer_D": "3 անգամ",
+          "right_answer": "2 անգամ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_034"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_034"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_034"
+        }
+      }
+    },
+    {
+      "questionId": "france_035",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Whom did the French national team defeat by the biggest score in its history?",
+          "answer_A": "Malta",
+          "answer_B": "Liechtenstein",
+          "answer_C": "Luxembourg",
+          "answer_D": "Gibraltar",
+          "right_answer": "Gibraltar"
+        },
+        "ru": {
+          "question": "Кого в своей истории сборная Франции победила с самым крупным счетом ?",
+          "answer_A": "Мальту",
+          "answer_B": "Лихтенштейна",
+          "answer_C": "Люксембурга",
+          "answer_D": "Гибралтара",
+          "right_answer": "Гибралтара"
+        },
+        "hy": {
+          "question": "Ֆրանսիայի հավաքականը իր պատմության մեջ ու՞մ է հաղթել ամենախոշոր հաշվով:",
+          "answer_A": "Մալթային",
+          "answer_B": "Լիխտենշտեյնին",
+          "answer_C": "Լյուքսենբուրգին",
+          "answer_D": "Ջիբրալթարին",
+          "right_answer": "Ջիբրալթարին"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_035"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_035"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_035"
+        }
+      }
+    },
+    {
+      "questionId": "france_036",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "How many times did the French team win the Olympic gold medal?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Франции выиграла золотую медаль Олимпийских игр ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Ֆրանսիայի հավաքականը նվաճել Օլիմպիական խաղերի ոսկե մեդալը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_036"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_036"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_036"
+        }
+      }
+    },
+    {
+      "questionId": "france_037",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In what years did the French team win the Confederation Cup?",
+          "answer_A": "2001; 2003",
+          "answer_B": "1997; 1999",
+          "answer_C": "1999; 2001",
+          "answer_D": "1997; 2003",
+          "right_answer": "2001; 2003"
+        },
+        "ru": {
+          "question": "В каких годах сборная Франции выиграла Кубок Конфедерации ?",
+          "answer_A": "2001; 2003",
+          "answer_B": "1997; 1999",
+          "answer_C": "1999; 2001",
+          "answer_D": "1997; 2003",
+          "right_answer": "2001; 2003"
+        },
+        "hy": {
+          "question": "Ո՞ր թթ. է Ֆրանսիայի հավաքականը նվաճել Կոնֆեդերացիայի գավաթը:",
+          "answer_A": "2001; 2003",
+          "answer_B": "1997; 1999",
+          "answer_C": "1999; 2001",
+          "answer_D": "1997; 2003",
+          "right_answer": "2001; 2003"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_037"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_037"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_037"
+        }
+      }
+    },
+    {
+      "questionId": "france_038",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who is France's all-time top scorer?",
+          "answer_A": "Michel Platini",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Kylian Mbappé",
+          "right_answer": "Olivier Giroud"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир сборной Франции ?",
+          "answer_A": "Мишель Платини",
+          "answer_B": "Оливье Жиру",
+          "answer_C": "Тьерри Анри",
+          "answer_D": "Килиан Мбаппе",
+          "right_answer": "Оливье Жиру"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ֆրանսիայի հավաքականի լավագույն ռմբարկուն:",
+          "answer_A": "Միշել Պլատինի",
+          "answer_B": "Օլիվյե Ժիրու",
+          "answer_C": "Թիերի Անրի",
+          "answer_D": "Անելկա",
+          "right_answer": "Օլիվյե Ժիրու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_038"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_038"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_038"
+        }
+      }
+    },
+    {
+      "questionId": "france_039",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who was the best French footballer of the 20th century?",
+          "answer_A": "Michel Platini",
+          "answer_B": "Zinedine Zidane",
+          "answer_C": "Just Fontaine",
+          "answer_D": "Jean-Pierre Papin",
+          "right_answer": "Michel Platini"
+        },
+        "ru": {
+          "question": "Кто лучший футболист сборной Франции XX века ?",
+          "answer_A": "Мишель Платини",
+          "answer_B": "Зинедин Зидан",
+          "answer_C": "Жюст Фонтэн",
+          "answer_D": "Жан Пьер Папен",
+          "right_answer": "Мишель Платини"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ֆրանսիայի հավաքականի XX դարի լավագույն ֆուտբոլիստը:",
+          "answer_A": "Միշել Պլատինի",
+          "answer_B": "Զինեդին Զիդան",
+          "answer_C": "Ժյուստ Ֆոնտեն",
+          "answer_D": "Ժան Պիեռ Պապեն",
+          "right_answer": "Միշել Պլատինի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_039"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_039"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_039"
+        }
+      }
+    },
+    {
+      "questionId": "france_040",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who with the largest score lost the French national team in its history?",
+          "answer_A": "Germany",
+          "answer_B": "Denmark",
+          "answer_C": "Belgium",
+          "answer_D": "Sweden",
+          "right_answer": "Denmark"
+        },
+        "ru": {
+          "question": "Кому с самым крупным счетом проиграла cборная Франции в своей истории ?",
+          "answer_A": "Германии",
+          "answer_B": "Дании",
+          "answer_C": "Бельгии",
+          "answer_D": "Швеции",
+          "right_answer": "Дании"
+        },
+        "hy": {
+          "question": "Ֆրանսիայի հավաքականը իր պատմության մեջ ու՞մ է պարտվել ամենախոշոր հաշվով:",
+          "answer_A": "Գերմանիային",
+          "answer_B": "Դանիային",
+          "answer_C": "Բելգիային",
+          "answer_D": "Շվեդիային",
+          "right_answer": "Դանիային"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_040"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_040"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_040"
+        }
+      }
+    },
+    {
+      "questionId": "france_041",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "How many times did the French team win the Olympic gold medal?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Франции выиграла золотую медаль Олимпийских игр ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Ֆրանսիայի հավաքականը նվաճել Օլիմպիական խաղերի ոսկե մեդալը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_041"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_041"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_041"
+        }
+      }
+    },
+    {
+      "questionId": "france_042",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which of the following 3 times in a row became the owner of the \"Golden Ball \"?",
+          "answer_A": "Zinedine Zidane",
+          "answer_B": "Jean-Pierre Papin",
+          "answer_C": "Michel Platini",
+          "answer_D": "Thierry Henry",
+          "right_answer": "Michel Platini"
+        },
+        "ru": {
+          "question": "Кто из перечисленных 3 раза подряд стал обладателем \"Золотого мяча\" ?",
+          "answer_A": "Зинедин Зидан",
+          "answer_B": "Жан Пьер Папен",
+          "answer_C": "Мишель Платини",
+          "answer_D": "Тьерри Анри",
+          "right_answer": "Мишель Платини"
+        },
+        "hy": {
+          "question": "Ո՞վ է 3 անգամ անընդմեջ դարձել \"Ոսկե գնդակի\" դափնեկիր:",
+          "answer_A": "Զինեդին Զիդան",
+          "answer_B": "Ժան Պիեռ Պապեն",
+          "answer_C": "Միշել Պլատինի",
+          "answer_D": "Թիերի Անրի",
+          "right_answer": "Միշել Պլատինի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_042"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_042"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_042"
+        }
+      }
+    },
+    {
+      "questionId": "france_043",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which of the following became the first owner of the \"Golden Ball \"?",
+          "answer_A": "Michel Platini",
+          "answer_B": "Raymond Kopa",
+          "answer_C": "Jean-Pierre Papin",
+          "answer_D": "Zinedine Zidane",
+          "right_answer": "Raymond Kopa"
+        },
+        "ru": {
+          "question": "Кто из перечисленных первым стал обладателем \"Золотого мяча\" ?",
+          "answer_A": "Мишель Платини",
+          "answer_B": "Раймон Копа",
+          "answer_C": "Жан Пьер Папен",
+          "answer_D": "Зинедин Зидан",
+          "right_answer": "Раймон Копа"
+        },
+        "hy": {
+          "question": "Ֆրանսիացի ո՞ր ֆուտբոլիստն է առաջինը դարձել \"Ոսկե գնդակի\" դափնեկիր:",
+          "answer_A": "Միշել Պլատինի",
+          "answer_B": "Ռայմոն Կոպա",
+          "answer_C": "Ժան Պիեռ Պապեն",
+          "answer_D": "Զինեդին Զիդան",
+          "right_answer": "Ռայմոն Կոպա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_043"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_043"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_043"
+        }
+      }
+    },
+    {
+      "questionId": "france_044",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who played just 5 seconds in the French national team?",
+          "answer_A": "Franck Jurietti",
+          "answer_B": "Frank Leboeuf",
+          "answer_C": "Layvin Kurzawa",
+          "answer_D": "David Ginola",
+          "right_answer": "Franck Jurietti"
+        },
+        "ru": {
+          "question": "Кто играл всего 5 секунд в сборной Франции ?",
+          "answer_A": "Франк Жюретти",
+          "answer_B": "Фрэнк Лебеф",
+          "answer_C": "Левен Кюрзава",
+          "answer_D": "Давид Жинола",
+          "right_answer": "Франк Жюретти"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է Ֆրանսիայի հավաքականում խաղացել ընդամենը 5 վայրկյան:",
+          "answer_A": "Ֆրանկ Ժյուրետտի",
+          "answer_B": "Ֆրանկ Լեբյոֆ",
+          "answer_C": "Լեվան Կուրզավա",
+          "answer_D": "Դավիդ Ժինոլա",
+          "right_answer": "Ֆրանկ Ժյուրետտի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_044"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_044"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_044"
+        }
+      }
+    },
+    {
+      "questionId": "france_045",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In what year did the French team first participate in the European Championship?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1972",
+          "answer_D": "1976",
+          "right_answer": "1960"
+        },
+        "ru": {
+          "question": "В каком году сборная Франции впервые участвовала в чемпионате Европы ?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1972",
+          "answer_D": "1976",
+          "right_answer": "1960"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Ֆրանսիայի հավաքականը առաջին անգամ մասնակցել Եվրոպայի առաջնությանը:",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1972",
+          "answer_D": "1976",
+          "right_answer": "1960"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_045"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_045"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_045"
+        }
+      }
+    },
+    {
+      "questionId": "france_046",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which of the following held the most games as a coach of the French team?",
+          "answer_A": "Laurent Blanc",
+          "answer_B": "Raymond Domenech",
+          "answer_C": "Didier Deschamps",
+          "answer_D": "Roger Lemerre",
+          "right_answer": "Didier Deschamps"
+        },
+        "ru": {
+          "question": "Кто провел больше всех игр в качестве тренера сборной Франции ?",
+          "answer_A": "Лоран Блан",
+          "answer_B": "Раймон Доменек",
+          "answer_C": "Дидье Дешам",
+          "answer_D": "Роже Лемер",
+          "right_answer": "Дидье Дешам"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ խաղ անցկացրել Ֆրանսիայի հավաքականի մարզչի պաշտոնում:",
+          "answer_A": "Լորան Բլան",
+          "answer_B": "Ռայմոն Դոմենեկ",
+          "answer_C": "Դիդիե Դեշամ",
+          "answer_D": "Ռոժե Լեմար",
+          "right_answer": "Դիդիե Դեշամ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_046"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_046"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_046"
+        }
+      }
+    },
+    {
+      "questionId": "france_047",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who in the finals of the 2000 European Championships became the author of the winning goal of the French national team?",
+          "answer_A": "David Trezeguet",
+          "answer_B": "Sylvain Wiltord",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Zinedine Zidane",
+          "right_answer": "David Trezeguet"
+        },
+        "ru": {
+          "question": "Кто в финале чемпионата Европы 2000 г. стал автором победного гола сборной Франции ?",
+          "answer_A": "Давид Трезеге",
+          "answer_B": "Сильвен Вильтор",
+          "answer_C": "Тьерри Анри",
+          "answer_D": "Зинедин Зидан",
+          "right_answer": "Давид Трезеге"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2000 թ. Եվրոպայի առաջնության եզրափակչում Ֆրանսիայի հավաքականի հաղթական գոլի հեղինակը:",
+          "answer_A": "Դավիդ Տրեզեգե",
+          "answer_B": "Սիլվիեն Վիլտոր",
+          "answer_C": "Թիերի Անրի",
+          "answer_D": "Զինեդին Զիդան",
+          "right_answer": "Դավիդ Տրեզեգե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_047"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_047"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_047"
+        }
+      }
+    },
+    {
+      "questionId": "france_048",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "A French coach who has won the Champions League 3 times in a row.",
+          "answer_A": "Arsène Wenger",
+          "answer_B": "Didier Deschamps",
+          "answer_C": "Laurent Blanc",
+          "answer_D": "Zinedine Zidane",
+          "right_answer": "Zinedine Zidane"
+        },
+        "ru": {
+          "question": "Тренер-француз, 3 раза подряд выигравший Лигу чемпионов.",
+          "answer_A": "Арсен Венгер",
+          "answer_B": "Дидье Дешам",
+          "answer_C": "Лоран Блан",
+          "answer_D": "Зинедин Зидан",
+          "right_answer": "Зинедин Зидан"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգան 3 անգամ անընդմեջ նվաճած ֆրանսիացի մարզիչ:",
+          "answer_A": "Արսեն Վենգեր",
+          "answer_B": "Դիդիե Դեշամ",
+          "answer_C": "Լորան Բլան",
+          "answer_D": "Զինեդին Զիդան",
+          "right_answer": "Զինեդին Զիդան"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_048"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_048"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_048"
+        }
+      }
+    },
+    {
+      "questionId": "france_049",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In what year did the French team first participate in the World Cup?",
+          "answer_A": "1958",
+          "answer_B": "1930",
+          "answer_C": "1966",
+          "answer_D": "1962",
+          "right_answer": "1930"
+        },
+        "ru": {
+          "question": "В каком году сборная Франции впервые участвовала в чемпионате Мира ?",
+          "answer_A": "1958",
+          "answer_B": "1930",
+          "answer_C": "1966",
+          "answer_D": "1962",
+          "right_answer": "1930"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Ֆրանսիայի հավաքականը առաջին անգամ մասնակցել Աշխարհի առաջնությանը:",
+          "answer_A": "1958",
+          "answer_B": "1930",
+          "answer_C": "1966",
+          "answer_D": "1962",
+          "right_answer": "1930"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_049"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_049"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_049"
+        }
+      }
+    },
+    {
+      "questionId": "france_050",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the League Cup the most?",
+          "answer_A": "Lyon",
+          "answer_B": "PSG",
+          "answer_C": "Bordeaux",
+          "answer_D": "Strasbourg",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок лиги ?",
+          "answer_A": "Лион",
+          "answer_B": "ПСЖ",
+          "answer_C": "Бордо",
+          "answer_D": "Страсбург",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Լիգայի գավաթը:",
+          "answer_A": "Լիոն",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Բորդո",
+          "answer_D": "Ստրասբուրգ",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_050"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_050"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_050"
+        }
+      }
+    },
+    {
+      "questionId": "france_051",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who was the opponent of the French national team in the first international match?",
+          "answer_A": "Germany",
+          "answer_B": "Denmark",
+          "answer_C": "England",
+          "answer_D": "Belgium",
+          "right_answer": "Belgium"
+        },
+        "ru": {
+          "question": "Кто был соперником сборной Франции в первом международном матче ?",
+          "answer_A": "Германия",
+          "answer_B": "Дания",
+          "answer_C": "Англия",
+          "answer_D": "Белгия",
+          "right_answer": "Белгия"
+        },
+        "hy": {
+          "question": "Ո՞վ է եղել Ֆրանսիայի հավաքականի մրցակիցը առաջին միջազգային հանդիպման ժամանակ:",
+          "answer_A": "Գերմանիա",
+          "answer_B": "Դանիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Բելգիա",
+          "right_answer": "Բելգիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_051"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_051"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_051"
+        }
+      }
+    },
+    {
+      "questionId": "france_052",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In what years did the French team become the World Champion?",
+          "answer_A": "1994; 2018",
+          "answer_B": "1998; 2018",
+          "answer_C": "2006; 2018",
+          "answer_D": "2010; 2018",
+          "right_answer": "1998; 2018"
+        },
+        "ru": {
+          "question": "В каких годах сборная Франции стала чемпионом Мира ?",
+          "answer_A": "1994; 2018",
+          "answer_B": "1998; 2018",
+          "answer_C": "2006; 2018",
+          "answer_D": "2010; 2018",
+          "right_answer": "1998; 2018"
+        },
+        "hy": {
+          "question": "Ո՞ր թթ է Ֆրանսիայի հավաքականը նվաճել Աշխարհի առաջնության գավաթը:",
+          "answer_A": "1994; 2018",
+          "answer_B": "1998; 2018",
+          "answer_C": "2006; 2018",
+          "answer_D": "2010; 2018",
+          "right_answer": "1998; 2018"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_052"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_052"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_052"
+        }
+      }
+    },
+    {
+      "questionId": "france_053",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French Super Cup first?",
+          "answer_A": "Reims",
+          "answer_B": "Saint-Étienne",
+          "answer_C": "Nantes",
+          "answer_D": "Le Havre",
+          "right_answer": "Reims"
+        },
+        "ru": {
+          "question": "Какой клуб первым выиграл Суперкубок Франции ?",
+          "answer_A": "Реймс",
+          "answer_B": "Сент-Этьен",
+          "answer_C": "Нант",
+          "answer_D": "Гавр",
+          "right_answer": "Реймс"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել Ֆրանսիայի Սուպեր գավաթը:",
+          "answer_A": "Ռեյմս",
+          "answer_B": "Սենտ-Էտիեն",
+          "answer_C": "Նանտ",
+          "answer_D": "Հավր",
+          "right_answer": "Ռեյմս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_053"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_053"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_053"
+        }
+      }
+    },
+    {
+      "questionId": "france_054",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French Championship in the 2018–2019 season?",
+          "answer_A": "PSG",
+          "answer_B": "Lyon",
+          "answer_C": "Lille",
+          "answer_D": "Marseille",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл чемпионат Франции в сезоне 2018–2019 ?",
+          "answer_A": "ПСЖ",
+          "answer_B": "Лион",
+          "answer_C": "Лилль",
+          "answer_D": "Марсель",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Ֆրանսիայի 2018–2019 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "ՊՍԺ",
+          "answer_B": "Լիոն",
+          "answer_C": "Լիլ",
+          "answer_D": "Մարսել",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_054"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_054"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_054"
+        }
+      }
+    },
+    {
+      "questionId": "france_055",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "What is France's highest-ever position in the FIFA ranking?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "6",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Самое высокое место сборной Франции в рейтинге ФИФА за всю историю.",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "6",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Ո՞րն է FIFA-ի դասակարգման աղյուսակում Ֆրանսիայի հավաքականի զբաղեցրած ամենաբարձր հորիզոնականը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "6",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_055"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_055"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_055"
+        }
+      }
+    },
+    {
+      "questionId": "france_056",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who in the season 2018–2019 became the best assistant to the championship of France?",
+          "answer_A": "Téji Savanier",
+          "answer_B": "Ángel Di María",
+          "answer_C": "Memphis Depay",
+          "answer_D": "Dani Alves",
+          "right_answer": "Téji Savanier"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал лучшим ассистентом чемпионатa Франции ?",
+          "answer_A": "Тежи Саванье",
+          "answer_B": "Анхель Ди Мария",
+          "answer_C": "Мемфис Депай",
+          "answer_D": "Дани Алвес",
+          "right_answer": "Тежи Саванье"
+        },
+        "hy": {
+          "question": "Ո՞վ է ավելի շատ գոլային փոխանցում կատարել Ֆրանսիայի 2018–2019 թթ.առաջնությունում:",
+          "answer_A": "Տեժի Սեվանյե",
+          "answer_B": "Անխել Դի Մարիա",
+          "answer_C": "Մեմֆիս Դեպայ",
+          "answer_D": "Դանի Ալվեշ",
+          "right_answer": "Տեժի Սեվանյե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_056"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_056"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_056"
+        }
+      }
+    },
+    {
+      "questionId": "france_057",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In which years did France become European champion?",
+          "answer_A": "1988; 1992",
+          "answer_B": "1984; 2000",
+          "answer_C": "1984; 1992",
+          "answer_D": "1988; 2000",
+          "right_answer": "1984; 2000"
+        },
+        "ru": {
+          "question": "В каких годах сборная Франции стала чемпионом Европы ?",
+          "answer_A": "1988; 1992",
+          "answer_B": "1984; 2000",
+          "answer_C": "1984; 1992",
+          "answer_D": "1988; 2000",
+          "right_answer": "1984; 2000"
+        },
+        "hy": {
+          "question": "Ո՞ր թթ. է Ֆրանսիայի հավաքականը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1988; 1992",
+          "answer_B": "1984; 2000",
+          "answer_C": "1984; 1992",
+          "answer_D": "1988; 2000",
+          "right_answer": "1984; 2000"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_057"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_057"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_057"
+        }
+      }
+    },
+    {
+      "questionId": "france_058",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French Championship in the 2018–2019 season?",
+          "answer_A": "PSG",
+          "answer_B": "Lyon",
+          "answer_C": "Lille",
+          "answer_D": "Marseille",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 стал победителем чемпионатa Франции ?",
+          "answer_A": "ПСЖ",
+          "answer_B": "Лион",
+          "answer_C": "Лилль",
+          "answer_D": "Марсель",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Ֆրանսիայի 2018–2019 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "ՊՍԺ",
+          "answer_B": "Լիոն",
+          "answer_C": "Լիլ",
+          "answer_D": "Մարսել",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_058"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_058"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_058"
+        }
+      }
+    },
+    {
+      "questionId": "france_059",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who in the season 2018–2019 became the top scorer of the championship of France?",
+          "answer_A": "Kylian Mbappé",
+          "answer_B": "Edinson Cavani",
+          "answer_C": "Nicolas Pépé",
+          "answer_D": "Moussa Dembélé",
+          "right_answer": "Kylian Mbappé"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал лучшим бомбардиром чемпионатa Франции ?",
+          "answer_A": "Килиан Мбаппе",
+          "answer_B": "Эдинсон Кавани",
+          "answer_C": "Николя Пепе",
+          "answer_D": "Мусса Дембеле",
+          "right_answer": "Килиан Мбаппе"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ֆրանսիայի 2018–2019 թթ. առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Կիլիան Մբապպե",
+          "answer_B": "Էդինսոն Կավանի",
+          "answer_C": "Նիկոլյա Պեպե",
+          "answer_D": "Մուսա Դեմբելե",
+          "right_answer": "Կիլիան Մբապպե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_059"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_059"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_059"
+        }
+      }
+    },
+    {
+      "questionId": "france_060",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French Cup in the 2018–2019 season?",
+          "answer_A": "Rennais",
+          "answer_B": "PSG",
+          "answer_C": "Lyon",
+          "answer_D": "Nantes",
+          "right_answer": "Rennais"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Франции в сезоне 2018–2019?",
+          "answer_A": "Ренн",
+          "answer_B": "ПСЖ",
+          "answer_C": "Лион",
+          "answer_D": "Нант",
+          "right_answer": "Ренн"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ մրցաշրջանում դարձել Ֆրանսիայի գավաթակիր:",
+          "answer_A": "Ռեն",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Լիոն",
+          "answer_D": "Նանտ",
+          "right_answer": "Ռեն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_060"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_060"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_060"
+        }
+      }
+    },
+    {
+      "questionId": "france_061",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the League Cup in the 2018–2019 season?",
+          "answer_A": "Strasbourg",
+          "answer_B": "PSG",
+          "answer_C": "En Avant de Guingamp",
+          "answer_D": "Rennais",
+          "right_answer": "Strasbourg"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 стал обладателем Кубка лиги ?",
+          "answer_A": "Страсбург",
+          "answer_B": "ПСЖ",
+          "answer_C": "Генгам",
+          "answer_D": "Ренн",
+          "right_answer": "Страсбург"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ մրցաշրջանում դարձել Լիգայի գավաթակիր:",
+          "answer_A": "Ստրասբուրգ",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Գենգամ",
+          "answer_D": "Ռեն",
+          "right_answer": "Ստրասբուրգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_061"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_061"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_061"
+        }
+      }
+    },
+    {
+      "questionId": "france_062",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who is PSG's top scorer?",
+          "answer_A": "Zlatan Ibrahimović",
+          "answer_B": "Pedro Pauleta",
+          "answer_C": "Carlos Bianchi",
+          "answer_D": "Kylian Mbappe",
+          "right_answer": "Kylian Mbappe"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир ПСЖ ?",
+          "answer_A": "Златан Ибрагимович",
+          "answer_B": "Педру Паулета",
+          "answer_C": "Карлос Бьянки",
+          "answer_D": "Килиан Мбаппе",
+          "right_answer": "Килиан Мбаппе"
+        },
+        "hy": {
+          "question": "Ո՞վ է ՊՍԺ-ի լավագույն ռմբարկուն:",
+          "answer_A": "Զլատան Իբրահիմովիչ",
+          "answer_B": "Պեդրու Պաուլետա",
+          "answer_C": "Կառլոս Բիանկի",
+          "answer_D": "Կիլիան Մբապպե",
+          "right_answer": "Կիլիան Մբապպե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_062"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_062"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_062"
+        }
+      }
+    },
+    {
+      "questionId": "france_063",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "In which club(s) did Michael Landro play?",
+          "answer_A": "PSG",
+          "answer_B": "Lille",
+          "answer_C": "FC Nantes",
+          "answer_D": "In all listed clubs",
+          "right_answer": "In all listed clubs"
+        },
+        "ru": {
+          "question": "В каком клубе (клубах) выступал Микаэль Ландро ?",
+          "answer_A": "ПСЖ",
+          "answer_B": "Лилль",
+          "answer_C": "Нант",
+          "answer_D": "Во всех перечисленных клубах",
+          "right_answer": "Во всех перечисленных клубах"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում (ակումբներում) է հանդես եկել Միքայել Լանդրոն:",
+          "answer_A": "ՊՍԺ",
+          "answer_B": "Լիլ",
+          "answer_C": "Նանտ",
+          "answer_D": "Նշված բոլոր ակումբներում",
+          "right_answer": "Նշված բոլոր ակումբներում"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_063"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_063"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_063"
+        }
+      }
+    },
+    {
+      "questionId": "france_064",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won the French championship in the 2016–2017 season?",
+          "answer_A": "Monaco",
+          "answer_B": "Lyon",
+          "answer_C": "PSG",
+          "answer_D": "Montpellier",
+          "right_answer": "Monaco"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2016–2017 стал победителем чемпионатa Франции ?",
+          "answer_A": "Монако",
+          "answer_B": "Лион",
+          "answer_C": "ПСЖ",
+          "answer_D": "Монпелье",
+          "right_answer": "Монако"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Ֆրանսիայի 2016–2017 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Մոնակո",
+          "answer_B": "Լիոն",
+          "answer_C": "ՊՍԺ",
+          "answer_D": "Մոնպելյե",
+          "right_answer": "Մոնակո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_064"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_064"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_064"
+        }
+      }
+    },
+    {
+      "questionId": "france_065",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Which club won Ligue 1 in the 2024/2025 season?",
+          "answer_A": "Monaco",
+          "answer_B": "PSG",
+          "answer_C": "Marseille",
+          "answer_D": "Lyon",
+          "right_answer": "PSG"
+        },
+        "ru": {
+          "question": "Какой клуб стал чемпионом Франции в сезоне 2024/2025?",
+          "answer_A": "Монако",
+          "answer_B": "ПСЖ",
+          "answer_C": "Марсель",
+          "answer_D": "Лион",
+          "right_answer": "ПСЖ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Ֆրանսիայի առաջնության չեմպիոն 2024/2025 մրցաշրջանում:",
+          "answer_A": "Մոնակո",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Մարսել",
+          "answer_D": "Լիոն",
+          "right_answer": "ՊՍԺ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_065"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_065"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_065"
+        }
+      }
+    },
+    {
+      "questionId": "france_066",
+      "categoryType": "TOP5",
+      "type": "France",
+      "source": {
+        "en": {
+          "question": "Who was the top scorer in Ligue 1 in the 2024/2025 season?",
+          "answer_A": "Bradley Barcola",
+          "answer_B": "Jonathan David",
+          "answer_C": "Ousmane Dembele",
+          "answer_D": "Mason Greenwood",
+          "right_answer": "Ousmane Dembele"
+        },
+        "ru": {
+          "question": "Кто стал лучшим бомбардиром Лиги 1 в сезоне 2024/2025?",
+          "answer_A": "Брэдли Барколя",
+          "answer_B": "Джонатан Дэвид",
+          "answer_C": "Усман Дембеле",
+          "answer_D": "Мэйсон Гринвуд",
+          "right_answer": "Усман Дембеле"
+        },
+        "hy": {
+          "question": "Ո՞վ է դարձել Լիգա 1-ի լավագույն ռմբարկուն 2024/2025 մրցաշրջանում:",
+          "answer_A": "Բրեդլի Բարկոլա",
+          "answer_B": "Ջոնաթան Դևիդ",
+          "answer_C": "Ուսման Դեմբելե",
+          "answer_D": "Մեյսոն Գրինվուդ",
+          "right_answer": "Ուսման Դեմբելե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_066"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_066"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "TOP5",
+          "question": "",
+          "right_answer": "",
+          "type": "France",
+          "answered": false,
+          "questionId": "france_066"
+        }
+      }
+    }
+  ]
+}

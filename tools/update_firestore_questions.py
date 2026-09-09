@@ -261,6 +261,10 @@ def build_required_translation_item(raw: dict[str, Any], lang: str, question_id:
     return item
 
 
+def parse_optional_language_order(value: str | None, fallback: list[str]) -> list[str]:
+    return parse_language_order(value) if value else fallback
+
+
 def to_firestore_document(lang: str, item: dict[str, Any]) -> dict[str, Any]:
     payload = {
         "question": item["question"],
@@ -611,6 +615,98 @@ def command_build_audit_from_workbench(args: argparse.Namespace) -> None:
     print(f"Questions per language: {len(output_data[base_lang])}")
 
 
+def command_export_translation_batch(args: argparse.Namespace) -> None:
+    workbench = load_workbench(args.workbench)
+    target_languages = parse_optional_language_order(
+        args.target_languages,
+        list(workbench.get("target_languages") or []),
+    )
+    if not target_languages:
+        raise ValueError("target languages cannot be empty")
+
+    items: list[dict[str, Any]] = []
+    for item in workbench["items"]:
+        if args.category_type and str(item.get("categoryType", "")) != args.category_type:
+            continue
+        if args.place_type and str(item.get("type", "")) != args.place_type:
+            continue
+
+        targets = item.get("targets") or {}
+        batch_item = {
+            QUESTION_ID_FIELD: item.get(QUESTION_ID_FIELD, ""),
+            "categoryType": item.get("categoryType", ""),
+            "type": item.get("type", ""),
+            "source": item.get("source", {}),
+            "targets": {
+                lang: targets.get(lang, empty_translation_item(item))
+                for lang in target_languages
+            },
+        }
+        items.append(batch_item)
+
+    if not items:
+        raise ValueError("No workbench items matched the requested filters")
+
+    payload = {
+        "source_workbench": str(args.workbench),
+        "categoryType": args.category_type or "ALL",
+        "type": args.place_type or "ALL",
+        "target_languages": target_languages,
+        "status": "translation_batch",
+        "items": items,
+    }
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+    print(f"Wrote translation batch to {args.output}")
+    print(f"Items: {len(items)}")
+    print(f"Target languages: {', '.join(target_languages)}")
+
+
+def command_apply_translation_batch(args: argparse.Namespace) -> None:
+    workbench = load_workbench(args.workbench)
+    batch = load_workbench(args.batch)
+    target_languages = parse_optional_language_order(
+        args.target_languages,
+        list(batch.get("target_languages") or workbench.get("target_languages") or []),
+    )
+    if not target_languages:
+        raise ValueError("target languages cannot be empty")
+
+    workbench_by_id: dict[str, dict[str, Any]] = {}
+    for item in workbench["items"]:
+        question_id = str(item.get(QUESTION_ID_FIELD, "")).strip()
+        if question_id:
+            workbench_by_id[question_id] = item
+
+    updated = 0
+    for batch_item in batch["items"]:
+        question_id = str(batch_item.get(QUESTION_ID_FIELD, "")).strip()
+        if question_id not in workbench_by_id:
+            raise ValueError(f"batch item not found in workbench: {question_id}")
+        targets = batch_item.get("targets") or {}
+        workbench_targets = workbench_by_id[question_id].setdefault("targets", {})
+        for lang in target_languages:
+            target = targets.get(lang)
+            if not isinstance(target, dict):
+                raise ValueError(f"{question_id} missing target language in batch: {lang}")
+            if args.require_complete:
+                build_required_translation_item(target, lang, question_id)
+            workbench_targets[lang] = target
+            updated += 1
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as fh:
+        json.dump(workbench, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+    print(f"Wrote updated workbench to {args.output}")
+    print(f"Updated target blocks: {updated}")
+
+
 def command_annotate_question_ids_from_resources(args: argparse.Namespace) -> None:
     data = load_audit(args.audit)
     languages = parse_language_order(args.languages)
@@ -825,6 +921,28 @@ def main() -> None:
     build_audit_parser.add_argument("--target-languages", required=True)
     build_audit_parser.add_argument("--output", type=Path, required=True)
     build_audit_parser.set_defaults(func=command_build_audit_from_workbench)
+
+    export_batch_parser = subparsers.add_parser(
+        "export-translation-batch",
+        help="Export a filtered translation batch from a workbench",
+    )
+    export_batch_parser.add_argument("--workbench", type=Path, required=True)
+    export_batch_parser.add_argument("--output", type=Path, required=True)
+    export_batch_parser.add_argument("--category-type")
+    export_batch_parser.add_argument("--place-type")
+    export_batch_parser.add_argument("--target-languages")
+    export_batch_parser.set_defaults(func=command_export_translation_batch)
+
+    apply_batch_parser = subparsers.add_parser(
+        "apply-translation-batch",
+        help="Apply a completed translation batch back into a workbench",
+    )
+    apply_batch_parser.add_argument("--workbench", type=Path, required=True)
+    apply_batch_parser.add_argument("--batch", type=Path, required=True)
+    apply_batch_parser.add_argument("--output", type=Path, required=True)
+    apply_batch_parser.add_argument("--target-languages")
+    apply_batch_parser.add_argument("--require-complete", action="store_true")
+    apply_batch_parser.set_defaults(func=command_apply_translation_batch)
 
     annotate_parser = subparsers.add_parser(
         "annotate-question-ids-from-resources",

@@ -1,0 +1,1462 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "UEFA",
+  "type": "European Championship",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "translation_batch",
+  "items": [
+    {
+      "questionId": "european_championship_001",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Since what year is the European Championship held?",
+          "answer_A": "1956",
+          "answer_B": "1960",
+          "answer_C": "1964",
+          "answer_D": "1968",
+          "right_answer": "1960"
+        },
+        "ru": {
+          "question": "С какого года проводится чемпионат Европы ?",
+          "answer_A": "1956",
+          "answer_B": "1960",
+          "answer_C": "1964",
+          "answer_D": "1968",
+          "right_answer": "1960"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Եվրոպայի առաջնությունը:",
+          "answer_A": "1956",
+          "answer_B": "1960",
+          "answer_C": "1964",
+          "answer_D": "1968",
+          "right_answer": "1960"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_001"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_001"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_001"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_002",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "In which country was the first European Championship held?",
+          "answer_A": "Sweden",
+          "answer_B": "Spain",
+          "answer_C": "France",
+          "answer_D": "Italy",
+          "right_answer": "France"
+        },
+        "ru": {
+          "question": "В какой стране проводился первый чемпионат Европы ?",
+          "answer_A": "Швеция",
+          "answer_B": "Испания",
+          "answer_C": "Франция",
+          "answer_D": "Италия",
+          "right_answer": "Франция"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրում է անցկացվել Եվրոպայի առաջին առաջնությունը:",
+          "answer_A": "Շվեդիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Ֆրանսիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_002"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_002"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_002"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_003",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which country became the first European champion?",
+          "answer_A": "France",
+          "answer_B": "Yugoslavia",
+          "answer_C": "USSR",
+          "answer_D": "Spain",
+          "right_answer": "USSR"
+        },
+        "ru": {
+          "question": "Какая страна первая стала чемпионом Европы ?",
+          "answer_A": "Франция",
+          "answer_B": "Югославия",
+          "answer_C": "СССР",
+          "answer_D": "Испания",
+          "right_answer": "СССР"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է առաջինը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Հարավսլավիա",
+          "answer_C": "ԽՍՀՄ",
+          "answer_D": "Իսպանիա",
+          "right_answer": "ԽՍՀՄ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_003"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_003"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_003"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_004",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "How many countries have become European champions?",
+          "answer_A": "9",
+          "answer_B": "10",
+          "answer_C": "11",
+          "answer_D": "12",
+          "right_answer": "10"
+        },
+        "ru": {
+          "question": "Сколько стран стали чемпионами Европы ?",
+          "answer_A": "9",
+          "answer_B": "10",
+          "answer_C": "11",
+          "answer_D": "12",
+          "right_answer": "10"
+        },
+        "hy": {
+          "question": "Քանի՞ երկրի է հաջողվել նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "9",
+          "answer_B": "10",
+          "answer_C": "11",
+          "answer_D": "12",
+          "right_answer": "10"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_004"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_004"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_004"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_005",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which countries have won the European Championships most?",
+          "answer_A": "Italy, Germany",
+          "answer_B": "Spain",
+          "answer_C": "Spain, France",
+          "answer_D": "France, Germany",
+          "right_answer": "Spain"
+        },
+        "ru": {
+          "question": "Какие страны больше всех выиграли чемпионат Европы ?",
+          "answer_A": "Италия, Германия",
+          "answer_B": "Испания",
+          "answer_C": "Испания, Франция",
+          "answer_D": "Франция, Германия",
+          "right_answer": "Испания"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրներն են բոլորից շատ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Իտալիա, Գերմանիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Իսպանիա, Ֆրանսիա",
+          "answer_D": "Ֆրանսիա, Գերմանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_005"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_005"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_005"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_006",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which country has participated in the European Championships the most?",
+          "answer_A": "Germany",
+          "answer_B": "Spain",
+          "answer_C": "France",
+          "answer_D": "Holland",
+          "right_answer": "Germany"
+        },
+        "ru": {
+          "question": "Какая страна больше всех принимала участие в чемпионатах Европы ?",
+          "answer_A": "Германия",
+          "answer_B": "Испания",
+          "answer_C": "Франция",
+          "answer_D": "Голландия",
+          "right_answer": "Германия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ մասնակցել Եվրոպայի առաջնություններին:",
+          "answer_A": "Գերմանիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Հոլանդիա",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_006"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_006"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_006"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_007",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Between which teams the most productive game in the finals of the European Championship took place?",
+          "answer_A": "USSR- Yugoslavia",
+          "answer_B": "BRD(Germany) - USSR",
+          "answer_C": "Spain- Italy",
+          "answer_D": "France- Spain",
+          "right_answer": "Spain- Italy"
+        },
+        "ru": {
+          "question": "Между какими командами состоялась самая результативная игра в финалах чемпионата Европы ?",
+          "answer_A": "СССР - Югославия",
+          "answer_B": "ФРГ(Германия) - СССР",
+          "answer_C": "Испания - Италия",
+          "answer_D": "Франция - Испания",
+          "right_answer": "Испания - Италия"
+        },
+        "hy": {
+          "question": "Եվրոպայի առաջնության եզրափակիչներում ո՞ր երկրների միջեվ է տեղի ունեցել ամենագոլառատ խաղը:",
+          "answer_A": "ԽՍՀՄ - Հարավսլավիա",
+          "answer_B": "ԳՖՀ(Գերմանիա) - ԽՍՀՄ",
+          "answer_C": "Իսպանիա - Իտալիա",
+          "answer_D": "Ֆրանսիա - Իսպանիա",
+          "right_answer": "Իսպանիա - Իտալիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_007"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_007"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_007"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_008",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which country (s) have won the European Championship twice in a row?",
+          "answer_A": "Germany",
+          "answer_B": "Spain",
+          "answer_C": "France",
+          "answer_D": "Germany, Spain",
+          "right_answer": "Spain"
+        },
+        "ru": {
+          "question": "Какая страна (страны) выиграла чемпионат Европы дважды подряд ?",
+          "answer_A": "Германия",
+          "answer_B": "Испания",
+          "answer_C": "Франция",
+          "answer_D": "Германия, Испания",
+          "right_answer": "Испания"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն (երկրները) է կարողացել պաշտպանել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Գերմանիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Գերմանիա, Իսպանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_008"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_008"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_008"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_009",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which footballer (s) is the top scorer of the European Championship?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Michel Platini",
+          "answer_C": "Michel Platini, Cristiano Ronaldo",
+          "answer_D": "Alan Shearer, Cristiano Ronaldo",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Какой футболист (футболисты) является лучшим бомбардиром чемпионата Европы ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Мишель Платини",
+          "answer_C": "Мишель Платини, Криштиану Роналду",
+          "answer_D": "Алан Ширер, Криштиану Роналду",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ (ովքեր) է Եվրոպայի առաջնությունների լավագույն ռմբարկուն(երը):",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Միշել Պլատինի",
+          "answer_C": "Միշել Պլատինի, Կրիշտիանու Ռոնալդու",
+          "answer_D": "Ալան Շիրեր, Կրիշտիանու Ռոնալդու",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_009"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_009"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_009"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_010",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which country reached the European Championship finals the most?",
+          "answer_A": "USSR",
+          "answer_B": "France",
+          "answer_C": "Germany",
+          "answer_D": "Spain",
+          "right_answer": "Germany"
+        },
+        "ru": {
+          "question": "Какая страна больше всех вышла в финал чемпионата Европы ?",
+          "answer_A": "СССР",
+          "answer_B": "Франция",
+          "answer_C": "Германия",
+          "answer_D": "Испания",
+          "right_answer": "Германия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ դուրս եկել Եվրոպայի առաջնության եզրափակիչ:",
+          "answer_A": "ԽՍՀՄ",
+          "answer_B": "Ֆրանսիա",
+          "answer_C": "Գերմանիա",
+          "answer_D": "Իսպանիա",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_010"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_010"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_010"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_011",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Who holds the goal record in one European Championship?",
+          "answer_A": "Michel Platini",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Antoine Griezmann",
+          "answer_D": "Alan Shearer",
+          "right_answer": "Michel Platini"
+        },
+        "ru": {
+          "question": "Кому принадлежит рекорд по забитым голам в одном чемпионате Европы ?",
+          "answer_A": "Мишель Платини",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Антуан Гризманн",
+          "answer_D": "Алан Ширер",
+          "right_answer": "Мишель Платини"
+        },
+        "hy": {
+          "question": "Ո՞վ է Եվրոպայի առաջնության մեկ մրցաշարում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Միշել Պլատինի",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Անտուան Գրիզման",
+          "answer_D": "Ալան Շիրեր",
+          "right_answer": "Միշել Պլատինի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_011"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_011"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_011"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_012",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Who has played the most matches in European Championships?",
+          "answer_A": "Bastian Schweinsteiger",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Gianluigi Buffon",
+          "answer_D": "Edwin van der Sar",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в чемпионатах Европы ?",
+          "answer_A": "Бастиан Швайнштайгер",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Джанлуиджи Буффон",
+          "answer_D": "Эдвин ван дер Сар",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ խաղ անցկացրել Եվրոպայի առաջնություններում:",
+          "answer_A": "Բաստիյան Շվայնշտագեր",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Ջանլուիջի Բուֆֆոն",
+          "answer_D": "Էդվին վան դեր Սար",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_012"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_012"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_012"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_013",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which coach won the European Championship twice?",
+          "answer_A": "Vicente del Bosque",
+          "answer_B": "Otto Rehhagel",
+          "answer_C": "Joachim Löw",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой тренер выиграл чемпионат Европы дважды ?",
+          "answer_A": "Висенте Дель Боске",
+          "answer_B": "Отто Рехагель",
+          "answer_C": "Йоахим Лев",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է Եվրոպայի առաջնության չեմպիոնի տիտղոսը նվաճել 2 անգամ:",
+          "answer_A": "Վիսենտե դել Բոսկե",
+          "answer_B": "Օտտո Ռեհագել",
+          "answer_C": "Յոահիմ Լյով",
+          "answer_D": "Ոչ մեկ",
+          "right_answer": "Ոչ մեկ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_013"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_013"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_013"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_014",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Who was the oldest coach in the European Championships?",
+          "answer_A": "Luis Aragonés",
+          "answer_B": "Giovanni Trapattoni",
+          "answer_C": "Otto Rehhagel",
+          "answer_D": "Karel Brückner",
+          "right_answer": "Giovanni Trapattoni"
+        },
+        "ru": {
+          "question": "Кто был самым возрастным тренером в чемпионатах Европы ?",
+          "answer_A": "Луис Арагонес",
+          "answer_B": "Джованни Трапаттони",
+          "answer_C": "Отто Рехагель",
+          "answer_D": "Карел Брюкнер",
+          "right_answer": "Джованни Трапаттони"
+        },
+        "hy": {
+          "question": "Ո՞վ է եղել ամենատարեց մարզիչը Եվրոպայի առաջնություններում :",
+          "answer_A": "Լուիս Արագոնես",
+          "answer_B": "Ջովանի Տրապատոնի",
+          "answer_C": "Օտտո Ռեհագել",
+          "answer_D": "Կարել Բրուկներ",
+          "right_answer": "Ջովանի Տրապատոնի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_014"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_014"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_014"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_015",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Who is the most author of \"hat trick \" in the European Championships?",
+          "answer_A": "Michel Platini",
+          "answer_B": "Marcel van Basten",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Nuno Gomes",
+          "right_answer": "Michel Platini"
+        },
+        "ru": {
+          "question": "Кто больше всех стал автором \"хет трика\" в чемпионатах Европы ?",
+          "answer_A": "Мишель Платини",
+          "answer_B": "Марко Ван Бастен",
+          "answer_C": "Криштиану Роналду",
+          "answer_D": "Нуну Гомеш",
+          "right_answer": "Мишель Платини"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ \"հեթրիկ\"-ի հեղինակ դարձել Եվրոպայի առաջնություններում:",
+          "answer_A": "Միշել Պլատինի",
+          "answer_B": "Մարկո վան Բաստեն",
+          "answer_C": "Կրիշտիանու Ռոնալդու",
+          "answer_D": "Նունու Գոմեշ",
+          "right_answer": "Միշել Պլատինի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_015"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_015"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_015"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_016",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Of these, who most of all became the author of goals in the European Championships?",
+          "answer_A": "Zinedine Zidane",
+          "answer_B": "Antoine Griezmann",
+          "answer_C": "Fernando Torres",
+          "answer_D": "Mario Gómez",
+          "right_answer": "Antoine Griezmann"
+        },
+        "ru": {
+          "question": "Из перечисленных кто больше всех стал автором голов в чемпионатах Европы ?",
+          "answer_A": "Зинедин Зидан",
+          "answer_B": "Антуан Гризманн",
+          "answer_C": "Фернандо Торрес",
+          "answer_D": "Марио Гомес",
+          "right_answer": "Антуан Гризманн"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլի հեղինակ դարձել Եվրոպայի առաջնություններում:",
+          "answer_A": "Զինեդին Զիդան",
+          "answer_B": "Անտուան Գրիզման",
+          "answer_C": "Ֆերնանդո Տորես",
+          "answer_D": "Մարիո Գոմես",
+          "right_answer": "Անտուան Գրիզման"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_016"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_016"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_016"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_017",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "In which country was the European Championship held the most?",
+          "answer_A": "Italy",
+          "answer_B": "Belgium",
+          "answer_C": "France",
+          "answer_D": "Spain",
+          "right_answer": "France"
+        },
+        "ru": {
+          "question": "В какой стране больше всех проводился чемпионат Европы ?",
+          "answer_A": "Италия",
+          "answer_B": "Бельгия",
+          "answer_C": "Франция",
+          "answer_D": "Испания",
+          "right_answer": "Франция"
+        },
+        "hy": {
+          "question": "Ո՞ր երկում է ավելի շատ անցկացվել Եվրոպայի առաջնությունը:",
+          "answer_A": "Իտալիա",
+          "answer_B": "Բելգիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Իսպանիա",
+          "right_answer": "Ֆրանսիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_017"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_017"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_017"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_018",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which countries have lost the most in the finals of the European Championship?",
+          "answer_A": "Italy, Germany",
+          "answer_B": "Germany, USSR",
+          "answer_C": "Yugoslavia, USSR",
+          "answer_D": "France, Holland",
+          "right_answer": "Germany, USSR"
+        },
+        "ru": {
+          "question": "Какие страны больше всех проиграли в финалах чемпионата Европы ?",
+          "answer_A": "Италия, Германия",
+          "answer_B": "Германия, СССР",
+          "answer_C": "Югославия, СССР",
+          "answer_D": "Франция, Голландия",
+          "right_answer": "Германия, СССР"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրներն են բոլորից շատ պարտվել Եվրոպայի առաջնության եզրափակիչներում:",
+          "answer_A": "Իտալիա, Գերմանիա",
+          "answer_B": "Գերմանիա, ԽՍՀՄ",
+          "answer_C": "Հարավսլավիա, ԽՍՀՄ",
+          "answer_D": "Ֆրանսիա, Հոլանդիա",
+          "right_answer": "Գերմանիա, ԽՍՀՄ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_018"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_018"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_018"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_019",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "For the first time in what year the European Championship was held simultaneously in two countries?",
+          "answer_A": "1996",
+          "answer_B": "2000",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "right_answer": "2000"
+        },
+        "ru": {
+          "question": "Впервые в каком году чемпионат Европы проводился одновременно в двух странах ?",
+          "answer_A": "1996",
+          "answer_B": "2000",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "right_answer": "2000"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Եվրոպայի առաջնությունը անցկացվել միաժամանակ 2 երկրներում:",
+          "answer_A": "1996",
+          "answer_B": "2000",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "right_answer": "2000"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_019"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_019"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_019"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_020",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which country's coaches won the European Championship the most?",
+          "answer_A": "of Spain",
+          "answer_B": "of Germany",
+          "answer_C": "of France",
+          "answer_D": "of Germany, Spain",
+          "right_answer": "of Germany, Spain"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех выиграли чемпионат Европы ?",
+          "answer_A": "Испании",
+          "answer_B": "Германии",
+          "answer_C": "Франции",
+          "answer_D": "Германии, Испании",
+          "right_answer": "Германии, Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Իսպանիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Գերմանիա, Իսպանիա",
+          "right_answer": "Գերմանիա, Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_020"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_020"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_020"
+        }
+      }
+    },
+    {
+      "questionId": "european_championship_021",
+      "categoryType": "UEFA",
+      "type": "European Championship",
+      "source": {
+        "en": {
+          "question": "Which national team won EURO 2024?",
+          "answer_A": "France",
+          "answer_B": "Spain",
+          "answer_C": "England",
+          "answer_D": "Germany",
+          "right_answer": "Spain"
+        },
+        "ru": {
+          "question": "Какая сборная выиграла Евро-2024?",
+          "answer_A": "Франция",
+          "answer_B": "Испания",
+          "answer_C": "Англия",
+          "answer_D": "Германия",
+          "right_answer": "Испания"
+        },
+        "hy": {
+          "question": "Ո՞ր հավաքականն է հաղթել Եվրո-2024-ը:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_021"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_021"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "European Championship",
+          "answered": false,
+          "questionId": "european_championship_021"
+        }
+      }
+    }
+  ]
+}

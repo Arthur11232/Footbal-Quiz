@@ -123,6 +123,27 @@ app/questions_audit_backup_BEFORE_es_de_it_2026_09_09.json
 app/questions_translation_workbench_es_de_it_2026_09_09.json
 ```
 
+Для удобной поэтапной работы workbench дополнительно разрезан на category batch-файлы:
+
+```text
+app/question_translation_batches_es_de_it_2026_09_09/
+```
+
+Состав batch-файлов:
+
+- `top5_france.json` — 66 items;
+- `top5_germany.json` — 67 items;
+- `top5_italy.json` — 70 items;
+- `top5_english.json` — 76 items;
+- `top5_spain.json` — 71 items;
+- `uefa_super_cup.json` — 31 items;
+- `uefa_europa_league.json` — 44 items;
+- `uefa_champions_league.json` — 47 items;
+- `uefa_european_championship.json` — 21 items;
+- `world_cup_world_championship.json` — 54 items;
+- `ron_mes_vsrm.json` — 71 items;
+- `real_barce_vsrb.json` — 71 items.
+
 Workbench построен от Firestore backup, а не от локального архивного `app/questions_audit_archive_2026_09_09.json`. В нём 689 items, каждый item содержит:
 
 - `questionId`;
@@ -140,7 +161,11 @@ Workbench построен от Firestore backup, а не от локально�
 - `backup`: read-only export текущей Firestore коллекции в audit JSON;
 - `validate-alignment`: строгая проверка языков по `questionId`, `categoryType`, `type`, обязательным полям и валидности `right_answer`;
 - `export-translation-workbench`: подготовка рабочего файла для перевода target languages;
+- `export-translation-batch`: экспорт отдельного category/type batch из workbench;
+- `apply-translation-batch`: применение заполненного batch обратно в workbench;
 - `build-audit-from-workbench`: сборка финального audit из заполненного workbench. Команда намеренно падает, если хотя бы один target-перевод пустой.
+
+Важно по machine translation: отправка Firestore-derived вопросов во внешний переводчик требует явного разрешения владельца проекта. Без такого разрешения используем только локальные batch-файлы и ручной/контролируемый перевод.
 
 Важно: свежий Firestore backup не полностью совпадает со старым локальным audit-файлом. Поэтому для `es/de/it` источником истины на этом этапе считается именно backup из Firestore.
 
@@ -208,6 +233,14 @@ python3 tools/update_firestore_questions.py validate-alignment --audit app/quest
 
 ```text
 python3 tools/update_firestore_questions.py export-translation-workbench --audit app/questions_audit_backup_BEFORE_es_de_it_YYYY_MM_DD.json --source-languages en,ru,hy --target-languages es,de,it --output app/questions_translation_workbench_es_de_it_YYYY_MM_DD.json
+```
+
+```text
+python3 tools/update_firestore_questions.py export-translation-batch --workbench app/questions_translation_workbench_es_de_it_YYYY_MM_DD.json --category-type TOP5 --place-type Germany --target-languages es,de,it --output app/question_translation_batches_es_de_it_YYYY_MM_DD/top5_germany.json
+```
+
+```text
+python3 tools/update_firestore_questions.py apply-translation-batch --workbench app/questions_translation_workbench_es_de_it_YYYY_MM_DD.json --batch app/question_translation_batches_es_de_it_YYYY_MM_DD/top5_germany.json --target-languages es,de,it --require-complete --output app/questions_translation_workbench_es_de_it_YYYY_MM_DD.json
 ```
 
 ```text

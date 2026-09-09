@@ -1,0 +1,3256 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "UEFA",
+  "type": "Champions League",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "translation_batch",
+  "items": [
+    {
+      "questionId": "champions_league_001",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Since what year is the Champions League tournament (European Cup) held?",
+          "answer_A": "1954",
+          "answer_B": "1955",
+          "answer_C": "1956",
+          "answer_D": "1957",
+          "right_answer": "1955"
+        },
+        "ru": {
+          "question": "С какого года проводится турнир Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "1954",
+          "answer_B": "1955",
+          "answer_C": "1956",
+          "answer_D": "1957",
+          "right_answer": "1955"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Չեմպիոնների Լիգայի մրցաշարը (Եվրոպական չեմպիոնների գավաթ):",
+          "answer_A": "1954",
+          "answer_B": "1955",
+          "answer_C": "1956",
+          "answer_D": "1957",
+          "right_answer": "1955"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_001"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_001"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_001"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_002",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "How many clubs have won the Champions League (European Cup)?",
+          "answer_A": "20",
+          "answer_B": "22",
+          "answer_C": "24",
+          "answer_D": "25",
+          "right_answer": "24"
+        },
+        "ru": {
+          "question": "Сколько клубов выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "20",
+          "answer_B": "22",
+          "answer_C": "24",
+          "answer_D": "25",
+          "right_answer": "24"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է նվաճել Չեմպիոնների Լիգայի գավաթը (Եվրոպական չեմպիոնների գավաթ):",
+          "answer_A": "20",
+          "answer_B": "22",
+          "answer_C": "24",
+          "answer_D": "25",
+          "right_answer": "24"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_002"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_002"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_002"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_003",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club has won the Champions League most (European Cup)?",
+          "answer_A": "Barcelona",
+          "answer_B": "Milan",
+          "answer_C": "Real Madrid",
+          "answer_D": "Bayern München",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Барселона",
+          "answer_B": "Милан",
+          "answer_C": "Реал Мадрид",
+          "answer_D": "Бавария",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Չեմպիոնների Լիգայի գավաթը (Եվրոպական չեմպիոնների գավաթ):",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Միլան",
+          "answer_C": "Ռեալ Մադրիդ",
+          "answer_D": "Բավարիա",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_003"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_003"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_003"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_004",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the Champions League most (European Cup)?",
+          "answer_A": "Manchester United",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale Milano",
+          "answer_D": "Ajax",
+          "right_answer": "Ajax"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Ювентус",
+          "answer_C": "Интер",
+          "answer_D": "Аякс",
+          "right_answer": "Аякс"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է ավելի շատ նվաճել Չեմպիոնների Լիգայի գավաթը (Եվրոպական չեմպիոնների գավաթ):",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Ինտեր",
+          "answer_D": "Այաքս",
+          "right_answer": "Այաքս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_004"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_004"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_004"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_005",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in the Champions League final (European Cup)?",
+          "answer_A": "Benfica",
+          "answer_B": "Bayern München",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в финале Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Бенфика",
+          "answer_B": "Бавария",
+          "answer_C": "Ювентус",
+          "answer_D": "Милан",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Չեմպիոնների Լիգայի եզրափակչում (Եվրոպական չեմպիոնների գավաթ):",
+          "answer_A": "Բենֆիկա",
+          "answer_B": "Բավարիա",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Միլան",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_005"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_005"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_005"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_006",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Of these, which club reached the Champions League final (European Champions Cup) the most?",
+          "answer_A": "Milan",
+          "answer_B": "Bayern München",
+          "answer_C": "Juventus",
+          "answer_D": "Ajax",
+          "right_answer": "Milan"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выходил в финал Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Милан",
+          "answer_B": "Бавария",
+          "answer_C": "Ювентус",
+          "answer_D": "Аякс",
+          "right_answer": "Милан"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է ավելի շատ դուրս եկել Չեմպիոնների Լիգայի եզրափակիչ (Եվրոպական չեմպիոնների գավաթ):",
+          "answer_A": "Միլան",
+          "answer_B": "Բավարիա",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Այաքս",
+          "right_answer": "Միլան"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_006"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_006"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_006"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_007",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club after changing the format won the Champions League most of all?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Milan",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб после смены формата больше всех выиграл Лигу чемпионов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Милан",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ֆորմատի փոփոխությունից հետո Չեմպիոնների Լիգայի գավաթը (Եվրոպական չեմպիոնների գավաթ) բոլորից շատ ո՞ր ակումբն է նվաճել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Միլան",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_007"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_007"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_007"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_008",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Of which, which club won the Champions League (European Cup)?",
+          "answer_A": "Panathinaikos",
+          "answer_B": "Atletico Madrid",
+          "answer_C": "Hamburg",
+          "answer_D": "Saint-Étienne",
+          "right_answer": "Hamburg"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб выиграл Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Панатинаикос",
+          "answer_B": "Атлетико Мадрид",
+          "answer_C": "Гамбург",
+          "answer_D": "Сент-Этьен",
+          "right_answer": "Гамбург"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Պանատինայկոս",
+          "answer_B": "Ատլետիկո Մադրիդ",
+          "answer_C": "Համբուրգ",
+          "answer_D": "Սենտ-Էտիեն",
+          "right_answer": "Համբուրգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_008"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_008"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_008"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_009",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of all time in the Champions League (European Cup)?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Raúl",
+          "answer_D": "Alfredo Di Stéfano",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир всех времен Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Рауль",
+          "answer_D": "Альфредо ди Стефано",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Ռաուլ",
+          "answer_D": "Ալֆրեդո դի Ստեֆանո",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_009"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_009"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_009"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_010",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club has won the Champions League (European Champions Cup) the most in a row?",
+          "answer_A": "Bayern München",
+          "answer_B": "Real Madrid",
+          "answer_C": "Milan",
+          "answer_D": "Ajax",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех подряд выиграл Лигу чемпионов (Кубок европейских чемпионов)?",
+          "answer_A": "Бавария",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Милан",
+          "answer_D": "Аякс",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ անընդմեջ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Բավարիա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Միլան",
+          "answer_D": "Այաքս",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_010"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_010"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_010"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_011",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "After changing the format, which club won the Champions League 3 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Manchester United",
+          "answer_D": "Milan",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "После смены формата какой клуб 3 раза подряд выиграл Лигу чемпионов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Манчестер Юнайтед",
+          "answer_D": "Милан",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ֆորմատի փոփոխությունից հետո Չեմպիոնների Լիգայի գավաթը ո՞ր ակումբ է նվաճել 3 անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Մանչեսթեր Յունայթեդ",
+          "answer_D": "Միլան",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_011"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_011"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_011"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_012",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club or clubs have won the Champions League (European Cup) 3 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Bayern München",
+          "answer_C": "Ajax",
+          "answer_D": "All",
+          "right_answer": "All"
+        },
+        "ru": {
+          "question": "Какой клуб или клубы выиграли Лигу чемпионов (Кубок европейских чемпионов) 3 раза подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Бавария",
+          "answer_C": "Аякс",
+          "answer_D": "Все",
+          "right_answer": "Все"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի պատմության մեջ ո՞ր ակումբն է նվաճել Չեմպիոնների Լիգայի գավաթը 3 անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բավարիա",
+          "answer_C": "Այաքս",
+          "answer_D": "Բոլորը",
+          "right_answer": "Բոլորը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_012"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_012"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_012"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_013",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which country's clubs have won the Champions League (European Champions Cup) the most?",
+          "answer_A": "of Italy",
+          "answer_B": "of Spain",
+          "answer_C": "of England",
+          "answer_D": "of Germany",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Клубы какой страны больше всех выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Италии",
+          "answer_B": "Испании",
+          "answer_C": "Англии",
+          "answer_D": "Германии",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ակումբներն են ավելի շատ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Իտալիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_013"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_013"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_013"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_014",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which country's clubs reached the Champions League final (European Champions Cup) the most?",
+          "answer_A": "of Italy",
+          "answer_B": "of Spain",
+          "answer_C": "of England",
+          "answer_D": "of Italy, of Spain",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Клубы какой страны больше всех вышли в финал Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Италии",
+          "answer_B": "Испании",
+          "answer_C": "Англии",
+          "answer_D": "Италии, Испании",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ակումբներն են ավելի շատ դուրս եկել Չեմպիոնների Լիգայի եզրափակիչ:",
+          "answer_A": "Իտալիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Իտալիա, Իսպանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_014"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_014"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_014"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_015",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which country has the most different winners of the Champions League (European Cup)?",
+          "answer_A": "England",
+          "answer_B": "Spain",
+          "answer_C": "Italy",
+          "answer_D": "Germany",
+          "right_answer": "England"
+        },
+        "ru": {
+          "question": "Какая страна больше всех имеет разных победителей Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Англия",
+          "answer_B": "Испания",
+          "answer_C": "Италия",
+          "answer_D": "Германия",
+          "right_answer": "Англия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն ունի ավելի շատ Չեմպիոնների Լիգայի գավաթը նվաճած տարբեր ակումբներ:",
+          "answer_A": "Անգլիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Անգլիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_015"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_015"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_015"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_016",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club holds the record for the longest undefeated series in the Champions League (European Cup)?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Manchester United",
+          "answer_C": "Barcelona",
+          "answer_D": "Milan",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какому клубу принадлежит рекорд по самой долгой серии без поражений в Лиге чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Барселона",
+          "answer_D": "Милан",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է պատկանում Չեմպիոնների Լիգայում անպարտելիության ռեկորդը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Միլան",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_016"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_016"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_016"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_017",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Of the above, who most of all became the author of goals in the Champions League (European Cup)?",
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "Didier Drogba",
+          "answer_C": "Eusébio",
+          "answer_D": "Alfredo Di Stéfano",
+          "right_answer": "Alfredo Di Stéfano"
+        },
+        "ru": {
+          "question": "Из перечисленных кто больше всех стал автором голов в Лиге чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Алессандро Дель Пьеро",
+          "answer_B": "Дидье Дрогба",
+          "answer_C": "Эйсебио",
+          "answer_D": "Альфредо ди Стефано",
+          "right_answer": "Альфредо ди Стефано"
+        },
+        "hy": {
+          "question": "Ո՞վ է ավելի շատ գոլի հեղինակ դարձել Չեմպիոնների Լիգայում:",
+          "answer_A": "Ալեսանդրո Դել Պիեռո",
+          "answer_B": "Դիդյե Դրոգբա",
+          "answer_C": "Էյսեբիյո",
+          "answer_D": "Ալֆրեդո դի Ստեֆանո",
+          "right_answer": "Ալֆրեդո դի Ստեֆանո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_017"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_017"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_017"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_018",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which footballer won the Champions League most (European Champions Cup)?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Francisco Gento",
+          "answer_D": "Alfredo Di Stéfano",
+          "right_answer": "Francisco Gento"
+        },
+        "ru": {
+          "question": "Какой футболист больше всех выиграл Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Франсиско Хенто",
+          "answer_D": "Альфредо ди Стефано",
+          "right_answer": "Франсиско Хенто"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Ֆրանսիսկո Խենտո",
+          "answer_D": "Ալֆրեդո դի Ստեֆանո",
+          "right_answer": "Ֆրանսիսկո Խենտո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_018"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_018"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_018"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_019",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who managed to win the Champions League (European Cup) with three different clubs?",
+          "answer_A": "Clarence Seedorf",
+          "answer_B": "Zlatan Ibrahimović",
+          "answer_C": "Luís Figo",
+          "answer_D": "Arjen Robben",
+          "right_answer": "Clarence Seedorf"
+        },
+        "ru": {
+          "question": "Кому удалось выиграть Лигу чемпионов (Кубок европейских чемпионов) с тремя разными клубами ?",
+          "answer_A": "Кларенс Зеедорф",
+          "answer_B": "Златан Ибрагимович",
+          "answer_C": "Луиш Фигу",
+          "answer_D": "Арьен Роббен",
+          "right_answer": "Кларенс Зеедорф"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստին է հաջողվել նվաճել Չեմպիոնների Լիգայի գավաթը 3 տարբեր ակումբների հետ:",
+          "answer_A": "Կլարեն Զեդորֆ",
+          "answer_B": "Զլատան Իբրահիմովիչ",
+          "answer_C": "Լուիշ Ֆիգու",
+          "answer_D": "Արիեն Ռոբեն",
+          "right_answer": "Կլարեն Զեդորֆ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_019"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_019"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_019"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_020",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who has become the top scorer in the Champions League (European Champions Cup) the most?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Puskás Ferenc",
+          "answer_D": "Cristiano Ronaldo",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто больше всех стал лучшим бомбардиром Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Герд Мюллер",
+          "answer_C": "Ференц Пушкаш",
+          "answer_D": "Криштиану Роналду",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է ավելի շատ ճանաչվել Չեմպիոնների Լիգայի լավագույն ռմբարկու:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Գերդ Մյուլլեր",
+          "answer_C": "Ֆերենց Պուշկաշ",
+          "answer_D": "Կրիշտիանու Ռոնալդու",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_020"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_020"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_020"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_021",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in one season of the Champions League (European Cup)?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "José Altafini",
+          "answer_D": "Rutgerus van Nistelrooij",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в одном сезоне Лиги чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Жозе Альтафини",
+          "answer_D": "Руд ван Нистелрой",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի մեկ մրցաշարում ո՞վ է ավելի շատ գոլի հեղինակ դարձել:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Ժոզե Ալտաֆինի",
+          "answer_D": "Ռուդ վան Նիստելռոյ",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_021"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_021"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_021"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_022",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "What city clubs won the Champions League (European Cup) most?",
+          "answer_A": "Madrid",
+          "answer_B": "Milan",
+          "answer_C": "London",
+          "answer_D": "München",
+          "right_answer": "Madrid"
+        },
+        "ru": {
+          "question": "Больше всех клубы какого города выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Мадрид",
+          "answer_B": "Милан",
+          "answer_C": "Лондон",
+          "answer_D": "Мюнхен",
+          "right_answer": "Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքի ակումբներն են ավելի շատ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Մադրիդ",
+          "answer_B": "Միլան",
+          "answer_C": "Լոնդոն",
+          "answer_D": "Մյունխեն",
+          "right_answer": "Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_022"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_022"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_022"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_023",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Most of all, which country had different representatives in the Champions League (European Cup)?",
+          "answer_A": "Germany",
+          "answer_B": "Italy",
+          "answer_C": "England",
+          "answer_D": "France",
+          "right_answer": "Germany"
+        },
+        "ru": {
+          "question": "Больше всех какая страна имела разных представителей в Лиге чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Германия",
+          "answer_B": "Италия",
+          "answer_C": "Англия",
+          "answer_D": "Франция",
+          "right_answer": "Германия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է ունեցել ավելի շատ տարբեր ներկայացուցիչներ Չեմպիոնների Լիգայում :",
+          "answer_A": "Գերմանիա",
+          "answer_B": "Իտալիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Ֆրանսիա",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_023"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_023"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_023"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_024",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which country’s coaches won the Champions League (European Cup) most?",
+          "answer_A": "of Spain",
+          "answer_B": "of Italy",
+          "answer_C": "of England",
+          "answer_D": "of Germany",
+          "right_answer": "of Italy"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Испании",
+          "answer_B": "Италии",
+          "answer_C": "Англии",
+          "answer_D": "Германии",
+          "right_answer": "Италии"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Իսպանիա",
+          "answer_B": "Իտալիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իտալիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_024"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_024"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_024"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_025",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which of these coaches won the Champions League (European Cup) 3 times in a row?",
+          "answer_A": "Zinedine Zidane",
+          "answer_B": "Dettmar Cramer",
+          "answer_C": "Ștefan Kovács",
+          "answer_D": "All",
+          "right_answer": "Zinedine Zidane"
+        },
+        "ru": {
+          "question": "Кто из этих тренеров выиграл Лигу чемпионов (Кубок европейских чемпионов) 3 раза подряд ?",
+          "answer_A": "Зинедин Зидан",
+          "answer_B": "Деттмар Крамер",
+          "answer_C": "Штефан Ковач",
+          "answer_D": "Все",
+          "right_answer": "Зинедин Зидан"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է նվաճել Չեմպիոնների Լիգայի գավաթը 3 անգամ անընդմեջ:",
+          "answer_A": "Զինեդին Զիդան",
+          "answer_B": "Դետմար Կրամեր",
+          "answer_C": "Շտեֆան Կովաչ",
+          "answer_D": "Բոլորը",
+          "right_answer": "Զինեդին Զիդան"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_025"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_025"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_025"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_026",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club was the first to win the Champions League (European Cup)?",
+          "answer_A": "Benfica",
+          "answer_B": "Real Madrid",
+          "answer_C": "Internazionale Milano",
+          "answer_D": "Milan",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб первым выиграл Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Бенфика",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Интер",
+          "answer_D": "Милан",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Բենֆիկա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Ինտեր",
+          "answer_D": "Միլան",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_026"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_026"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_026"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_027",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which country’s coaches won the Champions League (European Cup) most of all in a row?",
+          "answer_A": "of England",
+          "answer_B": "of Spain",
+          "answer_C": "of Italy",
+          "answer_D": "of Argentina",
+          "right_answer": "of England"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех подряд выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Англии",
+          "answer_B": "Испании",
+          "answer_C": "Италии",
+          "answer_D": "Аргентини",
+          "right_answer": "Англии"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի գավաթը անընդմեջ ավելի շատ ո՞ր երկրի մարզիչներն են նվաճել:",
+          "answer_A": "Անգլիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Արգենտինա",
+          "right_answer": "Անգլիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_027"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_027"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_027"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_028",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which footballer spent the most matches in the Champions League (after 1992)?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Ryan Giggs",
+          "answer_C": "Iker Casillas",
+          "answer_D": "Xavi",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Какой футболист провел больше всех матчей в Лиге чемпионов (после 1992 г.) ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Райан Гиггз",
+          "answer_C": "Икер Касильяс",
+          "answer_D": "Хави",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ խաղ անցկացրել Չեմպիոնների Լիգայում (1992 թ. հետո):",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Ռայան Գիգզ",
+          "answer_C": "Իկեր Կասիլյաս",
+          "answer_D": "Չավի",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_028"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_028"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_028"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_029",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who became the authors of the \"hat trick \" in the Champions League (after 1992) the most?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Filippo Inzaghi",
+          "answer_D": "Cristiano Ronaldo, Lionel Messi",
+          "right_answer": "Cristiano Ronaldo, Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто больше всех стал авторам \"хет трика\" в Лиге чемпионов (после 1992 г.) ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Филиппо Индзаги",
+          "answer_D": "Криштиану Роналду, Лионель Месси",
+          "right_answer": "Криштиану Роналду, Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է ավելի շատ \"հեթրիկ\"-ի հեղինակ դարձել Չեմպիոնների Լիգայում (1992 թ. հետո):",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Ֆիլիպո Ինձագի",
+          "answer_D": "Կրիշտիանու Ռոնալդու, Լիոնել Մեսսի",
+          "right_answer": "Կրիշտիանու Ռոնալդու, Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_029"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_029"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_029"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_030",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who is the author of the fastest \"hat trick \" in the Champions League (after 1992)?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Luiz Adriano",
+          "answer_D": "Bafé Gomis",
+          "right_answer": "Bafé Gomis"
+        },
+        "ru": {
+          "question": "Кто автор самого быстрого \"хет трика\" в Лиге чемпионов (после 1992 г.) ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Луис Адриано",
+          "answer_D": "Бафетимби Гомис",
+          "right_answer": "Бафетимби Гомис"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայում ամենաարագ \"հեթրիկ\"-ի հեղինակը (1992 թ. հետո):",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Լուիս Ադրիանո",
+          "answer_D": "Բեֆետիմբի Գոմես",
+          "right_answer": "Բեֆետիմբի Գոմես"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_030"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_030"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_030"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_031",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club's football players have become the authors of \"hat trick \" in the Champions League (after 1992)?",
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Bayern München",
+          "answer_D": "Milan",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Футболисты какого клуба больше всех стали авторами \"хет трика\" в Лиге чемпионов (после 1992 г.) ?",
+          "answer_A": "Барселона",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Бавария",
+          "answer_D": "Милан",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբի ֆուտբոլիստներն են ավելի շատ \"հեթրիկ\"-ի հեղինակ դարձել Չեմպիոնների Լիգայում (1992 թ. հետո):",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բավարիա",
+          "answer_D": "Միլան",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_031"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_031"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_031"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_032",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which country's footballers became the authors of the \"hat trick \" in the Champions League (after 1992) most of all?",
+          "answer_A": "of Brazil",
+          "answer_B": "of Argentina",
+          "answer_C": "of France",
+          "answer_D": "of Italy",
+          "right_answer": "of Brazil"
+        },
+        "ru": {
+          "question": "Футболисты какой страны больше всех стали авторами \"хет трика\" в Лиге чемпионов (после 1992 г.) ?",
+          "answer_A": "Бразилии",
+          "answer_B": "Аргентины",
+          "answer_C": "Франции",
+          "answer_D": "Италии",
+          "right_answer": "Бразилии"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ֆուտբոլիստներն են ավելի շատ \"հեթրիկ\"-ի հեղինակ դարձել Չեմպիոնների Լիգայում (1992 թ. հետո):",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Արգենտինա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Բրազիլիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_032"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_032"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_032"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_033",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which players scored 5 goals in one Champions League game (after 1992)?",
+          "answer_A": "Luiz Adriano",
+          "answer_B": "Lionel Messi, Cristiano Ronaldo",
+          "answer_C": "Erling Haaland, Lionel Messi, Luiz Adriano",
+          "answer_D": "Robert Lewandowski, Lionel Messi",
+          "right_answer": "Erling Haaland, Lionel Messi, Luiz Adriano"
+        },
+        "ru": {
+          "question": "Какие футболисты забили 5 голов в одной игре Лиге чемпионов (после 1992 г.) ?",
+          "answer_A": "Лионель Месси, Луис Адриано",
+          "answer_B": "Лионель Месси, Криштиану Роналду",
+          "answer_C": "Эрлинг Холанд, Лионель Месси, Луис Адриано",
+          "answer_D": "Роберт Левандовски, Лионель Месси",
+          "right_answer": "Эрлинг Холанд, Лионель Месси, Луис Адриано"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստներն են Չեմպիոնների Լիգայի մեկ խաղում դարձել 5 գոլի հեղինակ (1992 թ. հետո):",
+          "answer_A": "Լիոնել Մեսսի, Լուիս Ադրիանո",
+          "answer_B": "Լիոնել Մեսսի, Կրիշտիանու Ռոնալդու",
+          "answer_C": "Էրլինգ Հոլանդ, Լիոնել Մեսսի, Լուիս Ադրիանո",
+          "answer_D": "Ռոբերտ Լեվանդովսկի, Լիոնել Մեսսի",
+          "right_answer": "Էրլինգ Հոլանդ, Լիոնել Մեսսի, Լուիս Ադրիանո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_033"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_033"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_033"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_034",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club won the Champions League in the season 2018–2019?",
+          "answer_A": "Barcelona",
+          "answer_B": "Ajax",
+          "answer_C": "Tottenham",
+          "answer_D": "Liverpool",
+          "right_answer": "Liverpool"
+        },
+        "ru": {
+          "question": "Какой клуб стал победителем Лиги чемпионов в сезоне 2018-2019 ?",
+          "answer_A": "Барселона",
+          "answer_B": "Аякс",
+          "answer_C": "Тоттенхэм",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Ливерпуль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018-2019 թթ. մրցաշրջանում նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Այաքս",
+          "answer_C": "Տոտենհեմ",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Լիվերպուլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_034"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_034"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_034"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_035",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who became the top scorer of the Champions League in the season 2018–2019?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Dušan Tadić",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Mohamed Salah",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто стал лучшим бомбардиром Лиги чемпионов в сезоне 2018-2019 ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Душан Тадич",
+          "answer_C": "Криштиану Роналду",
+          "answer_D": "Мохамед Салах",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018-2019 թթ. մրցաշրջանում դարձել Չեմպիոնների Լիգայի լավագույն ռմբարկու :",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Դուշան Տադիչ",
+          "answer_C": "Կրիշտիանու Ռոնալդու",
+          "answer_D": "Մուհամեդ Սալահ",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_035"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_035"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_035"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_036",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who became the best assistant to the Champions League in the season 2018–2019?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Dušan Tadić",
+          "answer_C": "Christian Eriksen",
+          "answer_D": "Kylian Mbappé",
+          "right_answer": "Dušan Tadić"
+        },
+        "ru": {
+          "question": "Кто стал лучшим ассистентом Лиги чемпионов в сезоне 2018-2019 ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Душан Тадич",
+          "answer_C": "Кристиан Эриксен",
+          "answer_D": "Килиан Мбаппе",
+          "right_answer": "Душан Тадич"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլային փոխանցում կատարել Չեմպիոնների Լիգայի 2018-2019 թթ. մրցաշրջանում:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Դուշան Տադիչ",
+          "answer_C": "Քրիստիան Էրիկսեն",
+          "answer_D": "Կիլիան Մբապպե",
+          "right_answer": "Դուշան Տադիչ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_036"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_036"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_036"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_037",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Champions League in the 2023/2024 season?",
+          "answer_A": "Manchester City",
+          "answer_B": "Real Madrid",
+          "answer_C": "Bayern Munich",
+          "answer_D": "Borussia Dortmund",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу чемпионов УЕФА в сезоне 2023/2024?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Бавария",
+          "answer_D": "Боруссия Дортмунд",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է հաղթել ՈՒԵՖԱ-ի Չեմպիոնների լիգան 2023/2024 մրցաշրջանում:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բավարիա",
+          "answer_D": "Բորուսիա Դորտմունդ",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_037"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_037"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_037"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_038",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Champions League in the 2024/25 season?",
+          "answer_A": "Inter",
+          "answer_B": "Paris Saint-Germain",
+          "answer_C": "Real Madrid",
+          "answer_D": "Bayern Munich",
+          "right_answer": "Paris Saint-Germain"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу чемпионов УЕФА в сезоне 2024/25?",
+          "answer_A": "Интер",
+          "answer_B": "Пари Сен-Жермен",
+          "answer_C": "Реал Мадрид",
+          "answer_D": "Бавария",
+          "right_answer": "Пари Сен-Жермен"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել ՈՒԵՖԱ Չեմպիոնների Լիգան 2024/25 մրցաշրջանում:",
+          "answer_A": "Ինտեր",
+          "answer_B": "Պարի Սեն-Ժերմեն",
+          "answer_C": "Ռեալ Մադրիդ",
+          "answer_D": "Բավարիա",
+          "right_answer": "Պարի Սեն-Ժերմեն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_038"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_038"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_038"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_039",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club did Paris Saint-Germain beat in the 2024/25 UEFA Champions League final?",
+          "answer_A": "Arsenal",
+          "answer_B": "Barcelona",
+          "answer_C": "Inter",
+          "answer_D": "Borussia Dortmund",
+          "right_answer": "Inter"
+        },
+        "ru": {
+          "question": "Какой клуб Пари Сен-Жермен обыграл в финале Лиги чемпионов УЕФА 2024/25?",
+          "answer_A": "Арсенал",
+          "answer_B": "Барселона",
+          "answer_C": "Интер",
+          "answer_D": "Боруссия Дортмунд",
+          "right_answer": "Интер"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է հաղթել Պարի Սեն-Ժերմենը 2024/25 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակչում:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ինտեր",
+          "answer_D": "Բորուսիա Դորտմունդ",
+          "right_answer": "Ինտեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_039"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_039"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_039"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_040",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "What was the score in the 2024/25 UEFA Champions League final?",
+          "answer_A": "PSG 2-0 Inter",
+          "answer_B": "PSG 3-1 Inter",
+          "answer_C": "PSG 4-1 Inter",
+          "answer_D": "PSG 5-0 Inter",
+          "right_answer": "PSG 5-0 Inter"
+        },
+        "ru": {
+          "question": "С каким счётом завершился финал Лиги чемпионов УЕФА 2024/25?",
+          "answer_A": "ПСЖ 2-0 Интер",
+          "answer_B": "ПСЖ 3-1 Интер",
+          "answer_C": "ПСЖ 4-1 Интер",
+          "answer_D": "ПСЖ 5-0 Интер",
+          "right_answer": "ПСЖ 5-0 Интер"
+        },
+        "hy": {
+          "question": "Ինչպիսի՞ն էր հաշիվը 2024/25 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակչում:",
+          "answer_A": "ՊՍԺ 2-0 Ինտեր",
+          "answer_B": "ՊՍԺ 3-1 Ինտեր",
+          "answer_C": "ՊՍԺ 4-1 Ինտեր",
+          "answer_D": "ՊՍԺ 5-0 Ինտեր",
+          "right_answer": "ՊՍԺ 5-0 Ինտեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_040"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_040"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_040"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_041",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "In which city was the 2024/25 UEFA Champions League final played?",
+          "answer_A": "London",
+          "answer_B": "Munich",
+          "answer_C": "Madrid",
+          "answer_D": "Istanbul",
+          "right_answer": "Munich"
+        },
+        "ru": {
+          "question": "В каком городе состоялся финал Лиги чемпионов УЕФА 2024/25?",
+          "answer_A": "Лондон",
+          "answer_B": "Мюнхен",
+          "answer_C": "Мадрид",
+          "answer_D": "Стамбул",
+          "right_answer": "Мюнхен"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքում է անցկացվել 2024/25 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակիչը:",
+          "answer_A": "Լոնդոն",
+          "answer_B": "Մյունխեն",
+          "answer_C": "Մադրիդ",
+          "answer_D": "Ստամբուլ",
+          "right_answer": "Մյունխեն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_041"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_041"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_041"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_042",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which Paris Saint-Germain player scored twice in the 2024/25 UEFA Champions League final?",
+          "answer_A": "Ousmane Dembele",
+          "answer_B": "Achraf Hakimi",
+          "answer_C": "Desire Doue",
+          "answer_D": "Khvicha Kvaratskhelia",
+          "right_answer": "Desire Doue"
+        },
+        "ru": {
+          "question": "Какой игрок Пари Сен-Жермен забил дважды в финале Лиги чемпионов УЕФА 2024/25?",
+          "answer_A": "Усман Дембеле",
+          "answer_B": "Ашраф Хакими",
+          "answer_C": "Дезире Дуэ",
+          "answer_D": "Хвича Кварацхелия",
+          "right_answer": "Дезире Дуэ"
+        },
+        "hy": {
+          "question": "Պարի Սեն-Ժերմենի ո՞ր ֆուտբոլիստն է դարձել դուբլի հեղինակ 2024/25 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակչում:",
+          "answer_A": "Ուսման Դեմբելե",
+          "answer_B": "Աշրաֆ Հաքիմի",
+          "answer_C": "Դեզիրե Դուե",
+          "answer_D": "Խվիչա Կվարացխելիա",
+          "right_answer": "Դեզիրե Դուե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_042"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_042"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_042"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_043",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Champions League in the 2023/24 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Manchester City",
+          "answer_C": "Bayern Munich",
+          "answer_D": "Paris Saint-Germain",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу чемпионов УЕФА в сезоне 2023/24?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Манчестер Сити",
+          "answer_C": "Бавария",
+          "answer_D": "Пари Сен-Жермен",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել ՈՒԵՖԱ Չեմպիոնների Լիգան 2023/24 մրցաշրջանում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Մանչեսթեր Սիթի",
+          "answer_C": "Բավարիա",
+          "answer_D": "Պարի Սեն-Ժերմեն",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_043"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_043"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_043"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_044",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Which club did Real Madrid beat in the 2023/24 UEFA Champions League final?",
+          "answer_A": "Bayern Munich",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Manchester City",
+          "answer_D": "Liverpool",
+          "right_answer": "Borussia Dortmund"
+        },
+        "ru": {
+          "question": "Какой клуб Реал Мадрид обыграл в финале Лиги чемпионов УЕФА 2023/24?",
+          "answer_A": "Бавария",
+          "answer_B": "Боруссия Дортмунд",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Боруссия Дортмунд"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է հաղթել Ռեալ Մադրիդը 2023/24 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակչում:",
+          "answer_A": "Բավարիա",
+          "answer_B": "Բորուսիա Դորտմունդ",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Բորուսիա Դորտմունդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_044"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_044"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_044"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_045",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "In which city was the 2023/24 UEFA Champions League final played?",
+          "answer_A": "Paris",
+          "answer_B": "Istanbul",
+          "answer_C": "London",
+          "answer_D": "Madrid",
+          "right_answer": "London"
+        },
+        "ru": {
+          "question": "В каком городе состоялся финал Лиги чемпионов УЕФА 2023/24?",
+          "answer_A": "Париж",
+          "answer_B": "Стамбул",
+          "answer_C": "Лондон",
+          "answer_D": "Мадрид",
+          "right_answer": "Лондон"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքում է անցկացվել 2023/24 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակիչը:",
+          "answer_A": "Փարիզ",
+          "answer_B": "Ստամբուլ",
+          "answer_C": "Լոնդոն",
+          "answer_D": "Մադրիդ",
+          "right_answer": "Լոնդոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_045"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_045"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_045"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_046",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "What new tournament structure replaced the traditional group stage in the 2024/25 UEFA Champions League?",
+          "answer_A": "Double knockout round",
+          "answer_B": "Single league phase with 36 teams",
+          "answer_C": "Regional groups of 6 teams",
+          "answer_D": "Two group stages",
+          "right_answer": "Single league phase with 36 teams"
+        },
+        "ru": {
+          "question": "Какой новый формат турнира заменил традиционный групповой этап в Лиге чемпионов УЕФА 2024/25?",
+          "answer_A": "Двухраундовая система на выбывание",
+          "answer_B": "Единая фаза лиги с 36 командами",
+          "answer_C": "Региональные группы по 6 команд",
+          "answer_D": "Два групповых этапа",
+          "right_answer": "Единая фаза лиги с 36 командами"
+        },
+        "hy": {
+          "question": "Ի՞նչ նոր ձևաչափ փոխարինեց ավանդական խմբային փուլին 2024/25 ՈՒԵՖԱ Չեմպիոնների Լիգայում:",
+          "answer_A": "Երկփուլանի նոկաուտ համակարգ",
+          "answer_B": "36 թիմերով միասնական լիգայի փուլ",
+          "answer_C": "6 թիմերով տարածաշրջանային խմբեր",
+          "answer_D": "Երկու խմբային փուլ",
+          "right_answer": "36 թիմերով միասնական լիգայի փուլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_046"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_046"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_046"
+        }
+      }
+    },
+    {
+      "questionId": "champions_league_047",
+      "categoryType": "UEFA",
+      "type": "Champions League",
+      "source": {
+        "en": {
+          "question": "Who scored the opening goal for Real Madrid in the 2023/24 UEFA Champions League final?",
+          "answer_A": "Vinicius Junior",
+          "answer_B": "Jude Bellingham",
+          "answer_C": "Rodrygo",
+          "answer_D": "Dani Carvajal",
+          "right_answer": "Dani Carvajal"
+        },
+        "ru": {
+          "question": "Кто забил первый гол за Реал Мадрид в финале Лиги чемпионов УЕФА 2023/24?",
+          "answer_A": "Винисиус Жуниор",
+          "answer_B": "Джуд Беллингем",
+          "answer_C": "Родриго",
+          "answer_D": "Дани Карвахаль",
+          "right_answer": "Дани Карвахаль"
+        },
+        "hy": {
+          "question": "Ո՞վ է խփել «Ռեալ Մադրիդի» առաջին գոլը 2023/24 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակչում:",
+          "answer_A": "Վինիսիուս Ժունիոր",
+          "answer_B": "Ջուդ Բելինգեմ",
+          "answer_C": "Ռոդրիգո",
+          "answer_D": "Դանի Կարվախալ",
+          "right_answer": "Դանի Կարվախալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_047"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_047"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Champions League",
+          "answered": false,
+          "questionId": "champions_league_047"
+        }
+      }
+    }
+  ]
+}

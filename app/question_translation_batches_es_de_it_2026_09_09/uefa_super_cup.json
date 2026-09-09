@@ -1,0 +1,2152 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "UEFA",
+  "type": "Super Cup",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "translation_batch",
+  "items": [
+    {
+      "questionId": "super_cup_001",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Since what year has the UEFA Super Cup been played?",
+          "answer_A": "1970",
+          "answer_B": "1972",
+          "answer_C": "1980",
+          "answer_D": "1982",
+          "right_answer": "1972"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Суперкубок УЕФА ?",
+          "answer_A": "1970",
+          "answer_B": "1972",
+          "answer_C": "1980",
+          "answer_D": "1982",
+          "right_answer": "1972"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է խաղարկվում ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "1970",
+          "answer_B": "1972",
+          "answer_C": "1980",
+          "answer_D": "1982",
+          "right_answer": "1972"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_001"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_001"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_001"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_002",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which club is the first owner of the UEFA Super Cup?",
+          "answer_A": "Milan",
+          "answer_B": "Ajax",
+          "answer_C": "Dynamo Kyiv",
+          "answer_D": "Bayern",
+          "right_answer": "Ajax"
+        },
+        "ru": {
+          "question": "Какой клуб первый обладатель Суперкубка УЕФА ?",
+          "answer_A": "Милан",
+          "answer_B": "Аякс",
+          "answer_C": "Динамо Киев",
+          "answer_D": "Бавария",
+          "right_answer": "Аякс"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Միլան",
+          "answer_B": "Այաքս",
+          "answer_C": "Դինամո Կիեվ",
+          "answer_D": "Բավարիա",
+          "right_answer": "Այաքս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_002"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_002"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_002"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_003",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which country has won the UEFA Super Cup most?",
+          "answer_A": "of Italy",
+          "answer_B": "of England",
+          "answer_C": "of Spain",
+          "answer_D": "of Holland",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Представители какой страны больше всех стали обладателем Суперкубка УЕФА ?",
+          "answer_A": "Италии",
+          "answer_B": "Англии",
+          "answer_C": "Испании",
+          "answer_D": "Голландии",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ներկայացուցիչներն են ավելի շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Իտալիա",
+          "answer_B": "Անգլիա",
+          "answer_C": "Իսպանիա",
+          "answer_D": "Հոլանդիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_003"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_003"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_003"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_004",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which club did not manage to become the owner of the UEFA Super Cup?",
+          "answer_A": "Juventus",
+          "answer_B": "Internazionale Milano",
+          "answer_C": "Parma",
+          "answer_D": "Lazio",
+          "right_answer": "Internazionale Milano"
+        },
+        "ru": {
+          "question": "Какому клубу не удалось стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Ювентус",
+          "answer_B": "Интер",
+          "answer_C": "Парма",
+          "answer_D": "Лацио",
+          "right_answer": "Интер"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին չի հաջողվել նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Յուվենթուս",
+          "answer_B": "Ինտեր",
+          "answer_C": "Պարմա",
+          "answer_D": "Լացիո",
+          "right_answer": "Ինտեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_004"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_004"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_004"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_005",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which club has participated most in UEFA Super Cup matches?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Milan",
+          "answer_D": "Barcelona, Real Madrid",
+          "right_answer": "Barcelona, Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб (клубы) больше всех принимал участие в матчах за Суперкубок УЕФА ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Милан",
+          "answer_D": "Барселона, Реал Мадрид",
+          "right_answer": "Барселона, Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ մասնակցել ՈւԵՖԱ-ի Սուպեր գավաթի խաղերին:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Միլան",
+          "answer_D": "Բարսելոնա, Ռեալ Մադրիդ",
+          "right_answer": "Բարսելոնա, Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_005"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_005"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_005"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_006",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which clubs have won the UEFA Super Cup most?",
+          "answer_A": "Barcelona, Milan",
+          "answer_B": "Milan, Ajax",
+          "answer_C": "Real Madrid",
+          "answer_D": "Real Madrid, Sevilla",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал обладателем Суперкубка УЕФА ?",
+          "answer_A": "Барселона",
+          "answer_B": "Милан",
+          "answer_C": "Реал Мадрид",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբներն են բոլորից շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Բարսելոնա, Միլան",
+          "answer_B": "Միլան, Այաքս",
+          "answer_C": "Ռեալ Մադրիդ",
+          "answer_D": "Ռեալ Մադրիդ, Սեվիլյա",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_006"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_006"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_006"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_007",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which English club did not manage to become the owner of the UEFA Super Cup?",
+          "answer_A": "Chelsea",
+          "answer_B": "Arsenal",
+          "answer_C": "Aston Villa",
+          "answer_D": "Nottingham Forest",
+          "right_answer": "Arsenal"
+        },
+        "ru": {
+          "question": "Какому английскому клубу не удалось стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Челси",
+          "answer_B": "Арсенал",
+          "answer_C": "Астон Вилла",
+          "answer_D": "Нотингем Форест",
+          "right_answer": "Арсенал"
+        },
+        "hy": {
+          "question": "Ո՞ր անգլիական ակումբին չի հաջողվել նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Չելսի",
+          "answer_B": "Արսենալ",
+          "answer_C": "Ասթոն Վիլլա",
+          "answer_D": "Նոթինգեմ Ֆորեստ",
+          "right_answer": "Արսենալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_007"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_007"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_007"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_008",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which country’s clubs failed to win the UEFA Super Cup?",
+          "answer_A": "of Russia",
+          "answer_B": "of Serbia",
+          "answer_C": "of Romania",
+          "answer_D": "of Turkey",
+          "right_answer": "of Serbia"
+        },
+        "ru": {
+          "question": "Клубам какой страны не удалось стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Рассии",
+          "answer_B": "Сербии",
+          "answer_C": "Румынии",
+          "answer_D": "Турции",
+          "right_answer": "Сербии"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ակումբներին չի հաջողվել նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Ռուսաստան",
+          "answer_B": "Սերբիա",
+          "answer_C": "Ռումինիա",
+          "answer_D": "Թուրքիա",
+          "right_answer": "Սերբիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_008"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_008"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_008"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_009",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "How many Spanish clubs have won the UEFA Super Cup?",
+          "answer_A": "3",
+          "answer_B": "4",
+          "answer_C": "5",
+          "answer_D": "6",
+          "right_answer": "5"
+        },
+        "ru": {
+          "question": "Сколько испанских клубов стали обладателем Суперкубка УЕФА ?",
+          "answer_A": "3",
+          "answer_B": "4",
+          "answer_C": "5",
+          "answer_D": "6",
+          "right_answer": "5"
+        },
+        "hy": {
+          "question": "Իսպանական քանի՞ ակումբ է նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "3",
+          "answer_B": "4",
+          "answer_C": "5",
+          "answer_D": "6",
+          "right_answer": "5"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_009"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_009"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_009"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_010",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "How many Italian clubs have won the UEFA Super Cup?",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        },
+        "ru": {
+          "question": "Сколько итальянских клубов стали обладателем Суперкубка УЕФА ?",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        },
+        "hy": {
+          "question": "Իտալական քանի՞ ակումբ է նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_010"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_010"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_010"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_011",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "How many English clubs have won the UEFA Super Cup?",
+          "answer_A": "4",
+          "answer_B": "5",
+          "answer_C": "6",
+          "answer_D": "7",
+          "right_answer": "6"
+        },
+        "ru": {
+          "question": "Сколько английских клубов стали обладателем Суперкубка УЕФА ?",
+          "answer_A": "4",
+          "answer_B": "5",
+          "answer_C": "6",
+          "answer_D": "7",
+          "right_answer": "6"
+        },
+        "hy": {
+          "question": "Անգլիական քանի՞ ակումբ է նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "4",
+          "answer_B": "5",
+          "answer_C": "6",
+          "answer_D": "7",
+          "right_answer": "6"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_011"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_011"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_011"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_012",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "How many German clubs have won the UEFA Super Cup?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Сколько немецких клубов стали обладателем Суперкубка УЕФА ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Գերմանական քանի՞ ակումբ է նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_012"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_012"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_012"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_013",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which country has lost the most in UEFA Super Cup matches?",
+          "answer_A": "Spain",
+          "answer_B": "Germany",
+          "answer_C": "England",
+          "answer_D": "Italy",
+          "right_answer": "Spain"
+        },
+        "ru": {
+          "question": "Представители какой страны больше всех проиграли в матчах за Суперкубок УЕФА ?",
+          "answer_A": "Испания",
+          "answer_B": "Германия",
+          "answer_C": "Англия",
+          "answer_D": "Италия",
+          "right_answer": "Испания"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ներկայացուցիչներն են ավելի շատ պարտվել ՈւԵՖԱ-ի Սուպեր գավաթի խաղերում:",
+          "answer_A": "Իսպանիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_013"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_013"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_013"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_014",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the UEFA Super Cup the most?",
+          "answer_A": "Sevilla",
+          "answer_B": "Bayern",
+          "answer_C": "Manchester United",
+          "answer_D": "Bayern, Valencia",
+          "right_answer": "Bayern, Valencia"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех стал обладателем Суперкубка УЕФА ?",
+          "answer_A": "Севилья",
+          "answer_B": "Бавария",
+          "answer_C": "Манчестер Юнайтед",
+          "answer_D": "Бавария, Валенсия",
+          "right_answer": "Бавария, Валенсия"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Սեվիլյա",
+          "answer_B": "Բավարիա",
+          "answer_C": "Մանչեսթեր Յունայթեդ",
+          "answer_D": "Բավարիա, Վալենսիա",
+          "right_answer": "Բավարիա, Վալենսիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_014"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_014"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_014"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_015",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Between which clubs did the most productive game in the UEFA Super Cup take place?",
+          "answer_A": "Atlético Madrid, Chelsea",
+          "answer_B": "Sevilla, Barcelona",
+          "answer_C": "Sevilla, Real Madrid",
+          "answer_D": "Liverpool, Bayern",
+          "right_answer": "Sevilla, Barcelona"
+        },
+        "ru": {
+          "question": "Между какими клубами состоялась самая результативная игра в Суперкубке УЕФА ?",
+          "answer_A": "Атлетико Мадрид, Челси",
+          "answer_B": "Севилья, Барселона",
+          "answer_C": "Севилья, Реал Мадрид",
+          "answer_D": "Ливерпуль, Бавария",
+          "right_answer": "Севилья, Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբների մասնակցությամբ է տեղի ունեցել ՈւԵՖԱ-ի Սուպեր գավաթի ամենաարդյունավետ խաղը:",
+          "answer_A": "Ատլետիկո Մադրիդ, Չելսի",
+          "answer_B": "Սեվիլյա, Բարսելոնա",
+          "answer_C": "Սեվիլյա, Ռեալ Մադրիդ",
+          "answer_D": "Լիվերպուլ, Բավարիա",
+          "right_answer": "Սեվիլյա, Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_015"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_015"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_015"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_016",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Since what year is the winner of the UEFA Super Cup determined in one game?",
+          "answer_A": "1997",
+          "answer_B": "1998",
+          "answer_C": "1999",
+          "answer_D": "2000",
+          "right_answer": "1998"
+        },
+        "ru": {
+          "question": "С какого года победитель Суперкубка УЕФА определяется в одной игре ?",
+          "answer_A": "1997",
+          "answer_B": "1998",
+          "answer_C": "1999",
+          "answer_D": "2000",
+          "right_answer": "1998"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է ՈւԵՖԱ-ի Սուպեր գավաթի հաղթողը որոշվում միայն մեկ խաղի արդյունքում:",
+          "answer_A": "1997",
+          "answer_B": "1998",
+          "answer_C": "1999",
+          "answer_D": "2000",
+          "right_answer": "1998"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_016"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_016"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_016"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_017",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which country's coaches won the UEFA Super Cup most?",
+          "answer_A": "of Holland",
+          "answer_B": "of Spain",
+          "answer_C": "of Italy",
+          "answer_D": "of France",
+          "right_answer": "of Italy"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех стали обладателем Суперкубка УЕФА ?",
+          "answer_A": "Голландии",
+          "answer_B": "Испании",
+          "answer_C": "Италии",
+          "answer_D": "Франции",
+          "right_answer": "Италии"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Հոլանդիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Ֆրանսիա",
+          "right_answer": "Իտալիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_017"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_017"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_017"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_018",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which coaches managed to win the UEFA Super Cup 2 times in a row?",
+          "answer_A": "Zinedin Zidan, Josep Guardiola",
+          "answer_B": "Zinedin Zidan, Juande Ramos",
+          "answer_C": "Zinedin Zidan, Carlo Ancelotti",
+          "answer_D": "Zinedin Zidan, Arrigo Sacchi",
+          "right_answer": "Zinedin Zidan, Arrigo Sacchi"
+        },
+        "ru": {
+          "question": "Каким тренерам удалось выиграть Суперкубок УЕФА 2 раза подряд ?",
+          "answer_A": "Зинедин Зидан, Хосеп Гвардиола",
+          "answer_B": "Зинедин Зидан, Хуанде Рамос",
+          "answer_C": "Зинедин Зидан, Карло Анчелотти",
+          "answer_D": "Зинедин Зидан, Ариго Сакки",
+          "right_answer": "Зинедин Зидан, Ариго Сакки"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչներին է հաջողվել նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը 2 անգամ անընդմեջ:",
+          "answer_A": "Զինեդին Զիդան, Խոսեպ Գվարդիոլա",
+          "answer_B": "Զինեդին Զիդան, Խուանդե Ռամոս",
+          "answer_C": "Զինեդին Զիդան, Կառլո Անչելոտի",
+          "answer_D": "Զինեդին Զիդան, Արիգո Սակկի",
+          "right_answer": "Զինեդին Զիդան, Արիգո Սակկի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_018"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_018"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_018"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_019",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which coaches won the UEFA Super Cup most?",
+          "answer_A": "Carlo Ancelotti",
+          "answer_B": "Josep Guardiola, Zinedin Zidan",
+          "answer_C": "Zinedin Zidan, Carlo Ancelotti",
+          "answer_D": "all of Them",
+          "right_answer": "Carlo Ancelotti"
+        },
+        "ru": {
+          "question": "Какие тренеры больше всех выиграли Суперкубок УЕФА ?",
+          "answer_A": "Карло Анчелотти",
+          "answer_B": "Хосеп Гвардиола, Зинедин Зидан",
+          "answer_C": "Зинедин Зидан, Карло Анчелотти",
+          "answer_D": "Все трое",
+          "right_answer": "Карло Анчелотти"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչներն են ավելի շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Կառլո Անչելոտի",
+          "answer_B": "Խոսեպ Գվարդիոլա, Զինեդին Զիդան",
+          "answer_C": "Զինեդին Զիդան, Կառլո Անչելոտի",
+          "answer_D": "Երեքն էլ",
+          "right_answer": "Կառլո Անչելոտի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_019"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_019"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_019"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_020",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which coach was the first to win the UEFA Super Cup 2 times in a row?",
+          "answer_A": "Zinedin Zidan",
+          "answer_B": "Carlo Ancelotti",
+          "answer_C": "Josep Guardiola",
+          "answer_D": "Arrigo Sacchi",
+          "right_answer": "Arrigo Sacchi"
+        },
+        "ru": {
+          "question": "Какой тренер первым выиграл Суперкубок УЕФА 2 раза подряд ?",
+          "answer_A": "Зинедин Зидан",
+          "answer_B": "Карло Анчелотти",
+          "answer_C": "Хосеп Гвардиола",
+          "answer_D": "Ариго Сакки",
+          "right_answer": "Ариго Сакки"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է առաջինը նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը 2 անգամ անընդմեջ:",
+          "answer_A": "Զինեդին Զիդան",
+          "answer_B": "Կառլո Անչելոտի",
+          "answer_C": "Խոսեպ Գվարդիոլա",
+          "answer_D": "Արիգո Սակկի",
+          "right_answer": "Արիգո Սակկի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_020"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_020"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_020"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_021",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "How many clubs have won the UEFA Super Cup?",
+          "answer_A": "22",
+          "answer_B": "23",
+          "answer_C": "24",
+          "answer_D": "26",
+          "right_answer": "26"
+        },
+        "ru": {
+          "question": "Скольким клубам удалось стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "22",
+          "answer_B": "23",
+          "answer_C": "24",
+          "answer_D": "26",
+          "right_answer": "26"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբի է հաջողվել նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "22",
+          "answer_B": "23",
+          "answer_C": "24",
+          "answer_D": "26",
+          "right_answer": "26"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_021"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_021"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_021"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_022",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which English club is the most \"lost \" opportunity to become the owner of the UEFA Super Cup?",
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United, Chelsea",
+          "answer_C": "Chelsea",
+          "answer_D": "Arsenal",
+          "right_answer": "Manchester United, Chelsea"
+        },
+        "ru": {
+          "question": "Какой английский клуб больше всех \"упустил из рук\" возможность стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Ливерпуль",
+          "answer_B": "Манчестер Юнайтед, Челси",
+          "answer_C": "Челси",
+          "answer_D": "Арсенал",
+          "right_answer": "Манчестер Юнайтед, Челси"
+        },
+        "hy": {
+          "question": "Անգլիական ո՞ր ակումբն է ավելի շատ \"ձեռքից բաց թողել\" ՈւԵՖԱ-ի Սուպեր գավաթը նվաճելու հնարավորությունը:",
+          "answer_A": "Լիվերպուլ",
+          "answer_B": "Մանչեսթեր Յունայթեդ, Չելսի",
+          "answer_C": "Չելսի",
+          "answer_D": "Արսենալ",
+          "right_answer": "Մանչեսթեր Յունայթեդ, Չելսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_022"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_022"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_022"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_023",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which German club most \"lost control \" the opportunity to become the owner of the UEFA Super Cup?",
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Hamburg",
+          "answer_C": "Bayern",
+          "answer_D": "Werder",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "Какой немецкий клуб больше всех \"упустил из рук\" возможность стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Боруссия Д",
+          "answer_B": "Гамбург",
+          "answer_C": "Бавария",
+          "answer_D": "Вердер",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Գերմանական ո՞ր ակումբն է ավելի շատ \"ձեռքից բաց թողել\" ՈւԵՖԱ-ի Սուպեր գավաթը նվաճելու հնարավորությունը:",
+          "answer_A": "Բորուսիա Դ",
+          "answer_B": "Համբուրգ",
+          "answer_C": "Բավարիա",
+          "answer_D": "Վերդեր",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_023"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_023"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_023"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_024",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which Italian club is the most \"lost \" the opportunity to become the owner of the UEFA Super Cup?",
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Lazio",
+          "answer_D": "Internazionale Milano",
+          "right_answer": "Milan"
+        },
+        "ru": {
+          "question": "Какой итальянский клуб больше всех \"упустил из рук\" возможность стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Милан",
+          "answer_B": "Ювентус",
+          "answer_C": "Лацио",
+          "answer_D": "Интер",
+          "right_answer": "Милан"
+        },
+        "hy": {
+          "question": "Իտալական ո՞ր ակումբն է ավելի շատ \"ձեռքից բաց թողել\" ՈւԵՖԱ-ի Սուպեր գավաթը նվաճելու հնարավորությունը:",
+          "answer_A": "Միլան",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Լացիո",
+          "answer_D": "Ինտեր",
+          "right_answer": "Միլան"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_024"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_024"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_024"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_025",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which Spanish clubs most of all \"lost their hands \" the opportunity to become the owner of the UEFA Super Cup?",
+          "answer_A": "Sevilla",
+          "answer_B": "Atlético Madrid, Barcelona",
+          "answer_C": "Barcelona, Sevilla",
+          "answer_D": "Sevilla, Real Madrid",
+          "right_answer": "Sevilla"
+        },
+        "ru": {
+          "question": "Какие испанские клубы больше всех \"упустили из рук\" возможность стать обладателем Суперкубка УЕФА ?",
+          "answer_A": "Севилья",
+          "answer_B": "Атлетико Мадрид, Барселона",
+          "answer_C": "Барселона, Севилья",
+          "answer_D": "Севилья, Реал Мадрид",
+          "right_answer": "Севилья"
+        },
+        "hy": {
+          "question": "Իսպանական ո՞ր ակումբներն են ավելի շատ \"ձեռքից բաց թողել\" ՈւԵՖԱ-ի Սուպեր գավաթը նվաճելու հնարավորությունը:",
+          "answer_A": "Սեվիլյա",
+          "answer_B": "Ատլետիկո Մադրիդ, Բարսելոնա",
+          "answer_C": "Բարսելոնա, Սեվիլյա",
+          "answer_D": "Սեվիլյա, Ռեալ Մադրիդ",
+          "right_answer": "Սեվիլյա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_025"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_025"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_025"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_026",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which coach was the first to win the UEFA Super Cup 2 times?",
+          "answer_A": "Arrigo Sacchi",
+          "answer_B": "Raymond Goethals",
+          "answer_C": "Alexander Ferguson",
+          "answer_D": "Louis van Gaal",
+          "right_answer": "Raymond Goethals"
+        },
+        "ru": {
+          "question": "Какой тренер первым выиграл Суперкубок УЕФА 2 раза ?",
+          "answer_A": "Ариго Сакки",
+          "answer_B": "Раймон Гуталс",
+          "answer_C": "Алекс Фергюсон",
+          "answer_D": "Луи ван Гал",
+          "right_answer": "Раймон Гуталс"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է առաջինը նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը 2 անգամ:",
+          "answer_A": "Արիգո Սակկի",
+          "answer_B": "Ռայմոն Գութալս",
+          "answer_C": "Ալեքս Ֆերգյուսոն",
+          "answer_D": "Լուի վան Գալ",
+          "right_answer": "Ռայմոն Գութալս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_026"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_026"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_026"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_027",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Who became the owner of the UEFA Super Cup both as a coach and as a football player?",
+          "answer_A": "Zinedin Zidan, Josep Guardiola",
+          "answer_B": "Carlo Ancelotti, Luis Enrique",
+          "answer_C": "Diego Simeone, Zinedin Zidan",
+          "answer_D": "All",
+          "right_answer": "All"
+        },
+        "ru": {
+          "question": "Кто стал обладателем Суперкубка УЕФА и как тренер, и как футболист ?",
+          "answer_A": "Зинедин Зидан, Хосеп Гвардиола",
+          "answer_B": "Карло Анчелотти, Луис Енрике",
+          "answer_C": "Диего Симеоне, Зинедин Зидан",
+          "answer_D": "Все",
+          "right_answer": "Все"
+        },
+        "hy": {
+          "question": "Ովքեր՞ են նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը եվ որպես մարզիչ եվ որպես ֆուտբոլիստ:",
+          "answer_A": "Զինեդին Զիդան, Խոսեպ Գվարդիոլա",
+          "answer_B": "Կառլո Անչելոտի, Լուիս Էնրիկե",
+          "answer_C": "Դիեգո Սիմյոնե, Զինեդին Զիդան",
+          "answer_D": "Բոլորը",
+          "right_answer": "Բոլորը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_027"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_027"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_027"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_028",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Who became the author of the \"hat trick \" in the matches for the UEFA Super Cup?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Radamel Falcao",
+          "answer_D": "Gerd Müller",
+          "right_answer": "Radamel Falcao"
+        },
+        "ru": {
+          "question": "Кто стал автором \"хет трика\" в матчах за Суперкубок УЕФА ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Радамель Фалькао",
+          "answer_D": "Герд Мюллер",
+          "right_answer": "Радамель Фалькао"
+        },
+        "hy": {
+          "question": "Ո՞վ է ՈւԵՖԱ-ի Սուպեր գավաթի խաղերում դարձել \"հեթրիկ\"-ի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Ռադամել Ֆալկաո",
+          "answer_D": "Գերդ Մյուլլեր",
+          "right_answer": "Ռադամել Ֆալկաո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_028"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_028"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_028"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_029",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Who won the UEFA Super Cup the most?",
+          "answer_A": "Dani Carvajal, Luka Modrić",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Xavi",
+          "right_answer": "Dani Carvajal, Luka Modrić"
+        },
+        "ru": {
+          "question": "Кто больше всех стал обладателем Суперкубка УЕФА ?",
+          "answer_A": "Дани Карвахаль, Лука Модрич",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Лионель Месси",
+          "answer_D": "Чави",
+          "right_answer": "Дани Карвахаль, Лука Модрич"
+        },
+        "hy": {
+          "question": "Ո՞վ է ավելի շատ դարձել ՈւԵՖԱ-ի Սուպեր գավաթակիր:",
+          "answer_A": "Դանի Կարվախալ, Լուկա Մոդրիչ",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Լիոնել Մեսսի",
+          "answer_D": "Չավի",
+          "right_answer": "Դանի Կարվախալ, Լուկա Մոդրիչ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_029"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_029"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_029"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_030",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Who is the author of the fastest goal in UEFA Super Cup matches?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Diego Costa",
+          "answer_D": "Renato",
+          "right_answer": "Diego Costa"
+        },
+        "ru": {
+          "question": "Кто стал автором самого быстрого гола в матчах за Суперкубок УЕФА ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Диего Коста",
+          "answer_D": "Ренато",
+          "right_answer": "Диего Коста"
+        },
+        "hy": {
+          "question": "Ո՞վ է ՈւԵՖԱ-ի Սուպեր գավաթի խաղերում ամենաարագ գոլի հեղինակը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Դիեգո Կոստա",
+          "answer_D": "Ռենատո",
+          "right_answer": "Դիեգո Կոստա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_030"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_030"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_030"
+        }
+      }
+    },
+    {
+      "questionId": "super_cup_031",
+      "categoryType": "UEFA",
+      "type": "Super Cup",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Super Cup in 2024?",
+          "answer_A": "Atalanta",
+          "answer_B": "Real Madrid",
+          "answer_C": "Manchester City",
+          "answer_D": "Sevilla",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Суперкубок УЕФА в 2024 году?",
+          "answer_A": "Аталанта",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Севилья",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է հաղթել ՈՒԵՖԱ-ի Սուպերգավաթը 2024 թվականին:",
+          "answer_A": "Ատալանտա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Սևիլիա",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_031"
+        },
+        "de": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_031"
+        },
+        "it": {
+          "answer_A": "",
+          "answer_B": "",
+          "answer_C": "",
+          "answer_D": "",
+          "categoryType": "UEFA",
+          "question": "",
+          "right_answer": "",
+          "type": "Super Cup",
+          "answered": false,
+          "questionId": "super_cup_031"
+        }
+      }
+    }
+  ]
+}
