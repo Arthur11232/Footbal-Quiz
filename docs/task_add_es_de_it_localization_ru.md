@@ -1,6 +1,6 @@
 # Task: Spanish, German, Italian Localization
 
-Статус: Started.
+Статус: Phase 1-2 done, Phase 3 pending.
 
 Дата старта: 2026-09-08.
 
@@ -55,6 +55,8 @@ Base: `master` после merge rating prompt release `2.1.1`.
 
 Цель: добавить интерфейсные строки для `es`, `de`, `it`.
 
+Implementation status: базовый UI/resource layer добавлен для Spanish, German и Italian. В новые `values-es`, `values-de`, `values-it` намеренно не добавлены question arrays, потому что вопросы должны идти через отдельный audit/Firestore flow.
+
 Tasks:
 
 - создать `app/src/main/res/values-es/strings.xml`;
@@ -75,6 +77,8 @@ Acceptance criteria:
 ## Phase 2: Language Picker
 
 Цель: добавить новые языки в UI выбора языка.
+
+Implementation status: language picker расширен до 6 языков, а `StartPageFragment` теперь сохраняет locale codes `es`, `de`, `it` вместе с уже существующими `en`, `hy`, `ru`.
 
 Tasks:
 

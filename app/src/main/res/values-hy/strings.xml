@@ -7,6 +7,9 @@
     <string name="russian">Русский</string>
     <string name="english">English</string>
     <string name="armenian">Հայերեն</string>
+    <string name="spanish">Իսպաներեն</string>
+    <string name="german">Գերմաներեն</string>
+    <string name="italian">Իտալերեն</string>
     <string name="user">Օգտատեր</string>
     <string name="login_with_google">Մուտք Google-ով</string>
     <string name="loading">Բեռնում...</string>
