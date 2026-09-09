@@ -155,6 +155,112 @@ def validate_audit(
         raise ValueError(f"Audit validation failed:\n{preview}{suffix}")
 
 
+def build_items_by_question_id(
+    data: dict[str, list[dict[str, Any]]],
+    languages: list[str],
+) -> dict[str, dict[str, dict[str, Any]]]:
+    by_lang: dict[str, dict[str, dict[str, Any]]] = {}
+    for lang in languages:
+        language_items: dict[str, dict[str, Any]] = {}
+        for index, item in enumerate(data[lang]):
+            question_id = str(item.get(QUESTION_ID_FIELD, "")).strip()
+            if not question_id:
+                raise ValueError(f"{lang}[{index}] missing {QUESTION_ID_FIELD}")
+            if question_id in language_items:
+                raise ValueError(f"{lang} duplicate {QUESTION_ID_FIELD}: {question_id}")
+            language_items[question_id] = item
+        by_lang[lang] = language_items
+    return by_lang
+
+
+def validate_question_id_alignment(
+    data: dict[str, list[dict[str, Any]]],
+    languages: list[str],
+) -> None:
+    validate_audit(data, languages, require_question_id=True)
+    by_lang = build_items_by_question_id(data, languages)
+    base_lang = languages[0]
+    base_ids = set(by_lang[base_lang])
+
+    errors: list[str] = []
+    for lang in languages[1:]:
+        lang_ids = set(by_lang[lang])
+        missing = sorted(base_ids - lang_ids)
+        extra = sorted(lang_ids - base_ids)
+        if missing:
+            errors.append(f"{lang}: missing questionIds vs {base_lang}: {', '.join(missing[:20])}")
+        if extra:
+            errors.append(f"{lang}: extra questionIds vs {base_lang}: {', '.join(extra[:20])}")
+
+        for question_id in sorted(base_ids & lang_ids):
+            base_item = by_lang[base_lang][question_id]
+            lang_item = by_lang[lang][question_id]
+            for field in ("categoryType", "type"):
+                if str(base_item.get(field, "")).strip() != str(lang_item.get(field, "")).strip():
+                    errors.append(
+                        f"{lang}:{question_id} {field} mismatch: "
+                        f"{lang_item.get(field)!r} vs {base_lang}={base_item.get(field)!r}"
+                    )
+
+    if errors:
+        preview = "\n".join(errors[:25])
+        suffix = f"\n... and {len(errors) - 25} more" if len(errors) > 25 else ""
+        raise ValueError(f"QuestionId alignment failed:\n{preview}{suffix}")
+
+
+def compact_question_item(item: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "question": item.get("question", ""),
+        "answer_A": item.get("answer_A", ""),
+        "answer_B": item.get("answer_B", ""),
+        "answer_C": item.get("answer_C", ""),
+        "answer_D": item.get("answer_D", ""),
+        "right_answer": item.get("right_answer", ""),
+    }
+
+
+def empty_translation_item(reference: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "answer_A": "",
+        "answer_B": "",
+        "answer_C": "",
+        "answer_D": "",
+        "categoryType": reference.get("categoryType", ""),
+        "question": "",
+        "right_answer": "",
+        "type": reference.get("type", ""),
+        "answered": False,
+        QUESTION_ID_FIELD: reference.get(QUESTION_ID_FIELD, ""),
+    }
+
+
+def load_workbench(path: Path) -> dict[str, Any]:
+    with path.open("r", encoding="utf-8") as fh:
+        payload = json.load(fh)
+    if not isinstance(payload, dict) or not isinstance(payload.get("items"), list):
+        raise ValueError("translation workbench must be an object with an items array")
+    return payload
+
+
+def build_required_translation_item(raw: dict[str, Any], lang: str, question_id: str) -> dict[str, Any]:
+    item = {
+        "answer_A": raw.get("answer_A", ""),
+        "answer_B": raw.get("answer_B", ""),
+        "answer_C": raw.get("answer_C", ""),
+        "answer_D": raw.get("answer_D", ""),
+        "categoryType": raw.get("categoryType", ""),
+        "question": raw.get("question", ""),
+        "right_answer": raw.get("right_answer", ""),
+        "type": raw.get("type", ""),
+        "answered": bool(raw.get("answered", False)),
+        QUESTION_ID_FIELD: raw.get(QUESTION_ID_FIELD, question_id),
+    }
+    missing = [field for field in REQUIRED_FIELDS if not str(item.get(field, "")).strip()]
+    if missing:
+        raise ValueError(f"{lang}:{question_id} missing translation fields: {', '.join(missing)}")
+    return item
+
+
 def to_firestore_document(lang: str, item: dict[str, Any]) -> dict[str, Any]:
     payload = {
         "question": item["question"],
@@ -389,6 +495,122 @@ def command_question_id_status(args: argparse.Namespace) -> None:
         print()
 
 
+def command_validate_alignment(args: argparse.Namespace) -> None:
+    languages = parse_language_order(args.language_order)
+    data = load_audit(args.audit)
+    validate_question_id_alignment(data, languages)
+
+    counts = Counter()
+    for item in data[languages[0]]:
+        counts[str(item.get("type", "")).strip()] += 1
+
+    print("QuestionId alignment OK")
+    print(f"Audit: {args.audit}")
+    print(f"Languages: {', '.join(languages)}")
+    print(f"Questions per language: {len(data[languages[0]])}")
+    print("Category counts:")
+    for place, count in counts.items():
+        print(f"  {place}: {count}")
+
+
+def command_export_translation_workbench(args: argparse.Namespace) -> None:
+    source_languages = parse_language_order(args.source_languages)
+    target_languages = parse_language_order(args.target_languages)
+    data = load_audit(args.audit)
+    validate_question_id_alignment(data, source_languages)
+
+    by_lang = build_items_by_question_id(data, source_languages)
+    base_lang = source_languages[0]
+    items: list[dict[str, Any]] = []
+
+    for base_item in data[base_lang]:
+        question_id = str(base_item[QUESTION_ID_FIELD])
+        sources = {
+            lang: compact_question_item(by_lang[lang][question_id])
+            for lang in source_languages
+        }
+        items.append(
+            {
+                QUESTION_ID_FIELD: question_id,
+                "categoryType": base_item.get("categoryType", ""),
+                "type": base_item.get("type", ""),
+                "source": sources,
+                "targets": {
+                    lang: empty_translation_item(base_item)
+                    for lang in target_languages
+                },
+            }
+        )
+
+    payload = {
+        "source_audit": str(args.audit),
+        "source_languages": source_languages,
+        "target_languages": target_languages,
+        "status": "translation_needed",
+        "items": items,
+    }
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+    print(f"Wrote translation workbench to {args.output}")
+    print(f"Items: {len(items)}")
+    print(f"Source languages: {', '.join(source_languages)}")
+    print(f"Target languages: {', '.join(target_languages)}")
+
+
+def command_build_audit_from_workbench(args: argparse.Namespace) -> None:
+    source_languages = parse_language_order(args.source_languages)
+    target_languages = parse_language_order(args.target_languages)
+    all_languages = source_languages + target_languages
+
+    source_data = load_audit(args.source_audit)
+    validate_question_id_alignment(source_data, source_languages)
+
+    workbench = load_workbench(args.workbench)
+    workbench_items: dict[str, dict[str, Any]] = {}
+    for index, item in enumerate(workbench["items"]):
+        question_id = str(item.get(QUESTION_ID_FIELD, "")).strip()
+        if not question_id:
+            raise ValueError(f"workbench[{index}] missing {QUESTION_ID_FIELD}")
+        if question_id in workbench_items:
+            raise ValueError(f"workbench duplicate {QUESTION_ID_FIELD}: {question_id}")
+        workbench_items[question_id] = item
+
+    output_data: dict[str, list[dict[str, Any]]] = {
+        lang: source_data[lang] for lang in source_languages
+    }
+
+    for lang in target_languages:
+        output_data[lang] = []
+
+    base_lang = source_languages[0]
+    for source_item in source_data[base_lang]:
+        question_id = str(source_item[QUESTION_ID_FIELD])
+        workbench_item = workbench_items.get(question_id)
+        if workbench_item is None:
+            raise ValueError(f"workbench missing item for {question_id}")
+        targets = workbench_item.get("targets") or {}
+        for lang in target_languages:
+            raw_target = targets.get(lang)
+            if not isinstance(raw_target, dict):
+                raise ValueError(f"workbench {question_id} missing target language: {lang}")
+            output_data[lang].append(build_required_translation_item(raw_target, lang, question_id))
+
+    validate_question_id_alignment(output_data, all_languages)
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as fh:
+        json.dump(output_data, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+    print(f"Wrote audit to {args.output}")
+    print(f"Languages: {', '.join(all_languages)}")
+    print(f"Questions per language: {len(output_data[base_lang])}")
+
+
 def command_annotate_question_ids_from_resources(args: argparse.Namespace) -> None:
     data = load_audit(args.audit)
     languages = parse_language_order(args.languages)
@@ -574,6 +796,35 @@ def main() -> None:
     status_parser.add_argument("--audit", type=Path, default=DEFAULT_AUDIT_PATH)
     status_parser.add_argument("--language-order", default=DEFAULT_LANGUAGE_ORDER)
     status_parser.set_defaults(func=command_question_id_status)
+
+    validate_alignment_parser = subparsers.add_parser(
+        "validate-alignment",
+        help="Strictly validate that all requested languages align by questionId and category metadata",
+    )
+    validate_alignment_parser.add_argument("--audit", type=Path, default=DEFAULT_AUDIT_PATH)
+    validate_alignment_parser.add_argument("--language-order", default=DEFAULT_LANGUAGE_ORDER)
+    validate_alignment_parser.set_defaults(func=command_validate_alignment)
+
+    workbench_parser = subparsers.add_parser(
+        "export-translation-workbench",
+        help="Create a questionId-based translation workbench for target languages",
+    )
+    workbench_parser.add_argument("--audit", type=Path, default=DEFAULT_AUDIT_PATH)
+    workbench_parser.add_argument("--source-languages", default=DEFAULT_LANGUAGE_ORDER)
+    workbench_parser.add_argument("--target-languages", required=True)
+    workbench_parser.add_argument("--output", type=Path, required=True)
+    workbench_parser.set_defaults(func=command_export_translation_workbench)
+
+    build_audit_parser = subparsers.add_parser(
+        "build-audit-from-workbench",
+        help="Build a full audit JSON from a completed translation workbench",
+    )
+    build_audit_parser.add_argument("--source-audit", type=Path, required=True)
+    build_audit_parser.add_argument("--workbench", type=Path, required=True)
+    build_audit_parser.add_argument("--source-languages", default=DEFAULT_LANGUAGE_ORDER)
+    build_audit_parser.add_argument("--target-languages", required=True)
+    build_audit_parser.add_argument("--output", type=Path, required=True)
+    build_audit_parser.set_defaults(func=command_build_audit_from_workbench)
 
     annotate_parser = subparsers.add_parser(
         "annotate-question-ids-from-resources",

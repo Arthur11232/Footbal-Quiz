@@ -117,6 +117,31 @@ Implementation status: создан свежий read-only backup текущег
 app/questions_audit_backup_BEFORE_es_de_it_2026_09_09.json
 ```
 
+Также создан translation workbench для безопасного перевода новых языков:
+
+```text
+app/questions_translation_workbench_es_de_it_2026_09_09.json
+```
+
+Workbench построен от Firestore backup, а не от локального архивного `app/questions_audit.json`. В нём 689 items, каждый item содержит:
+
+- `questionId`;
+- `categoryType`;
+- `type`;
+- `source.en`;
+- `source.ru`;
+- `source.hy`;
+- пустые target-блоки `targets.es`, `targets.de`, `targets.it`.
+
+Перед сборкой финального audit-файла target-блоки должны быть заполнены переводами, а затем проверены через строгую `questionId` alignment validation.
+
+Добавлены новые команды в `tools/update_firestore_questions.py`:
+
+- `backup`: read-only export текущей Firestore коллекции в audit JSON;
+- `validate-alignment`: строгая проверка языков по `questionId`, `categoryType`, `type`, обязательным полям и валидности `right_answer`;
+- `export-translation-workbench`: подготовка рабочего файла для перевода target languages;
+- `build-audit-from-workbench`: сборка финального audit из заполненного workbench. Команда намеренно падает, если хотя бы один target-перевод пустой.
+
 Важно: свежий Firestore backup не полностью совпадает с локальным `app/questions_audit.json`, поэтому для `es/de/it` источником истины на этом этапе считается именно backup из Firestore, а `app/questions_audit.json` остаётся архивным локальным snapshot до отдельного решения.
 
 Краткая сверка backup vs local `questions_audit.json`:
@@ -169,6 +194,18 @@ Tasks:
 
 ```text
 python3 tools/update_firestore_questions.py backup --service-account tools/service-account.local.json --output app/questions_audit_backup_BEFORE_es_de_it_YYYY_MM_DD.json --language-order en,ru,hy --require-question-id
+```
+
+```text
+python3 tools/update_firestore_questions.py validate-alignment --audit app/questions_audit_backup_BEFORE_es_de_it_YYYY_MM_DD.json --language-order en,ru,hy
+```
+
+```text
+python3 tools/update_firestore_questions.py export-translation-workbench --audit app/questions_audit_backup_BEFORE_es_de_it_YYYY_MM_DD.json --source-languages en,ru,hy --target-languages es,de,it --output app/questions_translation_workbench_es_de_it_YYYY_MM_DD.json
+```
+
+```text
+python3 tools/update_firestore_questions.py build-audit-from-workbench --source-audit app/questions_audit_backup_BEFORE_es_de_it_YYYY_MM_DD.json --workbench app/questions_translation_workbench_es_de_it_YYYY_MM_DD.json --source-languages en,ru,hy --target-languages es,de,it --output app/questions_audit_es_de_it_2026_09_001.json
 ```
 
 ```text
