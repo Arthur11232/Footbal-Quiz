@@ -129,6 +129,12 @@ app/questions_translation_workbench_es_de_it_2026_09_09.json
 app/question_translation_batches_es_de_it_2026_09_09/
 ```
 
+Для ручного контроля создан отдельный draft-review файл:
+
+```text
+docs/es_de_it_translation_draft_review_ru.md
+```
+
 Состав batch-файлов:
 
 - `top5_france.json` — 66 items;
