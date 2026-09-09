@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Update Firestore `questions` from app/questions_audit.json.
+Back up and update Firestore `questions` from an audit JSON file.
 
 Recommended flow:
   1. Download a Firebase service account JSON from Firebase Console.
@@ -10,12 +10,18 @@ Recommended flow:
   4. Inspect current numeric Firestore docs:
        python3 tools/update_firestore_questions.py inspect \
          --service-account tools/service-account.local.json
-  5. Dry-run the update:
+  5. Back up current Firestore docs before any update:
+       python3 tools/update_firestore_questions.py backup \
+         --service-account tools/service-account.local.json \
+         --output app/questions_audit_backup_BEFORE_update.json \
+         --language-order en,ru,hy \
+         --require-question-id
+  6. Dry-run the update:
        python3 tools/update_firestore_questions.py update \
          --service-account tools/service-account.local.json \
          --language-order en,ru,hy \
          --dry-run
-  6. Apply:
+  7. Apply:
        python3 tools/update_firestore_questions.py update \
          --service-account tools/service-account.local.json \
          --language-order en,ru,hy \
@@ -57,6 +63,9 @@ QUESTION_ARRAY_BY_GROUP = {
     ("WORLD_CUP", "World Championship"): "world_cup_questions",
     ("RON_MES", "vsRM"): "ron_mes_questions",
     ("REAL_BARCE", "vsRB"): "real_barce_questions",
+}
+PLACE_CATEGORY_TYPE = {
+    place: category_type for (category_type, place) in QUESTION_ARRAY_BY_GROUP
 }
 
 
@@ -164,6 +173,26 @@ def to_firestore_document(lang: str, item: dict[str, Any]) -> dict[str, Any]:
     if question_id:
         payload[QUESTION_ID_FIELD] = question_id
     return payload
+
+
+def from_firestore_document(data: dict[str, Any]) -> dict[str, Any]:
+    answers = data.get("answers") or {}
+    place = str(data.get("place", "")).strip()
+    item = {
+        "answer_A": answers.get("a", ""),
+        "answer_B": answers.get("b", ""),
+        "answer_C": answers.get("c", ""),
+        "answer_D": answers.get("d", ""),
+        "categoryType": PLACE_CATEGORY_TYPE.get(place, ""),
+        "question": data.get("question", ""),
+        "right_answer": answers.get("right", ""),
+        "type": place,
+        "answered": bool(data.get("answered", False)),
+    }
+    question_id = str(data.get(QUESTION_ID_FIELD, "")).strip()
+    if question_id:
+        item[QUESTION_ID_FIELD] = question_id
+    return item
 
 
 def summarize_question_id_readiness(
@@ -293,6 +322,42 @@ def command_update(args: argparse.Namespace) -> None:
     db = init_firestore(args.service_account)
     commit_batches(db, args.collection, docs)
     print("Done.")
+
+
+def command_backup(args: argparse.Namespace) -> None:
+    languages = parse_language_order(args.language_order)
+    db = init_firestore(args.service_account)
+    snapshots = list(db.collection(args.collection).stream())
+
+    def doc_sort_key(snapshot: Any) -> tuple[int, str]:
+        doc_id = str(snapshot.id)
+        return (int(doc_id), doc_id) if doc_id.isdigit() else (sys.maxsize, doc_id)
+
+    grouped: dict[str, list[dict[str, Any]]] = {lang: [] for lang in languages}
+    ignored_docs: list[str] = []
+
+    for snapshot in sorted(snapshots, key=doc_sort_key):
+        payload = snapshot.to_dict() or {}
+        lang = str(payload.get("translation", "")).strip()
+        if lang not in grouped:
+            ignored_docs.append(snapshot.id)
+            continue
+        grouped[lang].append(from_firestore_document(payload))
+
+    validate_audit(grouped, languages, require_question_id=args.require_question_id)
+
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as fh:
+        json.dump(grouped, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+    print(f"Wrote Firestore backup to {args.output}")
+    for lang in languages:
+        print(f"{lang}: {len(grouped[lang])} questions")
+    if ignored_docs:
+        preview = ", ".join(ignored_docs[:20])
+        suffix = " ..." if len(ignored_docs) > 20 else ""
+        print(f"Ignored docs outside requested languages: {len(ignored_docs)} ({preview}{suffix})")
 
 
 def command_question_id_status(args: argparse.Namespace) -> None:
@@ -496,6 +561,14 @@ def main() -> None:
     update_parser.add_argument("--commit", action="store_true")
     update_parser.add_argument("--require-question-id", action="store_true")
     update_parser.set_defaults(func=command_update)
+
+    backup_parser = subparsers.add_parser("backup", help="Export current Firestore questions to audit JSON")
+    backup_parser.add_argument("--service-account", type=Path, required=True)
+    backup_parser.add_argument("--output", type=Path, required=True)
+    backup_parser.add_argument("--collection", default=DEFAULT_COLLECTION)
+    backup_parser.add_argument("--language-order", default=DEFAULT_LANGUAGE_ORDER)
+    backup_parser.add_argument("--require-question-id", action="store_true")
+    backup_parser.set_defaults(func=command_backup)
 
     status_parser = subparsers.add_parser("question-id-status", help="Report questionId readiness in audit JSON")
     status_parser.add_argument("--audit", type=Path, default=DEFAULT_AUDIT_PATH)

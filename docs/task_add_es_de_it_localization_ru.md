@@ -1,6 +1,6 @@
 # Task: Spanish, German, Italian Localization
 
-Статус: Phase 1-2 done, Phase 3 pending.
+Статус: Phase 1-2 done, Phase 3 started.
 
 Дата старта: 2026-09-08.
 
@@ -110,6 +110,23 @@ Acceptance criteria:
 ## Phase 3: Questions Catalog Preparation
 
 Цель: подготовить новые языки для Firestore без потери соответствия вопросов.
+
+Implementation status: создан свежий read-only backup текущего Firestore перед началом подготовки новых языков:
+
+```text
+app/questions_audit_backup_BEFORE_es_de_it_2026_09_09.json
+```
+
+Важно: свежий Firestore backup не полностью совпадает с локальным `app/questions_audit.json`, поэтому для `es/de/it` источником истины на этом этапе считается именно backup из Firestore, а `app/questions_audit.json` остаётся архивным локальным snapshot до отдельного решения.
+
+Краткая сверка backup vs local `questions_audit.json`:
+
+- `en`: отличается 116 items, в основном `France`, `Germany`, 1 item `vsRB`;
+- `ru`: отличается 45 items, в основном `France`, `Germany`, `Italy`, `English`, `Spain`;
+- `hy`: отличается 22 items, в основном `France`, `Germany`, плюс единичные `World Championship`, `Spain`, `Champions League`;
+- `questionId` sets совпадают во всех трёх языках;
+- duplicate `questionId` не найдено;
+- `right_answer` валиден внутри вариантов во всех трёх языках.
 
 Tasks:
 
@@ -252,4 +269,4 @@ Acceptance criteria:
 
 ## Current Next Step
 
-Начать с Phase 1: UI Localization scaffold и переводы интерфейсных строк.
+Подготовить `app/questions_audit_es_de_it_2026_09_001.json` от свежего Firestore backup, затем пройти validation/dry-run перед любой заливкой.
