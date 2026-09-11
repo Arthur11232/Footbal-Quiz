@@ -1,0 +1,4647 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "TOP5",
+  "type": "Germany",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "manual_ai_draft_needs_second_review",
+  "draft_translation": {
+    "provider": "Codex local manual draft",
+    "source_language": "en",
+    "target_languages": [
+      "es",
+      "de",
+      "it"
+    ],
+    "review_required": true,
+    "note": "Manual AI draft refined after review. Re-check fact/content corrections before applying to workbench or Firestore."
+  },
+  "items": [
+    {
+      "questionId": "germany_001",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who spent the most matches in the German national team?",
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Miroslav Klose",
+          "answer_C": "Philipp Lahm",
+          "answer_D": "Michael Ballack",
+          "right_answer": "Lothar Matthäus"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в сборной Германии ?",
+          "answer_A": "Лотар Матеус",
+          "answer_B": "Мирослав Клозе",
+          "answer_C": "Филипп Лам",
+          "answer_D": "Михаэль Баллак",
+          "right_answer": "Лотар Матеус"
+        },
+        "hy": {
+          "question": "Ո՞վ է Գերմանիայի հավաքականի կազմում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Լոթար Մատեուս",
+          "answer_B": "Միրոսլավ Քլոզե",
+          "answer_C": "Ֆիլիպ Լամ",
+          "answer_D": "Միխաել Բալակ",
+          "right_answer": "Լոթար Մատեուս"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Miroslav Klose",
+          "answer_C": "Philipp Lahm",
+          "answer_D": "Michael Ballack",
+          "categoryType": "TOP5",
+          "question": "¿Quién jugó más partidos con la selección alemana?",
+          "right_answer": "Lothar Matthäus",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_001"
+        },
+        "de": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Miroslav Klose",
+          "answer_C": "Philipp Lahm",
+          "answer_D": "Michael Ballack",
+          "categoryType": "TOP5",
+          "question": "Wer bestritt die meisten Spiele für die deutsche Nationalmannschaft?",
+          "right_answer": "Lothar Matthäus",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_001"
+        },
+        "it": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Miroslav Klose",
+          "answer_C": "Philipp Lahm",
+          "answer_D": "Michael Ballack",
+          "categoryType": "TOP5",
+          "question": "Chi ha giocato più partite con la nazionale tedesca?",
+          "right_answer": "Lothar Matthäus",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_001"
+        }
+      }
+    },
+    {
+      "questionId": "germany_002",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who is Germany's top scorer?",
+          "answer_A": "Gerhard Müller",
+          "answer_B": "Karl-Heinz Rummenigge",
+          "answer_C": "Miroslav Klose",
+          "answer_D": "Lukas Podolski",
+          "right_answer": "Miroslav Klose"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир сборной Германии ?",
+          "answer_A": "Герд Мюллер",
+          "answer_B": "Карл-Хайнц Румменигге",
+          "answer_C": "Мирослав Клозе",
+          "answer_D": "Лукас Подольски",
+          "right_answer": "Мирослав Клозе"
+        },
+        "hy": {
+          "question": "Ո՞վ է Գերմանիայի հավաքականի լավագույն ռմբարկուն:",
+          "answer_A": "Գերդ Մյուլլեր",
+          "answer_B": "Կառլ-Հայնց Ռումենիգե",
+          "answer_C": "Միրոսլավ Քլոզե",
+          "answer_D": "Լուկաս Պոդոլսկի",
+          "right_answer": "Միրոսլավ Քլոզե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Gerd Müller",
+          "answer_B": "Karl-Heinz Rummenigge",
+          "answer_C": "Miroslav Klose",
+          "answer_D": "Lukas Podolski",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador de la selección alemana?",
+          "right_answer": "Miroslav Klose",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_002"
+        },
+        "de": {
+          "answer_A": "Gerd Müller",
+          "answer_B": "Karl-Heinz Rummenigge",
+          "answer_C": "Miroslav Klose",
+          "answer_D": "Lukas Podolski",
+          "categoryType": "TOP5",
+          "question": "Wer ist der Rekordtorschütze der deutschen Nationalmannschaft?",
+          "right_answer": "Miroslav Klose",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_002"
+        },
+        "it": {
+          "answer_A": "Gerd Müller",
+          "answer_B": "Karl-Heinz Rummenigge",
+          "answer_C": "Miroslav Klose",
+          "answer_D": "Lukas Podolski",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore della nazionale tedesca?",
+          "right_answer": "Miroslav Klose",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_002"
+        }
+      }
+    },
+    {
+      "questionId": "germany_003",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which goalkeeper has played the most matches for the German national team?",
+          "answer_A": "Oliver Kahn",
+          "answer_B": "Manuel Neuer",
+          "answer_C": "Jens Lehmann",
+          "answer_D": "Sepp Maier",
+          "right_answer": "Manuel Neuer"
+        },
+        "ru": {
+          "question": "Какой вратарь провел больше всех матчей в сборной Германии ?",
+          "answer_A": "Оливер Кан",
+          "answer_B": "Мануэль Нойер",
+          "answer_C": "Йенс Леман",
+          "answer_D": "Зепп Майер",
+          "right_answer": "Мануэль Нойер"
+        },
+        "hy": {
+          "question": "Ո՞ր դարպասապահն է ավելի շատ խաղ անցկացրել Գերմանիայի հավաքականում:",
+          "answer_A": "Օլիվեր Կան",
+          "answer_B": "Մանուել Նոյեր",
+          "answer_C": "Յենս Լեման",
+          "answer_D": "Զեպպ Մայեր",
+          "right_answer": "Մանուել Նոյեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Oliver Kahn",
+          "answer_B": "Manuel Neuer",
+          "answer_C": "Jens Lehmann",
+          "answer_D": "Sepp Maier",
+          "categoryType": "TOP5",
+          "question": "¿Qué portero ha jugado más partidos con la selección alemana?",
+          "right_answer": "Manuel Neuer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_003"
+        },
+        "de": {
+          "answer_A": "Oliver Kahn",
+          "answer_B": "Manuel Neuer",
+          "answer_C": "Jens Lehmann",
+          "answer_D": "Sepp Maier",
+          "categoryType": "TOP5",
+          "question": "Welcher Torhüter bestritt die meisten Spiele für die deutsche Nationalmannschaft?",
+          "right_answer": "Manuel Neuer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_003"
+        },
+        "it": {
+          "answer_A": "Oliver Kahn",
+          "answer_B": "Manuel Neuer",
+          "answer_C": "Jens Lehmann",
+          "answer_D": "Sepp Maier",
+          "categoryType": "TOP5",
+          "question": "Quale portiere ha giocato più partite con la nazionale tedesca?",
+          "right_answer": "Manuel Neuer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_003"
+        }
+      }
+    },
+    {
+      "questionId": "germany_004",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many times did the German national team win the Confederation Cup?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Германии выиграла Кубок Конфедерации ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Գերմանիայի հավաքականը նվաճել Կոնֆեդերացիայի գավաթը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ganó la selección alemana la Copa Confederaciones?",
+          "right_answer": "1",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_004"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft gewann die deutsche Nationalmannschaft den Konföderationen-Pokal?",
+          "right_answer": "1",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_004"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale tedesca ha vinto la Confederations Cup?",
+          "right_answer": "1",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_004"
+        }
+      }
+    },
+    {
+      "questionId": "germany_005",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many times has the German national team become European champion?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "3"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Германии стала чемпионом Европы ?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "3"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Գերմանիայի հավաքականը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "3"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ha sido campeona de Europa la selección alemana?",
+          "right_answer": "3",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_005"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde die deutsche Nationalmannschaft Europameister?",
+          "right_answer": "3",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_005"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale tedesca è diventata campione d’Europa?",
+          "right_answer": "3",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_005"
+        }
+      }
+    },
+    {
+      "questionId": "germany_006",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many times has the German national team become World Champion?",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Германии стала чемпионом Мира ?",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Գերմանիայի հավաքականը նվաճել Աշխարհի առաջնության գավաթը:",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ha sido campeona del mundo la selección alemana?",
+          "right_answer": "4",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_006"
+        },
+        "de": {
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde die deutsche Nationalmannschaft Weltmeister?",
+          "right_answer": "4",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_006"
+        },
+        "it": {
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale tedesca è diventata campione del mondo?",
+          "right_answer": "4",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_006"
+        }
+      }
+    },
+    {
+      "questionId": "germany_007",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many times has the German national team won the Olympic gold medal?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Германии выиграла золотую медаль Олимпийских игр ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Գերմանիայի հավաքականը նվաճել Օլիմպիական խաղերի ոսկե մեդալը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ganó la selección alemana la medalla de oro olímpica?",
+          "right_answer": "0",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_007"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft gewann die deutsche Nationalmannschaft olympisches Gold?",
+          "right_answer": "0",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_007"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale tedesca ha vinto la medaglia d’oro olimpica?",
+          "right_answer": "0",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_007"
+        }
+      }
+    },
+    {
+      "questionId": "germany_008",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who was the opponent of the German national team in the first international match?",
+          "answer_A": "France",
+          "answer_B": "Belgium",
+          "answer_C": "Switzerland",
+          "answer_D": "Sweden",
+          "right_answer": "Switzerland"
+        },
+        "ru": {
+          "question": "Кто был соперником сборной Германии в первом международном матче ?",
+          "answer_A": "Франция",
+          "answer_B": "Бельгия",
+          "answer_C": "Швейцария",
+          "answer_D": "Швеция",
+          "right_answer": "Швейцария"
+        },
+        "hy": {
+          "question": "Ո՞վ է եղել Գերմանիայի հավաքականի մրցակիցը առաջին միջազգային հանդիպման ժամանակ:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Բելգիա",
+          "answer_C": "Շվեյցարիա",
+          "answer_D": "Շվեդիա",
+          "right_answer": "Շվեյցարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Bélgica",
+          "answer_C": "Suiza",
+          "answer_D": "Suecia",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el rival de la selección alemana en su primer partido internacional?",
+          "right_answer": "Suiza",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_008"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "Belgien",
+          "answer_C": "Schweiz",
+          "answer_D": "Schweden",
+          "categoryType": "TOP5",
+          "question": "Wer war der Gegner der deutschen Nationalmannschaft im ersten Länderspiel?",
+          "right_answer": "Schweiz",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_008"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Belgio",
+          "answer_C": "Svizzera",
+          "answer_D": "Svezia",
+          "categoryType": "TOP5",
+          "question": "Chi fu l’avversario della nazionale tedesca nella sua prima partita internazionale?",
+          "right_answer": "Svizzera",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_008"
+        }
+      }
+    },
+    {
+      "questionId": "germany_009",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "In what year did the German national team first participate in the World Cup?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1950",
+          "answer_D": "1958",
+          "right_answer": "1934"
+        },
+        "ru": {
+          "question": "В каком году сборная Германии впервые участвовала в чемпионате Мира ?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1950",
+          "answer_D": "1958",
+          "right_answer": "1934"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Գերմանիայի հավաքականը առաջին անգամ մասնակցել Աշխարհի առաջնությանը:",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1950",
+          "answer_D": "1958",
+          "right_answer": "1934"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1950",
+          "answer_D": "1958",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó por primera vez la selección alemana en la Copa del Mundo?",
+          "right_answer": "1934",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_009"
+        },
+        "de": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1950",
+          "answer_D": "1958",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm die deutsche Nationalmannschaft erstmals an der Weltmeisterschaft teil?",
+          "right_answer": "1934",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_009"
+        },
+        "it": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1950",
+          "answer_D": "1958",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale tedesca partecipò per la prima volta ai Mondiali?",
+          "right_answer": "1934",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_009"
+        }
+      }
+    },
+    {
+      "questionId": "germany_010",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "In what year did the German national team first participate in the European Championship?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1972"
+        },
+        "ru": {
+          "question": "В каком году сборная Германии впервые участвовала в чемпионате Европы ?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1972"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Գերմանիայի հավաքականը առաջին անգամ մասնակցել Եվրոպայի առաջնությանը:",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1972"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó por primera vez la selección alemana en la Eurocopa?",
+          "right_answer": "1972",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_010"
+        },
+        "de": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm die deutsche Nationalmannschaft erstmals an der Europameisterschaft teil?",
+          "right_answer": "1972",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_010"
+        },
+        "it": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale tedesca partecipò per la prima volta agli Europei?",
+          "right_answer": "1972",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_010"
+        }
+      }
+    },
+    {
+      "questionId": "germany_011",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which coach of the German national team became the champion of both the World and Europe?",
+          "answer_A": "Helmut Schön",
+          "answer_B": "Joachim Löw",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Erich Ribbeck",
+          "right_answer": "Helmut Schön"
+        },
+        "ru": {
+          "question": "Какой тренер сборной Германии стал чемпионом и Мира, и Европы ?",
+          "answer_A": "Гельмут Шон",
+          "answer_B": "Йоахим Льов",
+          "answer_C": "Франц Беккенбауэр",
+          "answer_D": "Эрих Рибек",
+          "right_answer": "Гельмут Шон"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է Գերմանիայի հավաքականի հետ նվաճել եվ Աշխարհի եվ Եվրոպայի առաջնությունների չեմպիոնի տիտղոսը:",
+          "answer_A": "Հելմուտ Շոն",
+          "answer_B": "Յոախիմ Լյով",
+          "answer_C": "Ֆրանց Բեկենբաուեր",
+          "answer_D": "Էրիխ Ռիբեկ",
+          "right_answer": "Հելմուտ Շոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Helmut Schön",
+          "answer_B": "Joachim Löw",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Erich Ribbeck",
+          "categoryType": "TOP5",
+          "question": "¿Qué entrenador de Alemania fue campeón del mundo y de Europa?",
+          "right_answer": "Helmut Schön",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_011"
+        },
+        "de": {
+          "answer_A": "Helmut Schön",
+          "answer_B": "Joachim Löw",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Erich Ribbeck",
+          "categoryType": "TOP5",
+          "question": "Welcher Bundestrainer wurde sowohl Welt- als auch Europameister?",
+          "right_answer": "Helmut Schön",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_011"
+        },
+        "it": {
+          "answer_A": "Helmut Schön",
+          "answer_B": "Joachim Löw",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Erich Ribbeck",
+          "categoryType": "TOP5",
+          "question": "Quale allenatore della Germania vinse sia il Mondiale sia l’Europeo?",
+          "right_answer": "Helmut Schön",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_011"
+        }
+      }
+    },
+    {
+      "questionId": "germany_012",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which player spent the most matches in a row in the German national team?",
+          "answer_A": "Miroslav Klose",
+          "answer_B": "Hans-Hubert Vogts",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Thomas Müller",
+          "right_answer": "Franz Beckenbauer"
+        },
+        "ru": {
+          "question": "Какой футболист провел подряд больше всех матчей в сборной Германии ?",
+          "answer_A": "Мирослав Клозе",
+          "answer_B": "Берти Фоггс",
+          "answer_C": "Франц Беккенбауэр",
+          "answer_D": "Томас Мюллер",
+          "right_answer": "Франц Беккенбауэр"
+        },
+        "hy": {
+          "question": "Գերմանիայի հավաքականի կազմում ո՞ր ֆուտբոլիստն է անընդմեջ ավելի շատ խաղ անցկացրել:",
+          "answer_A": "Միրոսլավ Քլոզե",
+          "answer_B": "Բերտի Ֆոգտս",
+          "answer_C": "Ֆրանց Բեկենբաուեր",
+          "answer_D": "Տոմաս Մյուլլեր",
+          "right_answer": "Ֆրանց Բեկենբաուեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Miroslav Klose",
+          "answer_B": "Hans-Hubert Vogts",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Thomas Müller",
+          "categoryType": "TOP5",
+          "question": "¿Qué jugador disputó más partidos consecutivos con la selección alemana?",
+          "right_answer": "Franz Beckenbauer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_012"
+        },
+        "de": {
+          "answer_A": "Miroslav Klose",
+          "answer_B": "Hans-Hubert Vogts",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Thomas Müller",
+          "categoryType": "TOP5",
+          "question": "Welcher Spieler bestritt die meisten Spiele in Folge für die deutsche Nationalmannschaft?",
+          "right_answer": "Franz Beckenbauer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_012"
+        },
+        "it": {
+          "answer_A": "Miroslav Klose",
+          "answer_B": "Hans-Hubert Vogts",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Thomas Müller",
+          "categoryType": "TOP5",
+          "question": "Quale giocatore disputò più partite consecutive con la nazionale tedesca?",
+          "right_answer": "Franz Beckenbauer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_012"
+        }
+      }
+    },
+    {
+      "questionId": "germany_013",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "What is Germany's highest-ever position in the FIFA ranking?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Самое высокое место сборной Германии в рейтинге ФИФА за всю историю.",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Ո՞րն է FIFA-ի դասակարգման աղյուսակում Գերմանիայի հավաքականի զբաղեցրած ամենաբարձր հորիզոնականը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "¿Cuál es la posición más alta de Alemania en el ranking FIFA?",
+          "right_answer": "1",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_013"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Was ist die höchste Platzierung Deutschlands in der FIFA-Weltrangliste?",
+          "right_answer": "1",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_013"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Qual è la posizione più alta raggiunta dalla Germania nel ranking FIFA?",
+          "right_answer": "1",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_013"
+        }
+      }
+    },
+    {
+      "questionId": "germany_014",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Against whom did Germany suffer the biggest defeat in its history?",
+          "answer_A": "Brazil",
+          "answer_B": "Switzerland",
+          "answer_C": "England",
+          "answer_D": "Italy",
+          "right_answer": "England"
+        },
+        "ru": {
+          "question": "С самым крупным счетом в своей истории сборная Германии проиграла …",
+          "answer_A": "Бразилии",
+          "answer_B": "Швейцарии",
+          "answer_C": "Англии",
+          "answer_D": "Италии",
+          "right_answer": "Англии"
+        },
+        "hy": {
+          "question": "Գերմանիայի հավաքականը իր պատմության մեջ ամենախոշոր հաշվով պարտվել է …",
+          "answer_A": "Բրազիլիային",
+          "answer_B": "Շվեյցարիային",
+          "answer_C": "Անգլիային",
+          "answer_D": "Իտալիային",
+          "right_answer": "Անգլիային"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Suiza",
+          "answer_C": "Inglaterra",
+          "answer_D": "Italia",
+          "categoryType": "TOP5",
+          "question": "¿Contra quién sufrió Alemania la mayor derrota de su historia?",
+          "right_answer": "Inglaterra",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_014"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Schweiz",
+          "answer_C": "England",
+          "answer_D": "Italien",
+          "categoryType": "TOP5",
+          "question": "Gegen wen kassierte Deutschland die höchste Niederlage seiner Geschichte?",
+          "right_answer": "England",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_014"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Svizzera",
+          "answer_C": "Inghilterra",
+          "answer_D": "Italia",
+          "categoryType": "TOP5",
+          "question": "Contro chi subì la Germania la sconfitta più pesante della sua storia?",
+          "right_answer": "Inghilterra",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_014"
+        }
+      }
+    },
+    {
+      "questionId": "germany_015",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "In what year did the German national team first become the World Champion?",
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1954",
+          "answer_D": "1970",
+          "right_answer": "1954"
+        },
+        "ru": {
+          "question": "В каком году сборная Германии впервые стала чемпионом Мира ?",
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1954",
+          "answer_D": "1970",
+          "right_answer": "1954"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Գերմանիայի հավաքականը առաջին անգամ նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1954",
+          "answer_D": "1970",
+          "right_answer": "1954"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1954",
+          "answer_D": "1970",
+          "categoryType": "TOP5",
+          "question": "¿En qué año fue campeona del mundo por primera vez la selección alemana?",
+          "right_answer": "1954",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_015"
+        },
+        "de": {
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1954",
+          "answer_D": "1970",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde die deutsche Nationalmannschaft erstmals Weltmeister?",
+          "right_answer": "1954",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_015"
+        },
+        "it": {
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1954",
+          "answer_D": "1970",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale tedesca diventò per la prima volta campione del mondo?",
+          "right_answer": "1954",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_015"
+        }
+      }
+    },
+    {
+      "questionId": "germany_016",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "In what year did the German national team first become European champion?",
+          "answer_A": "1968",
+          "answer_B": "1972",
+          "answer_C": "1976",
+          "answer_D": "1980",
+          "right_answer": "1972"
+        },
+        "ru": {
+          "question": "В каком году сборная Германии впервые стала чемпионом Европы ?",
+          "answer_A": "1968",
+          "answer_B": "1972",
+          "answer_C": "1976",
+          "answer_D": "1980",
+          "right_answer": "1972"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Գերմանիայի հավաքականը առաջին անգամ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1968",
+          "answer_B": "1972",
+          "answer_C": "1976",
+          "answer_D": "1980",
+          "right_answer": "1972"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1968",
+          "answer_B": "1972",
+          "answer_C": "1976",
+          "answer_D": "1980",
+          "categoryType": "TOP5",
+          "question": "¿En qué año fue campeona de Europa por primera vez la selección alemana?",
+          "right_answer": "1972",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_016"
+        },
+        "de": {
+          "answer_A": "1968",
+          "answer_B": "1972",
+          "answer_C": "1976",
+          "answer_D": "1980",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde die deutsche Nationalmannschaft erstmals Europameister?",
+          "right_answer": "1972",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_016"
+        },
+        "it": {
+          "answer_A": "1968",
+          "answer_B": "1972",
+          "answer_C": "1976",
+          "answer_D": "1980",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale tedesca diventò per la prima volta campione d’Europa?",
+          "right_answer": "1972",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_016"
+        }
+      }
+    },
+    {
+      "questionId": "germany_017",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "The most titled club in the championship of Germany …",
+          "answer_A": "Hamburg",
+          "answer_B": "Bayern",
+          "answer_C": "Hertha",
+          "answer_D": "Schalke-04",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "Самый титулованный клуб в чемпионате Германии …",
+          "answer_A": "Гамбург",
+          "answer_B": "Бавария",
+          "answer_C": "Герта",
+          "answer_D": "Шалке-04",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Ո՞րն է Գերմանիայի առաջնության ամենատիտղոսակիր ակումբը:",
+          "answer_A": "Համբուրգ",
+          "answer_B": "Բավարիա",
+          "answer_C": "Հերտա",
+          "answer_D": "Շալկե-04",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Hamburgo",
+          "answer_B": "Bayern Múnich",
+          "answer_C": "Hertha",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "El club más laureado del campeonato alemán es…",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_017"
+        },
+        "de": {
+          "answer_A": "Hamburger SV",
+          "answer_B": "Bayern München",
+          "answer_C": "Hertha BSC",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Der erfolgreichste Verein der deutschen Meisterschaft ist…",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_017"
+        },
+        "it": {
+          "answer_A": "Amburgo",
+          "answer_B": "Bayern Monaco",
+          "answer_C": "Hertha",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Il club più titolato del campionato tedesco è…",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_017"
+        }
+      }
+    },
+    {
+      "questionId": "germany_018",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the first championship of Germany?",
+          "answer_A": "VfB Leipzig",
+          "answer_B": "Karlsruhe",
+          "answer_C": "Berliner Victoria",
+          "answer_D": "Hamburg",
+          "right_answer": "VfB Leipzig"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл первый чемпионат Германии ?",
+          "answer_A": "ВФБ Лейпциг",
+          "answer_B": "Карлсруэ",
+          "answer_C": "Виктория Берлин",
+          "answer_D": "Гамбург",
+          "right_answer": "ВФБ Лейпциг"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Գերմանիայի առաջին առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "VfB Լայպցիգ",
+          "answer_B": "Կառլսռուե",
+          "answer_C": "Վիկտորիա Բեռլին",
+          "answer_D": "Համբուրգ",
+          "right_answer": "VfB Լայպցիգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "VfB Leipzig",
+          "answer_B": "Karlsruhe",
+          "answer_C": "Berliner Victoria",
+          "answer_D": "Hamburgo",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el primer campeonato de Alemania?",
+          "right_answer": "VfB Leipzig",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_018"
+        },
+        "de": {
+          "answer_A": "VfB Leipzig",
+          "answer_B": "Karlsruhe",
+          "answer_C": "Berliner Victoria",
+          "answer_D": "Hamburger SV",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann die erste deutsche Meisterschaft?",
+          "right_answer": "VfB Leipzig",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_018"
+        },
+        "it": {
+          "answer_A": "VfB Leipzig",
+          "answer_B": "Karlsruhe",
+          "answer_C": "Berliner Victoria",
+          "answer_D": "Amburgo",
+          "categoryType": "TOP5",
+          "question": "Quale club vinse il primo campionato tedesco?",
+          "right_answer": "VfB Leipzig",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_018"
+        }
+      }
+    },
+    {
+      "questionId": "germany_019",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many clubs perform in the Bundesliga?",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "All options are wrong",
+          "right_answer": "18"
+        },
+        "ru": {
+          "question": "Сколько клубов выступают в Бундеслиге ?",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "Все варианты неправильны",
+          "right_answer": "18"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է հանդես գալիս Բունդեսլիգայում:",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "Բոլոր տարբերակները սխալ են",
+          "right_answer": "18"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "Todas las opciones son incorrectas",
+          "categoryType": "TOP5",
+          "question": "¿Cuántos clubes juegan en la Bundesliga?",
+          "right_answer": "18",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_019"
+        },
+        "de": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "Alle Optionen sind falsch",
+          "categoryType": "TOP5",
+          "question": "Wie viele Vereine spielen in der Bundesliga?",
+          "right_answer": "18",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_019"
+        },
+        "it": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "Tutte le opzioni sono sbagliate",
+          "categoryType": "TOP5",
+          "question": "Quanti club giocano in Bundesliga?",
+          "right_answer": "18",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_019"
+        }
+      }
+    },
+    {
+      "questionId": "germany_020",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the German championship the most?",
+          "answer_A": "Borussia",
+          "answer_B": "Greuther Fürth",
+          "answer_C": "Hamburg",
+          "answer_D": "Nürnberg",
+          "right_answer": "Nürnberg"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл чемпионат Германии ?",
+          "answer_A": "Боруссия Д",
+          "answer_B": "Гройтер-Фюрт",
+          "answer_C": "Гамбург",
+          "answer_D": "Нюрнберг",
+          "right_answer": "Нюрнберг"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է բոլորից շատ նվաճել Գերմանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Բորուսիա Դ",
+          "answer_B": "Գրոյտեր-Ֆյուրտ",
+          "answer_C": "Համբուրգ",
+          "answer_D": "Նյուրնբերգ",
+          "right_answer": "Նյուրնբերգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Greuther Fürth",
+          "answer_C": "Hamburgo",
+          "answer_D": "Nürnberg",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ganó más veces el campeonato alemán?",
+          "right_answer": "Nürnberg",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_020"
+        },
+        "de": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Greuther Fürth",
+          "answer_C": "Hamburger SV",
+          "answer_D": "Nürnberg",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine gewann die deutsche Meisterschaft am häufigsten?",
+          "right_answer": "Nürnberg",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_020"
+        },
+        "it": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Greuther Fürth",
+          "answer_C": "Amburgo",
+          "answer_D": "Norimberga",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte il campionato tedesco?",
+          "right_answer": "Norimberga",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_020"
+        }
+      }
+    },
+    {
+      "questionId": "germany_021",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club has never won a German championship?",
+          "answer_A": "RB Leipzig",
+          "answer_B": "Hannover 96",
+          "answer_C": "Hertha",
+          "answer_D": "Köln",
+          "right_answer": "RB Leipzig"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал чемпионат Германии ?",
+          "answer_A": "РБ Лейпциг",
+          "answer_B": "Ганновер 96",
+          "answer_C": "Герта",
+          "answer_D": "Кельн",
+          "right_answer": "РБ Лейпциг"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը երբեք չի նվաճել Գերմանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "ՌԲ Լայպցիգ",
+          "answer_B": "Հանովեր 96",
+          "answer_C": "Հերտա",
+          "answer_D": "Քյոլն",
+          "right_answer": "ՌԲ Լայպցիգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "RB Leipzig",
+          "answer_B": "Hannover 96",
+          "answer_C": "Hertha",
+          "answer_D": "Colonia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ganó el campeonato alemán?",
+          "right_answer": "RB Leipzig",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_021"
+        },
+        "de": {
+          "answer_A": "RB Leipzig",
+          "answer_B": "Hannover 96",
+          "answer_C": "Hertha BSC",
+          "answer_D": "Köln",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann nie die deutsche Meisterschaft?",
+          "right_answer": "RB Leipzig",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_021"
+        },
+        "it": {
+          "answer_A": "RB Lipsia",
+          "answer_B": "Hannover 96",
+          "answer_C": "Hertha",
+          "answer_D": "Colonia",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto il campionato tedesco?",
+          "right_answer": "RB Lipsia",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_021"
+        }
+      }
+    },
+    {
+      "questionId": "germany_022",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who is the Bundesliga's top scorer?",
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Josef Heynckes",
+          "answer_C": "Gerhard Müller",
+          "answer_D": "Claudio Pizarro",
+          "right_answer": "Gerhard Müller"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Бундеслиги ?",
+          "answer_A": "Роберт Левандовски",
+          "answer_B": "Юпп Хайнкес",
+          "answer_C": "Герд Мюллер",
+          "answer_D": "Клаудио Писарро",
+          "right_answer": "Герд Мюллер"
+        },
+        "hy": {
+          "question": "Ո՞վ է Բունդեսլիգայի լավագույն ռմբարկուն:",
+          "answer_A": "Ռոբերտ Լեվանդովսկի",
+          "answer_B": "Յուպպ Հայնկես",
+          "answer_C": "Գերդ Մյուլլեր",
+          "answer_D": "Կլաուդիո Պիսսարո",
+          "right_answer": "Գերդ Մյուլլեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Jupp Heynckes",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Claudio Pizarro",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de la Bundesliga?",
+          "right_answer": "Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_022"
+        },
+        "de": {
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Jupp Heynckes",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Claudio Pizarro",
+          "categoryType": "TOP5",
+          "question": "Wer ist der Rekordtorschütze der Bundesliga?",
+          "right_answer": "Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_022"
+        },
+        "it": {
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Jupp Heynckes",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Claudio Pizarro",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di sempre della Bundesliga?",
+          "right_answer": "Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_022"
+        }
+      }
+    },
+    {
+      "questionId": "germany_023",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which clubs did Josef Heynckes perform in?",
+          "answer_A": "Hannover 96, Borussia Verein",
+          "answer_B": "Bayern, Borussia",
+          "answer_C": "Hannover 96, Bayern",
+          "answer_D": "Köln, Borussia Verein",
+          "right_answer": "Hannover 96, Borussia Verein"
+        },
+        "ru": {
+          "question": "В каких клубах выступал Юпп Хайнкес ?",
+          "answer_A": "Ганновер 96, Боруссия М",
+          "answer_B": "Бавария, Боруссия Д",
+          "answer_C": "Ганновер 96, Бавария",
+          "answer_D": "Кельн, Боруссия М",
+          "right_answer": "Ганновер 96, Боруссия М"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբներում է հանդես եկել Յուպպ Հայնկեսը:",
+          "answer_A": "Հանովեր 96, Բորուսիա Մ",
+          "answer_B": "Բավարիա, Բորուսիա Դ",
+          "answer_C": "Հանովեր 96, Բավարիա",
+          "answer_D": "Քյոլն, Բորուսիա Մ",
+          "right_answer": "Հանովեր 96, Բորուսիա Մ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Hannover 96, Borussia Mönchengladbach",
+          "answer_B": "Bayern Múnich, Borussia Dortmund",
+          "answer_C": "Hannover 96, Bayern Múnich",
+          "answer_D": "Colonia, Borussia Mönchengladbach",
+          "categoryType": "TOP5",
+          "question": "¿En qué clubes jugó Jupp Heynckes?",
+          "right_answer": "Hannover 96, Borussia Mönchengladbach",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_023"
+        },
+        "de": {
+          "answer_A": "Hannover 96, Borussia Mönchengladbach",
+          "answer_B": "Bayern München, Borussia Dortmund",
+          "answer_C": "Hannover 96, Bayern München",
+          "answer_D": "Köln, Borussia Mönchengladbach",
+          "categoryType": "TOP5",
+          "question": "Für welche Vereine spielte Jupp Heynckes?",
+          "right_answer": "Hannover 96, Borussia Mönchengladbach",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_023"
+        },
+        "it": {
+          "answer_A": "Hannover 96, Borussia Mönchengladbach",
+          "answer_B": "Bayern Monaco, Borussia Dortmund",
+          "answer_C": "Hannover 96, Bayern Monaco",
+          "answer_D": "Colonia, Borussia Mönchengladbach",
+          "categoryType": "TOP5",
+          "question": "In quali club giocò Jupp Heynckes?",
+          "right_answer": "Hannover 96, Borussia Mönchengladbach",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_023"
+        }
+      }
+    },
+    {
+      "questionId": "germany_024",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club (s) did Gerd Müller perform in?",
+          "answer_A": "Borussia, Bayern",
+          "answer_B": "Bayern",
+          "answer_C": "Schalke-04, Bayern",
+          "answer_D": "Borussia",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "В каком клубе (клубах) выступал Герд Мюллер ?",
+          "answer_A": "Боруссия Д, Бавария",
+          "answer_B": "Бавария",
+          "answer_C": "Шалке-04, Бавария",
+          "answer_D": "Боруссия Д",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում կամ ակումբներում է հանդես եկել Գերդ Մյուլլերը:",
+          "answer_A": "Բորուսիա Դ, Բավարիա",
+          "answer_B": "Բավարիա",
+          "answer_C": "Շալկե-04, Բավարիա",
+          "answer_D": "Բորուսիա Դ",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Borussia Dortmund, Bayern Múnich",
+          "answer_B": "Bayern Múnich",
+          "answer_C": "Schalke 04, Bayern Múnich",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "¿En qué club jugó Gerd Müller?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_024"
+        },
+        "de": {
+          "answer_A": "Borussia Dortmund, Bayern München",
+          "answer_B": "Bayern München",
+          "answer_C": "Schalke 04, Bayern München",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Für welchen Verein spielte Gerd Müller?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_024"
+        },
+        "it": {
+          "answer_A": "Borussia Dortmund, Bayern Monaco",
+          "answer_B": "Bayern Monaco",
+          "answer_C": "Schalke 04, Bayern Monaco",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "In quale club giocò Gerd Müller?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_024"
+        }
+      }
+    },
+    {
+      "questionId": "germany_025",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club did Oliver Kahn play for?",
+          "answer_A": "Karlsruher",
+          "answer_B": "Hannover 96",
+          "answer_C": "Kaiserslautern",
+          "answer_D": "Hamburg",
+          "right_answer": "Karlsruher"
+        },
+        "ru": {
+          "question": "В каком клубе выступал Оливер Кан ?",
+          "answer_A": "Карлсруэ",
+          "answer_B": "Ганновер 96",
+          "answer_C": "Кайзерслаутерн",
+          "answer_D": "Гамбург",
+          "right_answer": "Карлсруэ"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում է հանդես եկել Օլիվեր Կանը:",
+          "answer_A": "Կառլսռուե",
+          "answer_B": "Հանովեր 96",
+          "answer_C": "Կայզերսլաուտեռն",
+          "answer_D": "Համբուրգ",
+          "right_answer": "Կառլսռուե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Karlsruher",
+          "answer_B": "Hannover 96",
+          "answer_C": "Kaiserslautern",
+          "answer_D": "Hamburgo",
+          "categoryType": "TOP5",
+          "question": "¿En qué club jugó Oliver Kahn?",
+          "right_answer": "Karlsruher",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_025"
+        },
+        "de": {
+          "answer_A": "Karlsruher SC",
+          "answer_B": "Hannover 96",
+          "answer_C": "Kaiserslautern",
+          "answer_D": "Hamburger SV",
+          "categoryType": "TOP5",
+          "question": "Für welchen Verein spielte Oliver Kahn?",
+          "right_answer": "Karlsruher SC",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_025"
+        },
+        "it": {
+          "answer_A": "Karlsruher",
+          "answer_B": "Hannover 96",
+          "answer_C": "Kaiserslautern",
+          "answer_D": "Amburgo",
+          "categoryType": "TOP5",
+          "question": "In quale club giocò Oliver Kahn?",
+          "right_answer": "Karlsruher",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_025"
+        }
+      }
+    },
+    {
+      "questionId": "germany_026",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which Bayern footballer won Germany's Footballer of the Year award the most?",
+          "answer_A": "Gerd Müller",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Karl-Heinz Rummenigge",
+          "answer_D": "Oliver Kahn",
+          "right_answer": "Franz Beckenbauer"
+        },
+        "ru": {
+          "question": "Кто из футболистов Баварии больше всех победил в номинации \"Футболист года\" Германии ?",
+          "answer_A": "Герд Мюллер",
+          "answer_B": "Франц Беккенбауэр",
+          "answer_C": "Карл-Хайнц Румменигге",
+          "answer_D": "Оливер Кан",
+          "right_answer": "Франц Беккенбауэр"
+        },
+        "hy": {
+          "question": "Բավարիայի ո՞ր ֆուտբոլիստն է բոլորից շատ դարձել Գերմանիայի \"Տարվա ֆուտբոլիստ\" մրցանակի դափնեկիր:",
+          "answer_A": "Գերդ Մյուլլեր",
+          "answer_B": "Ֆրանց Բեկենբաուեր",
+          "answer_C": "Կառլ-Հայնց Ռումենիգե",
+          "answer_D": "Օլիվեր Կան",
+          "right_answer": "Ֆրանց Բեկենբաուեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Gerd Müller",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Karl-Heinz Rummenigge",
+          "answer_D": "Oliver Kahn",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista del Bayern ganó más veces el premio al Futbolista del Año en Alemania?",
+          "right_answer": "Franz Beckenbauer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_026"
+        },
+        "de": {
+          "answer_A": "Gerd Müller",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Karl-Heinz Rummenigge",
+          "answer_D": "Oliver Kahn",
+          "categoryType": "TOP5",
+          "question": "Welcher Bayern-Spieler wurde am häufigsten Deutschlands Fußballer des Jahres?",
+          "right_answer": "Franz Beckenbauer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_026"
+        },
+        "it": {
+          "answer_A": "Gerd Müller",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Karl-Heinz Rummenigge",
+          "answer_D": "Oliver Kahn",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore del Bayern ha vinto più volte il premio di Calciatore tedesco dell’anno?",
+          "right_answer": "Franz Beckenbauer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_026"
+        }
+      }
+    },
+    {
+      "questionId": "germany_027",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which Bayern footballers won the Ballon d’Or twice?",
+          "answer_A": "Gerhard Müller, Franz Beckenbauer",
+          "answer_B": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "answer_C": "Karl-Heinz Rummenigge, Gerhard Müller",
+          "answer_D": "Nobody succeeded",
+          "right_answer": "Franz Beckenbauer, Karl-Heinz Rummenigge"
+        },
+        "ru": {
+          "question": "Какие футболисты Баварии выиграли «Золотой мяч» дважды?",
+          "answer_A": "Герд Мюллер, Франц Беккенбауэр",
+          "answer_B": "Франц Беккенбауэр, Карл-Хайнц Румменигге",
+          "answer_C": "Карл-Хайнц Румменигге, Герд Мюллер",
+          "answer_D": "Никому не удалось",
+          "right_answer": "Франц Беккенбауэр, Карл-Хайнц Румменигге"
+        },
+        "hy": {
+          "question": "Բավարիայի ո՞ր ֆուտբոլիստներն են երկու անգամ նվաճել «Ոսկե գնդակը»:",
+          "answer_A": "Գերդ Մյուլլեր, Ֆրանց Բեկենբաուեր",
+          "answer_B": "Ֆրանց Բեկենբաուեր, Կառլ-Հայնց Ռումենիգե",
+          "answer_C": "Կառլ-Հայնց Ռումենիգե, Գերդ Մյուլլեր",
+          "answer_D": "Ոչ մեկին չի հաջողվել",
+          "right_answer": "Ֆրանց Բեկենբաուեր, Կառլ-Հայնց Ռումենիգե"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Gerd Müller, Franz Beckenbauer",
+          "answer_B": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "answer_C": "Karl-Heinz Rummenigge, Gerd Müller",
+          "answer_D": "Nadie lo consiguió",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolistas del Bayern ganaron el Balón de Oro en dos ocasiones?",
+          "right_answer": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_027"
+        },
+        "de": {
+          "answer_A": "Gerd Müller, Franz Beckenbauer",
+          "answer_B": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "answer_C": "Karl-Heinz Rummenigge, Gerd Müller",
+          "answer_D": "Niemand schaffte es",
+          "categoryType": "TOP5",
+          "question": "Welche Bayern-Spieler gewannen den Ballon d’Or zweimal?",
+          "right_answer": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_027"
+        },
+        "it": {
+          "answer_A": "Gerd Müller, Franz Beckenbauer",
+          "answer_B": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "answer_C": "Karl-Heinz Rummenigge, Gerd Müller",
+          "answer_D": "Nessuno ci riuscì",
+          "categoryType": "TOP5",
+          "question": "Quali calciatori del Bayern vinsero il Pallone d’Oro due volte?",
+          "right_answer": "Franz Beckenbauer, Karl-Heinz Rummenigge",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_027"
+        }
+      }
+    },
+    {
+      "questionId": "germany_028",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which of the Borussia D players won \"Golden Ball \"?",
+          "answer_A": "Hans Tilkowski",
+          "answer_B": "Jürgen Kohler",
+          "answer_C": "Matthias Sammer",
+          "answer_D": "Nobody",
+          "right_answer": "Matthias Sammer"
+        },
+        "ru": {
+          "question": "Кто из футболистов Боруссии Д стал обладателем \"Золотого мяча\" ?",
+          "answer_A": "Ганс Тальковски",
+          "answer_B": "Юрген Колер",
+          "answer_C": "Маттиас Заммер",
+          "answer_D": "Никто",
+          "right_answer": "Маттиас Заммер"
+        },
+        "hy": {
+          "question": "Դորտմունդի Բորուսիայի ո՞ր ֆուտբոլիստն է դարձել \"Ոսկե գնդակի\" դափնեկիր:",
+          "answer_A": "Հանս Տալկովսկի",
+          "answer_B": "Յուրգեն Կոլլեր",
+          "answer_C": "Մատիաս Զամմեր",
+          "answer_D": "Ոչ ոք",
+          "right_answer": "Մատիաս Զամմեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Hans Tilkowski",
+          "answer_B": "Jürgen Kohler",
+          "answer_C": "Matthias Sammer",
+          "answer_D": "Nadie",
+          "categoryType": "TOP5",
+          "question": "¿Qué jugador del Borussia Dortmund ganó el Balón de Oro?",
+          "right_answer": "Matthias Sammer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_028"
+        },
+        "de": {
+          "answer_A": "Hans Tilkowski",
+          "answer_B": "Jürgen Kohler",
+          "answer_C": "Matthias Sammer",
+          "answer_D": "Niemand",
+          "categoryType": "TOP5",
+          "question": "Welcher Spieler von Borussia Dortmund gewann den Ballon d’Or?",
+          "right_answer": "Matthias Sammer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_028"
+        },
+        "it": {
+          "answer_A": "Hans Tilkowski",
+          "answer_B": "Jürgen Kohler",
+          "answer_C": "Matthias Sammer",
+          "answer_D": "Nessuno",
+          "categoryType": "TOP5",
+          "question": "Quale giocatore del Borussia Dortmund vinse il Pallone d’Oro?",
+          "right_answer": "Matthias Sammer",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_028"
+        }
+      }
+    },
+    {
+      "questionId": "germany_029",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who in the season 2018–2019 became the best assistant to the Bundesliga?",
+          "answer_A": "Jadon Sancho",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Thorgan Hazard",
+          "answer_D": "Julian Brandt",
+          "right_answer": "Jadon Sancho"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал лучшим ассистентом Бундеслиги?",
+          "answer_A": "Джейдон Санчо",
+          "answer_B": "Йозуа Киммих",
+          "answer_C": "Торган Азар",
+          "answer_D": "Юлиан Брандт",
+          "right_answer": "Джейдон Санчо"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018–2019 թթ. Բունդեսլիգայի ամենաշատ գոլային փոխանցումների հեղինակը:",
+          "answer_A": "Ջեյդոն Սանչո",
+          "answer_B": "Յոզուա Կիմիխ",
+          "answer_C": "Տորգան Ազար",
+          "answer_D": "Յուլիան Բրանդտ",
+          "right_answer": "Ջեյդոն Սանչո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Jadon Sancho",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Thorgan Hazard",
+          "answer_D": "Julian Brandt",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el máximo asistente de la Bundesliga en la temporada 2018–2019?",
+          "right_answer": "Jadon Sancho",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_029"
+        },
+        "de": {
+          "answer_A": "Jadon Sancho",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Thorgan Hazard",
+          "answer_D": "Julian Brandt",
+          "categoryType": "TOP5",
+          "question": "Wer war in der Saison 2018–2019 der beste Vorlagengeber der Bundesliga?",
+          "right_answer": "Jadon Sancho",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_029"
+        },
+        "it": {
+          "answer_A": "Jadon Sancho",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Thorgan Hazard",
+          "answer_D": "Julian Brandt",
+          "categoryType": "TOP5",
+          "question": "Chi fu il miglior assistman della Bundesliga nella stagione 2018–2019?",
+          "right_answer": "Jadon Sancho",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_029"
+        }
+      }
+    },
+    {
+      "questionId": "germany_030",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the German Cup the most?",
+          "answer_A": "Köln",
+          "answer_B": "Bayern",
+          "answer_C": "Borussia",
+          "answer_D": "Schalke-04",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Германии больше всех ?",
+          "answer_A": "Кельн",
+          "answer_B": "Бавария",
+          "answer_C": "Боруссия Д",
+          "answer_D": "Шалке-04",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Գերմանիայի գավաթը բոլորից շատ ո՞ր ակումբն է նվաճել:",
+          "answer_A": "Քյոլն",
+          "answer_B": "Բավարիա",
+          "answer_C": "Բորուսիա Դ",
+          "answer_D": "Շալկե-04",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Colonia",
+          "answer_B": "Bayern Múnich",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Copa de Alemania?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_030"
+        },
+        "de": {
+          "answer_A": "Köln",
+          "answer_B": "Bayern München",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den DFB-Pokal am häufigsten?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_030"
+        },
+        "it": {
+          "answer_A": "Colonia",
+          "answer_B": "Bayern Monaco",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Coppa di Germania?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_030"
+        }
+      }
+    },
+    {
+      "questionId": "germany_031",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which of the following clubs won the German Cup the most?",
+          "answer_A": "Mainz 05",
+          "answer_B": "Wolfsburg",
+          "answer_C": "München 1860",
+          "answer_D": "Hertha",
+          "right_answer": "München 1860"
+        },
+        "ru": {
+          "question": "Какой клуб из перечисленных выиграл Кубок Германии больше всех ?",
+          "answer_A": "Майнц 05",
+          "answer_B": "Вольфсбург",
+          "answer_C": "Мюнхен 1860",
+          "answer_D": "Герта",
+          "right_answer": "Мюнхен 1860"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Գերմանիայի գավաթը ավելի շատ:",
+          "answer_A": "Մայնց 05",
+          "answer_B": "Վոլֆսբուրգ",
+          "answer_C": "Մյունխեն 1860",
+          "answer_D": "Հերտա",
+          "right_answer": "Մյունխեն 1860"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Mainz 05",
+          "answer_B": "Wolfsburgo",
+          "answer_C": "Múnich 1860",
+          "answer_D": "Hertha",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ganó más veces la Copa de Alemania?",
+          "right_answer": "Múnich 1860",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_031"
+        },
+        "de": {
+          "answer_A": "Mainz 05",
+          "answer_B": "Wolfsburg",
+          "answer_C": "1860 München",
+          "answer_D": "Hertha BSC",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine gewann den DFB-Pokal am häufigsten?",
+          "right_answer": "1860 München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_031"
+        },
+        "it": {
+          "answer_A": "Mainz 05",
+          "answer_B": "Wolfsburg",
+          "answer_C": "Monaco 1860",
+          "answer_D": "Hertha",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte la Coppa di Germania?",
+          "right_answer": "Monaco 1860",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_031"
+        }
+      }
+    },
+    {
+      "questionId": "germany_032",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club has never won the German Cup?",
+          "answer_A": "Hertha",
+          "answer_B": "Hannover 96",
+          "answer_C": "Bayer",
+          "answer_D": "München 1860",
+          "right_answer": "Hertha"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал Кубок Германии ?",
+          "answer_A": "Герта",
+          "answer_B": "Ганновер 96",
+          "answer_C": "Байер",
+          "answer_D": "Мюнхен 1860",
+          "right_answer": "Герта"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը երբեք չի նվաճել Գերմանիայի գավաթը:",
+          "answer_A": "Հերտա",
+          "answer_B": "Հանովեր 96",
+          "answer_C": "Բայեր",
+          "answer_D": "Մյունխեն 1860",
+          "right_answer": "Հերտա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Hertha",
+          "answer_B": "Hannover 96",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Múnich 1860",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ganó la Copa de Alemania?",
+          "right_answer": "Hertha",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_032"
+        },
+        "de": {
+          "answer_A": "Hertha BSC",
+          "answer_B": "Hannover 96",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "1860 München",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann nie den DFB-Pokal?",
+          "right_answer": "Hertha BSC",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_032"
+        },
+        "it": {
+          "answer_A": "Hertha",
+          "answer_B": "Hannover 96",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Monaco 1860",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto la Coppa di Germania?",
+          "right_answer": "Hertha",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_032"
+        }
+      }
+    },
+    {
+      "questionId": "germany_033",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in the German Cup final?",
+          "answer_A": "Schalke-04",
+          "answer_B": "Borussia",
+          "answer_C": "Werder",
+          "answer_D": "Bayern",
+          "right_answer": "Schalke-04"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в финале Кубка Германии ?",
+          "answer_A": "Шалке-04",
+          "answer_B": "Боруссия Д",
+          "answer_C": "Вердер",
+          "answer_D": "Бавария",
+          "right_answer": "Шалке-04"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Գերմանիայի գավաթի եզրափակչում:",
+          "answer_A": "Շալկե-04",
+          "answer_B": "Բորուսիա Դ",
+          "answer_C": "Վերդեր",
+          "answer_D": "Բավարիա",
+          "right_answer": "Շալկե-04"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Schalke 04",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Bayern Múnich",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más finales de la Copa de Alemania?",
+          "right_answer": "Schalke 04",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_033"
+        },
+        "de": {
+          "answer_A": "Schalke 04",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Bayern München",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein verlor die meisten Endspiele im DFB-Pokal?",
+          "right_answer": "Schalke 04",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_033"
+        },
+        "it": {
+          "answer_A": "Schalke 04",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Werder Brema",
+          "answer_D": "Bayern Monaco",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più finali della Coppa di Germania?",
+          "right_answer": "Schalke 04",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_033"
+        }
+      }
+    },
+    {
+      "questionId": "germany_034",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the German Super Cup the most?",
+          "answer_A": "Borussia",
+          "answer_B": "Schalke-04",
+          "answer_C": "Bayern",
+          "answer_D": "Borussia Verein",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Суперкубок Германии ?",
+          "answer_A": "Боруссия Д",
+          "answer_B": "Шалке-04",
+          "answer_C": "Бавария",
+          "answer_D": "Боруссия М",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Գերմանիայի Սուպեր գավաթը բոլորից շատ ո՞ր ակումբն է նվաճել:",
+          "answer_A": "Բորուսիա Դ",
+          "answer_B": "Շալկե-04",
+          "answer_C": "Բավարիա",
+          "answer_D": "Բորուսիա Մ",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayern Múnich",
+          "answer_D": "Borussia Mönchengladbach",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Supercopa de Alemania?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_034"
+        },
+        "de": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayern München",
+          "answer_D": "Borussia Mönchengladbach",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den deutschen Supercup am häufigsten?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_034"
+        },
+        "it": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayern Monaco",
+          "answer_D": "Borussia Mönchengladbach",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Supercoppa di Germania?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_034"
+        }
+      }
+    },
+    {
+      "questionId": "germany_035",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in the German Super Cup?",
+          "answer_A": "Bayern",
+          "answer_B": "Borussia",
+          "answer_C": "Stuttgart",
+          "answer_D": "Werder",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в Суперкубке Германии ?",
+          "answer_A": "Бавария",
+          "answer_B": "Боруссия Д",
+          "answer_C": "Штутгарт",
+          "answer_D": "Вердер",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Գերմանիայի Սուպեր գավաթի խաղերում ո՞ր ակումբն է բոլորից շատ պարտվել:",
+          "answer_A": "Բավարիա",
+          "answer_B": "Բորուսիա Դ",
+          "answer_C": "Շտուտգարտ",
+          "answer_D": "Վերդեր",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Bayern Múnich",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Stuttgart",
+          "answer_D": "Werder Bremen",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más veces la Supercopa de Alemania?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_035"
+        },
+        "de": {
+          "answer_A": "Bayern München",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Stuttgart",
+          "answer_D": "Werder Bremen",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein verlor den deutschen Supercup am häufigsten?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_035"
+        },
+        "it": {
+          "answer_A": "Bayern Monaco",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Stoccarda",
+          "answer_D": "Werder Brema",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più volte la Supercoppa di Germania?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_035"
+        }
+      }
+    },
+    {
+      "questionId": "germany_036",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club has never won the German Super Cup?",
+          "answer_A": "Wolfsburg",
+          "answer_B": "Hamburg",
+          "answer_C": "Schalke-04",
+          "answer_D": "Werder",
+          "right_answer": "Hamburg"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал Суперкубок Германии ?",
+          "answer_A": "Вольфсбург",
+          "answer_B": "Гамбург",
+          "answer_C": "Шалке-04",
+          "answer_D": "Вердер",
+          "right_answer": "Гамбург"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը երբեք չի նվաճել Գերմանիայի Սուպեր գավաթը:",
+          "answer_A": "Վոլֆսբուրգ",
+          "answer_B": "Համբուրգ",
+          "answer_C": "Շալկե-04",
+          "answer_D": "Վերդեր",
+          "right_answer": "Համբուրգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Wolfsburgo",
+          "answer_B": "Hamburgo",
+          "answer_C": "Schalke 04",
+          "answer_D": "Werder Bremen",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ganó la Supercopa de Alemania?",
+          "right_answer": "Hamburgo",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_036"
+        },
+        "de": {
+          "answer_A": "Wolfsburg",
+          "answer_B": "Hamburger SV",
+          "answer_C": "Schalke 04",
+          "answer_D": "Werder Bremen",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann nie den deutschen Supercup?",
+          "right_answer": "Hamburger SV",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_036"
+        },
+        "it": {
+          "answer_A": "Wolfsburg",
+          "answer_B": "Amburgo",
+          "answer_C": "Schalke 04",
+          "answer_D": "Werder Brema",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto la Supercoppa di Germania?",
+          "right_answer": "Amburgo",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_036"
+        }
+      }
+    },
+    {
+      "questionId": "germany_037",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the German League Cup the most?",
+          "answer_A": "Hertha",
+          "answer_B": "Borussia",
+          "answer_C": "Schalke-04",
+          "answer_D": "Bayern",
+          "right_answer": "Bayern"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок немецкой лиги ?",
+          "answer_A": "Герта",
+          "answer_B": "Боруссия Д",
+          "answer_C": "Шалке-04",
+          "answer_D": "Бавария",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Գերմանիայի լիգայի գավաթը բոլորից շատ ո՞ր ակումբն է նվաճել:",
+          "answer_A": "Հերտա",
+          "answer_B": "Բորուսիա Դ",
+          "answer_C": "Շալկե-04",
+          "answer_D": "Բավարիա",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Hertha",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Schalke 04",
+          "answer_D": "Bayern Múnich",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Copa de la Liga alemana?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_037"
+        },
+        "de": {
+          "answer_A": "Hertha BSC",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Schalke 04",
+          "answer_D": "Bayern München",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den deutschen Ligapokal am häufigsten?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_037"
+        },
+        "it": {
+          "answer_A": "Hertha",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Schalke 04",
+          "answer_D": "Bayern Monaco",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Coppa di Lega tedesca?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_037"
+        }
+      }
+    },
+    {
+      "questionId": "germany_038",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club has never won the German League Cup?",
+          "answer_A": "Borussia",
+          "answer_B": "Werder",
+          "answer_C": "Hertha",
+          "answer_D": "Schalke-04",
+          "right_answer": "Borussia"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал Кубок немецкой лиги ?",
+          "answer_A": "Боруссия Д",
+          "answer_B": "Вердер",
+          "answer_C": "Герта",
+          "answer_D": "Шалке-04",
+          "right_answer": "Боруссия Д"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը երբեք չի նվաճել Գերմանիայի լիգայի գավաթը:",
+          "answer_A": "Բորուսիա Դ",
+          "answer_B": "Վերդեր",
+          "answer_C": "Հերտա",
+          "answer_D": "Շալկե-04",
+          "right_answer": "Բորուսիա Դ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Werder Bremen",
+          "answer_C": "Hertha",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ganó la Copa de la Liga alemana?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_038"
+        },
+        "de": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Werder Bremen",
+          "answer_C": "Hertha BSC",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann nie den deutschen Ligapokal?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_038"
+        },
+        "it": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Werder Brema",
+          "answer_C": "Hertha",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto la Coppa di Lega tedesca?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_038"
+        }
+      }
+    },
+    {
+      "questionId": "germany_039",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which of these footballers scored the most goals for the German national team?",
+          "answer_A": "Mario Gómez",
+          "answer_B": "Thomas Müller",
+          "answer_C": "Mesut Özil",
+          "answer_D": "Marco Reus",
+          "right_answer": "Thomas Müller"
+        },
+        "ru": {
+          "question": "Из перечисленных какой футболист больше всех стал автором голов в составе сборной Германии ?",
+          "answer_A": "Марио Гомес",
+          "answer_B": "Томас Мюллер",
+          "answer_C": "Месут Озил",
+          "answer_D": "Марко Ройс",
+          "right_answer": "Томас Мюллер"
+        },
+        "hy": {
+          "question": "Նշված ֆուտբոլիստներից ո՞վ է ավելի շատ գոլի հեղինակ դարձել Գերմանիայի հավաքականի կազմում:",
+          "answer_A": "Մարիո Գոմես",
+          "answer_B": "Տոմաս Մյուլլեր",
+          "answer_C": "Մեսուտ Օզիլ",
+          "answer_D": "Մարկո Ռոյս",
+          "right_answer": "Տոմաս Մյուլլեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Mario Gómez",
+          "answer_B": "Thomas Müller",
+          "answer_C": "Mesut Özil",
+          "answer_D": "Marco Reus",
+          "categoryType": "TOP5",
+          "question": "De estos futbolistas, ¿quién marcó más goles con la selección alemana?",
+          "right_answer": "Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_039"
+        },
+        "de": {
+          "answer_A": "Mario Gómez",
+          "answer_B": "Thomas Müller",
+          "answer_C": "Mesut Özil",
+          "answer_D": "Marco Reus",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Fußballer erzielte die meisten Tore für die deutsche Nationalmannschaft?",
+          "right_answer": "Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_039"
+        },
+        "it": {
+          "answer_A": "Mario Gómez",
+          "answer_B": "Thomas Müller",
+          "answer_C": "Mesut Özil",
+          "answer_D": "Marco Reus",
+          "categoryType": "TOP5",
+          "question": "Tra questi calciatori, chi ha segnato più gol con la nazionale tedesca?",
+          "right_answer": "Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_039"
+        }
+      }
+    },
+    {
+      "questionId": "germany_040",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who in the season 2017–2018 became the best assistant to the German championship?",
+          "answer_A": "Thomas Müller",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Philipp Max",
+          "right_answer": "Thomas Müller"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2017–2018 стал лучшим ассистентом чемпионатa Германии ?",
+          "answer_A": "Томас Мюллер",
+          "answer_B": "Йозуа Киммих",
+          "answer_C": "Хамес Родригес",
+          "answer_D": "Филипп Макс",
+          "right_answer": "Томас Мюллер"
+        },
+        "hy": {
+          "question": "Ո՞վ է Գերմանիայի 2017–2018 թթ. առաջնության ամենաշատ գոլային փոխանցում կատարած ֆուտբոլիստը:",
+          "answer_A": "Տոմաս Մյուլլեր",
+          "answer_B": "Յոզուա Կիմիխ",
+          "answer_C": "Խամես Ռոդրիգես",
+          "answer_D": "Ֆիլիպ Մակս",
+          "right_answer": "Տոմաս Մյուլլեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Thomas Müller",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Philipp Max",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el máximo asistente del campeonato alemán en la temporada 2017–2018?",
+          "right_answer": "Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_040"
+        },
+        "de": {
+          "answer_A": "Thomas Müller",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Philipp Max",
+          "categoryType": "TOP5",
+          "question": "Wer war in der Saison 2017–2018 der beste Vorlagengeber der deutschen Meisterschaft?",
+          "right_answer": "Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_040"
+        },
+        "it": {
+          "answer_A": "Thomas Müller",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Philipp Max",
+          "categoryType": "TOP5",
+          "question": "Chi fu il miglior assistman del campionato tedesco nella stagione 2017–2018?",
+          "right_answer": "Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_040"
+        }
+      }
+    },
+    {
+      "questionId": "germany_041",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who in the 2017–2018 season became the top scorer of the German championship?",
+          "answer_A": "Timo Werner",
+          "answer_B": "Robert Lewandowski",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Mark Uth",
+          "right_answer": "Robert Lewandowski"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2017–2018 стал лучшим бомбардиром чемпионатa Германии ?",
+          "answer_A": "Тимо Вернер",
+          "answer_B": "Роберт Левандовски",
+          "answer_C": "Пьер Эмерик Обамеянг",
+          "answer_D": "Марк Ут",
+          "right_answer": "Роберт Левандовски"
+        },
+        "hy": {
+          "question": "Ո՞վ է Գերմանիայի 2017–2018 թթ. առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Տիմո Վերներ",
+          "answer_B": "Ռոբերտ Լեվանդովսկի",
+          "answer_C": "Պիեր Էմերիկ Օբամեյանգ",
+          "answer_D": "Մարկ Ուտ",
+          "right_answer": "Ռոբերտ Լեվանդովսկի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Timo Werner",
+          "answer_B": "Robert Lewandowski",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Mark Uth",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el máximo goleador del campeonato alemán en la temporada 2017–2018?",
+          "right_answer": "Robert Lewandowski",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_041"
+        },
+        "de": {
+          "answer_A": "Timo Werner",
+          "answer_B": "Robert Lewandowski",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Mark Uth",
+          "categoryType": "TOP5",
+          "question": "Wer wurde in der Saison 2017–2018 Torschützenkönig der deutschen Meisterschaft?",
+          "right_answer": "Robert Lewandowski",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_041"
+        },
+        "it": {
+          "answer_A": "Timo Werner",
+          "answer_B": "Robert Lewandowski",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Mark Uth",
+          "categoryType": "TOP5",
+          "question": "Chi fu il capocannoniere del campionato tedesco nella stagione 2017–2018?",
+          "right_answer": "Robert Lewandowski",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_041"
+        }
+      }
+    },
+    {
+      "questionId": "germany_042",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "In which club did Dimitar Berbatov perform?",
+          "answer_A": "Bayern",
+          "answer_B": "Bayer",
+          "answer_C": "Schalke-04",
+          "answer_D": "Hertha",
+          "right_answer": "Bayer"
+        },
+        "ru": {
+          "question": "В каком клубе выступал Димитар Бербатов ?",
+          "answer_A": "Бавариа",
+          "answer_B": "Байер",
+          "answer_C": "Шалке-04",
+          "answer_D": "Герта",
+          "right_answer": "Байер"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբում է հանդես եկել Դիմիտրի Բերբատովը:",
+          "answer_A": "Բավարիա",
+          "answer_B": "Բայեր",
+          "answer_C": "Շալկե-04",
+          "answer_D": "Հերտա",
+          "right_answer": "Բայեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Bayern Múnich",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Schalke 04",
+          "answer_D": "Hertha",
+          "categoryType": "TOP5",
+          "question": "¿En qué club jugó Dimitar Berbatov?",
+          "right_answer": "Bayer Leverkusen",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_042"
+        },
+        "de": {
+          "answer_A": "Bayern München",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Schalke 04",
+          "answer_D": "Hertha BSC",
+          "categoryType": "TOP5",
+          "question": "Für welchen Verein spielte Dimitar Berbatov?",
+          "right_answer": "Bayer Leverkusen",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_042"
+        },
+        "it": {
+          "answer_A": "Bayern Monaco",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Schalke 04",
+          "answer_D": "Hertha",
+          "categoryType": "TOP5",
+          "question": "In quale club giocò Dimitar Berbatov?",
+          "right_answer": "Bayer Leverkusen",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_042"
+        }
+      }
+    },
+    {
+      "questionId": "germany_043",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "From which club did Miroslav Klose move to Bayern?",
+          "answer_A": "Werder",
+          "answer_B": "Kaiserslautern",
+          "answer_C": "Hamburg",
+          "answer_D": "Always played for Bayern",
+          "right_answer": "Werder"
+        },
+        "ru": {
+          "question": "Из какого клуба Мирослав Клозе перешел в Баварию ?",
+          "answer_A": "Вердер",
+          "answer_B": "Кайзерслаутерн",
+          "answer_C": "Гамбург",
+          "answer_D": "Всегда выступал в Баварии",
+          "right_answer": "Вердер"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբից է Միրոսլավ Քլոզեն տեղափոխվել Բավարիա:",
+          "answer_A": "Վերդեր",
+          "answer_B": "Կայզերսլաուտեռն",
+          "answer_C": "Համբուրգ",
+          "answer_D": "Միշտ հանդես է եկել Բավարիայում",
+          "right_answer": "Վերդեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Werder Bremen",
+          "answer_B": "Kaiserslautern",
+          "answer_C": "Hamburgo",
+          "answer_D": "Siempre jugó en el Bayern",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué club pasó Miroslav Klose al Bayern?",
+          "right_answer": "Werder Bremen",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_043"
+        },
+        "de": {
+          "answer_A": "Werder Bremen",
+          "answer_B": "Kaiserslautern",
+          "answer_C": "Hamburger SV",
+          "answer_D": "Er spielte immer für Bayern",
+          "categoryType": "TOP5",
+          "question": "Von welchem Verein wechselte Miroslav Klose zu Bayern München?",
+          "right_answer": "Werder Bremen",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_043"
+        },
+        "it": {
+          "answer_A": "Werder Brema",
+          "answer_B": "Kaiserslautern",
+          "answer_C": "Amburgo",
+          "answer_D": "Ha sempre giocato nel Bayern",
+          "categoryType": "TOP5",
+          "question": "Da quale club Miroslav Klose passò al Bayern?",
+          "right_answer": "Werder Brema",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_043"
+        }
+      }
+    },
+    {
+      "questionId": "germany_044",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who became the top scorer of the world championship?",
+          "answer_A": "Gerhard Müller, Miroslav Klose",
+          "answer_B": "Miroslav Klose, Thomas Müller",
+          "answer_C": "Thomas Müller, Gerhard Müller",
+          "answer_D": "Gerhard Müller, Miroslav Klose, Thomas Müller",
+          "right_answer": "Gerhard Müller, Miroslav Klose, Thomas Müller"
+        },
+        "ru": {
+          "question": "Кто стал лучшим бомбардиром чемпионата мира ?",
+          "answer_A": "Герд Мюллер, Мирослав Клозе",
+          "answer_B": "Мирослав Клозе, Томас Мюллер",
+          "answer_C": "Томас Мюллер, Герд Мюллер",
+          "answer_D": "Герд Мюллер, Мирослав Клозе, Томас Мюллер",
+          "right_answer": "Герд Мюллер, Мирослав Клозе, Томас Мюллер"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստներն են դարձել Աշխարհի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Գերդ Մյուլլեր, Միրոսլավ Քլոզե",
+          "answer_B": "Միրոսլավ Քլոզե, Տոմաս Մյուլլեր",
+          "answer_C": "Տոմաս Մյուլլեր, Գերդ Մյուլլեր",
+          "answer_D": "Գերդ Մյուլլեր, Միրոսլավ Քլոզե, Տոմաս Մյուլլեր",
+          "right_answer": "Գերդ Մյուլլեր, Միրոսլավ Քլոզե, Տոմաս Մյուլլեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Gerd Müller, Miroslav Klose",
+          "answer_B": "Miroslav Klose, Thomas Müller",
+          "answer_C": "Thomas Müller, Gerd Müller",
+          "answer_D": "Gerd Müller, Miroslav Klose, Thomas Müller",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue máximo goleador de un Mundial?",
+          "right_answer": "Gerd Müller, Miroslav Klose, Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_044"
+        },
+        "de": {
+          "answer_A": "Gerd Müller, Miroslav Klose",
+          "answer_B": "Miroslav Klose, Thomas Müller",
+          "answer_C": "Thomas Müller, Gerd Müller",
+          "answer_D": "Gerd Müller, Miroslav Klose, Thomas Müller",
+          "categoryType": "TOP5",
+          "question": "Wer wurde Torschützenkönig einer Weltmeisterschaft?",
+          "right_answer": "Gerd Müller, Miroslav Klose, Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_044"
+        },
+        "it": {
+          "answer_A": "Gerd Müller, Miroslav Klose",
+          "answer_B": "Miroslav Klose, Thomas Müller",
+          "answer_C": "Thomas Müller, Gerd Müller",
+          "answer_D": "Gerd Müller, Miroslav Klose, Thomas Müller",
+          "categoryType": "TOP5",
+          "question": "Chi è stato capocannoniere di un Mondiale?",
+          "right_answer": "Gerd Müller, Miroslav Klose, Thomas Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_044"
+        }
+      }
+    },
+    {
+      "questionId": "germany_045",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in one Bundesliga season?",
+          "answer_A": "Pierre-Emerick Aubameyang",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Robert Lewandowski",
+          "answer_D": "Harry Kane",
+          "right_answer": "Robert Lewandowski"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в одном сезоне чемпионата Германии?",
+          "answer_A": "Пьер Эмерик Обамеянг",
+          "answer_B": "Герд Мюллер",
+          "answer_C": "Роберт Левандовски",
+          "answer_D": "Гарри Кейн",
+          "right_answer": "Роберт Левандовски"
+        },
+        "hy": {
+          "question": "Ո՞վ է Գերմանիայի առաջնության մեկ մրցաշրջանում ամենաշատ գոլի հեղինակ դարձած ֆուտբոլիստը:",
+          "answer_A": "Պիեր Էմերիկ Օբամեյանգ",
+          "answer_B": "Գերդ Մյուլլեր",
+          "answer_C": "Ռոբերտ Լեվանդովսկի",
+          "answer_D": "Հարի Քեյն",
+          "right_answer": "Ռոբերտ Լեվանդովսկի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Pierre-Emerick Aubameyang",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Robert Lewandowski",
+          "answer_D": "Harry Kane",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó más goles en una sola temporada de Bundesliga?",
+          "right_answer": "Robert Lewandowski",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_045"
+        },
+        "de": {
+          "answer_A": "Pierre-Emerick Aubameyang",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Robert Lewandowski",
+          "answer_D": "Harry Kane",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte die meisten Tore in einer Bundesliga-Saison?",
+          "right_answer": "Robert Lewandowski",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_045"
+        },
+        "it": {
+          "answer_A": "Pierre-Emerick Aubameyang",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Robert Lewandowski",
+          "answer_D": "Harry Kane",
+          "categoryType": "TOP5",
+          "question": "Chi ha segnato più gol in una singola stagione di Bundesliga?",
+          "right_answer": "Robert Lewandowski",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_045"
+        }
+      }
+    },
+    {
+      "questionId": "germany_046",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "From which club did Kevin De Bruyne move to Manchester City?",
+          "answer_A": "Werder",
+          "answer_B": "Wolfsburg",
+          "answer_C": "Hamburg",
+          "answer_D": "Bayer",
+          "right_answer": "Wolfsburg"
+        },
+        "ru": {
+          "question": "Из какого клуба Кевин Де Брюйне перешел в Манчестер Сити ?",
+          "answer_A": "Вердер",
+          "answer_B": "Вольфсбург",
+          "answer_C": "Гамбург",
+          "answer_D": "Байер",
+          "right_answer": "Вольфсбург"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբից է Կեվին Դե Բրյունեն տեղափոխվել Մանչեսթեր Սիթի:",
+          "answer_A": "Վերդեր",
+          "answer_B": "Վոլֆսբուրգ",
+          "answer_C": "Համբուրգ",
+          "answer_D": "Բայեր",
+          "right_answer": "Վոլֆսբուրգ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Werder Bremen",
+          "answer_B": "Wolfsburgo",
+          "answer_C": "Hamburgo",
+          "answer_D": "Bayer Leverkusen",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué club pasó Kevin De Bruyne al Manchester City?",
+          "right_answer": "Wolfsburgo",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_046"
+        },
+        "de": {
+          "answer_A": "Werder Bremen",
+          "answer_B": "Wolfsburg",
+          "answer_C": "Hamburger SV",
+          "answer_D": "Bayer Leverkusen",
+          "categoryType": "TOP5",
+          "question": "Von welchem Verein wechselte Kevin De Bruyne zu Manchester City?",
+          "right_answer": "Wolfsburg",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_046"
+        },
+        "it": {
+          "answer_A": "Werder Brema",
+          "answer_B": "Wolfsburg",
+          "answer_C": "Amburgo",
+          "answer_D": "Bayer Leverkusen",
+          "categoryType": "TOP5",
+          "question": "Da quale club Kevin De Bruyne passò al Manchester City?",
+          "right_answer": "Wolfsburg",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_046"
+        }
+      }
+    },
+    {
+      "questionId": "germany_047",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many times has the German national team participated in the Confederation Cup?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "3"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Германии участвовала в Кубке Конфедерации ?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "3"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Գերմանիայի հավաքականը մասնակցել Կոնֆեդերացիայի գավաթի մրցաշարին:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "3"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces participó la selección alemana en la Copa Confederaciones?",
+          "right_answer": "3",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_047"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Wie oft nahm die deutsche Nationalmannschaft am Konföderationen-Pokal teil?",
+          "right_answer": "3",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_047"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale tedesca ha partecipato alla Confederations Cup?",
+          "right_answer": "3",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_047"
+        }
+      }
+    },
+    {
+      "questionId": "germany_048",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which football players were top scorers of the German championship the most times?",
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Gerhard Müller",
+          "answer_C": "Ulf Kirsten",
+          "answer_D": "Robert Lewandowski and Gerd Müller",
+          "right_answer": "Robert Lewandowski and Gerd Müller"
+        },
+        "ru": {
+          "question": "Какие футболисты чаще всех становились лучшими бомбардирами чемпионата Германии?",
+          "answer_A": "Роберт Левандовски",
+          "answer_B": "Герд Мюллер",
+          "answer_C": "Ульф Кирстен",
+          "answer_D": "Роберт Левандовски и Герд Мюллер",
+          "right_answer": "Роберт Левандовски и Герд Мюллер"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստներն են ամենաշատը դարձել Գերմանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Ռոբերտ Լեվանդովսկի",
+          "answer_B": "Գերդ Մյուլլեր",
+          "answer_C": "Ուլֆ Կիրստեն",
+          "answer_D": "Ռոբերտ Լևանդովսկի և Գերդ Մյուլլեր",
+          "right_answer": "Ռոբերտ Լևանդովսկի և Գերդ Մյուլլեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Ulf Kirsten",
+          "answer_D": "Robert Lewandowski y Gerd Müller",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolistas fueron más veces máximos goleadores del campeonato alemán?",
+          "right_answer": "Robert Lewandowski y Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_048"
+        },
+        "de": {
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Ulf Kirsten",
+          "answer_D": "Robert Lewandowski und Gerd Müller",
+          "categoryType": "TOP5",
+          "question": "Welche Fußballer wurden am häufigsten Torschützenkönig der deutschen Meisterschaft?",
+          "right_answer": "Robert Lewandowski und Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_048"
+        },
+        "it": {
+          "answer_A": "Robert Lewandowski",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Ulf Kirsten",
+          "answer_D": "Robert Lewandowski e Gerd Müller",
+          "categoryType": "TOP5",
+          "question": "Quali calciatori sono stati più volte capocannonieri del campionato tedesco?",
+          "right_answer": "Robert Lewandowski e Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_048"
+        }
+      }
+    },
+    {
+      "questionId": "germany_049",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Of these clubs, which club's football players became the top scorer of the Bundesliga most?",
+          "answer_A": "Köln",
+          "answer_B": "Stuttgart",
+          "answer_C": "Schalke 04",
+          "answer_D": "Hamburg",
+          "right_answer": "Köln"
+        },
+        "ru": {
+          "question": "Из перечисленных клубов футболисты какого клуба больше всех становились лучшим бомбардиром Бундеслиги ?",
+          "answer_A": "Кельн",
+          "answer_B": "Штутгарт",
+          "answer_C": "Шалке-04",
+          "answer_D": "Гамбург",
+          "right_answer": "Кельн"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբի ֆուտբոլիստներն են ավելի շատ դարձել Բունդեսլիգայի լավագույն ռմբարկու:",
+          "answer_A": "Քյոլն",
+          "answer_B": "Շտուտգարտ",
+          "answer_C": "Շալկե-04",
+          "answer_D": "Համբուրգ",
+          "right_answer": "Քյոլն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Colonia",
+          "answer_B": "Stuttgart",
+          "answer_C": "Schalke 04",
+          "answer_D": "Hamburgo",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿de cuál fueron más veces jugadores máximos goleadores de la Bundesliga?",
+          "right_answer": "Colonia",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_049"
+        },
+        "de": {
+          "answer_A": "Köln",
+          "answer_B": "Stuttgart",
+          "answer_C": "Schalke 04",
+          "answer_D": "Hamburger SV",
+          "categoryType": "TOP5",
+          "question": "Bei welchem dieser Vereine stellten die Spieler am häufigsten den Bundesliga-Torschützenkönig?",
+          "right_answer": "Köln",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_049"
+        },
+        "it": {
+          "answer_A": "Colonia",
+          "answer_B": "Stoccarda",
+          "answer_C": "Schalke 04",
+          "answer_D": "Amburgo",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha avuto più volte il capocannoniere della Bundesliga?",
+          "right_answer": "Colonia",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_049"
+        }
+      }
+    },
+    {
+      "questionId": "germany_050",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Representatives of which countries have become the top scorer of the German championship the most?",
+          "answer_A": "Brazil, Ghana",
+          "answer_B": "Ghana, Poland",
+          "answer_C": "Poland, Brazil",
+          "answer_D": "Poland",
+          "right_answer": "Poland, Brazil"
+        },
+        "ru": {
+          "question": "Представители каких стран больше всех становились лучшим бомбардиром чемпионата Германии ?",
+          "answer_A": "Бразилия, Гана",
+          "answer_B": "Гана, Польша",
+          "answer_C": "Польша, Бразилия",
+          "answer_D": "Польша",
+          "right_answer": "Польша, Бразилия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի (երկրների) ներկայացուցիչներն են ավելի շատ դարձել Գերմանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Բրազիլիա, Գանա",
+          "answer_B": "Գանա, Լեհաստան",
+          "answer_C": "Լեհաստան, Բրազիլիա",
+          "answer_D": "Լեհաստան",
+          "right_answer": "Լեհաստան, Բրազիլիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Brasil, Ghana",
+          "answer_B": "Ghana, Polonia",
+          "answer_C": "Polonia, Brasil",
+          "answer_D": "Polonia",
+          "categoryType": "TOP5",
+          "question": "¿Representantes de qué países fueron más veces máximos goleadores del campeonato alemán?",
+          "right_answer": "Polonia, Brasil",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_050"
+        },
+        "de": {
+          "answer_A": "Brasilien, Ghana",
+          "answer_B": "Ghana, Polen",
+          "answer_C": "Polen, Brasilien",
+          "answer_D": "Polen",
+          "categoryType": "TOP5",
+          "question": "Vertreter welcher Länder wurden am häufigsten Torschützenkönig der deutschen Meisterschaft?",
+          "right_answer": "Polen, Brasilien",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_050"
+        },
+        "it": {
+          "answer_A": "Brasile, Ghana",
+          "answer_B": "Ghana, Polonia",
+          "answer_C": "Polonia, Brasile",
+          "answer_D": "Polonia",
+          "categoryType": "TOP5",
+          "question": "I rappresentanti di quali Paesi sono stati più volte capocannonieri del campionato tedesco?",
+          "right_answer": "Polonia, Brasile",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_050"
+        }
+      }
+    },
+    {
+      "questionId": "germany_051",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club was the first winner of the Bundesliga?",
+          "answer_A": "Bayern",
+          "answer_B": "Köln",
+          "answer_C": "Schalke-04",
+          "answer_D": "Borussia",
+          "right_answer": "Köln"
+        },
+        "ru": {
+          "question": "Какой клуб стал первым победителем Бундеслиги ?",
+          "answer_A": "Бавария",
+          "answer_B": "Кельн",
+          "answer_C": "Шалке-04",
+          "answer_D": "Боруссия Д",
+          "right_answer": "Кельн"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Բունդեսլիգայի առաջին հաղթողը:",
+          "answer_A": "Բավարիա",
+          "answer_B": "Քյոլն",
+          "answer_C": "Շալկե-04",
+          "answer_D": "Բորուսիա Դ",
+          "right_answer": "Քյոլն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Bayern Múnich",
+          "answer_B": "Colonia",
+          "answer_C": "Schalke 04",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "¿Qué club fue el primer campeón de la Bundesliga?",
+          "right_answer": "Colonia",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_051"
+        },
+        "de": {
+          "answer_A": "Bayern München",
+          "answer_B": "Köln",
+          "answer_C": "Schalke 04",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein war der erste Gewinner der Bundesliga?",
+          "right_answer": "Köln",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_051"
+        },
+        "it": {
+          "answer_A": "Bayern Monaco",
+          "answer_B": "Colonia",
+          "answer_C": "Schalke 04",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Quale club fu il primo vincitore della Bundesliga?",
+          "right_answer": "Colonia",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_051"
+        }
+      }
+    },
+    {
+      "questionId": "germany_052",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who is the author of the first goal of the Bundesliga?",
+          "answer_A": "Timo Konietzka",
+          "answer_B": "Gerhard Müller",
+          "answer_C": "Josef Heynckes",
+          "answer_D": "Klaus Fischer",
+          "right_answer": "Timo Konietzka"
+        },
+        "ru": {
+          "question": "Кто автор первого гола Бундеслиги ?",
+          "answer_A": "Тимо Кониецка",
+          "answer_B": "Герд Мюллер",
+          "answer_C": "Юпп Хайнкес",
+          "answer_D": "Клаус Фишер",
+          "right_answer": "Тимо Кониецка"
+        },
+        "hy": {
+          "question": "Ո՞վ է Բունդեսլիգայի առաջին գոլի հեղինակը:",
+          "answer_A": "Տիմո Կոնիեցկա",
+          "answer_B": "Գերդ Մյուլլեր",
+          "answer_C": "Յուպպ Հայնկես",
+          "answer_D": "Կլաուս Ֆիշեր",
+          "right_answer": "Տիմո Կոնիեցկա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Timo Konietzka",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Jupp Heynckes",
+          "answer_D": "Klaus Fischer",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó el primer gol de la Bundesliga?",
+          "right_answer": "Timo Konietzka",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_052"
+        },
+        "de": {
+          "answer_A": "Timo Konietzka",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Jupp Heynckes",
+          "answer_D": "Klaus Fischer",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte das erste Tor der Bundesliga?",
+          "right_answer": "Timo Konietzka",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_052"
+        },
+        "it": {
+          "answer_A": "Timo Konietzka",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Jupp Heynckes",
+          "answer_D": "Klaus Fischer",
+          "categoryType": "TOP5",
+          "question": "Chi segnò il primo gol della Bundesliga?",
+          "right_answer": "Timo Konietzka",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_052"
+        }
+      }
+    },
+    {
+      "questionId": "germany_053",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many permanent head coaches has the German national team had?",
+          "answer_A": "10",
+          "answer_B": "12",
+          "answer_C": "14",
+          "answer_D": "18",
+          "right_answer": "12"
+        },
+        "ru": {
+          "question": "Сколько постоянных главных тренеров имела сборная Германии?",
+          "answer_A": "10",
+          "answer_B": "12",
+          "answer_C": "14",
+          "answer_D": "18",
+          "right_answer": "12"
+        },
+        "hy": {
+          "question": "Քանի՞ մշտական գլխավոր մարզիչ է ունեցել Գերմանիայի հավաքականը:",
+          "answer_A": "10",
+          "answer_B": "12",
+          "answer_C": "14",
+          "answer_D": "18",
+          "right_answer": "12"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "10",
+          "answer_B": "12",
+          "answer_C": "14",
+          "answer_D": "18",
+          "categoryType": "TOP5",
+          "question": "¿Cuántos seleccionadores permanentes ha tenido la selección alemana?",
+          "right_answer": "12",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_053"
+        },
+        "de": {
+          "answer_A": "10",
+          "answer_B": "12",
+          "answer_C": "14",
+          "answer_D": "18",
+          "categoryType": "TOP5",
+          "question": "Wie viele feste Bundestrainer hatte die deutsche Nationalmannschaft?",
+          "right_answer": "12",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_053"
+        },
+        "it": {
+          "answer_A": "10",
+          "answer_B": "12",
+          "answer_C": "14",
+          "answer_D": "18",
+          "categoryType": "TOP5",
+          "question": "Quanti commissari tecnici permanenti ha avuto la nazionale tedesca?",
+          "right_answer": "12",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_053"
+        }
+      }
+    },
+    {
+      "questionId": "germany_054",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Under which coach did the German national team win nothing?",
+          "answer_A": "Berti Vogts",
+          "answer_B": "Erich Ribbeck",
+          "answer_C": "Sepp Herberger",
+          "answer_D": "Jupp Derwall",
+          "right_answer": "Erich Ribbeck"
+        },
+        "ru": {
+          "question": "При каком тренере сборная Германии ничего не выиграла ?",
+          "answer_A": "Берти Фогтс",
+          "answer_B": "Эрих Рибек",
+          "answer_C": "Зепп Гербергер",
+          "answer_D": "Юпп Дерваль",
+          "right_answer": "Эрих Рибек"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզչի օրոք Գերմանիայի հավաքականը ոչինչ չի նվաճել:",
+          "answer_A": "Բերտի Ֆոգտս",
+          "answer_B": "Էրիխ Ռիբեկ",
+          "answer_C": "Զեպպ Հերբերգեր",
+          "answer_D": "Յուպպ Դեռվալ",
+          "right_answer": "Էրիխ Ռիբեկ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Berti Vogts",
+          "answer_B": "Erich Ribbeck",
+          "answer_C": "Sepp Herberger",
+          "answer_D": "Jupp Derwall",
+          "categoryType": "TOP5",
+          "question": "¿Con qué entrenador la selección alemana no ganó nada?",
+          "right_answer": "Erich Ribbeck",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_054"
+        },
+        "de": {
+          "answer_A": "Berti Vogts",
+          "answer_B": "Erich Ribbeck",
+          "answer_C": "Sepp Herberger",
+          "answer_D": "Jupp Derwall",
+          "categoryType": "TOP5",
+          "question": "Unter welchem Trainer gewann die deutsche Nationalmannschaft nichts?",
+          "right_answer": "Erich Ribbeck",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_054"
+        },
+        "it": {
+          "answer_A": "Berti Vogts",
+          "answer_B": "Erich Ribbeck",
+          "answer_C": "Sepp Herberger",
+          "answer_D": "Jupp Derwall",
+          "categoryType": "TOP5",
+          "question": "Con quale allenatore la nazionale tedesca non vinse nulla?",
+          "right_answer": "Erich Ribbeck",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_054"
+        }
+      }
+    },
+    {
+      "questionId": "germany_055",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who is the best footballer of all time in Germany in BILD?",
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Gerhard Müller",
+          "answer_D": "Uwe Seeler",
+          "right_answer": "Gerhard Müller"
+        },
+        "ru": {
+          "question": "Кто по BILD-у лучший футболист всех времен Германии ?",
+          "answer_A": "Лотар Маттеус",
+          "answer_B": "Франц Беккенбауэр",
+          "answer_C": "Герд Мюллер",
+          "answer_D": "Уве Зелер",
+          "right_answer": "Герд Мюллер"
+        },
+        "hy": {
+          "question": "Ո՞վ է ըստ BILD-ի Գերմանիայի բոլոր ժամանակների լավագույն ֆուտբոլիստը:",
+          "answer_A": "Լոթար Մատեուս",
+          "answer_B": "Ֆրանց Բեկենբաուեր",
+          "answer_C": "Գերդ Մյուլլեր",
+          "answer_D": "Ուվե Զելեր",
+          "right_answer": "Գերդ Մյուլլեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Uwe Seeler",
+          "categoryType": "TOP5",
+          "question": "¿Quién es, según BILD, el mejor futbolista alemán de todos los tiempos?",
+          "right_answer": "Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_055"
+        },
+        "de": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Uwe Seeler",
+          "categoryType": "TOP5",
+          "question": "Wer ist laut BILD der beste deutsche Fußballer aller Zeiten?",
+          "right_answer": "Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_055"
+        },
+        "it": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Franz Beckenbauer",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Uwe Seeler",
+          "categoryType": "TOP5",
+          "question": "Chi è, secondo BILD, il miglior calciatore tedesco di tutti i tempi?",
+          "right_answer": "Gerd Müller",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_055"
+        }
+      }
+    },
+    {
+      "questionId": "germany_056",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for the number of matches played in the Bundesliga?",
+          "answer_A": "Charly Körbel",
+          "answer_B": "Oliver Kahn",
+          "answer_C": "Manfred Kaltz",
+          "answer_D": "Klaus Fischer",
+          "right_answer": "Charly Körbel"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по количеству матчей, проведённых в Бундеслиге ?",
+          "answer_A": "Чарли Кёрбель",
+          "answer_B": "Оливер Кан",
+          "answer_C": "Манфред Кальц",
+          "answer_D": "Клаус Фишер",
+          "right_answer": "Чарли Кёрбель"
+        },
+        "hy": {
+          "question": "Ո՞վ է անցկացրած խաղերի քանակով Բունդեսլիգայի ռեկորդակիրը:",
+          "answer_A": "Չարլի Կյորբել",
+          "answer_B": "Օլիվեր Կան",
+          "answer_C": "Մանֆրեդ Կալց",
+          "answer_D": "Կլաուս Ֆիշեր",
+          "right_answer": "Չարլի Կյորբել"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Charly Körbel",
+          "answer_B": "Oliver Kahn",
+          "answer_C": "Manfred Kaltz",
+          "answer_D": "Klaus Fischer",
+          "categoryType": "TOP5",
+          "question": "¿Quién tiene el récord de partidos jugados en la Bundesliga?",
+          "right_answer": "Charly Körbel",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_056"
+        },
+        "de": {
+          "answer_A": "Charly Körbel",
+          "answer_B": "Oliver Kahn",
+          "answer_C": "Manfred Kaltz",
+          "answer_D": "Klaus Fischer",
+          "categoryType": "TOP5",
+          "question": "Wer ist Rekordhalter bei den meisten Bundesliga-Einsätzen?",
+          "right_answer": "Charly Körbel",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_056"
+        },
+        "it": {
+          "answer_A": "Charly Körbel",
+          "answer_B": "Oliver Kahn",
+          "answer_C": "Manfred Kaltz",
+          "answer_D": "Klaus Fischer",
+          "categoryType": "TOP5",
+          "question": "Chi detiene il record di presenze in Bundesliga?",
+          "right_answer": "Charly Körbel",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_056"
+        }
+      }
+    },
+    {
+      "questionId": "germany_057",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club finished as runner-up in the German Championship the most?",
+          "answer_A": "Hamburg",
+          "answer_B": "Schalke-04",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Werder",
+          "right_answer": "Schalke-04"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал серебряным призером в чемпионате Германии ?",
+          "answer_A": "Гамбург",
+          "answer_B": "Шалке-04",
+          "answer_C": "Боруссия Д",
+          "answer_D": "Вердер",
+          "right_answer": "Шалке-04"
+        },
+        "hy": {
+          "question": "Գերմանիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել արծաթե մեդալակիր:",
+          "answer_A": "Համբուրգ",
+          "answer_B": "Շալկե-04",
+          "answer_C": "Բորուսիա Դ",
+          "answer_D": "Վերդեր",
+          "right_answer": "Շալկե-04"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Hamburgo",
+          "answer_B": "Schalke 04",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Werder Bremen",
+          "categoryType": "TOP5",
+          "question": "¿Qué club fue subcampeón del campeonato alemán más veces?",
+          "right_answer": "Schalke 04",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_057"
+        },
+        "de": {
+          "answer_A": "Hamburger SV",
+          "answer_B": "Schalke 04",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Werder Bremen",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein wurde am häufigsten deutscher Vizemeister?",
+          "right_answer": "Schalke 04",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_057"
+        },
+        "it": {
+          "answer_A": "Amburgo",
+          "answer_B": "Schalke 04",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Werder Brema",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato più volte secondo nel campionato tedesco?",
+          "right_answer": "Schalke 04",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_057"
+        }
+      }
+    },
+    {
+      "questionId": "germany_058",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club was the most bronze medalist in the German championship?",
+          "answer_A": "Schalke-04",
+          "answer_B": "Borussia Verein",
+          "answer_C": "Werder",
+          "answer_D": "Stuttgart",
+          "right_answer": "Borussia Verein"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал бронзовым призером в чемпионате Германии ?",
+          "answer_A": "Шалке-04",
+          "answer_B": "Боруссия М",
+          "answer_C": "Вердер",
+          "answer_D": "Штутгарт",
+          "right_answer": "Боруссия М"
+        },
+        "hy": {
+          "question": "Գերմանիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել բրոնզե մեդալակիր:",
+          "answer_A": "Շալկե-04",
+          "answer_B": "Բորուսիա Մ",
+          "answer_C": "Վերդեր",
+          "answer_D": "Շտուտգարտ",
+          "right_answer": "Բորուսիա Մ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Schalke 04",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Stuttgart",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó tercero más veces en el campeonato alemán?",
+          "right_answer": "Borussia Mönchengladbach",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_058"
+        },
+        "de": {
+          "answer_A": "Schalke 04",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Stuttgart",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein wurde in der deutschen Meisterschaft am häufigsten Dritter?",
+          "right_answer": "Borussia Mönchengladbach",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_058"
+        },
+        "it": {
+          "answer_A": "Schalke 04",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Brema",
+          "answer_D": "Stoccarda",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato più volte terzo nel campionato tedesco?",
+          "right_answer": "Borussia Mönchengladbach",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_058"
+        }
+      }
+    },
+    {
+      "questionId": "germany_059",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Of these, which club took the most prizes in the Bundesliga?",
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Schalke 04",
+          "right_answer": "Borussia Dortmund"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех занимал призовые места в Бундеслиге ?",
+          "answer_A": "Боруссия Дортмунд",
+          "answer_B": "Боруссия Мёнхенгладбах",
+          "answer_C": "Вердер Бремен",
+          "answer_D": "Шалке 04",
+          "right_answer": "Боруссия Дортмунд"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է Բունդեսլիգայում բոլորից շատ մրցանակային տեղեր զբաղեցրել:",
+          "answer_A": "Բորուսիա Դորտմունդ",
+          "answer_B": "Բորուսիա Մյոնխենգլադբախ",
+          "answer_C": "Վերդեր Բրեմեն",
+          "answer_D": "Շալկե 04",
+          "right_answer": "Բորուսիա Դորտմունդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ocupó más veces puestos de podio en la Bundesliga?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_059"
+        },
+        "de": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Bremen",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine belegte am häufigsten einen Podiumsplatz in der Bundesliga?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_059"
+        },
+        "it": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Borussia Mönchengladbach",
+          "answer_C": "Werder Brema",
+          "answer_D": "Schalke 04",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha conquistato più volte un posto sul podio in Bundesliga?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_059"
+        }
+      }
+    },
+    {
+      "questionId": "germany_060",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "How many times did Schalke 04 win the Bundesliga?",
+          "answer_A": "0",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "7",
+          "right_answer": "0"
+        },
+        "ru": {
+          "question": "Сколько раз Шалке-04 стал победителем Бундеслиги?",
+          "answer_A": "0",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "7",
+          "right_answer": "0"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Շալկե-04-ը նվաճել Բունդեսլիգայի չեմպիոնի տիտղոսը:",
+          "answer_A": "0",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "7",
+          "right_answer": "0"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "7",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ganó el Schalke 04 la Bundesliga?",
+          "right_answer": "0",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_060"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "7",
+          "categoryType": "TOP5",
+          "question": "Wie oft gewann Schalke 04 die Bundesliga?",
+          "right_answer": "0",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_060"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "2",
+          "answer_C": "4",
+          "answer_D": "7",
+          "categoryType": "TOP5",
+          "question": "Quante volte lo Schalke 04 ha vinto la Bundesliga?",
+          "right_answer": "0",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_060"
+        }
+      }
+    },
+    {
+      "questionId": "germany_061",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the German Cup in the 2024/2025 season?",
+          "answer_A": "RB Leipzig",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "VfB Stuttgart",
+          "answer_D": "Bayern Munich",
+          "right_answer": "VfB Stuttgart"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Германии в сезоне 2024/2025?",
+          "answer_A": "РБ Лейпциг",
+          "answer_B": "Байер Леверкузен",
+          "answer_C": "ВФБ Штутгарт",
+          "answer_D": "Бавария Мюнхен",
+          "right_answer": "ВФБ Штутгарт"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Գերմանիայի գավաթը 2024/2025 մրցաշրջանում:",
+          "answer_A": "ՌԲ Լայպցիգ",
+          "answer_B": "Բայեր Լևերկուզեն",
+          "answer_C": "ՎՖԲ Շտուտգարտ",
+          "answer_D": "Բավարիա Մյունխեն",
+          "right_answer": "ՎՖԲ Շտուտգարտ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "RB Leipzig",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "VfB Stuttgart",
+          "answer_D": "Bayern Múnich",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Copa de Alemania en la temporada 2024/2025?",
+          "right_answer": "VfB Stuttgart",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_061"
+        },
+        "de": {
+          "answer_A": "RB Leipzig",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "VfB Stuttgart",
+          "answer_D": "Bayern München",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den DFB-Pokal in der Saison 2024/2025?",
+          "right_answer": "VfB Stuttgart",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_061"
+        },
+        "it": {
+          "answer_A": "RB Lipsia",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "VfB Stuttgart",
+          "answer_D": "Bayern Monaco",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Coppa di Germania nella stagione 2024/2025?",
+          "right_answer": "VfB Stuttgart",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_061"
+        }
+      }
+    },
+    {
+      "questionId": "germany_062",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the German Cup in the 2025/2026 season?",
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern Munich",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "RB Leipzig",
+          "right_answer": "Bayern Munich"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Германии в сезоне 2025/2026?",
+          "answer_A": "ВФБ Штутгарт",
+          "answer_B": "Бавария Мюнхен",
+          "answer_C": "Байер Леверкузен",
+          "answer_D": "РБ Лейпциг",
+          "right_answer": "Бавария Мюнхен"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Գերմանիայի գավաթը 2025/2026 մրցաշրջանում:",
+          "answer_A": "ՎՖԲ Շտուտգարտ",
+          "answer_B": "Բավարիա Մյունխեն",
+          "answer_C": "Բայեր Լևերկուզեն",
+          "answer_D": "ՌԲ Լայպցիգ",
+          "right_answer": "Բավարիա Մյունխեն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern Múnich",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "RB Leipzig",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Copa de Alemania en la temporada 2025/2026?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_062"
+        },
+        "de": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern München",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "RB Leipzig",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den DFB-Pokal in der Saison 2025/2026?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_062"
+        },
+        "it": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern Monaco",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "RB Lipsia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Coppa di Germania nella stagione 2025/2026?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_062"
+        }
+      }
+    },
+    {
+      "questionId": "germany_063",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who scored all three Bayern goals in the 2025/2026 German Cup final?",
+          "answer_A": "Harry Kane",
+          "answer_B": "Michael Olise",
+          "answer_C": "Luis Díaz",
+          "answer_D": "Jamal Musiala",
+          "right_answer": "Harry Kane"
+        },
+        "ru": {
+          "question": "Кто забил все три гола Баварии в финале Кубка Германии 2025/2026?",
+          "answer_A": "Гарри Кейн",
+          "answer_B": "Майкл Олисе",
+          "answer_C": "Луис Диас",
+          "answer_D": "Джамал Мусиала",
+          "right_answer": "Гарри Кейн"
+        },
+        "hy": {
+          "question": "Ո՞վ է խփել Բավարիայի բոլոր երեք գոլերը Գերմանիայի գավաթի 2025/2026 եզրափակչում:",
+          "answer_A": "Հարի Քեյն",
+          "answer_B": "Մայքլ Օլիսե",
+          "answer_C": "Լուիս Դիաս",
+          "answer_D": "Ջամալ Մուսիալա",
+          "right_answer": "Հարի Քեյն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Harry Kane",
+          "answer_B": "Michael Olise",
+          "answer_C": "Luis Díaz",
+          "answer_D": "Jamal Musiala",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó los tres goles del Bayern en la final de la Copa de Alemania 2025/2026?",
+          "right_answer": "Harry Kane",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_063"
+        },
+        "de": {
+          "answer_A": "Harry Kane",
+          "answer_B": "Michael Olise",
+          "answer_C": "Luis Díaz",
+          "answer_D": "Jamal Musiala",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte alle drei Bayern-Tore im DFB-Pokalfinale 2025/2026?",
+          "right_answer": "Harry Kane",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_063"
+        },
+        "it": {
+          "answer_A": "Harry Kane",
+          "answer_B": "Michael Olise",
+          "answer_C": "Luis Díaz",
+          "answer_D": "Jamal Musiala",
+          "categoryType": "TOP5",
+          "question": "Chi ha segnato tutti e tre i gol del Bayern nella finale della Coppa di Germania 2025/2026?",
+          "right_answer": "Harry Kane",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_063"
+        }
+      }
+    },
+    {
+      "questionId": "germany_064",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the Franz Beckenbauer Supercup in 2025?",
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern Munich",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "right_answer": "Bayern Munich"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Суперкубок Франца Беккенбауэра в 2025 году?",
+          "answer_A": "ВФБ Штутгарт",
+          "answer_B": "Бавария Мюнхен",
+          "answer_C": "Байер Леверкузен",
+          "answer_D": "Боруссия Дортмунд",
+          "right_answer": "Бавария Мюнхен"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Ֆրանց Բեկենբաուերի Սուպեր գավաթը 2025 թվականին:",
+          "answer_A": "ՎՖԲ Շտուտգարտ",
+          "answer_B": "Բավարիա Մյունխեն",
+          "answer_C": "Բայեր Լևերկուզեն",
+          "answer_D": "Բորուսիա Դորտմունդ",
+          "right_answer": "Բավարիա Մյունխեն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern Múnich",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Supercopa Franz Beckenbauer en 2025?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_064"
+        },
+        "de": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern München",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den Franz-Beckenbauer-Supercup 2025?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_064"
+        },
+        "it": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "Bayern Monaco",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Supercoppa Franz Beckenbauer nel 2025?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_064"
+        }
+      }
+    },
+    {
+      "questionId": "germany_065",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Who became the Bundesliga top assist provider in the 2023–2024 season?",
+          "answer_A": "Alex Grimaldo",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Leroy Sané",
+          "answer_D": "Julian Brandt",
+          "right_answer": "Alex Grimaldo"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2023–2024 стал лучшим ассистентом Бундеслиги?",
+          "answer_A": "Алекс Гримальдо",
+          "answer_B": "Йозуа Киммих",
+          "answer_C": "Лерой Зане",
+          "answer_D": "Юлиан Брандт",
+          "right_answer": "Алекс Гримальдо"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2023–2024 թթ. Բունդեսլիգայի լավագույն գոլային փոխանցում կատարած ֆուտբոլիստը:",
+          "answer_A": "Ալեքս Գրիմալդո",
+          "answer_B": "Յոզուա Կիմիխ",
+          "answer_C": "Լերոյ Սանե",
+          "answer_D": "Յուլիան Բրանդտ",
+          "right_answer": "Ալեքս Գրիմալդո"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Alex Grimaldo",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Leroy Sané",
+          "answer_D": "Julian Brandt",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el máximo asistente de la Bundesliga en la temporada 2023–2024?",
+          "right_answer": "Alex Grimaldo",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_065"
+        },
+        "de": {
+          "answer_A": "Alex Grimaldo",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Leroy Sané",
+          "answer_D": "Julian Brandt",
+          "categoryType": "TOP5",
+          "question": "Wer war in der Saison 2023–2024 der beste Vorlagengeber der Bundesliga?",
+          "right_answer": "Alex Grimaldo",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_065"
+        },
+        "it": {
+          "answer_A": "Alex Grimaldo",
+          "answer_B": "Joshua Kimmich",
+          "answer_C": "Leroy Sané",
+          "answer_D": "Julian Brandt",
+          "categoryType": "TOP5",
+          "question": "Chi fu il miglior assistman della Bundesliga nella stagione 2023–2024?",
+          "right_answer": "Alex Grimaldo",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_065"
+        }
+      }
+    },
+    {
+      "questionId": "germany_066",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Against which club did Bayern Munich win the 2025 Franz Beckenbauer Supercup?",
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "RB Leipzig",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "right_answer": "VfB Stuttgart"
+        },
+        "ru": {
+          "question": "Против какого клуба Бавария выиграла Суперкубок Франца Беккенбауэра 2025?",
+          "answer_A": "ВФБ Штутгарт",
+          "answer_B": "РБ Лейпциг",
+          "answer_C": "Байер Леверкузен",
+          "answer_D": "Боруссия Дортмунд",
+          "right_answer": "ВФБ Штутгарт"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբի դեմ է Բավարիան հաղթել Ֆրանց Բեկենբաուերի 2025 թվականի Սուպեր գավաթում:",
+          "answer_A": "ՎՖԲ Շտուտգարտ",
+          "answer_B": "ՌԲ Լայպցիգ",
+          "answer_C": "Բայեր Լևերկուզեն",
+          "answer_D": "Բորուսիա Դորտմունդ",
+          "right_answer": "ՎՖԲ Շտուտգարտ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "RB Leipzig",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "¿Contra qué club ganó el Bayern Múnich la Supercopa Franz Beckenbauer 2025?",
+          "right_answer": "VfB Stuttgart",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_066"
+        },
+        "de": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "RB Leipzig",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Gegen welchen Verein gewann Bayern München den Franz-Beckenbauer-Supercup 2025?",
+          "right_answer": "VfB Stuttgart",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_066"
+        },
+        "it": {
+          "answer_A": "VfB Stuttgart",
+          "answer_B": "RB Lipsia",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia Dortmund",
+          "categoryType": "TOP5",
+          "question": "Contro quale club il Bayern Monaco ha vinto la Supercoppa Franz Beckenbauer 2025?",
+          "right_answer": "VfB Stuttgart",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_066"
+        }
+      }
+    },
+    {
+      "questionId": "germany_067",
+      "categoryType": "TOP5",
+      "type": "Germany",
+      "source": {
+        "en": {
+          "question": "Which club won the Bundesliga in the 2024/2025 season?",
+          "answer_A": "Bayer Leverkusen",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Bayern Munich",
+          "answer_D": "RB Leipzig",
+          "right_answer": "Bayern Munich"
+        },
+        "ru": {
+          "question": "Какой клуб стал чемпионом Германии в сезоне 2024/2025?",
+          "answer_A": "Байер Леверкузен",
+          "answer_B": "Боруссия Дортмунд",
+          "answer_C": "Бавария",
+          "answer_D": "РБ Лейпциг",
+          "right_answer": "Бавария"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Գերմանիայի առաջնության չեմպիոն 2024/2025 մրցաշրջանում:",
+          "answer_A": "Բայեր Լևերկուզեն",
+          "answer_B": "Բորուսիա Դորտմունդ",
+          "answer_C": "Բավարիա",
+          "answer_D": "ՌԲ Լայպցիգ",
+          "right_answer": "Բավարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Bayer Leverkusen",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Bayern Múnich",
+          "answer_D": "RB Leipzig",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Bundesliga en la temporada 2024/2025?",
+          "right_answer": "Bayern Múnich",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_067"
+        },
+        "de": {
+          "answer_A": "Bayer Leverkusen",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Bayern München",
+          "answer_D": "RB Leipzig",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann die Bundesliga in der Saison 2024/2025?",
+          "right_answer": "Bayern München",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_067"
+        },
+        "it": {
+          "answer_A": "Bayer Leverkusen",
+          "answer_B": "Borussia Dortmund",
+          "answer_C": "Bayern Monaco",
+          "answer_D": "RB Lipsia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Bundesliga nella stagione 2024/2025?",
+          "right_answer": "Bayern Monaco",
+          "type": "Germany",
+          "answered": false,
+          "questionId": "germany_067"
+        }
+      }
+    }
+  ]
+}

@@ -986,7 +986,7 @@
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
           "answer_D": "None",
-          "right_answer": "Both"
+          "right_answer": "Cristiano Ronaldo"
         },
         "ru": {
           "question": "Кто рекордсмен по забитым мячам в финалах Клубного чемпионата мира ?",
@@ -994,7 +994,7 @@
           "answer_B": "Лионель Месси",
           "answer_C": "Оба",
           "answer_D": "Никто",
-          "right_answer": "Оба"
+          "right_answer": "Криштиану Роналду"
         },
         "hy": {
           "question": "Ո՞վ է Աշխարհի ակումբային առաջնության եզրափակիչներում խփած գոլերի քանակով ռեկորդակիրը:",
@@ -1002,7 +1002,7 @@
           "answer_B": "Լիոնել Մեսսի",
           "answer_C": "Երկուսն էլ",
           "answer_D": "Ոչ մեկը",
-          "right_answer": "Երկուսն էլ"
+          "right_answer": "Կրիշտիանու Ռոնալդու"
         }
       },
       "targets": {
@@ -1124,7 +1124,7 @@
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
           "answer_D": "None",
-          "right_answer": "Cristiano Ronaldo"
+          "right_answer": "Both"
         },
         "ru": {
           "question": "Кто рекордсмен своей сборной по количеству проведенных матчей ?",
@@ -1132,7 +1132,7 @@
           "answer_B": "Лионель Месси",
           "answer_C": "Оба",
           "answer_D": "Никто",
-          "right_answer": "Криштиану Роналду"
+          "right_answer": "Оба"
         },
         "hy": {
           "question": "Ո՞վ է իր հավաքականի ռեկորդակիրը անցկացրած խաղերի քանակով:",
@@ -1140,7 +1140,7 @@
           "answer_B": "Լիոնել Մեսսի",
           "answer_C": "Երկուսն էլ",
           "answer_D": "Ոչ մեկը",
-          "right_answer": "Կրիշտիանու Ռոնալդու"
+          "right_answer": "Երկուսն էլ"
         }
       },
       "targets": {
@@ -1395,7 +1395,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who broke Gerd Muller's record for the most goals in one calendar year?",
+          "question": "Who broke Gerd Müller's record for the most goals in one calendar year?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -1426,7 +1426,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién rompió el récord de Gerd Müller de más goles en un año natural?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -1438,7 +1438,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer brach Gerd Müllers Rekord für die meisten Tore in einem Kalenderjahr?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -1450,7 +1450,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi ha battuto il record di Gerd Müller per il maggior numero di gol in un anno solare?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -1740,7 +1740,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who is the Champions League top scorer?",
+          "question": "Who finished as Champions League top scorer in more seasons?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -1748,7 +1748,7 @@
           "right_answer": "Cristiano Ronaldo"
         },
         "ru": {
-          "question": "Кто больше всех стал лучшим бомбардиром Лиги чемпионов ?",
+          "question": "Кто чаще становился лучшим бомбардиром сезона Лиги чемпионов ?",
           "answer_A": "Криштиану Роналду",
           "answer_B": "Лионель Месси",
           "answer_C": "Оба",
@@ -1756,7 +1756,7 @@
           "right_answer": "Криштиану Роналду"
         },
         "hy": {
-          "question": "Ո՞վ է բոլորից շատ դարձել Չեմպիոնների Լիգայի լավագույն ռմբարկու:",
+          "question": "Ո՞վ է ավելի հաճախ դարձել Չեմպիոնների լիգայի մրցաշրջանի լավագույն ռմբարկու:",
           "answer_A": "Կրիշտիանու Ռոնալդու",
           "answer_B": "Լիոնել Մեսսի",
           "answer_C": "Երկուսն էլ",
@@ -1771,7 +1771,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién terminó más temporadas como máximo goleador de la Champions League?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -1783,7 +1783,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer wurde in mehr Spielzeiten Torschützenkönig der Champions League?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -1795,7 +1795,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi è stato capocannoniere della Champions League in più stagioni?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2844,7 +2844,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who became the first three-time winner of the \"Golden Boot \"?",
+          "question": "Who became the first three-time winner of the European Golden Shoe?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -2875,7 +2875,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién fue el primer triple ganador de la Bota de Oro europea?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2887,7 +2887,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer wurde als Erster dreimaliger Gewinner des Europäischen Goldenen Schuhs?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2899,7 +2899,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi è stato il primo a vincere tre volte la Scarpa d’Oro europea?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2913,7 +2913,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who became the first four-time winner of the \"Golden Boot \"?",
+          "question": "Who became the first four-time winner of the European Golden Shoe?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -2944,7 +2944,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién fue el primer cuádruple ganador de la Bota de Oro europea?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2956,7 +2956,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer wurde als Erster viermaliger Gewinner des Europäischen Goldenen Schuhs?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2968,7 +2968,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi è stato il primo a vincere quattro volte la Scarpa d’Oro europea?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -2982,7 +2982,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who became the five-time winner of the \"Golden Boot \"?",
+          "question": "Who became the five-time winner of the European Golden Shoe?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -3013,7 +3013,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién ganó la Bota de Oro europea cinco veces?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -3025,7 +3025,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer gewann den Europäischen Goldenen Schuh fünfmal?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -3037,7 +3037,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi ha vinto la Scarpa d’Oro europea cinque volte?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -4224,7 +4224,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who won the prize for the best soccer player in the World Cup?",
+          "question": "Who won the best player award at the World Cup?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -4255,7 +4255,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién ganó el premio al mejor jugador de la Copa del Mundo?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -4267,7 +4267,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer gewann die Auszeichnung als bester Spieler der Weltmeisterschaft?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -4279,7 +4279,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi ha vinto il premio come miglior giocatore della Coppa del Mondo?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -4638,7 +4638,7 @@
       "type": "vsRM",
       "source": {
         "en": {
-          "question": "Who in the season 2018–2019 became the owner of the \"Golden Cleats \"?",
+          "question": "Who won the European Golden Shoe in the 2018–2019 season?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Lionel Messi",
           "answer_C": "Both",
@@ -4646,7 +4646,7 @@
           "right_answer": "Lionel Messi"
         },
         "ru": {
-          "question": "Кто в сезоне 2018–2019 стал обладателем \"Золотой бутсы\" ?",
+          "question": "Кто в сезоне 2018–2019 стал обладателем европейской «Золотой бутсы» ?",
           "answer_A": "Криштиану Роналду",
           "answer_B": "Лионель Месси",
           "answer_C": "Оба",
@@ -4654,7 +4654,7 @@
           "right_answer": "Лионель Месси"
         },
         "hy": {
-          "question": "Ո՞վ է 2018–2019 թթ. մրցաշրջանում դարձել \"Ոսկե խաղակոշիկ\" մրցանակի դափնեկիր:",
+          "question": "Ո՞վ է 2018–2019 մրցաշրջանում նվաճել եվրոպական «Ոսկե խաղակոշիկը»:",
           "answer_A": "Կրիշտիանու Ռոնալդու",
           "answer_B": "Լիոնել Մեսսի",
           "answer_C": "Երկուսն էլ",
@@ -4669,7 +4669,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "¿Quién ganó la Bota de Oro europea en la temporada 2018/19?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -4681,7 +4681,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Wer gewann in der Saison 2018/19 den Europäischen Goldenen Schuh?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,
@@ -4693,7 +4693,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "RON_MES",
-          "question": "",
+          "question": "Chi ha vinto la Scarpa d’Oro europea nella stagione 2018/19?",
           "right_answer": "",
           "type": "vsRM",
           "answered": false,

@@ -1188,7 +1188,7 @@
       "type": "France",
       "source": {
         "en": {
-          "question": "Which club has won the French Championship the most in the 21st century?",
+          "question": "Which club won seven consecutive French championships in the 21st century?",
           "answer_A": "Lyon",
           "answer_B": "Monaco",
           "answer_C": "PSG",
@@ -1196,7 +1196,7 @@
           "right_answer": "Lyon"
         },
         "ru": {
-          "question": "Какой клуб больше всех стал победителем чемпионатa Франции в XXI веке ?",
+          "question": "Какой клуб выиграл семь чемпионатов Франции подряд в XXI веке?",
           "answer_A": "Лион",
           "answer_B": "Монако",
           "answer_C": "ПСЖ",
@@ -1204,7 +1204,7 @@
           "right_answer": "Лион"
         },
         "hy": {
-          "question": "Ո՞վ է ավելի շատ նվաճել Ֆրանսիայի առաջնության չեմպիոնի տիտղոսը XXI դարում:",
+          "question": "Ո՞ր ակումբն է XXI դարում յոթ անգամ անընդմեջ դարձել Ֆրանսիայի չեմպիոն։",
           "answer_A": "Լիոն",
           "answer_B": "Մոնակո",
           "answer_C": "ՊՍԺ",
@@ -2573,7 +2573,7 @@
           "answer_B": "Olivier Giroud",
           "answer_C": "Thierry Henry",
           "answer_D": "Kylian Mbappé",
-          "right_answer": "Olivier Giroud"
+          "right_answer": "Kylian Mbappé"
         },
         "ru": {
           "question": "Кто лучший бомбардир сборной Франции ?",
@@ -2581,15 +2581,15 @@
           "answer_B": "Оливье Жиру",
           "answer_C": "Тьерри Анри",
           "answer_D": "Килиан Мбаппе",
-          "right_answer": "Оливье Жиру"
+          "right_answer": "Килиан Мбаппе"
         },
         "hy": {
           "question": "Ո՞վ է Ֆրանսիայի հավաքականի լավագույն ռմբարկուն:",
           "answer_A": "Միշել Պլատինի",
           "answer_B": "Օլիվյե Ժիրու",
           "answer_C": "Թիերի Անրի",
-          "answer_D": "Անելկա",
-          "right_answer": "Օլիվյե Ժիրու"
+          "answer_D": "Կիլիան Մբապպե",
+          "right_answer": "Կիլիան Մբապպե"
         }
       },
       "targets": {
@@ -2775,28 +2775,28 @@
       "type": "France",
       "source": {
         "en": {
-          "question": "How many times did the French team win the Olympic gold medal?",
-          "answer_A": "0",
-          "answer_B": "1",
-          "answer_C": "2",
-          "answer_D": "3",
-          "right_answer": "1"
+          "question": "Which player has made the most appearances for the France national team?",
+          "answer_A": "Hugo Lloris",
+          "answer_B": "Lilian Thuram",
+          "answer_C": "Olivier Giroud",
+          "answer_D": "Thierry Henry",
+          "right_answer": "Hugo Lloris"
         },
         "ru": {
-          "question": "Сколько раз сборная Франции выиграла золотую медаль Олимпийских игр ?",
-          "answer_A": "0",
-          "answer_B": "1",
-          "answer_C": "2",
-          "answer_D": "3",
-          "right_answer": "1"
+          "question": "Кто провёл больше всего матчей за сборную Франции?",
+          "answer_A": "Уго Льорис",
+          "answer_B": "Лилиан Тюрам",
+          "answer_C": "Оливье Жиру",
+          "answer_D": "Тьерри Анри",
+          "right_answer": "Уго Льорис"
         },
         "hy": {
-          "question": "Քանի՞ անգամ է Ֆրանսիայի հավաքականը նվաճել Օլիմպիական խաղերի ոսկե մեդալը:",
-          "answer_A": "0",
-          "answer_B": "1",
-          "answer_C": "2",
-          "answer_D": "3",
-          "right_answer": "1"
+          "question": "Ո՞վ է ամենաշատ խաղերն անցկացրել Ֆրանսիայի հավաքականում։",
+          "answer_A": "Ուգո Լյորիս",
+          "answer_B": "Լիլիան Թյուրամ",
+          "answer_C": "Օլիվյե Ժիրու",
+          "answer_D": "Թիերի Անրի",
+          "right_answer": "Ուգո Լյորիս"
         }
       },
       "targets": {
@@ -3477,8 +3477,8 @@
           "answer_A": "Германия",
           "answer_B": "Дания",
           "answer_C": "Англия",
-          "answer_D": "Белгия",
-          "right_answer": "Белгия"
+          "answer_D": "Бельгия",
+          "right_answer": "Бельгия"
         },
         "hy": {
           "question": "Ո՞վ է եղել Ֆրանսիայի հավաքականի մրցակիցը առաջին միջազգային հանդիպման ժամանակ:",
@@ -3948,27 +3948,27 @@
       "type": "France",
       "source": {
         "en": {
-          "question": "Which club won the French Championship in the 2018–2019 season?",
-          "answer_A": "PSG",
-          "answer_B": "Lyon",
-          "answer_C": "Lille",
-          "answer_D": "Marseille",
+          "question": "Which club won Ligue 1 in the 2023–2024 season?",
+          "answer_A": "Monaco",
+          "answer_B": "PSG",
+          "answer_C": "Marseille",
+          "answer_D": "Lille",
           "right_answer": "PSG"
         },
         "ru": {
-          "question": "Какой клуб в сезоне 2018–2019 стал победителем чемпионатa Франции ?",
-          "answer_A": "ПСЖ",
-          "answer_B": "Лион",
-          "answer_C": "Лилль",
-          "answer_D": "Марсель",
+          "question": "Какой клуб выиграл Лигу 1 в сезоне 2023–2024?",
+          "answer_A": "Монако",
+          "answer_B": "ПСЖ",
+          "answer_C": "Марсель",
+          "answer_D": "Лилль",
           "right_answer": "ПСЖ"
         },
         "hy": {
-          "question": "Ո՞ր ակումբն է նվաճել Ֆրանսիայի 2018–2019 թթ. առաջնության չեմպիոնի տիտղոսը:",
-          "answer_A": "ՊՍԺ",
-          "answer_B": "Լիոն",
-          "answer_C": "Լիլ",
-          "answer_D": "Մարսել",
+          "question": "Ո՞ր ակումբը հաղթեց Լիգա 1-ում 2023–2024 մրցաշրջանում։",
+          "answer_A": "Մոնակո",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Մարսել",
+          "answer_D": "Լիլլ",
           "right_answer": "ՊՍԺ"
         }
       },
@@ -4224,28 +4224,28 @@
       "type": "France",
       "source": {
         "en": {
-          "question": "Who is PSG's top scorer?",
-          "answer_A": "Zlatan Ibrahimović",
-          "answer_B": "Pedro Pauleta",
-          "answer_C": "Carlos Bianchi",
-          "answer_D": "Kylian Mbappe",
-          "right_answer": "Kylian Mbappe"
+          "question": "Which club finished third in Ligue 1 in the 2023–2024 season?",
+          "answer_A": "Brest",
+          "answer_B": "Lille",
+          "answer_C": "Nice",
+          "answer_D": "Lyon",
+          "right_answer": "Brest"
         },
         "ru": {
-          "question": "Кто лучший бомбардир ПСЖ ?",
-          "answer_A": "Златан Ибрагимович",
-          "answer_B": "Педру Паулета",
-          "answer_C": "Карлос Бьянки",
-          "answer_D": "Килиан Мбаппе",
-          "right_answer": "Килиан Мбаппе"
+          "question": "Какой клуб занял третье место в Лиге 1 в сезоне 2023–2024?",
+          "answer_A": "Брест",
+          "answer_B": "Лилль",
+          "answer_C": "Ницца",
+          "answer_D": "Лион",
+          "right_answer": "Брест"
         },
         "hy": {
-          "question": "Ո՞վ է ՊՍԺ-ի լավագույն ռմբարկուն:",
-          "answer_A": "Զլատան Իբրահիմովիչ",
-          "answer_B": "Պեդրու Պաուլետա",
-          "answer_C": "Կառլոս Բիանկի",
-          "answer_D": "Կիլիան Մբապպե",
-          "right_answer": "Կիլիան Մբապպե"
+          "question": "Ո՞ր ակումբը զբաղեցրեց երրորդ տեղը Լիգա 1-ում 2023–2024 մրցաշրջանում։",
+          "answer_A": "Բրեստ",
+          "answer_B": "Լիլլ",
+          "answer_C": "Նիցցա",
+          "answer_D": "Լիոն",
+          "right_answer": "Բրեստ"
         }
       },
       "targets": {
@@ -4293,28 +4293,28 @@
       "type": "France",
       "source": {
         "en": {
-          "question": "In which club(s) did Michael Landro play?",
-          "answer_A": "PSG",
-          "answer_B": "Lille",
-          "answer_C": "FC Nantes",
-          "answer_D": "In all listed clubs",
-          "right_answer": "In all listed clubs"
+          "question": "Which club won the Coupe de France in the 2023–2024 season?",
+          "answer_A": "Lyon",
+          "answer_B": "PSG",
+          "answer_C": "Rennes",
+          "answer_D": "Monaco",
+          "right_answer": "PSG"
         },
         "ru": {
-          "question": "В каком клубе (клубах) выступал Микаэль Ландро ?",
-          "answer_A": "ПСЖ",
-          "answer_B": "Лилль",
-          "answer_C": "Нант",
-          "answer_D": "Во всех перечисленных клубах",
-          "right_answer": "Во всех перечисленных клубах"
+          "question": "Какой клуб выиграл Кубок Франции в сезоне 2023–2024?",
+          "answer_A": "Лион",
+          "answer_B": "ПСЖ",
+          "answer_C": "Ренн",
+          "answer_D": "Монако",
+          "right_answer": "ПСЖ"
         },
         "hy": {
-          "question": "Ո՞ր ակումբում (ակումբներում) է հանդես եկել Միքայել Լանդրոն:",
-          "answer_A": "ՊՍԺ",
-          "answer_B": "Լիլ",
-          "answer_C": "Նանտ",
-          "answer_D": "Նշված բոլոր ակումբներում",
-          "right_answer": "Նշված բոլոր ակումբներում"
+          "question": "Ո՞ր ակումբը հաղթեց Ֆրանսիայի գավաթում 2023–2024 մրցաշրջանում։",
+          "answer_A": "Լիոն",
+          "answer_B": "ՊՍԺ",
+          "answer_C": "Ռեն",
+          "answer_D": "Մոնակո",
+          "right_answer": "ՊՍԺ"
         }
       },
       "targets": {
@@ -4362,28 +4362,28 @@
       "type": "France",
       "source": {
         "en": {
-          "question": "Which club won the French championship in the 2016–2017 season?",
-          "answer_A": "Monaco",
-          "answer_B": "Lyon",
+          "question": "Which club won the last Coupe de la Ligue in 2020?",
+          "answer_A": "Lyon",
+          "answer_B": "Marseille",
           "answer_C": "PSG",
-          "answer_D": "Montpellier",
-          "right_answer": "Monaco"
+          "answer_D": "Strasbourg",
+          "right_answer": "PSG"
         },
         "ru": {
-          "question": "Какой клуб в сезоне 2016–2017 стал победителем чемпионатa Франции ?",
-          "answer_A": "Монако",
-          "answer_B": "Лион",
+          "question": "Какой клуб стал последним обладателем Кубка лиги в 2020 году?",
+          "answer_A": "Лион",
+          "answer_B": "Марсель",
           "answer_C": "ПСЖ",
-          "answer_D": "Монпелье",
-          "right_answer": "Монако"
+          "answer_D": "Страсбург",
+          "right_answer": "ПСЖ"
         },
         "hy": {
-          "question": "Ո՞ր ակումբն է նվաճել Ֆրանսիայի 2016–2017 թթ. առաջնության չեմպիոնի տիտղոսը:",
-          "answer_A": "Մոնակո",
-          "answer_B": "Լիոն",
+          "question": "Ո՞ր ակումբը դարձավ Լիգայի գավաթի վերջին հաղթողը 2020 թվականին։",
+          "answer_A": "Լիոն",
+          "answer_B": "Մարսել",
           "answer_C": "ՊՍԺ",
-          "answer_D": "Մոնպելյե",
-          "right_answer": "Մոնակո"
+          "answer_D": "Ստրասբուրգ",
+          "right_answer": "ՊՍԺ"
         }
       },
       "targets": {

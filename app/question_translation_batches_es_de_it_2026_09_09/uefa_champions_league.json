@@ -7,7 +7,7 @@
     "de",
     "it"
   ],
-  "status": "translation_batch",
+  "status": "translation_needed",
   "items": [
     {
       "questionId": "champions_league_001",
@@ -361,27 +361,27 @@
       "source": {
         "en": {
           "question": "Of these, which club reached the Champions League final (European Champions Cup) the most?",
-          "answer_A": "Milan",
-          "answer_B": "Bayern München",
+          "answer_A": "Milan, Bayern München",
+          "answer_B": "Liverpool",
           "answer_C": "Juventus",
           "answer_D": "Ajax",
-          "right_answer": "Milan"
+          "right_answer": "Milan, Bayern München"
         },
         "ru": {
           "question": "Из перечисленных какой клуб больше всех выходил в финал Лиги чемпионов (Кубок европейских чемпионов) ?",
-          "answer_A": "Милан",
-          "answer_B": "Бавария",
+          "answer_A": "Милан, Бавария",
+          "answer_B": "Ливерпуль",
           "answer_C": "Ювентус",
           "answer_D": "Аякс",
-          "right_answer": "Милан"
+          "right_answer": "Милан, Бавария"
         },
         "hy": {
           "question": "Ո՞ր ակումբն է ավելի շատ դուրս եկել Չեմպիոնների Լիգայի եզրափակիչ (Եվրոպական չեմպիոնների գավաթ):",
-          "answer_A": "Միլան",
-          "answer_B": "Բավարիա",
+          "answer_A": "Միլան, Բավարիա",
+          "answer_B": "Լիվերպուլ",
           "answer_C": "Յուվենթուս",
           "answer_D": "Այաքս",
-          "right_answer": "Միլան"
+          "right_answer": "Միլան, Բավարիա"
         }
       },
       "targets": {
@@ -1602,28 +1602,28 @@
       "type": "Champions League",
       "source": {
         "en": {
-          "question": "Which country’s coaches won the Champions League (European Cup) most?",
-          "answer_A": "of Spain",
+          "question": "Which countries’ coaches won the Champions League (European Cup) most?",
+          "answer_A": "of Spain and Italy",
           "answer_B": "of Italy",
           "answer_C": "of England",
           "answer_D": "of Germany",
-          "right_answer": "of Italy"
+          "right_answer": "of Spain and Italy"
         },
         "ru": {
-          "question": "Тренеры какой страны больше всех выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
-          "answer_A": "Испании",
+          "question": "Тренеры каких стран больше всех выиграли Лигу чемпионов (Кубок европейских чемпионов) ?",
+          "answer_A": "Испании и Италии",
           "answer_B": "Италии",
           "answer_C": "Англии",
           "answer_D": "Германии",
-          "right_answer": "Италии"
+          "right_answer": "Испании и Италии"
         },
         "hy": {
-          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել Չեմպիոնների Լիգայի գավաթը:",
-          "answer_A": "Իսպանիա",
+          "question": "Ո՞ր երկրների մարզիչներն են ավելի շատ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Իսպանիա և Իտալիա",
           "answer_B": "Իտալիա",
           "answer_C": "Անգլիա",
           "answer_D": "Գերմանիա",
-          "right_answer": "Իտալիա"
+          "right_answer": "Իսպանիա և Իտալիա"
         }
       },
       "targets": {
@@ -2016,7 +2016,7 @@
       "type": "Champions League",
       "source": {
         "en": {
-          "question": "Who is the author of the fastest \"hat trick \" in the Champions League (after 1992)?",
+          "question": "Of these, who is the author of the fastest \"hat trick \" in the Champions League (after 1992)?",
           "answer_A": "Lionel Messi",
           "answer_B": "Cristiano Ronaldo",
           "answer_C": "Luiz Adriano",
@@ -2024,7 +2024,7 @@
           "right_answer": "Bafé Gomis"
         },
         "ru": {
-          "question": "Кто автор самого быстрого \"хет трика\" в Лиге чемпионов (после 1992 г.) ?",
+          "question": "Из перечисленных кто автор самого быстрого \"хет трика\" в Лиге чемпионов (после 1992 г.) ?",
           "answer_A": "Лионель Месси",
           "answer_B": "Криштиану Роналду",
           "answer_C": "Луис Адриано",
@@ -2032,7 +2032,7 @@
           "right_answer": "Бафетимби Гомис"
         },
         "hy": {
-          "question": "Ո՞վ է Չեմպիոնների Լիգայում ամենաարագ \"հեթրիկ\"-ի հեղինակը (1992 թ. հետո):",
+          "question": "Նշվածներից ո՞վ է Չեմպիոնների Լիգայում ամենաարագ \"հեթրիկ\"-ի հեղինակը (1992 թ. հետո):",
           "answer_A": "Լիոնել Մեսսի",
           "answer_B": "Կրիշտիանու Ռոնալդու",
           "answer_C": "Լուիս Ադրիանո",
@@ -2499,28 +2499,28 @@
       "type": "Champions League",
       "source": {
         "en": {
-          "question": "Which club won the UEFA Champions League in the 2023/2024 season?",
+          "question": "Which club did Paris Saint-Germain beat in the 2025/26 UEFA Champions League final?",
           "answer_A": "Manchester City",
-          "answer_B": "Real Madrid",
+          "answer_B": "Arsenal",
           "answer_C": "Bayern Munich",
-          "answer_D": "Borussia Dortmund",
-          "right_answer": "Real Madrid"
+          "answer_D": "Real Madrid",
+          "right_answer": "Arsenal"
         },
         "ru": {
-          "question": "Какой клуб выиграл Лигу чемпионов УЕФА в сезоне 2023/2024?",
+          "question": "Какой клуб Пари Сен-Жермен обыграл в финале Лиги чемпионов УЕФА 2025/26?",
           "answer_A": "Манчестер Сити",
-          "answer_B": "Реал Мадрид",
+          "answer_B": "Арсенал",
           "answer_C": "Бавария",
-          "answer_D": "Боруссия Дортмунд",
-          "right_answer": "Реал Мадрид"
+          "answer_D": "Реал Мадрид",
+          "right_answer": "Арсенал"
         },
         "hy": {
-          "question": "Ո՞ր ակումբն է հաղթել ՈՒԵՖԱ-ի Չեմպիոնների լիգան 2023/2024 մրցաշրջանում:",
+          "question": "Ո՞ր ակումբին է հաղթել Պարի Սեն-Ժերմենը 2025/26 ՈՒԵՖԱ Չեմպիոնների Լիգայի եզրափակչում:",
           "answer_A": "Մանչեսթեր Սիթի",
-          "answer_B": "Ռեալ Մադրիդ",
+          "answer_B": "Արսենալ",
           "answer_C": "Բավարիա",
-          "answer_D": "Բորուսիա Դորտմունդ",
-          "right_answer": "Ռեալ Մադրիդ"
+          "answer_D": "Ռեալ Մադրիդ",
+          "right_answer": "Արսենալ"
         }
       },
       "targets": {

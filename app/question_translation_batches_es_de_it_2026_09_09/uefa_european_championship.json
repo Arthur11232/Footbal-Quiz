@@ -291,7 +291,7 @@
       "type": "European Championship",
       "source": {
         "en": {
-          "question": "Which countries have won the European Championships most?",
+          "question": "Which country has won the European Championship most?",
           "answer_A": "Italy, Germany",
           "answer_B": "Spain",
           "answer_C": "Spain, France",
@@ -299,7 +299,7 @@
           "right_answer": "Spain"
         },
         "ru": {
-          "question": "Какие страны больше всех выиграли чемпионат Европы ?",
+          "question": "Какая страна больше всех выиграла чемпионат Европы ?",
           "answer_A": "Италия, Германия",
           "answer_B": "Испания",
           "answer_C": "Испания, Франция",
@@ -307,7 +307,7 @@
           "right_answer": "Испания"
         },
         "hy": {
-          "question": "Ո՞ր երկրներն են բոլորից շատ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "question": "Ո՞ր երկիրն է բոլորից շատ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
           "answer_A": "Իտալիա, Գերմանիա",
           "answer_B": "Իսպանիա",
           "answer_C": "Իսպանիա, Ֆրանսիա",
@@ -364,7 +364,7 @@
           "answer_A": "Germany",
           "answer_B": "Spain",
           "answer_C": "France",
-          "answer_D": "Holland",
+          "answer_D": "Netherlands",
           "right_answer": "Germany"
         },
         "ru": {
@@ -372,7 +372,7 @@
           "answer_A": "Германия",
           "answer_B": "Испания",
           "answer_C": "Франция",
-          "answer_D": "Голландия",
+          "answer_D": "Нидерланды",
           "right_answer": "Германия"
         },
         "hy": {
@@ -380,7 +380,7 @@
           "answer_A": "Գերմանիա",
           "answer_B": "Իսպանիա",
           "answer_C": "Ֆրանսիա",
-          "answer_D": "Հոլանդիա",
+          "answer_D": "Նիդերլանդներ",
           "right_answer": "Գերմանիա"
         }
       },
@@ -429,15 +429,15 @@
       "type": "European Championship",
       "source": {
         "en": {
-          "question": "Between which teams the most productive game in the finals of the European Championship took place?",
-          "answer_A": "USSR- Yugoslavia",
-          "answer_B": "BRD(Germany) - USSR",
-          "answer_C": "Spain- Italy",
-          "answer_D": "France- Spain",
-          "right_answer": "Spain- Italy"
+          "question": "Between which teams did the highest-scoring European Championship final take place?",
+          "answer_A": "USSR - Yugoslavia",
+          "answer_B": "West Germany - USSR",
+          "answer_C": "Spain - Italy",
+          "answer_D": "France - Spain",
+          "right_answer": "Spain - Italy"
         },
         "ru": {
-          "question": "Между какими командами состоялась самая результативная игра в финалах чемпионата Европы ?",
+          "question": "Между какими командами состоялся самый результативный финал чемпионата Европы ?",
           "answer_A": "СССР - Югославия",
           "answer_B": "ФРГ(Германия) - СССР",
           "answer_C": "Испания - Италия",
@@ -445,7 +445,7 @@
           "right_answer": "Испания - Италия"
         },
         "hy": {
-          "question": "Եվրոպայի առաջնության եզրափակիչներում ո՞ր երկրների միջեվ է տեղի ունեցել ամենագոլառատ խաղը:",
+          "question": "Եվրոպայի առաջնության ո՞ր եզրափակիչն է եղել ամենագոլառատը:",
           "answer_A": "ԽՍՀՄ - Հարավսլավիա",
           "answer_B": "ԳՖՀ(Գերմանիա) - ԽՍՀՄ",
           "answer_C": "Իսպանիա - Իտալիա",
@@ -484,7 +484,7 @@
           "answer_C": "",
           "answer_D": "",
           "categoryType": "UEFA",
-          "question": "",
+          "question": "Tra quali nazionali si è giocata la finale più ricca di gol degli Europei?",
           "right_answer": "",
           "type": "European Championship",
           "answered": false,
@@ -567,7 +567,7 @@
       "type": "European Championship",
       "source": {
         "en": {
-          "question": "Which footballer (s) is the top scorer of the European Championship?",
+          "question": "Which footballer is the top scorer of the European Championship?",
           "answer_A": "Cristiano Ronaldo",
           "answer_B": "Michel Platini",
           "answer_C": "Michel Platini, Cristiano Ronaldo",
@@ -575,7 +575,7 @@
           "right_answer": "Cristiano Ronaldo"
         },
         "ru": {
-          "question": "Какой футболист (футболисты) является лучшим бомбардиром чемпионата Европы ?",
+          "question": "Какой футболист является лучшим бомбардиром чемпионата Европы ?",
           "answer_A": "Криштиану Роналду",
           "answer_B": "Мишель Платини",
           "answer_C": "Мишель Платини, Криштиану Роналду",
@@ -583,7 +583,7 @@
           "right_answer": "Криштиану Роналду"
         },
         "hy": {
-          "question": "Ո՞վ (ովքեր) է Եվրոպայի առաջնությունների լավագույն ռմբարկուն(երը):",
+          "question": "Ո՞վ է Եվրոպայի առաջնությունների լավագույն ռմբարկուն:",
           "answer_A": "Կրիշտիանու Ռոնալդու",
           "answer_B": "Միշել Պլատինի",
           "answer_C": "Միշել Պլատինի, Կրիշտիանու Ռոնալդու",
@@ -981,23 +981,23 @@
       "type": "European Championship",
       "source": {
         "en": {
-          "question": "Who is the most author of \"hat trick \" in the European Championships?",
+          "question": "Who has scored the most hat-tricks in European Championships?",
           "answer_A": "Michel Platini",
-          "answer_B": "Marcel van Basten",
+          "answer_B": "Marco van Basten",
           "answer_C": "Cristiano Ronaldo",
           "answer_D": "Nuno Gomes",
           "right_answer": "Michel Platini"
         },
         "ru": {
-          "question": "Кто больше всех стал автором \"хет трика\" в чемпионатах Европы ?",
+          "question": "Кто больше всех оформлял хет-трик на чемпионатах Европы ?",
           "answer_A": "Мишель Платини",
-          "answer_B": "Марко Ван Бастен",
+          "answer_B": "Марко ван Бастен",
           "answer_C": "Криштиану Роналду",
           "answer_D": "Нуну Гомеш",
           "right_answer": "Мишель Платини"
         },
         "hy": {
-          "question": "Ո՞վ է բոլորից շատ \"հեթրիկ\"-ի հեղինակ դարձել Եվրոպայի առաջնություններում:",
+          "question": "Ո՞վ է ամենաշատ հեթ-տրիկները ձևակերպել Եվրոպայի առաջնություններում:",
           "answer_A": "Միշել Պլատինի",
           "answer_B": "Մարկո վան Բաստեն",
           "answer_C": "Կրիշտիանու Ռոնալդու",
@@ -1192,7 +1192,7 @@
           "answer_A": "Italy, Germany",
           "answer_B": "Germany, USSR",
           "answer_C": "Yugoslavia, USSR",
-          "answer_D": "France, Holland",
+          "answer_D": "France, Netherlands",
           "right_answer": "Germany, USSR"
         },
         "ru": {
@@ -1200,7 +1200,7 @@
           "answer_A": "Италия, Германия",
           "answer_B": "Германия, СССР",
           "answer_C": "Югославия, СССР",
-          "answer_D": "Франция, Голландия",
+          "answer_D": "Франция, Нидерланды",
           "right_answer": "Германия, СССР"
         },
         "hy": {
@@ -1208,7 +1208,7 @@
           "answer_A": "Իտալիա, Գերմանիա",
           "answer_B": "Գերմանիա, ԽՍՀՄ",
           "answer_C": "Հարավսլավիա, ԽՍՀՄ",
-          "answer_D": "Ֆրանսիա, Հոլանդիա",
+          "answer_D": "Ֆրանսիա, Նիդերլանդներ",
           "right_answer": "Գերմանիա, ԽՍՀՄ"
         }
       },
@@ -1217,7 +1217,7 @@
           "answer_A": "",
           "answer_B": "",
           "answer_C": "",
-          "answer_D": "",
+          "answer_D": "Francia, Países Bajos",
           "categoryType": "UEFA",
           "question": "",
           "right_answer": "",
@@ -1229,7 +1229,7 @@
           "answer_A": "",
           "answer_B": "",
           "answer_C": "",
-          "answer_D": "",
+          "answer_D": "Frankreich, Niederlande",
           "categoryType": "UEFA",
           "question": "",
           "right_answer": "",
@@ -1241,7 +1241,7 @@
           "answer_A": "",
           "answer_B": "",
           "answer_C": "",
-          "answer_D": "",
+          "answer_D": "Francia, Olanda",
           "categoryType": "UEFA",
           "question": "",
           "right_answer": "",
@@ -1326,12 +1326,12 @@
       "type": "European Championship",
       "source": {
         "en": {
-          "question": "Which country's coaches won the European Championship the most?",
+          "question": "Which country's coaches won the European Championship most?",
           "answer_A": "of Spain",
           "answer_B": "of Germany",
           "answer_C": "of France",
           "answer_D": "of Germany, Spain",
-          "right_answer": "of Germany, Spain"
+          "right_answer": "of Spain"
         },
         "ru": {
           "question": "Тренеры какой страны больше всех выиграли чемпионат Европы ?",
@@ -1339,15 +1339,15 @@
           "answer_B": "Германии",
           "answer_C": "Франции",
           "answer_D": "Германии, Испании",
-          "right_answer": "Германии, Испании"
+          "right_answer": "Испании"
         },
         "hy": {
-          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել Եվրոպայի առաջնությունը:",
           "answer_A": "Իսպանիա",
           "answer_B": "Գերմանիա",
           "answer_C": "Ֆրանսիա",
           "answer_D": "Գերմանիա, Իսպանիա",
-          "right_answer": "Գերմանիա, Իսպանիա"
+          "right_answer": "Իսպանիա"
         }
       },
       "targets": {

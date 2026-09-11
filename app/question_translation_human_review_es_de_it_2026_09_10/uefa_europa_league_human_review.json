@@ -1,0 +1,3144 @@
+{
+  "file_type": "football_quiz_translation_human_review",
+  "created_at": "2026-09-10",
+  "source_batch": "app/question_translation_batches_es_de_it_2026_09_09_manual_draft/uefa_europa_league.json",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "firestore_updated": false,
+  "instructions": [
+    "Check that es/de/it question text matches the source meaning.",
+    "Check answer_A..answer_D and right_answer in each target language.",
+    "Use review_status: approved, needs_fix, questionable_fact, or translation_unclear.",
+    "Write reviewer_note only when something should be changed."
+  ],
+  "items_count": 44,
+  "items": [
+    {
+      "questionId": "europa_league_001",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Since what year is the UEFA Cup tournament (Europa League) held?",
+          "answer_A": "1970",
+          "answer_B": "1971",
+          "answer_C": "1972",
+          "answer_D": "1973",
+          "right_answer": "1971"
+        },
+        "ru": {
+          "question": "С какого года проводится турнир Кубка УЕФА (Лига Европы) ?",
+          "answer_A": "1970",
+          "answer_B": "1971",
+          "answer_C": "1972",
+          "answer_D": "1973",
+          "right_answer": "1971"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) մրցաշարը:",
+          "answer_A": "1970",
+          "answer_B": "1971",
+          "answer_C": "1972",
+          "answer_D": "1973",
+          "right_answer": "1971"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1970",
+          "answer_B": "1971",
+          "answer_C": "1972",
+          "answer_D": "1973",
+          "categoryType": "UEFA",
+          "question": "¿Desde qué año se disputa la Copa de la UEFA (Europa League)?",
+          "right_answer": "1971",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_001"
+        },
+        "de": {
+          "answer_A": "1970",
+          "answer_B": "1971",
+          "answer_C": "1972",
+          "answer_D": "1973",
+          "categoryType": "UEFA",
+          "question": "Seit welchem Jahr wird der UEFA-Pokal (Europa League) ausgetragen?",
+          "right_answer": "1971",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_001"
+        },
+        "it": {
+          "answer_A": "1970",
+          "answer_B": "1971",
+          "answer_C": "1972",
+          "answer_D": "1973",
+          "categoryType": "UEFA",
+          "question": "Da quale anno si disputa la Coppa UEFA (Europa League)?",
+          "right_answer": "1971",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_001"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_002",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club became the first owner of the UEFA Cup (Europa League)?",
+          "answer_A": "Tottenham",
+          "answer_B": "Wolverhampton",
+          "answer_C": "Liverpool",
+          "answer_D": "Borussia M",
+          "right_answer": "Tottenham"
+        },
+        "ru": {
+          "question": "Какой клуб стал первым обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Тоттенхэм",
+          "answer_B": "Вулверхэмптон",
+          "answer_C": "Ливерпуль",
+          "answer_D": "Боруссия М",
+          "right_answer": "Тоттенхэм"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Տոտենհեմ",
+          "answer_B": "Վուլվերհեմփթոն",
+          "answer_C": "Լիվերպուլ",
+          "answer_D": "Բորուսիա Մ",
+          "right_answer": "Տոտենհեմ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Tottenham",
+          "answer_B": "Wolverhampton",
+          "answer_C": "Liverpool",
+          "answer_D": "Borussia M",
+          "categoryType": "UEFA",
+          "question": "¿Qué club fue el primer ganador de la Copa de la UEFA (Europa League)?",
+          "right_answer": "Tottenham",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_002"
+        },
+        "de": {
+          "answer_A": "Tottenham",
+          "answer_B": "Wolverhampton",
+          "answer_C": "Liverpool",
+          "answer_D": "Borussia M",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub wurde der erste Gewinner des UEFA-Pokals (Europa League)?",
+          "right_answer": "Tottenham",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_002"
+        },
+        "it": {
+          "answer_A": "Tottenham",
+          "answer_B": "Wolverhampton",
+          "answer_C": "Liverpool",
+          "answer_D": "Borussia M",
+          "categoryType": "UEFA",
+          "question": "Quale club è stato il primo vincitore della Coppa UEFA (Europa League)?",
+          "right_answer": "Tottenham",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_002"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_003",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Cup (Europa League) the most?",
+          "answer_A": "Atletico Madrid",
+          "answer_B": "Internazionale Milano",
+          "answer_C": "Sevilla",
+          "answer_D": "Liverpool",
+          "right_answer": "Sevilla"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Атлетико Мадрид",
+          "answer_B": "Интер",
+          "answer_C": "Севилья",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Севилья"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Ատլետիկո Մադրիդ",
+          "answer_B": "Ինտեր",
+          "answer_C": "Սեվիլյա",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Սեվիլյա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Inter",
+          "answer_C": "Sevilla",
+          "answer_D": "Liverpool",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ha ganado más veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "Sevilla",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_003"
+        },
+        "de": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Inter",
+          "answer_C": "Sevilla",
+          "answer_D": "Liverpool",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub hat den UEFA-Pokal (Europa League) am häufigsten gewonnen?",
+          "right_answer": "Sevilla",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_003"
+        },
+        "it": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Inter",
+          "answer_C": "Siviglia",
+          "answer_D": "Liverpool",
+          "categoryType": "UEFA",
+          "question": "Quale club ha vinto più volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Siviglia",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_003"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_004",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which country's clubs won the UEFA Cup (Europa League) the most?",
+          "answer_A": "of Italy",
+          "answer_B": "of Spain",
+          "answer_C": "of England",
+          "answer_D": "of Germany",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Клубы какой страны больше всех стали обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Италии",
+          "answer_B": "Испании",
+          "answer_C": "Англии",
+          "answer_D": "Германии",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ակումբներն են ավելի շատ նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Իտալիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Անգիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Italia",
+          "answer_B": "España",
+          "answer_C": "Inglaterra",
+          "answer_D": "Alemania",
+          "categoryType": "UEFA",
+          "question": "¿Los clubes de qué país han ganado más veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "España",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_004"
+        },
+        "de": {
+          "answer_A": "Italien",
+          "answer_B": "Spanien",
+          "answer_C": "England",
+          "answer_D": "Deutschland",
+          "categoryType": "UEFA",
+          "question": "Klubs aus welchem Land haben den UEFA-Pokal (Europa League) am häufigsten gewonnen?",
+          "right_answer": "Spanien",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_004"
+        },
+        "it": {
+          "answer_A": "Italia",
+          "answer_B": "Spagna",
+          "answer_C": "Inghilterra",
+          "answer_D": "Germania",
+          "categoryType": "UEFA",
+          "question": "I club di quale paese hanno vinto più volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Spagna",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_004"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_005",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which country's clubs lost the most in the UEFA Cup Final (Europa League)?",
+          "answer_A": "of Italy",
+          "answer_B": "of Germany",
+          "answer_C": "of England",
+          "answer_D": "of Spain",
+          "right_answer": "of Germany"
+        },
+        "ru": {
+          "question": "Клубы какой страны больше всех проиграли в финале Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Италии",
+          "answer_B": "Германии",
+          "answer_C": "Англии",
+          "answer_D": "Испании",
+          "right_answer": "Германии"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ակումբներն են ավելի շատ պարտվել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) եզրափակչում:",
+          "answer_A": "Իտալիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Անգիա",
+          "answer_D": "Իսպանիա",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Italia",
+          "answer_B": "Alemania",
+          "answer_C": "Inglaterra",
+          "answer_D": "España",
+          "categoryType": "UEFA",
+          "question": "¿Los clubes de qué país han perdido más finales de la Copa de la UEFA (Europa League)?",
+          "right_answer": "Alemania",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_005"
+        },
+        "de": {
+          "answer_A": "Italien",
+          "answer_B": "Deutschland",
+          "answer_C": "England",
+          "answer_D": "Spanien",
+          "categoryType": "UEFA",
+          "question": "Klubs aus welchem Land haben die meisten Finals im UEFA-Pokal (Europa League) verloren?",
+          "right_answer": "Deutschland",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_005"
+        },
+        "it": {
+          "answer_A": "Italia",
+          "answer_B": "Germania",
+          "answer_C": "Inghilterra",
+          "answer_D": "Spagna",
+          "categoryType": "UEFA",
+          "question": "I club di quale paese hanno perso più finali di Coppa UEFA (Europa League)?",
+          "right_answer": "Germania",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_005"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_006",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club has participated in the UEFA Cup (Europa League) most of all in a row?",
+          "answer_A": "Shakhtar Donetsk",
+          "answer_B": "Brugge",
+          "answer_C": "PAOK",
+          "answer_D": "Parma",
+          "right_answer": "Brugge"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех подряд участвовал в розыгрыше Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Шахтер Донецк",
+          "answer_B": "Брюгге",
+          "answer_C": "ПАОК",
+          "answer_D": "Парма",
+          "right_answer": "Брюгге"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ անընդմեջ մասնակցել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) խաղարկությանը:",
+          "answer_A": "Շախտյոր Դոնեցկ",
+          "answer_B": "Բրյուգգե",
+          "answer_C": "ՊԱՕԿ",
+          "answer_D": "Պարմա",
+          "right_answer": "Բրյուգգե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Shakhtar Donetsk",
+          "answer_B": "Club Brugge",
+          "answer_C": "PAOK",
+          "answer_D": "Parma",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ha participado más veces seguidas en la Copa de la UEFA (Europa League)?",
+          "right_answer": "Club Brugge",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_006"
+        },
+        "de": {
+          "answer_A": "Schachtar Donezk",
+          "answer_B": "Club Brugge",
+          "answer_C": "PAOK",
+          "answer_D": "Parma",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub hat am häufigsten in Folge am UEFA-Pokal (Europa League) teilgenommen?",
+          "right_answer": "Club Brugge",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_006"
+        },
+        "it": {
+          "answer_A": "Shakhtar Donetsk",
+          "answer_B": "Club Brugge",
+          "answer_C": "PAOK",
+          "answer_D": "Parma",
+          "categoryType": "UEFA",
+          "question": "Quale club ha partecipato più volte di fila alla Coppa UEFA (Europa League)?",
+          "right_answer": "Club Brugge",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_006"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_007",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which country's clubs failed to win the UEFA Cup (Europa League)?",
+          "answer_A": "of France",
+          "answer_B": "of Portugal",
+          "answer_C": "of Belgium",
+          "answer_D": "of Russia",
+          "right_answer": "of France"
+        },
+        "ru": {
+          "question": "Клубам какой страны не удалось стать обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Франции",
+          "answer_B": "Португалии",
+          "answer_C": "Бельгии",
+          "answer_D": "России",
+          "right_answer": "Франции"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր երկրի ակումբներին չի հաջողվել նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Պորտուգալիա",
+          "answer_C": "Բելգիա",
+          "answer_D": "Ռուսաստան",
+          "right_answer": "Ֆրանսիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Portugal",
+          "answer_C": "Bélgica",
+          "answer_D": "Rusia",
+          "categoryType": "UEFA",
+          "question": "¿Los clubes de qué país no han logrado ganar la Copa de la UEFA (Europa League)?",
+          "right_answer": "Francia",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_007"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "Portugal",
+          "answer_C": "Belgien",
+          "answer_D": "Russland",
+          "categoryType": "UEFA",
+          "question": "Klubs aus welchem Land konnten den UEFA-Pokal (Europa League) nicht gewinnen?",
+          "right_answer": "Frankreich",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_007"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Portogallo",
+          "answer_C": "Belgio",
+          "answer_D": "Russia",
+          "categoryType": "UEFA",
+          "question": "I club di quale paese non sono riusciti a vincere la Coppa UEFA (Europa League)?",
+          "right_answer": "Francia",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_007"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_008",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of the UEFA Cup (Europa League)?",
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Klaas-Jan Huntelaar",
+          "answer_C": "Henrik Larsson",
+          "answer_D": "Claudio Pizarro",
+          "right_answer": "Henrik Larsson"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Радамель Фалькао",
+          "answer_B": "Клас-Ян Хунтелар",
+          "answer_C": "Хенрик Ларссон",
+          "answer_D": "Клаудио Писарро",
+          "right_answer": "Хенрик Ларссон"
+        },
+        "hy": {
+          "question": "Ո՞վ է ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) լավագույն ռմբարկուն:",
+          "answer_A": "Ռադամել Ֆալկաո",
+          "answer_B": "Կլասս-Յան Հունտելար",
+          "answer_C": "Հենրիկ Լարսոն",
+          "answer_D": "Կլաուդիո Պիսարո",
+          "right_answer": "Հենրիկ Լարսոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Klaas-Jan Huntelaar",
+          "answer_C": "Henrik Larsson",
+          "answer_D": "Claudio Pizarro",
+          "categoryType": "UEFA",
+          "question": "¿Quién es el máximo goleador histórico de la Copa de la UEFA (Europa League)?",
+          "right_answer": "Henrik Larsson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_008"
+        },
+        "de": {
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Klaas-Jan Huntelaar",
+          "answer_C": "Henrik Larsson",
+          "answer_D": "Claudio Pizarro",
+          "categoryType": "UEFA",
+          "question": "Wer ist der Rekordtorschütze des UEFA-Pokals (Europa League)?",
+          "right_answer": "Henrik Larsson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_008"
+        },
+        "it": {
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Klaas-Jan Huntelaar",
+          "answer_C": "Henrik Larsson",
+          "answer_D": "Claudio Pizarro",
+          "categoryType": "UEFA",
+          "question": "Chi è il miglior marcatore storico della Coppa UEFA (Europa League)?",
+          "right_answer": "Henrik Larsson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_008"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_009",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Who has played the most matches in the UEFA Cup (Europa League)?",
+          "answer_A": "João Moutinho",
+          "answer_B": "Giuseppe Bergomi",
+          "answer_C": "Frank Rost",
+          "answer_D": "Enzo Scifo",
+          "right_answer": "João Moutinho"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в розыгрыше Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Жуан Моутинью",
+          "answer_B": "Джузеппе Бергоми",
+          "answer_C": "Франк Рост",
+          "answer_D": "Энцо Шифо",
+          "right_answer": "Жуан Моутинью"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ խաղ անցկացրել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) մրցաշարում:",
+          "answer_A": "Ժոաու Մոուտինյու",
+          "answer_B": "Ջուզեպպե Բերգոմի",
+          "answer_C": "Ֆրանկ Ռոստ",
+          "answer_D": "Էնցո Շիֆո",
+          "right_answer": "Ժոաու Մոուտինյու"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "João Moutinho",
+          "answer_B": "Giuseppe Bergomi",
+          "answer_C": "Frank Rost",
+          "answer_D": "Enzo Scifo",
+          "categoryType": "UEFA",
+          "question": "¿Quién ha jugado más partidos en la Copa de la UEFA (Europa League)?",
+          "right_answer": "João Moutinho",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_009"
+        },
+        "de": {
+          "answer_A": "João Moutinho",
+          "answer_B": "Giuseppe Bergomi",
+          "answer_C": "Frank Rost",
+          "answer_D": "Enzo Scifo",
+          "categoryType": "UEFA",
+          "question": "Wer hat die meisten Spiele im UEFA-Pokal (Europa League) bestritten?",
+          "right_answer": "João Moutinho",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_009"
+        },
+        "it": {
+          "answer_A": "João Moutinho",
+          "answer_B": "Giuseppe Bergomi",
+          "answer_C": "Frank Rost",
+          "answer_D": "Enzo Scifo",
+          "categoryType": "UEFA",
+          "question": "Chi ha giocato più partite nella Coppa UEFA (Europa League)?",
+          "right_answer": "João Moutinho",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_009"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_010",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which country’s club managed to win the UEFA Cup (Europa League) 3 times in a row?",
+          "answer_A": "of Italy",
+          "answer_B": "of Spain",
+          "answer_C": "of England",
+          "answer_D": "of Germany",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Клубу какой страны удалось 3 раза подряд стать обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Италии",
+          "answer_B": "Испании",
+          "answer_C": "Англии",
+          "answer_D": "Германии",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ակումբին է հաջողվել 3 անգամ անընդմեջ նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Իտալիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Italia",
+          "answer_B": "España",
+          "answer_C": "Inglaterra",
+          "answer_D": "Alemania",
+          "categoryType": "UEFA",
+          "question": "¿Un club de qué país logró ganar la Copa de la UEFA (Europa League) 3 veces seguidas?",
+          "right_answer": "España",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_010"
+        },
+        "de": {
+          "answer_A": "Italien",
+          "answer_B": "Spanien",
+          "answer_C": "England",
+          "answer_D": "Deutschland",
+          "categoryType": "UEFA",
+          "question": "Ein Klub aus welchem Land konnte den UEFA-Pokal (Europa League) dreimal in Folge gewinnen?",
+          "right_answer": "Spanien",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_010"
+        },
+        "it": {
+          "answer_A": "Italia",
+          "answer_B": "Spagna",
+          "answer_C": "Inghilterra",
+          "answer_D": "Germania",
+          "categoryType": "UEFA",
+          "question": "Un club di quale paese è riuscito a vincere la Coppa UEFA (Europa League) 3 volte di fila?",
+          "right_answer": "Spagna",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_010"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_011",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Cup (Europa League) 3 times in a row?",
+          "answer_A": "Sevilla",
+          "answer_B": "Atletico Madrid",
+          "answer_C": "Internazionale Milano",
+          "answer_D": "Juventus",
+          "right_answer": "Sevilla"
+        },
+        "ru": {
+          "question": "Какой клуб 3 раза подряд стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Севилья",
+          "answer_B": "Атлетико Мадрид",
+          "answer_C": "Интер",
+          "answer_D": "Ювентус",
+          "right_answer": "Севилья"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա) նվաճել 3 անգամ անընդմեջ:",
+          "answer_A": "Սեվիլյա",
+          "answer_B": "Ատլետիկո Մադրիդ",
+          "answer_C": "Ինտեր",
+          "answer_D": "Յուվենթուս",
+          "right_answer": "Սեվիլյա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Sevilla",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Inter",
+          "answer_D": "Juventus",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ganó la Copa de la UEFA (Europa League) 3 veces seguidas?",
+          "right_answer": "Sevilla",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_011"
+        },
+        "de": {
+          "answer_A": "Sevilla",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Inter",
+          "answer_D": "Juventus",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann den UEFA-Pokal (Europa League) dreimal in Folge?",
+          "right_answer": "Sevilla",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_011"
+        },
+        "it": {
+          "answer_A": "Siviglia",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Inter",
+          "answer_D": "Juventus",
+          "categoryType": "UEFA",
+          "question": "Quale club ha vinto la Coppa UEFA (Europa League) 3 volte di fila?",
+          "right_answer": "Siviglia",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_011"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_012",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which Italian club failed to become the owner of the UEFA Cup (Europa League)?",
+          "answer_A": "Napoli",
+          "answer_B": "Lazio",
+          "answer_C": "Parma",
+          "answer_D": "Juventus",
+          "right_answer": "Lazio"
+        },
+        "ru": {
+          "question": "Какому итальянскому клубу не удалось стать обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Наполи",
+          "answer_B": "Лацио",
+          "answer_C": "Парма",
+          "answer_D": "Ювентус",
+          "right_answer": "Лацио"
+        },
+        "hy": {
+          "question": "Իտալական ո՞ր ակումբին չի հաջողվել նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Նապոլի",
+          "answer_B": "Լացիո",
+          "answer_C": "Պարմա",
+          "answer_D": "Յուվենթուս",
+          "right_answer": "Լացիո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Napoli",
+          "answer_B": "Lazio",
+          "answer_C": "Parma",
+          "answer_D": "Juventus",
+          "categoryType": "UEFA",
+          "question": "¿Qué club italiano no ha logrado ganar la Copa de la UEFA (Europa League)?",
+          "right_answer": "Lazio",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_012"
+        },
+        "de": {
+          "answer_A": "Napoli",
+          "answer_B": "Lazio",
+          "answer_C": "Parma",
+          "answer_D": "Juventus",
+          "categoryType": "UEFA",
+          "question": "Welcher italienische Klub konnte den UEFA-Pokal (Europa League) nicht gewinnen?",
+          "right_answer": "Lazio",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_012"
+        },
+        "it": {
+          "answer_A": "Napoli",
+          "answer_B": "Lazio",
+          "answer_C": "Parma",
+          "answer_D": "Juventus",
+          "categoryType": "UEFA",
+          "question": "Quale club italiano non è riuscito a vincere la Coppa UEFA (Europa League)?",
+          "right_answer": "Lazio",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_012"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_013",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which German club failed to win the UEFA Cup (Europa League)?",
+          "answer_A": "Borussia D",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayer",
+          "answer_D": "Borussia M",
+          "right_answer": "Borussia D"
+        },
+        "ru": {
+          "question": "Какому немецкому клубу не удалось стать обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Боруссия Д",
+          "answer_B": "Шалке-04",
+          "answer_C": "Байер",
+          "answer_D": "Боруссия М",
+          "right_answer": "Боруссия Д"
+        },
+        "hy": {
+          "question": "Գերմանական ո՞ր ակումբին չի հաջողվել նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Բորուսիա Դ",
+          "answer_B": "Շալկե-04",
+          "answer_C": "Բայեր",
+          "answer_D": "Բորուսիա Մ",
+          "right_answer": "Բորուսիա Դ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia M",
+          "categoryType": "UEFA",
+          "question": "¿Qué club alemán no ha logrado ganar la Copa de la UEFA (Europa League)?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_013"
+        },
+        "de": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia M",
+          "categoryType": "UEFA",
+          "question": "Welcher deutsche Klub konnte den UEFA-Pokal (Europa League) nicht gewinnen?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_013"
+        },
+        "it": {
+          "answer_A": "Borussia Dortmund",
+          "answer_B": "Schalke 04",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Borussia M",
+          "categoryType": "UEFA",
+          "question": "Quale club tedesco non è riuscito a vincere la Coppa UEFA (Europa League)?",
+          "right_answer": "Borussia Dortmund",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_013"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_014",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Of these, which club was the first to win the UEFA Cup (Europa League)?",
+          "answer_A": "Zenit",
+          "answer_B": "CSKA",
+          "answer_C": "Shakhtar Donetsk",
+          "answer_D": "Chelsea",
+          "right_answer": "CSKA"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб раньше всех стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Зенит",
+          "answer_B": "ЦСКА",
+          "answer_C": "Шахтер Донецк",
+          "answer_D": "Челси",
+          "right_answer": "ЦСКА"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շուտ նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Զենիթ",
+          "answer_B": "ԲԿՄԱ",
+          "answer_C": "Շախտյոր Դոնեցկ",
+          "answer_D": "Չելսի",
+          "right_answer": "ԲԿՄԱ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Zenit",
+          "answer_B": "CSKA",
+          "answer_C": "Shakhtar Donetsk",
+          "answer_D": "Chelsea",
+          "categoryType": "UEFA",
+          "question": "De estos, ¿qué club fue el primero en ganar la Copa de la UEFA (Europa League)?",
+          "right_answer": "CSKA",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_014"
+        },
+        "de": {
+          "answer_A": "Zenit",
+          "answer_B": "ZSKA",
+          "answer_C": "Schachtar Donezk",
+          "answer_D": "Chelsea",
+          "categoryType": "UEFA",
+          "question": "Welcher dieser Klubs gewann als erster den UEFA-Pokal (Europa League)?",
+          "right_answer": "ZSKA",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_014"
+        },
+        "it": {
+          "answer_A": "Zenit",
+          "answer_B": "CSKA",
+          "answer_C": "Shakhtar Donetsk",
+          "answer_D": "Chelsea",
+          "categoryType": "UEFA",
+          "question": "Tra questi, quale club è stato il primo a vincere la Coppa UEFA (Europa League)?",
+          "right_answer": "CSKA",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_014"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_015",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "How many clubs won the UEFA Cup (Europa League)?",
+          "answer_A": "24",
+          "answer_B": "26",
+          "answer_C": "28",
+          "answer_D": "31",
+          "right_answer": "31"
+        },
+        "ru": {
+          "question": "Сколько клубов выигрывали Кубок УЕФА (Лигу Европы) ?",
+          "answer_A": "24",
+          "answer_B": "26",
+          "answer_C": "28",
+          "answer_D": "31",
+          "right_answer": "31"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգան):",
+          "answer_A": "24",
+          "answer_B": "26",
+          "answer_C": "28",
+          "answer_D": "31",
+          "right_answer": "31"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "24",
+          "answer_B": "26",
+          "answer_C": "28",
+          "answer_D": "31",
+          "categoryType": "UEFA",
+          "question": "¿Cuántos clubes han ganado la Copa de la UEFA (Europa League)?",
+          "right_answer": "31",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_015"
+        },
+        "de": {
+          "answer_A": "24",
+          "answer_B": "26",
+          "answer_C": "28",
+          "answer_D": "31",
+          "categoryType": "UEFA",
+          "question": "Wie viele Klubs haben den UEFA-Pokal (Europa League) gewonnen?",
+          "right_answer": "31",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_015"
+        },
+        "it": {
+          "answer_A": "24",
+          "answer_B": "26",
+          "answer_C": "28",
+          "answer_D": "31",
+          "categoryType": "UEFA",
+          "question": "Quanti club hanno vinto la Coppa UEFA (Europa League)?",
+          "right_answer": "31",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_015"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_016",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Of these, which clubs have won the UEFA Cup (Europa League) the most?",
+          "answer_A": "Juventus, Inter, Tottenham",
+          "answer_B": "Real Madrid",
+          "answer_C": "Bayern München",
+          "answer_D": "Chelsea",
+          "right_answer": "Juventus, Inter, Tottenham"
+        },
+        "ru": {
+          "question": "Из перечисленных какие клубы выигрывали Кубок УЕФА (Лигу Европы) больше всех ?",
+          "answer_A": "Ювентус, Интер, Тоттенхэм",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Бавария",
+          "answer_D": "Челси",
+          "right_answer": "Ювентус, Интер, Тоттенхэм"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբներն են ամենաշատը նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգան):",
+          "answer_A": "Յուվենտուս, Ինտեր, Տոտենհեմ",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բավարիա",
+          "answer_D": "Չելսի",
+          "right_answer": "Յուվենտուս, Ինտեր, Տոտենհեմ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Juventus, Inter, Tottenham",
+          "answer_B": "Real Madrid",
+          "answer_C": "Bayern Múnich",
+          "answer_D": "Chelsea",
+          "categoryType": "UEFA",
+          "question": "De estos, ¿qué clubes han ganado más veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "Juventus, Inter, Tottenham",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_016"
+        },
+        "de": {
+          "answer_A": "Juventus, Inter, Tottenham",
+          "answer_B": "Real Madrid",
+          "answer_C": "Bayern München",
+          "answer_D": "Chelsea",
+          "categoryType": "UEFA",
+          "question": "Welche dieser Klubs haben den UEFA-Pokal (Europa League) am häufigsten gewonnen?",
+          "right_answer": "Juventus, Inter, Tottenham",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_016"
+        },
+        "it": {
+          "answer_A": "Juventus, Inter, Tottenham",
+          "answer_B": "Real Madrid",
+          "answer_C": "Bayern Monaco",
+          "answer_D": "Chelsea",
+          "categoryType": "UEFA",
+          "question": "Tra questi, quali club hanno vinto più volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Juventus, Inter, Tottenham",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_016"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_017",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Cup (Europa League) first 2 times in a row?",
+          "answer_A": "Sevilla",
+          "answer_B": "Real Madrid",
+          "answer_C": "Tottenham",
+          "answer_D": "Liverpool",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб первым 2 раза подряд стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Севилья",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Тоттенхэм",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա) 2 անգամ անընդմեջ:",
+          "answer_A": "Սեվիլյա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Տոտենհեմ",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Sevilla",
+          "answer_B": "Real Madrid",
+          "answer_C": "Tottenham",
+          "answer_D": "Liverpool",
+          "categoryType": "UEFA",
+          "question": "¿Qué club fue el primero en ganar la Copa de la UEFA (Europa League) 2 veces seguidas?",
+          "right_answer": "Real Madrid",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_017"
+        },
+        "de": {
+          "answer_A": "Sevilla",
+          "answer_B": "Real Madrid",
+          "answer_C": "Tottenham",
+          "answer_D": "Liverpool",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann den UEFA-Pokal (Europa League) als erster zweimal in Folge?",
+          "right_answer": "Real Madrid",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_017"
+        },
+        "it": {
+          "answer_A": "Siviglia",
+          "answer_B": "Real Madrid",
+          "answer_C": "Tottenham",
+          "answer_D": "Liverpool",
+          "categoryType": "UEFA",
+          "question": "Quale club è stato il primo a vincere la Coppa UEFA (Europa League) 2 volte di fila?",
+          "right_answer": "Real Madrid",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_017"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_018",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club was the first to win the UEFA Cup (Europa League) twice?",
+          "answer_A": "Tottenham",
+          "answer_B": "Liverpool",
+          "answer_C": "Borussia M",
+          "answer_D": "Feyenoord",
+          "right_answer": "Liverpool"
+        },
+        "ru": {
+          "question": "Какой клуб первым стал двукратным обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Тоттенхэм",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Боруссия М",
+          "answer_D": "Фейеноорд",
+          "right_answer": "Ливерпуль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը դարձել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) կրկնակի դափնեկիր:",
+          "answer_A": "Տոտենհեմ",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Բորուսիա Մ",
+          "answer_D": "Ֆեյենորդ",
+          "right_answer": "Լիվերպուլ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Tottenham",
+          "answer_B": "Liverpool",
+          "answer_C": "Borussia M",
+          "answer_D": "Feyenoord",
+          "categoryType": "UEFA",
+          "question": "¿Qué club fue el primero en ganar dos veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "Liverpool",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_018"
+        },
+        "de": {
+          "answer_A": "Tottenham",
+          "answer_B": "Liverpool",
+          "answer_C": "Borussia M",
+          "answer_D": "Feyenoord",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann den UEFA-Pokal (Europa League) als erster zweimal?",
+          "right_answer": "Liverpool",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_018"
+        },
+        "it": {
+          "answer_A": "Tottenham",
+          "answer_B": "Liverpool",
+          "answer_C": "Borussia M",
+          "answer_D": "Feyenoord",
+          "categoryType": "UEFA",
+          "question": "Quale club è stato il primo a vincere due volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Liverpool",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_018"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_019",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club without defeat reached the final of the UEFA Cup (Europa League) and lost?",
+          "answer_A": "Espanyol",
+          "answer_B": "Benfica",
+          "answer_C": "Borussia D",
+          "answer_D": "Arsenal",
+          "right_answer": "Espanyol"
+        },
+        "ru": {
+          "question": "Какой клуб без поражений дошел до финала Кубка УЕФА (Лиги Европы) и проиграл ?",
+          "answer_A": "Эспаньол",
+          "answer_B": "Бенфика",
+          "answer_C": "Боруссия Д",
+          "answer_D": "Арсенал",
+          "right_answer": "Эспаньол"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առանց պարտության հասել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) եզրափակիչ եվ պարտվել:",
+          "answer_A": "Էսպանյոլ",
+          "answer_B": "Բենֆիկա",
+          "answer_C": "Բորուսիա Դ",
+          "answer_D": "Արսենալ",
+          "right_answer": "Էսպանյոլ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Espanyol",
+          "answer_B": "Benfica",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Arsenal",
+          "categoryType": "UEFA",
+          "question": "¿Qué club llegó invicto a la final de la Copa de la UEFA (Europa League) y la perdió?",
+          "right_answer": "Espanyol",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_019"
+        },
+        "de": {
+          "answer_A": "Espanyol",
+          "answer_B": "Benfica",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Arsenal",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub erreichte ungeschlagen das Finale des UEFA-Pokals (Europa League) und verlor?",
+          "right_answer": "Espanyol",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_019"
+        },
+        "it": {
+          "answer_A": "Espanyol",
+          "answer_B": "Benfica",
+          "answer_C": "Borussia Dortmund",
+          "answer_D": "Arsenal",
+          "categoryType": "UEFA",
+          "question": "Quale club è arrivato imbattuto in finale di Coppa UEFA (Europa League) e ha perso?",
+          "right_answer": "Espanyol",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_019"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_020",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "How many times has Sevilla played in the UEFA Cup Final (Europa League)?",
+          "answer_A": "5",
+          "answer_B": "6",
+          "answer_C": "7",
+          "answer_D": "8",
+          "right_answer": "7"
+        },
+        "ru": {
+          "question": "Сколько раз Севилья играла в финале Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "5",
+          "answer_B": "6",
+          "answer_C": "7",
+          "answer_D": "8",
+          "right_answer": "7"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Սեվիլյան խաղացել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) եզրափակչում:",
+          "answer_A": "5",
+          "answer_B": "6",
+          "answer_C": "7",
+          "answer_D": "8",
+          "right_answer": "7"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "5",
+          "answer_B": "6",
+          "answer_C": "7",
+          "answer_D": "8",
+          "categoryType": "UEFA",
+          "question": "¿Cuántas veces ha jugado el Sevilla la final de la Copa de la UEFA (Europa League)?",
+          "right_answer": "7",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_020"
+        },
+        "de": {
+          "answer_A": "5",
+          "answer_B": "6",
+          "answer_C": "7",
+          "answer_D": "8",
+          "categoryType": "UEFA",
+          "question": "Wie oft stand Sevilla im Finale des UEFA-Pokals (Europa League)?",
+          "right_answer": "7",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_020"
+        },
+        "it": {
+          "answer_A": "5",
+          "answer_B": "6",
+          "answer_C": "7",
+          "answer_D": "8",
+          "categoryType": "UEFA",
+          "question": "Quante volte il Siviglia ha giocato la finale di Coppa UEFA (Europa League)?",
+          "right_answer": "7",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_020"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_021",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Who is the most author of goals in one UEFA Cup (Europa League)?",
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Aritz Aduriz",
+          "answer_C": "Edin Džeko",
+          "answer_D": "Vágner Love",
+          "right_answer": "Radamel Falcao"
+        },
+        "ru": {
+          "question": "Кто больше всех стал автором голов в одном розыгрыше Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Радамель Фалькао",
+          "answer_B": "Ариц Адурис",
+          "answer_C": "Эдин Джеко",
+          "answer_D": "Вагнер Лав",
+          "right_answer": "Радамель Фалькао"
+        },
+        "hy": {
+          "question": "Ո՞վ է ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգա) մեկ մրցաշարում բոլորից շատ գոլի հեղինակ դարձել:",
+          "answer_A": "Ռադամել Ֆալկաո",
+          "answer_B": "Ադուրիս",
+          "answer_C": "Էդին Ջեկո",
+          "answer_D": "Վագներ Լավ",
+          "right_answer": "Ռադամել Ֆալկաո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Aritz Aduriz",
+          "answer_C": "Edin Džeko",
+          "answer_D": "Vágner Love",
+          "categoryType": "UEFA",
+          "question": "¿Quién marcó más goles en una sola edición de la Copa de la UEFA (Europa League)?",
+          "right_answer": "Radamel Falcao",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_021"
+        },
+        "de": {
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Aritz Aduriz",
+          "answer_C": "Edin Džeko",
+          "answer_D": "Vágner Love",
+          "categoryType": "UEFA",
+          "question": "Wer erzielte die meisten Tore in einer einzigen Ausgabe des UEFA-Pokals (Europa League)?",
+          "right_answer": "Radamel Falcao",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_021"
+        },
+        "it": {
+          "answer_A": "Radamel Falcao",
+          "answer_B": "Aritz Aduriz",
+          "answer_C": "Edin Džeko",
+          "answer_D": "Vágner Love",
+          "categoryType": "UEFA",
+          "question": "Chi ha segnato più gol in una singola edizione della Coppa UEFA (Europa League)?",
+          "right_answer": "Radamel Falcao",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_021"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_022",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which country's coaches won the UEFA Cup (Europa League) the most?",
+          "answer_A": "of Holland",
+          "answer_B": "of Spain",
+          "answer_C": "of Italy",
+          "answer_D": "of Germany",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех стали обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Голландии",
+          "answer_B": "Испании",
+          "answer_C": "Италии",
+          "answer_D": "Германии",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Հոլանդիա",
+          "answer_B": "Իսպանիա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Países Bajos",
+          "answer_B": "España",
+          "answer_C": "Italia",
+          "answer_D": "Alemania",
+          "categoryType": "UEFA",
+          "question": "¿Los entrenadores de qué país han ganado más veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "España",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_022"
+        },
+        "de": {
+          "answer_A": "Niederlande",
+          "answer_B": "Spanien",
+          "answer_C": "Italien",
+          "answer_D": "Deutschland",
+          "categoryType": "UEFA",
+          "question": "Trainer aus welchem Land haben den UEFA-Pokal (Europa League) am häufigsten gewonnen?",
+          "right_answer": "Spanien",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_022"
+        },
+        "it": {
+          "answer_A": "Paesi Bassi",
+          "answer_B": "Spagna",
+          "answer_C": "Italia",
+          "answer_D": "Germania",
+          "categoryType": "UEFA",
+          "question": "Gli allenatori di quale paese hanno vinto più volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Spagna",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_022"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_023",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which coach won the UEFA Cup (Europa League) 3 times in a row?",
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Unai Emery",
+          "answer_C": "Juande Ramos",
+          "answer_D": "Diego Simeone",
+          "right_answer": "Unai Emery"
+        },
+        "ru": {
+          "question": "Какой тренер 3 раза подряд стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Джованни Трапаттони",
+          "answer_B": "Унаи Эмери",
+          "answer_C": "Хуанде Рамос",
+          "answer_D": "Диего Симеоне",
+          "right_answer": "Унаи Эмери"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է 3 անգամ անընդմեջ նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա:)",
+          "answer_A": "Ջովանի Տրապատոնի",
+          "answer_B": "Ունայի Էմերի",
+          "answer_C": "Խուանդե Ռամոս",
+          "answer_D": "Դիեգո Սիմյոնե",
+          "right_answer": "Ունայի Էմերի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Unai Emery",
+          "answer_C": "Juande Ramos",
+          "answer_D": "Diego Simeone",
+          "categoryType": "UEFA",
+          "question": "¿Qué entrenador ganó la Copa de la UEFA (Europa League) 3 veces seguidas?",
+          "right_answer": "Unai Emery",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_023"
+        },
+        "de": {
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Unai Emery",
+          "answer_C": "Juande Ramos",
+          "answer_D": "Diego Simeone",
+          "categoryType": "UEFA",
+          "question": "Welcher Trainer gewann den UEFA-Pokal (Europa League) dreimal in Folge?",
+          "right_answer": "Unai Emery",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_023"
+        },
+        "it": {
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Unai Emery",
+          "answer_C": "Juande Ramos",
+          "answer_D": "Diego Simeone",
+          "categoryType": "UEFA",
+          "question": "Quale allenatore ha vinto la Coppa UEFA (Europa League) 3 volte di fila?",
+          "right_answer": "Unai Emery",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_023"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_024",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Of these, which country's coaches have won the UEFA Cup (Europa League) the most?",
+          "answer_A": "of the Netherlands",
+          "answer_B": "of Portugal",
+          "answer_C": "of England",
+          "answer_D": "of Russia",
+          "right_answer": "of the Netherlands"
+        },
+        "ru": {
+          "question": "Из перечисленных тренеры какой страны чаще всего выигрывали Кубок УЕФА (Лигу Европы) ?",
+          "answer_A": "Нидерландов",
+          "answer_B": "Португалии",
+          "answer_C": "Англии",
+          "answer_D": "России",
+          "right_answer": "Нидерландов"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր երկրի մարզիչներն են ամենից շատ հաղթել ՈւԵՖԱ-ի գավաթում (Եվրոպայի լիգայում):",
+          "answer_A": "Նիդեռլանդների",
+          "answer_B": "Պորտուգալիայի",
+          "answer_C": "Անգլիայի",
+          "answer_D": "Ռուսաստանի",
+          "right_answer": "Նիդեռլանդների"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Países Bajos",
+          "answer_B": "Portugal",
+          "answer_C": "Inglaterra",
+          "answer_D": "Rusia",
+          "categoryType": "UEFA",
+          "question": "De estos, ¿los entrenadores de qué país han ganado más veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "Países Bajos",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_024"
+        },
+        "de": {
+          "answer_A": "Niederlande",
+          "answer_B": "Portugal",
+          "answer_C": "England",
+          "answer_D": "Russland",
+          "categoryType": "UEFA",
+          "question": "Welche dieser Länder stellen die Trainer mit den meisten Siegen im UEFA-Pokal (Europa League)?",
+          "right_answer": "Niederlande",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_024"
+        },
+        "it": {
+          "answer_A": "Paesi Bassi",
+          "answer_B": "Portogallo",
+          "answer_C": "Inghilterra",
+          "answer_D": "Russia",
+          "categoryType": "UEFA",
+          "question": "Tra questi, gli allenatori di quale paese hanno vinto più volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Paesi Bassi",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_024"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_025",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which coach was the first to win the UEFA Cup (Europa League) twice?",
+          "answer_A": "Unai Emery",
+          "answer_B": "Giovanni Trapattoni",
+          "answer_C": "Luis Molowny",
+          "answer_D": "Bobby Robson",
+          "right_answer": "Luis Molowny"
+        },
+        "ru": {
+          "question": "Какой тренер первым стал двукратным обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Унаи Эмери",
+          "answer_B": "Джованни Трапаттони",
+          "answer_C": "Луис Моловни",
+          "answer_D": "Бобби Робсон",
+          "right_answer": "Луис Моловни"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է առաջինը նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա) 2 անգամ:",
+          "answer_A": "Ունայի Էմերի",
+          "answer_B": "Ջովանի Տրապատոնի",
+          "answer_C": "Լուիս Մոլովնի",
+          "answer_D": "Բոբբի Ռոբսոն",
+          "right_answer": "Լուիս Մոլովնի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Unai Emery",
+          "answer_B": "Giovanni Trapattoni",
+          "answer_C": "Luis Molowny",
+          "answer_D": "Bobby Robson",
+          "categoryType": "UEFA",
+          "question": "¿Qué entrenador fue el primero en ganar dos veces la Copa de la UEFA (Europa League)?",
+          "right_answer": "Luis Molowny",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_025"
+        },
+        "de": {
+          "answer_A": "Unai Emery",
+          "answer_B": "Giovanni Trapattoni",
+          "answer_C": "Luis Molowny",
+          "answer_D": "Bobby Robson",
+          "categoryType": "UEFA",
+          "question": "Welcher Trainer gewann den UEFA-Pokal (Europa League) als erster zweimal?",
+          "right_answer": "Luis Molowny",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_025"
+        },
+        "it": {
+          "answer_A": "Unai Emery",
+          "answer_B": "Giovanni Trapattoni",
+          "answer_C": "Luis Molowny",
+          "answer_D": "Bobby Robson",
+          "categoryType": "UEFA",
+          "question": "Quale allenatore è stato il primo a vincere due volte la Coppa UEFA (Europa League)?",
+          "right_answer": "Luis Molowny",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_025"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_026",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which coach was the first to win the UEFA Cup (Europa League)?",
+          "answer_A": "Bill Nicholson",
+          "answer_B": "Bill Shankly",
+          "answer_C": "Wiel Coerver",
+          "answer_D": "Bob Paisley",
+          "right_answer": "Bill Nicholson"
+        },
+        "ru": {
+          "question": "Какой тренер первым стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Билл Николсон",
+          "answer_B": "Билл Шенкли",
+          "answer_C": "Вил Курвер",
+          "answer_D": "Боб Пэйсли",
+          "right_answer": "Билл Николсон"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է առաջինը նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Բիլ Նիկոլսոն",
+          "answer_B": "Բիլ Շենկլի",
+          "answer_C": "Վիլ Կուրվեր",
+          "answer_D": "Բոբ Փեյսլի",
+          "right_answer": "Բիլ Նիկոլսոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Bill Nicholson",
+          "answer_B": "Bill Shankly",
+          "answer_C": "Wiel Coerver",
+          "answer_D": "Bob Paisley",
+          "categoryType": "UEFA",
+          "question": "¿Qué entrenador fue el primero en ganar la Copa de la UEFA (Europa League)?",
+          "right_answer": "Bill Nicholson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_026"
+        },
+        "de": {
+          "answer_A": "Bill Nicholson",
+          "answer_B": "Bill Shankly",
+          "answer_C": "Wiel Coerver",
+          "answer_D": "Bob Paisley",
+          "categoryType": "UEFA",
+          "question": "Welcher Trainer gewann als erster den UEFA-Pokal (Europa League)?",
+          "right_answer": "Bill Nicholson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_026"
+        },
+        "it": {
+          "answer_A": "Bill Nicholson",
+          "answer_B": "Bill Shankly",
+          "answer_C": "Wiel Coerver",
+          "answer_D": "Bob Paisley",
+          "categoryType": "UEFA",
+          "question": "Quale allenatore è stato il primo a vincere la Coppa UEFA (Europa League)?",
+          "right_answer": "Bill Nicholson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_026"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_027",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Of these, which country's clubs lost the most UEFA Cup (Europa League) finals?",
+          "answer_A": "of Belgium",
+          "answer_B": "of Scotland",
+          "answer_C": "of Portugal",
+          "answer_D": "of the Netherlands",
+          "right_answer": "of Portugal"
+        },
+        "ru": {
+          "question": "Из перечисленных клубы какой страны чаще всего проигрывали в финале Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Бельгии",
+          "answer_B": "Шотландии",
+          "answer_C": "Португалии",
+          "answer_D": "Нидерландов",
+          "right_answer": "Португалии"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր երկրի ակումբներն են ամենից շատ պարտվել ՈւԵՖԱ-ի գավաթի (Եվրոպայի լիգայի) եզրափակիչներում:",
+          "answer_A": "Բելգիայի",
+          "answer_B": "Շոտլանդիայի",
+          "answer_C": "Պորտուգալիայի",
+          "answer_D": "Նիդեռլանդների",
+          "right_answer": "Պորտուգալիայի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Bélgica",
+          "answer_B": "Escocia",
+          "answer_C": "Portugal",
+          "answer_D": "Países Bajos",
+          "categoryType": "UEFA",
+          "question": "De estos, ¿los clubes de qué país han perdido más finales de Copa de la UEFA (Europa League)?",
+          "right_answer": "Portugal",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_027"
+        },
+        "de": {
+          "answer_A": "Belgien",
+          "answer_B": "Schottland",
+          "answer_C": "Portugal",
+          "answer_D": "Niederlande",
+          "categoryType": "UEFA",
+          "question": "Klubs aus welchem dieser Länder haben die meisten Finals im UEFA-Pokal (Europa League) verloren?",
+          "right_answer": "Portugal",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_027"
+        },
+        "it": {
+          "answer_A": "Belgio",
+          "answer_B": "Scozia",
+          "answer_C": "Portogallo",
+          "answer_D": "Paesi Bassi",
+          "categoryType": "UEFA",
+          "question": "Tra questi, i club di quale paese hanno perso più finali di Coppa UEFA (Europa League)?",
+          "right_answer": "Portogallo",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_027"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_028",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which Scottish club won the UEFA Cup (Europa League)?",
+          "answer_A": "Celtic",
+          "answer_B": "Rangers",
+          "answer_C": "Dundee United",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой шотландский клуб стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Селтик",
+          "answer_B": "Глазго Рейнджерс",
+          "answer_C": "Данди Юнайтед",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Շոտլանդական ո՞ր ակումբն է նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Սելթիկ",
+          "answer_B": "Գլազգո Ռեյնջերս",
+          "answer_C": "Դանդի Յունայթեդ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Celtic",
+          "answer_B": "Rangers",
+          "answer_C": "Dundee United",
+          "answer_D": "Ninguno",
+          "categoryType": "UEFA",
+          "question": "¿Qué club escocés ganó la Copa de la UEFA (Europa League)?",
+          "right_answer": "Ninguno",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_028"
+        },
+        "de": {
+          "answer_A": "Celtic",
+          "answer_B": "Rangers",
+          "answer_C": "Dundee United",
+          "answer_D": "Keiner",
+          "categoryType": "UEFA",
+          "question": "Welcher schottische Klub gewann den UEFA-Pokal (Europa League)?",
+          "right_answer": "Keiner",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_028"
+        },
+        "it": {
+          "answer_A": "Celtic",
+          "answer_B": "Rangers",
+          "answer_C": "Dundee United",
+          "answer_D": "Nessuno",
+          "categoryType": "UEFA",
+          "question": "Quale club scozzese ha vinto la Coppa UEFA (Europa League)?",
+          "right_answer": "Nessuno",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_028"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_029",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Of these, which coach won the UEFA Cup (Europa League)?",
+          "answer_A": "Leonid Slutsky",
+          "answer_B": "Valery Gazzaev",
+          "answer_C": "Stanislav Cherchesov",
+          "answer_D": "Oleg Romantsev",
+          "right_answer": "Valery Gazzaev"
+        },
+        "ru": {
+          "question": "Из перечисленных какой тренер стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Леонид Слуцкий",
+          "answer_B": "Валерий Газзаев",
+          "answer_C": "Станислав Черчесов",
+          "answer_D": "Олег Романцев",
+          "right_answer": "Валерий Газзаев"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր մարզիչն է նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Լեոնիդ Սլուցկիյ",
+          "answer_B": "Վալերի Գազաեվ",
+          "answer_C": "Ստանիսլավ Չերչեսով",
+          "answer_D": "Օլեգ Ռոմանցեվ",
+          "right_answer": "Վալերի Գազաեվ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Leonid Slutsky",
+          "answer_B": "Valery Gazzaev",
+          "answer_C": "Stanislav Cherchesov",
+          "answer_D": "Oleg Romantsev",
+          "categoryType": "UEFA",
+          "question": "De estos, ¿qué entrenador ganó la Copa de la UEFA (Europa League)?",
+          "right_answer": "Valery Gazzaev",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_029"
+        },
+        "de": {
+          "answer_A": "Leonid Slutsky",
+          "answer_B": "Waleri Gassajew",
+          "answer_C": "Stanislaw Tschertschessow",
+          "answer_D": "Oleg Romanzew",
+          "categoryType": "UEFA",
+          "question": "Welcher dieser Trainer gewann den UEFA-Pokal (Europa League)?",
+          "right_answer": "Waleri Gassajew",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_029"
+        },
+        "it": {
+          "answer_A": "Leonid Slutsky",
+          "answer_B": "Valery Gazzaev",
+          "answer_C": "Stanislav Cherchesov",
+          "answer_D": "Oleg Romantsev",
+          "categoryType": "UEFA",
+          "question": "Tra questi, quale allenatore ha vinto la Coppa UEFA (Europa League)?",
+          "right_answer": "Valery Gazzaev",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_029"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_030",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which French club won the UEFA Cup (Europa League)?",
+          "answer_A": "Bordeaux",
+          "answer_B": "Marseille",
+          "answer_C": "Bastia",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой французский клуб стал обладателем Кубка УЕФА (Лиги Европы) ?",
+          "answer_A": "Бордо",
+          "answer_B": "Марсель",
+          "answer_C": "Бастия",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ֆրանսիական ո՞ր ակումբն է նվաճել ՈւԵՖԱ-ի գավաթը (Եվրոպայի լիգա):",
+          "answer_A": "Բորդո",
+          "answer_B": "Մարսել",
+          "answer_C": "Բաստիա",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Bordeaux",
+          "answer_B": "Marseille",
+          "answer_C": "Bastia",
+          "answer_D": "Ninguno",
+          "categoryType": "UEFA",
+          "question": "¿Qué club francés ganó la Copa de la UEFA (Europa League)?",
+          "right_answer": "Ninguno",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_030"
+        },
+        "de": {
+          "answer_A": "Bordeaux",
+          "answer_B": "Marseille",
+          "answer_C": "Bastia",
+          "answer_D": "Keiner",
+          "categoryType": "UEFA",
+          "question": "Welcher französische Klub gewann den UEFA-Pokal (Europa League)?",
+          "right_answer": "Keiner",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_030"
+        },
+        "it": {
+          "answer_A": "Bordeaux",
+          "answer_B": "Marsiglia",
+          "answer_C": "Bastia",
+          "answer_D": "Nessuno",
+          "categoryType": "UEFA",
+          "question": "Quale club francese ha vinto la Coppa UEFA (Europa League)?",
+          "right_answer": "Nessuno",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_030"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_031",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the Europa League in the season 2018–2019?",
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Eintracht Frankfurt",
+          "answer_D": "Valencia",
+          "right_answer": "Chelsea"
+        },
+        "ru": {
+          "question": "Какой клуб стал победителем Лиги Европы в сезоне 2018-2019 ?",
+          "answer_A": "Арсенал",
+          "answer_B": "Челси",
+          "answer_C": "Айнтрахт Ф",
+          "answer_D": "Валенсия",
+          "right_answer": "Челси"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018-2019 թթ. մրցաշրջանում նվաճել Եվրոպայի լիգայի գավաթը:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Չելսի",
+          "answer_C": "Այնտրախտ Ֆ",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Չելսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Eintracht Frankfurt",
+          "answer_D": "Valencia",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ganó la Europa League en la temporada 2018/19?",
+          "right_answer": "Chelsea",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_031"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Eintracht Frankfurt",
+          "answer_D": "Valencia",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann die Europa League in der Saison 2018/19?",
+          "right_answer": "Chelsea",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_031"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Eintracht Francoforte",
+          "answer_D": "Valencia",
+          "categoryType": "UEFA",
+          "question": "Quale club ha vinto l’Europa League nella stagione 2018/19?",
+          "right_answer": "Chelsea",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_031"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_032",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Who became the top scorer of the Europa League in the season 2018–2019?",
+          "answer_A": "Olivier Giroud",
+          "answer_B": "Luka Jović",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Kevin Gameiro",
+          "right_answer": "Olivier Giroud"
+        },
+        "ru": {
+          "question": "Кто стал лучшим бомбардиром Лиги Европы в сезоне 2018-2019 ?",
+          "answer_A": "Оливье Жиру",
+          "answer_B": "Лука Йович",
+          "answer_C": "Пьер-Эмерик Обамеянг",
+          "answer_D": "Кевин Гамейро",
+          "right_answer": "Оливье Жиру"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018-2019 թթ. մրցաշրջանում դարձել Եվրոպայի լիգայի լավագույն ռմբարկու :",
+          "answer_A": "Օլիվյե Ժիրու",
+          "answer_B": "Լուկա Յովիչ",
+          "answer_C": "Պիեր-Էմերիկ Օբամեյանգ",
+          "answer_D": "Կեվին Գամեյրո",
+          "right_answer": "Օլիվյե Ժիրու"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Olivier Giroud",
+          "answer_B": "Luka Jović",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Kevin Gameiro",
+          "categoryType": "UEFA",
+          "question": "¿Quién fue el máximo goleador de la Europa League en la temporada 2018/19?",
+          "right_answer": "Olivier Giroud",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_032"
+        },
+        "de": {
+          "answer_A": "Olivier Giroud",
+          "answer_B": "Luka Jović",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Kevin Gameiro",
+          "categoryType": "UEFA",
+          "question": "Wer wurde in der Saison 2018/19 Torschützenkönig der Europa League?",
+          "right_answer": "Olivier Giroud",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_032"
+        },
+        "it": {
+          "answer_A": "Olivier Giroud",
+          "answer_B": "Luka Jović",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Kevin Gameiro",
+          "categoryType": "UEFA",
+          "question": "Chi è stato il capocannoniere dell’Europa League nella stagione 2018/19?",
+          "right_answer": "Olivier Giroud",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_032"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_033",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which of the following became the best assistant of the Europa League in the season 2018–2019?",
+          "answer_A": "Willian",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Henrikh Mkhitaryan",
+          "answer_D": "Kevin Gameiro",
+          "right_answer": "Willian"
+        },
+        "ru": {
+          "question": "Кто из перечисленных стал лучшим ассистентом Лиги Европы в сезоне 2018-2019 ?",
+          "answer_A": "Виллиан",
+          "answer_B": "Оливье Жиру",
+          "answer_C": "Генрих Мхитарян",
+          "answer_D": "Кевин Гамейро",
+          "right_answer": "Виллиан"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլային փոխանցում կատարել Եվրոպայի լիգայի 2018-2019 թթ. մրցաշրջանում:",
+          "answer_A": "Վիլլիան",
+          "answer_B": "Օլիվյե Ժիրու",
+          "answer_C": "Հենրիխ Մխիթարյան",
+          "answer_D": "Կեվին Գամեյրո",
+          "right_answer": "Վիլլիան"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Willian",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Henrikh Mkhitaryan",
+          "answer_D": "Kevin Gameiro",
+          "categoryType": "UEFA",
+          "question": "¿Cuál de los siguientes fue el mejor asistente de la Europa League en la temporada 2018/19?",
+          "right_answer": "Willian",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_033"
+        },
+        "de": {
+          "answer_A": "Willian",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Henrikh Mkhitaryan",
+          "answer_D": "Kevin Gameiro",
+          "categoryType": "UEFA",
+          "question": "Wer von den folgenden Spielern war in der Saison 2018/19 der beste Vorlagengeber der Europa League?",
+          "right_answer": "Willian",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_033"
+        },
+        "it": {
+          "answer_A": "Willian",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Henrikh Mkhitaryan",
+          "answer_D": "Kevin Gameiro",
+          "categoryType": "UEFA",
+          "question": "Chi tra i seguenti è stato il miglior assistman dell’Europa League nella stagione 2018/19?",
+          "right_answer": "Willian",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_033"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_034",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Europa League in the 2025/26 season?",
+          "answer_A": "Freiburg",
+          "answer_B": "Aston Villa",
+          "answer_C": "Nottingham Forest",
+          "answer_D": "Braga",
+          "right_answer": "Aston Villa"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу Европы УЕФА в сезоне 2025/26 ?",
+          "answer_A": "Фрайбург",
+          "answer_B": "Астон Вилла",
+          "answer_C": "Ноттингем Форест",
+          "answer_D": "Брага",
+          "right_answer": "Астон Вилла"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է հաղթել ՈւԵՖԱ Եվրոպայի լիգայում 2025/26 մրցաշրջանում:",
+          "answer_A": "Ֆրայբուրգ",
+          "answer_B": "Ասթոն Վիլլա",
+          "answer_C": "Նոթինգհեմ Ֆորեստ",
+          "answer_D": "Բրագա",
+          "right_answer": "Ասթոն Վիլլա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Friburgo",
+          "answer_B": "Aston Villa",
+          "answer_C": "Nottingham Forest",
+          "answer_D": "Braga",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ganó la UEFA Europa League en la temporada 2025/26?",
+          "right_answer": "Aston Villa",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_034"
+        },
+        "de": {
+          "answer_A": "Freiburg",
+          "answer_B": "Aston Villa",
+          "answer_C": "Nottingham Forest",
+          "answer_D": "Braga",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann die UEFA Europa League in der Saison 2025/26?",
+          "right_answer": "Aston Villa",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_034"
+        },
+        "it": {
+          "answer_A": "Friburgo",
+          "answer_B": "Aston Villa",
+          "answer_C": "Nottingham Forest",
+          "answer_D": "Braga",
+          "categoryType": "UEFA",
+          "question": "Quale club ha vinto la UEFA Europa League nella stagione 2025/26?",
+          "right_answer": "Aston Villa",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_034"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_035",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Europa League in the 2024/25 season?",
+          "answer_A": "Manchester United",
+          "answer_B": "Tottenham Hotspur",
+          "answer_C": "Roma",
+          "answer_D": "Eintracht Frankfurt",
+          "right_answer": "Tottenham Hotspur"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу Европы УЕФА в сезоне 2024/25?",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Тоттенхэм Хотспур",
+          "answer_C": "Рома",
+          "answer_D": "Айнтрахт Франкфурт",
+          "right_answer": "Тоттенхэм Хотспур"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել ՈՒԵՖԱ Եվրոպայի Լիգան 2024/25 մրցաշրջանում:",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Տոտենհեմ Հոտսպուր",
+          "answer_C": "Ռոմա",
+          "answer_D": "Այնտրախտ Ֆրանկֆուրտ",
+          "right_answer": "Տոտենհեմ Հոտսպուր"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Manchester United",
+          "answer_B": "Tottenham Hotspur",
+          "answer_C": "Roma",
+          "answer_D": "Eintracht Frankfurt",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ganó la UEFA Europa League en la temporada 2024/25?",
+          "right_answer": "Tottenham Hotspur",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_035"
+        },
+        "de": {
+          "answer_A": "Manchester United",
+          "answer_B": "Tottenham Hotspur",
+          "answer_C": "Roma",
+          "answer_D": "Eintracht Frankfurt",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann die UEFA Europa League in der Saison 2024/25?",
+          "right_answer": "Tottenham Hotspur",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_035"
+        },
+        "it": {
+          "answer_A": "Manchester United",
+          "answer_B": "Tottenham Hotspur",
+          "answer_C": "Roma",
+          "answer_D": "Eintracht Francoforte",
+          "categoryType": "UEFA",
+          "question": "Quale club ha vinto la UEFA Europa League nella stagione 2024/25?",
+          "right_answer": "Tottenham Hotspur",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_035"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_036",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club did Tottenham Hotspur beat in the 2024/25 UEFA Europa League final?",
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Sevilla",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб Тоттенхэм обыграл в финале Лиги Европы УЕФА 2024/25?",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Арсенал",
+          "answer_C": "Байер Леверкузен",
+          "answer_D": "Севилья",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է հաղթել Տոտենհեմ Հոտսպուրը 2024/25 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակչում:",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Արսենալ",
+          "answer_C": "Բայեր Լևերկուզեն",
+          "answer_D": "Սևիլիա",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Sevilla",
+          "categoryType": "UEFA",
+          "question": "¿A qué club venció el Tottenham Hotspur en la final de la UEFA Europa League 2024/25?",
+          "right_answer": "Manchester United",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_036"
+        },
+        "de": {
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Sevilla",
+          "categoryType": "UEFA",
+          "question": "Welchen Klub besiegte Tottenham Hotspur im Finale der UEFA Europa League 2024/25?",
+          "right_answer": "Manchester United",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_036"
+        },
+        "it": {
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Bayer Leverkusen",
+          "answer_D": "Siviglia",
+          "categoryType": "UEFA",
+          "question": "Quale club ha battuto il Tottenham Hotspur nella finale di UEFA Europa League 2024/25?",
+          "right_answer": "Manchester United",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_036"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_037",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "What was the score in the 2024/25 UEFA Europa League final?",
+          "answer_A": "Tottenham 1-0 Manchester United",
+          "answer_B": "Tottenham 2-1 Manchester United",
+          "answer_C": "Tottenham 3-2 Manchester United",
+          "answer_D": "Tottenham 0-0 Manchester United",
+          "right_answer": "Tottenham 1-0 Manchester United"
+        },
+        "ru": {
+          "question": "С каким счётом завершился финал Лиги Европы УЕФА 2024/25?",
+          "answer_A": "Тоттенхэм 1-0 Манчестер Юнайтед",
+          "answer_B": "Тоттенхэм 2-1 Манчестер Юнайтед",
+          "answer_C": "Тоттенхэм 3-2 Манчестер Юнайтед",
+          "answer_D": "Тоттенхэм 0-0 Манчестер Юнайтед",
+          "right_answer": "Тоттенхэм 1-0 Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ինչպիսի՞ն էր հաշիվը 2024/25 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակչում:",
+          "answer_A": "Տոտենհեմ 1-0 Մանչեսթեր Յունայթեդ",
+          "answer_B": "Տոտենհեմ 2-1 Մանչեսթեր Յունայթեդ",
+          "answer_C": "Տոտենհեմ 3-2 Մանչեսթեր Յունայթեդ",
+          "answer_D": "Տոտենհեմ 0-0 Մանչեսթեր Յունայթեդ",
+          "right_answer": "Տոտենհեմ 1-0 Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Tottenham 1-0 Manchester United",
+          "answer_B": "Tottenham 2-1 Manchester United",
+          "answer_C": "Tottenham 3-2 Manchester United",
+          "answer_D": "Tottenham 0-0 Manchester United",
+          "categoryType": "UEFA",
+          "question": "¿Cuál fue el marcador de la final de la UEFA Europa League 2024/25?",
+          "right_answer": "Tottenham 1-0 Manchester United",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_037"
+        },
+        "de": {
+          "answer_A": "Tottenham 1:0 Manchester United",
+          "answer_B": "Tottenham 2:1 Manchester United",
+          "answer_C": "Tottenham 3:2 Manchester United",
+          "answer_D": "Tottenham 0:0 Manchester United",
+          "categoryType": "UEFA",
+          "question": "Wie lautete das Ergebnis im Finale der UEFA Europa League 2024/25?",
+          "right_answer": "Tottenham 1:0 Manchester United",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_037"
+        },
+        "it": {
+          "answer_A": "Tottenham 1-0 Manchester United",
+          "answer_B": "Tottenham 2-1 Manchester United",
+          "answer_C": "Tottenham 3-2 Manchester United",
+          "answer_D": "Tottenham 0-0 Manchester United",
+          "categoryType": "UEFA",
+          "question": "Qual è stato il risultato della finale di UEFA Europa League 2024/25?",
+          "right_answer": "Tottenham 1-0 Manchester United",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_037"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_038",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "In which city was the 2024/25 UEFA Europa League final played?",
+          "answer_A": "Dublin",
+          "answer_B": "Bilbao",
+          "answer_C": "Budapest",
+          "answer_D": "Gdansk",
+          "right_answer": "Bilbao"
+        },
+        "ru": {
+          "question": "В каком городе состоялся финал Лиги Европы УЕФА 2024/25?",
+          "answer_A": "Дублин",
+          "answer_B": "Бильбао",
+          "answer_C": "Будапешт",
+          "answer_D": "Гданьск",
+          "right_answer": "Бильбао"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքում է անցկացվել 2024/25 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակիչը:",
+          "answer_A": "Դուբլին",
+          "answer_B": "Բիլբաո",
+          "answer_C": "Բուդապեշտ",
+          "answer_D": "Գդանսկ",
+          "right_answer": "Բիլբաո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Dublín",
+          "answer_B": "Bilbao",
+          "answer_C": "Budapest",
+          "answer_D": "Gdansk",
+          "categoryType": "UEFA",
+          "question": "¿En qué ciudad se jugó la final de la UEFA Europa League 2024/25?",
+          "right_answer": "Bilbao",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_038"
+        },
+        "de": {
+          "answer_A": "Dublin",
+          "answer_B": "Bilbao",
+          "answer_C": "Budapest",
+          "answer_D": "Danzig",
+          "categoryType": "UEFA",
+          "question": "In welcher Stadt wurde das Finale der UEFA Europa League 2024/25 gespielt?",
+          "right_answer": "Bilbao",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_038"
+        },
+        "it": {
+          "answer_A": "Dublino",
+          "answer_B": "Bilbao",
+          "answer_C": "Budapest",
+          "answer_D": "Danzica",
+          "categoryType": "UEFA",
+          "question": "In quale città si è giocata la finale di UEFA Europa League 2024/25?",
+          "right_answer": "Bilbao",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_038"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_039",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Who scored the only goal in the 2024/25 UEFA Europa League final?",
+          "answer_A": "Son Heung-min",
+          "answer_B": "Dominic Solanke",
+          "answer_C": "Brennan Johnson",
+          "answer_D": "James Maddison",
+          "right_answer": "Brennan Johnson"
+        },
+        "ru": {
+          "question": "Кто забил единственный гол в финале Лиги Европы УЕФА 2024/25?",
+          "answer_A": "Сон Хын Мин",
+          "answer_B": "Доминик Соланке",
+          "answer_C": "Бреннан Джонсон",
+          "answer_D": "Джеймс Мэддисон",
+          "right_answer": "Бреннан Джонсон"
+        },
+        "hy": {
+          "question": "Ո՞վ է խփել միակ գոլը 2024/25 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակչում:",
+          "answer_A": "Սոն Հին Մին",
+          "answer_B": "Դոմինիկ Սոլանկե",
+          "answer_C": "Բրեննան Ջոնսոն",
+          "answer_D": "Ջեյմս Մեդիսոն",
+          "right_answer": "Բրեննան Ջոնսոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Son Heung-min",
+          "answer_B": "Dominic Solanke",
+          "answer_C": "Brennan Johnson",
+          "answer_D": "James Maddison",
+          "categoryType": "UEFA",
+          "question": "¿Quién marcó el único gol de la final de la UEFA Europa League 2024/25?",
+          "right_answer": "Brennan Johnson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_039"
+        },
+        "de": {
+          "answer_A": "Son Heung-min",
+          "answer_B": "Dominic Solanke",
+          "answer_C": "Brennan Johnson",
+          "answer_D": "James Maddison",
+          "categoryType": "UEFA",
+          "question": "Wer erzielte das einzige Tor im Finale der UEFA Europa League 2024/25?",
+          "right_answer": "Brennan Johnson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_039"
+        },
+        "it": {
+          "answer_A": "Son Heung-min",
+          "answer_B": "Dominic Solanke",
+          "answer_C": "Brennan Johnson",
+          "answer_D": "James Maddison",
+          "categoryType": "UEFA",
+          "question": "Chi ha segnato l’unico gol della finale di UEFA Europa League 2024/25?",
+          "right_answer": "Brennan Johnson",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_039"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_040",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Tottenham Hotspur's 2024/25 UEFA Europa League victory ended how many years without a major trophy?",
+          "answer_A": "10 years",
+          "answer_B": "12 years",
+          "answer_C": "15 years",
+          "answer_D": "17 years",
+          "right_answer": "17 years"
+        },
+        "ru": {
+          "question": "Сколько лет длилась серия Тоттенхэма без трофеев до победы в Лиге Европы УЕФА 2024/25?",
+          "answer_A": "10 лет",
+          "answer_B": "12 лет",
+          "answer_C": "15 лет",
+          "answer_D": "17 лет",
+          "right_answer": "17 лет"
+        },
+        "hy": {
+          "question": "Քանի՞ տարվա դադարից հետո «Տոտենհեմը» նվաճեց խոշոր տիտղոս՝ հաղթելով 2024/25 ՈՒԵՖԱ Եվրոպայի Լիգայում:",
+          "answer_A": "10 տարի",
+          "answer_B": "12 տարի",
+          "answer_C": "15 տարի",
+          "answer_D": "17 տարի",
+          "right_answer": "17 տարի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "10 años",
+          "answer_B": "12 años",
+          "answer_C": "15 años",
+          "answer_D": "17 años",
+          "categoryType": "UEFA",
+          "question": "¿A cuántos años sin un gran trofeo puso fin la victoria del Tottenham Hotspur en la UEFA Europa League 2024/25?",
+          "right_answer": "17 años",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_040"
+        },
+        "de": {
+          "answer_A": "10 Jahre",
+          "answer_B": "12 Jahre",
+          "answer_C": "15 Jahre",
+          "answer_D": "17 Jahre",
+          "categoryType": "UEFA",
+          "question": "Der Sieg von Tottenham Hotspur in der UEFA Europa League 2024/25 beendete wie viele Jahre ohne großen Titel?",
+          "right_answer": "17 Jahre",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_040"
+        },
+        "it": {
+          "answer_A": "10 anni",
+          "answer_B": "12 anni",
+          "answer_C": "15 anni",
+          "answer_D": "17 anni",
+          "categoryType": "UEFA",
+          "question": "La vittoria del Tottenham Hotspur nella UEFA Europa League 2024/25 ha interrotto quanti anni senza un grande trofeo?",
+          "right_answer": "17 anni",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_040"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_041",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Europa League in the 2023/24 season?",
+          "answer_A": "Atalanta",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Roma",
+          "answer_D": "Marseille",
+          "right_answer": "Atalanta"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу Европы УЕФА в сезоне 2023/24?",
+          "answer_A": "Аталанта",
+          "answer_B": "Байер Леверкузен",
+          "answer_C": "Рома",
+          "answer_D": "Марсель",
+          "right_answer": "Аталанта"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել ՈՒԵՖԱ Եվրոպայի Լիգան 2023/24 մրցաշրջանում:",
+          "answer_A": "Ատալանտա",
+          "answer_B": "Բայեր Լևերկուզեն",
+          "answer_C": "Ռոմա",
+          "answer_D": "Մարսել",
+          "right_answer": "Ատալանտա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atalanta",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Roma",
+          "answer_D": "Marseille",
+          "categoryType": "UEFA",
+          "question": "¿Qué club ganó la UEFA Europa League en la temporada 2023/24?",
+          "right_answer": "Atalanta",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_041"
+        },
+        "de": {
+          "answer_A": "Atalanta",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Roma",
+          "answer_D": "Marseille",
+          "categoryType": "UEFA",
+          "question": "Welcher Klub gewann die UEFA Europa League in der Saison 2023/24?",
+          "right_answer": "Atalanta",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_041"
+        },
+        "it": {
+          "answer_A": "Atalanta",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Roma",
+          "answer_D": "Marsiglia",
+          "categoryType": "UEFA",
+          "question": "Quale club ha vinto la UEFA Europa League nella stagione 2023/24?",
+          "right_answer": "Atalanta",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_041"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_042",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Which club did Atalanta beat in the 2023/24 UEFA Europa League final?",
+          "answer_A": "Liverpool",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Sporting CP",
+          "answer_D": "Benfica",
+          "right_answer": "Bayer Leverkusen"
+        },
+        "ru": {
+          "question": "Какой клуб Аталанта обыграла в финале Лиги Европы УЕФА 2023/24?",
+          "answer_A": "Ливерпуль",
+          "answer_B": "Байер Леверкузен",
+          "answer_C": "Спортинг Лиссабон",
+          "answer_D": "Бенфика",
+          "right_answer": "Байер Леверкузен"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է հաղթել Ատալանտան 2023/24 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակչում:",
+          "answer_A": "Լիվերպուլ",
+          "answer_B": "Բայեր Լևերկուզեն",
+          "answer_C": "Սպորտինգ Լիսաբոն",
+          "answer_D": "Բենֆիկա",
+          "right_answer": "Բայեր Լևերկուզեն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Liverpool",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Sporting CP",
+          "answer_D": "Benfica",
+          "categoryType": "UEFA",
+          "question": "¿A qué club venció el Atalanta en la final de la UEFA Europa League 2023/24?",
+          "right_answer": "Bayer Leverkusen",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_042"
+        },
+        "de": {
+          "answer_A": "Liverpool",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Sporting CP",
+          "answer_D": "Benfica",
+          "categoryType": "UEFA",
+          "question": "Welchen Klub besiegte Atalanta im Finale der UEFA Europa League 2023/24?",
+          "right_answer": "Bayer Leverkusen",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_042"
+        },
+        "it": {
+          "answer_A": "Liverpool",
+          "answer_B": "Bayer Leverkusen",
+          "answer_C": "Sporting CP",
+          "answer_D": "Benfica",
+          "categoryType": "UEFA",
+          "question": "Quale club ha battuto l’Atalanta nella finale di UEFA Europa League 2023/24?",
+          "right_answer": "Bayer Leverkusen",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_042"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_043",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "Who scored a hat-trick for Atalanta in the 2023/24 UEFA Europa League final?",
+          "answer_A": "Charles De Ketelaere",
+          "answer_B": "Teun Koopmeiners",
+          "answer_C": "Ademola Lookman",
+          "answer_D": "Gianluca Scamacca",
+          "right_answer": "Ademola Lookman"
+        },
+        "ru": {
+          "question": "Кто оформил хет-трик за Аталанту в финале Лиги Европы УЕФА 2023/24?",
+          "answer_A": "Шарль Де Кетеларе",
+          "answer_B": "Тён Копмейнерс",
+          "answer_C": "Адемола Лукман",
+          "answer_D": "Джанлука Скамакка",
+          "right_answer": "Адемола Лукман"
+        },
+        "hy": {
+          "question": "Ո՞վ է դարձել հեթ-տրիկի հեղինակ Ատալանտայի կազմում 2023/24 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակչում:",
+          "answer_A": "Շարլ Դե Կետելարե",
+          "answer_B": "Տյոն Կուպմեյներս",
+          "answer_C": "Ադեմոլա Լուկման",
+          "answer_D": "Ջանլուկա Սկամակա",
+          "right_answer": "Ադեմոլա Լուկման"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Charles De Ketelaere",
+          "answer_B": "Teun Koopmeiners",
+          "answer_C": "Ademola Lookman",
+          "answer_D": "Gianluca Scamacca",
+          "categoryType": "UEFA",
+          "question": "¿Quién marcó un hat-trick para el Atalanta en la final de la UEFA Europa League 2023/24?",
+          "right_answer": "Ademola Lookman",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_043"
+        },
+        "de": {
+          "answer_A": "Charles De Ketelaere",
+          "answer_B": "Teun Koopmeiners",
+          "answer_C": "Ademola Lookman",
+          "answer_D": "Gianluca Scamacca",
+          "categoryType": "UEFA",
+          "question": "Wer erzielte einen Hattrick für Atalanta im Finale der UEFA Europa League 2023/24?",
+          "right_answer": "Ademola Lookman",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_043"
+        },
+        "it": {
+          "answer_A": "Charles De Ketelaere",
+          "answer_B": "Teun Koopmeiners",
+          "answer_C": "Ademola Lookman",
+          "answer_D": "Gianluca Scamacca",
+          "categoryType": "UEFA",
+          "question": "Chi ha segnato una tripletta per l’Atalanta nella finale di UEFA Europa League 2023/24?",
+          "right_answer": "Ademola Lookman",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_043"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "europa_league_044",
+      "categoryType": "UEFA",
+      "type": "Europa League",
+      "source": {
+        "en": {
+          "question": "In which city was the 2023/24 UEFA Europa League final played?",
+          "answer_A": "Seville",
+          "answer_B": "Budapest",
+          "answer_C": "Dublin",
+          "answer_D": "Baku",
+          "right_answer": "Dublin"
+        },
+        "ru": {
+          "question": "В каком городе состоялся финал Лиги Европы УЕФА 2023/24?",
+          "answer_A": "Севилья",
+          "answer_B": "Будапешт",
+          "answer_C": "Дублин",
+          "answer_D": "Баку",
+          "right_answer": "Дублин"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքում է անցկացվել 2023/24 ՈՒԵՖԱ Եվրոպայի Լիգայի եզրափակիչը:",
+          "answer_A": "Սևիլիա",
+          "answer_B": "Բուդապեշտ",
+          "answer_C": "Դուբլին",
+          "answer_D": "Բաքու",
+          "right_answer": "Դուբլին"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Sevilla",
+          "answer_B": "Budapest",
+          "answer_C": "Dublín",
+          "answer_D": "Bakú",
+          "categoryType": "UEFA",
+          "question": "¿En qué ciudad se jugó la final de la UEFA Europa League 2023/24?",
+          "right_answer": "Dublín",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_044"
+        },
+        "de": {
+          "answer_A": "Sevilla",
+          "answer_B": "Budapest",
+          "answer_C": "Dublin",
+          "answer_D": "Baku",
+          "categoryType": "UEFA",
+          "question": "In welcher Stadt wurde das Finale der UEFA Europa League 2023/24 gespielt?",
+          "right_answer": "Dublin",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_044"
+        },
+        "it": {
+          "answer_A": "Siviglia",
+          "answer_B": "Budapest",
+          "answer_C": "Dublino",
+          "answer_D": "Baku",
+          "categoryType": "UEFA",
+          "question": "In quale città si è giocata la finale di UEFA Europa League 2023/24?",
+          "right_answer": "Dublino",
+          "type": "Europa League",
+          "answered": false,
+          "questionId": "europa_league_044"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    }
+  ]
+}

@@ -360,7 +360,7 @@
       "type": "Super Cup",
       "source": {
         "en": {
-          "question": "Which clubs have won the UEFA Super Cup most?",
+          "question": "Which club has won the UEFA Super Cup most?",
           "answer_A": "Barcelona, Milan",
           "answer_B": "Milan, Ajax",
           "answer_C": "Real Madrid",
@@ -372,11 +372,11 @@
           "answer_A": "Барселона",
           "answer_B": "Милан",
           "answer_C": "Реал Мадрид",
-          "answer_D": "Ливерпуль",
+          "answer_D": "Реал Мадрид, Севилья",
           "right_answer": "Реал Мадрид"
         },
         "hy": {
-          "question": "Ո՞ր ակումբներն են բոլորից շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
           "answer_A": "Բարսելոնա, Միլան",
           "answer_B": "Միլան, Այաքս",
           "answer_C": "Ռեալ Մադրիդ",
@@ -507,7 +507,7 @@
         },
         "ru": {
           "question": "Клубам какой страны не удалось стать обладателем Суперкубка УЕФА ?",
-          "answer_A": "Рассии",
+          "answer_A": "России",
           "answer_B": "Сербии",
           "answer_C": "Румынии",
           "answer_D": "Турции",
@@ -1120,7 +1120,7 @@
       "source": {
         "en": {
           "question": "Which country's coaches won the UEFA Super Cup most?",
-          "answer_A": "of Holland",
+          "answer_A": "of Netherlands",
           "answer_B": "of Spain",
           "answer_C": "of Italy",
           "answer_D": "of France",
@@ -1128,7 +1128,7 @@
         },
         "ru": {
           "question": "Тренеры какой страны больше всех стали обладателем Суперкубка УЕФА ?",
-          "answer_A": "Голландии",
+          "answer_A": "Нидерландов",
           "answer_B": "Испании",
           "answer_C": "Италии",
           "answer_D": "Франции",
@@ -1136,7 +1136,7 @@
         },
         "hy": {
           "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
-          "answer_A": "Հոլանդիա",
+          "answer_A": "Նիդերլանդներ",
           "answer_B": "Իսպանիա",
           "answer_C": "Իտալիա",
           "answer_D": "Ֆրանսիա",
@@ -1189,27 +1189,27 @@
       "source": {
         "en": {
           "question": "Which coaches managed to win the UEFA Super Cup 2 times in a row?",
-          "answer_A": "Zinedin Zidan, Josep Guardiola",
-          "answer_B": "Zinedin Zidan, Juande Ramos",
-          "answer_C": "Zinedin Zidan, Carlo Ancelotti",
-          "answer_D": "Zinedin Zidan, Arrigo Sacchi",
-          "right_answer": "Zinedin Zidan, Arrigo Sacchi"
+          "answer_A": "Zinedine Zidane, Josep Guardiola",
+          "answer_B": "Zinedine Zidane, Juande Ramos",
+          "answer_C": "Zinedine Zidane, Carlo Ancelotti",
+          "answer_D": "Zinedine Zidane, Arrigo Sacchi, Luis Enrique",
+          "right_answer": "Zinedine Zidane, Arrigo Sacchi, Luis Enrique"
         },
         "ru": {
           "question": "Каким тренерам удалось выиграть Суперкубок УЕФА 2 раза подряд ?",
           "answer_A": "Зинедин Зидан, Хосеп Гвардиола",
           "answer_B": "Зинедин Зидан, Хуанде Рамос",
           "answer_C": "Зинедин Зидан, Карло Анчелотти",
-          "answer_D": "Зинедин Зидан, Ариго Сакки",
-          "right_answer": "Зинедин Зидан, Ариго Сакки"
+          "answer_D": "Зинедин Зидан, Арриго Сакки, Луис Энрике",
+          "right_answer": "Зинедин Зидан, Арриго Сакки, Луис Энрике"
         },
         "hy": {
           "question": "Ո՞ր մարզիչներին է հաջողվել նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը 2 անգամ անընդմեջ:",
           "answer_A": "Զինեդին Զիդան, Խոսեպ Գվարդիոլա",
           "answer_B": "Զինեդին Զիդան, Խուանդե Ռամոս",
           "answer_C": "Զինեդին Զիդան, Կառլո Անչելոտի",
-          "answer_D": "Զինեդին Զիդան, Արիգո Սակկի",
-          "right_answer": "Զինեդին Զիդան, Արիգո Սակկի"
+          "answer_D": "Զինեդին Զիդան, Արիգո Սակկի, Լուիս Էնրիկե",
+          "right_answer": "Զինեդին Զիդան, Արիգո Սակկի, Լուիս Էնրիկե"
         }
       },
       "targets": {

@@ -1495,7 +1495,7 @@
           "answer_C": "Real Madrid",
           "answer_D": "Athletic Bilbao",
           "categoryType": "TOP5",
-          "question": "¿Qué club terminó tercero más veces en España?",
+          "question": "¿Qué club terminó tercero más veces en el campeonato de España?",
           "right_answer": "Atlético Madrid",
           "type": "Spain",
           "answered": false,
@@ -2504,7 +2504,7 @@
           "answer_B": "Rutgerus van Nistelrooij",
           "answer_C": "Telmo Zarraonaindía",
           "answer_D": "Cristiano Ronaldo",
-          "right_answer": "Cristiano Ronaldo"
+          "right_answer": "Lionel Messi"
         },
         "ru": {
           "question": "Какой футболист больше всех стал автором \"хет трика\" в чемпионате Испании ?",
@@ -2512,7 +2512,7 @@
           "answer_B": "Руд ван Нистелрой",
           "answer_C": "Тельмо Сарра",
           "answer_D": "Криштиану Роналду",
-          "right_answer": "Криштиану Роналду"
+          "right_answer": "Лионель Месси"
         },
         "hy": {
           "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ \"հեթրիկ\"-ի հեղինակ դարձել Իսպանիայի առաջնությունում:",
@@ -2520,7 +2520,7 @@
           "answer_B": "Ռուդ վան Նիստելռոյ",
           "answer_C": "Տելմո Սառա",
           "answer_D": "Կրիշտիանու Ռոնալդու",
-          "right_answer": "Կրիշտիանու Ռոնալդու"
+          "right_answer": "Լիոնել Մեսսի"
         }
       },
       "targets": {
@@ -2531,7 +2531,7 @@
           "answer_D": "Cristiano Ronaldo",
           "categoryType": "TOP5",
           "question": "¿Qué futbolista logró más hat-tricks en el campeonato de España?",
-          "right_answer": "Cristiano Ronaldo",
+          "right_answer": "Lionel Messi",
           "type": "Spain",
           "answered": false,
           "questionId": "spain_037"
@@ -2543,7 +2543,7 @@
           "answer_D": "Cristiano Ronaldo",
           "categoryType": "TOP5",
           "question": "Welcher Fußballer erzielte die meisten Hattricks in der spanischen Meisterschaft?",
-          "right_answer": "Cristiano Ronaldo",
+          "right_answer": "Lionel Messi",
           "type": "Spain",
           "answered": false,
           "questionId": "spain_037"
@@ -2555,7 +2555,7 @@
           "answer_D": "Cristiano Ronaldo",
           "categoryType": "TOP5",
           "question": "Quale calciatore ha realizzato più triplette nel campionato spagnolo?",
-          "right_answer": "Cristiano Ronaldo",
+          "right_answer": "Lionel Messi",
           "type": "Spain",
           "answered": false,
           "questionId": "spain_037"
@@ -3123,8 +3123,8 @@
           "question": "Which football players became the top scorer of the Spanish championship the most in a row?",
           "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
           "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
-          "answer_C": "Alfredo Di Stéfano, Lángara Galarraga",
-          "answer_D": "Lángara Galarraga, Quini",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
           "right_answer": "Hugo Sánchez, Alfredo Di Stéfano"
         },
         "ru": {
@@ -3148,8 +3148,8 @@
         "es": {
           "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
           "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
-          "answer_C": "Alfredo Di Stéfano, Lángara Galarraga",
-          "answer_D": "Lángara Galarraga, Quini",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
           "categoryType": "TOP5",
           "question": "¿Qué futbolistas fueron máximos goleadores del campeonato de España más veces seguidas?",
           "right_answer": "Hugo Sánchez, Alfredo Di Stéfano",
@@ -3160,8 +3160,8 @@
         "de": {
           "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
           "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
-          "answer_C": "Alfredo Di Stéfano, Lángara Galarraga",
-          "answer_D": "Lángara Galarraga, Quini",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
           "categoryType": "TOP5",
           "question": "Welche Fußballer wurden am häufigsten in Folge Torschützenkönig der spanischen Meisterschaft?",
           "right_answer": "Hugo Sánchez, Alfredo Di Stéfano",
@@ -3172,8 +3172,8 @@
         "it": {
           "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
           "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
-          "answer_C": "Alfredo Di Stéfano, Lángara Galarraga",
-          "answer_D": "Lángara Galarraga, Quini",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
           "categoryType": "TOP5",
           "question": "Quali calciatori sono stati capocannonieri del campionato spagnolo più volte di fila?",
           "right_answer": "Hugo Sánchez, Alfredo Di Stéfano",
@@ -3289,7 +3289,7 @@
           "answer_C": "Athletic Bilbao",
           "answer_D": "Ninguno",
           "categoryType": "TOP5",
-          "question": "¿Qué club consiguió el “Golden Hat Trick”?",
+          "question": "¿Qué club consiguió el triplete?",
           "right_answer": "Barcelona",
           "type": "Spain",
           "answered": false,
@@ -3301,7 +3301,7 @@
           "answer_C": "Athletic Bilbao",
           "answer_D": "Keiner",
           "categoryType": "TOP5",
-          "question": "Welcher Verein schaffte den „Golden Hat Trick“?",
+          "question": "Welcher Verein schaffte das Triple?",
           "right_answer": "Barcelona",
           "type": "Spain",
           "answered": false,
@@ -3313,7 +3313,7 @@
           "answer_C": "Athletic Bilbao",
           "answer_D": "Nessuno",
           "categoryType": "TOP5",
-          "question": "Quale club è riuscito a realizzare il “Golden Hat Trick”?",
+          "question": "Quale club è riuscito a centrare il Triplete?",
           "right_answer": "Barcellona",
           "type": "Spain",
           "answered": false,
@@ -3358,7 +3358,7 @@
           "answer_C": "Real Madrid, Athletic Bilbao",
           "answer_D": "Athletic Bilbao, Atlético Madrid",
           "categoryType": "TOP5",
-          "question": "¿Qué clubes consiguieron más veces el “Golden Double”?",
+          "question": "¿Qué clubes consiguieron más veces el doblete?",
           "right_answer": "Athletic Bilbao, Barcelona",
           "type": "Spain",
           "answered": false,
@@ -3370,7 +3370,7 @@
           "answer_C": "Real Madrid, Athletic Bilbao",
           "answer_D": "Athletic Bilbao, Atlético Madrid",
           "categoryType": "TOP5",
-          "question": "Welche Vereine schafften den „Golden Double“ am häufigsten?",
+          "question": "Welche Vereine schafften das Double am häufigsten?",
           "right_answer": "Athletic Bilbao, Barcelona",
           "type": "Spain",
           "answered": false,
@@ -3382,7 +3382,7 @@
           "answer_C": "Real Madrid, Athletic Bilbao",
           "answer_D": "Athletic Bilbao, Atlético Madrid",
           "categoryType": "TOP5",
-          "question": "Quali club hanno realizzato più volte il “Golden Double”?",
+          "question": "Quali club hanno realizzato più volte il doblete (campionato e coppa)?",
           "right_answer": "Athletic Bilbao, Barcellona",
           "type": "Spain",
           "answered": false,
@@ -3396,7 +3396,7 @@
       "type": "Spain",
       "source": {
         "en": {
-          "question": "Of these, which club won the Spanish championship the most?",
+          "question": "Which of these clubs has won LaLiga exactly twice?",
           "answer_A": "Betis",
           "answer_B": "Sevilla",
           "answer_C": "Deportivo",
@@ -3404,7 +3404,7 @@
           "right_answer": "Real Sociedad"
         },
         "ru": {
-          "question": "Из перечисленных какой клуб больше всех выиграл чемпионат Испании ?",
+          "question": "Какой из этих клубов выигрывал Ла Лигу ровно два раза ?",
           "answer_A": "Бетис",
           "answer_B": "Севилья",
           "answer_C": "Депортиво",
@@ -3412,7 +3412,7 @@
           "right_answer": "Реал Сосьедат"
         },
         "hy": {
-          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "question": "Այս ակումբներից ո՞րն է Լա Լիգան հաղթել ճիշտ երկու անգամ:",
           "answer_A": "Բետիս",
           "answer_B": "Սեվիլյա",
           "answer_C": "Դեպորտիվո",
@@ -3427,7 +3427,7 @@
           "answer_C": "Deportivo",
           "answer_D": "Real Sociedad",
           "categoryType": "TOP5",
-          "question": "De estos clubes, ¿cuál ganó más veces el campeonato de España?",
+          "question": "De estos clubes, ¿cuál ha ganado LaLiga exactamente dos veces?",
           "right_answer": "Real Sociedad",
           "type": "Spain",
           "answered": false,
@@ -3439,7 +3439,7 @@
           "answer_C": "Deportivo",
           "answer_D": "Real Sociedad",
           "categoryType": "TOP5",
-          "question": "Welcher dieser Vereine gewann die spanische Meisterschaft am häufigsten?",
+          "question": "Welcher dieser Vereine hat LaLiga genau zweimal gewonnen?",
           "right_answer": "Real Sociedad",
           "type": "Spain",
           "answered": false,
@@ -3451,7 +3451,7 @@
           "answer_C": "Deportivo",
           "answer_D": "Real Sociedad",
           "categoryType": "TOP5",
-          "question": "Tra questi club, quale ha vinto più volte il campionato spagnolo?",
+          "question": "Tra questi club, quale ha vinto LaLiga esattamente due volte?",
           "right_answer": "Real Sociedad",
           "type": "Spain",
           "answered": false,
@@ -3952,7 +3952,7 @@
           "answer_A": "Atlético Madrid",
           "answer_B": "Deportivo",
           "answer_C": "Valencia",
-          "answer_D": "Athletic Bilbao",
+          "answer_D": "Sevilla",
           "right_answer": "Deportivo"
         },
         "ru": {
@@ -3960,7 +3960,7 @@
           "answer_A": "Атлетико Мадрид",
           "answer_B": "Депортиво",
           "answer_C": "Валенсия",
-          "answer_D": "Атлетик Билбао",
+          "answer_D": "Севилья",
           "right_answer": "Депортиво"
         },
         "hy": {
@@ -3968,7 +3968,7 @@
           "answer_A": "Ատլետիկո Մադրիդ",
           "answer_B": "Դեպորտիվո",
           "answer_C": "Վալենսիա",
-          "answer_D": "Ատլետիկ Բիլբաո",
+          "answer_D": "Սևիլիա",
           "right_answer": "Դեպորտիվո"
         }
       },
@@ -3977,7 +3977,7 @@
           "answer_A": "Atlético Madrid",
           "answer_B": "Deportivo",
           "answer_C": "Valencia",
-          "answer_D": "Athletic Bilbao",
+          "answer_D": "Sevilla",
           "categoryType": "TOP5",
           "question": "De estos clubes, ¿cuál ganó más veces la Supercopa de España?",
           "right_answer": "Deportivo",
@@ -3989,7 +3989,7 @@
           "answer_A": "Atlético Madrid",
           "answer_B": "Deportivo",
           "answer_C": "Valencia",
-          "answer_D": "Athletic Bilbao",
+          "answer_D": "Sevilla",
           "categoryType": "TOP5",
           "question": "Welcher dieser Vereine gewann den spanischen Supercup am häufigsten?",
           "right_answer": "Deportivo",
@@ -4001,7 +4001,7 @@
           "answer_A": "Atlético Madrid",
           "answer_B": "Deportivo",
           "answer_C": "Valencia",
-          "answer_D": "Athletic Bilbao",
+          "answer_D": "Siviglia",
           "categoryType": "TOP5",
           "question": "Tra questi club, quale ha vinto più volte la Supercoppa di Spagna?",
           "right_answer": "Deportivo",
@@ -4048,7 +4048,7 @@
           "answer_C": "Atlético Madrid",
           "answer_D": "Valencia",
           "categoryType": "TOP5",
-          "question": "¿Qué club perdió más oportunidades de ganar la Supercopa de España?",
+          "question": "¿Qué club ha perdido más finales de la Supercopa de España?",
           "right_answer": "Barcelona",
           "type": "Spain",
           "answered": false,
@@ -4060,7 +4060,7 @@
           "answer_C": "Atlético Madrid",
           "answer_D": "Valencia",
           "categoryType": "TOP5",
-          "question": "Welcher Verein verpasste am häufigsten den Gewinn des spanischen Supercups?",
+          "question": "Welcher Verein verlor die meisten Endspiele im spanischen Supercup?",
           "right_answer": "Barcelona",
           "type": "Spain",
           "answered": false,
@@ -4072,7 +4072,7 @@
           "answer_C": "Atlético Madrid",
           "answer_D": "Valencia",
           "categoryType": "TOP5",
-          "question": "Quale club ha perso più occasioni di vincere la Supercoppa di Spagna?",
+          "question": "Quale club ha perso più finali della Supercoppa di Spagna?",
           "right_answer": "Barcellona",
           "type": "Spain",
           "answered": false,
