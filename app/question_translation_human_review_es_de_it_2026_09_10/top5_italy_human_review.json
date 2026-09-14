@@ -1,0 +1,4990 @@
+{
+  "file_type": "football_quiz_translation_human_review",
+  "created_at": "2026-09-10",
+  "source_batch": "app/question_translation_batches_es_de_it_2026_09_09_manual_draft/top5_italy.json",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "firestore_updated": false,
+  "instructions": [
+    "Check that es/de/it question text matches the source meaning.",
+    "Check answer_A..answer_D and right_answer in each target language.",
+    "Use review_status: approved, needs_fix, questionable_fact, or translation_unclear.",
+    "Write reviewer_note only when something should be changed."
+  ],
+  "items_count": 70,
+  "items": [
+    {
+      "questionId": "italy_001",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Since what year is the Italian championship held?",
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1914",
+          "answer_D": "1930",
+          "right_answer": "1898"
+        },
+        "ru": {
+          "question": "С какого года проводится чемпионат Италии ?",
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1914",
+          "answer_D": "1930",
+          "right_answer": "1898"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Իտալիայի առաջնությունը:",
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1914",
+          "answer_D": "1930",
+          "right_answer": "1898"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1914",
+          "answer_D": "1930",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa el campeonato italiano?",
+          "right_answer": "1898",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_001"
+        },
+        "de": {
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1914",
+          "answer_D": "1930",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird die italienische Meisterschaft ausgetragen?",
+          "right_answer": "1898",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_001"
+        },
+        "it": {
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1914",
+          "answer_D": "1930",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa il campionato italiano?",
+          "right_answer": "1898",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_001"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_002",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Since what year is the Italian championship held in the current format?",
+          "answer_A": "1908",
+          "answer_B": "1929",
+          "answer_C": "1934",
+          "answer_D": "1975",
+          "right_answer": "1929"
+        },
+        "ru": {
+          "question": "С какого года чемпионат Италии проводится в нынешнем формате ?",
+          "answer_A": "1908",
+          "answer_B": "1929",
+          "answer_C": "1934",
+          "answer_D": "1975",
+          "right_answer": "1929"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Իտալիայի առաջնությունը անցկացվում ներկայիս ֆորմատով:",
+          "answer_A": "1908",
+          "answer_B": "1929",
+          "answer_C": "1934",
+          "answer_D": "1975",
+          "right_answer": "1929"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1908",
+          "answer_B": "1929",
+          "answer_C": "1934",
+          "answer_D": "1975",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa el campeonato italiano en su formato actual?",
+          "right_answer": "1929",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_002"
+        },
+        "de": {
+          "answer_A": "1908",
+          "answer_B": "1929",
+          "answer_C": "1934",
+          "answer_D": "1975",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird die italienische Meisterschaft im heutigen Format ausgetragen?",
+          "right_answer": "1929",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_002"
+        },
+        "it": {
+          "answer_A": "1908",
+          "answer_B": "1929",
+          "answer_C": "1934",
+          "answer_D": "1975",
+          "categoryType": "TOP5",
+          "question": "Da quale anno il campionato italiano si disputa nel formato attuale?",
+          "right_answer": "1929",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_002"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_003",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the first championship of Italy?",
+          "answer_A": "Juventus",
+          "answer_B": "Pro Vercelli",
+          "answer_C": "Milan",
+          "answer_D": "Genoa",
+          "right_answer": "Genoa"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл первый чемпионат Италии ?",
+          "answer_A": "Ювентус",
+          "answer_B": "Про Верчели",
+          "answer_C": "Милан",
+          "answer_D": "Дженоа",
+          "right_answer": "Дженоа"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Իտալիայի առաջին առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Յուվենթուս",
+          "answer_B": "Պրո Վերչելի",
+          "answer_C": "Միլան",
+          "answer_D": "Ջենոա",
+          "right_answer": "Ջենոա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Juventus",
+          "answer_B": "Pro Vercelli",
+          "answer_C": "Milan",
+          "answer_D": "Genoa",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el primer campeonato de Italia?",
+          "right_answer": "Genoa",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_003"
+        },
+        "de": {
+          "answer_A": "Juventus",
+          "answer_B": "Pro Vercelli",
+          "answer_C": "AC Mailand",
+          "answer_D": "Genua",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die erste italienische Meisterschaft?",
+          "right_answer": "Genua",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_003"
+        },
+        "it": {
+          "answer_A": "Juventus",
+          "answer_B": "Pro Vercelli",
+          "answer_C": "Milan",
+          "answer_D": "Genoa",
+          "categoryType": "TOP5",
+          "question": "Quale club vinse il primo campionato italiano?",
+          "right_answer": "Genoa",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_003"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_004",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the Italian championship the most?",
+          "answer_A": "Genoa",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем чемпионатa Италии ?",
+          "answer_A": "Дженоа",
+          "answer_B": "Интер",
+          "answer_C": "Ювентус",
+          "answer_D": "Милан",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իտալիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ջենոա",
+          "answer_B": "Ինտեր",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Միլան",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Genoa",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces el campeonato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_004"
+        },
+        "de": {
+          "answer_A": "Genua",
+          "answer_B": "Inter Mailand",
+          "answer_C": "Juventus",
+          "answer_D": "AC Mailand",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die italienische Meisterschaft am häufigsten?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_004"
+        },
+        "it": {
+          "answer_A": "Genoa",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte il campionato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_004"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_005",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club became the silver medalist of the Italian championship the most?",
+          "answer_A": "Internazionale",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Torino",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал серебряным призером чемпионата Италии ?",
+          "answer_A": "Интер",
+          "answer_B": "Ювентус",
+          "answer_C": "Милан",
+          "answer_D": "Торино",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել արծաթե մեդալակիր:",
+          "answer_A": "Ինտեր",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Միլան",
+          "answer_D": "Տորինո",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Internazionale",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Torino",
+          "categoryType": "TOP5",
+          "question": "¿Qué club fue subcampeón de Italia más veces?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_005"
+        },
+        "de": {
+          "answer_A": "Inter Mailand",
+          "answer_B": "Juventus",
+          "answer_C": "AC Mailand",
+          "answer_D": "Torino",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde am häufigsten italienischer Vizemeister?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_005"
+        },
+        "it": {
+          "answer_A": "Internazionale",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Torino",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato più volte secondo nel campionato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_005"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_006",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which city clubs have won the Italian championship the most?",
+          "answer_A": "Roma",
+          "answer_B": "Milan",
+          "answer_C": "Turin",
+          "answer_D": "Genova",
+          "right_answer": "Turin"
+        },
+        "ru": {
+          "question": "Клубы какого города больше всех стали победителями чемпионатa Италии ?",
+          "answer_A": "Рим",
+          "answer_B": "Милан",
+          "answer_C": "Турин",
+          "answer_D": "Генуа",
+          "right_answer": "Турин"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքի ակումբներն են բոլորից շատ նվաճել Իտալիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Հռոմ",
+          "answer_B": "Միլան",
+          "answer_C": "Թուրին",
+          "answer_D": "Գենույա",
+          "right_answer": "Թուրին"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Roma",
+          "answer_B": "Milán",
+          "answer_C": "Turín",
+          "answer_D": "Génova",
+          "categoryType": "TOP5",
+          "question": "¿Los clubes de qué ciudad han ganado más veces el campeonato italiano?",
+          "right_answer": "Turín",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_006"
+        },
+        "de": {
+          "answer_A": "Rom",
+          "answer_B": "Mailand",
+          "answer_C": "Turin",
+          "answer_D": "Genua",
+          "categoryType": "TOP5",
+          "question": "Die Klubs welcher Stadt haben die italienische Meisterschaft am häufigsten gewonnen?",
+          "right_answer": "Turin",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_006"
+        },
+        "it": {
+          "answer_A": "Roma",
+          "answer_B": "Milano",
+          "answer_C": "Torino",
+          "answer_D": "Genova",
+          "categoryType": "TOP5",
+          "question": "I club di quale città hanno vinto più volte il campionato italiano?",
+          "right_answer": "Torino",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_006"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_007",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of all time in the Italian championship?",
+          "answer_A": "Francesco Totti",
+          "answer_B": "Silvio Piola",
+          "answer_C": "Jose Altafini",
+          "answer_D": "Gunnar Nordahl",
+          "right_answer": "Silvio Piola"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир всех времен чемпионатa Италии ?",
+          "answer_A": "Франческо Тотти",
+          "answer_B": "Силвио Пиола",
+          "answer_C": "Жозэ Алтафини",
+          "answer_D": "Гунар Нордал",
+          "right_answer": "Силвио Пиола"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իտալիայի առաջնության բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ֆրանչեսկո Տոտտի",
+          "answer_B": "Սիլվիո Պիոլա",
+          "answer_C": "Ժոզե Ալտաֆինի",
+          "answer_D": "Գունար Նորդալ",
+          "right_answer": "Սիլվիո Պիոլա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Francesco Totti",
+          "answer_B": "Silvio Piola",
+          "answer_C": "José Altafini",
+          "answer_D": "Gunnar Nordahl",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico del campeonato italiano?",
+          "right_answer": "Silvio Piola",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_007"
+        },
+        "de": {
+          "answer_A": "Francesco Totti",
+          "answer_B": "Silvio Piola",
+          "answer_C": "José Altafini",
+          "answer_D": "Gunnar Nordahl",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten in der italienischen Meisterschaft?",
+          "right_answer": "Silvio Piola",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_007"
+        },
+        "it": {
+          "answer_A": "Francesco Totti",
+          "answer_B": "Silvio Piola",
+          "answer_C": "José Altafini",
+          "answer_D": "Gunnar Nordahl",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi del campionato italiano?",
+          "right_answer": "Silvio Piola",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_007"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_008",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which foreign footballer is the most author of goals in the Italian championship?",
+          "answer_A": "Gabriel Batistuta",
+          "answer_B": "Kurt Hamrin",
+          "answer_C": "Gunnar Nordahl",
+          "answer_D": "Luís Vinícius",
+          "right_answer": "Gunnar Nordahl"
+        },
+        "ru": {
+          "question": "Какой иностранный футболист больше всех стал автором голов в чемпионате Италии ?",
+          "answer_A": "Габриэль Батистута",
+          "answer_B": "Курт Гамрин",
+          "answer_C": "Гунар Нордал",
+          "answer_D": "Луис Винисио",
+          "right_answer": "Гунар Нордал"
+        },
+        "hy": {
+          "question": "Արտասահմանցի ո՞ր ֆուտբոլիստն է բոլորից շատ գոլի հեղինակ դարձել Իտալիայի առաջնությունում:",
+          "answer_A": "Գաբրիել Բատիստուտա",
+          "answer_B": "Կուրտ Համրին",
+          "answer_C": "Գունար Նորդալ",
+          "answer_D": "Լուիս Վինիսիո",
+          "right_answer": "Գունար Նորդալ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Gabriel Batistuta",
+          "answer_B": "Kurt Hamrin",
+          "answer_C": "Gunnar Nordahl",
+          "answer_D": "Luís Vinícius",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista extranjero marcó más goles en el campeonato italiano?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_008"
+        },
+        "de": {
+          "answer_A": "Gabriel Batistuta",
+          "answer_B": "Kurt Hamrin",
+          "answer_C": "Gunnar Nordahl",
+          "answer_D": "Luís Vinícius",
+          "categoryType": "TOP5",
+          "question": "Welcher ausländische Fußballer erzielte die meisten Tore in der italienischen Meisterschaft?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_008"
+        },
+        "it": {
+          "answer_A": "Gabriel Batistuta",
+          "answer_B": "Kurt Hamrin",
+          "answer_C": "Gunnar Nordahl",
+          "answer_D": "Luís Vinícius",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore straniero ha segnato più gol nel campionato italiano?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_008"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_009",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club in the championship of Italy spent the most of all seasons?",
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Genoa",
+          "right_answer": "Internazionale"
+        },
+        "ru": {
+          "question": "Какой клуб в чемпионате Италии провел больше всех сезонов ?",
+          "answer_A": "Милан",
+          "answer_B": "Ювентус",
+          "answer_C": "Интер",
+          "answer_D": "Дженоа",
+          "right_answer": "Интер"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ մրցաշրջան անցկացրել Իտալիայի առաջնությունում:",
+          "answer_A": "Միլան",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Ինտեր",
+          "answer_D": "Ջենոա",
+          "right_answer": "Ինտեր"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Genoa",
+          "categoryType": "TOP5",
+          "question": "¿Qué club disputó más temporadas en el campeonato italiano?",
+          "right_answer": "Internazionale",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_009"
+        },
+        "de": {
+          "answer_A": "AC Mailand",
+          "answer_B": "Juventus",
+          "answer_C": "Inter Mailand",
+          "answer_D": "Genua",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub spielte die meisten Spielzeiten in der italienischen Meisterschaft?",
+          "right_answer": "Inter Mailand",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_009"
+        },
+        "it": {
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Genoa",
+          "categoryType": "TOP5",
+          "question": "Quale club ha disputato più stagioni nel campionato italiano?",
+          "right_answer": "Internazionale",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_009"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_010",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club has long been the champion of Italy?",
+          "answer_A": "Genoa",
+          "answer_B": "Internazionale",
+          "answer_C": "Milan",
+          "answer_D": "Juventus",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб долгое время оставался чемпионом Италии ?",
+          "answer_A": "Дженоа",
+          "answer_B": "Интер",
+          "answer_C": "Милан",
+          "answer_D": "Ювентус",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է ամենաերկարը մնացել Իտալիայի առաջնության չեմպիոնի կարգավիճակում:",
+          "answer_A": "Ջենոա",
+          "answer_B": "Ինտեր",
+          "answer_C": "Միլան",
+          "answer_D": "Յուվենթուս",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Genoa",
+          "answer_B": "Internazionale",
+          "answer_C": "Milan",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "¿Qué club mantuvo durante más tiempo el título de campeón de Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_010"
+        },
+        "de": {
+          "answer_A": "Genua",
+          "answer_B": "Inter Mailand",
+          "answer_C": "AC Mailand",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub blieb am längsten italienischer Meister?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_010"
+        },
+        "it": {
+          "answer_A": "Genoa",
+          "answer_B": "Internazionale",
+          "answer_C": "Milan",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Quale club ha mantenuto più a lungo il titolo di campione d’Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_010"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_011",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club scored the most goals in one season of the Italian championship?",
+          "answer_A": "Milan",
+          "answer_B": "Torino",
+          "answer_C": "Juventus",
+          "answer_D": "Internazionale",
+          "right_answer": "Torino"
+        },
+        "ru": {
+          "question": "Какой клуб забил больше всех голов в одном сезоне чемпионатa Италии ?",
+          "answer_A": "Милан",
+          "answer_B": "Торино",
+          "answer_C": "Ювентус",
+          "answer_D": "Интер",
+          "right_answer": "Торино"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Միլան",
+          "answer_B": "Տորինո",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Ինտեր",
+          "right_answer": "Տորինո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Milan",
+          "answer_B": "Torino",
+          "answer_C": "Juventus",
+          "answer_D": "Internazionale",
+          "categoryType": "TOP5",
+          "question": "¿Qué club marcó más goles en una sola temporada del campeonato italiano?",
+          "right_answer": "Torino",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_011"
+        },
+        "de": {
+          "answer_A": "AC Mailand",
+          "answer_B": "Torino",
+          "answer_C": "Juventus",
+          "answer_D": "Inter Mailand",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub erzielte die meisten Tore in einer Saison der italienischen Meisterschaft?",
+          "right_answer": "Torino",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_011"
+        },
+        "it": {
+          "answer_A": "Milan",
+          "answer_B": "Torino",
+          "answer_C": "Juventus",
+          "answer_D": "Internazionale",
+          "categoryType": "TOP5",
+          "question": "Quale club ha segnato più gol in una singola stagione del campionato italiano?",
+          "right_answer": "Torino",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_011"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_012",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club was the record holder for the number of points scored in one season of the Italian championship?",
+          "answer_A": "Torino",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб стал рекордсменом по количеству набранных очков в одном сезоне чемпионатa Италии ?",
+          "answer_A": "Торино",
+          "answer_B": "Ювентус",
+          "answer_C": "Интер",
+          "answer_D": "Милан",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է վաստակած միավորներով ռեկորդակիրը:",
+          "answer_A": "Տորինո",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Ինտեր",
+          "answer_D": "Միլան",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Torino",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "¿Qué club tiene el récord de puntos en una sola temporada del campeonato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_012"
+        },
+        "de": {
+          "answer_A": "Torino",
+          "answer_B": "Juventus",
+          "answer_C": "Inter Mailand",
+          "answer_D": "AC Mailand",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält den Punkterekord in einer Saison der italienischen Meisterschaft?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_012"
+        },
+        "it": {
+          "answer_A": "Torino",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene il record di punti in una singola stagione del campionato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_012"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_013",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the record for the most goals conceded in one season of the Italian championship?",
+          "answer_A": "Benevento",
+          "answer_B": "Crotone",
+          "answer_C": "Messina",
+          "answer_D": "Casale",
+          "right_answer": "Casale"
+        },
+        "ru": {
+          "question": "Какой клуб стал рекордсменом по количеству пропущенных голов в одном сезоне чемпионатa Италии ?",
+          "answer_A": "Беневенто",
+          "answer_B": "Кротоне",
+          "answer_C": "Мессина",
+          "answer_D": "Казале",
+          "right_answer": "Казале"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է բաց թողած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Բենեվենտո",
+          "answer_B": "Կրոտոնե",
+          "answer_C": "Մեսսինա",
+          "answer_D": "Կազալե",
+          "right_answer": "Կազալե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Benevento",
+          "answer_B": "Crotone",
+          "answer_C": "Messina",
+          "answer_D": "Casale",
+          "categoryType": "TOP5",
+          "question": "¿Qué club encajó más goles en una sola temporada del campeonato italiano?",
+          "right_answer": "Casale",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_013"
+        },
+        "de": {
+          "answer_A": "Benevento",
+          "answer_B": "Crotone",
+          "answer_C": "Messina",
+          "answer_D": "Casale",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub kassierte die meisten Gegentore in einer Saison der italienischen Meisterschaft?",
+          "right_answer": "Casale",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_013"
+        },
+        "it": {
+          "answer_A": "Benevento",
+          "answer_B": "Crotone",
+          "answer_C": "Messina",
+          "answer_D": "Casale",
+          "categoryType": "TOP5",
+          "question": "Quale club ha subito più gol in una singola stagione del campionato italiano?",
+          "right_answer": "Casale",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_013"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_014",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the record for the number of victories in one season of the Italian championship?",
+          "answer_A": "Internazionale",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Genoa",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб стал рекордсменом по количеству побед в одном сезоне чемпионатa Италии ?",
+          "answer_A": "Интер",
+          "answer_B": "Ювентус",
+          "answer_C": "Милан",
+          "answer_D": "Дженоа",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է հաղթանակների քանակով ռեկորդակիրը:",
+          "answer_A": "Ինտեր",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Միլան",
+          "answer_D": "Ջենոա",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Internazionale",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Genoa",
+          "categoryType": "TOP5",
+          "question": "¿Qué club tiene el récord de victorias en una sola temporada del campeonato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_014"
+        },
+        "de": {
+          "answer_A": "Inter Mailand",
+          "answer_B": "Juventus",
+          "answer_C": "AC Mailand",
+          "answer_D": "Genua",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält den Rekord für die meisten Siege in einer Saison der italienischen Meisterschaft?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_014"
+        },
+        "it": {
+          "answer_A": "Internazionale",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Genoa",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene il record di vittorie in una singola stagione del campionato italiano?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_014"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_015",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the record for the number of defeats in one season of the Italian championship?",
+          "answer_A": "Messina",
+          "answer_B": "Benevento",
+          "answer_C": "Venezia",
+          "answer_D": "Lecce",
+          "right_answer": "Venezia"
+        },
+        "ru": {
+          "question": "Какой клуб стал рекордсменом по количеству поражений в одном сезоне чемпионатa Италии ?",
+          "answer_A": "Мессина",
+          "answer_B": "Беневенто",
+          "answer_C": "Венеция",
+          "answer_D": "Лечче",
+          "right_answer": "Венеция"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է պարտությունների քանակով ռեկորդակիրը:",
+          "answer_A": "Մեսսինա",
+          "answer_B": "Բենեվենտո",
+          "answer_C": "Վենեցիա",
+          "answer_D": "Լեչչե",
+          "right_answer": "Վենեցիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Messina",
+          "answer_B": "Benevento",
+          "answer_C": "Venezia",
+          "answer_D": "Lecce",
+          "categoryType": "TOP5",
+          "question": "¿Qué club tiene el récord de derrotas en una sola temporada del campeonato italiano?",
+          "right_answer": "Venezia",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_015"
+        },
+        "de": {
+          "answer_A": "Messina",
+          "answer_B": "Benevento",
+          "answer_C": "Venezia",
+          "answer_D": "Lecce",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält den Rekord für die meisten Niederlagen in einer Saison der italienischen Meisterschaft?",
+          "right_answer": "Venezia",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_015"
+        },
+        "it": {
+          "answer_A": "Messina",
+          "answer_B": "Benevento",
+          "answer_C": "Venezia",
+          "answer_D": "Lecce",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene il record di sconfitte in una singola stagione del campionato italiano?",
+          "right_answer": "Venezia",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_015"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_016",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which clubs (club) managed not to lose in one season of the Italian championship?",
+          "answer_A": "Perugia",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "To All",
+          "right_answer": "To All"
+        },
+        "ru": {
+          "question": "Каким клубам (клубу) удалось не проиграть в одном сезоне чемпионатa Италии ?",
+          "answer_A": "Перуджа",
+          "answer_B": "Ювентус",
+          "answer_C": "Милан",
+          "answer_D": "Всем",
+          "right_answer": "Всем"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին (ակումբներին) է հաջողվել չպարտվել Իտալիայի առաջնության մեկ մրցաշրջանում:",
+          "answer_A": "Պերուջջային",
+          "answer_B": "Յուվենթուսին",
+          "answer_C": "Միլանին",
+          "answer_D": "Բոլորին",
+          "right_answer": "Բոլորին"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Perugia",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Todos ellos",
+          "categoryType": "TOP5",
+          "question": "¿Qué club o clubes lograron terminar una temporada del campeonato italiano sin perder?",
+          "right_answer": "Todos ellos",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_016"
+        },
+        "de": {
+          "answer_A": "Perugia",
+          "answer_B": "Juventus",
+          "answer_C": "AC Mailand",
+          "answer_D": "Alle genannten",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub oder welche Klubs blieben in einer Saison der italienischen Meisterschaft ungeschlagen?",
+          "right_answer": "Alle genannten",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_016"
+        },
+        "it": {
+          "answer_A": "Perugia",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Tutti questi",
+          "categoryType": "TOP5",
+          "question": "Quale club o quali club sono riusciti a concludere una stagione del campionato italiano senza sconfitte?",
+          "right_answer": "Tutti questi",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_016"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_017",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who won the Italian championship the most?",
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Andrea Pirlo",
+          "answer_C": "Gianluigi Buffon",
+          "answer_D": "Leonardo Bonucci",
+          "right_answer": "Gianluigi Buffon"
+        },
+        "ru": {
+          "question": "Кто больше всех стал победителем чемпионатa Италии ?",
+          "answer_A": "Паоло Мальдини",
+          "answer_B": "Андреа Пирло",
+          "answer_C": "Джанлуиджи Буффон",
+          "answer_D": "Леонардо Бонуччи",
+          "right_answer": "Джанлуиджи Буффон"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ նվաճել Իտալիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Պաոլո Մալդինի",
+          "answer_B": "Անդրեա Պիռլո",
+          "answer_C": "Ջանլուիջի Բուֆֆոն",
+          "answer_D": "Լեոնարդո Բոնուչչի",
+          "right_answer": "Ջանլուիջի Բուֆֆոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Andrea Pirlo",
+          "answer_C": "Gianluigi Buffon",
+          "answer_D": "Leonardo Bonucci",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista ganó más veces el campeonato italiano?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_017"
+        },
+        "de": {
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Andrea Pirlo",
+          "answer_C": "Gianluigi Buffon",
+          "answer_D": "Leonardo Bonucci",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer gewann die italienische Meisterschaft am häufigsten?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_017"
+        },
+        "it": {
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Andrea Pirlo",
+          "answer_C": "Gianluigi Buffon",
+          "answer_D": "Leonardo Bonucci",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha vinto più volte il campionato italiano?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_017"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_018",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who spent the most matches in the championship of Italy?",
+          "answer_A": "Javier Zanetti",
+          "answer_B": "Paolo Maldini",
+          "answer_C": "Francesco Totti",
+          "answer_D": "Gianluigi Buffon",
+          "right_answer": "Gianluigi Buffon"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в чемпионате Италии ?",
+          "answer_A": "Хавьер Саннети",
+          "answer_B": "Паоло Мальдини",
+          "answer_C": "Франческо Тотти",
+          "answer_D": "Джанлуиджи Буффон",
+          "right_answer": "Джанлуиджи Буффон"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ խաղ անցկացրել Իտալիայի առաջնությունում:",
+          "answer_A": "Խավիեր Զանետտի",
+          "answer_B": "Պաոլո Մալդինի",
+          "answer_C": "Ֆրանչեսկո Տոտտի",
+          "answer_D": "Ջանլուիջի Բուֆֆոն",
+          "right_answer": "Ջանլուիջի Բուֆֆոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Javier Zanetti",
+          "answer_B": "Paolo Maldini",
+          "answer_C": "Francesco Totti",
+          "answer_D": "Gianluigi Buffon",
+          "categoryType": "TOP5",
+          "question": "¿Quién disputó más partidos en el campeonato italiano?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_018"
+        },
+        "de": {
+          "answer_A": "Javier Zanetti",
+          "answer_B": "Paolo Maldini",
+          "answer_C": "Francesco Totti",
+          "answer_D": "Gianluigi Buffon",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele in der italienischen Meisterschaft?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_018"
+        },
+        "it": {
+          "answer_A": "Javier Zanetti",
+          "answer_B": "Paolo Maldini",
+          "answer_C": "Francesco Totti",
+          "answer_D": "Gianluigi Buffon",
+          "categoryType": "TOP5",
+          "question": "Chi ha disputato più partite nel campionato italiano?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_018"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_019",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which goalkeeper spent more \"dry \" minutes in the championship of Italy?",
+          "answer_A": "Gianluigi Buffon",
+          "answer_B": "Dino Zoff",
+          "answer_C": "Gianluca Pagliuca",
+          "answer_D": "Sebastiano Rossi",
+          "right_answer": "Gianluigi Buffon"
+        },
+        "ru": {
+          "question": "Какой вратарь провел больше \"сухих\" минут в чемпионате Италии ?",
+          "answer_A": "Джанлуиджи Буффон",
+          "answer_B": "Дино Зофф",
+          "answer_C": "Джанлука Пайлука",
+          "answer_D": "Себастьан Росси",
+          "right_answer": "Джанлуиджи Буффон"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնությունում ո՞ր դարպասապահն է ավելի շատ \"չոր\" րոպեներ անցկացրել:",
+          "answer_A": "Ջանլուիջի Բուֆֆոն",
+          "answer_B": "Դինո Ձոֆֆ",
+          "answer_C": "Ջանլուկա Պայլուկա",
+          "answer_D": "Սեբաստիան Ռոսսի",
+          "right_answer": "Ջանլուիջի Բուֆֆոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Gianluigi Buffon",
+          "answer_B": "Dino Zoff",
+          "answer_C": "Gianluca Pagliuca",
+          "answer_D": "Sebastiano Rossi",
+          "categoryType": "TOP5",
+          "question": "¿Qué portero estuvo más minutos sin encajar goles en el campeonato italiano?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_019"
+        },
+        "de": {
+          "answer_A": "Gianluigi Buffon",
+          "answer_B": "Dino Zoff",
+          "answer_C": "Gianluca Pagliuca",
+          "answer_D": "Sebastiano Rossi",
+          "categoryType": "TOP5",
+          "question": "Welcher Torwart blieb in der italienischen Meisterschaft am längsten ohne Gegentor?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_019"
+        },
+        "it": {
+          "answer_A": "Gianluigi Buffon",
+          "answer_B": "Dino Zoff",
+          "answer_C": "Gianluca Pagliuca",
+          "answer_D": "Sebastiano Rossi",
+          "categoryType": "TOP5",
+          "question": "Quale portiere è rimasto più minuti senza subire gol nel campionato italiano?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_019"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_020",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who got the fastest red card in the championship of Italy?",
+          "answer_A": "Giuseppe Lorenzo",
+          "answer_B": "Gennaro Gattuso",
+          "answer_C": "Giorgio Chiellini",
+          "answer_D": "Pavel Nedved",
+          "right_answer": "Giuseppe Lorenzo"
+        },
+        "ru": {
+          "question": "Кто получил самую быструю красную карточку в чемпионате Италии ?",
+          "answer_A": "Джузеппе Лоренцо",
+          "answer_B": "Дженнаро Гаттузо",
+          "answer_C": "Джорджо Кьеллини",
+          "answer_D": "Павел Недвед",
+          "right_answer": "Джузеппе Лоренцо"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնություններում ո՞վ է ամենաարագ կարմիր քարտ ստացած ֆուտբոլիստը:",
+          "answer_A": "Ջուզեպպե Լորենցո",
+          "answer_B": "Ջենարո Գատուզո",
+          "answer_C": "Ջորջո Կելինի",
+          "answer_D": "Պավել Նեդվեդ",
+          "right_answer": "Ջուզեպպե Լորենցո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giuseppe Lorenzo",
+          "answer_B": "Gennaro Gattuso",
+          "answer_C": "Giorgio Chiellini",
+          "answer_D": "Pavel Nedvěd",
+          "categoryType": "TOP5",
+          "question": "¿Quién recibió la tarjeta roja más rápida en el campeonato italiano?",
+          "right_answer": "Giuseppe Lorenzo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_020"
+        },
+        "de": {
+          "answer_A": "Giuseppe Lorenzo",
+          "answer_B": "Gennaro Gattuso",
+          "answer_C": "Giorgio Chiellini",
+          "answer_D": "Pavel Nedvěd",
+          "categoryType": "TOP5",
+          "question": "Wer erhielt die schnellste Rote Karte in der italienischen Meisterschaft?",
+          "right_answer": "Giuseppe Lorenzo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_020"
+        },
+        "it": {
+          "answer_A": "Giuseppe Lorenzo",
+          "answer_B": "Gennaro Gattuso",
+          "answer_C": "Giorgio Chiellini",
+          "answer_D": "Pavel Nedvěd",
+          "categoryType": "TOP5",
+          "question": "Chi ha ricevuto il cartellino rosso più veloce nel campionato italiano?",
+          "right_answer": "Giuseppe Lorenzo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_020"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_021",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Since what year has the Italian Cup been played?",
+          "answer_A": "1922",
+          "answer_B": "1924",
+          "answer_C": "1929",
+          "answer_D": "1965",
+          "right_answer": "1922"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Кубок Италии ?",
+          "answer_A": "1922",
+          "answer_B": "1924",
+          "answer_C": "1929",
+          "answer_D": "1965",
+          "right_answer": "1922"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է սկսվել Իտալիայի գավաթի խաղարկությունը:",
+          "answer_A": "1922",
+          "answer_B": "1924",
+          "answer_C": "1929",
+          "answer_D": "1965",
+          "right_answer": "1922"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1922",
+          "answer_B": "1924",
+          "answer_C": "1929",
+          "answer_D": "1965",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la Copa de Italia?",
+          "right_answer": "1922",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_021"
+        },
+        "de": {
+          "answer_A": "1922",
+          "answer_B": "1924",
+          "answer_C": "1929",
+          "answer_D": "1965",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird die Coppa Italia ausgetragen?",
+          "right_answer": "1922",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_021"
+        },
+        "it": {
+          "answer_A": "1922",
+          "answer_B": "1924",
+          "answer_C": "1929",
+          "answer_D": "1965",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa la Coppa Italia?",
+          "right_answer": "1922",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_021"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_022",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the Italian Cup the most?",
+          "answer_A": "Roma",
+          "answer_B": "Internazionale",
+          "answer_C": "Milan",
+          "answer_D": "Juventus",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок Италии ?",
+          "answer_A": "Рома",
+          "answer_B": "Интер",
+          "answer_C": "Милан",
+          "answer_D": "Ювентус",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իտալիայի գավաթը:",
+          "answer_A": "Ռոմա",
+          "answer_B": "Ինտեր",
+          "answer_C": "Միլան",
+          "answer_D": "Յուվենթուս",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Roma",
+          "answer_B": "Internazionale",
+          "answer_C": "Milan",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Copa de Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_022"
+        },
+        "de": {
+          "answer_A": "Roma",
+          "answer_B": "Inter Mailand",
+          "answer_C": "AC Mailand",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die Coppa Italia am häufigsten?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_022"
+        },
+        "it": {
+          "answer_A": "Roma",
+          "answer_B": "Internazionale",
+          "answer_C": "Milan",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Coppa Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_022"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_023",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in the final of the Italian Cup?",
+          "answer_A": "Roma",
+          "answer_B": "Milan",
+          "answer_C": "Torino",
+          "answer_D": "Juventus",
+          "right_answer": "Milan"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в финале Кубка Италии ?",
+          "answer_A": "Рома",
+          "answer_B": "Милан",
+          "answer_C": "Торино",
+          "answer_D": "Ювентус",
+          "right_answer": "Милан"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Իտալիայի գավաթի եզրափակչում:",
+          "answer_A": "Ռոմա",
+          "answer_B": "Միլան",
+          "answer_C": "Տորինո",
+          "answer_D": "Յուվենթուս",
+          "right_answer": "Միլան"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Roma",
+          "answer_B": "Milan",
+          "answer_C": "Torino",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más finales de la Copa de Italia?",
+          "right_answer": "Milan",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_023"
+        },
+        "de": {
+          "answer_A": "Roma",
+          "answer_B": "AC Mailand",
+          "answer_C": "Torino",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub verlor die meisten Finals der Coppa Italia?",
+          "right_answer": "AC Mailand",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_023"
+        },
+        "it": {
+          "answer_A": "Roma",
+          "answer_B": "Milan",
+          "answer_C": "Torino",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più finali di Coppa Italia?",
+          "right_answer": "Milan",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_023"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_024",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club has never won the Italian Cup?",
+          "answer_A": "Palermo",
+          "answer_B": "Atalanta",
+          "answer_C": "Sampdoria",
+          "answer_D": "Vado",
+          "right_answer": "Palermo"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал Кубок Италии ?",
+          "answer_A": "Палермо",
+          "answer_B": "Аталанта",
+          "answer_C": "Сампдория",
+          "answer_D": "Вадо",
+          "right_answer": "Палермо"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը չի նվաճել Իտալիայի գավաթը:",
+          "answer_A": "Պալերմո",
+          "answer_B": "Ատալանտա",
+          "answer_C": "Սամպդորիա",
+          "answer_D": "Վադո",
+          "right_answer": "Պալերմո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Palermo",
+          "answer_B": "Atalanta",
+          "answer_C": "Sampdoria",
+          "answer_D": "Vado",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ganó la Copa de Italia?",
+          "right_answer": "Palermo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_024"
+        },
+        "de": {
+          "answer_A": "Palermo",
+          "answer_B": "Atalanta",
+          "answer_C": "Sampdoria",
+          "answer_D": "Vado",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann nie die Coppa Italia?",
+          "right_answer": "Palermo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_024"
+        },
+        "it": {
+          "answer_A": "Palermo",
+          "answer_B": "Atalanta",
+          "answer_C": "Sampdoria",
+          "answer_D": "Vado",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto la Coppa Italia?",
+          "right_answer": "Palermo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_024"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_025",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the championship and the Italian Cup 4 times in a row?",
+          "answer_A": "Internazionale",
+          "answer_B": "Genoa",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб 4 раза подряд выиграл и чемпионат, и Кубок Италии ?",
+          "answer_A": "Интер",
+          "answer_B": "Дженоа",
+          "answer_C": "Ювентус",
+          "answer_D": "Милан",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 4 անգամ անընդմեջ նվաճել ե՛վ Իտալիայի առաջնության չեմպիոնի տիտղոսը ե՛վ Իտալիայի գավաթը:",
+          "answer_A": "Ինտեր",
+          "answer_B": "Ջենոա",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Միլան",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Internazionale",
+          "answer_B": "Genoa",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el campeonato y la Copa de Italia 4 veces seguidas?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_025"
+        },
+        "de": {
+          "answer_A": "Inter Mailand",
+          "answer_B": "Genua",
+          "answer_C": "Juventus",
+          "answer_D": "AC Mailand",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann viermal in Folge die Meisterschaft und die Coppa Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_025"
+        },
+        "it": {
+          "answer_A": "Internazionale",
+          "answer_B": "Genoa",
+          "answer_C": "Juventus",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto campionato e Coppa Italia per 4 volte consecutive?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_025"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_026",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Since what year has the Italian Super Cup been played?",
+          "answer_A": "1978",
+          "answer_B": "1988",
+          "answer_C": "1998",
+          "answer_D": "2002",
+          "right_answer": "1988"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Суперкубок Италии ?",
+          "answer_A": "1978",
+          "answer_B": "1988",
+          "answer_C": "1998",
+          "answer_D": "2002",
+          "right_answer": "1988"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է խաղարկվում Իտալիայի Սուպեր գավաթը:",
+          "answer_A": "1978",
+          "answer_B": "1988",
+          "answer_C": "1998",
+          "answer_D": "2002",
+          "right_answer": "1988"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1978",
+          "answer_B": "1988",
+          "answer_C": "1998",
+          "answer_D": "2002",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la Supercopa de Italia?",
+          "right_answer": "1988",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_026"
+        },
+        "de": {
+          "answer_A": "1978",
+          "answer_B": "1988",
+          "answer_C": "1998",
+          "answer_D": "2002",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird die Supercoppa Italiana ausgetragen?",
+          "right_answer": "1988",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_026"
+        },
+        "it": {
+          "answer_A": "1978",
+          "answer_B": "1988",
+          "answer_C": "1998",
+          "answer_D": "2002",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa la Supercoppa Italiana?",
+          "right_answer": "1988",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_026"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_027",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the Italian Super Cup the most?",
+          "answer_A": "Milan",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл Суперкубок Италии ?",
+          "answer_A": "Милан",
+          "answer_B": "Интер",
+          "answer_C": "Ювентус",
+          "answer_D": "Рома",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է բոլորից շատ նվաճել Իտալիայի Սուպեր գավաթը:",
+          "answer_A": "Միլան",
+          "answer_B": "Ինտեր",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Ռոմա",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Milan",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ganó más veces la Supercopa de Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_027"
+        },
+        "de": {
+          "answer_A": "AC Mailand",
+          "answer_B": "Inter Mailand",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Klubs gewann die Supercoppa Italiana am häufigsten?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_027"
+        },
+        "it": {
+          "answer_A": "Milan",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte la Supercoppa Italiana?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_027"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_028",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club has lost the most in Italy Super Bowl games?",
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Roma",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в играх за Суперкубок Италии ?",
+          "answer_A": "Милан",
+          "answer_B": "Ювентус",
+          "answer_C": "Интер",
+          "answer_D": "Рома",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Իտալիայի Սուպեր գավաթի խաղերում:",
+          "answer_A": "Միլան",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Ինտեր",
+          "answer_D": "Ռոմա",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más partidos de la Supercopa de Italia?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_028"
+        },
+        "de": {
+          "answer_A": "AC Mailand",
+          "answer_B": "Juventus",
+          "answer_C": "Inter Mailand",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub verlor die meisten Spiele der Supercoppa Italiana?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_028"
+        },
+        "it": {
+          "answer_A": "Milan",
+          "answer_B": "Juventus",
+          "answer_C": "Internazionale",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più partite di Supercoppa Italiana?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_028"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_029",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "The highest place of the Italian team in the FIFA ranking in history.",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Самое высокое место сборной Италии в рейтинге ФИФА за всю историю.",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Ո՞րն է FIFA-ի դասակարգման աղյուսակում Իտալիայի հավաքականի զբաղեցրած ամենաբարձր հորիզոնականը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "1"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "¿Cuál fue la posición más alta de Italia en el ranking FIFA?",
+          "right_answer": "1",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_029"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Was war die höchste Platzierung Italiens in der FIFA-Weltrangliste?",
+          "right_answer": "1",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_029"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Qual è stata la posizione più alta dell’Italia nel ranking FIFA?",
+          "right_answer": "1",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_029"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_030",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who was the opponent of the Italian team in the first international match?",
+          "answer_A": "France",
+          "answer_B": "Belgium",
+          "answer_C": "Germany",
+          "answer_D": "Hungary",
+          "right_answer": "France"
+        },
+        "ru": {
+          "question": "Кто был соперником сборной Италии в первом международном матче ?",
+          "answer_A": "Франция",
+          "answer_B": "Бельгия",
+          "answer_C": "Германия",
+          "answer_D": "Венгрия",
+          "right_answer": "Франция"
+        },
+        "hy": {
+          "question": "Ո՞վ է եղել Իտալիայի հավաքականի մրցակիցը առաջին միջազգային հանդիպման ժամանակ:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Բելգիա",
+          "answer_C": "Գերմանիա",
+          "answer_D": "Հունգարիա",
+          "right_answer": "Ֆրանսիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Bélgica",
+          "answer_C": "Alemania",
+          "answer_D": "Hungría",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el rival de Italia en su primer partido internacional?",
+          "right_answer": "Francia",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_030"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "Belgien",
+          "answer_C": "Deutschland",
+          "answer_D": "Ungarn",
+          "categoryType": "TOP5",
+          "question": "Wer war der Gegner Italiens im ersten Länderspiel?",
+          "right_answer": "Frankreich",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_030"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Belgio",
+          "answer_C": "Germania",
+          "answer_D": "Ungheria",
+          "categoryType": "TOP5",
+          "question": "Chi fu l’avversario dell’Italia nella sua prima partita internazionale?",
+          "right_answer": "Francia",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_030"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_031",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who in its history has the Italian team defeated with the largest score?",
+          "answer_A": "Malta",
+          "answer_B": "USA",
+          "answer_C": "Sweden",
+          "answer_D": "Belgium",
+          "right_answer": "USA"
+        },
+        "ru": {
+          "question": "Кого в своей истории сборная Италии победила с самым крупным счетом ?",
+          "answer_A": "Мальта",
+          "answer_B": "США",
+          "answer_C": "Швеция",
+          "answer_D": "Бельгия",
+          "right_answer": "США"
+        },
+        "hy": {
+          "question": "Իտալիայի հավաքականը իր պատմության մեջ ու՞մ է հաղթել ամենախոշոր հաշվով:",
+          "answer_A": "Մալթա",
+          "answer_B": "ԱՄՆ",
+          "answer_C": "Շվեդիա",
+          "answer_D": "Բելգիա",
+          "right_answer": "ԱՄՆ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Malta",
+          "answer_B": "Estados Unidos",
+          "answer_C": "Suecia",
+          "answer_D": "Bélgica",
+          "categoryType": "TOP5",
+          "question": "¿A qué selección derrotó Italia con el marcador más amplio de su historia?",
+          "right_answer": "Estados Unidos",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_031"
+        },
+        "de": {
+          "answer_A": "Malta",
+          "answer_B": "USA",
+          "answer_C": "Schweden",
+          "answer_D": "Belgien",
+          "categoryType": "TOP5",
+          "question": "Welche Nationalmannschaft besiegte Italien mit dem höchsten Ergebnis seiner Geschichte?",
+          "right_answer": "USA",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_031"
+        },
+        "it": {
+          "answer_A": "Malta",
+          "answer_B": "Stati Uniti",
+          "answer_C": "Svezia",
+          "answer_D": "Belgio",
+          "categoryType": "TOP5",
+          "question": "Quale nazionale ha battuto l’Italia con il punteggio più largo della sua storia?",
+          "right_answer": "Stati Uniti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_031"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_032",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who in the history of the Italian team lost with the largest score?",
+          "answer_A": "Hungary",
+          "answer_B": "France",
+          "answer_C": "Brazil",
+          "answer_D": "Switzerland",
+          "right_answer": "Hungary"
+        },
+        "ru": {
+          "question": "Кому в своей истории сборная Италии проиграла с самым крупным счетом ?",
+          "answer_A": "Венгрия",
+          "answer_B": "Франция",
+          "answer_C": "Бразилия",
+          "answer_D": "Швейцария",
+          "right_answer": "Венгрия"
+        },
+        "hy": {
+          "question": "Իտալիայի հավաքականը իր պատմության մեջ ու՞մ է պարտվել ամենախոշոր հաշվով:",
+          "answer_A": "Հունգարիա",
+          "answer_B": "Ֆրանսիա",
+          "answer_C": "Բրազիլիա",
+          "answer_D": "Շվեյցարիա",
+          "right_answer": "Հունգարիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Hungría",
+          "answer_B": "Francia",
+          "answer_C": "Brasil",
+          "answer_D": "Suiza",
+          "categoryType": "TOP5",
+          "question": "¿Contra qué selección sufrió Italia la derrota más amplia de su historia?",
+          "right_answer": "Hungría",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_032"
+        },
+        "de": {
+          "answer_A": "Ungarn",
+          "answer_B": "Frankreich",
+          "answer_C": "Brasilien",
+          "answer_D": "Schweiz",
+          "categoryType": "TOP5",
+          "question": "Gegen welche Nationalmannschaft erlitt Italien die höchste Niederlage seiner Geschichte?",
+          "right_answer": "Ungarn",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_032"
+        },
+        "it": {
+          "answer_A": "Ungheria",
+          "answer_B": "Francia",
+          "answer_C": "Brasile",
+          "answer_D": "Svizzera",
+          "categoryType": "TOP5",
+          "question": "Contro quale nazionale l’Italia ha subito la sconfitta più larga della sua storia?",
+          "right_answer": "Ungheria",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_032"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_033",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "In what year did the Italian national team first participate in the World Cup?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        },
+        "ru": {
+          "question": "В каком году сборная Италии впервые участвовала в чемпионате Мира ?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Իտալիայի հավաքականը մասնակցել Աշխարհի առաջնությանը:",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó Italia por primera vez en la Copa del Mundo?",
+          "right_answer": "1934",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_033"
+        },
+        "de": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm Italien erstmals an der Weltmeisterschaft teil?",
+          "right_answer": "1934",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_033"
+        },
+        "it": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Italia partecipò per la prima volta ai Mondiali?",
+          "right_answer": "1934",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_033"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_034",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "In what year did the Italian national team first participate in the European Championship?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1968"
+        },
+        "ru": {
+          "question": "В каком году сборная Италии впервые участвовала в чемпионате Европы ?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1968"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Իտալիայի հավաքականը մասնակցել Եվրոպայի առաջնությանը:",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1968"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó Italia por primera vez en la Eurocopa?",
+          "right_answer": "1968",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_034"
+        },
+        "de": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm Italien erstmals an der Europameisterschaft teil?",
+          "right_answer": "1968",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_034"
+        },
+        "it": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Italia partecipò per la prima volta al Campionato Europeo?",
+          "right_answer": "1968",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_034"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_035",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "In which year did the Italian national team win the Olympic gold medal?",
+          "answer_A": "1928",
+          "answer_B": "1936",
+          "answer_C": "1960",
+          "answer_D": "2004",
+          "right_answer": "1936"
+        },
+        "ru": {
+          "question": "В каком году сборная Италии выиграла золотую медаль Олимпийских игр ?",
+          "answer_A": "1928",
+          "answer_B": "1936",
+          "answer_C": "1960",
+          "answer_D": "2004",
+          "right_answer": "1936"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Իտալիայի հավաքականը նվաճել Օլիմպիական խաղերի ոսկե մեդալը:",
+          "answer_A": "1928",
+          "answer_B": "1936",
+          "answer_C": "1960",
+          "answer_D": "2004",
+          "right_answer": "1936"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1928",
+          "answer_B": "1936",
+          "answer_C": "1960",
+          "answer_D": "2004",
+          "categoryType": "TOP5",
+          "question": "¿En qué año ganó Italia la medalla de oro olímpica?",
+          "right_answer": "1936",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_035"
+        },
+        "de": {
+          "answer_A": "1928",
+          "answer_B": "1936",
+          "answer_C": "1960",
+          "answer_D": "2004",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr gewann Italien die olympische Goldmedaille?",
+          "right_answer": "1936",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_035"
+        },
+        "it": {
+          "answer_A": "1928",
+          "answer_B": "1936",
+          "answer_C": "1960",
+          "answer_D": "2004",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Italia vinse la medaglia d’oro olimpica?",
+          "right_answer": "1936",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_035"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_036",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "How many times has Italy become the World Champion?",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Италии стала чемпионом Мира ?",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իտալիայի հավաքականը նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "right_answer": "4"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces fue Italia campeona del mundo?",
+          "right_answer": "4",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_036"
+        },
+        "de": {
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde Italien Weltmeister?",
+          "right_answer": "4",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_036"
+        },
+        "it": {
+          "answer_A": "2",
+          "answer_B": "3",
+          "answer_C": "4",
+          "answer_D": "5",
+          "categoryType": "TOP5",
+          "question": "Quante volte l’Italia è diventata campione del mondo?",
+          "right_answer": "4",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_036"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_037",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "How many times has Italy won the Confederation Cup?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Италии выиграла Кубок Конфедерации ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իտալիայի հավաքականը նվաճել Կոնֆեդերացիայի գավաթը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ganó Italia la Copa Confederaciones?",
+          "right_answer": "0",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_037"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft gewann Italien den Konföderationen-Pokal?",
+          "right_answer": "0",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_037"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte l’Italia ha vinto la Confederations Cup?",
+          "right_answer": "0",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_037"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_038",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "In what years did Italy become European champion?",
+          "answer_A": "1968; 2000",
+          "answer_B": "1968; 2020",
+          "answer_C": "1968; 2012",
+          "answer_D": "1968; 2016",
+          "right_answer": "1968; 2020"
+        },
+        "ru": {
+          "question": "В каких годах сборная Италии стала чемпионом Европы ?",
+          "answer_A": "1968; 2000",
+          "answer_B": "1968; 2020",
+          "answer_C": "1968; 2012",
+          "answer_D": "1968; 2016",
+          "right_answer": "1968; 2020"
+        },
+        "hy": {
+          "question": "Ո՞ր թթ. է Իտալիայի հավաքականը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1968; 2000",
+          "answer_B": "1968; 2020",
+          "answer_C": "1968; 2012",
+          "answer_D": "1968; 2016",
+          "right_answer": "1968; 2020"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1968; 2000",
+          "answer_B": "1968; 2020",
+          "answer_C": "1968; 2012",
+          "answer_D": "1968; 2016",
+          "categoryType": "TOP5",
+          "question": "¿En qué años fue Italia campeona de Europa?",
+          "right_answer": "1968; 2020",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_038"
+        },
+        "de": {
+          "answer_A": "1968; 2000",
+          "answer_B": "1968; 2020",
+          "answer_C": "1968; 2012",
+          "answer_D": "1968; 2016",
+          "categoryType": "TOP5",
+          "question": "In welchen Jahren wurde Italien Europameister?",
+          "right_answer": "1968; 2020",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_038"
+        },
+        "it": {
+          "answer_A": "1968; 2000",
+          "answer_B": "1968; 2020",
+          "answer_C": "1968; 2012",
+          "answer_D": "1968; 2016",
+          "categoryType": "TOP5",
+          "question": "In quali anni l’Italia è diventata campione d’Europa?",
+          "right_answer": "1968; 2020",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_038"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_039",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which footballer spent the most games in Italy?",
+          "answer_A": "Fabio Cannavaro",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Paolo Maldini",
+          "answer_D": "Andrea Pirlo",
+          "right_answer": "Gianluigi Buffon"
+        },
+        "ru": {
+          "question": "Какой футболист провел больше всех игр в сборной Италии ?",
+          "answer_A": "Фабио Каннаваро",
+          "answer_B": "Джанлуиджи Буффон",
+          "answer_C": "Паоло Мальдини",
+          "answer_D": "Андреа Пирло",
+          "right_answer": "Джанлуиджи Буффон"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իտալիայի հավաքականում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Ֆաբիո Կանավարո",
+          "answer_B": "Ջանլուիջի Բուֆֆոն",
+          "answer_C": "Պաոլո Մալդինի",
+          "answer_D": "Անդրեա Պիռլո",
+          "right_answer": "Ջանլուիջի Բուֆֆոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Fabio Cannavaro",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Paolo Maldini",
+          "answer_D": "Andrea Pirlo",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista jugó más partidos con Italia?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_039"
+        },
+        "de": {
+          "answer_A": "Fabio Cannavaro",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Paolo Maldini",
+          "answer_D": "Andrea Pirlo",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer absolvierte die meisten Spiele für Italien?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_039"
+        },
+        "it": {
+          "answer_A": "Fabio Cannavaro",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Paolo Maldini",
+          "answer_D": "Andrea Pirlo",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha giocato più partite con l’Italia?",
+          "right_answer": "Gianluigi Buffon",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_039"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_040",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of all time in Italy?",
+          "answer_A": "Silvio Piola",
+          "answer_B": "Roberto Baggio",
+          "answer_C": "Luigi Riva",
+          "answer_D": "Giuseppe Meazza",
+          "right_answer": "Luigi Riva"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир всех времен сборной Италии ?",
+          "answer_A": "Силвио Пиола",
+          "answer_B": "Роберто Баджо",
+          "answer_C": "Луиджи Рива",
+          "answer_D": "Джузеппе Меацца",
+          "right_answer": "Луиджи Рива"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իտալիայի հավաքականի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Սիլվիո Պիոլա",
+          "answer_B": "Ռոբերտո Բաջջո",
+          "answer_C": "Լուիջի Ռիվա",
+          "answer_D": "Ջուզեպպե Մեացցա",
+          "right_answer": "Լուիջի Ռիվա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Silvio Piola",
+          "answer_B": "Roberto Baggio",
+          "answer_C": "Luigi Riva",
+          "answer_D": "Giuseppe Meazza",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de Italia?",
+          "right_answer": "Luigi Riva",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_040"
+        },
+        "de": {
+          "answer_A": "Silvio Piola",
+          "answer_B": "Roberto Baggio",
+          "answer_C": "Luigi Riva",
+          "answer_D": "Giuseppe Meazza",
+          "categoryType": "TOP5",
+          "question": "Wer ist Italiens bester Torschütze aller Zeiten?",
+          "right_answer": "Luigi Riva",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_040"
+        },
+        "it": {
+          "answer_A": "Silvio Piola",
+          "answer_B": "Roberto Baggio",
+          "answer_C": "Luigi Riva",
+          "answer_D": "Giuseppe Meazza",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi dell’Italia?",
+          "right_answer": "Luigi Riva",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_040"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_041",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "How many times did the Italian team lose in the World Cup finals?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Италии проиграла в финале чемпионата Мира ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իտալիայի հավաքականը պարտվել Աշխարհի առաջնության եզրափակչում:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces perdió Italia finales de la Copa del Mundo?",
+          "right_answer": "2",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_041"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft verlor Italien ein WM-Finale?",
+          "right_answer": "2",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_041"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte l’Italia ha perso una finale dei Mondiali?",
+          "right_answer": "2",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_041"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_042",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "How many times did the Italian team lose in the final of the European Championship?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "2"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Италии проиграла в финале чемпионата Европы ?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "2"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իտալիայի հավաքականը պարտվել Եվրոպայի առաջնության եզրափակչում:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "2"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces perdió Italia una final de la Eurocopa?",
+          "right_answer": "2",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_042"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Wie oft verlor Italien ein EM-Finale?",
+          "right_answer": "2",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_042"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Quante volte l’Italia ha perso una finale del Campionato Europeo?",
+          "right_answer": "2",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_042"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_043",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "In what year did the Italian national team first become the World Champion?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        },
+        "ru": {
+          "question": "В каком году сборная Италии впервые стала чемпионом Мира ?",
+          "answer_A": "1930 г.",
+          "answer_B": "1934 г.",
+          "answer_C": "1938 г.",
+          "answer_D": "1954 г.",
+          "right_answer": "1934 г."
+        },
+        "hy": {
+          "question": "Ե՞րբ է առաջին անգամ Իտալիայի հավաքականը նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1930 թ.",
+          "answer_B": "1934 թ.",
+          "answer_C": "1938 թ.",
+          "answer_D": "1954 թ.",
+          "right_answer": "1934 թ."
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "categoryType": "TOP5",
+          "question": "¿En qué año fue Italia campeona del mundo por primera vez?",
+          "right_answer": "1934",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_043"
+        },
+        "de": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde Italien erstmals Weltmeister?",
+          "right_answer": "1934",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_043"
+        },
+        "it": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1954",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Italia diventò campione del mondo per la prima volta?",
+          "right_answer": "1934",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_043"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_044",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "In what year did the Italian national team first become European champion?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1980",
+          "right_answer": "1968"
+        },
+        "ru": {
+          "question": "В каком году сборная Италии впервые стала чемпионом Европы ?",
+          "answer_A": "1960 г.",
+          "answer_B": "1964 г.",
+          "answer_C": "1968 г.",
+          "answer_D": "1980 г.",
+          "right_answer": "1968 г."
+        },
+        "hy": {
+          "question": "Ե՞րբ է առաջին անգամ Իտալիայի հավաքականը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1960 թ.",
+          "answer_B": "1964 թ.",
+          "answer_C": "1968 թ.",
+          "answer_D": "1980 թ.",
+          "right_answer": "1968 թ."
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1980",
+          "categoryType": "TOP5",
+          "question": "¿En qué año fue Italia campeona de Europa por primera vez?",
+          "right_answer": "1968",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_044"
+        },
+        "de": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1980",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde Italien erstmals Europameister?",
+          "right_answer": "1968",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_044"
+        },
+        "it": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1980",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Italia diventò campione d’Europa per la prima volta?",
+          "right_answer": "1968",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_044"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_045",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which players scored the most goals in one season of the Italian championship?",
+          "answer_A": "Gunnar Nordahl, Gino Rossetti",
+          "answer_B": "Gino Rossetti, Gonzalo Higuaín",
+          "answer_C": "Gonzalo Higuaín, Gunnar Nordahl",
+          "answer_D": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "right_answer": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile"
+        },
+        "ru": {
+          "question": "Какие футболисти забили больше всех голов в одном сезоне чемпионата Италии ?",
+          "answer_A": "Гунар Нордал, Джино Россетти",
+          "answer_B": "Джино Россетти, Гонсало Игуаин",
+          "answer_C": "Гонсало Игуаин, Гунар Нордал",
+          "answer_D": "Джино Россетти, Гонсало Игуаин, Чиро Иммобиле",
+          "right_answer": "Джино Россетти, Гонсало Игуаин, Чиро Иммобиле"
+        },
+        "hy": {
+          "question": "Ովքե՞ր են Իտալիայի առաջնության մեկ մրցաշրջանում ամենաշատ գոլ հեղինակած ֆուտբոլիստները:",
+          "answer_A": "Գունար Նորդալ, Ջինո Ռոզետտի",
+          "answer_B": "Ջինո Ռոզետտի, Գոնսալո Իգուաին",
+          "answer_C": "Գոնսալո Իգուաին, Գունար Նորդալ",
+          "answer_D": "Ջինո Ռոզետտի, Գոնսալո Իգուաին, Չիրո Իմոբիլե",
+          "right_answer": "Ջինո Ռոզետտի, Գոնսալո Իգուաին, Չիրո Իմոբիլե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Gunnar Nordahl, Gino Rossetti",
+          "answer_B": "Gino Rossetti, Gonzalo Higuaín",
+          "answer_C": "Gonzalo Higuaín, Gunnar Nordahl",
+          "answer_D": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "categoryType": "TOP5",
+          "question": "¿Qué jugadores marcaron más goles en una sola temporada del campeonato italiano?",
+          "right_answer": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_045"
+        },
+        "de": {
+          "answer_A": "Gunnar Nordahl, Gino Rossetti",
+          "answer_B": "Gino Rossetti, Gonzalo Higuaín",
+          "answer_C": "Gonzalo Higuaín, Gunnar Nordahl",
+          "answer_D": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "categoryType": "TOP5",
+          "question": "Welche Spieler erzielten die meisten Tore in einer Saison der italienischen Meisterschaft?",
+          "right_answer": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_045"
+        },
+        "it": {
+          "answer_A": "Gunnar Nordahl, Gino Rossetti",
+          "answer_B": "Gino Rossetti, Gonzalo Higuaín",
+          "answer_C": "Gonzalo Higuaín, Gunnar Nordahl",
+          "answer_D": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "categoryType": "TOP5",
+          "question": "Quali giocatori hanno segnato più gol in una singola stagione del campionato italiano?",
+          "right_answer": "Gino Rossetti, Gonzalo Higuaín, Ciro Immobile",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_045"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_046",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who became the author of \"hat trick \" with free kicks in the championship of Italy?",
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "Michel Platini",
+          "answer_C": "Siniša Mihajlović",
+          "answer_D": "Andrea Pirlo",
+          "right_answer": "Siniša Mihajlović"
+        },
+        "ru": {
+          "question": "Кто стал автором \"хет трика\" со штрафных ударов в чемпионате Италии ?",
+          "answer_A": "Алессандро Дел Пьеро",
+          "answer_B": "Мишель Платини",
+          "answer_C": "Синиша Михайлович",
+          "answer_D": "Андреа Пирло",
+          "right_answer": "Синиша Михайлович"
+        },
+        "hy": {
+          "question": "Իտալիայի առաջնությունում ո՞ր ֆուտբոլիստին է հաջողվել դառնալ \"հեթրիկի\" հեղինակ տուգանային հարվածներից:",
+          "answer_A": "Ալեսանդրո Դել Պիերո",
+          "answer_B": "Միշել Պլատինի",
+          "answer_C": "Սինիշա Միխայլովիչ",
+          "answer_D": "Անդրեա Պիռլո",
+          "right_answer": "Սինիշա Միխայլովիչ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "Michel Platini",
+          "answer_C": "Siniša Mihajlović",
+          "answer_D": "Andrea Pirlo",
+          "categoryType": "TOP5",
+          "question": "¿Quién logró un hat-trick de tiros libres en el campeonato italiano?",
+          "right_answer": "Siniša Mihajlović",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_046"
+        },
+        "de": {
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "Michel Platini",
+          "answer_C": "Siniša Mihajlović",
+          "answer_D": "Andrea Pirlo",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte in der italienischen Meisterschaft einen Hattrick durch Freistöße?",
+          "right_answer": "Siniša Mihajlović",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_046"
+        },
+        "it": {
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "Michel Platini",
+          "answer_C": "Siniša Mihajlović",
+          "answer_D": "Andrea Pirlo",
+          "categoryType": "TOP5",
+          "question": "Chi realizzò una tripletta su calcio di punizione nel campionato italiano?",
+          "right_answer": "Siniša Mihajlović",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_046"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_047",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of Juventus of all time?",
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "David Trezeguet",
+          "answer_C": "Roberto Bettega",
+          "answer_D": "Giampiero Boniperti",
+          "right_answer": "Alessandro Del Piero"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Ювентуса всех времен ?",
+          "answer_A": "Алессандро Дел Пьеро",
+          "answer_B": "Давид Трезеге",
+          "answer_C": "Роберто Бетегга",
+          "answer_D": "Джампьеро Бониперти",
+          "right_answer": "Алессандро Дел Пьеро"
+        },
+        "hy": {
+          "question": "Ո՞վ է Յուվենթուսի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ալեսանդրո Դել Պիերո",
+          "answer_B": "Դավիդ Տրեզեգե",
+          "answer_C": "Ռոբերտո Բետեգգա",
+          "answer_D": "Ջամպիերո Բոնիպերտի",
+          "right_answer": "Ալեսանդրո Դել Պիերո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "David Trezeguet",
+          "answer_C": "Roberto Bettega",
+          "answer_D": "Giampiero Boniperti",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de la Juventus?",
+          "right_answer": "Alessandro Del Piero",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_047"
+        },
+        "de": {
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "David Trezeguet",
+          "answer_C": "Roberto Bettega",
+          "answer_D": "Giampiero Boniperti",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten von Juventus?",
+          "right_answer": "Alessandro Del Piero",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_047"
+        },
+        "it": {
+          "answer_A": "Alessandro Del Piero",
+          "answer_B": "David Trezeguet",
+          "answer_C": "Roberto Bettega",
+          "answer_D": "Giampiero Boniperti",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi della Juventus?",
+          "right_answer": "Alessandro Del Piero",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_047"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_048",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who played most of all Juventus matches?",
+          "answer_A": "Roberto Bettega",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Alessandro Del Piero",
+          "answer_D": "Dino Zoff",
+          "right_answer": "Alessandro Del Piero"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в составе Ювентуса ?",
+          "answer_A": "Роберто Бетегга",
+          "answer_B": "Джанлуиджи Буффон",
+          "answer_C": "Алессандро Дел Пьеро",
+          "answer_D": "Дино Зофф",
+          "right_answer": "Алессандро Дел Пьеро"
+        },
+        "hy": {
+          "question": "Ո՞վ է Յուվենթուսի կազմում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Ռոբերտո Բետեգգա",
+          "answer_B": "Ջանլուիջի Բուֆֆոն",
+          "answer_C": "Ալեսանդրո Դել Պիերո",
+          "answer_D": "Դինո Ձոֆֆ",
+          "right_answer": "Ալեսանդրո Դել Պիերո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Roberto Bettega",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Alessandro Del Piero",
+          "answer_D": "Dino Zoff",
+          "categoryType": "TOP5",
+          "question": "¿Quién jugó más partidos con la Juventus?",
+          "right_answer": "Alessandro Del Piero",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_048"
+        },
+        "de": {
+          "answer_A": "Roberto Bettega",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Alessandro Del Piero",
+          "answer_D": "Dino Zoff",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele für Juventus?",
+          "right_answer": "Alessandro Del Piero",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_048"
+        },
+        "it": {
+          "answer_A": "Roberto Bettega",
+          "answer_B": "Gianluigi Buffon",
+          "answer_C": "Alessandro Del Piero",
+          "answer_D": "Dino Zoff",
+          "categoryType": "TOP5",
+          "question": "Chi ha giocato più partite con la Juventus?",
+          "right_answer": "Alessandro Del Piero",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_048"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_049",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who most of all became the owners of the \"Golden Ball \", speaking for Juventus?",
+          "answer_A": "Michel Platini",
+          "answer_B": "Zinedin Zidan",
+          "answer_C": "Paolo Rossi",
+          "answer_D": "Roberto Baggio",
+          "right_answer": "Michel Platini"
+        },
+        "ru": {
+          "question": "Кто больше всех стал обладателям \"Золотого мяча\", выступая за Ювентус ?",
+          "answer_A": "Мишель Платини",
+          "answer_B": "Зинедин Зидан",
+          "answer_C": "Паоло Росси",
+          "answer_D": "Роберто Баджо",
+          "right_answer": "Мишель Платини"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ \"Ոսկե գնդակի\" դափնեկիր դարձել հանդես գալով Յուվենթուսում:",
+          "answer_A": "Միշել Պլատինի",
+          "answer_B": "Զինեդին Զիդան",
+          "answer_C": "Պաոլո Ռոսսի",
+          "answer_D": "Ռոբերտո Բաջջո",
+          "right_answer": "Միշել Պլատինի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Michel Platini",
+          "answer_B": "Zinedine Zidane",
+          "answer_C": "Paolo Rossi",
+          "answer_D": "Roberto Baggio",
+          "categoryType": "TOP5",
+          "question": "¿Quién ganó más veces el Balón de Oro jugando para la Juventus?",
+          "right_answer": "Michel Platini",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_049"
+        },
+        "de": {
+          "answer_A": "Michel Platini",
+          "answer_B": "Zinedine Zidane",
+          "answer_C": "Paolo Rossi",
+          "answer_D": "Roberto Baggio",
+          "categoryType": "TOP5",
+          "question": "Wer gewann als Spieler von Juventus am häufigsten den Ballon d’Or?",
+          "right_answer": "Michel Platini",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_049"
+        },
+        "it": {
+          "answer_A": "Michel Platini",
+          "answer_B": "Zinedine Zidane",
+          "answer_C": "Paolo Rossi",
+          "answer_D": "Roberto Baggio",
+          "categoryType": "TOP5",
+          "question": "Chi ha vinto più volte il Pallone d’Oro giocando per la Juventus?",
+          "right_answer": "Michel Platini",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_049"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_050",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is Milan's top scorer of all time?",
+          "answer_A": "Gunnar Nordahl",
+          "answer_B": "Andrey Shevchenko",
+          "answer_C": "Jose Altafini",
+          "answer_D": "Marco van Basten",
+          "right_answer": "Gunnar Nordahl"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Милана всех времен ?",
+          "answer_A": "Гунар Нордал",
+          "answer_B": "Андрей Шевченко",
+          "answer_C": "Жозэ Алтафини",
+          "answer_D": "Марко Ван Бастен",
+          "right_answer": "Гунар Нордал"
+        },
+        "hy": {
+          "question": "Ո՞վ է Միլանի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Գունար Նորդալ",
+          "answer_B": "Անդրեյ Շեվչենկո",
+          "answer_C": "Ժոզե Ալտաֆինի",
+          "answer_D": "Մարկո Վան Բաստեն",
+          "right_answer": "Գունար Նորդալ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Gunnar Nordahl",
+          "answer_B": "Andriy Shevchenko",
+          "answer_C": "José Altafini",
+          "answer_D": "Marco van Basten",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico del Milan?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_050"
+        },
+        "de": {
+          "answer_A": "Gunnar Nordahl",
+          "answer_B": "Andrij Schewtschenko",
+          "answer_C": "José Altafini",
+          "answer_D": "Marco van Basten",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten des AC Mailand?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_050"
+        },
+        "it": {
+          "answer_A": "Gunnar Nordahl",
+          "answer_B": "Andriy Shevchenko",
+          "answer_C": "José Altafini",
+          "answer_D": "Marco van Basten",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi del Milan?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_050"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_051",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who has played the most matches in Milan?",
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Gunnar Nordahl",
+          "answer_C": "Gianni Rivera",
+          "answer_D": "Gennaro Gattuso",
+          "right_answer": "Paolo Maldini"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в составе Милана ?",
+          "answer_A": "Паоло Мальдини",
+          "answer_B": "Гунар Нордал",
+          "answer_C": "Джанни Ривьера",
+          "answer_D": "Дженнаро Гаттузо",
+          "right_answer": "Паоло Мальдини"
+        },
+        "hy": {
+          "question": "Ո՞վ է Միլանի կազմում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Պաոլո Մալդինի",
+          "answer_B": "Գունար Նորդալ",
+          "answer_C": "Ջանի Ռիվերա",
+          "answer_D": "Ջենարո Գատուզո",
+          "right_answer": "Պաոլո Մալդինի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Gunnar Nordahl",
+          "answer_C": "Gianni Rivera",
+          "answer_D": "Gennaro Gattuso",
+          "categoryType": "TOP5",
+          "question": "¿Quién jugó más partidos con el Milan?",
+          "right_answer": "Paolo Maldini",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_051"
+        },
+        "de": {
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Gunnar Nordahl",
+          "answer_C": "Gianni Rivera",
+          "answer_D": "Gennaro Gattuso",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele für den AC Mailand?",
+          "right_answer": "Paolo Maldini",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_051"
+        },
+        "it": {
+          "answer_A": "Paolo Maldini",
+          "answer_B": "Gunnar Nordahl",
+          "answer_C": "Gianni Rivera",
+          "answer_D": "Gennaro Gattuso",
+          "categoryType": "TOP5",
+          "question": "Chi ha giocato più partite con il Milan?",
+          "right_answer": "Paolo Maldini",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_051"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_052",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who most of all became the owners of the \"Golden Ball \", speaking for Milan?",
+          "answer_A": "Gianni Rivera",
+          "answer_B": "Marco van Basten",
+          "answer_C": "Ruud Gullit",
+          "answer_D": "George Weah",
+          "right_answer": "Marco van Basten"
+        },
+        "ru": {
+          "question": "Кто больше всех стал обладателям \"Золотого мяча\", выступая за Милан ?",
+          "answer_A": "Джанни Ривьера",
+          "answer_B": "Марко Ван Бастен",
+          "answer_C": "Руд Гуллит",
+          "answer_D": "Джордж Веа",
+          "right_answer": "Марко Ван Бастен"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ \"Ոսկե գնդակի\" դափնեկիր դարձել հանդես գալով Միլանում:",
+          "answer_A": "Ջանի Ռիվերա",
+          "answer_B": "Մարկո Վան Բաստեն",
+          "answer_C": "Ռուդ Գուլիտ",
+          "answer_D": "Ջորջ Վեա",
+          "right_answer": "Մարկո Վան Բաստեն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Gianni Rivera",
+          "answer_B": "Marco van Basten",
+          "answer_C": "Ruud Gullit",
+          "answer_D": "George Weah",
+          "categoryType": "TOP5",
+          "question": "¿Quién ganó más veces el Balón de Oro jugando para el Milan?",
+          "right_answer": "Marco van Basten",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_052"
+        },
+        "de": {
+          "answer_A": "Gianni Rivera",
+          "answer_B": "Marco van Basten",
+          "answer_C": "Ruud Gullit",
+          "answer_D": "George Weah",
+          "categoryType": "TOP5",
+          "question": "Wer gewann als Spieler des AC Mailand am häufigsten den Ballon d’Or?",
+          "right_answer": "Marco van Basten",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_052"
+        },
+        "it": {
+          "answer_A": "Gianni Rivera",
+          "answer_B": "Marco van Basten",
+          "answer_C": "Ruud Gullit",
+          "answer_D": "George Weah",
+          "categoryType": "TOP5",
+          "question": "Chi ha vinto più volte il Pallone d’Oro giocando per il Milan?",
+          "right_answer": "Marco van Basten",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_052"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_053",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer in Italy?",
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Michel Platini",
+          "answer_C": "Aldo Boffi",
+          "answer_D": "Gunnar Nordahl",
+          "right_answer": "Gunnar Nordahl"
+        },
+        "ru": {
+          "question": "Кто больше всех стал лучшим бомбардиром чемпионата Италии ?",
+          "answer_A": "Джузеппе Меацца",
+          "answer_B": "Мишель Платини",
+          "answer_C": "Альдо Боффи",
+          "answer_D": "Гунар Нордал",
+          "right_answer": "Гунар Нордал"
+        },
+        "hy": {
+          "question": "Բոլորից շատ ո՞ր ֆուտբոլիստն է ճանաչվել Իտալիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Ջուզեպպե Մեացցա",
+          "answer_B": "Միշել Պլատինի",
+          "answer_C": "Ալգո Բոֆֆի",
+          "answer_D": "Գունար Նորդալ",
+          "right_answer": "Գունար Նորդալ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Michel Platini",
+          "answer_C": "Aldo Boffi",
+          "answer_D": "Gunnar Nordahl",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue más veces máximo goleador del campeonato italiano?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_053"
+        },
+        "de": {
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Michel Platini",
+          "answer_C": "Aldo Boffi",
+          "answer_D": "Gunnar Nordahl",
+          "categoryType": "TOP5",
+          "question": "Wer wurde am häufigsten Torschützenkönig der italienischen Meisterschaft?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_053"
+        },
+        "it": {
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Michel Platini",
+          "answer_C": "Aldo Boffi",
+          "answer_D": "Gunnar Nordahl",
+          "categoryType": "TOP5",
+          "question": "Chi è stato più volte capocannoniere del campionato italiano?",
+          "right_answer": "Gunnar Nordahl",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_053"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_054",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who has played the most matches with Inter?",
+          "answer_A": "Giuseppe Bergomi",
+          "answer_B": "Iván Córdoba",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Javier Zanetti",
+          "right_answer": "Javier Zanetti"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в составе Интера ?",
+          "answer_A": "Джузеппе Бергоми",
+          "answer_B": "Иван Кордоба",
+          "answer_C": "Сандро Маццола",
+          "answer_D": "Хавьер Саннети",
+          "right_answer": "Хавьер Саннети"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ինտերի կազմում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Ջուզեպպե Բերգոմի",
+          "answer_B": "Իվան Կորդոբա",
+          "answer_C": "Սանդրո Մացցոլա",
+          "answer_D": "Խավիեր Զանետտի",
+          "right_answer": "Խավիեր Զանետտի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giuseppe Bergomi",
+          "answer_B": "Iván Córdoba",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Javier Zanetti",
+          "categoryType": "TOP5",
+          "question": "¿Quién jugó más partidos con el Inter?",
+          "right_answer": "Javier Zanetti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_054"
+        },
+        "de": {
+          "answer_A": "Giuseppe Bergomi",
+          "answer_B": "Iván Córdoba",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Javier Zanetti",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele für Inter?",
+          "right_answer": "Javier Zanetti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_054"
+        },
+        "it": {
+          "answer_A": "Giuseppe Bergomi",
+          "answer_B": "Iván Córdoba",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Javier Zanetti",
+          "categoryType": "TOP5",
+          "question": "Chi ha giocato più partite con l’Inter?",
+          "right_answer": "Javier Zanetti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_054"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_055",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the best Inter scorer of all time?",
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Christian Vieri",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Alessandro Altobelli",
+          "right_answer": "Giuseppe Meazza"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Интера всех времен ?",
+          "answer_A": "Джузеппе Меацца",
+          "answer_B": "Кристиан Вьери",
+          "answer_C": "Сандро Маццола",
+          "answer_D": "Алессандро Альтобелли",
+          "right_answer": "Джузеппе Меацца"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ինտերի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ջուզեպպե Մեացցա",
+          "answer_B": "Քրիստիան Վիերի",
+          "answer_C": "Սանդրո Մացցոլա",
+          "answer_D": "Ալեսանդրո Ալտոբելլի",
+          "right_answer": "Ջուզեպպե Մեացցա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Christian Vieri",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Alessandro Altobelli",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico del Inter?",
+          "right_answer": "Giuseppe Meazza",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_055"
+        },
+        "de": {
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Christian Vieri",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Alessandro Altobelli",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten von Inter?",
+          "right_answer": "Giuseppe Meazza",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_055"
+        },
+        "it": {
+          "answer_A": "Giuseppe Meazza",
+          "answer_B": "Christian Vieri",
+          "answer_C": "Sandro Mazzola",
+          "answer_D": "Alessandro Altobelli",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi dell’Inter?",
+          "right_answer": "Giuseppe Meazza",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_055"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_056",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who most of all became the owners of the \"Golden Ball \", speaking for Inter?",
+          "answer_A": "Giuseppe Meazza, Lothar Matthäus",
+          "answer_B": "Lothar Matthäus, Ronaldo",
+          "answer_C": "Ronaldo, Giuseppe Meazza",
+          "answer_D": "None",
+          "right_answer": "Lothar Matthäus, Ronaldo"
+        },
+        "ru": {
+          "question": "Кто больше всех стал обладателям \"Золотого мяча\", выступая за Интер ?",
+          "answer_A": "Джузеппе Меацца, Лотар Маттеус",
+          "answer_B": "Лотар Маттеус, Роналдо",
+          "answer_C": "Роналдо, Джузеппе Меацца",
+          "answer_D": "Никто",
+          "right_answer": "Лотар Маттеус, Роналдо"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստներն են բոլորից շատ \"Ոսկե գնդակի\" դափնեկիր դարձել հանդես գալով Ինտերում:",
+          "answer_A": "Ջուզեպպե Մեացցա, Լոթար Մատեուս",
+          "answer_B": "Լոթար Մատեուս, Ռոնալդո",
+          "answer_C": "Ռոնալդո, Ջուզեպպե Մեացցա",
+          "answer_D": "Ոչ ոք",
+          "right_answer": "Լոթար Մատեուս, Ռոնալդո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giuseppe Meazza, Lothar Matthäus",
+          "answer_B": "Lothar Matthäus, Ronaldo",
+          "answer_C": "Ronaldo, Giuseppe Meazza",
+          "answer_D": "Ninguno",
+          "categoryType": "TOP5",
+          "question": "¿Quiénes ganaron el Balón de Oro jugando para el Inter?",
+          "right_answer": "Lothar Matthäus, Ronaldo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_056"
+        },
+        "de": {
+          "answer_A": "Giuseppe Meazza, Lothar Matthäus",
+          "answer_B": "Lothar Matthäus, Ronaldo",
+          "answer_C": "Ronaldo, Giuseppe Meazza",
+          "answer_D": "Keiner",
+          "categoryType": "TOP5",
+          "question": "Welche Spieler gewannen als Spieler von Inter den Ballon d’Or?",
+          "right_answer": "Lothar Matthäus, Ronaldo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_056"
+        },
+        "it": {
+          "answer_A": "Giuseppe Meazza, Lothar Matthäus",
+          "answer_B": "Lothar Matthäus, Ronaldo",
+          "answer_C": "Ronaldo, Giuseppe Meazza",
+          "answer_D": "Nessuno",
+          "categoryType": "TOP5",
+          "question": "Quali giocatori hanno vinto il Pallone d’Oro giocando per l’Inter?",
+          "right_answer": "Lothar Matthäus, Ronaldo",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_056"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_057",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who spent the most matches in Roma?",
+          "answer_A": "Daniele De Rossi",
+          "answer_B": "Francesco Totti",
+          "answer_C": "Aldair",
+          "answer_D": "Giacomo Losi",
+          "right_answer": "Francesco Totti"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в составе Ромы ?",
+          "answer_A": "Даниеле Де Росси",
+          "answer_B": "Франческо Тотти",
+          "answer_C": "Алдаир",
+          "answer_D": "Джакомо Лози",
+          "right_answer": "Франческо Тотти"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ռոմայի կազմում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Դանիելե Դե Ռոսսի",
+          "answer_B": "Ֆրանչեսկո Տոտտի",
+          "answer_C": "Ալդաիր",
+          "answer_D": "Ջակոմո Լոզի",
+          "right_answer": "Ֆրանչեսկո Տոտտի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Daniele De Rossi",
+          "answer_B": "Francesco Totti",
+          "answer_C": "Aldair",
+          "answer_D": "Giacomo Losi",
+          "categoryType": "TOP5",
+          "question": "¿Quién jugó más partidos con la Roma?",
+          "right_answer": "Francesco Totti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_057"
+        },
+        "de": {
+          "answer_A": "Daniele De Rossi",
+          "answer_B": "Francesco Totti",
+          "answer_C": "Aldair",
+          "answer_D": "Giacomo Losi",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele für die Roma?",
+          "right_answer": "Francesco Totti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_057"
+        },
+        "it": {
+          "answer_A": "Daniele De Rossi",
+          "answer_B": "Francesco Totti",
+          "answer_C": "Aldair",
+          "answer_D": "Giacomo Losi",
+          "categoryType": "TOP5",
+          "question": "Chi ha giocato più partite con la Roma?",
+          "right_answer": "Francesco Totti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_057"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_058",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the best scorer of Roma of all time?",
+          "answer_A": "Amedeo Amadei",
+          "answer_B": "Aldair",
+          "answer_C": "Roberto Pruzzo",
+          "answer_D": "Francesco Totti",
+          "right_answer": "Francesco Totti"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Ромы всех времен ?",
+          "answer_A": "Амадео Амадеи",
+          "answer_B": "Алдаир",
+          "answer_C": "Роберто Пруццо",
+          "answer_D": "Франческо Тотти",
+          "right_answer": "Франческо Тотти"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ռոմայի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ամադեո Ամադեի",
+          "answer_B": "Ալդաիր",
+          "answer_C": "Ռոբերտո Պրուցցո",
+          "answer_D": "Ֆրանչեսկո Տոտտի",
+          "right_answer": "Ֆրանչեսկո Տոտտի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Amedeo Amadei",
+          "answer_B": "Aldair",
+          "answer_C": "Roberto Pruzzo",
+          "answer_D": "Francesco Totti",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de la Roma?",
+          "right_answer": "Francesco Totti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_058"
+        },
+        "de": {
+          "answer_A": "Amedeo Amadei",
+          "answer_B": "Aldair",
+          "answer_C": "Roberto Pruzzo",
+          "answer_D": "Francesco Totti",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten der Roma?",
+          "right_answer": "Francesco Totti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_058"
+        },
+        "it": {
+          "answer_A": "Amedeo Amadei",
+          "answer_B": "Aldair",
+          "answer_C": "Roberto Pruzzo",
+          "answer_D": "Francesco Totti",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi della Roma?",
+          "right_answer": "Francesco Totti",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_058"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_059",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who is the best scorer of Napoli of all time?",
+          "answer_A": "Diego Maradona",
+          "answer_B": "Marek Hamšík",
+          "answer_C": "José Altafini",
+          "answer_D": "Dries Mertens",
+          "right_answer": "Dries Mertens"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Наполи всех времен ?",
+          "answer_A": "Диего Марадона",
+          "answer_B": "Марек Гамшик",
+          "answer_C": "Жозе Альтафини",
+          "answer_D": "Дрис Мертенс",
+          "right_answer": "Дрис Мертенс"
+        },
+        "hy": {
+          "question": "Ո՞վ է Նապոլիի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Դիեգո Մարադոնա",
+          "answer_B": "Մարեկ Համշիկ",
+          "answer_C": "Ժոզե Ալտաֆինի",
+          "answer_D": "Դրիս Մերտենս",
+          "right_answer": "Դրիս Մերտենս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Diego Maradona",
+          "answer_B": "Marek Hamšík",
+          "answer_C": "José Altafini",
+          "answer_D": "Dries Mertens",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico del Napoli?",
+          "right_answer": "Dries Mertens",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_059"
+        },
+        "de": {
+          "answer_A": "Diego Maradona",
+          "answer_B": "Marek Hamšík",
+          "answer_C": "José Altafini",
+          "answer_D": "Dries Mertens",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten der SSC Neapel?",
+          "right_answer": "Dries Mertens",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_059"
+        },
+        "it": {
+          "answer_A": "Diego Maradona",
+          "answer_B": "Marek Hamšík",
+          "answer_C": "José Altafini",
+          "answer_D": "Dries Mertens",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi del Napoli?",
+          "right_answer": "Dries Mertens",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_059"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_060",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which coach won the Italian championship the most?",
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Massimiliano Allegri",
+          "answer_C": "Fabio Capello",
+          "answer_D": "Marcello Lippi",
+          "right_answer": "Giovanni Trapattoni"
+        },
+        "ru": {
+          "question": "Какой тренер больше всех выиграл чемпионат Италии ?",
+          "answer_A": "Джованни Трапаттони",
+          "answer_B": "Массимилиано Аллегри",
+          "answer_C": "Фабио Капелло",
+          "answer_D": "Марчелло Липпи",
+          "right_answer": "Джованни Трапаттони"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է բոլորից շատ նվաճել Իտալիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ջովանի Տրապատոնի",
+          "answer_B": "Մասիմիլիանո Ալեգրի",
+          "answer_C": "Ֆաբիո Կապելլո",
+          "answer_D": "Մարչելո Լիպպի",
+          "right_answer": "Ջովանի Տրապատոնի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Massimiliano Allegri",
+          "answer_C": "Fabio Capello",
+          "answer_D": "Marcello Lippi",
+          "categoryType": "TOP5",
+          "question": "¿Qué entrenador ganó más veces el campeonato italiano?",
+          "right_answer": "Giovanni Trapattoni",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_060"
+        },
+        "de": {
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Massimiliano Allegri",
+          "answer_C": "Fabio Capello",
+          "answer_D": "Marcello Lippi",
+          "categoryType": "TOP5",
+          "question": "Welcher Trainer gewann die italienische Meisterschaft am häufigsten?",
+          "right_answer": "Giovanni Trapattoni",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_060"
+        },
+        "it": {
+          "answer_A": "Giovanni Trapattoni",
+          "answer_B": "Massimiliano Allegri",
+          "answer_C": "Fabio Capello",
+          "answer_D": "Marcello Lippi",
+          "categoryType": "TOP5",
+          "question": "Quale allenatore ha vinto più volte il campionato italiano?",
+          "right_answer": "Giovanni Trapattoni",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_060"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_061",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club's football players became the top scorer of the Italian championship the most?",
+          "answer_A": "Milan",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "right_answer": "Milan"
+        },
+        "ru": {
+          "question": "Футболисты какого клуба больше всех становились лучшим бомбардиром чемпионата Италии ?",
+          "answer_A": "Милан",
+          "answer_B": "Интер",
+          "answer_C": "Ювентус",
+          "answer_D": "Рома",
+          "right_answer": "Милан"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբի ֆուտբոլիստներն են ավելի շատ դարձել Իտալիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Միլան",
+          "answer_B": "Ինտեր",
+          "answer_C": "Յուվենթուս",
+          "answer_D": "Ռոմա",
+          "right_answer": "Միլան"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Milan",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "¿De qué club fueron más veces los futbolistas que terminaron como máximos goleadores del campeonato italiano?",
+          "right_answer": "Milan",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_061"
+        },
+        "de": {
+          "answer_A": "AC Mailand",
+          "answer_B": "Inter Mailand",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "Die Spieler welches Klubs wurden am häufigsten Torschützenkönig der italienischen Meisterschaft?",
+          "right_answer": "AC Mailand",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_061"
+        },
+        "it": {
+          "answer_A": "Milan",
+          "answer_B": "Internazionale",
+          "answer_C": "Juventus",
+          "answer_D": "Roma",
+          "categoryType": "TOP5",
+          "question": "I calciatori di quale club sono stati più volte capocannonieri del campionato italiano?",
+          "right_answer": "Milan",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_061"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_062",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Representatives of which countries have become the top scorer of the Italian championship the most?",
+          "answer_A": "Brazil",
+          "answer_B": "Argentina",
+          "answer_C": "France",
+          "answer_D": "Sweden",
+          "right_answer": "Argentina"
+        },
+        "ru": {
+          "question": "Представители каких стран больше всех становились лучшим бомбардиром чемпионата Италии ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Аргентина",
+          "answer_C": "Франция",
+          "answer_D": "Швеция",
+          "right_answer": "Аргентина"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ներկայացուցիչներն են ավելի շատ դարձել Իտալիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Արգենտինա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Շվեդիա",
+          "right_answer": "Արգենտինա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Argentina",
+          "answer_C": "Francia",
+          "answer_D": "Suecia",
+          "categoryType": "TOP5",
+          "question": "¿De qué países fueron más veces los futbolistas que terminaron como máximos goleadores del campeonato italiano?",
+          "right_answer": "Argentina",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_062"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Argentinien",
+          "answer_C": "Frankreich",
+          "answer_D": "Schweden",
+          "categoryType": "TOP5",
+          "question": "Vertreter welcher Länder wurden am häufigsten Torschützenkönig der italienischen Meisterschaft?",
+          "right_answer": "Argentinien",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_062"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Argentina",
+          "answer_C": "Francia",
+          "answer_D": "Svezia",
+          "categoryType": "TOP5",
+          "question": "Rappresentanti di quali paesi sono stati più volte capocannonieri del campionato italiano?",
+          "right_answer": "Argentina",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_062"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_063",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "How many clubs perform in Serie A?",
+          "answer_A": "14",
+          "answer_B": "16",
+          "answer_C": "18",
+          "answer_D": "20",
+          "right_answer": "20"
+        },
+        "ru": {
+          "question": "Сколько клубов выступают в Серии-А ?",
+          "answer_A": "14",
+          "answer_B": "16",
+          "answer_C": "18",
+          "answer_D": "20",
+          "right_answer": "20"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է հանդես գալիս Սերիա Ա-ում:",
+          "answer_A": "14",
+          "answer_B": "16",
+          "answer_C": "18",
+          "answer_D": "20",
+          "right_answer": "20"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "14",
+          "answer_B": "16",
+          "answer_C": "18",
+          "answer_D": "20",
+          "categoryType": "TOP5",
+          "question": "¿Cuántos clubes juegan en la Serie A?",
+          "right_answer": "20",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_063"
+        },
+        "de": {
+          "answer_A": "14",
+          "answer_B": "16",
+          "answer_C": "18",
+          "answer_D": "20",
+          "categoryType": "TOP5",
+          "question": "Wie viele Klubs spielen in der Serie A?",
+          "right_answer": "20",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_063"
+        },
+        "it": {
+          "answer_A": "14",
+          "answer_B": "16",
+          "answer_C": "18",
+          "answer_D": "20",
+          "categoryType": "TOP5",
+          "question": "Quanti club giocano in Serie A?",
+          "right_answer": "20",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_063"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_064",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the Italian championship in the 2018–2019 season?",
+          "answer_A": "Juventus",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Atalanta",
+          "right_answer": "Juventus"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл чемпионат Италии в сезоне 2018–2019?",
+          "answer_A": "Ювентус",
+          "answer_B": "Наполи",
+          "answer_C": "Интер",
+          "answer_D": "Аталанта",
+          "right_answer": "Ювентус"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Իտալիայի 2018–2019 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Յուվենթուս",
+          "answer_B": "Նապոլի",
+          "answer_C": "Ինտեր",
+          "answer_D": "Ատալանտա",
+          "right_answer": "Յուվենթուս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Juventus",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Atalanta",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el campeonato italiano en la temporada 2018–2019?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_064"
+        },
+        "de": {
+          "answer_A": "Juventus",
+          "answer_B": "SSC Neapel",
+          "answer_C": "Inter Mailand",
+          "answer_D": "Atalanta",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann in der Saison 2018–2019 die italienische Meisterschaft?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_064"
+        },
+        "it": {
+          "answer_A": "Juventus",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Atalanta",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto il campionato italiano nella stagione 2018–2019?",
+          "right_answer": "Juventus",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_064"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_065",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club in the season 2018–2019 took second place in the championship of Italy?",
+          "answer_A": "Atalanta",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "right_answer": "Napoli"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 занял второе место в чемпионате Италии?",
+          "answer_A": "Аталанта",
+          "answer_B": "Наполи",
+          "answer_C": "Интер",
+          "answer_D": "Милан",
+          "right_answer": "Наполи"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իտալիայի 2018–2019 թթ. առաջնությունում դարձել արծաթե մեդալակիր:",
+          "answer_A": "Ատալանտա",
+          "answer_B": "Նապոլի",
+          "answer_C": "Ինտեր",
+          "answer_D": "Միլան",
+          "right_answer": "Նապոլի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atalanta",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó segundo en el campeonato italiano 2018–2019?",
+          "right_answer": "Napoli",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_065"
+        },
+        "de": {
+          "answer_A": "Atalanta",
+          "answer_B": "SSC Neapel",
+          "answer_C": "Inter Mailand",
+          "answer_D": "AC Mailand",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde in der Saison 2018–2019 Zweiter in der italienischen Meisterschaft?",
+          "right_answer": "SSC Neapel",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_065"
+        },
+        "it": {
+          "answer_A": "Atalanta",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato secondo nel campionato italiano 2018–2019?",
+          "right_answer": "Napoli",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_065"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_066",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club in the season 2018–2019 took third place in the Italian championship?",
+          "answer_A": "Atalanta",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "right_answer": "Atalanta"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 занял третье место в чемпионате Италии?",
+          "answer_A": "Аталанта",
+          "answer_B": "Наполи",
+          "answer_C": "Интер",
+          "answer_D": "Милан",
+          "right_answer": "Аталанта"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իտալիայի 2018–2019 թթ. առաջնությունում դարձել բրոնզե մեդալակիր:",
+          "answer_A": "Ատալանտա",
+          "answer_B": "Նապոլի",
+          "answer_C": "Ինտեր",
+          "answer_D": "Միլան",
+          "right_answer": "Ատալանտա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atalanta",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó tercero en el campeonato italiano 2018–2019?",
+          "right_answer": "Atalanta",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_066"
+        },
+        "de": {
+          "answer_A": "Atalanta",
+          "answer_B": "SSC Neapel",
+          "answer_C": "Inter Mailand",
+          "answer_D": "AC Mailand",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde in der Saison 2018–2019 Dritter in der italienischen Meisterschaft?",
+          "right_answer": "Atalanta",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_066"
+        },
+        "it": {
+          "answer_A": "Atalanta",
+          "answer_B": "Napoli",
+          "answer_C": "Internazionale",
+          "answer_D": "Milan",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato terzo nel campionato italiano 2018–2019?",
+          "right_answer": "Atalanta",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_066"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_067",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won the Italian Cup in the 2018–2019 season?",
+          "answer_A": "Atalanta",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Lázio",
+          "right_answer": "Lázio"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Италии в сезоне 2018–2019?",
+          "answer_A": "Аталанта",
+          "answer_B": "Ювентус",
+          "answer_C": "Милан",
+          "answer_D": "Лацио",
+          "right_answer": "Лацио"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ մրցաշրջանում դարձել Իտալիայի գավաթակիր:",
+          "answer_A": "Ատալանտա",
+          "answer_B": "Յուվենթուս",
+          "answer_C": "Միլան",
+          "answer_D": "Լացիո",
+          "right_answer": "Լացիո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atalanta",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Lazio",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Copa de Italia en la temporada 2018–2019?",
+          "right_answer": "Lazio",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_067"
+        },
+        "de": {
+          "answer_A": "Atalanta",
+          "answer_B": "Juventus",
+          "answer_C": "AC Mailand",
+          "answer_D": "Lazio",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann in der Saison 2018–2019 die Coppa Italia?",
+          "right_answer": "Lazio",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_067"
+        },
+        "it": {
+          "answer_A": "Atalanta",
+          "answer_B": "Juventus",
+          "answer_C": "Milan",
+          "answer_D": "Lazio",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Coppa Italia nella stagione 2018–2019?",
+          "right_answer": "Lazio",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_067"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_068",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Who in the season 2018–2019 became the top scorer of the Italian championship?",
+          "answer_A": "Fabio Quagliarella",
+          "answer_B": "Duván Zapata",
+          "answer_C": "Krzysztof Piątek",
+          "answer_D": "Cristiano Ronaldo",
+          "right_answer": "Fabio Quagliarella"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал лучшим бомбардиром чемпионата Италии?",
+          "answer_A": "Фабио Квальярелла",
+          "answer_B": "Дуван Сапата",
+          "answer_C": "Кшиштоф Пёнтек",
+          "answer_D": "Криштиану Роналду",
+          "right_answer": "Фабио Квальярелла"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իտալիայի 2018–2019 թթ. առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Ֆաբիո Կվալյարելա",
+          "answer_B": "Դուվան Սապատա",
+          "answer_C": "Կշիշտով Պյոնտեկ",
+          "answer_D": "Կրիշտիանու Ռոնալդու",
+          "right_answer": "Ֆաբիո Կվալյարելա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Fabio Quagliarella",
+          "answer_B": "Duván Zapata",
+          "answer_C": "Krzysztof Piątek",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el máximo goleador del campeonato italiano en la temporada 2018–2019?",
+          "right_answer": "Fabio Quagliarella",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_068"
+        },
+        "de": {
+          "answer_A": "Fabio Quagliarella",
+          "answer_B": "Duván Zapata",
+          "answer_C": "Krzysztof Piątek",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Wer wurde in der Saison 2018–2019 Torschützenkönig der italienischen Meisterschaft?",
+          "right_answer": "Fabio Quagliarella",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_068"
+        },
+        "it": {
+          "answer_A": "Fabio Quagliarella",
+          "answer_B": "Duván Zapata",
+          "answer_C": "Krzysztof Piątek",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Chi è stato capocannoniere del campionato italiano nella stagione 2018–2019?",
+          "right_answer": "Fabio Quagliarella",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_068"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_069",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which of the listed in the season 2018–2019 became the best assistant of the Italian championship?",
+          "answer_A": "Dries Mertens",
+          "answer_B": "José Callejón",
+          "answer_C": "Suso",
+          "answer_D": "Cristiano Ronaldo",
+          "right_answer": "Dries Mertens"
+        },
+        "ru": {
+          "question": "Кто из перечисленных в сезоне 2018–2019 стал лучшим ассистентом чемпионата Италии?",
+          "answer_A": "Дрис Мертенс",
+          "answer_B": "Хосе Кальехон",
+          "answer_C": "Сусо",
+          "answer_D": "Криштиану Роналду",
+          "right_answer": "Дрис Мертенс"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլային փոխանցում կատարել Իտալիայի 2018–2019 թթ.առաջնությունում:",
+          "answer_A": "Դրիս Մերտենս",
+          "answer_B": "Խոսե Կալյեխոն",
+          "answer_C": "Սուսո",
+          "answer_D": "Կրիշտիանու Ռոնալդու",
+          "right_answer": "Դրիս Մերտենս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Dries Mertens",
+          "answer_B": "José Callejón",
+          "answer_C": "Suso",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el mejor asistente del campeonato italiano en la temporada 2018–2019?",
+          "right_answer": "Dries Mertens",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_069"
+        },
+        "de": {
+          "answer_A": "Dries Mertens",
+          "answer_B": "José Callejón",
+          "answer_C": "Suso",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Wer war in der Saison 2018–2019 der beste Vorlagengeber der italienischen Meisterschaft?",
+          "right_answer": "Dries Mertens",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_069"
+        },
+        "it": {
+          "answer_A": "Dries Mertens",
+          "answer_B": "José Callejón",
+          "answer_C": "Suso",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Chi è stato il miglior assistman del campionato italiano nella stagione 2018–2019?",
+          "right_answer": "Dries Mertens",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_069"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "italy_070",
+      "categoryType": "TOP5",
+      "type": "Italy",
+      "source": {
+        "en": {
+          "question": "Which club won Serie A in the 2024/2025 season?",
+          "answer_A": "Inter",
+          "answer_B": "Napoli",
+          "answer_C": "Atalanta",
+          "answer_D": "Juventus",
+          "right_answer": "Napoli"
+        },
+        "ru": {
+          "question": "Какой клуб стал чемпионом Серии A в сезоне 2024/2025?",
+          "answer_A": "Интер",
+          "answer_B": "Наполи",
+          "answer_C": "Аталанта",
+          "answer_D": "Ювентус",
+          "right_answer": "Наполи"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Ա սերիայի չեմպիոն 2024/2025 մրցաշրջանում:",
+          "answer_A": "Ինտեր",
+          "answer_B": "Նապոլի",
+          "answer_C": "Ատալանտա",
+          "answer_D": "Յուվենտուս",
+          "right_answer": "Նապոլի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Inter",
+          "answer_B": "Napoli",
+          "answer_C": "Atalanta",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Serie A en la temporada 2024/2025?",
+          "right_answer": "Napoli",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_070"
+        },
+        "de": {
+          "answer_A": "Inter",
+          "answer_B": "SSC Neapel",
+          "answer_C": "Atalanta",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die Serie A in der Saison 2024/2025?",
+          "right_answer": "SSC Neapel",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_070"
+        },
+        "it": {
+          "answer_A": "Inter",
+          "answer_B": "Napoli",
+          "answer_C": "Atalanta",
+          "answer_D": "Juventus",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Serie A nella stagione 2024/2025?",
+          "right_answer": "Napoli",
+          "type": "Italy",
+          "answered": false,
+          "questionId": "italy_070"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    }
+  ]
+}

@@ -7,6 +7,9 @@
     <string name="russian">Русский</string>
     <string name="english">English</string>
     <string name="armenian">Հայերեն</string>
+    <string name="spanish">Español</string>
+    <string name="german">Deutsch</string>
+    <string name="italian">Italiano</string>
     <string name="top_5_tournament">Top 5</string>
     <string name="uefa">UEFA</string>
     <string name="world_championship">World\nCup</string>

@@ -1,0 +1,5257 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "TOP5",
+  "type": "English",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "manual_draft_needs_review",
+  "items": [
+    {
+      "questionId": "english_001",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Since what year is the championship of England held?",
+          "answer_A": "1888",
+          "answer_B": "1890",
+          "answer_C": "1898",
+          "answer_D": "1908",
+          "right_answer": "1888"
+        },
+        "ru": {
+          "question": "С какого года проводится чемпионат Англии ?",
+          "answer_A": "1888",
+          "answer_B": "1890",
+          "answer_C": "1898",
+          "answer_D": "1908",
+          "right_answer": "1888"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Անգլիայի առաջնությունը:",
+          "answer_A": "1888",
+          "answer_B": "1890",
+          "answer_C": "1898",
+          "answer_D": "1908",
+          "right_answer": "1888"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1888",
+          "answer_B": "1890",
+          "answer_C": "1898",
+          "answer_D": "1908",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa el campeonato de Inglaterra?",
+          "right_answer": "1888",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_001"
+        },
+        "de": {
+          "answer_A": "1888",
+          "answer_B": "1890",
+          "answer_C": "1898",
+          "answer_D": "1908",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird die englische Meisterschaft ausgetragen?",
+          "right_answer": "1888",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_001"
+        },
+        "it": {
+          "answer_A": "1888",
+          "answer_B": "1890",
+          "answer_C": "1898",
+          "answer_D": "1908",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa il campionato inglese?",
+          "right_answer": "1888",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_001"
+        }
+      }
+    },
+    {
+      "questionId": "english_002",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Since what year the championship of England was named the Premier League?",
+          "answer_A": "1988",
+          "answer_B": "1990",
+          "answer_C": "1992",
+          "answer_D": "1994",
+          "right_answer": "1992"
+        },
+        "ru": {
+          "question": "С какого года чемпионат Англии получил название Премьер-лиги ?",
+          "answer_A": "1988",
+          "answer_B": "1990",
+          "answer_C": "1992",
+          "answer_D": "1994",
+          "right_answer": "1992"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Անգլիայի առաջնությունը ստացել Պրեմիեր լիգա անվանումը:",
+          "answer_A": "1988",
+          "answer_B": "1990",
+          "answer_C": "1992",
+          "answer_D": "1994",
+          "right_answer": "1992"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1988",
+          "answer_B": "1990",
+          "answer_C": "1992",
+          "answer_D": "1994",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año el campeonato de Inglaterra se llama Premier League?",
+          "right_answer": "1992",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_002"
+        },
+        "de": {
+          "answer_A": "1988",
+          "answer_B": "1990",
+          "answer_C": "1992",
+          "answer_D": "1994",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr heißt die englische Meisterschaft Premier League?",
+          "right_answer": "1992",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_002"
+        },
+        "it": {
+          "answer_A": "1988",
+          "answer_B": "1990",
+          "answer_C": "1992",
+          "answer_D": "1994",
+          "categoryType": "TOP5",
+          "question": "Da quale anno il campionato inglese si chiama Premier League?",
+          "right_answer": "1992",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_002"
+        }
+      }
+    },
+    {
+      "questionId": "english_003",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "How many clubs are in the Premier League?",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "right_answer": "20"
+        },
+        "ru": {
+          "question": "Сколько клубов выступают в Премьер-лиге ?",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "right_answer": "20"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է հանդես գալիս Պրեմիեր լիգայում:",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "right_answer": "20"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "categoryType": "TOP5",
+          "question": "¿Cuántos clubes juegan en la Premier League?",
+          "right_answer": "20",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_003"
+        },
+        "de": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "categoryType": "TOP5",
+          "question": "Wie viele Klubs spielen in der Premier League?",
+          "right_answer": "20",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_003"
+        },
+        "it": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "categoryType": "TOP5",
+          "question": "Quanti club giocano in Premier League?",
+          "right_answer": "20",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_003"
+        }
+      }
+    },
+    {
+      "questionId": "english_004",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club has won the championship of England the most?",
+          "answer_A": "Liverpool, Manchester United",
+          "answer_B": "Manchester City",
+          "answer_C": "Arsenal",
+          "answer_D": "Chelsea",
+          "right_answer": "Liverpool, Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем чемпионатa Англии ?",
+          "answer_A": "Ливерпуль, Манчестер Юнайтед",
+          "answer_B": "Манчестер Сити",
+          "answer_C": "Арсенал",
+          "answer_D": "Челси",
+          "right_answer": "Ливерпуль, Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Անգլիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Լիվերպուլ, Մանչեսթեր Յունայթեդ",
+          "answer_B": "Մանչեսթեր Սիթի",
+          "answer_C": "Արսենալ",
+          "answer_D": "Չելսի",
+          "right_answer": "Լիվերպուլ, Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Liverpool, Manchester United",
+          "answer_B": "Manchester City",
+          "answer_C": "Arsenal",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ha ganado más veces el campeonato de Inglaterra?",
+          "right_answer": "Liverpool, Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_004"
+        },
+        "de": {
+          "answer_A": "Liverpool, Manchester United",
+          "answer_B": "Manchester City",
+          "answer_C": "Arsenal",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hat die englische Meisterschaft am häufigsten gewonnen?",
+          "right_answer": "Liverpool, Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_004"
+        },
+        "it": {
+          "answer_A": "Liverpool, Manchester United",
+          "answer_B": "Manchester City",
+          "answer_C": "Arsenal",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte il campionato inglese?",
+          "right_answer": "Liverpool, Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_004"
+        }
+      }
+    },
+    {
+      "questionId": "english_005",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the Premier League the most?",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем Премьер-лиги ?",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Сити",
+          "answer_C": "Челси",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Պրեմիեր լիգայի չեմպիոնի տիտղոսը:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Սիթի",
+          "answer_C": "Չելսի",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Premier League?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_005"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die Premier League am häufigsten?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_005"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Premier League?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_005"
+        }
+      }
+    },
+    {
+      "questionId": "english_006",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club has never won the Premier League?",
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Tottenham",
+          "right_answer": "Tottenham"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал Премьер-лигу ?",
+          "answer_A": "Блэкберн Роверс",
+          "answer_B": "Челси",
+          "answer_C": "Арсенал",
+          "answer_D": "Тоттенхэм",
+          "right_answer": "Тоттенхэм"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին չի հաջողվել նվաճել Պրեմիեր լիգայի չեմպիոնի տիտղոսը:",
+          "answer_A": "Բլեքբեռն Ռովերս",
+          "answer_B": "Չելսի",
+          "answer_C": "Արսենալ",
+          "answer_D": "Տոտենհեմ",
+          "right_answer": "Տոտենհեմ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ganó la Premier League?",
+          "right_answer": "Tottenham",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_006"
+        },
+        "de": {
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann nie die Premier League?",
+          "right_answer": "Tottenham",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_006"
+        },
+        "it": {
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto la Premier League?",
+          "right_answer": "Tottenham",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_006"
+        }
+      }
+    },
+    {
+      "questionId": "english_007",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club became the silver medalist of the championship of England most of all?",
+          "answer_A": "Aston Villa",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал серебряным призером чемпионата Англии ?",
+          "answer_A": "Астон Вилла",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Манчестер Юнайтед",
+          "answer_D": "Арсенал",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Անգլիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել արծաթե մեդալակիր:",
+          "answer_A": "Ասթոն Վիլլա",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Մանչեսթեր Յունայթեդ",
+          "answer_D": "Արսենալ",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "¿Qué club fue subcampeón de Inglaterra más veces?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_007"
+        },
+        "de": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde am häufigsten englischer Vizemeister?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_007"
+        },
+        "it": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato più volte secondo nel campionato inglese?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_007"
+        }
+      }
+    },
+    {
+      "questionId": "english_008",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which city clubs have won the England championship the most?",
+          "answer_A": "Manchester",
+          "answer_B": "Liverpool",
+          "answer_C": "London",
+          "answer_D": "Birmingham",
+          "right_answer": "Manchester"
+        },
+        "ru": {
+          "question": "Клубы какого города больше всех выиграли чемпионат Англии ?",
+          "answer_A": "Манчестер",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Лондон",
+          "answer_D": "Бирмингем",
+          "right_answer": "Манчестер"
+        },
+        "hy": {
+          "question": "Ո՞ր քաղաքի ակումբներն են բոլորից շատ նվաճել Անգլիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Մանչեսթեր",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Լոնդոն",
+          "answer_D": "Բիրմինգեմ",
+          "right_answer": "Մանչեսթեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester",
+          "answer_B": "Liverpool",
+          "answer_C": "Londres",
+          "answer_D": "Birmingham",
+          "categoryType": "TOP5",
+          "question": "¿Los clubes de qué ciudad han ganado más veces el campeonato inglés?",
+          "right_answer": "Manchester",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_008"
+        },
+        "de": {
+          "answer_A": "Manchester",
+          "answer_B": "Liverpool",
+          "answer_C": "London",
+          "answer_D": "Birmingham",
+          "categoryType": "TOP5",
+          "question": "Die Klubs welcher Stadt haben die englische Meisterschaft am häufigsten gewonnen?",
+          "right_answer": "Manchester",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_008"
+        },
+        "it": {
+          "answer_A": "Manchester",
+          "answer_B": "Liverpool",
+          "answer_C": "Londra",
+          "answer_D": "Birmingham",
+          "categoryType": "TOP5",
+          "question": "I club di quale città hanno vinto più volte il campionato inglese?",
+          "right_answer": "Manchester",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_008"
+        }
+      }
+    },
+    {
+      "questionId": "english_009",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who scored more goals in one season of the championship of England?",
+          "answer_A": "Dixie Dean",
+          "answer_B": "George Best",
+          "answer_C": "Dave Halliday",
+          "answer_D": "James Greaves",
+          "right_answer": "Dixie Dean"
+        },
+        "ru": {
+          "question": "Кто забил больше голов в одном сезоне чемпионата Англии ?",
+          "answer_A": "Дикси Дин",
+          "answer_B": "Джордж Бест",
+          "answer_C": "Дэйв Холлидей",
+          "answer_D": "Джимми Гривз",
+          "right_answer": "Дикси Дин"
+        },
+        "hy": {
+          "question": "Ո՞վ է Անգլիայի առաջնության մեկ մրցաշրջանում ամենաշատ գոլ հեղինակած ֆուտբոլիստը:",
+          "answer_A": "Դիքսի Դին",
+          "answer_B": "Ջորջ Բեստ",
+          "answer_C": "Դեյվ Հոլիդեյ",
+          "answer_D": "Ջիմի Գրիվզ",
+          "right_answer": "Դիքսի Դին"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Dixie Dean",
+          "answer_B": "George Best",
+          "answer_C": "Dave Halliday",
+          "answer_D": "Jimmy Greaves",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó más goles en una sola temporada del campeonato inglés?",
+          "right_answer": "Dixie Dean",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_009"
+        },
+        "de": {
+          "answer_A": "Dixie Dean",
+          "answer_B": "George Best",
+          "answer_C": "Dave Halliday",
+          "answer_D": "Jimmy Greaves",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte die meisten Tore in einer Saison der englischen Meisterschaft?",
+          "right_answer": "Dixie Dean",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_009"
+        },
+        "it": {
+          "answer_A": "Dixie Dean",
+          "answer_B": "George Best",
+          "answer_C": "Dave Halliday",
+          "answer_D": "Jimmy Greaves",
+          "categoryType": "TOP5",
+          "question": "Chi ha segnato più gol in una singola stagione del campionato inglese?",
+          "right_answer": "Dixie Dean",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_009"
+        }
+      }
+    },
+    {
+      "questionId": "english_010",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Of those listed, who scored more goals in one Premier League season?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Erling Haaland",
+          "answer_D": "Luis Suárez",
+          "right_answer": "Erling Haaland"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в одном сезоне Премьер-лиги ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Мохамед Салах",
+          "answer_C": "Эрлинг Холанд",
+          "answer_D": "Луис Суарес",
+          "right_answer": "Эрлинг Холанд"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է Պրեմիեր լիգայի մեկ մրցաշրջանում ամենաշատ գոլի հեղինակ դարձած ֆուտբոլիստը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Մուհամեդ Սալահ",
+          "answer_C": "Էրլինգ Հոլանդ",
+          "answer_D": "Լուիս Սուարես",
+          "right_answer": "Էրլինգ Հոլանդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Erling Haaland",
+          "answer_D": "Luis Suárez",
+          "categoryType": "TOP5",
+          "question": "¿Cuál de estos jugadores marcó más goles en una sola temporada de Premier League?",
+          "right_answer": "Erling Haaland",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_010"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Erling Haaland",
+          "answer_D": "Luis Suárez",
+          "categoryType": "TOP5",
+          "question": "Wer von diesen Spielern erzielte die meisten Tore in einer Premier-League-Saison?",
+          "right_answer": "Erling Haaland",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_010"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Erling Haaland",
+          "answer_D": "Luis Suárez",
+          "categoryType": "TOP5",
+          "question": "Tra questi giocatori, chi ha segnato più gol in una singola stagione di Premier League?",
+          "right_answer": "Erling Haaland",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_010"
+        }
+      }
+    },
+    {
+      "questionId": "english_011",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club was the first Premier League winner?",
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Arsenal",
+          "answer_C": "Manchester United",
+          "answer_D": "Leeds United",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб стал первым победителем Премьер-лиги ?",
+          "answer_A": "Блэкберн Роверс",
+          "answer_B": "Арсенал",
+          "answer_C": "Манчестер Юнайтед",
+          "answer_D": "Лидс Юнайтед",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել Պրեմիեր լիգայի չեմպիոնի տիտղոսը:",
+          "answer_A": "Բլեքբեռն Ռովերս",
+          "answer_B": "Արսենալ",
+          "answer_C": "Մանչեսթեր Յունայթեդ",
+          "answer_D": "Լիդս Յունայթեդ",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Arsenal",
+          "answer_C": "Manchester United",
+          "answer_D": "Leeds United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club fue el primer campeón de la Premier League?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_011"
+        },
+        "de": {
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Arsenal",
+          "answer_C": "Manchester United",
+          "answer_D": "Leeds United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub war der erste Premier-League-Meister?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_011"
+        },
+        "it": {
+          "answer_A": "Blackburn Rovers",
+          "answer_B": "Arsenal",
+          "answer_C": "Manchester United",
+          "answer_D": "Leeds United",
+          "categoryType": "TOP5",
+          "question": "Quale club è stato il primo campione della Premier League?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_011"
+        }
+      }
+    },
+    {
+      "questionId": "english_012",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the first championship of England?",
+          "answer_A": "Aston Villa",
+          "answer_B": "Preston North End",
+          "answer_C": "Everton",
+          "answer_D": "Sunderland",
+          "right_answer": "Preston North End"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл первый чемпионат Англии ?",
+          "answer_A": "Астон Вилла",
+          "answer_B": "Престон Норт Энд",
+          "answer_C": "Эвертон",
+          "answer_D": "Сандерленд",
+          "right_answer": "Престон Норт Энд"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Անգլիայի առաջին առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ասթոն Վիլլա",
+          "answer_B": "Պրեստոն Նորտ Էնդ",
+          "answer_C": "Էվերթոն",
+          "answer_D": "Սանդերլենդ",
+          "right_answer": "Պրեստոն Նորտ Էնդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Preston North End",
+          "answer_C": "Everton",
+          "answer_D": "Sunderland",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el primer campeonato de Inglaterra?",
+          "right_answer": "Preston North End",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_012"
+        },
+        "de": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Preston North End",
+          "answer_C": "Everton",
+          "answer_D": "Sunderland",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die erste englische Meisterschaft?",
+          "right_answer": "Preston North End",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_012"
+        },
+        "it": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Preston North End",
+          "answer_C": "Everton",
+          "answer_D": "Sunderland",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto il primo campionato inglese?",
+          "right_answer": "Preston North End",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_012"
+        }
+      }
+    },
+    {
+      "questionId": "english_013",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the first championship of England and the FA Cup in one season?",
+          "answer_A": "Manchester United",
+          "answer_B": "Everton",
+          "answer_C": "Preston North End",
+          "answer_D": "Liverpool",
+          "right_answer": "Preston North End"
+        },
+        "ru": {
+          "question": "Какой клуб первым выиграл и чемпионат Англии, и Кубок Англии в одном сезоне ?",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Эвертон",
+          "answer_C": "Престон Норт Энд",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Престон Норт Энд"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել ե՛վ Անգլիայի առաջնության չեմպիոնի տիտղոսը ե՛վ Անգլիայի գավաթը մեկ տարում:",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Էվերթոն",
+          "answer_C": "Պրեստոն Նորտ Էնդ",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Պրեստոն Նորտ Էնդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester United",
+          "answer_B": "Everton",
+          "answer_C": "Preston North End",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó por primera vez el campeonato de Inglaterra y la FA Cup en una misma temporada?",
+          "right_answer": "Preston North End",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_013"
+        },
+        "de": {
+          "answer_A": "Manchester United",
+          "answer_B": "Everton",
+          "answer_C": "Preston North End",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann als erster in einer Saison die englische Meisterschaft und den FA Cup?",
+          "right_answer": "Preston North End",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_013"
+        },
+        "it": {
+          "answer_A": "Manchester United",
+          "answer_B": "Everton",
+          "answer_C": "Preston North End",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto per primo campionato inglese e FA Cup nella stessa stagione?",
+          "right_answer": "Preston North End",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_013"
+        }
+      }
+    },
+    {
+      "questionId": "english_014",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club managed to become the author of the \"Golden Hat Trick \"?",
+          "answer_A": "Preston North End",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Aston Villa",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какому клубу удалось стать автором \"Золотого хет трика\" ?",
+          "answer_A": "Престон Норт Энд",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Манчестер Юнайтед",
+          "answer_D": "Астон Вилла",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է հաջողվել դառնալ \"Ոսկե հեթրիկ\"-ի հեղինակ:",
+          "answer_A": "Պրեստոն Նորտ Էնդ",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Մանչեսթեր Յունայթեդ",
+          "answer_D": "Ասթոն Վիլլա",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Preston North End",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "¿Qué club logró el triplete europeo?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_014"
+        },
+        "de": {
+          "answer_A": "Preston North End",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub schaffte das europäische Triple?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_014"
+        },
+        "it": {
+          "answer_A": "Preston North End",
+          "answer_B": "Liverpool",
+          "answer_C": "Manchester United",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "Quale club è riuscito a conquistare il triplete europeo?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_014"
+        }
+      }
+    },
+    {
+      "questionId": "english_015",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club spent the most seasons in the championship of England?",
+          "answer_A": "Manchester United",
+          "answer_B": "Liverpool",
+          "answer_C": "Everton",
+          "answer_D": "Aston Villa",
+          "right_answer": "Everton"
+        },
+        "ru": {
+          "question": "Какой клуб провел больше всех сезонов в чемпионате Англии ?",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Эвертон",
+          "answer_D": "Астон Вилла",
+          "right_answer": "Эвертон"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ մրցաշրջան անցկացրել Անգլիայի առաջնությունում:",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Էվերթոն",
+          "answer_D": "Ասթոն Վիլլա",
+          "right_answer": "Էվերթոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester United",
+          "answer_B": "Liverpool",
+          "answer_C": "Everton",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "¿Qué club disputó más temporadas en el campeonato de Inglaterra?",
+          "right_answer": "Everton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_015"
+        },
+        "de": {
+          "answer_A": "Manchester United",
+          "answer_B": "Liverpool",
+          "answer_C": "Everton",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub spielte die meisten Spielzeiten in der englischen Meisterschaft?",
+          "right_answer": "Everton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_015"
+        },
+        "it": {
+          "answer_A": "Manchester United",
+          "answer_B": "Liverpool",
+          "answer_C": "Everton",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "Quale club ha disputato più stagioni nel campionato inglese?",
+          "right_answer": "Everton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_015"
+        }
+      }
+    },
+    {
+      "questionId": "english_016",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club spent the most seasons in a row in the championship of England?",
+          "answer_A": "Everton",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Manchester United",
+          "right_answer": "Arsenal"
+        },
+        "ru": {
+          "question": "Какой клуб провел больше всех сезонов подряд в чемпионате Англии ?",
+          "answer_A": "Эвертон",
+          "answer_B": "Арсенал",
+          "answer_C": "Ливерпуль",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Арсенал"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է անընդմեջ բոլորից շատ մրցաշրջան անցկացրել Անգլիայի առաջնություններում:",
+          "answer_A": "Էվերթոն",
+          "answer_B": "Արսենալ",
+          "answer_C": "Լիվերպուլ",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Արսենալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Everton",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club disputó más temporadas consecutivas en el campeonato de Inglaterra?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_016"
+        },
+        "de": {
+          "answer_A": "Everton",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub spielte die meisten aufeinanderfolgenden Spielzeiten in der englischen Meisterschaft?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_016"
+        },
+        "it": {
+          "answer_A": "Everton",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club ha disputato più stagioni consecutive nel campionato inglese?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_016"
+        }
+      }
+    },
+    {
+      "questionId": "english_017",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which city had the most representatives in one season of the championship of England?",
+          "answer_A": "Newcastle",
+          "answer_B": "London",
+          "answer_C": "Manchester",
+          "answer_D": "Birmingham",
+          "right_answer": "London"
+        },
+        "ru": {
+          "question": "Какой город имел больше всех представителей в одном сезоне чемпионата Англии ?",
+          "answer_A": "Ньюкасл",
+          "answer_B": "Лондон",
+          "answer_C": "Манчестер",
+          "answer_D": "Бирмингем",
+          "right_answer": "Лондон"
+        },
+        "hy": {
+          "question": "Անգլիայի առաջնության մեկ մրցաշրջանում ո՞ր քաղաքն է ամենաշատ ներկայացուցիչները ունեցել:",
+          "answer_A": "Նյուքասլ",
+          "answer_B": "Լոնդոն",
+          "answer_C": "Մանչեսթեր",
+          "answer_D": "Բիրմինգեմ",
+          "right_answer": "Լոնդոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Newcastle",
+          "answer_B": "Londres",
+          "answer_C": "Manchester",
+          "answer_D": "Birmingham",
+          "categoryType": "TOP5",
+          "question": "¿Qué ciudad tuvo más representantes en una sola temporada del campeonato de Inglaterra?",
+          "right_answer": "Londres",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_017"
+        },
+        "de": {
+          "answer_A": "Newcastle",
+          "answer_B": "London",
+          "answer_C": "Manchester",
+          "answer_D": "Birmingham",
+          "categoryType": "TOP5",
+          "question": "Welche Stadt hatte die meisten Vertreter in einer Saison der englischen Meisterschaft?",
+          "right_answer": "London",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_017"
+        },
+        "it": {
+          "answer_A": "Newcastle",
+          "answer_B": "Londra",
+          "answer_C": "Manchester",
+          "answer_D": "Birmingham",
+          "categoryType": "TOP5",
+          "question": "Quale città ha avuto più squadre in una singola stagione del campionato inglese?",
+          "right_answer": "Londra",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_017"
+        }
+      }
+    },
+    {
+      "questionId": "english_018",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the record for the number of victories in one season of the championship of England? (38 games)",
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб стал рекордсменом по количеству побед в одном сезоне чемпионатa Англии ? (38 игр)",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Челси",
+          "answer_C": "Арсенал",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Անգլիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է հաղթանակների քանակով ռեկորդակիրը: (38 խաղ):",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Չելսի",
+          "answer_C": "Արսենալ",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club tiene el récord de victorias en una temporada del campeonato inglés? (38 partidos)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_018"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält den Rekord für Siege in einer Saison der englischen Meisterschaft? (38 Spiele)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_018"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene il record di vittorie in una stagione del campionato inglese? (38 partite)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_018"
+        }
+      }
+    },
+    {
+      "questionId": "english_019",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club in one season of the championship of England won the most matches in a row? (38 games)",
+          "answer_A": "Liverpool",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб в одном сезоне чемпионата Англии выиграл больше всех матчей подряд ? (38 игр)",
+          "answer_A": "Ливерпуль",
+          "answer_B": "Челси",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Անգլիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է բոլորից շատ անընդմեջ հաղթանակ տարել:",
+          "answer_A": "Լիվերպուլ",
+          "answer_B": "Չելսի",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Liverpool",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más partidos seguidos en una temporada del campeonato inglés? (38 partidos)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_019"
+        },
+        "de": {
+          "answer_A": "Liverpool",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann in einer Saison der englischen Meisterschaft die meisten Spiele in Folge? (38 Spiele)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_019"
+        },
+        "it": {
+          "answer_A": "Liverpool",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più partite consecutive in una stagione del campionato inglese? (38 partite)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_019"
+        }
+      }
+    },
+    {
+      "questionId": "english_020",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club lost the least in one season of the championship of England? (38 games)",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Everton",
+          "answer_D": "Manchester United",
+          "right_answer": "Arsenal"
+        },
+        "ru": {
+          "question": "Какой клуб проиграл меньше всех в одном сезоне чемпионата Англии ? (38 игр)",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Сити",
+          "answer_C": "Эвертон",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Арсенал"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Անգլիայի առաջնության մեկ մրցաշրջանում բոլորից քիչ պարտություն կրել:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Սիթի",
+          "answer_C": "Էվերթոն",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Արսենալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Everton",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió menos partidos en una temporada del campeonato inglés? (38 partidos)",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_020"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Everton",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub verlor in einer Saison der englischen Meisterschaft die wenigsten Spiele? (38 Spiele)",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_020"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Everton",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso meno partite in una stagione del campionato inglese? (38 partite)",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_020"
+        }
+      }
+    },
+    {
+      "questionId": "english_021",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club owns the longest unbeaten run in the England Championship?",
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "right_answer": "Arsenal"
+        },
+        "ru": {
+          "question": "Какому клубу принадлежит самая длинная беспроигрышная серия в чемпионате Англии ?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Арсенал",
+          "answer_C": "Челси",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Арсенал"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է պատկանում Անգլիայի առաջնության ամենաերկար անպարտելիության շարքը:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Արսենալ",
+          "answer_C": "Չելսի",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Արսենալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club posee la racha invicta más larga del campeonato inglés?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_021"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält die längste ungeschlagene Serie in der englischen Meisterschaft?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_021"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene la serie di imbattibilità più lunga nel campionato inglese?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_021"
+        }
+      }
+    },
+    {
+      "questionId": "english_022",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club owns the longest unbeaten run in home games in the England Championship?",
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Manchester City",
+          "answer_D": "Arsenal",
+          "right_answer": "Chelsea"
+        },
+        "ru": {
+          "question": "Какому клубу принадлежит самая длинная беспроигрышная серия в домашних играх чемпионата Англии ?",
+          "answer_A": "Челси",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Арсенал",
+          "right_answer": "Челси"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է պատկանում Անգլիայի առաջնության ամենաերկար անպարտելիության շարքը տնային խաղերում:",
+          "answer_A": "Չելսի",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Արսենալ",
+          "right_answer": "Չելսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Manchester City",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "¿Qué club posee la racha invicta más larga como local en el campeonato inglés?",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_022"
+        },
+        "de": {
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Manchester City",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält die längste Heimserie ohne Niederlage in der englischen Meisterschaft?",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_022"
+        },
+        "it": {
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Manchester City",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene la serie casalinga senza sconfitte più lunga nel campionato inglese?",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_022"
+        }
+      }
+    },
+    {
+      "questionId": "english_023",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club owns the longest unbeaten run in away games in the England Championship?",
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какому клубу принадлежит самая длинная беспроигрышная серия в гостевых играх чемпионата Англии ?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Челси",
+          "answer_C": "Арсенал",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբին է պատկանում Անգլիայի առաջնության ամենաերկար անպարտելիության շարքը հյուրընկալվելիս:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Չելսի",
+          "answer_C": "Արսենալ",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club posee la racha invicta más larga como visitante en el campeonato inglés?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_023"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält die längste Auswärtsserie ohne Niederlage in der englischen Meisterschaft?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_023"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene la serie esterna senza sconfitte più lunga nel campionato inglese?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_023"
+        }
+      }
+    },
+    {
+      "questionId": "english_024",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "In the championship of England, which goalkeeper has the longest period of time during which he did not miss the balls into his own net?",
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Jens Lehmann",
+          "right_answer": "Edwin van der Sar"
+        },
+        "ru": {
+          "question": "В чемпионате Англии у какого вратаря самый длительный промежуток времени, в течение которого он не пропускал мячи в свои ворота ?",
+          "answer_A": "Дэвид Симен",
+          "answer_B": "Петр Чех",
+          "answer_C": "Эдвин ван дер Сар",
+          "answer_D": "Йенс Леманн",
+          "right_answer": "Эдвин ван дер Сар"
+        },
+        "hy": {
+          "question": "Անգլիայի առաջնությունում ո՞ր դարպասապահն է ամենաերկարը սեփական դարպասը պահել անառիկ:",
+          "answer_A": "Դեվիդ Սիմեն",
+          "answer_B": "Պետր Չեխ",
+          "answer_C": "Էդվին վան դեր Սար",
+          "answer_D": "Յենս Լեման",
+          "right_answer": "Էդվին վան դեր Սար"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Jens Lehmann",
+          "categoryType": "TOP5",
+          "question": "¿Qué portero mantuvo durante más tiempo su portería a cero en el campeonato inglés?",
+          "right_answer": "Edwin van der Sar",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_024"
+        },
+        "de": {
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Jens Lehmann",
+          "categoryType": "TOP5",
+          "question": "Welcher Torwart blieb in der englischen Meisterschaft am längsten ohne Gegentor?",
+          "right_answer": "Edwin van der Sar",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_024"
+        },
+        "it": {
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Jens Lehmann",
+          "categoryType": "TOP5",
+          "question": "Quale portiere è rimasto più a lungo senza subire gol nel campionato inglese?",
+          "right_answer": "Edwin van der Sar",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_024"
+        }
+      }
+    },
+    {
+      "questionId": "english_025",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who played the most games in the Premier League?",
+          "answer_A": "Ryan Giggs",
+          "answer_B": "Gareth Barry",
+          "answer_C": "Frank Lampard",
+          "answer_D": "David James",
+          "right_answer": "Gareth Barry"
+        },
+        "ru": {
+          "question": "Кто больше всех провел игр в Премьер-лиге ?",
+          "answer_A": "Райан Гиггз",
+          "answer_B": "Гарет Барри",
+          "answer_C": "Фрэнк Лэмпард",
+          "answer_D": "Дэвид Джеймс",
+          "right_answer": "Гарет Барри"
+        },
+        "hy": {
+          "question": "Ո՞վ է Պրեմիեր լիգայում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Ռայան Գիգզ",
+          "answer_B": "Գարեթ Բարրի",
+          "answer_C": "Ֆրենկ Լեմպարդ",
+          "answer_D": "Դեվիդ Ջեյմս",
+          "right_answer": "Գարեթ Բարրի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Ryan Giggs",
+          "answer_B": "Gareth Barry",
+          "answer_C": "Frank Lampard",
+          "answer_D": "David James",
+          "categoryType": "TOP5",
+          "question": "¿Quién jugó más partidos en la Premier League?",
+          "right_answer": "Gareth Barry",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_025"
+        },
+        "de": {
+          "answer_A": "Ryan Giggs",
+          "answer_B": "Gareth Barry",
+          "answer_C": "Frank Lampard",
+          "answer_D": "David James",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele in der Premier League?",
+          "right_answer": "Gareth Barry",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_025"
+        },
+        "it": {
+          "answer_A": "Ryan Giggs",
+          "answer_B": "Gareth Barry",
+          "answer_C": "Frank Lampard",
+          "answer_D": "David James",
+          "categoryType": "TOP5",
+          "question": "Chi ha giocato più partite in Premier League?",
+          "right_answer": "Gareth Barry",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_025"
+        }
+      }
+    },
+    {
+      "questionId": "english_026",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who was the first to receive the prize \"Best Footballer \" of the Premier League season?",
+          "answer_A": "Juninho",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Peter Schmeichel",
+          "answer_D": "Michael Owen",
+          "right_answer": "Alan Shearer"
+        },
+        "ru": {
+          "question": "Кто первым удостоился приза \"Лучший футболист\" сезона Премьер-лиги ?",
+          "answer_A": "Жуниньо",
+          "answer_B": "Алан Ширер",
+          "answer_C": "Петер Шмейхель",
+          "answer_D": "Майкл Оуэн",
+          "right_answer": "Алан Ширер"
+        },
+        "hy": {
+          "question": "Ո՞վ է առաջինը արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն ֆուտբոլիստ\" մրցանակին:",
+          "answer_A": "Ժունինյո",
+          "answer_B": "Ալան Շիրեր",
+          "answer_C": "Պիտեր Շմեյխել",
+          "answer_D": "Մայքլ Օուեն",
+          "right_answer": "Ալան Շիրեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Juninho",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Peter Schmeichel",
+          "answer_D": "Michael Owen",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el primero en ganar el premio al Mejor Futbolista de la temporada de la Premier League?",
+          "right_answer": "Alan Shearer",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_026"
+        },
+        "de": {
+          "answer_A": "Juninho",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Peter Schmeichel",
+          "answer_D": "Michael Owen",
+          "categoryType": "TOP5",
+          "question": "Wer gewann als Erster die Auszeichnung als bester Spieler der Premier-League-Saison?",
+          "right_answer": "Alan Shearer",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_026"
+        },
+        "it": {
+          "answer_A": "Juninho",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Peter Schmeichel",
+          "answer_D": "Michael Owen",
+          "categoryType": "TOP5",
+          "question": "Chi è stato il primo a vincere il premio di miglior calciatore della stagione di Premier League?",
+          "right_answer": "Alan Shearer",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_026"
+        }
+      }
+    },
+    {
+      "questionId": "english_027",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Of those listed, who most won the prize \"Best Footballer \" Premier League season?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Thierry Henry",
+          "answer_C": "Nemanja Vidić",
+          "answer_D": "All three",
+          "right_answer": "All three"
+        },
+        "ru": {
+          "question": "Из перечисленных кто больше всех удостоился приза \"Лучший футболист\" сезона Премьер-лиги ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Тьерри Анри",
+          "answer_C": "Неманья Видич",
+          "answer_D": "Все трое",
+          "right_answer": "Все трое"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ամենաշատը արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն ֆուտբոլիստ\" մրցանակին:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Թիերի Անրի",
+          "answer_C": "Նեմանյա Վիդիչ",
+          "answer_D": "Երեքն էլ",
+          "right_answer": "Երեքն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Thierry Henry",
+          "answer_C": "Nemanja Vidić",
+          "answer_D": "Los tres",
+          "categoryType": "TOP5",
+          "question": "¿Cuál de estos jugadores ganó más veces el premio al Mejor Futbolista de la temporada de Premier League?",
+          "right_answer": "Los tres",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_027"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Thierry Henry",
+          "answer_C": "Nemanja Vidić",
+          "answer_D": "Alle drei",
+          "categoryType": "TOP5",
+          "question": "Wer von diesen Spielern gewann die Auszeichnung als bester Spieler der Premier-League-Saison am häufigsten?",
+          "right_answer": "Alle drei",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_027"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Thierry Henry",
+          "answer_C": "Nemanja Vidić",
+          "answer_D": "Tutti e tre",
+          "categoryType": "TOP5",
+          "question": "Tra questi giocatori, chi ha vinto più volte il premio di miglior calciatore della stagione di Premier League?",
+          "right_answer": "Tutti e tre",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_027"
+        }
+      }
+    },
+    {
+      "questionId": "english_028",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which country representatives won the prize \"Best footballer \" of the Premier League season most of all?",
+          "answer_A": "France",
+          "answer_B": "England",
+          "answer_C": "Holland",
+          "answer_D": "Portugal",
+          "right_answer": "England"
+        },
+        "ru": {
+          "question": "Представители какой страны больше всех удостоились приза \"Лучший футболист\" сезона Премьер-лиги ?",
+          "answer_A": "Франция",
+          "answer_B": "Англия",
+          "answer_C": "Голландия",
+          "answer_D": "Португалия",
+          "right_answer": "Англия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ներկայացուցիչներն են բոլորից շատ արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն ֆուտբոլիստ\" մրցանակին:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Անգլիա",
+          "answer_C": "Հոլանդիա",
+          "answer_D": "Պորտուգալիա",
+          "right_answer": "Անգլիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Inglaterra",
+          "answer_C": "Países Bajos",
+          "answer_D": "Portugal",
+          "categoryType": "TOP5",
+          "question": "¿Representantes de qué país ganaron más veces el premio al Mejor Futbolista de la temporada de Premier League?",
+          "right_answer": "Inglaterra",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_028"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "England",
+          "answer_C": "Niederlande",
+          "answer_D": "Portugal",
+          "categoryType": "TOP5",
+          "question": "Vertreter welches Landes gewannen die Auszeichnung als bester Spieler der Premier-League-Saison am häufigsten?",
+          "right_answer": "England",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_028"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Inghilterra",
+          "answer_C": "Paesi Bassi",
+          "answer_D": "Portogallo",
+          "categoryType": "TOP5",
+          "question": "Rappresentanti di quale paese hanno vinto più volte il premio di miglior calciatore della stagione di Premier League?",
+          "right_answer": "Inghilterra",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_028"
+        }
+      }
+    },
+    {
+      "questionId": "english_029",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club representatives won the prize \"Best Footballer \" of the Premier League season most of all?",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Представители какого клуба больше всех удостоились приза \"Лучший футболист\" сезона Премьер-лиги ?",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Ливерпуль",
+          "answer_D": "Челси",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբի ներկայացուցիչներն են բոլորից շատ արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն ֆուտբոլիստ\" մրցանակին:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Լիվերպուլ",
+          "answer_D": "Չելսի",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "¿Representantes de qué club ganaron más veces el premio al Mejor Futbolista de la temporada de Premier League?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_029"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Vertreter welches Klubs gewannen die Auszeichnung als bester Spieler der Premier-League-Saison am häufigsten?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_029"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Rappresentanti di quale club hanno vinto più volte il premio di miglior calciatore della stagione di Premier League?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_029"
+        }
+      }
+    },
+    {
+      "questionId": "english_030",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who is the Premier League top scorer?",
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Frank Lampard",
+          "right_answer": "Alan Shearer"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Премьер-лиги ?",
+          "answer_A": "Уэйн Руни",
+          "answer_B": "Алан Ширер",
+          "answer_C": "Тьерри Анри",
+          "answer_D": "Фрэнк Лэмпард",
+          "right_answer": "Алан Ширер"
+        },
+        "hy": {
+          "question": "Ո՞վ է Պրեմիեր լիգայի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ուեյն Ռունի",
+          "answer_B": "Ալան Շիրեր",
+          "answer_C": "Թիերի Անրի",
+          "answer_D": "Ֆրենկ Լեմպարդ",
+          "right_answer": "Ալան Շիրեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Frank Lampard",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de la Premier League?",
+          "right_answer": "Alan Shearer",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_030"
+        },
+        "de": {
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Frank Lampard",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten der Premier League?",
+          "right_answer": "Alan Shearer",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_030"
+        },
+        "it": {
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Alan Shearer",
+          "answer_C": "Thierry Henry",
+          "answer_D": "Frank Lampard",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi della Premier League?",
+          "right_answer": "Alan Shearer",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_030"
+        }
+      }
+    },
+    {
+      "questionId": "english_031",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who won the prize \"Best coach \" of the Premier League season most of all?",
+          "answer_A": "Arsène Wenger",
+          "answer_B": "Alexander Ferguson",
+          "answer_C": "Harry Redknapp",
+          "answer_D": "José Mourinho",
+          "right_answer": "Alexander Ferguson"
+        },
+        "ru": {
+          "question": "Кто больше всех удостоился приза \"Лучший тренер\" сезона Премьер-лиги ?",
+          "answer_A": "Арсен Венгер",
+          "answer_B": "Алекс Фергюсон",
+          "answer_C": "Гарри Реднап",
+          "answer_D": "Жозе Моуриньо",
+          "right_answer": "Алекс Фергюсон"
+        },
+        "hy": {
+          "question": "Ո՞վ է ամենաշատը արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն մարզիչ\" մրցանակին:",
+          "answer_A": "Արսեն Վենգեր",
+          "answer_B": "Ալեքս Ֆերգյուսոն",
+          "answer_C": "Հարրի Ռեդնապ",
+          "answer_D": "Ժոզե Մոուրինյո",
+          "right_answer": "Ալեքս Ֆերգյուսոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsène Wenger",
+          "answer_B": "Alex Ferguson",
+          "answer_C": "Harry Redknapp",
+          "answer_D": "José Mourinho",
+          "categoryType": "TOP5",
+          "question": "¿Quién ganó más veces el premio al Mejor Entrenador de la temporada de Premier League?",
+          "right_answer": "Alex Ferguson",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_031"
+        },
+        "de": {
+          "answer_A": "Arsène Wenger",
+          "answer_B": "Alex Ferguson",
+          "answer_C": "Harry Redknapp",
+          "answer_D": "José Mourinho",
+          "categoryType": "TOP5",
+          "question": "Wer gewann die Auszeichnung als bester Trainer der Premier-League-Saison am häufigsten?",
+          "right_answer": "Alex Ferguson",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_031"
+        },
+        "it": {
+          "answer_A": "Arsène Wenger",
+          "answer_B": "Alex Ferguson",
+          "answer_C": "Harry Redknapp",
+          "answer_D": "José Mourinho",
+          "categoryType": "TOP5",
+          "question": "Chi ha vinto più volte il premio di miglior allenatore della stagione di Premier League?",
+          "right_answer": "Alex Ferguson",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_031"
+        }
+      }
+    },
+    {
+      "questionId": "english_032",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which country representatives won the prize \"Best coach \" of the Premier League season most of all?",
+          "answer_A": "France",
+          "answer_B": "England",
+          "answer_C": "Scotland",
+          "answer_D": "Portugal",
+          "right_answer": "Scotland"
+        },
+        "ru": {
+          "question": "Представители какой страны больше всех удостоились приза \"Лучший тренер\" сезона Премьер-лиги ?",
+          "answer_A": "Франция",
+          "answer_B": "Англия",
+          "answer_C": "Шотландия",
+          "answer_D": "Португалия",
+          "right_answer": "Шотландия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ներկայացուցիչներն են բոլորից շատ արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն մարզիչ\" մրցանակին:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Անգլիա",
+          "answer_C": "Շոտլանդիա",
+          "answer_D": "Պորտուգալիա",
+          "right_answer": "Շոտլանդիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Inglaterra",
+          "answer_C": "Escocia",
+          "answer_D": "Portugal",
+          "categoryType": "TOP5",
+          "question": "¿Representantes de qué país ganaron más veces el premio al Mejor Entrenador de la temporada de Premier League?",
+          "right_answer": "Escocia",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_032"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "England",
+          "answer_C": "Schottland",
+          "answer_D": "Portugal",
+          "categoryType": "TOP5",
+          "question": "Vertreter welches Landes gewannen die Auszeichnung als bester Trainer der Premier-League-Saison am häufigsten?",
+          "right_answer": "Schottland",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_032"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Inghilterra",
+          "answer_C": "Scozia",
+          "answer_D": "Portogallo",
+          "categoryType": "TOP5",
+          "question": "Rappresentanti di quale paese hanno vinto più volte il premio di miglior allenatore della stagione di Premier League?",
+          "right_answer": "Scozia",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_032"
+        }
+      }
+    },
+    {
+      "questionId": "english_033",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who won the prize \"Best Footballer \" of the Premier League season 2 times in a row?",
+          "answer_A": "Thierry Henry",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Eden Hazard",
+          "answer_D": "N'Golo Kanté",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто 2 раза подряд удостоился приза \"Лучший футболист\" сезона Премьер-лиги ?",
+          "answer_A": "Тьерри Анри",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Эден Азар",
+          "answer_D": "Нголо Канте",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2 անգամ անընդմեջ արժանացել Պրեմիեր լիգայի մրցաշրջանի \"Լավագույն ֆուտբոլիստ\" մրցանակին:",
+          "answer_A": "Թիերի Անրի",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Էդեն Ազար",
+          "answer_D": "Նգոլո Կանտե",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Thierry Henry",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Eden Hazard",
+          "answer_D": "N'Golo Kanté",
+          "categoryType": "TOP5",
+          "question": "¿Quién ganó el premio al Mejor Futbolista de la temporada de Premier League dos veces seguidas?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_033"
+        },
+        "de": {
+          "answer_A": "Thierry Henry",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Eden Hazard",
+          "answer_D": "N'Golo Kanté",
+          "categoryType": "TOP5",
+          "question": "Wer gewann die Auszeichnung als bester Spieler der Premier-League-Saison zweimal in Folge?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_033"
+        },
+        "it": {
+          "answer_A": "Thierry Henry",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "Eden Hazard",
+          "answer_D": "N'Golo Kanté",
+          "categoryType": "TOP5",
+          "question": "Chi ha vinto il premio di miglior calciatore della stagione di Premier League due volte consecutive?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_033"
+        }
+      }
+    },
+    {
+      "questionId": "english_034",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the record for most points in one season of the Premier League? (38 games)",
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб стал рекордсменом по количеству набранных очков в одном сезоне Премьер-лиги ? (38 игр)",
+          "answer_A": "Арсенал",
+          "answer_B": "Челси",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Պրեմիեր լիգայի մեկ մրցաշրջանում ո՞ր ակումբն է վաստակած միավորներով ռեկորդակիրը (38 խաղ):",
+          "answer_A": "Արսենալ",
+          "answer_B": "Չելսի",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club tiene el récord de puntos en una temporada de Premier League? (38 partidos)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_034"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub hält den Punkterekord in einer Premier-League-Saison? (38 Spiele)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_034"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club detiene il record di punti in una stagione di Premier League? (38 partite)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_034"
+        }
+      }
+    },
+    {
+      "questionId": "english_035",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club scored the least points in a single Premier League season? (38 games)",
+          "answer_A": "Derby County",
+          "answer_B": "Sunderland",
+          "answer_C": "West Bromwich",
+          "answer_D": "Aston Villa",
+          "right_answer": "Derby County"
+        },
+        "ru": {
+          "question": "Какой клуб набрал наименьшее количество очков в одном сезоне Премьер-лиги ? (38 игр)",
+          "answer_A": "Дерби Каунти",
+          "answer_B": "Сандерленд",
+          "answer_C": "Вест Бромвич",
+          "answer_D": "Астон Вилла",
+          "right_answer": "Дерби Каунти"
+        },
+        "hy": {
+          "question": "Պրեմիեր լիգայի մեկ մրցաշրջանում ո՞ր ակումբն է վաստակել ամենաքիչ միավորները (38 խաղ):",
+          "answer_A": "Դերբի Կաունտի",
+          "answer_B": "Սանդերլենդ",
+          "answer_C": "Վեստ Բրոմվիչ",
+          "answer_D": "Ասթոն Վիլլա",
+          "right_answer": "Դերբի Կաունտի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Derby County",
+          "answer_B": "Sunderland",
+          "answer_C": "West Bromwich",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "¿Qué club sumó menos puntos en una sola temporada de Premier League? (38 partidos)",
+          "right_answer": "Derby County",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_035"
+        },
+        "de": {
+          "answer_A": "Derby County",
+          "answer_B": "Sunderland",
+          "answer_C": "West Bromwich",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub holte die wenigsten Punkte in einer Premier-League-Saison? (38 Spiele)",
+          "right_answer": "Derby County",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_035"
+        },
+        "it": {
+          "answer_A": "Derby County",
+          "answer_B": "Sunderland",
+          "answer_C": "West Bromwich",
+          "answer_D": "Aston Villa",
+          "categoryType": "TOP5",
+          "question": "Quale club ha ottenuto meno punti in una singola stagione di Premier League? (38 partite)",
+          "right_answer": "Derby County",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_035"
+        }
+      }
+    },
+    {
+      "questionId": "english_036",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club scored the most goals in one Premier League season? (38 games)",
+          "answer_A": "Manchester United",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Tottenham",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб забил больше всех голов в одном сезоне Премьер-лиги ? (38 игр)",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Челси",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Тоттенхэм",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Պրեմիեր լիգայի մեկ մրցաշրջանում բոլորից շատ ո՞ր ակումբն է գոլի հեղինակ դարձել (38 խաղ):",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Չելսի",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Տոտենհեմ",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester United",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "¿Qué club marcó más goles en una sola temporada de Premier League? (38 partidos)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_036"
+        },
+        "de": {
+          "answer_A": "Manchester United",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub erzielte die meisten Tore in einer Premier-League-Saison? (38 Spiele)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_036"
+        },
+        "it": {
+          "answer_A": "Manchester United",
+          "answer_B": "Chelsea",
+          "answer_C": "Manchester City",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Quale club ha segnato più gol in una singola stagione di Premier League? (38 partite)",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_036"
+        }
+      }
+    },
+    {
+      "questionId": "english_037",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club has conceded the least goals in one Premier League season? (38 games)",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester City",
+          "right_answer": "Chelsea"
+        },
+        "ru": {
+          "question": "Какой клуб пропустил наименьшее количество голов в одном сезоне Премьер-лиги ? (38 игр)",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Челси",
+          "answer_D": "Манчестер Сити",
+          "right_answer": "Челси"
+        },
+        "hy": {
+          "question": "Պրեմիեր լիգայի մեկ մրցաշրջանում ո՞ր ակումբն է ամենաքիչը գոլ բաց թողել (38 խաղ):",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Չելսի",
+          "answer_D": "Մանչեսթեր Սիթի",
+          "right_answer": "Չելսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester City",
+          "categoryType": "TOP5",
+          "question": "¿Qué club recibió menos goles en una sola temporada de Premier League? (38 partidos)",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_037"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester City",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub kassierte die wenigsten Gegentore in einer Premier-League-Saison? (38 Spiele)",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_037"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Manchester City",
+          "categoryType": "TOP5",
+          "question": "Quale club ha subito meno gol in una singola stagione di Premier League? (38 partite)",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_037"
+        }
+      }
+    },
+    {
+      "questionId": "english_038",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which footballer won the Premier League the most?",
+          "answer_A": "Paul Scholes",
+          "answer_B": "Gary Neville",
+          "answer_C": "Ryan Giggs",
+          "answer_D": "Rio Ferdinand",
+          "right_answer": "Ryan Giggs"
+        },
+        "ru": {
+          "question": "Какой футболист больше всех выиграл Премьер-лигу ?",
+          "answer_A": "Пол Скоулз",
+          "answer_B": "Гари Невилл",
+          "answer_C": "Райан Гиггз",
+          "answer_D": "Рио Фердинанд",
+          "right_answer": "Райан Гиггз"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ նվաճել Պրեմիեր լիգայի չեմպիոնի տիտղոսը:",
+          "answer_A": "Փոլ Սքոուլզ",
+          "answer_B": "Գարի Նեվիլ",
+          "answer_C": "Ռայան Գիգզ",
+          "answer_D": "Ռիո Ֆերդինանդ",
+          "right_answer": "Ռայան Գիգզ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Paul Scholes",
+          "answer_B": "Gary Neville",
+          "answer_C": "Ryan Giggs",
+          "answer_D": "Rio Ferdinand",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista ganó más veces la Premier League?",
+          "right_answer": "Ryan Giggs",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_038"
+        },
+        "de": {
+          "answer_A": "Paul Scholes",
+          "answer_B": "Gary Neville",
+          "answer_C": "Ryan Giggs",
+          "answer_D": "Rio Ferdinand",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer gewann die Premier League am häufigsten?",
+          "right_answer": "Ryan Giggs",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_038"
+        },
+        "it": {
+          "answer_A": "Paul Scholes",
+          "answer_B": "Gary Neville",
+          "answer_C": "Ryan Giggs",
+          "answer_D": "Rio Ferdinand",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha vinto più volte la Premier League?",
+          "right_answer": "Ryan Giggs",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_038"
+        }
+      }
+    },
+    {
+      "questionId": "english_039",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who spent the most \"dry \" matches in one season of the Premier League?",
+          "answer_A": "Edwin van der Sar",
+          "answer_B": "Petr Čech",
+          "answer_C": "David de Gea",
+          "answer_D": "Jens Lehmann",
+          "right_answer": "Petr Čech"
+        },
+        "ru": {
+          "question": "Кто провел больше всех \"сухих\" матчей в одном сезоне Премьер-лиги ?",
+          "answer_A": "Эдвин ван дер Сар",
+          "answer_B": "Петр Чех",
+          "answer_C": "Давид де Хеа",
+          "answer_D": "Йенс Леманн",
+          "right_answer": "Петр Чех"
+        },
+        "hy": {
+          "question": "Պրեմիեր լիգայի մեկ մրցաշրջանում ո՞ր դարպասապահն է ավելի շատ \"չոր\" խաղեր անցկացրել:",
+          "answer_A": "Էդվին վան դեր Սար",
+          "answer_B": "Պետր Չեխ",
+          "answer_C": "Դավիդ դե Խեա",
+          "answer_D": "Յենս Լեման",
+          "right_answer": "Պետր Չեխ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Edwin van der Sar",
+          "answer_B": "Petr Čech",
+          "answer_C": "David de Gea",
+          "answer_D": "Jens Lehmann",
+          "categoryType": "TOP5",
+          "question": "¿Quién logró más porterías a cero en una sola temporada de Premier League?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_039"
+        },
+        "de": {
+          "answer_A": "Edwin van der Sar",
+          "answer_B": "Petr Čech",
+          "answer_C": "David de Gea",
+          "answer_D": "Jens Lehmann",
+          "categoryType": "TOP5",
+          "question": "Wer blieb in einer Premier-League-Saison am häufigsten ohne Gegentor?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_039"
+        },
+        "it": {
+          "answer_A": "Edwin van der Sar",
+          "answer_B": "Petr Čech",
+          "answer_C": "David de Gea",
+          "answer_D": "Jens Lehmann",
+          "categoryType": "TOP5",
+          "question": "Chi ha ottenuto più clean sheet in una singola stagione di Premier League?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_039"
+        }
+      }
+    },
+    {
+      "questionId": "english_040",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who spent the most \"dry \" matches in the Premier League?",
+          "answer_A": "David de Gea",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Peter Schmeichel",
+          "right_answer": "Petr Čech"
+        },
+        "ru": {
+          "question": "Кто провел больше всех \"сухих\" матчей в Премьер-лиге ?",
+          "answer_A": "Давид де Хеа",
+          "answer_B": "Петр Чех",
+          "answer_C": "Эдвин ван дер Сар",
+          "answer_D": "Петер Шмейхель",
+          "right_answer": "Петр Чех"
+        },
+        "hy": {
+          "question": "Պրեմիեր լիգայում բոլորից շատ ո՞ր դարպասապահն է \"չոր\" խաղեր անցկացրել:",
+          "answer_A": "Դավիդ դե Խեա",
+          "answer_B": "Պետր Չեխ",
+          "answer_C": "Էդվին վան դեր Սար",
+          "answer_D": "Պետեր Շմեյխել",
+          "right_answer": "Պետր Չեխ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "David de Gea",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Peter Schmeichel",
+          "categoryType": "TOP5",
+          "question": "¿Quién logró más porterías a cero en la Premier League?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_040"
+        },
+        "de": {
+          "answer_A": "David de Gea",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Peter Schmeichel",
+          "categoryType": "TOP5",
+          "question": "Wer blieb in der Premier League am häufigsten ohne Gegentor?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_040"
+        },
+        "it": {
+          "answer_A": "David de Gea",
+          "answer_B": "Petr Čech",
+          "answer_C": "Edwin van der Sar",
+          "answer_D": "Peter Schmeichel",
+          "categoryType": "TOP5",
+          "question": "Chi ha ottenuto più clean sheet in Premier League?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_040"
+        }
+      }
+    },
+    {
+      "questionId": "english_041",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who in the same club spent the most \"dry \" matches in the Premier League?",
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Thibaut Courtois",
+          "answer_D": "Edwin van der Sar",
+          "right_answer": "Petr Čech"
+        },
+        "ru": {
+          "question": "Кто в составе одного клуба провел больше всех \"сухих\" матчей в Премьер-лиге ?",
+          "answer_A": "Дэвид Симен",
+          "answer_B": "Петр Чех",
+          "answer_C": "Тибо Куртуа",
+          "answer_D": "Эдвин ван дер Сар",
+          "right_answer": "Петр Чех"
+        },
+        "hy": {
+          "question": "Ո՞ր դարպասապահն է ամենաշատը \"չոր\" խաղեր անցկացրել մեկ ակումբի կազմում:",
+          "answer_A": "Դեվիդ Սիմեն",
+          "answer_B": "Պետր Չեխ",
+          "answer_C": "Տիբո Կուրտուա",
+          "answer_D": "Էդվին վան դեր Սար",
+          "right_answer": "Պետր Չեխ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Thibaut Courtois",
+          "answer_D": "Edwin van der Sar",
+          "categoryType": "TOP5",
+          "question": "¿Quién logró más porterías a cero con un mismo club en la Premier League?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_041"
+        },
+        "de": {
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Thibaut Courtois",
+          "answer_D": "Edwin van der Sar",
+          "categoryType": "TOP5",
+          "question": "Wer blieb mit demselben Klub in der Premier League am häufigsten ohne Gegentor?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_041"
+        },
+        "it": {
+          "answer_A": "David Seaman",
+          "answer_B": "Petr Čech",
+          "answer_C": "Thibaut Courtois",
+          "answer_D": "Edwin van der Sar",
+          "categoryType": "TOP5",
+          "question": "Chi ha ottenuto più clean sheet con lo stesso club in Premier League?",
+          "right_answer": "Petr Čech",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_041"
+        }
+      }
+    },
+    {
+      "questionId": "english_042",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Of the following, which club won the Premier League the most?",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Liverpool",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл Премьер-лигу ?",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Сити",
+          "answer_C": "Челси",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել Պրեմիեր լիգայի չեմպիոնի տիտղոսը:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Սիթի",
+          "answer_C": "Չելսի",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "¿Cuál de los siguientes clubes ganó más veces la Premier League?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_042"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "Welcher der folgenden Klubs gewann die Premier League am häufigsten?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_042"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester City",
+          "answer_C": "Chelsea",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "Tra i seguenti club, quale ha vinto più volte la Premier League?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_042"
+        }
+      }
+    },
+    {
+      "questionId": "english_043",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the FA Cup the most?",
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester City",
+          "right_answer": "Arsenal"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок Англии ?",
+          "answer_A": "Челси",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Арсенал",
+          "answer_D": "Манчестер Сити",
+          "right_answer": "Арсенал"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Անգլիայի գավաթը:",
+          "answer_A": "Չելսի",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Արսենալ",
+          "answer_D": "Մանչեսթեր Սիթի",
+          "right_answer": "Արսենալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester City",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la FA Cup?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_043"
+        },
+        "de": {
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester City",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann den FA Cup am häufigsten?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_043"
+        },
+        "it": {
+          "answer_A": "Chelsea",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Manchester City",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la FA Cup?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_043"
+        }
+      }
+    },
+    {
+      "questionId": "english_044",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Since what year has the FA Cup been played?",
+          "answer_A": "1871",
+          "answer_B": "1899",
+          "answer_C": "1908",
+          "answer_D": "1966",
+          "right_answer": "1871"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Кубок Англии ?",
+          "answer_A": "1871",
+          "answer_B": "1899",
+          "answer_C": "1908",
+          "answer_D": "1966",
+          "right_answer": "1871"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Անգլիայի գավաթի խաղարկությունը:",
+          "answer_A": "1871",
+          "answer_B": "1899",
+          "answer_C": "1908",
+          "answer_D": "1966",
+          "right_answer": "1871"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1871",
+          "answer_B": "1899",
+          "answer_C": "1908",
+          "answer_D": "1966",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la FA Cup?",
+          "right_answer": "1871",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_044"
+        },
+        "de": {
+          "answer_A": "1871",
+          "answer_B": "1899",
+          "answer_C": "1908",
+          "answer_D": "1966",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird der FA Cup ausgetragen?",
+          "right_answer": "1871",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_044"
+        },
+        "it": {
+          "answer_A": "1871",
+          "answer_B": "1899",
+          "answer_C": "1908",
+          "answer_D": "1966",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa la FA Cup?",
+          "right_answer": "1871",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_044"
+        }
+      }
+    },
+    {
+      "questionId": "english_045",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the FA Cup the most?",
+          "answer_A": "Aston Villa",
+          "answer_B": "Blackburn Rovers",
+          "answer_C": "Manchester City",
+          "answer_D": "Newcastle",
+          "right_answer": "Aston Villa"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл Кубок Англии ?",
+          "answer_A": "Астон Вилла",
+          "answer_B": "Блэкберн Роверс",
+          "answer_C": "Манчестер Сити",
+          "answer_D": "Ньюкасл",
+          "right_answer": "Астон Вилла"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել Անգլիայի գավաթը:",
+          "answer_A": "Ասթոն Վիլլա",
+          "answer_B": "Բլեքբեռն Ռովերս",
+          "answer_C": "Մանչեսթեր Սիթի",
+          "answer_D": "Նյուքասլ",
+          "right_answer": "Ասթոն Վիլլա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Blackburn Rovers",
+          "answer_C": "Manchester City",
+          "answer_D": "Newcastle",
+          "categoryType": "TOP5",
+          "question": "¿Cuál de estos clubes ganó más veces la FA Cup?",
+          "right_answer": "Aston Villa",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_045"
+        },
+        "de": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Blackburn Rovers",
+          "answer_C": "Manchester City",
+          "answer_D": "Newcastle",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Klubs gewann den FA Cup am häufigsten?",
+          "right_answer": "Aston Villa",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_045"
+        },
+        "it": {
+          "answer_A": "Aston Villa",
+          "answer_B": "Blackburn Rovers",
+          "answer_C": "Manchester City",
+          "answer_D": "Newcastle",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte la FA Cup?",
+          "right_answer": "Aston Villa",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_045"
+        }
+      }
+    },
+    {
+      "questionId": "english_046",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which coach won the FA Cup the most?",
+          "answer_A": "Alexander Ferguson",
+          "answer_B": "Arsène Wenger",
+          "answer_C": "George Ramsay",
+          "answer_D": "Herbert Chapman",
+          "right_answer": "Arsène Wenger"
+        },
+        "ru": {
+          "question": "Какой тренер больше всех выиграл Кубок Англии ?",
+          "answer_A": "Алекс Фергюсон",
+          "answer_B": "Арсен Венгер",
+          "answer_C": "Джордж Ремзи",
+          "answer_D": "Герберт Чепмен",
+          "right_answer": "Арсен Венгер"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է բոլորից շատ նվաճել Անգլիայի գավաթը:",
+          "answer_A": "Ալեքս Ֆերգյուսոն",
+          "answer_B": "Արսեն Վենգեր",
+          "answer_C": "Ջորջ Ռեմզի",
+          "answer_D": "Գերբերտ Չեպման",
+          "right_answer": "Արսեն Վենգեր"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Alex Ferguson",
+          "answer_B": "Arsène Wenger",
+          "answer_C": "George Ramsay",
+          "answer_D": "Herbert Chapman",
+          "categoryType": "TOP5",
+          "question": "¿Qué entrenador ganó más veces la FA Cup?",
+          "right_answer": "Arsène Wenger",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_046"
+        },
+        "de": {
+          "answer_A": "Alex Ferguson",
+          "answer_B": "Arsène Wenger",
+          "answer_C": "George Ramsay",
+          "answer_D": "Herbert Chapman",
+          "categoryType": "TOP5",
+          "question": "Welcher Trainer gewann den FA Cup am häufigsten?",
+          "right_answer": "Arsène Wenger",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_046"
+        },
+        "it": {
+          "answer_A": "Alex Ferguson",
+          "answer_B": "Arsène Wenger",
+          "answer_C": "George Ramsay",
+          "answer_D": "Herbert Chapman",
+          "categoryType": "TOP5",
+          "question": "Quale allenatore ha vinto più volte la FA Cup?",
+          "right_answer": "Arsène Wenger",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_046"
+        }
+      }
+    },
+    {
+      "questionId": "english_047",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which country’s coaches were the winners of the FA Cup?",
+          "answer_A": "France",
+          "answer_B": "Scotland",
+          "answer_C": "England",
+          "answer_D": "Italy",
+          "right_answer": "England"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех становились победителями Кубка Англии ?",
+          "answer_A": "Франция",
+          "answer_B": "Шотландия",
+          "answer_C": "Англия",
+          "answer_D": "Италия",
+          "right_answer": "Англия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի մարզիչներն են ավելի շատ նվաճել Անգլիայի գավաթը:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Շոտլանդիա",
+          "answer_C": "Անգլիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Անգլիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Escocia",
+          "answer_C": "Inglaterra",
+          "answer_D": "Italia",
+          "categoryType": "TOP5",
+          "question": "¿Entrenadores de qué país han ganado la FA Cup?",
+          "right_answer": "Inglaterra",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_047"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "Schottland",
+          "answer_C": "England",
+          "answer_D": "Italien",
+          "categoryType": "TOP5",
+          "question": "Trainer welches Landes gewannen den FA Cup?",
+          "right_answer": "England",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_047"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Scozia",
+          "answer_C": "Inghilterra",
+          "answer_D": "Italia",
+          "categoryType": "TOP5",
+          "question": "Allenatori di quale paese hanno vinto la FA Cup?",
+          "right_answer": "Inghilterra",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_047"
+        }
+      }
+    },
+    {
+      "questionId": "english_048",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Since what year has the English Football League Cup been played?",
+          "answer_A": "1960",
+          "answer_B": "1976",
+          "answer_C": "1992",
+          "answer_D": "1908",
+          "right_answer": "1960"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Кубок Английской футбольной лиги ?",
+          "answer_A": "1960",
+          "answer_B": "1976",
+          "answer_C": "1992",
+          "answer_D": "1908",
+          "right_answer": "1960"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվել Անգլիայի լիգայի գավաթի առաջին խաղարկությունը:",
+          "answer_A": "1960",
+          "answer_B": "1976",
+          "answer_C": "1992",
+          "answer_D": "1908",
+          "right_answer": "1960"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1960",
+          "answer_B": "1976",
+          "answer_C": "1992",
+          "answer_D": "1908",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la Copa de la Liga inglesa?",
+          "right_answer": "1960",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_048"
+        },
+        "de": {
+          "answer_A": "1960",
+          "answer_B": "1976",
+          "answer_C": "1992",
+          "answer_D": "1908",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird der englische Ligapokal ausgetragen?",
+          "right_answer": "1960",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_048"
+        },
+        "it": {
+          "answer_A": "1960",
+          "answer_B": "1976",
+          "answer_C": "1992",
+          "answer_D": "1908",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa la Coppa di Lega inglese?",
+          "right_answer": "1960",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_048"
+        }
+      }
+    },
+    {
+      "questionId": "english_049",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club has won the English Football League Cup the most?",
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Aston Villa",
+          "answer_D": "Chelsea",
+          "right_answer": "Liverpool"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок Английской футбольной лиги ?",
+          "answer_A": "Ливерпуль",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Астон Вилла",
+          "answer_D": "Челси",
+          "right_answer": "Ливерпуль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Անգլիայի լիգայի գավաթը:",
+          "answer_A": "Լիվերպուլ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Ասթոն Վիլլա",
+          "answer_D": "Չելսի",
+          "right_answer": "Լիվերպուլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Aston Villa",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Copa de la Liga inglesa?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_049"
+        },
+        "de": {
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Aston Villa",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann den englischen Ligapokal am häufigsten?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_049"
+        },
+        "it": {
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Aston Villa",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Coppa di Lega inglese?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_049"
+        }
+      }
+    },
+    {
+      "questionId": "english_050",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in the final of the English Football League Cup?",
+          "answer_A": "Liverpool",
+          "answer_B": "Arsenal",
+          "answer_C": "Tottenham",
+          "answer_D": "Manchester United",
+          "right_answer": "Arsenal"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в финале Кубка Английской футбольной лиги ?",
+          "answer_A": "Ливерпуль",
+          "answer_B": "Арсенал",
+          "answer_C": "Тоттенхэм",
+          "answer_D": "Манчестер Юнайтед",
+          "right_answer": "Арсенал"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Անգլիայի լիգայի գավաթի եզրափակչում:",
+          "answer_A": "Լիվերպուլ",
+          "answer_B": "Արսենալ",
+          "answer_C": "Տոտենհեմ",
+          "answer_D": "Մանչեսթեր Յունայթեդ",
+          "right_answer": "Արսենալ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Liverpool",
+          "answer_B": "Arsenal",
+          "answer_C": "Tottenham",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más finales de la Copa de la Liga inglesa?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_050"
+        },
+        "de": {
+          "answer_A": "Liverpool",
+          "answer_B": "Arsenal",
+          "answer_C": "Tottenham",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub verlor die meisten Finals im englischen Ligapokal?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_050"
+        },
+        "it": {
+          "answer_A": "Liverpool",
+          "answer_B": "Arsenal",
+          "answer_C": "Tottenham",
+          "answer_D": "Manchester United",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più finali di Coppa di Lega inglese?",
+          "right_answer": "Arsenal",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_050"
+        }
+      }
+    },
+    {
+      "questionId": "english_051",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "From what year has the English Super Cup been played?",
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1965",
+          "answer_D": "1993",
+          "right_answer": "1908"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Суперкубок Англии ?",
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1965",
+          "answer_D": "1993",
+          "right_answer": "1908"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է խաղարկվում Անգլիայի Սուպեր գավաթը:",
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1965",
+          "answer_D": "1993",
+          "right_answer": "1908"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1965",
+          "answer_D": "1993",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la Community Shield inglesa?",
+          "right_answer": "1908",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_051"
+        },
+        "de": {
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1965",
+          "answer_D": "1993",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird der englische Community Shield ausgetragen?",
+          "right_answer": "1908",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_051"
+        },
+        "it": {
+          "answer_A": "1898",
+          "answer_B": "1908",
+          "answer_C": "1965",
+          "answer_D": "1993",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa il Community Shield inglese?",
+          "right_answer": "1908",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_051"
+        }
+      }
+    },
+    {
+      "questionId": "english_052",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club has won the English Super Cup the most?",
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Everton",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Суперкубок Англии ?",
+          "answer_A": "Ливерпуль",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Арсенал",
+          "answer_D": "Эвертон",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Անգլիայի Սուպեր գավաթը:",
+          "answer_A": "Լիվերպուլ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Արսենալ",
+          "answer_D": "Էվերթոն",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Everton",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Community Shield inglesa?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_052"
+        },
+        "de": {
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Everton",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann den englischen Community Shield am häufigsten?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_052"
+        },
+        "it": {
+          "answer_A": "Liverpool",
+          "answer_B": "Manchester United",
+          "answer_C": "Arsenal",
+          "answer_D": "Everton",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte il Community Shield inglese?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_052"
+        }
+      }
+    },
+    {
+      "questionId": "english_053",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club has won the English Super Cup the most consecutively?",
+          "answer_A": "Everton",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Arsenal",
+          "right_answer": "Everton"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех подряд выигрывал Суперкубок Англии ?",
+          "answer_A": "Эвертон",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Ливерпуль",
+          "answer_D": "Арсенал",
+          "right_answer": "Эвертон"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ անընդմեջ նվաճել Անգլիայի Սուպեր գավաթը:",
+          "answer_A": "Էվերթոն",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Լիվերպուլ",
+          "answer_D": "Արսենալ",
+          "right_answer": "Էվերթոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Everton",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces seguidas la Community Shield inglesa?",
+          "right_answer": "Everton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_053"
+        },
+        "de": {
+          "answer_A": "Everton",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann den englischen Community Shield am häufigsten in Folge?",
+          "right_answer": "Everton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_053"
+        },
+        "it": {
+          "answer_A": "Everton",
+          "answer_B": "Manchester United",
+          "answer_C": "Liverpool",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte consecutivamente il Community Shield inglese?",
+          "right_answer": "Everton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_053"
+        }
+      }
+    },
+    {
+      "questionId": "english_054",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in a row in the English Super Cup?",
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Everton",
+          "answer_D": "Liverpool",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех подряд проиграл в Суперкубке Англии ?",
+          "answer_A": "Манчестер Юнайтед",
+          "answer_B": "Арсенал",
+          "answer_C": "Эвертон",
+          "answer_D": "Ливерпуль",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ անընդմեջ պարտվել Անգլիայի Սուպեր գավաթի խաղում:",
+          "answer_A": "Մանչեսթեր Յունայթեդ",
+          "answer_B": "Արսենալ",
+          "answer_C": "Էվերթոն",
+          "answer_D": "Լիվերպուլ",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Everton",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más veces seguidas la Community Shield inglesa?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_054"
+        },
+        "de": {
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Everton",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub verlor den englischen Community Shield am häufigsten in Folge?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_054"
+        },
+        "it": {
+          "answer_A": "Manchester United",
+          "answer_B": "Arsenal",
+          "answer_C": "Everton",
+          "answer_D": "Liverpool",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più volte consecutivamente il Community Shield inglese?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_054"
+        }
+      }
+    },
+    {
+      "questionId": "english_055",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club most of all continuously participated in matches for the English Super Bowl?",
+          "answer_A": "Tottenham",
+          "answer_B": "Everton",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "right_answer": "Manchester United"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех непрерывно принимал участие в матчах за Суперкубок Англии ?",
+          "answer_A": "Тоттенхэм",
+          "answer_B": "Эвертон",
+          "answer_C": "Манчестер Юнайтед",
+          "answer_D": "Арсенал",
+          "right_answer": "Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է անընդմեջ ավելի շատ մասնակցել Անգլիայի Սուպեր գավաթի խաղարկություններին:",
+          "answer_A": "Տոտենհեմ",
+          "answer_B": "Էվերթոն",
+          "answer_C": "Մանչեսթեր Յունայթեդ",
+          "answer_D": "Արսենալ",
+          "right_answer": "Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Tottenham",
+          "answer_B": "Everton",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "¿Qué club participó más veces seguidas en la Community Shield inglesa?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_055"
+        },
+        "de": {
+          "answer_A": "Tottenham",
+          "answer_B": "Everton",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub nahm am häufigsten in Folge am englischen Community Shield teil?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_055"
+        },
+        "it": {
+          "answer_A": "Tottenham",
+          "answer_B": "Everton",
+          "answer_C": "Manchester United",
+          "answer_D": "Arsenal",
+          "categoryType": "TOP5",
+          "question": "Quale club ha partecipato più volte consecutive al Community Shield inglese?",
+          "right_answer": "Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_055"
+        }
+      }
+    },
+    {
+      "questionId": "english_056",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "The highest place of the England team in the FIFA ranking in history.",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "6",
+          "right_answer": "3"
+        },
+        "ru": {
+          "question": "Самое высокое место сборной Англии в рейтинге ФИФА за всю историю.",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "6",
+          "right_answer": "3"
+        },
+        "hy": {
+          "question": "Ո՞րն է FIFA-ի դասակարգման աղյուսակում Անգլիայի հավաքականի զբաղեցրած ամենաբարձր հորիզոնականը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "6",
+          "right_answer": "3"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "6",
+          "categoryType": "TOP5",
+          "question": "¿Cuál fue la posición más alta de Inglaterra en el ranking FIFA?",
+          "right_answer": "3",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_056"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "6",
+          "categoryType": "TOP5",
+          "question": "Was war die höchste Platzierung Englands in der FIFA-Weltrangliste?",
+          "right_answer": "3",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_056"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "6",
+          "categoryType": "TOP5",
+          "question": "Qual è stata la posizione più alta dell’Inghilterra nel ranking FIFA?",
+          "right_answer": "3",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_056"
+        }
+      }
+    },
+    {
+      "questionId": "english_057",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who was the England rival in the first international meeting?",
+          "answer_A": "Wales",
+          "answer_B": "Scotland",
+          "answer_C": "France",
+          "answer_D": "Denmark",
+          "right_answer": "Scotland"
+        },
+        "ru": {
+          "question": "Кто был соперником сборной Англии в первой международной встрече ?",
+          "answer_A": "Уэльс",
+          "answer_B": "Шотландия",
+          "answer_C": "Франция",
+          "answer_D": "Дания",
+          "right_answer": "Шотландия"
+        },
+        "hy": {
+          "question": "Ո՞վ է եղել Անգլիայի հավաքականի մրցակիցը առաջին միջազգային հանդիպման ժամանակ:",
+          "answer_A": "Ուելս",
+          "answer_B": "Շոտլանդիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Դանիա",
+          "right_answer": "Շոտլանդիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Gales",
+          "answer_B": "Escocia",
+          "answer_C": "Francia",
+          "answer_D": "Dinamarca",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el rival de Inglaterra en su primer partido internacional?",
+          "right_answer": "Escocia",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_057"
+        },
+        "de": {
+          "answer_A": "Wales",
+          "answer_B": "Schottland",
+          "answer_C": "Frankreich",
+          "answer_D": "Dänemark",
+          "categoryType": "TOP5",
+          "question": "Wer war Englands Gegner im ersten Länderspiel?",
+          "right_answer": "Schottland",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_057"
+        },
+        "it": {
+          "answer_A": "Galles",
+          "answer_B": "Scozia",
+          "answer_C": "Francia",
+          "answer_D": "Danimarca",
+          "categoryType": "TOP5",
+          "question": "Chi fu l’avversario dell’Inghilterra nella sua prima partita internazionale?",
+          "right_answer": "Scozia",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_057"
+        }
+      }
+    },
+    {
+      "questionId": "english_058",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who in their history has the England team defeated with the largest score?",
+          "answer_A": "Wales",
+          "answer_B": "Ireland",
+          "answer_C": "Scotland",
+          "answer_D": "France",
+          "right_answer": "Ireland"
+        },
+        "ru": {
+          "question": "Кого в своей истории сборная Англии победила с самым крупным счетом ?",
+          "answer_A": "Уэльс",
+          "answer_B": "Ирландия",
+          "answer_C": "Шотландия",
+          "answer_D": "Франция",
+          "right_answer": "Ирландия"
+        },
+        "hy": {
+          "question": "Անգլիայի հավաքականը իր պատմության մեջ ու՞մ է հաղթել ամենախոշոր հաշվով:",
+          "answer_A": "Ուելս",
+          "answer_B": "Իռլանդիա",
+          "answer_C": "Շոտլանդիա",
+          "answer_D": "Ֆրանսիա",
+          "right_answer": "Իռլանդիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Gales",
+          "answer_B": "Irlanda",
+          "answer_C": "Escocia",
+          "answer_D": "Francia",
+          "categoryType": "TOP5",
+          "question": "¿A quién derrotó Inglaterra con el marcador más amplio de su historia?",
+          "right_answer": "Irlanda",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_058"
+        },
+        "de": {
+          "answer_A": "Wales",
+          "answer_B": "Irland",
+          "answer_C": "Schottland",
+          "answer_D": "Frankreich",
+          "categoryType": "TOP5",
+          "question": "Wen besiegte England mit dem höchsten Ergebnis seiner Geschichte?",
+          "right_answer": "Irland",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_058"
+        },
+        "it": {
+          "answer_A": "Galles",
+          "answer_B": "Irlanda",
+          "answer_C": "Scozia",
+          "answer_D": "Francia",
+          "categoryType": "TOP5",
+          "question": "Chi ha battuto l’Inghilterra con il punteggio più largo della sua storia?",
+          "right_answer": "Irlanda",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_058"
+        }
+      }
+    },
+    {
+      "questionId": "english_059",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who in their history lost the England team with the largest score?",
+          "answer_A": "Brazil",
+          "answer_B": "Hungary",
+          "answer_C": "Germany",
+          "answer_D": "Scotland",
+          "right_answer": "Hungary"
+        },
+        "ru": {
+          "question": "Кому в своей истории проиграла сборная Англии с самым крупным счетом ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Венгрия",
+          "answer_C": "Германия",
+          "answer_D": "Шотландия",
+          "right_answer": "Венгрия"
+        },
+        "hy": {
+          "question": "Անգլիայի հավաքականը իր պատմության մեջ ու՞մ է պարտվել ամենախոշոր հաշվով:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Հունգարիա",
+          "answer_C": "Գերմանիա",
+          "answer_D": "Շոտլանդիա",
+          "right_answer": "Հունգարիա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Hungría",
+          "answer_C": "Alemania",
+          "answer_D": "Escocia",
+          "categoryType": "TOP5",
+          "question": "¿Contra quién sufrió Inglaterra la derrota más amplia de su historia?",
+          "right_answer": "Hungría",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_059"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Ungarn",
+          "answer_C": "Deutschland",
+          "answer_D": "Schottland",
+          "categoryType": "TOP5",
+          "question": "Gegen wen erlitt England die höchste Niederlage seiner Geschichte?",
+          "right_answer": "Ungarn",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_059"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Ungheria",
+          "answer_C": "Germania",
+          "answer_D": "Scozia",
+          "categoryType": "TOP5",
+          "question": "Contro chi l’Inghilterra ha subito la sconfitta più larga della sua storia?",
+          "right_answer": "Ungheria",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_059"
+        }
+      }
+    },
+    {
+      "questionId": "english_060",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "In what year did the England team first participate in the World Cup?",
+          "answer_A": "1930",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1966",
+          "right_answer": "1950"
+        },
+        "ru": {
+          "question": "В каком году сборная Англии впервые участвовала в чемпионате Мира ?",
+          "answer_A": "1930",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1966",
+          "right_answer": "1950"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Անգլիայի հավաքականը մասնակցել Աշխարհի առաջնությանը:",
+          "answer_A": "1930",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1966",
+          "right_answer": "1950"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1930",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1966",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó Inglaterra por primera vez en la Copa del Mundo?",
+          "right_answer": "1950",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_060"
+        },
+        "de": {
+          "answer_A": "1930",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1966",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm England erstmals an der Weltmeisterschaft teil?",
+          "right_answer": "1950",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_060"
+        },
+        "it": {
+          "answer_A": "1930",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1966",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Inghilterra partecipò per la prima volta ai Mondiali?",
+          "right_answer": "1950",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_060"
+        }
+      }
+    },
+    {
+      "questionId": "english_061",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "In what year did England become the World Champion?",
+          "answer_A": "1962",
+          "answer_B": "1966",
+          "answer_C": "1970",
+          "answer_D": "1986",
+          "right_answer": "1966"
+        },
+        "ru": {
+          "question": "В каком году сборная Англии стала чемпионом Мира ?",
+          "answer_A": "1962",
+          "answer_B": "1966",
+          "answer_C": "1970",
+          "answer_D": "1986",
+          "right_answer": "1966"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Անգլիայի հավաքականը նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1962",
+          "answer_B": "1966",
+          "answer_C": "1970",
+          "answer_D": "1986",
+          "right_answer": "1966"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1962",
+          "answer_B": "1966",
+          "answer_C": "1970",
+          "answer_D": "1986",
+          "categoryType": "TOP5",
+          "question": "¿En qué año Inglaterra fue campeona del mundo?",
+          "right_answer": "1966",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_061"
+        },
+        "de": {
+          "answer_A": "1962",
+          "answer_B": "1966",
+          "answer_C": "1970",
+          "answer_D": "1986",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde England Weltmeister?",
+          "right_answer": "1966",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_061"
+        },
+        "it": {
+          "answer_A": "1962",
+          "answer_B": "1966",
+          "answer_C": "1970",
+          "answer_D": "1986",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Inghilterra è diventata campione del mondo?",
+          "right_answer": "1966",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_061"
+        }
+      }
+    },
+    {
+      "questionId": "english_062",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "In what year did the England team first participate in the European Championship?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1968"
+        },
+        "ru": {
+          "question": "В каком году сборная Англии впервые участвовала в чемпионате Европы ?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1968"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Անգլիայի հավաքականը մասնակցել Եվրոպայի առաջնությանը:",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1968"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó Inglaterra por primera vez en la Eurocopa?",
+          "right_answer": "1968",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_062"
+        },
+        "de": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm England erstmals an der Europameisterschaft teil?",
+          "right_answer": "1968",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_062"
+        },
+        "it": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In quale anno l’Inghilterra partecipò per la prima volta al Campionato Europeo?",
+          "right_answer": "1968",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_062"
+        }
+      }
+    },
+    {
+      "questionId": "english_063",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "How many times have England become World Champions?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Англии стала чемпионом Мира ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Անգլիայի հավաքականը նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces fue Inglaterra campeona del mundo?",
+          "right_answer": "1",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_063"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde England Weltmeister?",
+          "right_answer": "1",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_063"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte l’Inghilterra è diventata campione del mondo?",
+          "right_answer": "1",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_063"
+        }
+      }
+    },
+    {
+      "questionId": "english_064",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "How many times have England become European champions?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Англии стала чемпионом Европы ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Անգլիայի հավաքականը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces fue Inglaterra campeona de Europa?",
+          "right_answer": "0",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_064"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde England Europameister?",
+          "right_answer": "0",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_064"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte l’Inghilterra è diventata campione d’Europa?",
+          "right_answer": "0",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_064"
+        }
+      }
+    },
+    {
+      "questionId": "english_065",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which footballer spent the most matches in England?",
+          "answer_A": "Peter Shilton",
+          "answer_B": "David Beckham",
+          "answer_C": "Wayne Rooney",
+          "answer_D": "Steven Gerrard",
+          "right_answer": "Peter Shilton"
+        },
+        "ru": {
+          "question": "Какой футболист провел больше всех матчей в сборной Англии ?",
+          "answer_A": "Питер Шилтон",
+          "answer_B": "Дэвид Бекхэм",
+          "answer_C": "Уэйн Руни",
+          "answer_D": "Стивен Джеррард",
+          "right_answer": "Питер Шилтон"
+        },
+        "hy": {
+          "question": "Ո՞վ է Անգլիայի հավաքականում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Պիտեր Շիլթոն",
+          "answer_B": "Դեվիդ Բեքհեմ",
+          "answer_C": "Ուեյն Ռունի",
+          "answer_D": "Սթիվեն Ջերարդ",
+          "right_answer": "Պիտեր Շիլթոն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Peter Shilton",
+          "answer_B": "David Beckham",
+          "answer_C": "Wayne Rooney",
+          "answer_D": "Steven Gerrard",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista jugó más partidos con Inglaterra?",
+          "right_answer": "Peter Shilton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_065"
+        },
+        "de": {
+          "answer_A": "Peter Shilton",
+          "answer_B": "David Beckham",
+          "answer_C": "Wayne Rooney",
+          "answer_D": "Steven Gerrard",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer absolvierte die meisten Spiele für England?",
+          "right_answer": "Peter Shilton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_065"
+        },
+        "it": {
+          "answer_A": "Peter Shilton",
+          "answer_B": "David Beckham",
+          "answer_C": "Wayne Rooney",
+          "answer_D": "Steven Gerrard",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha giocato più partite con l’Inghilterra?",
+          "right_answer": "Peter Shilton",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_065"
+        }
+      }
+    },
+    {
+      "questionId": "english_066",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of all time for England?",
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Bobby Charlton",
+          "answer_C": "Harry Kane",
+          "answer_D": "Gary Lineker",
+          "right_answer": "Harry Kane"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир всех времен сборной Англии ?",
+          "answer_A": "Уэйн Руни",
+          "answer_B": "Бобби Чарльтон",
+          "answer_C": "Гарри Кейн",
+          "answer_D": "Гари Линекер",
+          "right_answer": "Гарри Кейн"
+        },
+        "hy": {
+          "question": "Ո՞վ է Անգլիայի հավաքականի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ուեյն Ռունի",
+          "answer_B": "Բոբբի Չարլթոն",
+          "answer_C": "Հարի Քեյն",
+          "answer_D": "Հարի Լինիկեր",
+          "right_answer": "Հարի Քեյն"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Bobby Charlton",
+          "answer_C": "Harry Kane",
+          "answer_D": "Gary Lineker",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de Inglaterra?",
+          "right_answer": "Harry Kane",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_066"
+        },
+        "de": {
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Bobby Charlton",
+          "answer_C": "Harry Kane",
+          "answer_D": "Gary Lineker",
+          "categoryType": "TOP5",
+          "question": "Wer ist Englands bester Torschütze aller Zeiten?",
+          "right_answer": "Harry Kane",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_066"
+        },
+        "it": {
+          "answer_A": "Wayne Rooney",
+          "answer_B": "Bobby Charlton",
+          "answer_C": "Harry Kane",
+          "answer_D": "Gary Lineker",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi dell’Inghilterra?",
+          "right_answer": "Harry Kane",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_066"
+        }
+      }
+    },
+    {
+      "questionId": "english_067",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the Premier League in the season 2018–2019?",
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Премьер-лигу в сезоне 2018–2019?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Челси",
+          "answer_D": "Тоттенхэм",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ. դարձել Պրեմիեր լիգայի չեմպիոն:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Չելսի",
+          "answer_D": "Տոտենհեմ",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Premier League en la temporada 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_067"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die Premier League in der Saison 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_067"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Premier League nella stagione 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_067"
+        }
+      }
+    },
+    {
+      "questionId": "english_068",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club in the season 2018–2019 took second place in the Premier League?",
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "right_answer": "Liverpool"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 занял второе место в Премьер-лиге?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Ливерпуль",
+          "answer_C": "Челси",
+          "answer_D": "Тоттенхэм",
+          "right_answer": "Ливерпуль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ. դարձել Պրեմիեր լիգայի արծաթե մեդալակիր:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Լիվերպուլ",
+          "answer_C": "Չելսի",
+          "answer_D": "Տոտենհեմ",
+          "right_answer": "Լիվերպուլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó segundo en la Premier League 2018–2019?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_068"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde in der Premier League 2018–2019 Zweiter?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_068"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Liverpool",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato secondo in Premier League nella stagione 2018–2019?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_068"
+        }
+      }
+    },
+    {
+      "questionId": "english_069",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club ranked third in the Premier League in the 2018–2019 season?",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "right_answer": "Chelsea"
+        },
+        "ru": {
+          "question": "Какой клуб занял третье место в Премьер-лиге в сезоне 2018–2019?",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Челси",
+          "answer_D": "Тоттенхэм",
+          "right_answer": "Челси"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ. դարձել Պրեմիեր լիգայի բրոնզե մեդալակիր:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Չելսի",
+          "answer_D": "Տոտենհեմ",
+          "right_answer": "Չելսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó tercero en la Premier League 2018–2019?",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_069"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde in der Premier League 2018–2019 Dritter?",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_069"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato terzo in Premier League nella stagione 2018–2019?",
+          "right_answer": "Chelsea",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_069"
+        }
+      }
+    },
+    {
+      "questionId": "english_070",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the FA Cup in 2018–2019?",
+          "answer_A": "Manchester City",
+          "answer_B": "Watford",
+          "answer_C": "Crystal Palace",
+          "answer_D": "Wolverhampton",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Англии в сезоне 2018–2019?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Уотфорд",
+          "answer_C": "Кристал Пэлас",
+          "answer_D": "Вулверхэмптон",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ. դարձել Անգլիայի գավաթակիր:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Ուոթֆորդ",
+          "answer_C": "Կրիստալ Փելես",
+          "answer_D": "Վուլվերհեմպտոն",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Watford",
+          "answer_C": "Crystal Palace",
+          "answer_D": "Wolverhampton",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la FA Cup en 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_070"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Watford",
+          "answer_C": "Crystal Palace",
+          "answer_D": "Wolverhampton",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann den FA Cup 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_070"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Watford",
+          "answer_C": "Crystal Palace",
+          "answer_D": "Wolverhampton",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la FA Cup nel 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_070"
+        }
+      }
+    },
+    {
+      "questionId": "english_071",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Who in the 2018–2019 season became the Premier League top scorer?",
+          "answer_A": "Sadio Mané",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "All three",
+          "right_answer": "All three"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал лучшим бомбардиром Премьер-лиги?",
+          "answer_A": "Садио Мане",
+          "answer_B": "Мохамед Салах",
+          "answer_C": "Пьер-Эмерик Обамеянг",
+          "answer_D": "Все трое",
+          "right_answer": "Все трое"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018–2019 թթ. Պրեմիեր լիգայի լավագույն ռմբարկուն:",
+          "answer_A": "Սադիո Մանե",
+          "answer_B": "Մուհամեդ Սալահ",
+          "answer_C": "Պիեր-Էմերիկ Օբամեյանգ",
+          "answer_D": "Երեքն ել",
+          "right_answer": "Երեքն ել"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Sadio Mané",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Los tres",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue máximo goleador de la Premier League en la temporada 2018–2019?",
+          "right_answer": "Los tres",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_071"
+        },
+        "de": {
+          "answer_A": "Sadio Mané",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Alle drei",
+          "categoryType": "TOP5",
+          "question": "Wer wurde in der Saison 2018–2019 Torschützenkönig der Premier League?",
+          "right_answer": "Alle drei",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_071"
+        },
+        "it": {
+          "answer_A": "Sadio Mané",
+          "answer_B": "Mohamed Salah",
+          "answer_C": "Pierre-Emerick Aubameyang",
+          "answer_D": "Tutti e tre",
+          "categoryType": "TOP5",
+          "question": "Chi è stato capocannoniere della Premier League nella stagione 2018–2019?",
+          "right_answer": "Tutti e tre",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_071"
+        }
+      }
+    },
+    {
+      "questionId": "english_072",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which of the listed in the season 2018–2019 became the best assistant to the Premier League?",
+          "answer_A": "Eden Hazard",
+          "answer_B": "Ryan Fraser",
+          "answer_C": "Trent Alexander-Arnold",
+          "answer_D": "Christian Eriksen",
+          "right_answer": "Eden Hazard"
+        },
+        "ru": {
+          "question": "Кто из перечисленных в сезоне 2018–2019 стал лучшим ассистентом Премьер-лиги?",
+          "answer_A": "Эден Азар",
+          "answer_B": "Райан Фрейзер",
+          "answer_C": "Трент Александер-Арнольд",
+          "answer_D": "Кристиан Эриксен",
+          "right_answer": "Эден Азар"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018–2019 թթ. Պրեմիեր լիգայի ամենաշատ գոլային փոխանցումների հեղինակը:",
+          "answer_A": "Էդեն Ազար",
+          "answer_B": "Ռայան Ֆրեյզեր",
+          "answer_C": "Տրենտ Ալեքսանդր-Առնոլդ",
+          "answer_D": "Քրիստիան Էրիկսեն",
+          "right_answer": "Էդեն Ազար"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Eden Hazard",
+          "answer_B": "Ryan Fraser",
+          "answer_C": "Trent Alexander-Arnold",
+          "answer_D": "Christian Eriksen",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el mejor asistente de la Premier League en la temporada 2018–2019?",
+          "right_answer": "Eden Hazard",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_072"
+        },
+        "de": {
+          "answer_A": "Eden Hazard",
+          "answer_B": "Ryan Fraser",
+          "answer_C": "Trent Alexander-Arnold",
+          "answer_D": "Christian Eriksen",
+          "categoryType": "TOP5",
+          "question": "Wer war in der Saison 2018–2019 der beste Vorlagengeber der Premier League?",
+          "right_answer": "Eden Hazard",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_072"
+        },
+        "it": {
+          "answer_A": "Eden Hazard",
+          "answer_B": "Ryan Fraser",
+          "answer_C": "Trent Alexander-Arnold",
+          "answer_D": "Christian Eriksen",
+          "categoryType": "TOP5",
+          "question": "Chi è stato il miglior assistman della Premier League nella stagione 2018–2019?",
+          "right_answer": "Eden Hazard",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_072"
+        }
+      }
+    },
+    {
+      "questionId": "english_073",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the English Football League Cup in the 2018–2019 season?",
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Tottenham",
+          "answer_D": "Wolverhampton",
+          "right_answer": "Manchester City"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок английской лиги в сезоне 2018–2019?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Челси",
+          "answer_C": "Тоттенхэм",
+          "answer_D": "Вулверхэмптон",
+          "right_answer": "Манчестер Сити"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ մրցաշրջանում դարձել Անգլիայի լիգայի գավաթակիր:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Չելսի",
+          "answer_C": "Տոտենհեմ",
+          "answer_D": "Վուլվերհեմպտոն",
+          "right_answer": "Մանչեսթեր Սիթի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Tottenham",
+          "answer_D": "Wolverhampton",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Copa de la Liga inglesa en la temporada 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_073"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Tottenham",
+          "answer_D": "Wolverhampton",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann in der Saison 2018–2019 den englischen Ligapokal?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_073"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Chelsea",
+          "answer_C": "Tottenham",
+          "answer_D": "Wolverhampton",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Coppa di Lega inglese nella stagione 2018–2019?",
+          "right_answer": "Manchester City",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_073"
+        }
+      }
+    },
+    {
+      "questionId": "english_074",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club ranked fourth in the Premier League in the 2018–2019 season?",
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "right_answer": "Tottenham"
+        },
+        "ru": {
+          "question": "Какой клуб занял четвёртое место в Премьер-лиге в сезоне 2018–2019?",
+          "answer_A": "Арсенал",
+          "answer_B": "Манчестер Юнайтед",
+          "answer_C": "Челси",
+          "answer_D": "Тоттенхэм",
+          "right_answer": "Тоттенхэм"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ. Պրեմիեր լիգայում գրավել չորրորդ տեղը:",
+          "answer_A": "Արսենալ",
+          "answer_B": "Մանչեսթեր Յունայթեդ",
+          "answer_C": "Չելսի",
+          "answer_D": "Տոտենհեմ",
+          "right_answer": "Տոտենհեմ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó cuarto en la Premier League 2018–2019?",
+          "right_answer": "Tottenham",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_074"
+        },
+        "de": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub wurde in der Premier League 2018–2019 Vierter?",
+          "right_answer": "Tottenham",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_074"
+        },
+        "it": {
+          "answer_A": "Arsenal",
+          "answer_B": "Manchester United",
+          "answer_C": "Chelsea",
+          "answer_D": "Tottenham",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato quarto in Premier League nella stagione 2018–2019?",
+          "right_answer": "Tottenham",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_074"
+        }
+      }
+    },
+    {
+      "questionId": "english_075",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which clubs listed in the 2018–2019 Premier League season are not in the top four?",
+          "answer_A": "Arsenal, Manchester United",
+          "answer_B": "Manchester United, Chelsea",
+          "answer_C": "Chelsea, Tottenham",
+          "answer_D": "Tottenham, Arsenal",
+          "right_answer": "Arsenal, Manchester United"
+        },
+        "ru": {
+          "question": "Какие из перечисленных клубов не попали в первую четвёрку Премьер-лиги в сезоне 2018–2019?",
+          "answer_A": "Арсенал, Манчестер Юнайтед",
+          "answer_B": "Манчестер Юнайтед, Челси",
+          "answer_C": "Челси, Тоттенхэм",
+          "answer_D": "Тоттенхэм, Арсенал",
+          "right_answer": "Арсенал, Манчестер Юнайтед"
+        },
+        "hy": {
+          "question": "Նշվածներից Պրեմիեր լիգայի 2018–2019 թթ. մրցաշրջանում ո՞ր ակումբներն են դուրս մնացել լավագույն քառյակից:",
+          "answer_A": "Արսենալ, Մանչեսթեր Յունայթեդ",
+          "answer_B": "Մանչեսթեր Յունայթեդ, Չելսի",
+          "answer_C": "Չելսի, Տոտենհեմ",
+          "answer_D": "Տոտենհեմ, Արսենալ",
+          "right_answer": "Արսենալ, Մանչեսթեր Յունայթեդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Arsenal, Manchester United",
+          "answer_B": "Manchester United, Chelsea",
+          "answer_C": "Chelsea, Tottenham",
+          "answer_D": "Tottenham, Arsenal",
+          "categoryType": "TOP5",
+          "question": "¿Qué clubes de la Premier League 2018–2019 no terminaron entre los cuatro primeros?",
+          "right_answer": "Arsenal, Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_075"
+        },
+        "de": {
+          "answer_A": "Arsenal, Manchester United",
+          "answer_B": "Manchester United, Chelsea",
+          "answer_C": "Chelsea, Tottenham",
+          "answer_D": "Tottenham, Arsenal",
+          "categoryType": "TOP5",
+          "question": "Welche der genannten Klubs landeten in der Premier League 2018–2019 nicht unter den Top 4?",
+          "right_answer": "Arsenal, Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_075"
+        },
+        "it": {
+          "answer_A": "Arsenal, Manchester United",
+          "answer_B": "Manchester United, Chelsea",
+          "answer_C": "Chelsea, Tottenham",
+          "answer_D": "Tottenham, Arsenal",
+          "categoryType": "TOP5",
+          "question": "Quali club della Premier League 2018–2019 non sono arrivati tra le prime quattro?",
+          "right_answer": "Arsenal, Manchester United",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_075"
+        }
+      }
+    },
+    {
+      "questionId": "english_076",
+      "categoryType": "TOP5",
+      "type": "English",
+      "source": {
+        "en": {
+          "question": "Which club won the Premier League in the 2024/2025 season?",
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "right_answer": "Liverpool"
+        },
+        "ru": {
+          "question": "Какой клуб стал чемпионом Англии в сезоне 2024/2025?",
+          "answer_A": "Манчестер Сити",
+          "answer_B": "Арсенал",
+          "answer_C": "Ливерпуль",
+          "answer_D": "Челси",
+          "right_answer": "Ливерпуль"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Անգլիայի Պրեմիեր լիգայի չեմպիոն 2024/2025 մրցաշրջանում:",
+          "answer_A": "Մանչեսթեր Սիթի",
+          "answer_B": "Արսենալ",
+          "answer_C": "Լիվերպուլ",
+          "answer_D": "Չելսի",
+          "right_answer": "Լիվերպուլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Premier League en la temporada 2024–2025?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_076"
+        },
+        "de": {
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Welcher Klub gewann die Premier League in der Saison 2024–2025?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_076"
+        },
+        "it": {
+          "answer_A": "Manchester City",
+          "answer_B": "Arsenal",
+          "answer_C": "Liverpool",
+          "answer_D": "Chelsea",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Premier League nella stagione 2024–2025?",
+          "right_answer": "Liverpool",
+          "type": "English",
+          "answered": false,
+          "questionId": "english_076"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-09-10",
+  "purpose": "Human review files for Spanish, German, and Italian translations before Firestore update.",
+  "source_directory": "app/question_translation_batches_es_de_it_2026_09_09_manual_draft",
+  "review_directory": "app/question_translation_human_review_es_de_it_2026_09_10",
+  "firestore_updated": false,
+  "review_status_values": [
+    "approved",
+    "needs_fix",
+    "questionable_fact",
+    "translation_unclear"
+  ],
+  "files": [
+    {
+      "batch": "uefa_super_cup.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/uefa_super_cup_human_review.json",
+      "items_count": 31
+    },
+    {
+      "batch": "uefa_european_championship.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/uefa_european_championship_human_review.json",
+      "items_count": 21
+    },
+    {
+      "batch": "ron_mes_vsrm.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/ron_mes_vsrm_human_review.json",
+      "items_count": 71
+    },
+    {
+      "batch": "real_barce_vsrb.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/real_barce_vsrb_human_review.json",
+      "items_count": 71
+    },
+    {
+      "batch": "top5_spain.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/top5_spain_human_review.json",
+      "items_count": 71
+    },
+    {
+      "batch": "top5_germany.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/top5_germany_human_review.json",
+      "items_count": 67
+    },
+    {
+      "batch": "top5_italy.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/top5_italy_human_review.json",
+      "items_count": 70
+    },
+    {
+      "batch": "top5_france.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/top5_france_human_review.json",
+      "items_count": 66
+    },
+    {
+      "batch": "top5_english.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/top5_english_human_review.json",
+      "items_count": 76
+    },
+    {
+      "batch": "uefa_champions_league.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/uefa_champions_league_human_review.json",
+      "items_count": 47
+    },
+    {
+      "batch": "uefa_europa_league.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/uefa_europa_league_human_review.json",
+      "items_count": 44
+    },
+    {
+      "batch": "world_cup_world_championship.json",
+      "review_file": "app/question_translation_human_review_es_de_it_2026_09_10/world_cup_world_championship_human_review.json",
+      "items_count": 54
+    }
+  ]
+}

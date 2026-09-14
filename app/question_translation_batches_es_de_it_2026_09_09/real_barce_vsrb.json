@@ -1,0 +1,4922 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "REAL_BARCE",
+  "type": "vsRB",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "manual_reviewed_translation_batch",
+  "items": [
+    {
+      "questionId": "vsrb_001",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club was founded before 1900?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб был основан до 1900 года ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է հիմնադրվել մինչեվ 1900 թ.:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue fundado antes de 1900?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_001"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein wurde vor 1900 gegründet?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_001"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato fondato prima del 1900?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_001"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_002",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "The best club of the twentieth century according to FIFA …",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Лучший клуб ХХ века по версии ФИФА …",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ըստ ՖԻՖԱ-ի XX դարի լավագույն ակումբն է …",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "El mejor club del siglo XX según la FIFA fue...",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_002"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Der beste Verein des 20. Jahrhunderts laut FIFA war...",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_002"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Il miglior club del XX secolo secondo la FIFA è stato...",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_002"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_003",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish championship the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем чемпионатa Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó más veces el campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_003"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die spanische Meisterschaft am häufigsten?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_003"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte il campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_003"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_004",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish Cup the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех завоевал Кубок Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իսպանիայի գավաթը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó más veces la Copa del Rey?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_004"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Copa del Rey am häufigsten?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_004"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte la Coppa del Re?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_004"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_005",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has won the Spanish Super Cup the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех завоевал Суперкубок Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իսպանիայի Սուպեր գավաթը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó más veces la Supercopa de España?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_005"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die spanische Supercopa am häufigsten?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_005"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte la Supercoppa di Spagna?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_005"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_006",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has always played in the top division of the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб всегда играл в высшем дивизионе чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է միշտ հանդես եկել Իսպանիայի բարձրագույն խմբի առաջնությունում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club siempre ha jugado en la máxima división de España?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_006"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein spielte immer in der höchsten spanischen Liga?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_006"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha sempre giocato nella massima divisione spagnola?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_006"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_007",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has been relegated from the top division of Spanish football?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб вылетал из высшего дивизиона чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դուրս մնացել Իսպանիայի բարձրագույն դիվիզիոնից:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ha descendido de la máxima división del fútbol español?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_007"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein ist aus der höchsten spanischen Liga abgestiegen?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_007"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è retrocesso dalla massima divisione spagnola?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_007"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_008",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has won the Champions League the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Лигу чемпионов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ դարձել Չեմպիոնների Լիգայի հաղթող:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ha ganado más veces la Champions League?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_008"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Champions League am häufigsten?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_008"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte la Champions League?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_008"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_009",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Champions League the most in the 20th century?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Лигу чемпионов в ХХ веке ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ դարձել Չեմպիոնների Լիգայի հաղթող XX դարում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó más veces la Champions League en el siglo XX?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_009"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Champions League im 20. Jahrhundert am häufigsten?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_009"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte la Champions League nel XX secolo?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_009"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_010",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Champions League the most in the 21st century?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Лигу чемпионов в XXI веке ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ դարձել Չեմպիոնների Լիգայի հաղթող XXI դարում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó más veces la Champions League en el siglo XXI?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_010"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Champions League im 21. Jahrhundert am häufigsten?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_010"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte la Champions League nel XXI secolo?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_010"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_011",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won all major official competitions in one calendar year?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб за один календарный год выиграл все основные официальные турниры ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է մեկ օրացուցային տարում հաղթել բոլոր հիմնական պաշտոնական մրցաշարերում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó todos los grandes torneos oficiales en un año natural?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_011"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann alle großen offiziellen Wettbewerbe in einem Kalenderjahr?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_011"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto tutti i principali tornei ufficiali in un anno solare?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_011"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_012",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Club World Cup the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем Клубного чемпионата мира ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ դարձել Աշխարհի ակումբային առաջնության հաղթող:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó más veces el Mundial de Clubes?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_012"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Klub-Weltmeisterschaft am häufigsten?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_012"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto più volte il Mondiale per Club?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_012"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_013",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club reached the final of the Club World Cup 4 times?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб 4 раза выходил в финал Клубного чемпионата мира ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 4 անգամ դուրս եկել Աշխարհի ակումբային առաջնության եզրափակիչ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club llegó 4 veces a la final del Mundial de Clubes?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_013"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein erreichte viermal das Finale der Klub-Weltmeisterschaft?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_013"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha raggiunto 4 volte la finale del Mondiale per Club?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_013"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_014",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has won the UEFA Super Cup 5 times or more?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб завоевал Суперкубок УЕФА 5 раз и более ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել ՈՒԵՖԱ-ի Սուպեր գավաթակիր 5 եվ ավել անգամ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó la Supercopa de la UEFA 5 veces o más?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_014"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann den UEFA-Superpokal fünfmal oder öfter?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_014"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto la Supercoppa UEFA 5 o più volte?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_014"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_015",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club hosts home games at the Santiago Bernabeu Stadium?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб проводит домашние матчи на стадионе Сантьяго Бернабеу ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է տնային խաղերն անցկացնում Սանտյագո Բեռնաբեու մարզադաշտում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club juega sus partidos en casa en el Santiago Bernabéu?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_015"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein trägt seine Heimspiele im Santiago Bernabéu aus?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_015"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club gioca le partite casalinghe al Santiago Bernabéu?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_015"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_016",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club hosts home matches at Camp Nou Stadium?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб проводит домашние матчи на стадионе Камп Ноу ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է տնային խաղերն անցկացնում Կամպ Նոու մարզադաշտում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club juega sus partidos en casa en el Camp Nou?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_016"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein trägt seine Heimspiele im Camp Nou aus?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_016"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club gioca le partite casalinghe al Camp Nou?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_016"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_017",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club hosts home matches at the Metropolitano Stadium?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб проводит домашние матчи на стадионе Метрополитано ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է տնային խաղերն անցկացնում Մետրոպոլիտանո մարզադաշտում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club juega sus partidos en casa en el estadio Metropolitano?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_017"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein trägt seine Heimspiele im Metropolitano-Stadion aus?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_017"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club gioca le partite casalinghe allo stadio Metropolitano?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_017"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_018",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club reached the Spanish Cup final most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех вышел в финал Кубка Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ դուրս եկել Իսպանիայի գավաթի եզրափակիչ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club llegó más veces a la final de la Copa del Rey?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_018"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein erreichte das Finale der Copa del Rey am häufigsten?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_018"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha raggiunto più volte la finale della Coppa del Re?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_018"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_019",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the championship of Spain in the season 2013–2014?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб стал победителем чемпионата Испании в сезоне 2013–2014 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Իսպանիայի 2013–2014 թթ. առաջնության հաղթող:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó el campeonato de España en la temporada 2013-2014?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_019"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die spanische Meisterschaft in der Saison 2013-2014?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_019"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto il campionato spagnolo nella stagione 2013-2014?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_019"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_020",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Champions League 3 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу чемпионов 3 раза подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է հաղթել Չեմպիոնների Լիգայում 3 անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó la Champions League 3 veces seguidas?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_020"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Champions League dreimal in Folge?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_020"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto la Champions League 3 volte consecutive?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_020"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_021",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Champions League 2 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу чемпионов 2 раза подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է հաղթել Չեմպիոնների Լիգայում 2 անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó la Champions League 2 veces seguidas?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_021"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Champions League zweimal in Folge?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_021"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto la Champions League 2 volte consecutive?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_021"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_022",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has a stadium that is more spacious than Wembley Stadium?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб имеет стадион, которий более вместительный, чем стадион Уэмбли ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն ունի Ուեմբլի մարզադաշտից ավելի շատ հանդիսական տեղավորող մարզադաշտ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club tiene un estadio con mayor capacidad que Wembley?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_022"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein hat ein Stadion mit größerer Kapazität als Wembley?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_022"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha uno stadio con una capienza maggiore di Wembley?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_022"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_023",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club collaborates with Adidas?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб сотрудничает с Adidas ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է համագործակցում Adidas-ի հետ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club colabora con Adidas?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_023"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein arbeitet mit Adidas zusammen?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_023"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club collabora con Adidas?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_023"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_024",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club collaborates with Nike?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб сотрудничает с Nike ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է համագործակցում Nike-ի հետ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club colabora con Nike?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_024"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein arbeitet mit Nike zusammen?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_024"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club collabora con Nike?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_024"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_025",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has 1500 or more victories in the Spanish Championship?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб имеет 1500 и более побед в чемпионатах Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնություններում 1500 եվ ավել հանդիպումներ ավարտել հաղթանակով:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club tiene 1500 o más victorias en el campeonato de España?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_025"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein hat 1500 oder mehr Siege in der spanischen Meisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_025"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha 1500 o più vittorie nel campionato spagnolo?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_025"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_026",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club lost to Juventus in the Champions League final?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб в финале Лиги чемпионов уступил Ювентусу ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Չեմպիոնների Լիգայի եզրափակչում պարտվել Յուվենթուսին:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club perdió contra la Juventus en una final de la Champions League?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_026"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein verlor ein Champions-League-Finale gegen Juventus?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_026"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha perso contro la Juventus in una finale di Champions League?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_026"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_027",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club was the first to win the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб первым выиграл чемпионат Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է առաջինը նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue el primero en ganar el campeonato de España?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_027"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann als erster die spanische Meisterschaft?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_027"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto per primo il campionato spagnolo?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_027"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_028",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club was the silver medalist of the Spanish championship the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал серебряным призером чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ դարձել Իսպանիայի առաջնության արծաթե մեդալակիր:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue subcampeón de España más veces?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_028"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein wurde am häufigsten spanischer Vizemeister?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_028"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato più volte secondo nel campionato spagnolo?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_028"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_029",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which of these clubs is the all-time leader in third-place finishes in LaLiga?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой из этих клубов является рекордсменом по третьим местам в Ла Лиге ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Այս ակումբներից ո՞րն է Լա Լիգայում երրորդ տեղերի քանակով պատմական առաջատարը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Cuál de estos clubes es el líder histórico en terceros puestos de LaLiga?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_029"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher dieser Vereine ist der historische Rekordhalter bei dritten Plätzen in LaLiga?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_029"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale di questi club è il leader storico per terzi posti in LaLiga?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_029"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_030",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club finished the most in the first three of the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех финишировал в первой тройке чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Բոլորից շատ ո՞ր ակումբն է Իսպանիայի առաջնություններում մրցաշրջանն ավարտել լավագույն եռյակում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club terminó más veces entre los tres primeros del campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_030"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein landete am häufigsten unter den ersten drei der spanischen Meisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_030"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato più spesso tra i primi tre del campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_030"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_031",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club is the leader in terms of points in the overall table of the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб лидирует по набранным очкам в общей таблице чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնություններում ընդհանուր վաստակած միավորներով առաջատարը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club lidera la clasificación histórica por puntos del campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_031"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein führt die ewige Tabelle der spanischen Meisterschaft nach Punkten an?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_031"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club guida la classifica storica per punti del campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_031"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_032",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club leads in the total number of victories in the championships of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб лидирует по общему количеству побед в чемпионатах Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնություններում ընդհանուր հաղթանակների քանակով առաջատարը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club lidera el número total de victorias en los campeonatos de España?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_032"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein führt bei der Gesamtzahl der Siege in der spanischen Meisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_032"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club guida il numero totale di vittorie nei campionati spagnoli?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_032"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_033",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has 600 or more defeats in the championships of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб имеет 600 и более поражений в чемпионатах Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնություններում պարտվել 600 եվ ավել հանդիպումներում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club tiene 600 o más derrotas en los campeonatos de España?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_033"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein hat 600 oder mehr Niederlagen in der spanischen Meisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_033"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha 600 o più sconfitte nei campionati spagnoli?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_033"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_034",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club has 500 or more draws in the championships of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб имеет 500 и более ничейных результатов в чемпионатах Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնություններում 500 եվ ավել հանդիպումներ ավարտել ոչ ոքի:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club tiene 500 o más empates en los campeonatos de España?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_034"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein hat 500 oder mehr Unentschieden in der spanischen Meisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_034"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha 500 o più pareggi nei campionati spagnoli?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_034"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_035",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in the 2017–2018 season of the Spanish championship took a lower position than Atletico Madrid?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2017–2018 чемпионата Испании занял более низкую позицию, чем Атлетико Мадрид ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության 2017–2018 թթ. մրցաշրջանում ո՞վ է Մադրիդի Ատլետիկոյից ավելի ցածր տեղ գրավել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club terminó por debajo del Atlético Madrid en LaLiga 2017-2018?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_035"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein landete in LaLiga 2017-2018 hinter Atlético Madrid?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_035"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato dietro l'Atlético Madrid nella Liga 2017-2018?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_035"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_036",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in the 2016–2017 season of the Spanish championship took a lower position than Atletico Madrid?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2016–2017 чемпионата Испании занял более низкую позицию, чем Атлетико Мадрид ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության 2016–2017 թթ. մրցաշրջանում ո՞վ է Մադրիդի Ատլետիկոյից ավելի ցածր տեղ գրավել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club terminó por debajo del Atlético Madrid en LaLiga 2016-2017?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_036"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein landete in LaLiga 2016-2017 hinter Atlético Madrid?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_036"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato dietro l'Atlético Madrid nella Liga 2016-2017?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_036"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_037",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club ranked lower than Atletico Madrid in the 2013–2014 season of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2013–2014 чемпионата Испании занял более низкую позицию, чем Атлетико Мадрид ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության 2013–2014 թթ. մրցաշրջանում ո՞վ է Մադրիդի Ատլետիկոյից ավելի ցածր տեղ գրավել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club terminó por debajo del Atlético Madrid en LaLiga 2013-2014?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_037"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein landete in LaLiga 2013-2014 hinter Atlético Madrid?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_037"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato dietro l'Atlético Madrid nella Liga 2013-2014?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_037"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_038",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in the 2007–2008 season of the Spanish championship took a lower position than Villarreal?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2007–2008 чемпионата Испании занял более низкую позицию, чем Вильярреал ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության 2007–2008 թթ. մրցաշրջանում ո՞վ է Վիլյառեալից ավելի ցածր տեղ գրավել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club terminó por debajo del Villarreal en LaLiga 2007-2008?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_038"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein landete in LaLiga 2007-2008 hinter Villarreal?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_038"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato dietro il Villarreal nella Liga 2007-2008?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_038"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_039",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took off from the 1/8 finals of the Champions League in the 2006–2007 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб вылетел с 1/8 финала Лиги чемпионов в сезоне 2006–2007 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2006–2007 թթ. մրցաշարում ո՞ր ակումբն է պայքարից դուրս մնացել 1/8-րդ եզրափակչից:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue eliminado en octavos de final de la Champions League 2006-2007?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_039"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein schied in der Champions League 2006-2007 im Achtelfinale aus?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_039"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato eliminato agli ottavi di Champions League 2006-2007?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_039"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_040",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took off from the 1/2 final of the Champions League in the 2007–2008 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб вылетел с 1/2 финала Лиги чемпионов в сезоне 2007–2008 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2007–2008 թթ. մրցաշարում ո՞ր ակումբն է պայքարից դուրս մնացել 1/2-րդ եզրափակչից:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue eliminado en semifinales de la Champions League 2007-2008?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_040"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein schied in der Champions League 2007-2008 im Halbfinale aus?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_040"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato eliminato in semifinale di Champions League 2007-2008?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_040"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_041",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club reached the Champions League 1/2 finals in the 2010–2011 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб вышел в 1/2 финала Лиги чемпионов в сезоне 2010–2011 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2010–2011 թթ. մրցաշարում ո՞ր ակումբն է դուրս եկել 1/2-րդ եզրափակիչ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club llegó a semifinales de la Champions League 2010-2011?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_041"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein erreichte in der Champions League 2010-2011 das Halbfinale?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_041"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha raggiunto la semifinale di Champions League 2010-2011?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_041"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_042",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took off from the 1/2 final of the Champions League in the 2011–2012 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб вылетел с 1/2 финала Лиги чемпионов в сезоне 2011–2012 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2011–2012 թթ. մրցաշարում ո՞ր ակումբն է պայքարից դուրս մնացել 1/2-րդ եզրափակչից:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue eliminado en semifinales de la Champions League 2011-2012?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_042"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein schied in der Champions League 2011-2012 im Halbfinale aus?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_042"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato eliminato in semifinale di Champions League 2011-2012?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_042"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_043",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took off from the 1/2 final of the Champions League in the season 2012–2013, losing to the German club?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб вылетел с 1/2 финала Лиги чемпионов в сезоне 2012–2013, уступив немецкому клубу ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2012–2013 թթ. մրցաշարում ո՞ր ակումբն է պայքարից դուրս մնացել 1/2-րդ եզրափակչից պարտվելով գերմանական ակումբի:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue eliminado en semifinales de la Champions League 2012-2013 por un club alemán?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_043"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein schied in der Champions League 2012-2013 im Halbfinale gegen einen deutschen Verein aus?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_043"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato eliminato in semifinale di Champions League 2012-2013 da un club tedesco?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_043"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_044",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in the Champions League final met with Juventus?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб в финале Лиги чемпионов встречался с Ювентусом ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Չեմպիոնների Լիգայի եզրափակչում հանդիպել Յուվենթուսին:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club se enfrentó a la Juventus en una final de Champions League?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_044"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein traf in einem Champions-League-Finale auf Juventus?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_044"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha affrontato la Juventus in una finale di Champions League?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_044"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_045",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club was founded before Athletic Bilbao?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб был основан раньше, чем Атлетик Бильбао ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Բիլբաոյի Ատլետիկից ավելի շուտ հիմնադրվել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue fundado antes que el Athletic Bilbao?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_045"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein wurde vor Athletic Bilbao gegründet?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_045"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato fondato prima dell'Athletic Bilbao?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_045"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_046",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club was founded before Atletico Madrid?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб был основан раньше, чем Атлетико Мадрид ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Մադրիդի Ատլետիկոյից ավելի շուտ հիմնադրվել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue fundado antes que el Atlético Madrid?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_046"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein wurde vor Atlético Madrid gegründet?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_046"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato fondato prima dell'Atlético Madrid?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_046"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_047",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club scored 100 or more points in one season of the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб набрал 100 и более очков в одном сезоне чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում վաստակել 100 եվ ավել միավոր:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club logró 100 o más puntos en una temporada del campeonato de España?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_047"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein holte 100 oder mehr Punkte in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_047"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha ottenuto 100 o più punti in una stagione del campionato spagnolo?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_047"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_048",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club scored 120 or more goals in one season of the Spanish Championship?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб в одном сезоне чемпионата Испании забил 120 и более голов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում խփել 120 եվ ավել գոլ :",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club marcó 120 o más goles en una temporada del campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_048"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein erzielte 120 oder mehr Tore in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_048"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha segnato 120 o più gol in una stagione del campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_048"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_049",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club scored 115 or more goals in one season of the Spanish Championship?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб в одном сезоне чемпионата Испании забил 115 и более голов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում խփել 115 եվ ավել գոլ :",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club marcó 115 o más goles en una temporada del campeonato de España?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_049"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein erzielte 115 oder mehr Tore in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_049"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha segnato 115 o più gol in una stagione del campionato spagnolo?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_049"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_050",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the championship of Spain 5 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл чемпионат Испании 5 раз подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 5 անգամ անընդմեջ դարձել Իսպանիայի առաջնության հաղթող:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó el campeonato de España 5 veces seguidas?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_050"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die spanische Meisterschaft fünfmal in Folge?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_050"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto il campionato spagnolo 5 volte consecutive?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_050"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_051",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club partners with Emirates?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб сотрудничает с Emirates ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է համագործակցում Emirates-ի հետ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club colabora con Emirates?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_051"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein arbeitet mit Emirates zusammen?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_051"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club collabora con Emirates?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_051"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_052",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club did Luis Figo leave to join Real Madrid?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Из какого клуба Луиш Фигу перешёл в Реал Мадрид ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբից է Լուիշ Ֆիգուն տեղափոխվել Ռեալ Մադրիդ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿De qué club salió Luis Figo para fichar por el Real Madrid?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_052"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Von welchem Verein wechselte Luís Figo zu Real Madrid?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_052"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Da quale club Luís Figo passò al Real Madrid?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_052"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_053",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the championship of Spain in the season 2018–2019?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб стал победителем чемпионата Испании в сезоне 2018–2019 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Իսպանիայի 2018–2019 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó el campeonato de España en la temporada 2018-2019?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_053"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die spanische Meisterschaft in der Saison 2018-2019?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_053"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto il campionato spagnolo nella stagione 2018-2019?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_053"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_054",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club lost just one game in one season of the championship of Spain (38 games)?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб проиграл всего одну игру в одном сезоне чемпионата Испании (38 игр) ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում (38 խաղ) պարտվել ընդամենը 1 անգամ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club perdió solo un partido en una temporada del campeonato de España de 38 jornadas?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_054"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein verlor in einer spanischen Meisterschaftssaison mit 38 Spielen nur ein Spiel?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_054"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha perso solo una partita in una stagione del campionato spagnolo a 38 giornate?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_054"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_055",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club managed not to lose in one season of the championship of Spain (38 games)?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб сумел не проиграть в одном сезоне чемпионата Испании (38 игр) ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է կարողացել չպարտվել Իսպանիայի առաջնության մեկ մրցաշրջանում (38 խաղ):",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club logró no perder ningún partido en una temporada del campeonato de España de 38 jornadas?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_055"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein blieb in einer spanischen Meisterschaftssaison mit 38 Spielen ungeschlagen?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_055"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è riuscito a non perdere nessuna partita in una stagione del campionato spagnolo a 38 giornate?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_055"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_056",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in one season of the championship of Spain (38 games) won 32 or more matches?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб в одном сезоне чемпионата Испании (38 игр) выиграл 32 и более матчей ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում (38 խաղ) հաղթել 32 եվ ավել խաղերում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó 32 o más partidos en una temporada del campeonato de España de 38 jornadas?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_056"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann 32 oder mehr Spiele in einer spanischen Meisterschaftssaison mit 38 Spielen?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_056"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto 32 o più partite in una stagione del campionato spagnolo a 38 giornate?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_056"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_057",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in one season of the championship of Spain (38 games) won 33 or more matches?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб в одном сезоне чемпионата Испании (38 игр) выиграл 33 и более матчей ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում (38 խաղ) հաղթել 33 եվ ավել խաղերում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó 33 o más partidos en una temporada del campeonato de España de 38 jornadas?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_057"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann 33 oder mehr Spiele in einer spanischen Meisterschaftssaison mit 38 Spielen?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_057"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto 33 o più partite in una stagione del campionato spagnolo a 38 giornate?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_057"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_058",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club lost in the finals of the Club World Cup?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб проиграл в финале Клубного чемпионата мира ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է պարտվել Աշխարհի ակումբային առաջնության եզրափակչում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club perdió una final del Mundial de Clubes?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_058"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein verlor ein Finale der Klub-Weltmeisterschaft?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_058"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha perso una finale del Mondiale per Club?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_058"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_059",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club lost in the semifinals of the Club World Cup?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб проиграл в полуфинале Клубного чемпионата мира ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է պարտվել Աշխարհի ակումբային առաջնության կիսաեզրափակչում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club perdió en semifinales del Mundial de Clubes?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_059"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein verlor im Halbfinale der Klub-Weltmeisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_059"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha perso in semifinale del Mondiale per Club?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_059"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_060",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took 3rd place in the Club World Cup?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Какой клуб занял 3 место в Клубном чемпионате мира ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Աշխարհի ակումբային առաջնությունում գրավել երրորդ տեղը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ocupó el tercer lugar en el Mundial de Clubes?",
+          "right_answer": "Ninguno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_060"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein belegte bei der Klub-Weltmeisterschaft den dritten Platz?",
+          "right_answer": "Keiner",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_060"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club si è classificato terzo al Mondiale per Club?",
+          "right_answer": "Nessuno",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_060"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_061",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took 4th place in the Club World Cup?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб занял 4 место в Клубном чемпионате мира ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Աշխարհի ակումբային առաջնությունում գրավել չորրորդ տեղը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ocupó el cuarto lugar en el Mundial de Clubes?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_061"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein belegte bei der Klub-Weltmeisterschaft den vierten Platz?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_061"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club si è classificato quarto al Mondiale per Club?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_061"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_062",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the UEFA Super Cup 4 or more times?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб стал обладателем Суперкубка УЕФА 4 и более раза ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել ՈՒԵՖԱ-ի Սուպեր գավաթակիր 4 եվ ավել անգամ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó la Supercopa de la UEFA 4 veces o más?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_062"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann den UEFA-Superpokal viermal oder öfter?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_062"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto la Supercoppa UEFA 4 o più volte?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_062"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_063",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish Cup 4 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб стал обладателем кубка Испании 4 раза подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Իսպանիայի գավաթը 4 անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó la Copa del Rey 4 veces seguidas?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_063"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Copa del Rey viermal in Folge?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_063"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto la Coppa del Re 4 volte consecutive?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_063"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_064",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won the Champions League 5 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Лигу чемпионов 5 раз подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Չեմպիոնների Լիգայի հաղթող հինգ անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó la Champions League 5 veces seguidas?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_064"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann die Champions League fünfmal in Folge?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_064"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto la Champions League 5 volte consecutive?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_064"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_065",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club beat Juventus in the Champions League final match?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл у Ювентуса в финальном матче Лиги чемпионов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Չեմպիոնների Լիգայի եզրափակչում հաղթել Յուվենթուսին:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club venció a la Juventus en una final de Champions League?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_065"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein besiegte Juventus in einem Champions-League-Finale?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_065"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha battuto la Juventus in una finale di Champions League?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_065"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_066",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club lost in the final of the Spanish Cup in the season 2018–2019?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб проиграл в финале кубка Испании в сезоне 2018–2019 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "2018–2019 թթ. մրցաշրջանում ո՞ր ակումբն է պարտվել Իսպանիայի գավաթի եզրափակչում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club perdió la final de la Copa del Rey en la temporada 2018-2019?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_066"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein verlor das Finale der Copa del Rey in der Saison 2018-2019?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_066"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha perso la finale della Coppa del Re nella stagione 2018-2019?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_066"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_067",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club in the season 2018–2019 of the championship of Spain took a lower position than Atletico Madrid?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 чемпионата Испании занял более низкую позицию, чем Атлетико Мадрид ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "2018–2019 թթ. մրցաշրջանում ո՞վ է Մադրիդի Ատլետիկոյից ավելի ցածր տեղ գրավել:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club terminó por debajo del Atlético Madrid en LaLiga 2018-2019?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_067"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein landete in LaLiga 2018-2019 hinter Atlético Madrid?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_067"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è arrivato dietro l'Atlético Madrid nella Liga 2018-2019?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_067"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_068",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won their group in the 2018–2019 season of the Champions League?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл свою группу в сезоне 2018–2019 Лиги чемпионов ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2018–2019 թթ. մրցաշարում ո՞ր ակումբն է իր խմբում զբաղեցրել առաջին տեղը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó su grupo en la Champions League 2018-2019?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_068"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann seine Gruppe in der Champions League 2018-2019?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_068"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto il proprio girone nella Champions League 2018-2019?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_068"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_069",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took off from the 1/8 finals of the Champions League in the season 2018–2019?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб вылетел с 1/8 финала Лиги чемпионов в сезоне 2018–2019 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2018–2019 թթ. մրցաշարում ո՞ր ակումբն է պայքարից դուրս մնացել 1/8-րդ եզրափակչից:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue eliminado en octavos de final de la Champions League 2018-2019?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_069"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein schied in der Champions League 2018-2019 im Achtelfinale aus?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_069"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato eliminato agli ottavi di Champions League 2018-2019?",
+          "right_answer": "Real Madrid",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_069"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_070",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club took off from the 1/2 finals of the Champions League in the season 2018–2019?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб вылетел с 1/2 финала Лиги чемпионов в сезоне 2018–2019 ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Չեմպիոնների Լիգայի 2018–2019 թթ. մրցաշարում ո՞ր ակումբն է պայքարից դուրս մնացել 1/2-րդ եզրափակչից:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club fue eliminado en semifinales de la Champions League 2018-2019?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_070"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein schied in der Champions League 2018-2019 im Halbfinale aus?",
+          "right_answer": "Barcelona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_070"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club è stato eliminato in semifinale di Champions League 2018-2019?",
+          "right_answer": "Barcellona",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_070"
+        }
+      }
+    },
+    {
+      "questionId": "vsrb_071",
+      "categoryType": "REAL_BARCE",
+      "type": "vsRB",
+      "source": {
+        "en": {
+          "question": "Which club won at least one trophy during the 2018–2019 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 завоевал как минимум один трофей ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 մրցաշրջանում նվաճել առնվազն մեկ տիտղոս:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "REAL_BARCE",
+          "question": "¿Qué club ganó al menos un trofeo durante la temporada 2018-2019?",
+          "right_answer": "Ambos",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_071"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "REAL_BARCE",
+          "question": "Welcher Verein gewann in der Saison 2018-2019 mindestens einen Titel?",
+          "right_answer": "Beide",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_071"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "REAL_BARCE",
+          "question": "Quale club ha vinto almeno un trofeo durante la stagione 2018-2019?",
+          "right_answer": "Entrambi",
+          "type": "vsRB",
+          "answered": false,
+          "questionId": "vsrb_071"
+        }
+      }
+    }
+  ],
+  "review": {
+    "reviewed_at": "2026-09-10",
+    "source_language": "en",
+    "target_languages": [
+      "es",
+      "de",
+      "it"
+    ],
+    "note": "Manual reviewed draft for Real Madrid vs Barcelona. Firestore was not updated."
+  }
+}

@@ -1,0 +1,5061 @@
+{
+  "file_type": "football_quiz_translation_human_review",
+  "created_at": "2026-09-10",
+  "source_batch": "app/question_translation_batches_es_de_it_2026_09_09_manual_draft/top5_spain.json",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "firestore_updated": false,
+  "instructions": [
+    "Check that es/de/it question text matches the source meaning.",
+    "Check answer_A..answer_D and right_answer in each target language.",
+    "Use review_status: approved, needs_fix, questionable_fact, or translation_unclear.",
+    "Write reviewer_note only when something should be changed."
+  ],
+  "items_count": 71,
+  "items": [
+    {
+      "questionId": "spain_001",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who was the opponent of the Spanish national team in the first international meeting?",
+          "answer_A": "Denmark",
+          "answer_B": "Portugal",
+          "answer_C": "France",
+          "answer_D": "England",
+          "right_answer": "Denmark"
+        },
+        "ru": {
+          "question": "Кто был соперником сборной Испании в первой международной встрече ?",
+          "answer_A": "Дания",
+          "answer_B": "Португалия",
+          "answer_C": "Франция",
+          "answer_D": "Англия",
+          "right_answer": "Дания"
+        },
+        "hy": {
+          "question": "Ո՞վ է եղել Իսպանիայի հավաքականի մրցակիցը առաջին միջազգային հանդիպման ժամանակ:",
+          "answer_A": "Դանիա",
+          "answer_B": "Պորտուգալիա",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Անգլիա",
+          "right_answer": "Դանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Dinamarca",
+          "answer_B": "Portugal",
+          "answer_C": "Francia",
+          "answer_D": "Inglaterra",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el rival de la selección española en su primer partido internacional?",
+          "right_answer": "Dinamarca",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_001"
+        },
+        "de": {
+          "answer_A": "Dänemark",
+          "answer_B": "Portugal",
+          "answer_C": "Frankreich",
+          "answer_D": "England",
+          "categoryType": "TOP5",
+          "question": "Wer war der Gegner der spanischen Nationalmannschaft im ersten Länderspiel?",
+          "right_answer": "Dänemark",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_001"
+        },
+        "it": {
+          "answer_A": "Danimarca",
+          "answer_B": "Portogallo",
+          "answer_C": "Francia",
+          "answer_D": "Inghilterra",
+          "categoryType": "TOP5",
+          "question": "Chi fu l’avversario della nazionale spagnola nel suo primo incontro internazionale?",
+          "right_answer": "Danimarca",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_001"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_002",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who in their history has the Spanish national team defeated with the biggest score?",
+          "answer_A": "Denmark",
+          "answer_B": "Bulgaria",
+          "answer_C": "Portugal",
+          "answer_D": "Italy",
+          "right_answer": "Bulgaria"
+        },
+        "ru": {
+          "question": "Кого в своей истории сборная Испании победила с самым крупным счетом ?",
+          "answer_A": "Дания",
+          "answer_B": "Болгария",
+          "answer_C": "Португалия",
+          "answer_D": "Италия",
+          "right_answer": "Болгария"
+        },
+        "hy": {
+          "question": "Իսպանիայի հավաքականը իր պատմության մեջ ու՞մ է հաղթել ամենախոշոր հաշվով:",
+          "answer_A": "Դանիա",
+          "answer_B": "Բուլղարիա",
+          "answer_C": "Պորտուգալիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Բուլղարիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Dinamarca",
+          "answer_B": "Bulgaria",
+          "answer_C": "Portugal",
+          "answer_D": "Italia",
+          "categoryType": "TOP5",
+          "question": "¿A quién derrotó la selección española con la mayor goleada de su historia?",
+          "right_answer": "Bulgaria",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_002"
+        },
+        "de": {
+          "answer_A": "Dänemark",
+          "answer_B": "Bulgarien",
+          "answer_C": "Portugal",
+          "answer_D": "Italien",
+          "categoryType": "TOP5",
+          "question": "Gegen wen erzielte die spanische Nationalmannschaft den höchsten Sieg ihrer Geschichte?",
+          "right_answer": "Bulgarien",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_002"
+        },
+        "it": {
+          "answer_A": "Danimarca",
+          "answer_B": "Bulgaria",
+          "answer_C": "Portogallo",
+          "answer_D": "Italia",
+          "categoryType": "TOP5",
+          "question": "Contro chi la nazionale spagnola ha ottenuto la vittoria più larga della sua storia?",
+          "right_answer": "Bulgaria",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_002"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_003",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who in the history of the Spanish national team lost with the largest score?",
+          "answer_A": "Portugal, England",
+          "answer_B": "England, Italy",
+          "answer_C": "Italy, Hungary",
+          "answer_D": "Hungary, France",
+          "right_answer": "England, Italy"
+        },
+        "ru": {
+          "question": "Кому в своей истории сборная Испании проиграла с самым крупным счетом ?",
+          "answer_A": "Португалия, Англия",
+          "answer_B": "Англия, Италия",
+          "answer_C": "Италия, Венгрия",
+          "answer_D": "Венгрия, Франция",
+          "right_answer": "Англия, Италия"
+        },
+        "hy": {
+          "question": "Իսպանիայի հավաքականը իր պատմության մեջ ո՞ր երկրների հավաքականներին է պարտվել ամենախոշոր հաշվով:",
+          "answer_A": "Պորտուգալիա, Անգլիա",
+          "answer_B": "Անգլիա, Իտալիա",
+          "answer_C": "Իտալիա, Հունգարիա",
+          "answer_D": "Հունգարիա, Ֆրանսիա",
+          "right_answer": "Անգլիա, Իտալիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Portugal, Inglaterra",
+          "answer_B": "Inglaterra, Italia",
+          "answer_C": "Italia, Hungría",
+          "answer_D": "Hungría, Francia",
+          "categoryType": "TOP5",
+          "question": "¿Contra quién sufrió la selección española las mayores derrotas de su historia?",
+          "right_answer": "Inglaterra, Italia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_003"
+        },
+        "de": {
+          "answer_A": "Portugal, England",
+          "answer_B": "England, Italien",
+          "answer_C": "Italien, Ungarn",
+          "answer_D": "Ungarn, Frankreich",
+          "categoryType": "TOP5",
+          "question": "Gegen wen kassierte die spanische Nationalmannschaft die höchsten Niederlagen ihrer Geschichte?",
+          "right_answer": "England, Italien",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_003"
+        },
+        "it": {
+          "answer_A": "Portogallo, Inghilterra",
+          "answer_B": "Inghilterra, Italia",
+          "answer_C": "Italia, Ungheria",
+          "answer_D": "Ungheria, Francia",
+          "categoryType": "TOP5",
+          "question": "Contro chi la nazionale spagnola ha subito le sconfitte più pesanti della sua storia?",
+          "right_answer": "Inghilterra, Italia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_003"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_004",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "In what year did the Spanish national team first participate in the World Cup?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "right_answer": "1934"
+        },
+        "ru": {
+          "question": "В каком году сборная Испании впервые участвовала в чемпионате Мира ?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "right_answer": "1934"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Իսպանիայի հավաքականը մասնակցել Աշխարհի առաջնությանը:",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "right_answer": "1934"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó por primera vez la selección española en la Copa Mundial?",
+          "right_answer": "1934",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_004"
+        },
+        "de": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm die spanische Nationalmannschaft erstmals an der Weltmeisterschaft teil?",
+          "right_answer": "1934",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_004"
+        },
+        "it": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale spagnola partecipò per la prima volta alla Coppa del Mondo?",
+          "right_answer": "1934",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_004"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_005",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "In what year did the Spanish national team become World Champion?",
+          "answer_A": "1938",
+          "answer_B": "1986",
+          "answer_C": "2006",
+          "answer_D": "2010",
+          "right_answer": "2010"
+        },
+        "ru": {
+          "question": "В каком году сборная Испании стала чемпионом Мира ?",
+          "answer_A": "1938",
+          "answer_B": "1986",
+          "answer_C": "2006",
+          "answer_D": "2010",
+          "right_answer": "2010"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Իսպանիայի հավաքականը նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1938",
+          "answer_B": "1986",
+          "answer_C": "2006",
+          "answer_D": "2010",
+          "right_answer": "2010"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1938",
+          "answer_B": "1986",
+          "answer_C": "2006",
+          "answer_D": "2010",
+          "categoryType": "TOP5",
+          "question": "¿En qué año se proclamó campeona del mundo la selección española?",
+          "right_answer": "2010",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_005"
+        },
+        "de": {
+          "answer_A": "1938",
+          "answer_B": "1986",
+          "answer_C": "2006",
+          "answer_D": "2010",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde die spanische Nationalmannschaft Weltmeister?",
+          "right_answer": "2010",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_005"
+        },
+        "it": {
+          "answer_A": "1938",
+          "answer_B": "1986",
+          "answer_C": "2006",
+          "answer_D": "2010",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale spagnola diventò campione del mondo?",
+          "right_answer": "2010",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_005"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_006",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many times did the Spanish national team become World Champion?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Испании стала чемпионом Мира ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իսպանիայի հավաքականը նվաճել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "1"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces se proclamó campeona del mundo la selección española?",
+          "right_answer": "1",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_006"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde die spanische Nationalmannschaft Weltmeister?",
+          "right_answer": "1",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_006"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale spagnola è diventata campione del mondo?",
+          "right_answer": "1",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_006"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_007",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "In what year did the Spanish national team first participate in the European Championship?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1964"
+        },
+        "ru": {
+          "question": "В каком году сборная Испании впервые участвовала в чемпионате Европы ?",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1964"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է առաջին անգամ Իսպանիայի հավաքականը մասնակցել Եվրոպայի առաջնությանը:",
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "right_answer": "1964"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "¿En qué año participó por primera vez la selección española en la Eurocopa?",
+          "right_answer": "1964",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_007"
+        },
+        "de": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr nahm die spanische Nationalmannschaft erstmals an der Europameisterschaft teil?",
+          "right_answer": "1964",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_007"
+        },
+        "it": {
+          "answer_A": "1960",
+          "answer_B": "1964",
+          "answer_C": "1968",
+          "answer_D": "1972",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale spagnola partecipò per la prima volta al Campionato Europeo?",
+          "right_answer": "1964",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_007"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_008",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "In what year did the Spanish national team first become European champion?",
+          "answer_A": "1964",
+          "answer_B": "1968",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "right_answer": "1964"
+        },
+        "ru": {
+          "question": "В каком году сборная Испании впервые стала чемпионом Европы ?",
+          "answer_A": "1964",
+          "answer_B": "1968",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "right_answer": "1964"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Իսպանիայի հավաքականը առաջին անգամ նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1964",
+          "answer_B": "1968",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "right_answer": "1964"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1964",
+          "answer_B": "1968",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "categoryType": "TOP5",
+          "question": "¿En qué año se proclamó por primera vez campeona de Europa la selección española?",
+          "right_answer": "1964",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_008"
+        },
+        "de": {
+          "answer_A": "1964",
+          "answer_B": "1968",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "categoryType": "TOP5",
+          "question": "In welchem Jahr wurde die spanische Nationalmannschaft erstmals Europameister?",
+          "right_answer": "1964",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_008"
+        },
+        "it": {
+          "answer_A": "1964",
+          "answer_B": "1968",
+          "answer_C": "2008",
+          "answer_D": "2012",
+          "categoryType": "TOP5",
+          "question": "In quale anno la nazionale spagnola diventò per la prima volta campione d’Europa?",
+          "right_answer": "1964",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_008"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_009",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many times did Spain become European champion?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "4"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Испании стала чемпионом Европы ?",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "4"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իսպանիայի հավաքականը նվաճել Եվրոպայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "right_answer": "4"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces se proclamó España campeona de Europa?",
+          "right_answer": "4",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_009"
+        },
+        "de": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Wie oft wurde Spanien Europameister?",
+          "right_answer": "4",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_009"
+        },
+        "it": {
+          "answer_A": "1",
+          "answer_B": "2",
+          "answer_C": "3",
+          "answer_D": "4",
+          "categoryType": "TOP5",
+          "question": "Quante volte la Spagna è diventata campione d’Europa?",
+          "right_answer": "4",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_009"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_010",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many times did the Spanish national team take part in the Confederation Cup?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Испании принимала участие в Кубке Конфедерации ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իսպանիայի հավաքականը մասնակցել Կոնֆեդերացիայի գավաթի խաղարկությանը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces participó la selección española en la Copa Confederaciones?",
+          "right_answer": "2",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_010"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft nahm die spanische Nationalmannschaft am Konföderationen-Pokal teil?",
+          "right_answer": "2",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_010"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale spagnola ha partecipato alla Confederations Cup?",
+          "right_answer": "2",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_010"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_011",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many times did Spain win the Confederation Cup?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Испании выиграла Кубок Конфедерации ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իսպանիայի հավաքականը նվաճել Կոնֆեդերացիայի գավաթը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "0"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ganó España la Copa Confederaciones?",
+          "right_answer": "0",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_011"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft gewann Spanien den Konföderationen-Pokal?",
+          "right_answer": "0",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_011"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte la Spagna ha vinto la Confederations Cup?",
+          "right_answer": "0",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_011"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_012",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many times did the Spanish national team win the Olympic gold medal?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Испании выиграла золотую медаль Олимпийских игр ?",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իսպանիայի հավաքականը նվաճել Օլիմպիական խաղերի ոսկե մեդալը:",
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "right_answer": "2"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ganó la selección española la medalla de oro olímpica?",
+          "right_answer": "2",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_012"
+        },
+        "de": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Wie oft gewann die spanische Nationalmannschaft olympisches Gold?",
+          "right_answer": "2",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_012"
+        },
+        "it": {
+          "answer_A": "0",
+          "answer_B": "1",
+          "answer_C": "2",
+          "answer_D": "3",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale spagnola ha vinto la medaglia d’oro olimpica?",
+          "right_answer": "2",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_012"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_013",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which footballer spent the most matches in Spain?",
+          "answer_A": "Sergio Ramos",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Xavi",
+          "answer_D": "Andoni Zubizarreta",
+          "right_answer": "Sergio Ramos"
+        },
+        "ru": {
+          "question": "Какой футболист провел больше всех матчей в сборной Испании ?",
+          "answer_A": "Серхио Рамос",
+          "answer_B": "Икер Касильяс",
+          "answer_C": "Чави",
+          "answer_D": "Андони Субисаррета",
+          "right_answer": "Серхио Рамос"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի հավաքականում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Սերխիո Ռամոս",
+          "answer_B": "Իկեր Կասիլյաս",
+          "answer_C": "Չավի",
+          "answer_D": "Անդոնի Սուբիսարետա",
+          "right_answer": "Սերխիո Ռամոս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Sergio Ramos",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Xavi",
+          "answer_D": "Andoni Zubizarreta",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista disputó más partidos con España?",
+          "right_answer": "Sergio Ramos",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_013"
+        },
+        "de": {
+          "answer_A": "Sergio Ramos",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Xavi",
+          "answer_D": "Andoni Zubizarreta",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer absolvierte die meisten Spiele für Spanien?",
+          "right_answer": "Sergio Ramos",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_013"
+        },
+        "it": {
+          "answer_A": "Sergio Ramos",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Xavi",
+          "answer_D": "Andoni Zubizarreta",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha giocato più partite con la Spagna?",
+          "right_answer": "Sergio Ramos",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_013"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_014",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of all time in Spain?",
+          "answer_A": "David Villa",
+          "answer_B": "Raúl",
+          "answer_C": "Fernando Torres",
+          "answer_D": "David Silva",
+          "right_answer": "David Villa"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир всех времен сборной Испании ?",
+          "answer_A": "Давид Вилья",
+          "answer_B": "Рауль",
+          "answer_C": "Фернандо Торес",
+          "answer_D": "Давид Сильва",
+          "right_answer": "Давид Вилья"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի հավաքականի բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Դավիդ Վիլյա",
+          "answer_B": "Ռաուլ",
+          "answer_C": "Ֆերնանդո Տորես",
+          "answer_D": "Դավիդ Սիլվա",
+          "right_answer": "Դավիդ Վիլյա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "David Villa",
+          "answer_B": "Raúl",
+          "answer_C": "Fernando Torres",
+          "answer_D": "David Silva",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico de España?",
+          "right_answer": "David Villa",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_014"
+        },
+        "de": {
+          "answer_A": "David Villa",
+          "answer_B": "Raúl",
+          "answer_C": "Fernando Torres",
+          "answer_D": "David Silva",
+          "categoryType": "TOP5",
+          "question": "Wer ist Spaniens bester Torschütze aller Zeiten?",
+          "right_answer": "David Villa",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_014"
+        },
+        "it": {
+          "answer_A": "David Villa",
+          "answer_B": "Raúl",
+          "answer_C": "Fernando Torres",
+          "answer_D": "David Silva",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi della Spagna?",
+          "right_answer": "David Villa",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_014"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_015",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many times have the Spanish national team participated in the Olympics?",
+          "answer_A": "8",
+          "answer_B": "10",
+          "answer_C": "12",
+          "answer_D": "14",
+          "right_answer": "12"
+        },
+        "ru": {
+          "question": "Сколько раз сборная Испании участвовала в Олимпийских играх ?",
+          "answer_A": "8",
+          "answer_B": "10",
+          "answer_C": "12",
+          "answer_D": "14",
+          "right_answer": "12"
+        },
+        "hy": {
+          "question": "Քանի՞ անգամ է Իսպանիայի հավաքականը մասնակցել Ամառային օլիմպիական խաղերին:",
+          "answer_A": "8",
+          "answer_B": "10",
+          "answer_C": "12",
+          "answer_D": "14",
+          "right_answer": "12"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "8",
+          "answer_B": "10",
+          "answer_C": "12",
+          "answer_D": "14",
+          "categoryType": "TOP5",
+          "question": "¿Cuántas veces ha participado la selección española en los Juegos Olímpicos?",
+          "right_answer": "12",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_015"
+        },
+        "de": {
+          "answer_A": "8",
+          "answer_B": "10",
+          "answer_C": "12",
+          "answer_D": "14",
+          "categoryType": "TOP5",
+          "question": "Wie oft nahm die spanische Nationalmannschaft an den Olympischen Spielen teil?",
+          "right_answer": "12",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_015"
+        },
+        "it": {
+          "answer_A": "8",
+          "answer_B": "10",
+          "answer_C": "12",
+          "answer_D": "14",
+          "categoryType": "TOP5",
+          "question": "Quante volte la nazionale spagnola ha partecipato ai Giochi Olimpici?",
+          "right_answer": "12",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_015"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_016",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who is the author of the winning goal of the Spanish national team in the final of the 2010 World Cup?",
+          "answer_A": "Xavi",
+          "answer_B": "Carles Puyol",
+          "answer_C": "Sergio Ramos",
+          "answer_D": "Andrés Iniesta",
+          "right_answer": "Andrés Iniesta"
+        },
+        "ru": {
+          "question": "Кто автор победного гола сборной Испании в финале чемпионата Мира 2010 г. ?",
+          "answer_A": "Чави",
+          "answer_B": "Карлес Пуйол",
+          "answer_C": "Серхио Рамос",
+          "answer_D": "Андрес Иньеста",
+          "right_answer": "Андрес Иньеста"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2010 թ. Աշխարհի առաջնության եզրափակչում Իսպանիայի հավաքականի հաղթական գոլի հեղինակը:",
+          "answer_A": "Չավի",
+          "answer_B": "Կառլես Պույոլ",
+          "answer_C": "Սերխիո Ռամոս",
+          "answer_D": "Անդրես Ինյեստա",
+          "right_answer": "Անդրես Ինյեստա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Xavi",
+          "answer_B": "Carles Puyol",
+          "answer_C": "Sergio Ramos",
+          "answer_D": "Andrés Iniesta",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó el gol de la victoria de España en la final del Mundial 2010?",
+          "right_answer": "Andrés Iniesta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_016"
+        },
+        "de": {
+          "answer_A": "Xavi",
+          "answer_B": "Carles Puyol",
+          "answer_C": "Sergio Ramos",
+          "answer_D": "Andrés Iniesta",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte das Siegtor Spaniens im Finale der Weltmeisterschaft 2010?",
+          "right_answer": "Andrés Iniesta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_016"
+        },
+        "it": {
+          "answer_A": "Xavi",
+          "answer_B": "Carles Puyol",
+          "answer_C": "Sergio Ramos",
+          "answer_D": "Andrés Iniesta",
+          "categoryType": "TOP5",
+          "question": "Chi segnò il gol decisivo della Spagna nella finale della Coppa del Mondo 2010?",
+          "right_answer": "Andrés Iniesta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_016"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_017",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Since what year is the championship of Spain held?",
+          "answer_A": "1927",
+          "answer_B": "1928",
+          "answer_C": "1929",
+          "answer_D": "1930",
+          "right_answer": "1929"
+        },
+        "ru": {
+          "question": "С какого года проводится чемпионат Испании ?",
+          "answer_A": "1927",
+          "answer_B": "1928",
+          "answer_C": "1929",
+          "answer_D": "1930",
+          "right_answer": "1929"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Իսպանիայի առաջնությունը:",
+          "answer_A": "1927",
+          "answer_B": "1928",
+          "answer_C": "1929",
+          "answer_D": "1930",
+          "right_answer": "1929"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1927",
+          "answer_B": "1928",
+          "answer_C": "1929",
+          "answer_D": "1930",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa el campeonato de España?",
+          "right_answer": "1929",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_017"
+        },
+        "de": {
+          "answer_A": "1927",
+          "answer_B": "1928",
+          "answer_C": "1929",
+          "answer_D": "1930",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird die spanische Meisterschaft ausgetragen?",
+          "right_answer": "1929",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_017"
+        },
+        "it": {
+          "answer_A": "1927",
+          "answer_B": "1928",
+          "answer_C": "1929",
+          "answer_D": "1930",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa il campionato spagnolo?",
+          "right_answer": "1929",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_017"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_018",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish championship the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал победителем чемпионатa Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Атлетико Мадрид",
+          "answer_D": "Валенсия",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ատլետիկո Մադրիդ",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ha ganado más veces el campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_018"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann die spanische Meisterschaft am häufigsten?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_018"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte il campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_018"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_019",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club has never won the championship of Spain?",
+          "answer_A": "Deportivo",
+          "answer_B": "Real Sociedad",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "right_answer": "Espanyol"
+        },
+        "ru": {
+          "question": "Какой клуб никогда не выигрывал чемпионат Испании?",
+          "answer_A": "Депортиво",
+          "answer_B": "Реал Сосьедат",
+          "answer_C": "Эспаньол",
+          "answer_D": "Валенсия",
+          "right_answer": "Эспаньол"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբը երբեք չի նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Դեպորտիվո",
+          "answer_B": "Ռեալ Սոսիեդադ",
+          "answer_C": "Էսպանյոլ",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Էսպանյոլ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Deportivo",
+          "answer_B": "Real Sociedad",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club nunca ha ganado el campeonato de España?",
+          "right_answer": "Espanyol",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_019"
+        },
+        "de": {
+          "answer_A": "Deportivo",
+          "answer_B": "Real Sociedad",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein hat die spanische Meisterschaft nie gewonnen?",
+          "right_answer": "Espanyol",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_019"
+        },
+        "it": {
+          "answer_A": "Deportivo",
+          "answer_B": "Real Sociedad",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale club non ha mai vinto il campionato spagnolo?",
+          "right_answer": "Espanyol",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_019"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_020",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the Spanish championship the most?",
+          "answer_A": "Villarreal",
+          "answer_B": "Zaragoza",
+          "answer_C": "Betis",
+          "answer_D": "Mallorca",
+          "right_answer": "Betis"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл чемпионат Испании ?",
+          "answer_A": "Вильярреал",
+          "answer_B": "Сарагоса",
+          "answer_C": "Бетис",
+          "answer_D": "Мальорка",
+          "right_answer": "Бетис"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Վիլյառեալ",
+          "answer_B": "Սարագոսա",
+          "answer_C": "Բետիս",
+          "answer_D": "Մալյորկա",
+          "right_answer": "Բետիս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Villarreal",
+          "answer_B": "Zaragoza",
+          "answer_C": "Betis",
+          "answer_D": "Mallorca",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ha ganado más veces el campeonato de España?",
+          "right_answer": "Betis",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_020"
+        },
+        "de": {
+          "answer_A": "Villarreal",
+          "answer_B": "Zaragoza",
+          "answer_C": "Betis",
+          "answer_D": "Mallorca",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine gewann die spanische Meisterschaft am häufigsten?",
+          "right_answer": "Betis",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_020"
+        },
+        "it": {
+          "answer_A": "Villarreal",
+          "answer_B": "Zaragoza",
+          "answer_C": "Betis",
+          "answer_D": "Maiorca",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte il campionato spagnolo?",
+          "right_answer": "Betis",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_020"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_021",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club was the silver medalist of the Spanish championship the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Valencia",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал серебряным призером чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Атлетико Мадрид",
+          "answer_C": "Барселона",
+          "answer_D": "Валенсия",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել արծաթե մեդալակիր:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Ատլետիկո Մադրիդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club fue subcampeón del campeonato de España más veces?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_021"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein wurde am häufigsten Vizemeister der spanischen Meisterschaft?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_021"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Barcellona",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato più volte secondo nel campionato spagnolo?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_021"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_022",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club is the most bronze medalist in Spain?",
+          "answer_A": "Barcelona",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Real Madrid",
+          "answer_D": "Athletic Bilbao",
+          "right_answer": "Atlético Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех стал бронзовым призером чемпионата Испании ?",
+          "answer_A": "Барселона",
+          "answer_B": "Атлетико Мадрид",
+          "answer_C": "Реал Мадрид",
+          "answer_D": "Атлетик Билбао",
+          "right_answer": "Атлетико Мадрид"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնությունում բոլորից շատ ո՞ր ակումբն է դարձել բրոնզե մեդալակիր:",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Ատլետիկո Մադրիդ",
+          "answer_C": "Ռեալ Մադրիդ",
+          "answer_D": "Ատլետիկ Բիլբաո",
+          "right_answer": "Ատլետիկո Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Barcelona",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Real Madrid",
+          "answer_D": "Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó tercero más veces en el campeonato de España?",
+          "right_answer": "Atlético Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_022"
+        },
+        "de": {
+          "answer_A": "Barcelona",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Real Madrid",
+          "answer_D": "Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein wurde in Spanien am häufigsten Dritter?",
+          "right_answer": "Atlético Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_022"
+        },
+        "it": {
+          "answer_A": "Barcellona",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Real Madrid",
+          "answer_D": "Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "Quale club è arrivato più volte terzo in Spagna?",
+          "right_answer": "Atlético Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_022"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_023",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of all time in the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Raúl",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир всех времен чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Тельмо Сарра",
+          "answer_D": "Рауль",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնության բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Տելմո Սառա",
+          "answer_D": "Ռաուլ",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "¿Quién es el máximo goleador histórico del campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_023"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "Wer ist der beste Torschütze aller Zeiten in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_023"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "Chi è il miglior marcatore di tutti i tempi del campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_023"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_024",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Of those listed, who scored the most goals in the championship of Spain?",
+          "answer_A": "Raúl",
+          "answer_B": "David Villa",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Telmo Zarraonaindía",
+          "right_answer": "Telmo Zarraonaindía"
+        },
+        "ru": {
+          "question": "Из перечисленных кто забил больше всех голов в чемпионате Испании ?",
+          "answer_A": "Рауль",
+          "answer_B": "Давид Вилья",
+          "answer_C": "Альфредо Ди Стефано",
+          "answer_D": "Тельмо Сарра",
+          "right_answer": "Тельмо Сарра"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Ռաուլ",
+          "answer_B": "Դավիդ Վիլյա",
+          "answer_C": "Ալֆրեդո դի Ստեֆանո",
+          "answer_D": "Տելմո Սառա",
+          "right_answer": "Տելմո Սառա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Raúl",
+          "answer_B": "David Villa",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Telmo Zarraonaindía",
+          "categoryType": "TOP5",
+          "question": "De los siguientes, ¿quién marcó más goles en el campeonato de España?",
+          "right_answer": "Telmo Zarraonaindía",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_024"
+        },
+        "de": {
+          "answer_A": "Raúl",
+          "answer_B": "David Villa",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Telmo Zarraonaindía",
+          "categoryType": "TOP5",
+          "question": "Wer von den folgenden Spielern erzielte die meisten Tore in der spanischen Meisterschaft?",
+          "right_answer": "Telmo Zarraonaindía",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_024"
+        },
+        "it": {
+          "answer_A": "Raúl",
+          "answer_B": "David Villa",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Telmo Zarraonaindía",
+          "categoryType": "TOP5",
+          "question": "Tra i seguenti, chi ha segnato più gol nel campionato spagnolo?",
+          "right_answer": "Telmo Zarraonaindía",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_024"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_025",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "How many clubs perform in the championship of Spain?",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "right_answer": "20"
+        },
+        "ru": {
+          "question": "Сколько клубов выступают в чемпионате Испании ?",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "right_answer": "20"
+        },
+        "hy": {
+          "question": "Քանի՞ ակումբ է մասնակցում Իսպանիայի առաջնությունում:",
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "right_answer": "20"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "categoryType": "TOP5",
+          "question": "¿Cuántos clubes compiten en el campeonato de España?",
+          "right_answer": "20",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_025"
+        },
+        "de": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "categoryType": "TOP5",
+          "question": "Wie viele Vereine spielen in der spanischen Meisterschaft?",
+          "right_answer": "20",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_025"
+        },
+        "it": {
+          "answer_A": "16",
+          "answer_B": "18",
+          "answer_C": "20",
+          "answer_D": "22",
+          "categoryType": "TOP5",
+          "question": "Quanti club partecipano al campionato spagnolo?",
+          "right_answer": "20",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_025"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_026",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the championship of Spain 5 times in a row?",
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "no One",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб 5 раз подряд выиграл чемпионат Испании ?",
+          "answer_A": "Барселона",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Атлетико Мадрид",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 5 անգամ անընդմեջ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Ատլետիկո Մադրիդ",
+          "answer_D": "Ոչ մեկին",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Ninguno",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el campeonato de España 5 veces seguidas?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_026"
+        },
+        "de": {
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Keiner",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann die spanische Meisterschaft fünfmal in Folge?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_026"
+        },
+        "it": {
+          "answer_A": "Barcellona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Nessuno",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto il campionato spagnolo 5 volte di fila?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_026"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_027",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "What clubs have become the champions in the number of victories in one season of the championship of Spain?",
+          "answer_A": "Real Madrid, Atlético Madrid",
+          "answer_B": "Atlético Madrid, Barcelona",
+          "answer_C": "Barcelona, Real Madrid",
+          "answer_D": "Real Madrid, Athletic Bilbao",
+          "right_answer": "Barcelona, Real Madrid"
+        },
+        "ru": {
+          "question": "Какие клубы стали рекордсменами по количеству побед в одном сезоне чемпионатa Испании ?",
+          "answer_A": "Реал Мадрид, Атлетико Мадрид",
+          "answer_B": "Атлетико Мадрид, Барселона",
+          "answer_C": "Барселона, Реал Мадрид",
+          "answer_D": "Реал Мадрид, Атлетик Билбао",
+          "right_answer": "Барселона, Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբներն են Իսպանիայի առաջնության մեկ մրցաշրջանում հաղթանակների քանակով ռեկորդակիրները:",
+          "answer_A": "Ռեալ Մադրիդ, Ատլետիկո Մադրիդ",
+          "answer_B": "Ատլետիկո Մադրիդ, Բարսելոնա",
+          "answer_C": "Բարսելոնա, Ռեալ Մադրիդ",
+          "answer_D": "Ռեալ Մադրիդ, Ատլետիկ Բիլբաո",
+          "right_answer": "Բարսելոնա, Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid, Atlético Madrid",
+          "answer_B": "Atlético Madrid, Barcelona",
+          "answer_C": "Barcelona, Real Madrid",
+          "answer_D": "Real Madrid, Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "¿Qué clubes comparten el récord de victorias en una temporada del campeonato de España?",
+          "right_answer": "Barcelona, Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_027"
+        },
+        "de": {
+          "answer_A": "Real Madrid, Atlético Madrid",
+          "answer_B": "Atlético Madrid, Barcelona",
+          "answer_C": "Barcelona, Real Madrid",
+          "answer_D": "Real Madrid, Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "Welche Vereine teilen sich den Rekord für die meisten Siege in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Barcelona, Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_027"
+        },
+        "it": {
+          "answer_A": "Real Madrid, Atlético Madrid",
+          "answer_B": "Atlético Madrid, Barcellona",
+          "answer_C": "Barcellona, Real Madrid",
+          "answer_D": "Real Madrid, Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "Quali club condividono il record di vittorie in una stagione del campionato spagnolo?",
+          "right_answer": "Barcellona, Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_027"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_028",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club tied most in one season of the championship of Spain?",
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Sevilla",
+          "right_answer": "Deportivo"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех сыграл вничью в одном сезоне чемпионатa Испании ?",
+          "answer_A": "Атлетико Мадрид",
+          "answer_B": "Депортиво",
+          "answer_C": "Атлетик Билбао",
+          "answer_D": "Севилья",
+          "right_answer": "Депортиво"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի առաջնության մեկ մրցաշրջանում բոլորից շատ ոչ-ոքի խաղացել:",
+          "answer_A": "Ատլետիկո Մադրիդ",
+          "answer_B": "Դեպորտիվո",
+          "answer_C": "Ատլետիկ Բիլբաո",
+          "answer_D": "Սեվիլյա",
+          "right_answer": "Դեպորտիվո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Sevilla",
+          "categoryType": "TOP5",
+          "question": "¿Qué club empató más partidos en una temporada del campeonato de España?",
+          "right_answer": "Deportivo",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_028"
+        },
+        "de": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Sevilla",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein spielte in einer Saison der spanischen Meisterschaft am häufigsten unentschieden?",
+          "right_answer": "Deportivo",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_028"
+        },
+        "it": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Siviglia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha pareggiato più partite in una stagione del campionato spagnolo?",
+          "right_answer": "Deportivo",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_028"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_029",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club was the most defeated in one season of the championship of Spain?",
+          "answer_A": "Osasuna",
+          "answer_B": "Sporting de Gijón",
+          "answer_C": "Mallorca",
+          "answer_D": "Deportivo",
+          "right_answer": "Sporting de Gijón"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех потерпел поражение в одном сезоне чемпионатa Испании ?",
+          "answer_A": "Осасуна",
+          "answer_B": "Спортинг Хихон",
+          "answer_C": "Мальорка",
+          "answer_D": "Депортиво",
+          "right_answer": "Спортинг Хихон"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Իսպանիայի առաջնության մեկ մրցաշրջանում:",
+          "answer_A": "Օսասունա",
+          "answer_B": "Սպորտինգ Խիխոն",
+          "answer_C": "Մալյորկա",
+          "answer_D": "Դեպորտիվո",
+          "right_answer": "Սպորտինգ Խիխոն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Osasuna",
+          "answer_B": "Sporting de Gijón",
+          "answer_C": "Mallorca",
+          "answer_D": "Deportivo",
+          "categoryType": "TOP5",
+          "question": "¿Qué club sufrió más derrotas en una temporada del campeonato de España?",
+          "right_answer": "Sporting de Gijón",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_029"
+        },
+        "de": {
+          "answer_A": "Osasuna",
+          "answer_B": "Sporting de Gijón",
+          "answer_C": "Mallorca",
+          "answer_D": "Deportivo",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein kassierte in einer Saison der spanischen Meisterschaft die meisten Niederlagen?",
+          "right_answer": "Sporting de Gijón",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_029"
+        },
+        "it": {
+          "answer_A": "Osasuna",
+          "answer_B": "Sporting de Gijón",
+          "answer_C": "Maiorca",
+          "answer_D": "Deportivo",
+          "categoryType": "TOP5",
+          "question": "Quale club ha subito più sconfitte in una stagione del campionato spagnolo?",
+          "right_answer": "Sporting de Gijón",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_029"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_030",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which clubs lost the least in one season of the championship of Spain? (38 games)",
+          "answer_A": "Real Madrid, Barcelona",
+          "answer_B": "Barcelona, Atlético Madrid",
+          "answer_C": "Atlético Madrid, Real Madrid",
+          "answer_D": "Barcelona, Valencia",
+          "right_answer": "Real Madrid, Barcelona"
+        },
+        "ru": {
+          "question": "Какие клубы проиграли меньше всех в одном сезоне чемпионатa Испании ? (38 игр)",
+          "answer_A": "Реал Мадрид, Барселона",
+          "answer_B": "Барселона, Атлетико Мадрид",
+          "answer_C": "Атлетико Мадрид, Реал Мадрид",
+          "answer_D": "Барселона, Валенсия",
+          "right_answer": "Реал Мадрид, Барселона"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբներն են ամենաքիչը պարտվել (38 խաղ):",
+          "answer_A": "Ռեալ Մադրիդ, Բարսելոնա",
+          "answer_B": "Բարսելոնա, Ատլետիկո Մադրիդ",
+          "answer_C": "Ատլետիկո Մադրիդ, Ռեալ Մադրիդ",
+          "answer_D": "Բարսելոնա, Վալենսիա",
+          "right_answer": "Ռեալ Մադրիդ, Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid, Barcelona",
+          "answer_B": "Barcelona, Atlético Madrid",
+          "answer_C": "Atlético Madrid, Real Madrid",
+          "answer_D": "Barcelona, Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué clubes perdieron menos partidos en una temporada del campeonato de España? (38 partidos)",
+          "right_answer": "Real Madrid, Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_030"
+        },
+        "de": {
+          "answer_A": "Real Madrid, Barcelona",
+          "answer_B": "Barcelona, Atlético Madrid",
+          "answer_C": "Atlético Madrid, Real Madrid",
+          "answer_D": "Barcelona, Valencia",
+          "categoryType": "TOP5",
+          "question": "Welche Vereine verloren in einer Saison der spanischen Meisterschaft am wenigsten Spiele? (38 Spiele)",
+          "right_answer": "Real Madrid, Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_030"
+        },
+        "it": {
+          "answer_A": "Real Madrid, Barcellona",
+          "answer_B": "Barcellona, Atlético Madrid",
+          "answer_C": "Atlético Madrid, Real Madrid",
+          "answer_D": "Barcellona, Valencia",
+          "categoryType": "TOP5",
+          "question": "Quali club hanno perso meno partite in una stagione del campionato spagnolo? (38 partite)",
+          "right_answer": "Real Madrid, Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_030"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_031",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club (s) scored the most points in one season of the championship of Spain?",
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona, Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Barcelona, Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб (клубы) больше всех набрал очков в одном сезоне чемпионатa Испании ?",
+          "answer_A": "Барселона",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Барселона, Реал Мадрид",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Барселона, Реал Мадрид"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն (ակումբները) է բոլորից շատ միավոր վաստակել:",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բարսելոնա, Ռեալ Մադրիդ",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Բարսելոնա, Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona, Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué club o clubes lograron más puntos en una temporada del campeonato de España?",
+          "right_answer": "Barcelona, Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_031"
+        },
+        "de": {
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona, Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein bzw. welche Vereine holten die meisten Punkte in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Barcelona, Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_031"
+        },
+        "it": {
+          "answer_A": "Barcellona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcellona, Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quale club o quali club hanno ottenuto più punti in una stagione del campionato spagnolo?",
+          "right_answer": "Barcellona, Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_031"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_032",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club spent the most seasons in the championship of Spain?",
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "All three",
+          "right_answer": "All three"
+        },
+        "ru": {
+          "question": "Какой клуб провел больше всех сезонов в чемпионате Испании ?",
+          "answer_A": "Атлетик Билбао",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Барселона",
+          "answer_D": "Все трое",
+          "right_answer": "Все трое"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ մրցաշրջաններ անցկացրել Իսպանիայի առաջնությունում:",
+          "answer_A": "Ատլետիկ Բիլբաո",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Երեքն էլ",
+          "right_answer": "Երեքն էլ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Los tres",
+          "categoryType": "TOP5",
+          "question": "¿Qué club disputó más temporadas en el campeonato de España?",
+          "right_answer": "Los tres",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_032"
+        },
+        "de": {
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Alle drei",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein spielte die meisten Saisons in der spanischen Meisterschaft?",
+          "right_answer": "Alle drei",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_032"
+        },
+        "it": {
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcellona",
+          "answer_D": "Tutti e tre",
+          "categoryType": "TOP5",
+          "question": "Quale club ha disputato più stagioni nel campionato spagnolo?",
+          "right_answer": "Tutti e tre",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_032"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_033",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club scored the most goals in one season of the championship of Spain?",
+          "answer_A": "Valencia",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Sevilla",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб забил больше всех голов в одном сезоне чемпионатa Испании ?",
+          "answer_A": "Валенсия",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Барселона",
+          "answer_D": "Севилья",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության մեկ մրցաշրջանում ո՞ր ակումբն է բոլորից շատ գոլի հեղինակ դարձել:",
+          "answer_A": "Վալենսիա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Սեվիլյա",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Valencia",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Sevilla",
+          "categoryType": "TOP5",
+          "question": "¿Qué club marcó más goles en una temporada del campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_033"
+        },
+        "de": {
+          "answer_A": "Valencia",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Sevilla",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein erzielte die meisten Tore in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_033"
+        },
+        "it": {
+          "answer_A": "Valencia",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcellona",
+          "answer_D": "Siviglia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha segnato più gol in una stagione del campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_033"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_034",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club in the most matches in a row scored goals in the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб в наибольшем количестве матчей подряд забивал мячи в чемпионате Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Атлетик Билбао",
+          "answer_D": "Валенсия",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ անընդմեջ գոլի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ատլետիկ Բիլբաո",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club marcó goles en más partidos consecutivos del campeonato de España?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_034"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein erzielte in der spanischen Meisterschaft in den meisten Spielen in Folge Tore?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_034"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha segnato in più partite consecutive nel campionato spagnolo?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_034"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_035",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which footballer scored the most matches in a row in the championship of Spain?",
+          "answer_A": "Luis Suárez",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Какой футболист наибольшее количество матчей подряд забивал мячи в чемпионате Испании ?",
+          "answer_A": "Луис Суарес",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Криштиану Роналду",
+          "answer_D": "Рауль",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է ավելի շատ անընդմեջ գոլի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Լուիս Սուարես",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Կրիշտիանու Ռոնալդու",
+          "answer_D": "Ռաուլ",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Luis Suárez",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista marcó en más partidos consecutivos del campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_035"
+        },
+        "de": {
+          "answer_A": "Luis Suárez",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer traf in den meisten Spielen in Folge in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_035"
+        },
+        "it": {
+          "answer_A": "Luis Suárez",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha segnato in più partite consecutive nel campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_035"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_036",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which footballer is the most author of the \"double \" in the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Alfredo Di Stéfano",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Какой футболист больше всех стал автором \"дубля\" в чемпионате Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Тельмо Сарра",
+          "answer_C": "Лионель Месси",
+          "answer_D": "Альфредо Ди Стефано",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ \"դուբլ\"-ի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Տելմո Սառա",
+          "answer_C": "Լիոնել Մեսսի",
+          "answer_D": "Ալֆրեդո դի Ստեֆանո",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Alfredo Di Stéfano",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista logró más dobletes en el campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_036"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Alfredo Di Stéfano",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer erzielte die meisten Doppelpacks in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_036"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Alfredo Di Stéfano",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha realizzato più doppiette nel campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_036"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_037",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which football player was the author of the \"hat trick \" most in the championship of Spain?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Rutgerus van Nistelrooij",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Cristiano Ronaldo",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Какой футболист больше всех стал автором \"хет трика\" в чемпионате Испании ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Руд ван Нистелрой",
+          "answer_C": "Тельмо Сарра",
+          "answer_D": "Криштиану Роналду",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ \"հեթրիկ\"-ի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Ռուդ վան Նիստելռոյ",
+          "answer_C": "Տելմո Սառա",
+          "answer_D": "Կրիշտիանու Ռոնալդու",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Ruud van Nistelrooy",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolista logró más hat-tricks en el campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_037"
+        },
+        "de": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Ruud van Nistelrooy",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Welcher Fußballer erzielte die meisten Hattricks in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_037"
+        },
+        "it": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Ruud van Nistelrooy",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Quale calciatore ha realizzato più triplette nel campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_037"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_038",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who spent the most matches in the championship of Spain?",
+          "answer_A": "Raúl",
+          "answer_B": "Andoni Zubizarreta",
+          "answer_C": "Iker Casillas",
+          "answer_D": "Carles Puyol",
+          "right_answer": "Andoni Zubizarreta"
+        },
+        "ru": {
+          "question": "Кто провел больше всех матчей в чемпионате Испании ?",
+          "answer_A": "Рауль",
+          "answer_B": "Андони Субисарета",
+          "answer_C": "Икер Касильяс",
+          "answer_D": "Карлес Пуйол",
+          "right_answer": "Андони Субисарета"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնությունում ամենաշատ խաղ անցկացրած ֆուտբոլիստը:",
+          "answer_A": "Ռաուլ",
+          "answer_B": "Անդոնի Սուբիսարետա",
+          "answer_C": "Իկեր Կասիլյաս",
+          "answer_D": "Կառլես Պույոլ",
+          "right_answer": "Անդոնի Սուբիսարետա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Raúl",
+          "answer_B": "Andoni Zubizarreta",
+          "answer_C": "Iker Casillas",
+          "answer_D": "Carles Puyol",
+          "categoryType": "TOP5",
+          "question": "¿Quién disputó más partidos en el campeonato de España?",
+          "right_answer": "Andoni Zubizarreta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_038"
+        },
+        "de": {
+          "answer_A": "Raúl",
+          "answer_B": "Andoni Zubizarreta",
+          "answer_C": "Iker Casillas",
+          "answer_D": "Carles Puyol",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele in der spanischen Meisterschaft?",
+          "right_answer": "Andoni Zubizarreta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_038"
+        },
+        "it": {
+          "answer_A": "Raúl",
+          "answer_B": "Andoni Zubizarreta",
+          "answer_C": "Iker Casillas",
+          "answer_D": "Carles Puyol",
+          "categoryType": "TOP5",
+          "question": "Chi ha disputato più partite nel campionato spagnolo?",
+          "right_answer": "Andoni Zubizarreta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_038"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_039",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who in the same club spent the most matches in the championship of Spain?",
+          "answer_A": "Iker Casillas",
+          "answer_B": "Raúl",
+          "answer_C": "Xavi",
+          "answer_D": "Carles Puyol",
+          "right_answer": "Raúl"
+        },
+        "ru": {
+          "question": "Кто в составе одного клуба провел больше всех матчей в чемпионате Испании ?",
+          "answer_A": "Икер Касильяс",
+          "answer_B": "Рауль",
+          "answer_C": "Чави",
+          "answer_D": "Карлес Пуйол",
+          "right_answer": "Рауль"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնությունում բոլորից շատ խաղ անցկացրել մեկ ակումբի կազմում:",
+          "answer_A": "Իկեր Կասիլյաս",
+          "answer_B": "Ռաուլ",
+          "answer_C": "Չավի",
+          "answer_D": "Կառլես Պույոլ",
+          "right_answer": "Ռաուլ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Iker Casillas",
+          "answer_B": "Raúl",
+          "answer_C": "Xavi",
+          "answer_D": "Carles Puyol",
+          "categoryType": "TOP5",
+          "question": "¿Quién disputó más partidos en el campeonato de España con el mismo club?",
+          "right_answer": "Raúl",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_039"
+        },
+        "de": {
+          "answer_A": "Iker Casillas",
+          "answer_B": "Raúl",
+          "answer_C": "Xavi",
+          "answer_D": "Carles Puyol",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Spiele in der spanischen Meisterschaft für denselben Verein?",
+          "right_answer": "Raúl",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_039"
+        },
+        "it": {
+          "answer_A": "Iker Casillas",
+          "answer_B": "Raúl",
+          "answer_C": "Xavi",
+          "answer_D": "Carles Puyol",
+          "categoryType": "TOP5",
+          "question": "Chi ha disputato più partite nel campionato spagnolo con lo stesso club?",
+          "right_answer": "Raúl",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_039"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_040",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who is the winner of the Spanish championship the most?",
+          "answer_A": "Francisco Gento",
+          "answer_B": "Raúl",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Andoni Zubizarreta",
+          "right_answer": "Francisco Gento"
+        },
+        "ru": {
+          "question": "Кто больше всех стал победителем чемпионатa Испании ?",
+          "answer_A": "Франсиско Хенто",
+          "answer_B": "Рауль",
+          "answer_C": "Лионель Месси",
+          "answer_D": "Андони Субисарета",
+          "right_answer": "Франсиско Хенто"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ֆրանսիսկո Խենտո",
+          "answer_B": "Ռաուլ",
+          "answer_C": "Լիոնել Մեսսի",
+          "answer_D": "Անդոնի Սուբիսարետա",
+          "right_answer": "Ֆրանսիսկո Խենտո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Francisco Gento",
+          "answer_B": "Raúl",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Andoni Zubizarreta",
+          "categoryType": "TOP5",
+          "question": "¿Quién ganó más veces el campeonato de España?",
+          "right_answer": "Francisco Gento",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_040"
+        },
+        "de": {
+          "answer_A": "Francisco Gento",
+          "answer_B": "Raúl",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Andoni Zubizarreta",
+          "categoryType": "TOP5",
+          "question": "Wer gewann die spanische Meisterschaft am häufigsten?",
+          "right_answer": "Francisco Gento",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_040"
+        },
+        "it": {
+          "answer_A": "Francisco Gento",
+          "answer_B": "Raúl",
+          "answer_C": "Lionel Messi",
+          "answer_D": "Andoni Zubizarreta",
+          "categoryType": "TOP5",
+          "question": "Chi ha vinto più volte il campionato spagnolo?",
+          "right_answer": "Francisco Gento",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_040"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_041",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "In the championship of Spain, which goalkeeper has the longest period of time during which he did not miss the balls into his own net?",
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Abel Resino",
+          "answer_D": "Víctor Valdés",
+          "right_answer": "Abel Resino"
+        },
+        "ru": {
+          "question": "В чемпионате Испании у какого вратаря самый длительный промежуток времени, в течение которого он не пропускал мячи в свои ворота ?",
+          "answer_A": "Андони Субисарета",
+          "answer_B": "Икер Касильяс",
+          "answer_C": "Абель Ресино",
+          "answer_D": "Виктор Вальдес",
+          "right_answer": "Абель Ресино"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնությունում ո՞ր դարպասապահն է ամենաերկարը սեփական դարպասը պահել անառիկ:",
+          "answer_A": "Անդոնի Սուբիսարետա",
+          "answer_B": "Իկեր Կասիլյաս",
+          "answer_C": "Աբել Ռեսինո",
+          "answer_D": "Վիկտոր Վալդես",
+          "right_answer": "Աբել Ռեսինո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Abel Resino",
+          "answer_D": "Víctor Valdés",
+          "categoryType": "TOP5",
+          "question": "En el campeonato de España, ¿qué portero mantuvo durante más tiempo su portería imbatida?",
+          "right_answer": "Abel Resino",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_041"
+        },
+        "de": {
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Abel Resino",
+          "answer_D": "Víctor Valdés",
+          "categoryType": "TOP5",
+          "question": "Welcher Torhüter blieb in der spanischen Meisterschaft am längsten ohne Gegentor?",
+          "right_answer": "Abel Resino",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_041"
+        },
+        "it": {
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Abel Resino",
+          "answer_D": "Víctor Valdés",
+          "categoryType": "TOP5",
+          "question": "Nel campionato spagnolo, quale portiere ha mantenuto la porta inviolata più a lungo?",
+          "right_answer": "Abel Resino",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_041"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_042",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who spent the most \"dry \" matches in the championship of Spain?",
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Santiago Cañizares",
+          "answer_D": "Víctor Valdés",
+          "right_answer": "Andoni Zubizarreta"
+        },
+        "ru": {
+          "question": "Кто провел больше всех \"сухих\" матчей в чемпионате Испании ?",
+          "answer_A": "Андони Субисарета",
+          "answer_B": "Икер Касильяс",
+          "answer_C": "Сантьяго Канисарес",
+          "answer_D": "Виктор Вальдес",
+          "right_answer": "Андони Субисарета"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնությունում բոլորից շատ ո՞ր դարպասապահն է \"չոր\" խաղեր անցկացրել:",
+          "answer_A": "Անդոնի Սուբիսարետա",
+          "answer_B": "Իկեր Կասիլյաս",
+          "answer_C": "Սանտյագո Կանիսարես",
+          "answer_D": "Վիկտոր Վալդես",
+          "right_answer": "Անդոնի Սուբիսարետա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Santiago Cañizares",
+          "answer_D": "Víctor Valdés",
+          "categoryType": "TOP5",
+          "question": "¿Quién logró más partidos con la portería a cero en el campeonato de España?",
+          "right_answer": "Andoni Zubizarreta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_042"
+        },
+        "de": {
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Santiago Cañizares",
+          "answer_D": "Víctor Valdés",
+          "categoryType": "TOP5",
+          "question": "Wer absolvierte die meisten Zu-null-Spiele in der spanischen Meisterschaft?",
+          "right_answer": "Andoni Zubizarreta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_042"
+        },
+        "it": {
+          "answer_A": "Andoni Zubizarreta",
+          "answer_B": "Iker Casillas",
+          "answer_C": "Santiago Cañizares",
+          "answer_D": "Víctor Valdés",
+          "categoryType": "TOP5",
+          "question": "Chi ha ottenuto più partite senza subire gol nel campionato spagnolo?",
+          "right_answer": "Andoni Zubizarreta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_042"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_043",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who was the top scorer in the Spanish Championships the most?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Cristiano Ronaldo",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто больше всех становился лучшим бомбардиром чемпионата Испании ?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Тельмо Сарра",
+          "answer_C": "Альфредо Ди Стефано",
+          "answer_D": "Криштиану Роналду",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է ավելի շատ ճանաչվել Իսպանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Տելմո Սառա",
+          "answer_C": "Ալֆրեդո դի Ստեֆանո",
+          "answer_D": "Կրիշտիանու Ռոնալդու",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue más veces máximo goleador del campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_043"
+        },
+        "de": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Wer wurde am häufigsten Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_043"
+        },
+        "it": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Telmo Zarraonaindía",
+          "answer_C": "Alfredo Di Stéfano",
+          "answer_D": "Cristiano Ronaldo",
+          "categoryType": "TOP5",
+          "question": "Chi è stato più volte capocannoniere del campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_043"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_044",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club's football players have become the top scorer of the Spanish championship the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Футболисты какого клуба больше всех становились лучшим бомбардиром чемпионата Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Атлетик Билбао",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբի ներկայացուցիչներն են ավելի շատ ճանաչվել Իսպանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ատլետիկ Բիլբաո",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿De qué club fueron más veces los máximos goleadores del campeonato de España?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_044"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Spieler welches Vereins wurden am häufigsten Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_044"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "I giocatori di quale club sono stati più volte capocannonieri del campionato spagnolo?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_044"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_045",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in one season of the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Ferenc Puskás",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в одном сезоне чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Тельмо Сарра",
+          "answer_D": "Ференц Пушкаш",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Իսպանիայի առաջնության մեկ մրցաշրջանում ո՞ր ֆուտբոլիստն է բոլորից շատ գոլի հեղինակ դարձել:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Տելմո Սառա",
+          "answer_D": "Ֆերենց Պուշկաշ",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Ferenc Puskás",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó más goles en una temporada del campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_045"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Ferenc Puskás",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte die meisten Tore in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_045"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Telmo Zarraonaindía",
+          "answer_D": "Ferenc Puskás",
+          "categoryType": "TOP5",
+          "question": "Chi ha segnato più gol in una stagione del campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_045"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_046",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which football players became the top scorer of the Spanish championship the most in a row?",
+          "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
+          "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
+          "right_answer": "Hugo Sánchez, Alfredo Di Stéfano"
+        },
+        "ru": {
+          "question": "Какие футболисты больше всех подряд становились лучшим бомбардиром чемпионата Испании ?",
+          "answer_A": "Тельмо Сарра, Уго Санчес",
+          "answer_B": "Уго Санчес, Альфредо Ди Стефано",
+          "answer_C": "Альфредо Ди Стефано, Исидро Лангара",
+          "answer_D": "Исидро Лангара, Кини",
+          "right_answer": "Уго Санчес, Альфредо Ди Стефано"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստներն են ավելի շատ անընդմեջ ճանաչվել Իսպանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Տելմո Սառա, Ուգո Սանչես",
+          "answer_B": "Ուգո Սանչես, Ալֆրեդո դի Ստեֆանո",
+          "answer_C": "Ալֆրեդո դի Ստեֆանո, Իսիդրո Լանգարա",
+          "answer_D": "Իսիդրո Լանգարա, Կինի",
+          "right_answer": "Ուգո Սանչես, Ալֆրեդո դի Ստեֆանո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
+          "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
+          "categoryType": "TOP5",
+          "question": "¿Qué futbolistas fueron máximos goleadores del campeonato de España más veces seguidas?",
+          "right_answer": "Hugo Sánchez, Alfredo Di Stéfano",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_046"
+        },
+        "de": {
+          "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
+          "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
+          "categoryType": "TOP5",
+          "question": "Welche Fußballer wurden am häufigsten in Folge Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Hugo Sánchez, Alfredo Di Stéfano",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_046"
+        },
+        "it": {
+          "answer_A": "Telmo Zarraonaindía, Hugo Sánchez",
+          "answer_B": "Hugo Sánchez, Alfredo Di Stéfano",
+          "answer_C": "Alfredo Di Stéfano, Isidro Lángara",
+          "answer_D": "Isidro Lángara, Quini",
+          "categoryType": "TOP5",
+          "question": "Quali calciatori sono stati capocannonieri del campionato spagnolo più volte di fila?",
+          "right_answer": "Hugo Sánchez, Alfredo Di Stéfano",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_046"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_047",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the first championship of Spain?",
+          "answer_A": "Betis",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Athletic Bilbao",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл первый чемпионат Испании ?",
+          "answer_A": "Бетис",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Барселона",
+          "answer_D": "Атлетик Билбао",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Իսպանիայի առաջին առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Բետիս",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Ատլետիկ Բիլբաո",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Betis",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el primer campeonato de España?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_047"
+        },
+        "de": {
+          "answer_A": "Betis",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann die erste spanische Meisterschaft?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_047"
+        },
+        "it": {
+          "answer_A": "Betis",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcellona",
+          "answer_D": "Athletic Bilbao",
+          "categoryType": "TOP5",
+          "question": "Quale club vinse il primo campionato spagnolo?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_047"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_048",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club managed to become the author of the \"Golden Hat Trick \"?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "no One",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какому клубу удалось стать автором \"Золотого хет трика\" ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Атлетик Билбао",
+          "answer_D": "Никто",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Իսպանական ո՞ր ակումբին է հաջողվել դառնալ \"Ոսկե հեթրիկ\"-ի հեղինակ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ատլետիկ Բիլբաո",
+          "answer_D": "Ոչ մեկ",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Ninguno",
+          "categoryType": "TOP5",
+          "question": "¿Qué club consiguió el triplete?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_048"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Keiner",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein schaffte das Triple?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_048"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Nessuno",
+          "categoryType": "TOP5",
+          "question": "Quale club è riuscito a centrare il Triplete?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_048"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_049",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which clubs managed to become the author of the \"Golden Double \" the most?",
+          "answer_A": "Athletic Bilbao, Barcelona",
+          "answer_B": "Barcelona, Real Madrid",
+          "answer_C": "Real Madrid, Athletic Bilbao",
+          "answer_D": "Athletic Bilbao, Atlético Madrid",
+          "right_answer": "Athletic Bilbao, Barcelona"
+        },
+        "ru": {
+          "question": "Каким клубам больше всех удалось стать автором \"Золотого дубля\" ?",
+          "answer_A": "Атлетик Билбао, Барселона",
+          "answer_B": "Барселона, Реал Мадрид",
+          "answer_C": "Реал Мадрид, Атлетик Билбао",
+          "answer_D": "Атлетик Билбао, Атлетико Мадрид",
+          "right_answer": "Атлетик Билбао, Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբներին է ամենաշատը հաջողվել դառնալ \"Ոսկե դուբլ\"-ի հեղինակ:",
+          "answer_A": "Ատլետիկ Բիլբաո, Բարսելոնա",
+          "answer_B": "Բարսելոնա, Ռեալ Մադրիդ",
+          "answer_C": "Ռեալ Մադրիդ, Ատլետիկ Բիլբաո",
+          "answer_D": "Ատլետիկ Բիլբաո, Ատլետիկո Մադրիդ",
+          "right_answer": "Ատլետիկ Բիլբաո, Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Athletic Bilbao, Barcelona",
+          "answer_B": "Barcelona, Real Madrid",
+          "answer_C": "Real Madrid, Athletic Bilbao",
+          "answer_D": "Athletic Bilbao, Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué clubes consiguieron más veces el doblete?",
+          "right_answer": "Athletic Bilbao, Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_049"
+        },
+        "de": {
+          "answer_A": "Athletic Bilbao, Barcelona",
+          "answer_B": "Barcelona, Real Madrid",
+          "answer_C": "Real Madrid, Athletic Bilbao",
+          "answer_D": "Athletic Bilbao, Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welche Vereine schafften das Double am häufigsten?",
+          "right_answer": "Athletic Bilbao, Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_049"
+        },
+        "it": {
+          "answer_A": "Athletic Bilbao, Barcellona",
+          "answer_B": "Barcellona, Real Madrid",
+          "answer_C": "Real Madrid, Athletic Bilbao",
+          "answer_D": "Athletic Bilbao, Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quali club hanno realizzato più volte il doblete (campionato e coppa)?",
+          "right_answer": "Athletic Bilbao, Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_049"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_050",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which of these clubs has won LaLiga exactly twice?",
+          "answer_A": "Betis",
+          "answer_B": "Sevilla",
+          "answer_C": "Deportivo",
+          "answer_D": "Real Sociedad",
+          "right_answer": "Real Sociedad"
+        },
+        "ru": {
+          "question": "Какой из этих клубов выигрывал Ла Лигу ровно два раза ?",
+          "answer_A": "Бетис",
+          "answer_B": "Севилья",
+          "answer_C": "Депортиво",
+          "answer_D": "Реал Сосьедат",
+          "right_answer": "Реал Сосьедат"
+        },
+        "hy": {
+          "question": "Այս ակումբներից ո՞րն է Լա Լիգան հաղթել ճիշտ երկու անգամ:",
+          "answer_A": "Բետիս",
+          "answer_B": "Սեվիլյա",
+          "answer_C": "Դեպորտիվո",
+          "answer_D": "Ռեալ Սոսիեդադ",
+          "right_answer": "Ռեալ Սոսիեդադ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Betis",
+          "answer_B": "Sevilla",
+          "answer_C": "Deportivo",
+          "answer_D": "Real Sociedad",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ha ganado LaLiga exactamente dos veces?",
+          "right_answer": "Real Sociedad",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_050"
+        },
+        "de": {
+          "answer_A": "Betis",
+          "answer_B": "Sevilla",
+          "answer_C": "Deportivo",
+          "answer_D": "Real Sociedad",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine hat LaLiga genau zweimal gewonnen?",
+          "right_answer": "Real Sociedad",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_050"
+        },
+        "it": {
+          "answer_A": "Betis",
+          "answer_B": "Siviglia",
+          "answer_C": "Deportivo",
+          "answer_D": "Real Sociedad",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto LaLiga esattamente due volte?",
+          "right_answer": "Real Sociedad",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_050"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_051",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish Cup the most?",
+          "answer_A": "Barcelona",
+          "answer_B": "Athletic Bilbao",
+          "answer_C": "Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Кубок Испании ?",
+          "answer_A": "Барселона",
+          "answer_B": "Атлетик Билбао",
+          "answer_C": "Реал Мадрид",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իսպանիայի գավաթը:",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Ատլետիկ Բիլբաո",
+          "answer_C": "Ռեալ Մադրիդ",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Barcelona",
+          "answer_B": "Athletic Bilbao",
+          "answer_C": "Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Copa del Rey?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_051"
+        },
+        "de": {
+          "answer_A": "Barcelona",
+          "answer_B": "Athletic Bilbao",
+          "answer_C": "Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den spanischen Pokal am häufigsten?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_051"
+        },
+        "it": {
+          "answer_A": "Barcellona",
+          "answer_B": "Athletic Bilbao",
+          "answer_C": "Real Madrid",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Coppa di Spagna?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_051"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_052",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the Spanish Cup the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "right_answer": "Athletic Bilbao"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл Кубок Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Атлетико Мадрид",
+          "answer_C": "Атлетик Билбао",
+          "answer_D": "Валенсия",
+          "right_answer": "Атлетик Билбао"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել Իսպանիայի գավաթը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Ատլետիկո Մադրիդ",
+          "answer_C": "Ատլետիկ Բիլբաո",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Ատլետիկ Բիլբաո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ganó más veces la Copa del Rey?",
+          "right_answer": "Athletic Bilbao",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_052"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine gewann den spanischen Pokal am häufigsten?",
+          "right_answer": "Athletic Bilbao",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_052"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Atlético Madrid",
+          "answer_C": "Athletic Bilbao",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte la Coppa di Spagna?",
+          "right_answer": "Athletic Bilbao",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_052"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_053",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club lost the most in the Spanish Cup final?",
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Valencia",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех проиграл в финале Кубка Испании ?",
+          "answer_A": "Атлетик Билбао",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Барселона",
+          "answer_D": "Валенсия",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ պարտվել Իսպանիայի գավաթի եզրափակչում:",
+          "answer_A": "Ատլետիկ Բիլբաո",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club perdió más finales de la Copa del Rey?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_053"
+        },
+        "de": {
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein verlor die meisten Endspiele im spanischen Pokal?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_053"
+        },
+        "it": {
+          "answer_A": "Athletic Bilbao",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcellona",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più finali della Coppa di Spagna?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_053"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_054",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Of which, which club failed to win the Spanish Cup?",
+          "answer_A": "Mallorca",
+          "answer_B": "Celta",
+          "answer_C": "Betis",
+          "answer_D": "Real Sociedad",
+          "right_answer": "Celta"
+        },
+        "ru": {
+          "question": "Из перечисленных какому клубу не удалось выиграть Кубок Испании ?",
+          "answer_A": "Мальорка",
+          "answer_B": "Сельта",
+          "answer_C": "Бетис",
+          "answer_D": "Реал Сосьедат",
+          "right_answer": "Сельта"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբին չի հաջողվել նվաճել Իսպանիայի գավաթը:",
+          "answer_A": "Մալյորկա",
+          "answer_B": "Սելտա",
+          "answer_C": "Բետիս",
+          "answer_D": "Ռեալ Սոսիեդադ",
+          "right_answer": "Սելտա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Mallorca",
+          "answer_B": "Celta",
+          "answer_C": "Betis",
+          "answer_D": "Real Sociedad",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál no logró ganar la Copa del Rey?",
+          "right_answer": "Celta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_054"
+        },
+        "de": {
+          "answer_A": "Mallorca",
+          "answer_B": "Celta",
+          "answer_C": "Betis",
+          "answer_D": "Real Sociedad",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine konnte den spanischen Pokal nicht gewinnen?",
+          "right_answer": "Celta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_054"
+        },
+        "it": {
+          "answer_A": "Maiorca",
+          "answer_B": "Celta",
+          "answer_C": "Betis",
+          "answer_D": "Real Sociedad",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale non è riuscito a vincere la Coppa di Spagna?",
+          "right_answer": "Celta",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_054"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_055",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Since what year has the Spanish Cup been played?",
+          "answer_A": "1900",
+          "answer_B": "1902",
+          "answer_C": "1904",
+          "answer_D": "1905",
+          "right_answer": "1902"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Кубок Испании ?",
+          "answer_A": "1900",
+          "answer_B": "1902",
+          "answer_C": "1904",
+          "answer_D": "1905",
+          "right_answer": "1902"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Իսպանիայի գավաթի խաղարկությունը:",
+          "answer_A": "1900",
+          "answer_B": "1902",
+          "answer_C": "1904",
+          "answer_D": "1905",
+          "right_answer": "1902"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1900",
+          "answer_B": "1902",
+          "answer_C": "1904",
+          "answer_D": "1905",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la Copa del Rey?",
+          "right_answer": "1902",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_055"
+        },
+        "de": {
+          "answer_A": "1900",
+          "answer_B": "1902",
+          "answer_C": "1904",
+          "answer_D": "1905",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird der spanische Pokal ausgespielt?",
+          "right_answer": "1902",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_055"
+        },
+        "it": {
+          "answer_A": "1900",
+          "answer_B": "1902",
+          "answer_C": "1904",
+          "answer_D": "1905",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa la Coppa di Spagna?",
+          "right_answer": "1902",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_055"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_056",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "From what year has the Spanish Super Cup been played?",
+          "answer_A": "1980",
+          "answer_B": "1981",
+          "answer_C": "1982",
+          "answer_D": "1983",
+          "right_answer": "1982"
+        },
+        "ru": {
+          "question": "С какого года разыгрывается Суперкубок Испании ?",
+          "answer_A": "1980",
+          "answer_B": "1981",
+          "answer_C": "1982",
+          "answer_D": "1983",
+          "right_answer": "1982"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է խաղարկվում Իսպանիայի Սուպեր գավաթը:",
+          "answer_A": "1980",
+          "answer_B": "1981",
+          "answer_C": "1982",
+          "answer_D": "1983",
+          "right_answer": "1982"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1980",
+          "answer_B": "1981",
+          "answer_C": "1982",
+          "answer_D": "1983",
+          "categoryType": "TOP5",
+          "question": "¿Desde qué año se disputa la Supercopa de España?",
+          "right_answer": "1982",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_056"
+        },
+        "de": {
+          "answer_A": "1980",
+          "answer_B": "1981",
+          "answer_C": "1982",
+          "answer_D": "1983",
+          "categoryType": "TOP5",
+          "question": "Seit welchem Jahr wird der spanische Supercup ausgespielt?",
+          "right_answer": "1982",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_056"
+        },
+        "it": {
+          "answer_A": "1980",
+          "answer_B": "1981",
+          "answer_C": "1982",
+          "answer_D": "1983",
+          "categoryType": "TOP5",
+          "question": "Da quale anno si disputa la Supercoppa di Spagna?",
+          "right_answer": "1982",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_056"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_057",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish Super Cup the most?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Deportivo",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех выиграл Суперкубок Испании ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Атлетико Мадрид",
+          "answer_D": "Депортиво",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ նվաճել Իսպանիայի Սուպեր գավաթը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ատլետիկո Մադրիդ",
+          "answer_D": "Դեպորտիվո",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Deportivo",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó más veces la Supercopa de España?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_057"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Deportivo",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den spanischen Supercup am häufigsten?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_057"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Deportivo",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto più volte la Supercoppa di Spagna?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_057"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_058",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Of these, which club won the Spanish Super Cup the most?",
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Valencia",
+          "answer_D": "Sevilla",
+          "right_answer": "Deportivo"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб больше всех выиграл Суперкубок Испании ?",
+          "answer_A": "Атлетико Мадрид",
+          "answer_B": "Депортиво",
+          "answer_C": "Валенсия",
+          "answer_D": "Севилья",
+          "right_answer": "Депортиво"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբն է ավելի շատ նվաճել Իսպանիայի Սուպեր գավաթը:",
+          "answer_A": "Ատլետիկո Մադրիդ",
+          "answer_B": "Դեպորտիվո",
+          "answer_C": "Վալենսիա",
+          "answer_D": "Սևիլիա",
+          "right_answer": "Դեպորտիվո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Valencia",
+          "answer_D": "Sevilla",
+          "categoryType": "TOP5",
+          "question": "De estos clubes, ¿cuál ganó más veces la Supercopa de España?",
+          "right_answer": "Deportivo",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_058"
+        },
+        "de": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Valencia",
+          "answer_D": "Sevilla",
+          "categoryType": "TOP5",
+          "question": "Welcher dieser Vereine gewann den spanischen Supercup am häufigsten?",
+          "right_answer": "Deportivo",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_058"
+        },
+        "it": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Deportivo",
+          "answer_C": "Valencia",
+          "answer_D": "Siviglia",
+          "categoryType": "TOP5",
+          "question": "Tra questi club, quale ha vinto più volte la Supercoppa di Spagna?",
+          "right_answer": "Deportivo",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_058"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_059",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club is the most \"lost \" opportunity to win the Super Bowl of Spain?",
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб больше всех \"упустил из рук\" возможность выиграть Суперкубок Испании ?",
+          "answer_A": "Барселона",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Атлетико Мадрид",
+          "answer_D": "Валенсия",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է բոլորից շատ \"ձեռքից բաց թողել\" Իսպանիայի Սուպեր գավաթը նվաճելու հնարավորությունը:",
+          "answer_A": "Բարսելոնա",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Ատլետիկո Մադրիդ",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ha perdido más finales de la Supercopa de España?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_059"
+        },
+        "de": {
+          "answer_A": "Barcelona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein verlor die meisten Endspiele im spanischen Supercup?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_059"
+        },
+        "it": {
+          "answer_A": "Barcellona",
+          "answer_B": "Real Madrid",
+          "answer_C": "Atlético Madrid",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale club ha perso più finali della Supercoppa di Spagna?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_059"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_060",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which of the following did not win the Spanish Super Cup?",
+          "answer_A": "Mallorca",
+          "answer_B": "Zaragoza",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "right_answer": "Espanyol"
+        },
+        "ru": {
+          "question": "Из перечисленных какой клуб не выигрывал Суперкубок Испании ?",
+          "answer_A": "Мальорка",
+          "answer_B": "Сарагоса",
+          "answer_C": "Эспаньол",
+          "answer_D": "Валенсия",
+          "right_answer": "Эспаньол"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞ր ակումբը չի նվաճել Իսպանիայի Սուպեր գավաթը:",
+          "answer_A": "Մալյորկա",
+          "answer_B": "Սարագոսա",
+          "answer_C": "Էսպանյոլ",
+          "answer_D": "Վալենսիա",
+          "right_answer": "Էսպանյոլ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Mallorca",
+          "answer_B": "Zaragoza",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "¿Cuál de los siguientes clubes no ganó la Supercopa de España?",
+          "right_answer": "Espanyol",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_060"
+        },
+        "de": {
+          "answer_A": "Mallorca",
+          "answer_B": "Zaragoza",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Welcher der folgenden Vereine gewann den spanischen Supercup nicht?",
+          "right_answer": "Espanyol",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_060"
+        },
+        "it": {
+          "answer_A": "Maiorca",
+          "answer_B": "Zaragoza",
+          "answer_C": "Espanyol",
+          "answer_D": "Valencia",
+          "categoryType": "TOP5",
+          "question": "Quale dei seguenti club non ha vinto la Supercoppa di Spagna?",
+          "right_answer": "Espanyol",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_060"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_061",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which coach won the Spanish championship the most?",
+          "answer_A": "Miguel Muñoz",
+          "answer_B": "Helenio Herrera",
+          "answer_C": "Johannes Cruijff",
+          "answer_D": "Luis Molowny",
+          "right_answer": "Miguel Muñoz"
+        },
+        "ru": {
+          "question": "Какой тренер больше всех выиграл чемпионат Испании ?",
+          "answer_A": "Мигель Муньос",
+          "answer_B": "Эленио Эрерра",
+          "answer_C": "Йохан Круифф",
+          "answer_D": "Луис Моловни",
+          "right_answer": "Мигель Муньос"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզիչն է բոլորից շատ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Միգել Մունյոս",
+          "answer_B": "Էլենիո Էրերրա",
+          "answer_C": "Յոհան Կրուիֆ",
+          "answer_D": "Լուիս Մոլովնի",
+          "right_answer": "Միգել Մունյոս"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Miguel Muñoz",
+          "answer_B": "Helenio Herrera",
+          "answer_C": "Johan Cruyff",
+          "answer_D": "Luis Molowny",
+          "categoryType": "TOP5",
+          "question": "¿Qué entrenador ganó más veces el campeonato de España?",
+          "right_answer": "Miguel Muñoz",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_061"
+        },
+        "de": {
+          "answer_A": "Miguel Muñoz",
+          "answer_B": "Helenio Herrera",
+          "answer_C": "Johan Cruyff",
+          "answer_D": "Luis Molowny",
+          "categoryType": "TOP5",
+          "question": "Welcher Trainer gewann die spanische Meisterschaft am häufigsten?",
+          "right_answer": "Miguel Muñoz",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_061"
+        },
+        "it": {
+          "answer_A": "Miguel Muñoz",
+          "answer_B": "Helenio Herrera",
+          "answer_C": "Johan Cruyff",
+          "answer_D": "Luis Molowny",
+          "categoryType": "TOP5",
+          "question": "Quale allenatore ha vinto più volte il campionato spagnolo?",
+          "right_answer": "Miguel Muñoz",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_061"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_062",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which country’s coaches were the winners of the Spanish Championships the most?",
+          "answer_A": "of Spain",
+          "answer_B": "of Holland",
+          "answer_C": "of Argentina",
+          "answer_D": "of Portugal",
+          "right_answer": "of Spain"
+        },
+        "ru": {
+          "question": "Тренеры какой страны больше всех становились победителями чемпионата Испании ?",
+          "answer_A": "Испании",
+          "answer_B": "Голландии",
+          "answer_C": "Аргентини",
+          "answer_D": "Португалии",
+          "right_answer": "Испании"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի մարզիչներն են բոլորից շատ նվաճել Իսպանիայի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Իսպանիա",
+          "answer_B": "Հոլանդիա",
+          "answer_C": "Արգենտինա",
+          "answer_D": "Պորտուգալիա",
+          "right_answer": "Իսպանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "España",
+          "answer_B": "Países Bajos",
+          "answer_C": "Argentina",
+          "answer_D": "Portugal",
+          "categoryType": "TOP5",
+          "question": "¿De qué país fueron más veces los entrenadores campeones de España?",
+          "right_answer": "España",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_062"
+        },
+        "de": {
+          "answer_A": "Spanien",
+          "answer_B": "Niederlande",
+          "answer_C": "Argentinien",
+          "answer_D": "Portugal",
+          "categoryType": "TOP5",
+          "question": "Aus welchem Land kamen die Trainer, die am häufigsten die spanische Meisterschaft gewannen?",
+          "right_answer": "Spanien",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_062"
+        },
+        "it": {
+          "answer_A": "Spagna",
+          "answer_B": "Paesi Bassi",
+          "answer_C": "Argentina",
+          "answer_D": "Portogallo",
+          "categoryType": "TOP5",
+          "question": "Di quale paese erano più spesso gli allenatori vincitori del campionato spagnolo?",
+          "right_answer": "Spagna",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_062"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_063",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club (s) have won the Spanish Super Cup 3 times in a row?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Real Madrid, Barcelona",
+          "answer_D": "no One",
+          "right_answer": "Real Madrid, Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб (клубы) выиграл Суперкубок Испании 3 раза подряд ?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Реал Мадрид, Барселона",
+          "answer_D": "Никто",
+          "right_answer": "Реал Мадрид, Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն (ակումբները) է Իսպանիայի Սուպեր գավաթը նվաճել 3 անգամ անընդմեջ:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Ռեալ Մադրիդ, Բարսելոնա",
+          "answer_D": "Ոչ մեկին",
+          "right_answer": "Ռեալ Մադրիդ, Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Real Madrid, Barcelona",
+          "answer_D": "Ninguno",
+          "categoryType": "TOP5",
+          "question": "¿Qué club o clubes ganaron la Supercopa de España 3 veces seguidas?",
+          "right_answer": "Real Madrid, Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_063"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Real Madrid, Barcelona",
+          "answer_D": "Keiner",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein bzw. welche Vereine gewannen den spanischen Supercup dreimal in Folge?",
+          "right_answer": "Real Madrid, Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_063"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Real Madrid, Barcellona",
+          "answer_D": "Nessuno",
+          "categoryType": "TOP5",
+          "question": "Quale club o quali club hanno vinto la Supercoppa di Spagna 3 volte di fila?",
+          "right_answer": "Real Madrid, Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_063"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_064",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in Spanish Super Bowl matches?",
+          "answer_A": "David Villa",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в матчах за Суперкубок Испании забил наибольшее количество голов ?",
+          "answer_A": "Давид Вилья",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Криштиану Роналду",
+          "answer_D": "Рауль",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է բոլորից շատ գոլի հեղինակ դարձել Իսպանիայի Սուպեր գավաթի խաղերում:",
+          "answer_A": "Դավիդ Վիլյա",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Կրիշտիանու Ռոնալդու",
+          "answer_D": "Ռաուլ",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "David Villa",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "¿Quién marcó más goles en partidos de la Supercopa de España?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_064"
+        },
+        "de": {
+          "answer_A": "David Villa",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "Wer erzielte die meisten Tore in Spielen des spanischen Supercups?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_064"
+        },
+        "it": {
+          "answer_A": "David Villa",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Cristiano Ronaldo",
+          "answer_D": "Raúl",
+          "categoryType": "TOP5",
+          "question": "Chi ha segnato più gol nelle partite della Supercoppa di Spagna?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_064"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_065",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish Championship in the 2018–2019 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл чемпионат Испании в сезоне 2018–2019?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Валенсия",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է նվաճել Իսպանիայի 2018–2019 թթ. առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Վալենսիա",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó el campeonato de España en la temporada 2018–2019?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_065"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann die spanische Meisterschaft in der Saison 2018–2019?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_065"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto il campionato spagnolo nella stagione 2018–2019?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_065"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_066",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club in the season 2018–2019 took second place in the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Atlético Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 занял второе место в чемпионате Испании?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Валенсия",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Атлетико Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի 2018–2019 թթ. առաջնությունում դարձել արծաթե մեդալակիր:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Վալենսիա",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Ատլետիկո Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó segundo en el campeonato de España en la temporada 2018–2019?",
+          "right_answer": "Atlético Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_066"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein wurde in der Saison 2018–2019 Zweiter in der spanischen Meisterschaft?",
+          "right_answer": "Atlético Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_066"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quale club si è classificato secondo nel campionato spagnolo nella stagione 2018–2019?",
+          "right_answer": "Atlético Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_066"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_067",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club in the season 2018–2019 took third place in the championship of Spain?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Real Madrid"
+        },
+        "ru": {
+          "question": "Какой клуб в сезоне 2018–2019 занял третье место в чемпионате Испании?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Валенсия",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Реал Мадрид"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է Իսպանիայի 2018–2019 թթ. առաջնությունում դարձել բրոնզե մեդալակիր:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Վալենսիա",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Ռեալ Մադրիդ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué club terminó tercero en el campeonato de España en la temporada 2018–2019?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_067"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein wurde in der Saison 2018–2019 Dritter in der spanischen Meisterschaft?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_067"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quale club si è classificato terzo nel campionato spagnolo nella stagione 2018–2019?",
+          "right_answer": "Real Madrid",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_067"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_068",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won the Spanish Cup in the 2018–2019 season?",
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "right_answer": "Valencia"
+        },
+        "ru": {
+          "question": "Какой клуб выиграл Кубок Испании в сезоне 2018–2019?",
+          "answer_A": "Реал Мадрид",
+          "answer_B": "Барселона",
+          "answer_C": "Валенсия",
+          "answer_D": "Атлетико Мадрид",
+          "right_answer": "Валенсия"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է 2018–2019 թթ մրցաշրջանում դարձել Իսպանիայի գավաթակիր:",
+          "answer_A": "Ռեալ Մադրիդ",
+          "answer_B": "Բարսելոնա",
+          "answer_C": "Վալենսիա",
+          "answer_D": "Ատլետիկո Մադրիդ",
+          "right_answer": "Վալենսիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó la Copa del Rey en la temporada 2018–2019?",
+          "right_answer": "Valencia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_068"
+        },
+        "de": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcelona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann den spanischen Pokal in der Saison 2018–2019?",
+          "right_answer": "Valencia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_068"
+        },
+        "it": {
+          "answer_A": "Real Madrid",
+          "answer_B": "Barcellona",
+          "answer_C": "Valencia",
+          "answer_D": "Atlético Madrid",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto la Coppa di Spagna nella stagione 2018–2019?",
+          "right_answer": "Valencia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_068"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_069",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Who in the season 2018–2019 became the top scorer of the championship of Spain?",
+          "answer_A": "Karim Benzema",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал лучшим бомбардиром чемпионата Испании?",
+          "answer_A": "Карим Бензема",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Луис Суарес",
+          "answer_D": "Антуан Гризманн",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի 2018–2019 թթ. առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Կարիմ Բենզեմա",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Լուիս Սուարես",
+          "answer_D": "Անտուան Գրիզման",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Karim Benzema",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "TOP5",
+          "question": "¿Quién fue el máximo goleador del campeonato de España en la temporada 2018–2019?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_069"
+        },
+        "de": {
+          "answer_A": "Karim Benzema",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "TOP5",
+          "question": "Wer wurde in der Saison 2018–2019 Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_069"
+        },
+        "it": {
+          "answer_A": "Karim Benzema",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "TOP5",
+          "question": "Chi è stato il capocannoniere del campionato spagnolo nella stagione 2018–2019?",
+          "right_answer": "Lionel Messi",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_069"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_070",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which of the listed in the season 2018–2019 became the best assistant to the championship of Spain?",
+          "answer_A": "Santi Cazorla",
+          "answer_B": "Pablo Sarabia",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "right_answer": "Pablo Sarabia"
+        },
+        "ru": {
+          "question": "Кто из перечисленных в сезоне 2018–2019 стал лучшим ассистентом чемпионата Испании?",
+          "answer_A": "Санти Касорла",
+          "answer_B": "Пабло Сарабия",
+          "answer_C": "Луис Суарес",
+          "answer_D": "Антуан Гризманн",
+          "right_answer": "Пабло Сарабия"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլային փոխանցում կատարել Իսպանիայի 2018–2019 թթ.առաջնությունում:",
+          "answer_A": "Սանտի Կասորլա",
+          "answer_B": "Պաբլո Սարաբիյա",
+          "answer_C": "Լուիս Սուարես",
+          "answer_D": "Անտուան Գրիզման",
+          "right_answer": "Պաբլո Սարաբիյա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Santi Cazorla",
+          "answer_B": "Pablo Sarabia",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "TOP5",
+          "question": "¿Cuál de los siguientes fue el mejor asistente del campeonato de España en la temporada 2018–2019?",
+          "right_answer": "Pablo Sarabia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_070"
+        },
+        "de": {
+          "answer_A": "Santi Cazorla",
+          "answer_B": "Pablo Sarabia",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "TOP5",
+          "question": "Wer von den folgenden Spielern war in der Saison 2018–2019 bester Vorlagengeber der spanischen Meisterschaft?",
+          "right_answer": "Pablo Sarabia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_070"
+        },
+        "it": {
+          "answer_A": "Santi Cazorla",
+          "answer_B": "Pablo Sarabia",
+          "answer_C": "Luis Suárez",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "TOP5",
+          "question": "Chi tra i seguenti è stato il miglior assist-man del campionato spagnolo nella stagione 2018–2019?",
+          "right_answer": "Pablo Sarabia",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_070"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "spain_071",
+      "categoryType": "TOP5",
+      "type": "Spain",
+      "source": {
+        "en": {
+          "question": "Which club won LaLiga in the 2024/2025 season?",
+          "answer_A": "Atletico Madrid",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Girona",
+          "right_answer": "Barcelona"
+        },
+        "ru": {
+          "question": "Какой клуб стал чемпионом Испании в сезоне 2024/2025?",
+          "answer_A": "Атлетико Мадрид",
+          "answer_B": "Реал Мадрид",
+          "answer_C": "Барселона",
+          "answer_D": "Жирона",
+          "right_answer": "Барселона"
+        },
+        "hy": {
+          "question": "Ո՞ր ակումբն է դարձել Իսպանիայի առաջնության չեմպիոն 2024/2025 մրցաշրջանում:",
+          "answer_A": "Ատլետիկո Մադրիդ",
+          "answer_B": "Ռեալ Մադրիդ",
+          "answer_C": "Բարսելոնա",
+          "answer_D": "Ժիրոնա",
+          "right_answer": "Բարսելոնա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Girona",
+          "categoryType": "TOP5",
+          "question": "¿Qué club ganó LaLiga en la temporada 2024/2025?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_071"
+        },
+        "de": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcelona",
+          "answer_D": "Girona",
+          "categoryType": "TOP5",
+          "question": "Welcher Verein gewann LaLiga in der Saison 2024/2025?",
+          "right_answer": "Barcelona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_071"
+        },
+        "it": {
+          "answer_A": "Atlético Madrid",
+          "answer_B": "Real Madrid",
+          "answer_C": "Barcellona",
+          "answer_D": "Girona",
+          "categoryType": "TOP5",
+          "question": "Quale club ha vinto LaLiga nella stagione 2024/2025?",
+          "right_answer": "Barcellona",
+          "type": "Spain",
+          "answered": false,
+          "questionId": "spain_071"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    }
+  ]
+}

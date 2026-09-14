@@ -1,0 +1,3854 @@
+{
+  "file_type": "football_quiz_translation_human_review",
+  "created_at": "2026-09-10",
+  "source_batch": "app/question_translation_batches_es_de_it_2026_09_09_manual_draft/world_cup_world_championship.json",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "firestore_updated": false,
+  "instructions": [
+    "Check that es/de/it question text matches the source meaning.",
+    "Check answer_A..answer_D and right_answer in each target language.",
+    "Use review_status: approved, needs_fix, questionable_fact, or translation_unclear.",
+    "Write reviewer_note only when something should be changed."
+  ],
+  "items_count": 54,
+  "items": [
+    {
+      "questionId": "world_cup_001",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Since what year is the World Championship held?",
+          "answer_A": "1926",
+          "answer_B": "1930",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "right_answer": "1930"
+        },
+        "ru": {
+          "question": "С какого года проводится чемпионат Мира ?",
+          "answer_A": "1926",
+          "answer_B": "1930",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "right_answer": "1930"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է անցկացվում Աշխարհի առաջնությունը:",
+          "answer_A": "1926",
+          "answer_B": "1930",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "right_answer": "1930"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1926",
+          "answer_B": "1930",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Desde qué año se disputa la Copa Mundial?",
+          "right_answer": "1930",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_001"
+        },
+        "de": {
+          "answer_A": "1926",
+          "answer_B": "1930",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "categoryType": "WORLD_CUP",
+          "question": "Seit welchem Jahr wird die Weltmeisterschaft ausgetragen?",
+          "right_answer": "1930",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_001"
+        },
+        "it": {
+          "answer_A": "1926",
+          "answer_B": "1930",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "categoryType": "WORLD_CUP",
+          "question": "Da quale anno si disputa il Campionato del Mondo?",
+          "right_answer": "1930",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_001"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_002",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "In which country was the first World Championship held?",
+          "answer_A": "Brazil",
+          "answer_B": "Uruguay",
+          "answer_C": "France",
+          "answer_D": "Italy",
+          "right_answer": "Uruguay"
+        },
+        "ru": {
+          "question": "В какой стране проводился первый чемпионат Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Уругвай",
+          "answer_C": "Франция",
+          "answer_D": "Италия",
+          "right_answer": "Уругвай"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրում է անցկացվել Աշխարհի առաջին առաջնությունը:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Ուրուգվայ",
+          "answer_C": "Ֆրանսիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Ուրուգվայ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Uruguay",
+          "answer_C": "Francia",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿En qué país se disputó la primera Copa Mundial?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_002"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Uruguay",
+          "answer_C": "Frankreich",
+          "answer_D": "Italien",
+          "categoryType": "WORLD_CUP",
+          "question": "In welchem Land wurde die erste Weltmeisterschaft ausgetragen?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_002"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Uruguay",
+          "answer_C": "Francia",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "In quale paese si disputò il primo Campionato del Mondo?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_002"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_003",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country won the World Championship first?",
+          "answer_A": "Brazil",
+          "answer_B": "Uruguay",
+          "answer_C": "Argentina",
+          "answer_D": "Italy",
+          "right_answer": "Uruguay"
+        },
+        "ru": {
+          "question": "Какая страна первая выиграла чемпионат Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Уругвай",
+          "answer_C": "Аргентина",
+          "answer_D": "Италия",
+          "right_answer": "Уругвай"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է նվաճել Աշխարհի առաջին առաջնության գավաթը:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Ուրուգվայ",
+          "answer_C": "Արգենտինա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Ուրուգվայ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Uruguay",
+          "answer_C": "Argentina",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país ganó primero la Copa Mundial?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_003"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Uruguay",
+          "answer_C": "Argentinien",
+          "answer_D": "Italien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land gewann als erstes die Weltmeisterschaft?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_003"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Uruguay",
+          "answer_C": "Argentina",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese vinse per primo il Campionato del Mondo?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_003"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_004",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country lost in the finals of the first World Cup?",
+          "answer_A": "Uruguay",
+          "answer_B": "Argentina",
+          "answer_C": "Brazil",
+          "answer_D": "USA",
+          "right_answer": "Argentina"
+        },
+        "ru": {
+          "question": "Какая страна проиграла в финале первого чемпионата Мира ?",
+          "answer_A": "Уругвай",
+          "answer_B": "Аргентина",
+          "answer_C": "Бразилия",
+          "answer_D": "США",
+          "right_answer": "Аргентина"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է պարտվել Աշխարհի առաջին առաջնության եզրափակչում:",
+          "answer_A": "Ուրուգվայ",
+          "answer_B": "Արգենտինա",
+          "answer_C": "Բրազիլիա",
+          "answer_D": "ԱՄՆ",
+          "right_answer": "Արգենտինա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Uruguay",
+          "answer_B": "Argentina",
+          "answer_C": "Brasil",
+          "answer_D": "Estados Unidos",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país perdió la final de la primera Copa Mundial?",
+          "right_answer": "Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_004"
+        },
+        "de": {
+          "answer_A": "Uruguay",
+          "answer_B": "Argentinien",
+          "answer_C": "Brasilien",
+          "answer_D": "USA",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land verlor das Finale der ersten Weltmeisterschaft?",
+          "right_answer": "Argentinien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_004"
+        },
+        "it": {
+          "answer_A": "Uruguay",
+          "answer_B": "Argentina",
+          "answer_C": "Brasile",
+          "answer_D": "Stati Uniti",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese perse la finale del primo Campionato del Mondo?",
+          "right_answer": "Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_004"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_005",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country became the bronze medalist of the first World Championship?",
+          "answer_A": "Brazil",
+          "answer_B": "Argentina",
+          "answer_C": "USA",
+          "answer_D": "Yugoslavia",
+          "right_answer": "USA"
+        },
+        "ru": {
+          "question": "Какая страна стала бронзовым призером первого чемпионата Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Аргентина",
+          "answer_C": "США",
+          "answer_D": "Югославия",
+          "right_answer": "США"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է դարձել Աշխարհի առաջին առաջնության բրոնզե մեդալակիր:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Արգենտինա",
+          "answer_C": "ԱՄՆ",
+          "answer_D": "Հարավսլավիա",
+          "right_answer": "ԱՄՆ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Argentina",
+          "answer_C": "Estados Unidos",
+          "answer_D": "Yugoslavia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país terminó tercero en la primera Copa Mundial?",
+          "right_answer": "Estados Unidos",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_005"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Argentinien",
+          "answer_C": "USA",
+          "answer_D": "Jugoslawien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land wurde bei der ersten Weltmeisterschaft Dritter?",
+          "right_answer": "USA",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_005"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Argentina",
+          "answer_C": "Stati Uniti",
+          "answer_D": "Jugoslavia",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese arrivò terzo nel primo Campionato del Mondo?",
+          "right_answer": "Stati Uniti",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_005"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_006",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country has won the World Cup the most?",
+          "answer_A": "Italy",
+          "answer_B": "Germany",
+          "answer_C": "Brazil",
+          "answer_D": "Argentina",
+          "right_answer": "Brazil"
+        },
+        "ru": {
+          "question": "Какая страна больше всех выиграла чемпионат Мира ?",
+          "answer_A": "Италия",
+          "answer_B": "Германия",
+          "answer_C": "Бразилия",
+          "answer_D": "Аргентина",
+          "right_answer": "Бразилия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ նվաճել Աշխարհի առաջնության գավաթը:",
+          "answer_A": "Իտալիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Բրազիլիա",
+          "answer_D": "Արգենտինա",
+          "right_answer": "Բրազիլիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Italia",
+          "answer_B": "Alemania",
+          "answer_C": "Brasil",
+          "answer_D": "Argentina",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país ha ganado más veces la Copa Mundial?",
+          "right_answer": "Brasil",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_006"
+        },
+        "de": {
+          "answer_A": "Italien",
+          "answer_B": "Deutschland",
+          "answer_C": "Brasilien",
+          "answer_D": "Argentinien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land hat die Weltmeisterschaft am häufigsten gewonnen?",
+          "right_answer": "Brasilien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_006"
+        },
+        "it": {
+          "answer_A": "Italia",
+          "answer_B": "Germania",
+          "answer_C": "Brasile",
+          "answer_D": "Argentina",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese ha vinto più volte la Coppa del Mondo?",
+          "right_answer": "Brasile",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_006"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_007",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which countries have lost the most World Cup finals?",
+          "answer_A": "Germany and Argentina",
+          "answer_B": "Brazil",
+          "answer_C": "Netherlands",
+          "answer_D": "Italy",
+          "right_answer": "Germany and Argentina"
+        },
+        "ru": {
+          "question": "Какие страны больше всех проигрывали в финалах чемпионата мира ?",
+          "answer_A": "Германия и Аргентина",
+          "answer_B": "Бразилия",
+          "answer_C": "Нидерланды",
+          "answer_D": "Италия",
+          "right_answer": "Германия и Аргентина"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրներն են ամենաշատը պարտվել Աշխարհի առաջնության եզրափակիչներում:",
+          "answer_A": "Գերմանիա և Արգենտինա",
+          "answer_B": "Բրազիլիա",
+          "answer_C": "Նիդեռլանդներ",
+          "answer_D": "Իտալիա",
+          "right_answer": "Գերմանիա և Արգենտինա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Alemania y Argentina",
+          "answer_B": "Brasil",
+          "answer_C": "Países Bajos",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué países han perdido más finales de la Copa Mundial?",
+          "right_answer": "Alemania y Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_007"
+        },
+        "de": {
+          "answer_A": "Deutschland und Argentinien",
+          "answer_B": "Brasilien",
+          "answer_C": "Niederlande",
+          "answer_D": "Italien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Länder haben die meisten WM-Endspiele verloren?",
+          "right_answer": "Deutschland und Argentinien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_007"
+        },
+        "it": {
+          "answer_A": "Germania e Argentina",
+          "answer_B": "Brasile",
+          "answer_C": "Paesi Bassi",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "Quali paesi hanno perso più finali della Coppa del Mondo?",
+          "right_answer": "Germania e Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_007"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_008",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country has become the most bronze medalist of the World Championship?",
+          "answer_A": "France",
+          "answer_B": "Germany",
+          "answer_C": "Brazil",
+          "answer_D": "Uruguay",
+          "right_answer": "Germany"
+        },
+        "ru": {
+          "question": "Какая страна больше всех стала бронзовым призером чемпионата Мира ?",
+          "answer_A": "Франция",
+          "answer_B": "Германия",
+          "answer_C": "Бразилия",
+          "answer_D": "Уругвай",
+          "right_answer": "Германия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ դարձել Աշխարհի առաջնության բրոնզե մեդալակիր:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Բրազիլիա",
+          "answer_D": "Ուրուգվայ",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Alemania",
+          "answer_C": "Brasil",
+          "answer_D": "Uruguay",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país ha terminado tercero más veces en la Copa Mundial?",
+          "right_answer": "Alemania",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_008"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "Deutschland",
+          "answer_C": "Brasilien",
+          "answer_D": "Uruguay",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land wurde bei Weltmeisterschaften am häufigsten Dritter?",
+          "right_answer": "Deutschland",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_008"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Germania",
+          "answer_C": "Brasile",
+          "answer_D": "Uruguay",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese è arrivato più volte terzo al Campionato del Mondo?",
+          "right_answer": "Germania",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_008"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_009",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country has lost the most in matches for third place in the World Cup?",
+          "answer_A": "Brazil",
+          "answer_B": "Uruguay",
+          "answer_C": "England",
+          "answer_D": "Yugoslavia",
+          "right_answer": "Uruguay"
+        },
+        "ru": {
+          "question": "Какая страна больше всех проиграла в матчах за третье место чемпионата Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Уругвай",
+          "answer_C": "Англия",
+          "answer_D": "Югославия",
+          "right_answer": "Уругвай"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է Աշխարհի առաջնությունում բոլորից շատ պարտվել երրորդ տեղի համար խաղում:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Ուրուգվայ",
+          "answer_C": "Անգլիա",
+          "answer_D": "Հարավսլավիա",
+          "right_answer": "Ուրուգվայ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Uruguay",
+          "answer_C": "Inglaterra",
+          "answer_D": "Yugoslavia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país ha perdido más partidos por el tercer puesto en la Copa Mundial?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_009"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Uruguay",
+          "answer_C": "England",
+          "answer_D": "Jugoslawien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land hat die meisten Spiele um Platz drei bei der Weltmeisterschaft verloren?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_009"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Uruguay",
+          "answer_C": "Inghilterra",
+          "answer_D": "Jugoslavia",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese ha perso più partite per il terzo posto nella Coppa del Mondo?",
+          "right_answer": "Uruguay",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_009"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_010",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country has most participated in World Championships?",
+          "answer_A": "Brazil",
+          "answer_B": "Germany",
+          "answer_C": "Italy",
+          "answer_D": "Argentina",
+          "right_answer": "Brazil"
+        },
+        "ru": {
+          "question": "Какая страна больше всех участвовала в чемпионатах Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Германия",
+          "answer_C": "Италия",
+          "answer_D": "Аргентина",
+          "right_answer": "Бразилия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ մասնակցել Աշխարհի առաջնություններին:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Արգենտինա",
+          "right_answer": "Բրազիլիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Alemania",
+          "answer_C": "Italia",
+          "answer_D": "Argentina",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país ha participado en más Copas Mundiales?",
+          "right_answer": "Brasil",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_010"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Deutschland",
+          "answer_C": "Italien",
+          "answer_D": "Argentinien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land nahm an den meisten Weltmeisterschaften teil?",
+          "right_answer": "Brasilien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_010"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Germania",
+          "answer_C": "Italia",
+          "answer_D": "Argentina",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese ha partecipato a più Campionati del Mondo?",
+          "right_answer": "Brasile",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_010"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_011",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country became the first two-time World Champion?",
+          "answer_A": "Uruguay",
+          "answer_B": "Brazil",
+          "answer_C": "Germany",
+          "answer_D": "Italy",
+          "right_answer": "Italy"
+        },
+        "ru": {
+          "question": "Какая страна первая стала двукратным чемпионом Мира ?",
+          "answer_A": "Уругвай",
+          "answer_B": "Бразилия",
+          "answer_C": "Германия",
+          "answer_D": "Италия",
+          "right_answer": "Италия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է առաջինը պաշտպանել Աշխարհի առաջնության չեմպիոնի տիտղոսը:",
+          "answer_A": "Ուրուգվայ",
+          "answer_B": "Բրազիլիա",
+          "answer_C": "Գերմանիա",
+          "answer_D": "Իտալիա",
+          "right_answer": "Իտալիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Uruguay",
+          "answer_B": "Brasil",
+          "answer_C": "Alemania",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país fue el primer bicampeón mundial?",
+          "right_answer": "Italia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_011"
+        },
+        "de": {
+          "answer_A": "Uruguay",
+          "answer_B": "Brasilien",
+          "answer_C": "Deutschland",
+          "answer_D": "Italien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land wurde der erste zweifache Weltmeister?",
+          "right_answer": "Italien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_011"
+        },
+        "it": {
+          "answer_A": "Uruguay",
+          "answer_B": "Brasile",
+          "answer_C": "Germania",
+          "answer_D": "Italia",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese fu il primo bicampione del mondo?",
+          "right_answer": "Italia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_011"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_012",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which countries managed to win the World Cup 2 times in a row?",
+          "answer_A": "Brazil, Germany",
+          "answer_B": "Uruguay, Italy",
+          "answer_C": "Brazil, Italy",
+          "answer_D": "Italy, Germany",
+          "right_answer": "Brazil, Italy"
+        },
+        "ru": {
+          "question": "Каким странам удалось 2 раза подряд выиграть чемпионат Мира ?",
+          "answer_A": "Бразилия, Германия",
+          "answer_B": "Уругвай, Италия",
+          "answer_C": "Бразилия, Италия",
+          "answer_D": "Италия, Германия",
+          "right_answer": "Бразилия, Италия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրներին է հաջողվել նվաճել Աշխարհի առաջնության գավաթը 2 անգամ անընդմեջ:",
+          "answer_A": "Բրազիլիա, Գերմանիա",
+          "answer_B": "Ուրուգվայ, Իտալիա",
+          "answer_C": "Բրազիլիա, Իտալիա",
+          "answer_D": "Իտալիա, Գերմանիա",
+          "right_answer": "Բրազիլիա, Իտալիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil, Alemania",
+          "answer_B": "Uruguay, Italia",
+          "answer_C": "Brasil, Italia",
+          "answer_D": "Italia, Alemania",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué países lograron ganar la Copa Mundial 2 veces seguidas?",
+          "right_answer": "Brasil, Italia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_012"
+        },
+        "de": {
+          "answer_A": "Brasilien, Deutschland",
+          "answer_B": "Uruguay, Italien",
+          "answer_C": "Brasilien, Italien",
+          "answer_D": "Italien, Deutschland",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Länder konnten die Weltmeisterschaft zweimal in Folge gewinnen?",
+          "right_answer": "Brasilien, Italien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_012"
+        },
+        "it": {
+          "answer_A": "Brasile, Germania",
+          "answer_B": "Uruguay, Italia",
+          "answer_C": "Brasile, Italia",
+          "answer_D": "Italia, Germania",
+          "categoryType": "WORLD_CUP",
+          "question": "Quali paesi sono riusciti a vincere la Coppa del Mondo 2 volte di fila?",
+          "right_answer": "Brasile, Italia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_012"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_013",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country has long remained in the title of world champion?",
+          "answer_A": "Brazil",
+          "answer_B": "Italy",
+          "answer_C": "Uruguay",
+          "answer_D": "Germany",
+          "right_answer": "Italy"
+        },
+        "ru": {
+          "question": "Какая страна долгое время оставалась в звании чемпиона Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Италия",
+          "answer_C": "Уругвай",
+          "answer_D": "Германия",
+          "right_answer": "Италия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է ավելի երկար ժամանակ մնացել Աշխարհի առաջնության չեմպիոնի կարգավիճակում:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Իտալիա",
+          "answer_C": "Ուրուգվայ",
+          "answer_D": "Գերմանիա",
+          "right_answer": "Իտալիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Italia",
+          "answer_C": "Uruguay",
+          "answer_D": "Alemania",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país conservó durante más tiempo el título de campeón mundial?",
+          "right_answer": "Italia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_013"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Italien",
+          "answer_C": "Uruguay",
+          "answer_D": "Deutschland",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land blieb am längsten amtierender Weltmeister?",
+          "right_answer": "Italien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_013"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Italia",
+          "answer_C": "Uruguay",
+          "answer_D": "Germania",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese rimase più a lungo campione del mondo in carica?",
+          "right_answer": "Italia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_013"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_014",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "In what year did the host country participate in qualifying matches to qualify for the World Cup?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "right_answer": "1934"
+        },
+        "ru": {
+          "question": "В каком году стране-хозяйке пришлось участвовать в отборочных матчах, для попадания на чемпионат Мира ?",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "right_answer": "1934"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Աշխարհի առաջնությունը անցկացնող երկիրը մասնակցել մրցաշարին՝ հաղթահարելով ընտրական փուլը:",
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "right_answer": "1934"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "categoryType": "WORLD_CUP",
+          "question": "¿En qué año el país anfitrión tuvo que jugar eliminatorias para clasificarse a la Copa Mundial?",
+          "right_answer": "1934",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_014"
+        },
+        "de": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "categoryType": "WORLD_CUP",
+          "question": "In welchem Jahr musste das Gastgeberland Qualifikationsspiele bestreiten, um sich für die Weltmeisterschaft zu qualifizieren?",
+          "right_answer": "1934",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_014"
+        },
+        "it": {
+          "answer_A": "1930",
+          "answer_B": "1934",
+          "answer_C": "1938",
+          "answer_D": "1950",
+          "categoryType": "WORLD_CUP",
+          "question": "In quale anno il paese ospitante dovette giocare le qualificazioni per accedere alla Coppa del Mondo?",
+          "right_answer": "1934",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_014"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_015",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which countries in the XXI century passed the World Cup group stage as reigning world champions?",
+          "answer_A": "Germany",
+          "answer_B": "Brazil, France and Argentina",
+          "answer_C": "Italy",
+          "answer_D": "Spain",
+          "right_answer": "Brazil, France and Argentina"
+        },
+        "ru": {
+          "question": "Какие страны в XXI веке проходили групповой этап чемпионата мира, являясь действующими чемпионами мира ?",
+          "answer_A": "Германия",
+          "answer_B": "Бразилия, Франция и Аргентина",
+          "answer_C": "Италия",
+          "answer_D": "Испания",
+          "right_answer": "Бразилия, Франция и Аргентина"
+        },
+        "hy": {
+          "question": "XXI դարում ո՞ր երկրներն են դուրս եկել Աշխարհի առաջնության խմբային փուլից՝ լինելով գործող աշխարհի չեմպիոն:",
+          "answer_A": "Գերմանիա",
+          "answer_B": "Բրազիլիա, Ֆրանսիա և Արգենտինա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Իսպանիա",
+          "right_answer": "Բրազիլիա, Ֆրանսիա և Արգենտինա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Alemania",
+          "answer_B": "Brasil, Francia y Argentina",
+          "answer_C": "Italia",
+          "answer_D": "España",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué países del siglo XXI superaron la fase de grupos de la Copa Mundial siendo campeones vigentes?",
+          "right_answer": "Brasil, Francia y Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_015"
+        },
+        "de": {
+          "answer_A": "Deutschland",
+          "answer_B": "Brasilien, Frankreich und Argentinien",
+          "answer_C": "Italien",
+          "answer_D": "Spanien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Länder kamen im 21. Jahrhundert als amtierende Weltmeister über die WM-Gruppenphase hinaus?",
+          "right_answer": "Brasilien, Frankreich und Argentinien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_015"
+        },
+        "it": {
+          "answer_A": "Germania",
+          "answer_B": "Brasile, Francia e Argentina",
+          "answer_C": "Italia",
+          "answer_D": "Spagna",
+          "categoryType": "WORLD_CUP",
+          "question": "Quali paesi nel XXI secolo hanno superato la fase a gironi della Coppa del Mondo da campioni in carica?",
+          "right_answer": "Brasile, Francia e Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_015"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_016",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "In what year was the World Championship held without a reigning champion?",
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        },
+        "ru": {
+          "question": "В каком году чемпионат Мира проводился без действующего чемпиона ?",
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Աշխարհի առաջնությունը անցկացվել առանց գործող չեմպիոնի:",
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "right_answer": "1934"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "categoryType": "WORLD_CUP",
+          "question": "¿En qué año se disputó la Copa Mundial sin campeón vigente?",
+          "right_answer": "1934",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_016"
+        },
+        "de": {
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "categoryType": "WORLD_CUP",
+          "question": "In welchem Jahr wurde die Weltmeisterschaft ohne amtierenden Champion ausgetragen?",
+          "right_answer": "1934",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_016"
+        },
+        "it": {
+          "answer_A": "1934",
+          "answer_B": "1938",
+          "answer_C": "1950",
+          "answer_D": "1954",
+          "categoryType": "WORLD_CUP",
+          "question": "In quale anno si disputò il Campionato del Mondo senza campione in carica?",
+          "right_answer": "1934",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_016"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_017",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which countries in the XX century could not get out of the group stage of the World Cup, being the current world champion?",
+          "answer_A": "Uruguay, Italy",
+          "answer_B": "Italy, Brazil",
+          "answer_C": "Brazil, England",
+          "answer_D": "England, Germany",
+          "right_answer": "Italy, Brazil"
+        },
+        "ru": {
+          "question": "Какие страны в XX веке не смогли выйти из группового этапа чемпионата Мира, являясь действующим чемпионом Мира ?",
+          "answer_A": "Уругвай, Италия",
+          "answer_B": "Италия, Бразилия",
+          "answer_C": "Бразилия, Англия",
+          "answer_D": "Англия, Германия",
+          "right_answer": "Италия, Бразилия"
+        },
+        "hy": {
+          "question": "XX դարում ո՞ր երկրները չեն կարողացել դուրս գալ Աշխարհի առաջնության խմբային փուլից՝ լինելով Աշխարհի առաջնության գործող չեմպիոնը:",
+          "answer_A": "Ուրուգվայ, Իտալիա",
+          "answer_B": "Իտալիա, Բրազիլիա",
+          "answer_C": "Բրազիլիա, Անգլիա",
+          "answer_D": "Անգլիա, Գերմանիա",
+          "right_answer": "Իտալիա, Բրազիլիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Uruguay, Italia",
+          "answer_B": "Italia, Brasil",
+          "answer_C": "Brasil, Inglaterra",
+          "answer_D": "Inglaterra, Alemania",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué países del siglo XX no superaron la fase de grupos de la Copa Mundial siendo campeones vigentes?",
+          "right_answer": "Italia, Brasil",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_017"
+        },
+        "de": {
+          "answer_A": "Uruguay, Italien",
+          "answer_B": "Italien, Brasilien",
+          "answer_C": "Brasilien, England",
+          "answer_D": "England, Deutschland",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Länder schieden im 20. Jahrhundert als amtierende Weltmeister in der WM-Gruppenphase aus?",
+          "right_answer": "Italien, Brasilien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_017"
+        },
+        "it": {
+          "answer_A": "Uruguay, Italia",
+          "answer_B": "Italia, Brasile",
+          "answer_C": "Brasile, Inghilterra",
+          "answer_D": "Inghilterra, Germania",
+          "categoryType": "WORLD_CUP",
+          "question": "Quali paesi nel XX secolo non superarono la fase a gironi della Coppa del Mondo da campioni in carica?",
+          "right_answer": "Italia, Brasile",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_017"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_018",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country in seven World Championships in a row dropped out of the draw at the 1/8 final stage?",
+          "answer_A": "Portugal",
+          "answer_B": "Mexico",
+          "answer_C": "Colombia",
+          "answer_D": "Japan",
+          "right_answer": "Mexico"
+        },
+        "ru": {
+          "question": "Какая страна в семи чемпионатах Мира подряд выбывала из розыгрыша на стадии 1/8 финала ?",
+          "answer_A": "Португалия",
+          "answer_B": "Мексика",
+          "answer_C": "Колумбия",
+          "answer_D": "Япония",
+          "right_answer": "Мексика"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է անընդմեջ Աշխարհի 7 առաջնություններում դուրս մնում պայքարից 1/8-րդ եզրափակչից:",
+          "answer_A": "Պորտուգալիա",
+          "answer_B": "Մեքսիկա",
+          "answer_C": "Կոլումբիա",
+          "answer_D": "Ճապոնիա",
+          "right_answer": "Մեքսիկա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Portugal",
+          "answer_B": "México",
+          "answer_C": "Colombia",
+          "answer_D": "Japón",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país quedó eliminado en octavos de final en siete Copas Mundiales consecutivas?",
+          "right_answer": "México",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_018"
+        },
+        "de": {
+          "answer_A": "Portugal",
+          "answer_B": "Mexiko",
+          "answer_C": "Kolumbien",
+          "answer_D": "Japan",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land schied bei sieben Weltmeisterschaften in Folge im Achtelfinale aus?",
+          "right_answer": "Mexiko",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_018"
+        },
+        "it": {
+          "answer_A": "Portogallo",
+          "answer_B": "Messico",
+          "answer_C": "Colombia",
+          "answer_D": "Giappone",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese è stato eliminato agli ottavi di finale in sette Mondiali consecutivi?",
+          "right_answer": "Messico",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_018"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_019",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which countries have met most in the finals of the World Cup?",
+          "answer_A": "Germany, Argentina",
+          "answer_B": "Brazil, Germany",
+          "answer_C": "Italy, Brazil",
+          "answer_D": "Italy, Germany",
+          "right_answer": "Germany, Argentina"
+        },
+        "ru": {
+          "question": "Какие страны больше всех встречались в финалах чемпионата Мира ?",
+          "answer_A": "Германия, Аргентина",
+          "answer_B": "Бразилия, Германия",
+          "answer_C": "Италия, Бразилия",
+          "answer_D": "Италия, Германия",
+          "right_answer": "Германия, Аргентина"
+        },
+        "hy": {
+          "question": "Աշխարհի առաջնության եզրափակչում բոլորից շատ ո՞ր երկրներն են իրար հանդիպել:",
+          "answer_A": "Գերմանիա, Արգենտինա",
+          "answer_B": "Բրազիլիա, Գերմանիա",
+          "answer_C": "Իտալիա, Բրազիլիա",
+          "answer_D": "Իտալիա, Գերմանիա",
+          "right_answer": "Գերմանիա, Արգենտինա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Alemania, Argentina",
+          "answer_B": "Brasil, Alemania",
+          "answer_C": "Italia, Brasil",
+          "answer_D": "Italia, Alemania",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué países se han enfrentado más veces en finales de la Copa Mundial?",
+          "right_answer": "Alemania, Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_019"
+        },
+        "de": {
+          "answer_A": "Deutschland, Argentinien",
+          "answer_B": "Brasilien, Deutschland",
+          "answer_C": "Italien, Brasilien",
+          "answer_D": "Italien, Deutschland",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Länder trafen am häufigsten in WM-Finals aufeinander?",
+          "right_answer": "Deutschland, Argentinien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_019"
+        },
+        "it": {
+          "answer_A": "Germania, Argentina",
+          "answer_B": "Brasile, Germania",
+          "answer_C": "Italia, Brasile",
+          "answer_D": "Italia, Germania",
+          "categoryType": "WORLD_CUP",
+          "question": "Quali paesi si sono affrontati più volte nelle finali della Coppa del Mondo?",
+          "right_answer": "Germania, Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_019"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_020",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country managed to win the World Cup by winning all matches?",
+          "answer_A": "Brazil",
+          "answer_B": "Uruguay",
+          "answer_C": "Italy",
+          "answer_D": "All",
+          "right_answer": "All"
+        },
+        "ru": {
+          "question": "Какой стране удалось выиграть чемпионат Мира, победив во всех матчах ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Уругвай",
+          "answer_C": "Италия",
+          "answer_D": "Всем",
+          "right_answer": "Всем"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրին է հաջողվել նվաճել Աշխարհի առաջնության գավաթը՝ հաղթելով բոլոր խաղերում:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Ուրուգվայ",
+          "answer_C": "Իտալիա",
+          "answer_D": "Բոլորին",
+          "right_answer": "Բոլորին"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Uruguay",
+          "answer_C": "Italia",
+          "answer_D": "Todos",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país logró ganar la Copa Mundial ganando todos sus partidos?",
+          "right_answer": "Todos",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_020"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Uruguay",
+          "answer_C": "Italien",
+          "answer_D": "Alle",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land konnte die Weltmeisterschaft gewinnen und dabei alle Spiele gewinnen?",
+          "right_answer": "Alle",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_020"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Uruguay",
+          "answer_C": "Italia",
+          "answer_D": "Tutti",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese è riuscito a vincere la Coppa del Mondo vincendo tutte le partite?",
+          "right_answer": "Tutti",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_020"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_021",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "In which year did the country that hosted the World Championship drop out of the tournament from the group stage?",
+          "answer_A": "1954",
+          "answer_B": "1970",
+          "answer_C": "1994",
+          "answer_D": "2010",
+          "right_answer": "2010"
+        },
+        "ru": {
+          "question": "В каком году страна, проводившая чемпионат Мира, выбыла из турнира с группового этапа ?",
+          "answer_A": "1954",
+          "answer_B": "1970",
+          "answer_C": "1994",
+          "answer_D": "2010",
+          "right_answer": "2010"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. է Աշխարհի առաջնությունը անցկացնող երկիրը պայքարից դուրս մնացել խմբային փուլից:",
+          "answer_A": "1954",
+          "answer_B": "1970",
+          "answer_C": "1994",
+          "answer_D": "2010",
+          "right_answer": "2010"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1954",
+          "answer_B": "1970",
+          "answer_C": "1994",
+          "answer_D": "2010",
+          "categoryType": "WORLD_CUP",
+          "question": "¿En qué año el país anfitrión de la Copa Mundial quedó eliminado en la fase de grupos?",
+          "right_answer": "2010",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_021"
+        },
+        "de": {
+          "answer_A": "1954",
+          "answer_B": "1970",
+          "answer_C": "1994",
+          "answer_D": "2010",
+          "categoryType": "WORLD_CUP",
+          "question": "In welchem Jahr schied der Gastgeber der Weltmeisterschaft in der Gruppenphase aus?",
+          "right_answer": "2010",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_021"
+        },
+        "it": {
+          "answer_A": "1954",
+          "answer_B": "1970",
+          "answer_C": "1994",
+          "answer_D": "2010",
+          "categoryType": "WORLD_CUP",
+          "question": "In quale anno il paese ospitante della Coppa del Mondo uscì nella fase a gironi?",
+          "right_answer": "2010",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_021"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_022",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer in World Championship history?",
+          "answer_A": "Ronaldo",
+          "answer_B": "Pelé",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Gerd Müller",
+          "right_answer": "Kylian Mbappé"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир в истории чемпионатов Мира ?",
+          "answer_A": "Роналдо",
+          "answer_B": "Пеле",
+          "answer_C": "Килиан Мбаппе",
+          "answer_D": "Герд Мюллер",
+          "right_answer": "Килиан Мбаппе"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնությունների բոլոր ժամանակների լավագույն ռմբարկուն:",
+          "answer_A": "Ռոնալդո",
+          "answer_B": "Պելե",
+          "answer_C": "Կիլիան Մբապե",
+          "answer_D": "Գերդ Մյուլլեր",
+          "right_answer": "Կիլիան Մբապե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Ronaldo",
+          "answer_B": "Pelé",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Gerd Müller",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién es el máximo goleador histórico de la Copa Mundial?",
+          "right_answer": "Kylian Mbappé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_022"
+        },
+        "de": {
+          "answer_A": "Ronaldo",
+          "answer_B": "Pelé",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Gerd Müller",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer ist der Rekordtorschütze der Weltmeisterschaftsgeschichte?",
+          "right_answer": "Kylian Mbappé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_022"
+        },
+        "it": {
+          "answer_A": "Ronaldo",
+          "answer_B": "Pelé",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Gerd Müller",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi è il miglior marcatore nella storia della Coppa del Mondo?",
+          "right_answer": "Kylian Mbappé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_022"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_023",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who became the author of the \"hat trick \" in the final match of the World Cup?",
+          "answer_A": "Pelé",
+          "answer_B": "Geoffrey Hurst",
+          "answer_C": "Vavá",
+          "answer_D": "Zinedine Zidane",
+          "right_answer": "Geoffrey Hurst"
+        },
+        "ru": {
+          "question": "Кто стал автором \"хет трика\" в финальном матче чемпионата Мира ?",
+          "answer_A": "Пеле",
+          "answer_B": "Джеффри Херст",
+          "answer_C": "Вава",
+          "answer_D": "Зинедин Зидан",
+          "right_answer": "Джеффри Херст"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնության եզրափակչում դարձել \"հեթրիկ\"-ի հեղինակ :",
+          "answer_A": "Պելե",
+          "answer_B": "Ջեֆրի Հերստ",
+          "answer_C": "Վավա",
+          "answer_D": "Զինեդին Զիդան",
+          "right_answer": "Ջեֆրի Հերստ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Pelé",
+          "answer_B": "Geoff Hurst",
+          "answer_C": "Vavá",
+          "answer_D": "Zinedine Zidane",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién marcó un hat-trick en la final de la Copa Mundial?",
+          "right_answer": "Geoff Hurst",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_023"
+        },
+        "de": {
+          "answer_A": "Pelé",
+          "answer_B": "Geoff Hurst",
+          "answer_C": "Vavá",
+          "answer_D": "Zinedine Zidane",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer erzielte einen Hattrick im Finale der Weltmeisterschaft?",
+          "right_answer": "Geoff Hurst",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_023"
+        },
+        "it": {
+          "answer_A": "Pelé",
+          "answer_B": "Geoff Hurst",
+          "answer_C": "Vavá",
+          "answer_D": "Zinedine Zidane",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi segnò una tripletta nella finale della Coppa del Mondo?",
+          "right_answer": "Geoff Hurst",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_023"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_024",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the author of the fastest goal in World Championships?",
+          "answer_A": "Hakan Şükür",
+          "answer_B": "Vaclav Masek",
+          "answer_C": "Bryan Robson",
+          "answer_D": "Ernst Lehner",
+          "right_answer": "Hakan Şükür"
+        },
+        "ru": {
+          "question": "Кто автор самого быстрого гола в чемпионатах Мира ?",
+          "answer_A": "Хакан Шукюр",
+          "answer_B": "Вацлав Машек",
+          "answer_C": "Брайан Робсон",
+          "answer_D": "Эрнст Ленер",
+          "right_answer": "Хакан Шукюр"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնություններում ամենաարագ գոլի հեղինակը:",
+          "answer_A": "Հաքան Շյուքյուր",
+          "answer_B": "Վացլավ Մաշեկ",
+          "answer_C": "Բրայան Ռոբսոն",
+          "answer_D": "Էռնեստ Լեներ",
+          "right_answer": "Հաքան Շյուքյուր"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Hakan Şükür",
+          "answer_B": "Václav Mašek",
+          "answer_C": "Bryan Robson",
+          "answer_D": "Ernst Lehner",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién marcó el gol más rápido en la historia de la Copa Mundial?",
+          "right_answer": "Hakan Şükür",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_024"
+        },
+        "de": {
+          "answer_A": "Hakan Şükür",
+          "answer_B": "Václav Mašek",
+          "answer_C": "Bryan Robson",
+          "answer_D": "Ernst Lehner",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer erzielte das schnellste Tor in der Geschichte der Weltmeisterschaft?",
+          "right_answer": "Hakan Şükür",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_024"
+        },
+        "it": {
+          "answer_A": "Hakan Şükür",
+          "answer_B": "Václav Mašek",
+          "answer_C": "Bryan Robson",
+          "answer_D": "Ernst Lehner",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha segnato il gol più veloce nella storia della Coppa del Mondo?",
+          "right_answer": "Hakan Şükür",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_024"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_025",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who played the most matches in World Championships?",
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Rafael Márquez",
+          "answer_C": "Antonio Carbajal",
+          "answer_D": "Lionel Messi",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто провел наибольшее количество матчей в чемпионатах Мира ?",
+          "answer_A": "Лотар Матеус",
+          "answer_B": "Рафаэль Маркес",
+          "answer_C": "Антонио Карбахал",
+          "answer_D": "Лионель Месси",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ խաղ անցկացրել Աշխարհի առաջնություններում:",
+          "answer_A": "Լոթար Մաթեուս",
+          "answer_B": "Ռաֆայել Մարկես",
+          "answer_C": "Անտոնիո Կարբախալ",
+          "answer_D": "Լիոնել Մեսսի",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Rafael Márquez",
+          "answer_C": "Antonio Carbajal",
+          "answer_D": "Lionel Messi",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ha jugado más partidos en Copas Mundiales?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_025"
+        },
+        "de": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Rafael Márquez",
+          "answer_C": "Antonio Carbajal",
+          "answer_D": "Lionel Messi",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer hat die meisten Spiele bei Weltmeisterschaften bestritten?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_025"
+        },
+        "it": {
+          "answer_A": "Lothar Matthäus",
+          "answer_B": "Rafael Márquez",
+          "answer_C": "Antonio Carbajal",
+          "answer_D": "Lionel Messi",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha giocato più partite nei Mondiali?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_025"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_026",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for the number of goals in one World Championship?",
+          "answer_A": "Just Fontaine",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Kocsis Sándor",
+          "answer_D": "Guillermo Stábile",
+          "right_answer": "Just Fontaine"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по количеству голов в одном чемпионате Мира ?",
+          "answer_A": "Жюст Фонтен",
+          "answer_B": "Герд Мюллер",
+          "answer_C": "Шандор Кочиш",
+          "answer_D": "Гильермо Стабиле",
+          "right_answer": "Жюст Фонтен"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի մեկ առաջնությունում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Ժյուստ Ֆոնտեն",
+          "answer_B": "Գերդ Մյուլլեր",
+          "answer_C": "Շանդոր Կոչիշ",
+          "answer_D": "Գիլյերմո Ստաբիլ",
+          "right_answer": "Ժյուստ Ֆոնտեն"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Just Fontaine",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Sándor Kocsis",
+          "answer_D": "Guillermo Stábile",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién tiene el récord de goles en una sola Copa Mundial?",
+          "right_answer": "Just Fontaine",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_026"
+        },
+        "de": {
+          "answer_A": "Just Fontaine",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Sándor Kocsis",
+          "answer_D": "Guillermo Stábile",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer hält den Rekord für die meisten Tore bei einer einzigen Weltmeisterschaft?",
+          "right_answer": "Just Fontaine",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_026"
+        },
+        "it": {
+          "answer_A": "Just Fontaine",
+          "answer_B": "Gerd Müller",
+          "answer_C": "Sándor Kocsis",
+          "answer_D": "Guillermo Stábile",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi detiene il record di gol in un solo Campionato del Mondo?",
+          "right_answer": "Just Fontaine",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_026"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_027",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for the number of goals in one match of the World Cup?",
+          "answer_A": "Oleg Salenko",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Pelé",
+          "right_answer": "Oleg Salenko"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по количеству голов в одном матче чемпионата Мира ?",
+          "answer_A": "Олег Саленко",
+          "answer_B": "Жюст Фонтен",
+          "answer_C": "Герд Мюллер",
+          "answer_D": "Пеле",
+          "right_answer": "Олег Саленко"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնության մեկ խաղում խփած գոլերի քանակով ռեկորդակիրը :",
+          "answer_A": "Օլեգ Սալենկո",
+          "answer_B": "Ժյուստ Ֆոնտեն",
+          "answer_C": "Գերդ Մյուլլեր",
+          "answer_D": "Պելե",
+          "right_answer": "Օլեգ Սալենկո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Oleg Salenko",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Pelé",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién tiene el récord de goles en un solo partido de la Copa Mundial?",
+          "right_answer": "Oleg Salenko",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_027"
+        },
+        "de": {
+          "answer_A": "Oleg Salenko",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Pelé",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer hält den Rekord für die meisten Tore in einem einzigen WM-Spiel?",
+          "right_answer": "Oleg Salenko",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_027"
+        },
+        "it": {
+          "answer_A": "Oleg Salenko",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Gerd Müller",
+          "answer_D": "Pelé",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi detiene il record di gol in una singola partita della Coppa del Mondo?",
+          "right_answer": "Oleg Salenko",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_027"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_028",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Of these, who has become the World Champion most?",
+          "answer_A": "Pelé",
+          "answer_B": "Vavá",
+          "answer_C": "Ronaldo",
+          "answer_D": "Cafu",
+          "right_answer": "Pelé"
+        },
+        "ru": {
+          "question": "Из перечисленных кто больше всех стал чемпионом Мира ?",
+          "answer_A": "Пеле",
+          "answer_B": "Вава",
+          "answer_C": "Роналдо",
+          "answer_D": "Кафу",
+          "right_answer": "Пеле"
+        },
+        "hy": {
+          "question": "Բոլորից շատ ո՞ր ֆուտբոլիստն է նվաճել Աշխարհի առաջնության գավաթը:",
+          "answer_A": "Պելե",
+          "answer_B": "Վավա",
+          "answer_C": "Ռոնալդո",
+          "answer_D": "Կաֆու",
+          "right_answer": "Պելե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Pelé",
+          "answer_B": "Vavá",
+          "answer_C": "Ronaldo",
+          "answer_D": "Cafú",
+          "categoryType": "WORLD_CUP",
+          "question": "De estos, ¿quién ha sido campeón mundial más veces?",
+          "right_answer": "Pelé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_028"
+        },
+        "de": {
+          "answer_A": "Pelé",
+          "answer_B": "Vavá",
+          "answer_C": "Ronaldo",
+          "answer_D": "Cafú",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer von diesen wurde am häufigsten Weltmeister?",
+          "right_answer": "Pelé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_028"
+        },
+        "it": {
+          "answer_A": "Pelé",
+          "answer_B": "Vavá",
+          "answer_C": "Ronaldo",
+          "answer_D": "Cafú",
+          "categoryType": "WORLD_CUP",
+          "question": "Tra questi, chi è diventato campione del mondo più volte?",
+          "right_answer": "Pelé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_028"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_029",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who has become the World Champion most, being a coach or soccer player?",
+          "answer_A": "Pelé",
+          "answer_B": "Mário Zagallo",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Didier Deschamps",
+          "right_answer": "Mário Zagallo"
+        },
+        "ru": {
+          "question": "Кто больше всех стал чемпионом Мира, являясь тренером или футболистом ?",
+          "answer_A": "Пеле",
+          "answer_B": "Марио Загалло",
+          "answer_C": "Франц Беккенбауэр",
+          "answer_D": "Дидье Дешам",
+          "right_answer": "Марио Загалло"
+        },
+        "hy": {
+          "question": "Բոլորից շատ ո՞վ է նվաճել Աշխարհի առաջնության գավաթը՝ լինելով մարզիչ կամ ֆուտբոլիստ:",
+          "answer_A": "Պելե",
+          "answer_B": "Մարիո Զագալո",
+          "answer_C": "Ֆրանց Բեկենբաուեր",
+          "answer_D": "Դիդիե Դեշամ",
+          "right_answer": "Մարիո Զագալո"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Pelé",
+          "answer_B": "Mário Zagallo",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Didier Deschamps",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ha sido campeón mundial más veces como entrenador o futbolista?",
+          "right_answer": "Mário Zagallo",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_029"
+        },
+        "de": {
+          "answer_A": "Pelé",
+          "answer_B": "Mário Zagallo",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Didier Deschamps",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer wurde als Trainer oder Spieler am häufigsten Weltmeister?",
+          "right_answer": "Mário Zagallo",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_029"
+        },
+        "it": {
+          "answer_A": "Pelé",
+          "answer_B": "Mário Zagallo",
+          "answer_C": "Franz Beckenbauer",
+          "answer_D": "Didier Deschamps",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi è diventato campione del mondo più volte da allenatore o calciatore?",
+          "right_answer": "Mário Zagallo",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_029"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_030",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Between which teams the most productive game in the World Cup finals took place?",
+          "answer_A": "Brazil - Sweden",
+          "answer_B": "Brazil- Italy",
+          "answer_C": "France- Croatia",
+          "answer_D": "Italy- Hungary",
+          "right_answer": "Brazil - Sweden"
+        },
+        "ru": {
+          "question": "Между какими командами состоялась самая результативная игра в финалах чемпионата Мира ?",
+          "answer_A": "Бразилия - Швеция",
+          "answer_B": "Бразилия - Италия",
+          "answer_C": "Франция - Хорватия",
+          "answer_D": "Италия - Венгрия",
+          "right_answer": "Бразилия - Швеция"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրներն են մասնակցել Աշխարհի առաջնության ամենագոլառատ եզրափակչում:",
+          "answer_A": "Բրազիլիա - Շվեդիա",
+          "answer_B": "Բրազիլիա - Իտալիա",
+          "answer_C": "Ֆրանսիա - Խորվաթիա",
+          "answer_D": "Իտալիա - Հունգարիա",
+          "right_answer": "Բրազիլիա - Շվեդիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil - Suecia",
+          "answer_B": "Brasil - Italia",
+          "answer_C": "Francia - Croacia",
+          "answer_D": "Italia - Hungría",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Entre qué selecciones se jugó la final con más goles en la historia de la Copa Mundial?",
+          "right_answer": "Brasil - Suecia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_030"
+        },
+        "de": {
+          "answer_A": "Brasilien - Schweden",
+          "answer_B": "Brasilien - Italien",
+          "answer_C": "Frankreich - Kroatien",
+          "answer_D": "Italien - Ungarn",
+          "categoryType": "WORLD_CUP",
+          "question": "Zwischen welchen Teams fand das torreichste WM-Finale statt?",
+          "right_answer": "Brasilien - Schweden",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_030"
+        },
+        "it": {
+          "answer_A": "Brasile - Svezia",
+          "answer_B": "Brasile - Italia",
+          "answer_C": "Francia - Croazia",
+          "answer_D": "Italia - Ungheria",
+          "categoryType": "WORLD_CUP",
+          "question": "Tra quali squadre si giocò la finale più ricca di gol nella storia della Coppa del Mondo?",
+          "right_answer": "Brasile - Svezia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_030"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_031",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country reached the World Cup finals the most?",
+          "answer_A": "Brazil",
+          "answer_B": "Germany",
+          "answer_C": "Italy",
+          "answer_D": "Argentina",
+          "right_answer": "Germany"
+        },
+        "ru": {
+          "question": "Какая страна больше всех вышла в финал чемпионата Мира ?",
+          "answer_A": "Бразилия",
+          "answer_B": "Германия",
+          "answer_C": "Италия",
+          "answer_D": "Аргентина",
+          "right_answer": "Германия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ դուրս եկել Աշխարհի առաջնության եզրափակիչ:",
+          "answer_A": "Բրազիլիա",
+          "answer_B": "Գերմանիա",
+          "answer_C": "Իտալիա",
+          "answer_D": "Արգենտինա",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Brasil",
+          "answer_B": "Alemania",
+          "answer_C": "Italia",
+          "answer_D": "Argentina",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país ha llegado más veces a la final de la Copa Mundial?",
+          "right_answer": "Alemania",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_031"
+        },
+        "de": {
+          "answer_A": "Brasilien",
+          "answer_B": "Deutschland",
+          "answer_C": "Italien",
+          "answer_D": "Argentinien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land erreichte die meisten WM-Finals?",
+          "right_answer": "Deutschland",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_031"
+        },
+        "it": {
+          "answer_A": "Brasile",
+          "answer_B": "Germania",
+          "answer_C": "Italia",
+          "answer_D": "Argentina",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese ha raggiunto più finali della Coppa del Mondo?",
+          "right_answer": "Germania",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_031"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_032",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country made it to the finals of the World Cup most, but never became the World Champion?",
+          "answer_A": "Czechoslovakia",
+          "answer_B": "Holland",
+          "answer_C": "Hungary",
+          "answer_D": "Sweden",
+          "right_answer": "Holland"
+        },
+        "ru": {
+          "question": "Какая страна больше всех выходила в финал чемпионата Мира, однако никогда не стала чемпионом Мира ?",
+          "answer_A": "Чехословакия",
+          "answer_B": "Голландия",
+          "answer_C": "Венгрия",
+          "answer_D": "Швеция",
+          "right_answer": "Голландия"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է բոլորից շատ դուրս եկել Աշխարհի առաջնության եզրափակիչ, սակայն երբեք չի հաղթել եզրափակչում:",
+          "answer_A": "Չեխոսլովակիա",
+          "answer_B": "Հոլանդիա",
+          "answer_C": "Հունգարիա",
+          "answer_D": "Շվեդիա",
+          "right_answer": "Հոլանդիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Checoslovaquia",
+          "answer_B": "Países Bajos",
+          "answer_C": "Hungría",
+          "answer_D": "Suecia",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país llegó más veces a la final de la Copa Mundial sin ser campeón?",
+          "right_answer": "Países Bajos",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_032"
+        },
+        "de": {
+          "answer_A": "Tschechoslowakei",
+          "answer_B": "Niederlande",
+          "answer_C": "Ungarn",
+          "answer_D": "Schweden",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land erreichte am häufigsten das WM-Finale, ohne Weltmeister zu werden?",
+          "right_answer": "Niederlande",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_032"
+        },
+        "it": {
+          "answer_A": "Cecoslovacchia",
+          "answer_B": "Paesi Bassi",
+          "answer_C": "Ungheria",
+          "answer_D": "Svezia",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese ha raggiunto più finali della Coppa del Mondo senza diventare campione?",
+          "right_answer": "Paesi Bassi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_032"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_033",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who became the author of \"hat trick \" in two World Championships?",
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Just Fontaine",
+          "answer_D": "Gerd Müller",
+          "right_answer": "Gabriel Batistuta"
+        },
+        "ru": {
+          "question": "Кто стал автором \"хет трика\" в двух чемпионатах Мира ?",
+          "answer_A": "Пеле",
+          "answer_B": "Габриэль Батистута",
+          "answer_C": "Жюст Фонтен",
+          "answer_D": "Герд Мюллер",
+          "right_answer": "Габриэль Батистута"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է դարձել \"հեթրիկ\"-ի հեղինակ Աշխարհի երկու առաջնություններում:",
+          "answer_A": "Պելե",
+          "answer_B": "Գաբրիել Բատիստուտա",
+          "answer_C": "Ժյուստ Ֆոնտեն",
+          "answer_D": "Գերդ Մյուլլեր",
+          "right_answer": "Գաբրիել Բատիստուտա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Just Fontaine",
+          "answer_D": "Gerd Müller",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién marcó hat-tricks en dos Copas Mundiales?",
+          "right_answer": "Gabriel Batistuta",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_033"
+        },
+        "de": {
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Just Fontaine",
+          "answer_D": "Gerd Müller",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer erzielte Hattricks bei zwei Weltmeisterschaften?",
+          "right_answer": "Gabriel Batistuta",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_033"
+        },
+        "it": {
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Just Fontaine",
+          "answer_D": "Gerd Müller",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha segnato triplette in due Campionati del Mondo?",
+          "right_answer": "Gabriel Batistuta",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_033"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_034",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the author of the fastest \"hat trick \" in the World Championships?",
+          "answer_A": "Kiss László",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Pelé",
+          "answer_D": "Kocsis Sándor",
+          "right_answer": "Kiss László"
+        },
+        "ru": {
+          "question": "Кто автор самого быстрого \"хет трика\" в чемпионатах Мира ?",
+          "answer_A": "Ласло Киш",
+          "answer_B": "Жюст Фонтен",
+          "answer_C": "Пеле",
+          "answer_D": "Шандор Кочиш",
+          "right_answer": "Ласло Киш"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնություններում ամենաարագ \"հեթրիկ\"-ի հեղինակը:",
+          "answer_A": "Լասլո Կիշ",
+          "answer_B": "Ժյուստ Ֆոնտեն",
+          "answer_C": "Պելե",
+          "answer_D": "Շանդոր Կոչիշ",
+          "right_answer": "Լասլո Կիշ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "László Kiss",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Pelé",
+          "answer_D": "Sándor Kocsis",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién marcó el hat-trick más rápido en la historia de la Copa Mundial?",
+          "right_answer": "László Kiss",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_034"
+        },
+        "de": {
+          "answer_A": "László Kiss",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Pelé",
+          "answer_D": "Sándor Kocsis",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer erzielte den schnellsten Hattrick in der Geschichte der Weltmeisterschaft?",
+          "right_answer": "László Kiss",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_034"
+        },
+        "it": {
+          "answer_A": "László Kiss",
+          "answer_B": "Just Fontaine",
+          "answer_C": "Pelé",
+          "answer_D": "Sándor Kocsis",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha segnato la tripletta più veloce nella storia della Coppa del Mondo?",
+          "right_answer": "László Kiss",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_034"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_035",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who became the youngest author of \"hat trick \" in the World Championships?",
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Eusébio",
+          "answer_D": "Gary Lineker",
+          "right_answer": "Pelé"
+        },
+        "ru": {
+          "question": "Кто стал самым молодым автором \"хет трика\" в чемпионатах Мира ?",
+          "answer_A": "Пеле",
+          "answer_B": "Габриэль Батистута",
+          "answer_C": "Эйсебио",
+          "answer_D": "Гари Линекер",
+          "right_answer": "Пеле"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնություններում \"հեթրիկ\"-ի հեղինակ դարձած ամենաերիտասարդ ֆուտբոլիստը:",
+          "answer_A": "Պելե",
+          "answer_B": "Գաբրիել Բատիստուտա",
+          "answer_C": "Էյսեբիո",
+          "answer_D": "Հարի Լինեկեր",
+          "right_answer": "Պելե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Eusébio",
+          "answer_D": "Gary Lineker",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién fue el autor más joven de un hat-trick en la Copa Mundial?",
+          "right_answer": "Pelé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_035"
+        },
+        "de": {
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Eusébio",
+          "answer_D": "Gary Lineker",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer war der jüngste Hattrick-Schütze bei Weltmeisterschaften?",
+          "right_answer": "Pelé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_035"
+        },
+        "it": {
+          "answer_A": "Pelé",
+          "answer_B": "Gabriel Batistuta",
+          "answer_C": "Eusébio",
+          "answer_D": "Gary Lineker",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi è stato il più giovane autore di una tripletta ai Mondiali?",
+          "right_answer": "Pelé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_035"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_036",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country's football players have become the authors of \"hat trick \" in the World Championships most of all?",
+          "answer_A": "of Germany",
+          "answer_B": "of Brazil",
+          "answer_C": "of Argentina",
+          "answer_D": "of Portugal",
+          "right_answer": "of Germany"
+        },
+        "ru": {
+          "question": "Футболисты какой страны больше всех стали авторами \"хет трика\" в чемпионатах Мира ?",
+          "answer_A": "Германии",
+          "answer_B": "Бразилии",
+          "answer_C": "Аргентины",
+          "answer_D": "Португалии",
+          "right_answer": "Германии"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրի ֆուտբոլիստներին են բոլորից շատ դարձել \"հեթրիկ\"-ի հեղինակ Աշխարհի առաջնություններում:",
+          "answer_A": "Գերմանիա",
+          "answer_B": "Բրազիլիա",
+          "answer_C": "Արգենտինա",
+          "answer_D": "Պորտուգալիա",
+          "right_answer": "Գերմանիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Alemania",
+          "answer_B": "Brasil",
+          "answer_C": "Argentina",
+          "answer_D": "Portugal",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Los futbolistas de qué país han marcado más hat-tricks en Copas Mundiales?",
+          "right_answer": "Alemania",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_036"
+        },
+        "de": {
+          "answer_A": "Deutschland",
+          "answer_B": "Brasilien",
+          "answer_C": "Argentinien",
+          "answer_D": "Portugal",
+          "categoryType": "WORLD_CUP",
+          "question": "Fußballer aus welchem Land erzielten die meisten Hattricks bei Weltmeisterschaften?",
+          "right_answer": "Deutschland",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_036"
+        },
+        "it": {
+          "answer_A": "Germania",
+          "answer_B": "Brasile",
+          "answer_C": "Argentina",
+          "answer_D": "Portogallo",
+          "categoryType": "WORLD_CUP",
+          "question": "I calciatori di quale paese hanno segnato più triplette nei Mondiali?",
+          "right_answer": "Germania",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_036"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_037",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the oldest author \"hat trick \" in the World Championships?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Rob Rensenbrink",
+          "answer_C": "Gabriel Batistuta",
+          "answer_D": "Pedro Pauleta",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто самый возрастной автор \"хет трика\" в чемпионатах Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Роб Ресебринк",
+          "answer_C": "Габриэль Батистута",
+          "answer_D": "Педру Паулетта",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնություններում \"հեթրիկ\"-ի հեղինակ դարձած ամենատարեց ֆուտբոլիստը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Ռոբ Ռեսեբրինկ",
+          "answer_C": "Գաբրիել Բատիստուտա",
+          "answer_D": "Պեդրու Պաուլետա",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Rob Rensenbrink",
+          "answer_C": "Gabriel Batistuta",
+          "answer_D": "Pedro Pauleta",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién es el autor más veterano de un hat-trick en la Copa Mundial?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_037"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Rob Rensenbrink",
+          "answer_C": "Gabriel Batistuta",
+          "answer_D": "Pedro Pauleta",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer ist der älteste Hattrick-Schütze bei Weltmeisterschaften?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_037"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Rob Rensenbrink",
+          "answer_C": "Gabriel Batistuta",
+          "answer_D": "Pedro Pauleta",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi è il più anziano autore di una tripletta ai Mondiali?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_037"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_038",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which year's world championship recorded a record number of own goals?",
+          "answer_A": "1998",
+          "answer_B": "2006",
+          "answer_C": "2014",
+          "answer_D": "2018",
+          "right_answer": "2018"
+        },
+        "ru": {
+          "question": "В чемпионате Мира какого года было зафиксировано рекордное число автоголов ?",
+          "answer_A": "1998",
+          "answer_B": "2006",
+          "answer_C": "2014",
+          "answer_D": "2018",
+          "right_answer": "2018"
+        },
+        "hy": {
+          "question": "Ո՞ր թ. Աշխարհի առաջնությունում է գրանցվել ամենաշատ ինքնագոլերը:",
+          "answer_A": "1998",
+          "answer_B": "2006",
+          "answer_C": "2014",
+          "answer_D": "2018",
+          "right_answer": "2018"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "1998",
+          "answer_B": "2006",
+          "answer_C": "2014",
+          "answer_D": "2018",
+          "categoryType": "WORLD_CUP",
+          "question": "¿En qué Mundial se registró un récord de autogoles?",
+          "right_answer": "2018",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_038"
+        },
+        "de": {
+          "answer_A": "1998",
+          "answer_B": "2006",
+          "answer_C": "2014",
+          "answer_D": "2018",
+          "categoryType": "WORLD_CUP",
+          "question": "Bei welcher Weltmeisterschaft wurde eine Rekordzahl an Eigentoren erzielt?",
+          "right_answer": "2018",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_038"
+        },
+        "it": {
+          "answer_A": "1998",
+          "answer_B": "2006",
+          "answer_C": "2014",
+          "answer_D": "2018",
+          "categoryType": "WORLD_CUP",
+          "question": "In quale Mondiale fu registrato il record di autogol?",
+          "right_answer": "2018",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_038"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_039",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which of the following players scored more goals in the World Championships?",
+          "answer_A": "Thomas Müller",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Lionel Messi",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто из перечисленных футболистов забил больше голов в чемпионатах Мира ?",
+          "answer_A": "Томас Мюллер",
+          "answer_B": "Криштиану Роналду",
+          "answer_C": "Хамес Родригес",
+          "answer_D": "Лионель Месси",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Նշվածներից ո՞վ է ավելի շատ գոլի հեղինակ դարձել Աշխարհի առաջնություններում:",
+          "answer_A": "Տոմաս Մյուլլեր",
+          "answer_B": "Կրիշտիանու Ռոնալդու",
+          "answer_C": "Խամես Ռոդրիգես",
+          "answer_D": "Լիոնել Մեսսի",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Thomas Müller",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Lionel Messi",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Cuál de los siguientes jugadores ha marcado más goles en Copas Mundiales?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_039"
+        },
+        "de": {
+          "answer_A": "Thomas Müller",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Lionel Messi",
+          "categoryType": "WORLD_CUP",
+          "question": "Welcher der folgenden Spieler erzielte mehr Tore bei Weltmeisterschaften?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_039"
+        },
+        "it": {
+          "answer_A": "Thomas Müller",
+          "answer_B": "Cristiano Ronaldo",
+          "answer_C": "James Rodríguez",
+          "answer_D": "Lionel Messi",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale dei seguenti giocatori ha segnato più gol nei Mondiali?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_039"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_040",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who is the only footballer to play in three final matches of the World Championships in a row?",
+          "answer_A": "Pelé",
+          "answer_B": "Cafu",
+          "answer_C": "Ronaldo",
+          "answer_D": "Roberto Carlos",
+          "right_answer": "Cafu"
+        },
+        "ru": {
+          "question": "Кто единственный футболист, сыгравший в трёх финальных матчах чемпионатов Мира подряд ?",
+          "answer_A": "Пеле",
+          "answer_B": "Кафу",
+          "answer_C": "Роналдо",
+          "answer_D": "Роберто Карлос",
+          "right_answer": "Кафу"
+        },
+        "hy": {
+          "question": "Ո՞ր ֆուտբոլիստն է անընդմեջ մասնակցել Աշխարհի 3 առաջնությունների եզրափակիչներին:",
+          "answer_A": "Պելե",
+          "answer_B": "Կաֆու",
+          "answer_C": "Ռոնալդո",
+          "answer_D": "Ռոբերտո Կառլոս",
+          "right_answer": "Կաֆու"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Pelé",
+          "answer_B": "Cafú",
+          "answer_C": "Ronaldo",
+          "answer_D": "Roberto Carlos",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién es el único futbolista que jugó tres finales de la Copa Mundial seguidas?",
+          "right_answer": "Cafú",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_040"
+        },
+        "de": {
+          "answer_A": "Pelé",
+          "answer_B": "Cafú",
+          "answer_C": "Ronaldo",
+          "answer_D": "Roberto Carlos",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer ist der einzige Fußballer, der in drei WM-Finals in Folge spielte?",
+          "right_answer": "Cafú",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_040"
+        },
+        "it": {
+          "answer_A": "Pelé",
+          "answer_B": "Cafú",
+          "answer_C": "Ronaldo",
+          "answer_D": "Roberto Carlos",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi è l’unico calciatore ad aver giocato tre finali mondiali consecutive?",
+          "right_answer": "Cafú",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_040"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_041",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which goalkeeper owns a record series without goals in one World Championship?",
+          "answer_A": "Walter Zenga",
+          "answer_B": "Fernando Muslera",
+          "answer_C": "Manuel Neuer",
+          "answer_D": "Gianluigi Buffon",
+          "right_answer": "Walter Zenga"
+        },
+        "ru": {
+          "question": "Какому вратарю принадлежит рекордная серия без пропущенных мячей в одном чемпионате Мира?",
+          "answer_A": "Вальтер Дзенга",
+          "answer_B": "Фернандо Муслера",
+          "answer_C": "Мануэль Нойер",
+          "answer_D": "Джанлуиджи Буффон",
+          "right_answer": "Вальтер Дзенга"
+        },
+        "hy": {
+          "question": "Ո՞ր դարպասապահն է ամենաերկարը սեփական դարպասը պահել անառիկ Աշխարհի մեկ առաջնությունում:",
+          "answer_A": "Վալտեր Ձենգա",
+          "answer_B": "Ֆերնանդո Մուսլերա",
+          "answer_C": "Մաանուել Նոյեր",
+          "answer_D": "Ջանլուիջի Բուֆֆոն",
+          "right_answer": "Վալտեր Ձենգա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Walter Zenga",
+          "answer_B": "Fernando Muslera",
+          "answer_C": "Manuel Neuer",
+          "answer_D": "Gianluigi Buffon",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué portero tiene la racha récord sin recibir goles en una sola Copa Mundial?",
+          "right_answer": "Walter Zenga",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_041"
+        },
+        "de": {
+          "answer_A": "Walter Zenga",
+          "answer_B": "Fernando Muslera",
+          "answer_C": "Manuel Neuer",
+          "answer_D": "Gianluigi Buffon",
+          "categoryType": "WORLD_CUP",
+          "question": "Welcher Torhüter hält den Rekord für die längste Serie ohne Gegentor bei einer einzigen Weltmeisterschaft?",
+          "right_answer": "Walter Zenga",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_041"
+        },
+        "it": {
+          "answer_A": "Walter Zenga",
+          "answer_B": "Fernando Muslera",
+          "answer_C": "Manuel Neuer",
+          "answer_D": "Gianluigi Buffon",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale portiere detiene il record di imbattibilità in un singolo Mondiale?",
+          "right_answer": "Walter Zenga",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_041"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_042",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which country hosted the FIFA Club World Cup 2025?",
+          "answer_A": "Spain",
+          "answer_B": "Qatar",
+          "answer_C": "United States",
+          "answer_D": "Mexico",
+          "right_answer": "United States"
+        },
+        "ru": {
+          "question": "В какой стране прошёл Клубный чемпионат мира ФИФА 2025?",
+          "answer_A": "Испания",
+          "answer_B": "Катар",
+          "answer_C": "США",
+          "answer_D": "Мексика",
+          "right_answer": "США"
+        },
+        "hy": {
+          "question": "Ո՞ր երկրում է անցկացվել ՖԻՖԱ-ի Աշխարհի ակումբային առաջնությունը 2025 թվականին:",
+          "answer_A": "Իսպանիա",
+          "answer_B": "Կատար",
+          "answer_C": "ԱՄՆ",
+          "answer_D": "Մեքսիկա",
+          "right_answer": "ԱՄՆ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "España",
+          "answer_B": "Catar",
+          "answer_C": "Estados Unidos",
+          "answer_D": "México",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué país organizó la Copa Mundial de Clubes de la FIFA 2025?",
+          "right_answer": "Estados Unidos",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_042"
+        },
+        "de": {
+          "answer_A": "Spanien",
+          "answer_B": "Katar",
+          "answer_C": "USA",
+          "answer_D": "Mexiko",
+          "categoryType": "WORLD_CUP",
+          "question": "Welches Land richtete die FIFA Klub-Weltmeisterschaft 2025 aus?",
+          "right_answer": "USA",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_042"
+        },
+        "it": {
+          "answer_A": "Spagna",
+          "answer_B": "Qatar",
+          "answer_C": "Stati Uniti",
+          "answer_D": "Messico",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale paese ha ospitato la Coppa del Mondo per Club FIFA 2025?",
+          "right_answer": "Stati Uniti",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_042"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_043",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "At which stadium was the 2026 FIFA World Cup final played?",
+          "answer_A": "Wembley",
+          "answer_B": "Santiago Bernabeu",
+          "answer_C": "New York New Jersey Stadium",
+          "answer_D": "Maracana",
+          "right_answer": "New York New Jersey Stadium"
+        },
+        "ru": {
+          "question": "На каком стадионе прошёл финал чемпионата мира 2026?",
+          "answer_A": "Уэмбли",
+          "answer_B": "Сантьяго Бернабеу",
+          "answer_C": "Стадион Нью-Йорк — Нью-Джерси",
+          "answer_D": "Маракана",
+          "right_answer": "Стадион Нью-Йорк — Нью-Джерси"
+        },
+        "hy": {
+          "question": "Ո՞ր մարզադաշտում է անցկացվել 2026 թվականի Աշխարհի առաջնության եզրափակիչը:",
+          "answer_A": "Ուեմբլի",
+          "answer_B": "Սանտյագո Բեռնաբեու",
+          "answer_C": "Նյու Յորք — Նյու Ջերսի մարզադաշտ",
+          "answer_D": "Մարականա",
+          "right_answer": "Նյու Յորք — Նյու Ջերսի մարզադաշտ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Wembley",
+          "answer_B": "Santiago Bernabéu",
+          "answer_C": "New York New Jersey Stadium",
+          "answer_D": "Maracaná",
+          "categoryType": "WORLD_CUP",
+          "question": "¿En qué estadio se jugó la final de la Copa Mundial de la FIFA 2026?",
+          "right_answer": "New York New Jersey Stadium",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_043"
+        },
+        "de": {
+          "answer_A": "Wembley",
+          "answer_B": "Santiago Bernabéu",
+          "answer_C": "New York New Jersey Stadium",
+          "answer_D": "Maracanã",
+          "categoryType": "WORLD_CUP",
+          "question": "In welchem Stadion wurde das Finale der FIFA-Weltmeisterschaft 2026 gespielt?",
+          "right_answer": "New York New Jersey Stadium",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_043"
+        },
+        "it": {
+          "answer_A": "Wembley",
+          "answer_B": "Santiago Bernabéu",
+          "answer_C": "New York New Jersey Stadium",
+          "answer_D": "Maracanã",
+          "categoryType": "WORLD_CUP",
+          "question": "In quale stadio si è giocata la finale della Coppa del Mondo FIFA 2026?",
+          "right_answer": "New York New Jersey Stadium",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_043"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_044",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who won The Best FIFA Men's Player award in 2024?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Jude Bellingham",
+          "answer_C": "Rodri",
+          "answer_D": "Vinicius Junior",
+          "right_answer": "Vinicius Junior"
+        },
+        "ru": {
+          "question": "Кто выиграл награду The Best FIFA Men’s Player 2024?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Джуд Беллингем",
+          "answer_C": "Родри",
+          "answer_D": "Винисиус Жуниор",
+          "right_answer": "Винисиус Жуниор"
+        },
+        "hy": {
+          "question": "Ո՞վ է նվաճել The Best FIFA Men's Player մրցանակը 2024 թվականին:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Ջուդ Բելինգհեմ",
+          "answer_C": "Ռոդրի",
+          "answer_D": "Վինիսիուս Ժունիոր",
+          "right_answer": "Վինիսիուս Ժունիոր"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Jude Bellingham",
+          "answer_C": "Rodri",
+          "answer_D": "Vinícius Júnior",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ganó el premio The Best FIFA Men’s Player en 2024?",
+          "right_answer": "Vinícius Júnior",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_044"
+        },
+        "de": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Jude Bellingham",
+          "answer_C": "Rodri",
+          "answer_D": "Vinícius Júnior",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer gewann 2024 die Auszeichnung The Best FIFA Men’s Player?",
+          "right_answer": "Vinícius Júnior",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_044"
+        },
+        "it": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Jude Bellingham",
+          "answer_C": "Rodri",
+          "answer_D": "Vinícius Júnior",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha vinto il premio The Best FIFA Men’s Player nel 2024?",
+          "right_answer": "Vinícius Júnior",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_044"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_045",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which nation won the FIFA World Cup in Qatar 2022?",
+          "answer_A": "France",
+          "answer_B": "Argentina",
+          "answer_C": "Croatia",
+          "answer_D": "Morocco",
+          "right_answer": "Argentina"
+        },
+        "ru": {
+          "question": "Какая сборная выиграла Чемпионат мира по футболу 2022 в Катаре?",
+          "answer_A": "Франция",
+          "answer_B": "Аргентина",
+          "answer_C": "Хорватия",
+          "answer_D": "Марокко",
+          "right_answer": "Аргентина"
+        },
+        "hy": {
+          "question": "Ո՞ր երկիրն է նվաճել 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթը:",
+          "answer_A": "Ֆրանսիա",
+          "answer_B": "Արգենտինա",
+          "answer_C": "Խորվաթիա",
+          "answer_D": "Մարոկկո",
+          "right_answer": "Արգենտինա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Francia",
+          "answer_B": "Argentina",
+          "answer_C": "Croacia",
+          "answer_D": "Marruecos",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué selección ganó la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_045"
+        },
+        "de": {
+          "answer_A": "Frankreich",
+          "answer_B": "Argentinien",
+          "answer_C": "Kroatien",
+          "answer_D": "Marokko",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Nation gewann die FIFA-Weltmeisterschaft Katar 2022?",
+          "right_answer": "Argentinien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_045"
+        },
+        "it": {
+          "answer_A": "Francia",
+          "answer_B": "Argentina",
+          "answer_C": "Croazia",
+          "answer_D": "Marocco",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale nazionale ha vinto la Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "Argentina",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_045"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_046",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who won the Golden Ball at the FIFA World Cup Qatar 2022?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Kylian Mbappe",
+          "answer_C": "Luka Modric",
+          "answer_D": "Antoine Griezmann",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто получил «Золотой мяч» на Чемпионате мира 2022 в Катаре?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Килиан Мбаппе",
+          "answer_C": "Лука Модрич",
+          "answer_D": "Антуан Гризманн",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է նվաճել «Ոսկե գնդակը» 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթում:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Կիլիան Մբապպե",
+          "answer_C": "Լուկա Մոդրիչ",
+          "answer_D": "Անտուան Գրիզման",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Kylian Mbappé",
+          "answer_C": "Luka Modrić",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ganó el Balón de Oro en la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_046"
+        },
+        "de": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Kylian Mbappé",
+          "answer_C": "Luka Modrić",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer gewann den Goldenen Ball bei der FIFA-Weltmeisterschaft Katar 2022?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_046"
+        },
+        "it": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Kylian Mbappé",
+          "answer_C": "Luka Modrić",
+          "answer_D": "Antoine Griezmann",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha vinto il Pallone d’Oro alla Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "Lionel Messi",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_046"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_047",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who won the Golden Boot at the FIFA World Cup Qatar 2022?",
+          "answer_A": "Lionel Messi",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Kylian Mbappe",
+          "answer_D": "Julian Alvarez",
+          "right_answer": "Kylian Mbappe"
+        },
+        "ru": {
+          "question": "Кто получил «Золотую бутсу» на Чемпионате мира 2022 в Катаре?",
+          "answer_A": "Лионель Месси",
+          "answer_B": "Оливье Жиру",
+          "answer_C": "Килиан Мбаппе",
+          "answer_D": "Хулиан Альварес",
+          "right_answer": "Килиан Мбаппе"
+        },
+        "hy": {
+          "question": "Ո՞վ է նվաճել «Ոսկե խաղակոշիկը» 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթում:",
+          "answer_A": "Լիոնել Մեսսի",
+          "answer_B": "Օլիվիե Ժիրու",
+          "answer_C": "Կիլիան Մբապպե",
+          "answer_D": "Խուլիան Ալվարես",
+          "right_answer": "Կիլիան Մբապպե"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Julián Álvarez",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ganó la Bota de Oro en la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "Kylian Mbappé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_047"
+        },
+        "de": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Julián Álvarez",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer gewann den Goldenen Schuh bei der FIFA-Weltmeisterschaft Katar 2022?",
+          "right_answer": "Kylian Mbappé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_047"
+        },
+        "it": {
+          "answer_A": "Lionel Messi",
+          "answer_B": "Olivier Giroud",
+          "answer_C": "Kylian Mbappé",
+          "answer_D": "Julián Álvarez",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha vinto la Scarpa d’Oro alla Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "Kylian Mbappé",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_047"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_048",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who won the Golden Glove at the FIFA World Cup Qatar 2022?",
+          "answer_A": "Emiliano Martinez",
+          "answer_B": "Hugo Lloris",
+          "answer_C": "Yassine Bounou",
+          "answer_D": "Dominik Livakovic",
+          "right_answer": "Emiliano Martinez"
+        },
+        "ru": {
+          "question": "Кто получил «Золотую перчатку» на Чемпионате мира 2022 в Катаре?",
+          "answer_A": "Эмилиано Мартинес",
+          "answer_B": "Уго Льорис",
+          "answer_C": "Яссин Буну",
+          "answer_D": "Доминик Ливакович",
+          "right_answer": "Эмилиано Мартинес"
+        },
+        "hy": {
+          "question": "Ո՞վ է նվաճել «Ոսկե ձեռնոցը» 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթում:",
+          "answer_A": "Էմիլիանո Մարտինես",
+          "answer_B": "Ուգո Լյորիս",
+          "answer_C": "Յասին Բունու",
+          "answer_D": "Դոմինիկ Լիվակովիչ",
+          "right_answer": "Էմիլիանո Մարտինես"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Emiliano Martínez",
+          "answer_B": "Hugo Lloris",
+          "answer_C": "Yassine Bounou",
+          "answer_D": "Dominik Livaković",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ganó el Guante de Oro en la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "Emiliano Martínez",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_048"
+        },
+        "de": {
+          "answer_A": "Emiliano Martínez",
+          "answer_B": "Hugo Lloris",
+          "answer_C": "Yassine Bounou",
+          "answer_D": "Dominik Livaković",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer gewann den Goldenen Handschuh bei der FIFA-Weltmeisterschaft Katar 2022?",
+          "right_answer": "Emiliano Martínez",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_048"
+        },
+        "it": {
+          "answer_A": "Emiliano Martínez",
+          "answer_B": "Hugo Lloris",
+          "answer_C": "Yassine Bounou",
+          "answer_D": "Dominik Livaković",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha vinto il Guanto d’Oro alla Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "Emiliano Martínez",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_048"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_049",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Who won the Young Player Award at the FIFA World Cup Qatar 2022?",
+          "answer_A": "Jude Bellingham",
+          "answer_B": "Jamal Musiala",
+          "answer_C": "Enzo Fernandez",
+          "answer_D": "Gavi",
+          "right_answer": "Enzo Fernandez"
+        },
+        "ru": {
+          "question": "Кто получил награду лучшего молодого игрока на Чемпионате мира 2022 в Катаре?",
+          "answer_A": "Джуд Беллингем",
+          "answer_B": "Джамал Мусиала",
+          "answer_C": "Энцо Фернандес",
+          "answer_D": "Гави",
+          "right_answer": "Энцо Фернандес"
+        },
+        "hy": {
+          "question": "Ո՞վ է արժանացել լավագույն երիտասարդ ֆուտբոլիստի մրցանակին 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթում:",
+          "answer_A": "Ջուդ Բելինգեմ",
+          "answer_B": "Ջամալ Մուսիալա",
+          "answer_C": "Էնցո Ֆերնանդես",
+          "answer_D": "Գավի",
+          "right_answer": "Էնցո Ֆերնանդես"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Jude Bellingham",
+          "answer_B": "Jamal Musiala",
+          "answer_C": "Enzo Fernández",
+          "answer_D": "Gavi",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Quién ganó el premio al Mejor Jugador Joven en la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "Enzo Fernández",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_049"
+        },
+        "de": {
+          "answer_A": "Jude Bellingham",
+          "answer_B": "Jamal Musiala",
+          "answer_C": "Enzo Fernández",
+          "answer_D": "Gavi",
+          "categoryType": "WORLD_CUP",
+          "question": "Wer gewann den Preis für den besten jungen Spieler bei der FIFA-Weltmeisterschaft Katar 2022?",
+          "right_answer": "Enzo Fernández",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_049"
+        },
+        "it": {
+          "answer_A": "Jude Bellingham",
+          "answer_B": "Jamal Musiala",
+          "answer_C": "Enzo Fernández",
+          "answer_D": "Gavi",
+          "categoryType": "WORLD_CUP",
+          "question": "Chi ha vinto il premio di Miglior Giovane alla Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "Enzo Fernández",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_049"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_050",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "How many goals were scored at the FIFA World Cup Qatar 2022?",
+          "answer_A": "158",
+          "answer_B": "164",
+          "answer_C": "172",
+          "answer_D": "180",
+          "right_answer": "172"
+        },
+        "ru": {
+          "question": "Сколько голов было забито на Чемпионате мира 2022 в Катаре?",
+          "answer_A": "158",
+          "answer_B": "164",
+          "answer_C": "172",
+          "answer_D": "180",
+          "right_answer": "172"
+        },
+        "hy": {
+          "question": "Քանի՞ գոլ է խփվել 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթում:",
+          "answer_A": "158",
+          "answer_B": "164",
+          "answer_C": "172",
+          "answer_D": "180",
+          "right_answer": "172"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "158",
+          "answer_B": "164",
+          "answer_C": "172",
+          "answer_D": "180",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Cuántos goles se marcaron en la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "172",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_050"
+        },
+        "de": {
+          "answer_A": "158",
+          "answer_B": "164",
+          "answer_C": "172",
+          "answer_D": "180",
+          "categoryType": "WORLD_CUP",
+          "question": "Wie viele Tore wurden bei der FIFA-Weltmeisterschaft Katar 2022 erzielt?",
+          "right_answer": "172",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_050"
+        },
+        "it": {
+          "answer_A": "158",
+          "answer_B": "164",
+          "answer_C": "172",
+          "answer_D": "180",
+          "categoryType": "WORLD_CUP",
+          "question": "Quanti gol furono segnati alla Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "172",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_050"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_051",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which team finished in third place at the FIFA World Cup Qatar 2022?",
+          "answer_A": "Morocco",
+          "answer_B": "Croatia",
+          "answer_C": "Netherlands",
+          "answer_D": "Brazil",
+          "right_answer": "Croatia"
+        },
+        "ru": {
+          "question": "Какая сборная заняла 3-е место на Чемпионате мира 2022 в Катаре?",
+          "answer_A": "Марокко",
+          "answer_B": "Хорватия",
+          "answer_C": "Нидерланды",
+          "answer_D": "Бразилия",
+          "right_answer": "Хорватия"
+        },
+        "hy": {
+          "question": "Ո՞ր հավաքականն է գրավել 3-րդ տեղը 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթում:",
+          "answer_A": "Մարոկկո",
+          "answer_B": "Խորվաթիա",
+          "answer_C": "Նիդերլանդներ",
+          "answer_D": "Բրազիլիա",
+          "right_answer": "Խորվաթիա"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Marruecos",
+          "answer_B": "Croacia",
+          "answer_C": "Países Bajos",
+          "answer_D": "Brasil",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué equipo terminó tercero en la Copa Mundial de la FIFA Catar 2022?",
+          "right_answer": "Croacia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_051"
+        },
+        "de": {
+          "answer_A": "Marokko",
+          "answer_B": "Kroatien",
+          "answer_C": "Niederlande",
+          "answer_D": "Brasilien",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche Mannschaft belegte bei der FIFA-Weltmeisterschaft Katar 2022 den dritten Platz?",
+          "right_answer": "Kroatien",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_051"
+        },
+        "it": {
+          "answer_A": "Marocco",
+          "answer_B": "Croazia",
+          "answer_C": "Paesi Bassi",
+          "answer_D": "Brasile",
+          "categoryType": "WORLD_CUP",
+          "question": "Quale squadra arrivò terza alla Coppa del Mondo FIFA Qatar 2022?",
+          "right_answer": "Croazia",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_051"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_052",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "How many national teams participated in the FIFA World Cup 2026 tournament?",
+          "answer_A": "32 teams",
+          "answer_B": "36 teams",
+          "answer_C": "40 teams",
+          "answer_D": "48 teams",
+          "right_answer": "48 teams"
+        },
+        "ru": {
+          "question": "Сколько национальных сборных приняли участие в Чемпионате мира по футболу 2026?",
+          "answer_A": "32 команды",
+          "answer_B": "36 команд",
+          "answer_C": "40 команд",
+          "answer_D": "48 команд",
+          "right_answer": "48 команд"
+        },
+        "hy": {
+          "question": "Քանի՞ ազգային հավաքական է մասնակցել 2026 թ. ՖԻՖԱ-ի Աշխարհի գավաթին:",
+          "answer_A": "32 հավաքական",
+          "answer_B": "36 հավաքական",
+          "answer_C": "40 հավաքական",
+          "answer_D": "48 հավաքական",
+          "right_answer": "48 հավաքական"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "32 selecciones",
+          "answer_B": "36 selecciones",
+          "answer_C": "40 selecciones",
+          "answer_D": "48 selecciones",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Cuántas selecciones participaron en la Copa Mundial de la FIFA 2026?",
+          "right_answer": "48 selecciones",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_052"
+        },
+        "de": {
+          "answer_A": "32 Teams",
+          "answer_B": "36 Teams",
+          "answer_C": "40 Teams",
+          "answer_D": "48 Teams",
+          "categoryType": "WORLD_CUP",
+          "question": "Wie viele Nationalmannschaften nahmen an der FIFA-Weltmeisterschaft 2026 teil?",
+          "right_answer": "48 Teams",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_052"
+        },
+        "it": {
+          "answer_A": "32 squadre",
+          "answer_B": "36 squadre",
+          "answer_C": "40 squadre",
+          "answer_D": "48 squadre",
+          "categoryType": "WORLD_CUP",
+          "question": "Quante nazionali hanno partecipato alla Coppa del Mondo FIFA 2026?",
+          "right_answer": "48 squadre",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_052"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_053",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "What was the score in the FIFA World Cup Qatar 2022 final before the penalty shootout?",
+          "answer_A": "2-2",
+          "answer_B": "3-3",
+          "answer_C": "1-1",
+          "answer_D": "4-4",
+          "right_answer": "3-3"
+        },
+        "ru": {
+          "question": "С каким счётом завершилось основное и дополнительное время в финале ЧМ-2022 в Катаре до серии пенальти?",
+          "answer_A": "2-2",
+          "answer_B": "3-3",
+          "answer_C": "1-1",
+          "answer_D": "4-4",
+          "right_answer": "3-3"
+        },
+        "hy": {
+          "question": "Ինչպիսի՞ն էր հաշիվը 2022 թ. Քաթարում կայացած ՖԻՖԱ-ի Աշխարհի գավաթի եզրափակչում մինչև 11-մետրանոցների հարվածաշարը:",
+          "answer_A": "2-2",
+          "answer_B": "3-3",
+          "answer_C": "1-1",
+          "answer_D": "4-4",
+          "right_answer": "3-3"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "2-2",
+          "answer_B": "3-3",
+          "answer_C": "1-1",
+          "answer_D": "4-4",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Cuál fue el marcador de la final de la Copa Mundial de la FIFA Catar 2022 antes de la tanda de penaltis?",
+          "right_answer": "3-3",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_053"
+        },
+        "de": {
+          "answer_A": "2:2",
+          "answer_B": "3:3",
+          "answer_C": "1:1",
+          "answer_D": "4:4",
+          "categoryType": "WORLD_CUP",
+          "question": "Wie stand es im Finale der FIFA-Weltmeisterschaft Katar 2022 vor dem Elfmeterschießen?",
+          "right_answer": "3:3",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_053"
+        },
+        "it": {
+          "answer_A": "2-2",
+          "answer_B": "3-3",
+          "answer_C": "1-1",
+          "answer_D": "4-4",
+          "categoryType": "WORLD_CUP",
+          "question": "Qual era il risultato della finale della Coppa del Mondo FIFA Qatar 2022 prima dei rigori?",
+          "right_answer": "3-3",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_053"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    },
+    {
+      "questionId": "world_cup_054",
+      "categoryType": "WORLD_CUP",
+      "type": "World Championship",
+      "source": {
+        "en": {
+          "question": "Which three countries hosted the FIFA World Cup 2026?",
+          "answer_A": "Canada, Mexico, and the United States",
+          "answer_B": "Spain, Portugal, and Morocco",
+          "answer_C": "England, Scotland, and Wales",
+          "answer_D": "Argentina, Uruguay, and Paraguay",
+          "right_answer": "Canada, Mexico, and the United States"
+        },
+        "ru": {
+          "question": "Какие три страны принимали Чемпионат мира по футболу 2026?",
+          "answer_A": "Канада, Мексика и США",
+          "answer_B": "Испания, Португалия и Марокко",
+          "answer_C": "Англия, Шотландия и Уэльс",
+          "answer_D": "Аргентина, Уругвай и Парагвай",
+          "right_answer": "Канада, Мексика и США"
+        },
+        "hy": {
+          "question": "Ո՞ր երեք երկրներն են հյուրընկալել 2026 թ. ՖԻՖԱ-ի Աշխարհի գավաթը:",
+          "answer_A": "Կանադա, Մեքսիկա և ԱՄՆ",
+          "answer_B": "Իսպանիա, Պորտուգալիա և Մարոկկո",
+          "answer_C": "Անգլիա, Շոտլանդիա և Ուելս",
+          "answer_D": "Արգենտինա, Ուրուգվայ և Պարագվայ",
+          "right_answer": "Կանադա, Մեքսիկա և ԱՄՆ"
+        }
+      },
+      "translations_to_review": {
+        "es": {
+          "answer_A": "Canadá, México y Estados Unidos",
+          "answer_B": "España, Portugal y Marruecos",
+          "answer_C": "Inglaterra, Escocia y Gales",
+          "answer_D": "Argentina, Uruguay y Paraguay",
+          "categoryType": "WORLD_CUP",
+          "question": "¿Qué tres países organizaron la Copa Mundial de la FIFA 2026?",
+          "right_answer": "Canadá, México y Estados Unidos",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_054"
+        },
+        "de": {
+          "answer_A": "Kanada, Mexiko und die USA",
+          "answer_B": "Spanien, Portugal und Marokko",
+          "answer_C": "England, Schottland und Wales",
+          "answer_D": "Argentinien, Uruguay und Paraguay",
+          "categoryType": "WORLD_CUP",
+          "question": "Welche drei Länder richteten die FIFA-Weltmeisterschaft 2026 aus?",
+          "right_answer": "Kanada, Mexiko und die USA",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_054"
+        },
+        "it": {
+          "answer_A": "Canada, Messico e Stati Uniti",
+          "answer_B": "Spagna, Portogallo e Marocco",
+          "answer_C": "Inghilterra, Scozia e Galles",
+          "answer_D": "Argentina, Uruguay e Paraguay",
+          "categoryType": "WORLD_CUP",
+          "question": "Quali tre paesi hanno ospitato la Coppa del Mondo FIFA 2026?",
+          "right_answer": "Canada, Messico e Stati Uniti",
+          "type": "World Championship",
+          "answered": false,
+          "questionId": "world_cup_054"
+        }
+      },
+      "review_status": "approved",
+      "reviewer_note": ""
+    }
+  ]
+}

@@ -208,6 +208,21 @@ class StartPageFragment : Fragment() {
                         "ru"
                     }
 
+                    R.id.lng_spanish -> {
+                        settingsRepository.setCheckedLanguage(R.id.lng_spanish)
+                        "es"
+                    }
+
+                    R.id.lng_german -> {
+                        settingsRepository.setCheckedLanguage(R.id.lng_german)
+                        "de"
+                    }
+
+                    R.id.lng_italian -> {
+                        settingsRepository.setCheckedLanguage(R.id.lng_italian)
+                        "it"
+                    }
+
                     else -> {
                         settingsRepository.setCheckedLanguage(R.id.lng_english)
                         "en"

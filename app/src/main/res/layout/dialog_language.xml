@@ -61,6 +61,39 @@
             android:textStyle="bold"
             android:textSize="16sp"
             android:text="🇷🇺  Русский" />
+
+        <RadioButton
+            android:id="@+id/lng_spanish"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="@color/fq_colorWhite"
+            android:buttonTint="@color/fq_colorWaitingAnswer"
+            android:paddingStart="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="🇪🇸  Español" />
+
+        <RadioButton
+            android:id="@+id/lng_german"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="@color/fq_colorWhite"
+            android:buttonTint="@color/fq_colorWaitingAnswer"
+            android:paddingStart="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="🇩🇪  Deutsch" />
+
+        <RadioButton
+            android:id="@+id/lng_italian"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="@color/fq_colorWhite"
+            android:buttonTint="@color/fq_colorWaitingAnswer"
+            android:paddingStart="12dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="🇮🇹  Italiano" />
     </RadioGroup>
 
     <View

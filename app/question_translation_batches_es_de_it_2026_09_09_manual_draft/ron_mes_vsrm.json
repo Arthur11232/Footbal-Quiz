@@ -1,0 +1,4913 @@
+{
+  "source_workbench": "app/questions_translation_workbench_es_de_it_2026_09_09.json",
+  "categoryType": "RON_MES",
+  "type": "vsRM",
+  "target_languages": [
+    "es",
+    "de",
+    "it"
+  ],
+  "status": "manual_draft_needs_review",
+  "items": [
+    {
+      "questionId": "vsrm_001",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for goals scored in the championships of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по забитым мячам в чемпионатах Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնություններում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién es el máximo goleador histórico de LaLiga?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_001"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer ist der Rekordtorschütze in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_001"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è il miglior marcatore storico del campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_001"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_002",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 5 or more goals in one match of the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в одном матче Лиги чемпионов забил 5 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայի մեկ խաղում դարձել 5 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 5 o más goles en un partido de Champions League?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_002"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 5 oder mehr Tore in einem Champions-League-Spiel?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_002"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 5 o più gol in una partita di Champions League?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_002"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_003",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who most of all became the author of \"double \" in the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто больше всех стал автором \"дубля\" в чемпионате Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ \"դուբլ\"-ի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ha marcado más dobletes en el campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_003"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte die meisten Doppelpacks in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_003"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha realizzato più doppiette nel campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_003"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_004",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the most author of \"hat trick \" in the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто больше всех стал автором \"хет трика\" в чемпионате Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ \"հեթրիկ\"-ի հեղինակ դարձել Իսպանիայի առաջնությունում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ha marcado más hat-tricks en el campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_004"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte die meisten Hattricks in der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_004"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha realizzato più triplette nel campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_004"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_005",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for the number of \"hat tricks \" in one season of the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по количеству \"хет триков\" в одном сезоне чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնության մեկ մրցաշրջանում \"հեթրիկ\"-երի քանակով ռեկորդակիրը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién tiene el récord de hat-tricks en una sola temporada del campeonato de España?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_005"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer hält den Rekord für die meisten Hattricks in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_005"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi detiene il record di triplette in una sola stagione del campionato spagnolo?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_005"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_006",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who most of all became the author of goals from a penalty in the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто больше всех стал автором голов с пенальти в чемпионате Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնությունում ավելի շատ գոլ խփել 11 մ-ից:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ha marcado más goles de penalti en el campeonato de España?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_006"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte die meisten Elfmetertore in der spanischen Meisterschaft?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_006"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato più gol su rigore nel campionato spagnolo?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_006"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_007",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the champion of the Olympic Games?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто стал чемпионом Олимпийских игр ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է դարձել Օլիմպիական խաղերի չեմպիոն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue campeón olímpico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_007"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde Olympiasieger?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_007"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è diventato campione olimpico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_007"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_008",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 4 or more goals in one match of the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто в одном матче Лиги чемпионов забил 4 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայի մեկ խաղում դարձել 4 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 4 o más goles en un partido de Champions League?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_008"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 4 oder mehr Tore in einem Champions-League-Spiel?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_008"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 4 o più gol in una partita di Champions League?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_008"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_009",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the author of \"hat trick \" in \"El Clasico \"?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто стал автором \"хет трика\" в \"Эль-Класико\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է դարձել \"հեթրիկ\"-ի հեղինակ \"Էլ-Կլասիկո\"-ում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó un hat-trick en El Clásico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_009"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte einen Hattrick im El Clásico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_009"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha realizzato una tripletta nel Clásico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_009"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_010",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who 3 times in a row became the top scorer of the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто 3 раза подряд стал лучшим бомбардиром чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է 3 անգամ անընդմեջ դարձել Իսպանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue máximo goleador del campeonato de España tres veces seguidas?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_010"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde dreimal in Folge Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_010"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato capocannoniere del campionato spagnolo per tre volte di fila?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_010"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_011",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the top scorer of the championship of Spain 6 times?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто стал лучшим бомбардиром чемпионата Испании 6 раз ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է 6 անգամ դարձել Իսպանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue máximo goleador del campeonato de España seis veces?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_011"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde sechsmal Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_011"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato capocannoniere del campionato spagnolo sei volte?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_011"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_012",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for goals scored in one season of the championship of Spain?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по забитым мячам в одном сезоне чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Իսպանիայի առաջնության մեկ մրցաշրջանում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién tiene el récord de goles en una temporada del campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_012"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer hält den Torrekord in einer Saison der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_012"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi detiene il record di gol in una stagione del campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_012"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_013",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the top scorer of the Spanish championship 4 times in a row?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто 4 раза подряд стал лучшим бомбардиром чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է 4 անգամ անընդմեջ դարձել Իսպանիայի առաջնության լավագույն ռմբարկու:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue máximo goleador del campeonato de España cuatro veces seguidas?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_013"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde viermal in Folge Torschützenkönig der spanischen Meisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_013"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato capocannoniere del campionato spagnolo per quattro volte di fila?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_013"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_014",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of the Club World Cup?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир Клубного чемпионата мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի ակումբային առաջնության լավագույն ռմբարկուն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién es el máximo goleador histórico del Mundial de Clubes?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_014"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer ist der Rekordtorschütze der Klub-Weltmeisterschaft?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_014"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è il miglior marcatore storico del Mondiale per Club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_014"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_015",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for goals scored in the finals of the Club World Cup?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по забитым мячам в финалах Клубного чемпионата мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի ակումբային առաջնության եզրափակիչներում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién tiene el récord de goles en finales del Mundial de Clubes?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_015"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer hält den Torrekord in Endspielen der Klub-Weltmeisterschaft?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_015"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi detiene il record di gol nelle finali del Mondiale per Club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_015"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_016",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the first player in the history of the Club World Cup to score a goal in two finals in a row?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто первый игрок в истории Клубного чемпионата мира, забивший гол в двух финалах подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի ակումբային առաջնության պատմության մեջ առաջինը 2 անընդմեջ եզրափակիչներում դարձել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue el primer jugador en la historia del Mundial de Clubes en marcar en dos finales seguidas?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_016"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer war der erste Spieler in der Geschichte der Klub-Weltmeisterschaft, der in zwei Endspielen in Folge traf?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_016"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato il primo giocatore nella storia del Mondiale per Club a segnare in due finali consecutive?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_016"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_017",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for his team in the number of matches held?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто рекордсмен своей сборной по количеству проведенных матчей ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր հավաքականի ռեկորդակիրը անցկացրած խաղերի քանակով:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién es récord de partidos con su selección?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_017"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer ist Rekordspieler seiner Nationalmannschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_017"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è il primatista di presenze nella propria nazionale?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_017"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_018",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 65 or more goals for the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто забил 65 и более голов за Национальную сборную ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել 65 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 65 o más goles con su selección?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_018"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 65 oder mehr Tore für seine Nationalmannschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_018"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 65 o più gol con la propria nazionale?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_018"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_019",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 85 or more goals for the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто забил 85 и более голов за Национальную сборную ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել 85 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 85 o más goles con su selección?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_019"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 85 oder mehr Tore für seine Nationalmannschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_019"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 85 o più gol con la propria nazionale?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_019"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_020",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer in the history of \"El Clasico \"?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир в истории \"Эль-Класико\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է \"Էլ-Կլասիկո\"-երի պատմության մեջ լավագույն ռմբարկուն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién es el máximo goleador histórico de El Clásico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_020"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer ist der Rekordtorschütze im El Clásico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_020"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è il miglior marcatore storico del Clásico?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_020"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_021",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who broke Gerd Müller's record for the most goals in one calendar year?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто побил рекорд Герда Мюллера по количеству голов за один календарный год ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է մեկ օրացուցային տարում խփած գոլերի քանակով գերազանցել Գերդ Մյուլլերի ռեկորդը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién rompió el récord de Gerd Müller de más goles en un año natural?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_021"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer brach Gerd Müllers Rekord für die meisten Tore in einem Kalenderjahr?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_021"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha battuto il record di Gerd Müller per il maggior numero di gol in un anno solare?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_021"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_022",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the winner of the Spanish championship the most?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто больше всех стал победителем чемпионата Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ դարձել Իսպանիայի առաջնության չեմպիոն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó más veces el campeonato de España?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_022"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann die spanische Meisterschaft häufiger?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_022"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto più volte il campionato spagnolo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_022"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_023",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 97 or more goals for the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто забил 97 и более голов за Национальную сборную ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել 97 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 97 o más goles con su selección?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_023"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 97 oder mehr Tore für seine Nationalmannschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_023"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 97 o più gol con la propria nazionale?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_023"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_024",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в Лиге чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ գոլ խփել Չեմպիոնների Լիգայում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó más goles en la Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_024"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte die meisten Tore in der Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_024"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato più gol in Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_024"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_025",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the champion in the number of \"hat tricks \" in the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по количеству \"хет триков\" в Лиге чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայում \"հեթրիկ\"-երի քանակով ռեկորդակիրը :",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién comparte el récord de hat-tricks en la Champions League?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_025"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer teilt den Rekord für die meisten Hattricks in der Champions League?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_025"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi condivide il record di triplette in Champions League?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_025"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_026",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who finished as Champions League top scorer in more seasons?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто чаще становился лучшим бомбардиром сезона Лиги чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է ավելի հաճախ դարձել Չեմպիոնների լիգայի մրցաշրջանի լավագույն ռմբարկու:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién terminó más temporadas como máximo goleador de la Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_026"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde in mehr Spielzeiten Torschützenkönig der Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_026"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato capocannoniere della Champions League in più stagioni?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_026"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_027",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who played in the Confederations Cup as part of the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной играл в Кубке Конфедераций ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում մասնակցել Կոնֆեդերացիայի գավաթի մրցաշարին:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién participó en la Copa Confederaciones con su selección?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_027"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer nahm mit seiner Nationalmannschaft am Konföderationen-Pokal teil?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_027"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha partecipato alla Confederations Cup con la propria nazionale?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_027"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_028",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for goals scored in one season of the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по забитым мячам в одном сезоне Лиги чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայի մեկ մրցաշարում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién tiene el récord de goles en una temporada de la Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_028"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer hält den Torrekord in einer Champions-League-Saison?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_028"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi detiene il record di gol in una stagione di Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_028"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_029",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored a goal in all games of the group stage in one season of the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто в одном сезоне Лиги чемпионов забил гол во всех играх группового этапа ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է՝ Չեմպիոնների Լիգայի մեկ մրցաշարում, խմբային փուլի բոլոր խաղերում դարձել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó en todos los partidos de la fase de grupos en una temporada de Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_029"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer traf in einer Champions-League-Saison in allen Spielen der Gruppenphase?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_029"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato in tutte le partite della fase a gironi in una stagione di Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_029"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_030",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored a goal in all games in one Champions League season?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Кто в одном сезоне Лиги чемпионов забил гол во всех играх ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայի մեկ մրցաշարի բոլոր խաղերում դարձել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó en todos los partidos de una temporada de Champions League?",
+          "right_answer": "Ninguno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_030"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer traf in allen Spielen einer Champions-League-Saison?",
+          "right_answer": "Keiner",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_030"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato in tutte le partite di una stagione di Champions League?",
+          "right_answer": "Nessuno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_030"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_031",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who in one season of the Champions League became the author of \"hat trick \" in two games in a row?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто в одном сезоне Лиги чемпионов стал автором \"хет трика\" в двух играх подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Չեմպիոնների Լիգայի մեկ մրցաշարում դարձել \"հեթրիկ\"-ի հեղինակ 2 խաղ անընդմեջ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó hat-tricks en dos partidos seguidos en una temporada de Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_031"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte in einer Champions-League-Saison in zwei Spielen in Folge Hattricks?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_031"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha realizzato triplette in due partite consecutive in una stagione di Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_031"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_032",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who participated in three or more World Championships?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто участвовал в трех и более чемпионатах Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է մասնակցել Աշխարհի 3 եվ ավել առաջնությունների:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién participó en tres o más Copas del Mundo?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_032"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer nahm an drei oder mehr Weltmeisterschaften teil?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_032"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha partecipato a tre o più Mondiali?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_032"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_033",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the top scorer of his team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто лучший бомбардир своей сборной ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր հավաքականի լավագույն ռմբարկուն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién es el máximo goleador histórico de su selección?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_033"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer ist der Rekordtorschütze seiner Nationalmannschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_033"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è il miglior marcatore storico della propria nazionale?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_033"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_034",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who participated in 4 or more World Championships?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто участвовал в 4 и более чемпионатах Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է մասնակցել Աշխարհի 4 եվ ավել առաջնությունների:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién participó en cuatro o más Copas del Mundo?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_034"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer nahm an vier oder mehr Weltmeisterschaften teil?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_034"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha partecipato a quattro o più Mondiali?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_034"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_035",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who in the national team became the champion of Europe?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной стал чемпионом Европы ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել Եվրոպայի չեմպիոնի:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue campeón de Europa con su selección?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_035"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde mit seiner Nationalmannschaft Europameister?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_035"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è diventato campione d’Europa con la propria nazionale?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_035"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_036",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the World Champion in the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной стал чемпионом Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել Աշխարհի չեմպիոն:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue campeón del mundo con su selección?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_036"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde mit seiner Nationalmannschaft Weltmeister?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_036"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è diventato campione del mondo con la propria nazionale?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_036"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_037",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the America's Cup as part of the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной стал победителем Кубка Америки ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում նվաճել Ամերիկայի գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Copa América con su selección?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_037"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seiner Nationalmannschaft die Copa América?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_037"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Copa América con la propria nazionale?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_037"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_038",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who in the National Team became the silver medalist of the World Championship?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной стал серебряным призером чемпионата Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել Աշխարհի առաջնության արծաթե մեդալակիր:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue subcampeón del mundo con su selección?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_038"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde mit seiner Nationalmannschaft Vizeweltmeister?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_038"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è diventato vicecampione del mondo con la propria nazionale?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_038"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_039",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who in the National Team won the Olympic gold medal?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной стал обладателем золотой медали Олимпийских игр ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում դարձել Օլիմպիական խաղերի ոսկե մեդալակիր:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el oro olímpico con su selección?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_039"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seiner Nationalmannschaft olympisches Gold?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_039"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto l’oro olimpico con la propria nazionale?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_039"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_040",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the Confederation Cup as part of the National Team?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Кто в составе Национальной сборной стал победителем Кубка Конфедерации ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞վ է Ազգային հավաքականի կազմում նվաճել Կոնֆեդերացիայի գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Copa Confederaciones con su selección?",
+          "right_answer": "Ninguno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_040"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seiner Nationalmannschaft den Konföderationen-Pokal?",
+          "right_answer": "Keiner",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_040"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Confederations Cup con la propria nazionale?",
+          "right_answer": "Nessuno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_040"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_041",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored a goal in all the World Championships in which he participated?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто забил гол на всех чемпионатах Мира, в которых он участвовал ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր մասնակցած Աշխարհի բոլոր առաջնություններում դարձել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó en todas las Copas del Mundo en las que participó?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_041"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte bei allen Weltmeisterschaften, an denen er teilnahm, ein Tor?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_041"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato in tutti i Mondiali a cui ha partecipato?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_041"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_042",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the first three-time winner of the European Golden Shoe?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто стал первым трёхкратным обладателем \"Золотой бутсы\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է առաջինը դարձել \"Ոսկե խաղակոշիկ\" մրցանակի եռակի դափնեկիր:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue el primer triple ganador de la Bota de Oro europea?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_042"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde als Erster dreimaliger Gewinner des Europäischen Goldenen Schuhs?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_042"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato il primo a vincere tre volte la Scarpa d’Oro europea?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_042"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_043",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the first four-time winner of the European Golden Shoe?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто стал первым четырёхкратным обладателем \"Золотой бутсы\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է առաջինը դարձել \"Ոսկե խաղակոշիկ\" մրցանակի քառակի դափնեկիր:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue el primer cuádruple ganador de la Bota de Oro europea?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_043"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer wurde als Erster viermaliger Gewinner des Europäischen Goldenen Schuhs?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_043"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato il primo a vincere quattro volte la Scarpa d’Oro europea?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_043"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_044",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the five-time winner of the European Golden Shoe?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто стал пятикратным обладателем \"Золотой бутсы\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է դարձել \"Ոսկե խաղակոշիկ\" մրցանակի հնգակի դափնեկիր:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Bota de Oro europea cinco veces?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_044"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann den Europäischen Goldenen Schuh fünfmal?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_044"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Scarpa d’Oro europea cinque volte?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_044"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_045",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the owner of the \"Golden Ball \" 4 or more times?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто стал обладателем \"Золотого мяча\" 4 и более раз ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է արժանացել \"Ոսկե գնդակ\" մրցանակին 4 եվ ավել անգամ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el Balón de Oro 4 o más veces?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_045"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann den Ballon d’Or 4 oder mehr Mal?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_045"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il Pallone d’Oro 4 o più volte?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_045"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_046",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the owner of the \"Golden Ball \" 5 or more times?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто стал обладателем \"Золотого мяча\" 5 и более раз ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է արժանացել \"Ոսկե գնդակ\" մրցանակին 5 եվ ավել անգամ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el Balón de Oro 5 o más veces?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_046"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann den Ballon d’Or 5 oder mehr Mal?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_046"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il Pallone d’Oro 5 o più volte?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_046"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_047",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the Champions League 5 or more times with their club?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто со своим клубом выиграл Лигу чемпионов 5 и более раза ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում նվաճել Չեմպիոնների Լիգայի գավաթը 5 եվ ավել անգամ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Champions League 5 o más veces con su club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_047"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Champions League 5 oder mehr Mal?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_047"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Champions League 5 o più volte con il proprio club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_047"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_048",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the Champions League 4 or more times with their club?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто со своим клубом выиграл Лигу чемпионов 4 и более раза ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում նվաճել Չեմպիոնների Լիգայի գավաթը 4 եվ ավել անգամ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Champions League 4 o más veces con su club?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_048"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Champions League 4 oder mehr Mal?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_048"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Champions League 4 o più volte con il proprio club?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_048"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_049",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the Champions League 3 times in a row with their club?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто со своим клубом выиграл Лигу чемпионов 3 раза подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 3 անգամ անընդմեջ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Champions League 3 veces seguidas con su club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_049"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Champions League dreimal in Folge?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_049"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Champions League 3 volte di fila con il proprio club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_049"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_050",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the Champions League 2 times in a row with their club?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто со своим клубом выиграл Лигу чемпионов 2 раза подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 2 անգամ անընդմեջ նվաճել Չեմպիոնների Լիգայի գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Champions League 2 veces seguidas con su club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_050"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Champions League zweimal in Folge?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_050"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Champions League 2 volte di fila con il proprio club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_050"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_051",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who with his club won the Club World Cup 2 times in a row?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто со своим клубом стал победителем Клубного чемпионата мира 2 раза подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 2 անգամ անընդմեջ դարձել Աշխարհի ակումբային առաջնության հաղթող:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el Mundial de Clubes 2 veces seguidas con su club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_051"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Klub-Weltmeisterschaft zweimal in Folge?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_051"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il Mondiale per Club 2 volte di fila con il proprio club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_051"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_052",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the UEFA Super Cup 2 times in a row with their club?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто со своим клубом выиграл Суперкубок УЕФА 2 раза подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 2 անգամ անընդմեջ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Supercopa de la UEFA 2 veces seguidas con su club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_052"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub den UEFA-Superpokal zweimal in Folge?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_052"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Supercoppa UEFA 2 volte di fila con il proprio club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_052"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_053",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who with his club won the Club World Cup 3 times in a row?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Кто со своим клубом стал победителем Клубного чемпионата мира 3 раза подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 3 անգամ անընդմեջ դարձել Աշխարհի ակումբային առաջնության հաղթող:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el Mundial de Clubes 3 veces seguidas con su club?",
+          "right_answer": "Ninguno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_053"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Klub-Weltmeisterschaft dreimal in Folge?",
+          "right_answer": "Keiner",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_053"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il Mondiale per Club 3 volte di fila con il proprio club?",
+          "right_answer": "Nessuno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_053"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_054",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the UEFA Super Cup 3 times in a row with their club?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "None"
+        },
+        "ru": {
+          "question": "Кто со своим клубом выиграл Суперкубок УЕФА 3 раза подряд ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Никто"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 3 անգամ անընդմեջ նվաճել ՈւԵՖԱ-ի Սուպեր գավաթը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Ոչ մեկը"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Supercopa de la UEFA 3 veces seguidas con su club?",
+          "right_answer": "Ninguno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_054"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub den UEFA-Superpokal dreimal in Folge?",
+          "right_answer": "Keiner",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_054"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Supercoppa UEFA 3 volte di fila con il proprio club?",
+          "right_answer": "Nessuno",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_054"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_055",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 5 or more goals in World Championships?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто в чемпионатах Мира забил 5 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնություններում դարձել 5 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 5 o más goles en Copas del Mundo?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_055"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 5 oder mehr Tore bei Weltmeisterschaften?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_055"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 5 o più gol ai Mondiali?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_055"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_056",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 7 or more goals in World Championships?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто в чемпионатах Мира забил 7 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնություններում դարձել 7 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 7 o más goles en Copas del Mundo?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_056"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 7 oder mehr Tore bei Weltmeisterschaften?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_056"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 7 o più gol ai Mondiali?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_056"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_057",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 4 or more goals in one World Championship?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто в одном чемпионате Мира забил 4 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի մեկ առաջնությունում դարձել 4 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 4 o más goles en una Copa del Mundo?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_057"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 4 oder mehr Tore bei einer Weltmeisterschaft?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_057"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 4 o più gol in un Mondiale?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_057"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_058",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 2 or more goals in one World Championship match?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто в одном матче чемпионата Мира забил 2 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է Աշխարհի առաջնության մեկ խաղում դարձել 2 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 2 o más goles en un partido de Copa del Mundo?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_058"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 2 oder mehr Tore in einem Weltmeisterschaftsspiel?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_058"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 2 o più gol in una partita dei Mondiali?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_058"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_059",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who was the first to score 100 goals in the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто первым забил 100 голов в Лиге чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է առաջինը դարձել 100 գոլի հեղինակ Չեմպիոնների Լիգայում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue el primero en marcar 100 goles en la Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_059"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte als Erster 100 Tore in der Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_059"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato il primo a segnare 100 gol in Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_059"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_060",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who was the first to score 100 goals in one club in the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто первым забил 100 голов в составе одного клуба в Лиге чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է առաջինը մեկ ակումբի կազմում դարձել 100 գոլի հեղինակ Չեմպիոնների Լիգայում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién fue el primero en marcar 100 goles con un solo club en la Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_060"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte als Erster 100 Champions-League-Tore für einen einzigen Klub?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_060"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi è stato il primo a segnare 100 gol con un solo club in Champions League?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_060"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_061",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 100 goals in one club in the Champions League?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто забил 100 голов в составе одного клуба в Лиге чемпионов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է մեկ ակումբի կազմում դարձել 100 գոլի հեղինակ Չեմպիոնների Լիգայում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 100 goles con un solo club en la Champions League?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_061"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte 100 Champions-League-Tore für einen einzigen Klub?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_061"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 100 gol con un solo club in Champions League?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_061"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_062",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the best player award at the World Cup?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто удостоился приза лучший футболист чемпионата Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է արժանացել Աշխարհի առաջնության լավագույն ֆուտբոլիստ մրցանակին:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el premio al mejor jugador de la Copa del Mundo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_062"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann die Auszeichnung als bester Spieler der Weltmeisterschaft?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_062"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il premio come miglior giocatore della Coppa del Mondo?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_062"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_063",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored the most goals in matches for the Spanish Super Cup?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто забил больше всех голов в матчах за Суперкубок Испании ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է բոլորից շատ գոլ խփել Իսպանիայի Սուպեր գավաթի խաղերում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó más goles en partidos de la Supercopa de España?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_063"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte die meisten Tore in Spielen um den spanischen Supercup?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_063"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato più gol nelle partite della Supercoppa di Spagna?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_063"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_064",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who with his club won the Club World Cup 3 or more times?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Both"
+        },
+        "ru": {
+          "question": "Кто со своим клубом стал победителем Клубного чемпионата мира 3 и более раза ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Оба"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 3 եվ ավել անգամ դարձել Աշխարհի ակումբային առաջնության հաղթող:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Երկուսն էլ"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el Mundial de Clubes 3 o más veces con su club?",
+          "right_answer": "Ambos",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_064"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Klub-Weltmeisterschaft 3 oder mehr Mal?",
+          "right_answer": "Beide",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_064"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il Mondiale per Club 3 o più volte con il proprio club?",
+          "right_answer": "Entrambi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_064"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_065",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who with his club won the Club World Cup 4 or more times?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто со своим клубом стал победителем Клубного чемпионата мира 4 и более раза ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է իր ակումբի կազմում 4 եվ ավել անգամ դարձել Աշխարհի ակումբային առաջնության հաղթող:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó el Mundial de Clubes 4 o más veces con su club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_065"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann mit seinem Klub die Klub-Weltmeisterschaft 4 oder mehr Mal?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_065"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto il Mondiale per Club 4 o più volte con il proprio club?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_065"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_066",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who scored 50 or more goals in the 2018–2019 season?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 забил 50 и более голов ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018–2019 թթ. մրցաշրջանում դարձել 50 եվ ավել գոլի հեղինակ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó 50 o más goles en la temporada 2018/19?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_066"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte in der Saison 2018/19 50 oder mehr Tore?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_066"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha segnato 50 o più gol nella stagione 2018/19?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_066"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_067",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who is the record holder for goals scored in one calendar year?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто рекордсмен по забитым мячам в одном календарном году ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է մեկ օրացուցային տարում խփած գոլերի քանակով ռեկորդակիրը:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién tiene el récord de goles en un año natural?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_067"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer hält den Rekord für die meisten Tore in einem Kalenderjahr?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_067"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi detiene il record di gol in un anno solare?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_067"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_068",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who won the European Golden Shoe in the 2018–2019 season?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто в сезоне 2018–2019 стал обладателем европейской «Золотой бутсы» ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է 2018–2019 մրցաշրջանում նվաճել եվրոպական «Ոսկե խաղակոշիկը»:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién ganó la Bota de Oro europea en la temporada 2018/19?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_068"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer gewann in der Saison 2018/19 den Europäischen Goldenen Schuh?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_068"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha vinto la Scarpa d’Oro europea nella stagione 2018/19?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_068"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_069",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who became the author of \"hat trick \" in the World Cup?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто стал автором \"хет трика\" в чемпионате Мира ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է \"հեթրիկ\"-ի հեղինակ դարձել Աշխարհի առաջնությունում:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién marcó un hat-trick en la Copa del Mundo?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_069"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer erzielte einen Hattrick bei der Weltmeisterschaft?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_069"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi ha realizzato una tripletta in Coppa del Mondo?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_069"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_070",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who collaborates with \"Nike \"?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Cristiano Ronaldo"
+        },
+        "ru": {
+          "question": "Кто сотрудничает с \"Найк\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Криштиану Роналду"
+        },
+        "hy": {
+          "question": "Ո՞վ է համագործակցում \"NIKE\"-ի հետ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Կրիշտիանու Ռոնալդու"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién colabora con Nike?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_070"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer arbeitet mit Nike zusammen?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_070"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi collabora con Nike?",
+          "right_answer": "Cristiano Ronaldo",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_070"
+        }
+      }
+    },
+    {
+      "questionId": "vsrm_071",
+      "categoryType": "RON_MES",
+      "type": "vsRM",
+      "source": {
+        "en": {
+          "question": "Who collaborates with \"Adidas \"?",
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Both",
+          "answer_D": "None",
+          "right_answer": "Lionel Messi"
+        },
+        "ru": {
+          "question": "Кто сотрудничает с \"Адидас\" ?",
+          "answer_A": "Криштиану Роналду",
+          "answer_B": "Лионель Месси",
+          "answer_C": "Оба",
+          "answer_D": "Никто",
+          "right_answer": "Лионель Месси"
+        },
+        "hy": {
+          "question": "Ո՞վ է համագործակցում \"ADIDAS\"-ի հետ:",
+          "answer_A": "Կրիշտիանու Ռոնալդու",
+          "answer_B": "Լիոնել Մեսսի",
+          "answer_C": "Երկուսն էլ",
+          "answer_D": "Ոչ մեկը",
+          "right_answer": "Լիոնել Մեսսի"
+        }
+      },
+      "targets": {
+        "es": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Ambos",
+          "answer_D": "Ninguno",
+          "categoryType": "RON_MES",
+          "question": "¿Quién colabora con Adidas?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_071"
+        },
+        "de": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Beide",
+          "answer_D": "Keiner",
+          "categoryType": "RON_MES",
+          "question": "Wer arbeitet mit Adidas zusammen?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_071"
+        },
+        "it": {
+          "answer_A": "Cristiano Ronaldo",
+          "answer_B": "Lionel Messi",
+          "answer_C": "Entrambi",
+          "answer_D": "Nessuno",
+          "categoryType": "RON_MES",
+          "question": "Chi collabora con Adidas?",
+          "right_answer": "Lionel Messi",
+          "type": "vsRM",
+          "answered": false,
+          "questionId": "vsrm_071"
+        }
+      }
+    }
+  ],
+  "review_note": "Ronaldo vs Messi es/de/it manual draft with local source cleanup; Firestore not updated."
+}
