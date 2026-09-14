@@ -1,13 +1,14 @@
 # Web / Android Chat Sync
 
-Дата обновления: 2026-09-11.
+Дата обновления: 2026-09-14.
 
 Этот файл нужен, чтобы разные чаты по Football Quiz не расходились в контексте. Здесь фиксируем только синхронизационную информацию между Android app, web/landing и backend-направлением.
 
 ## Текущее состояние Android
 
-- Ветка: `codex/add-es-de-it-localization`.
-- Текущий release candidate: `2.2.0`, `versionCode 58`.
+- Ветка для следующей работы: `codex/multiplatform-foundation`.
+- ES/DE/IT localization уже находится в production.
+- Текущая production/release версия: `2.2.0`, `versionCode 58`.
 - Готовый AAB: `app/prod/release/Football_Quiz_prod_release_2.2.0_58.aab`.
 - SHA-256 AAB: `b6519a7e10397bb842777459af5ad05def1f6d3552dbcc76e859d48940fa351c`.
 - Проверки перед release:
@@ -91,6 +92,10 @@
 - Глобальное направление: постепенно перейти к собственному backend.
 - Предпочтение на первом этапе: PHP + MySQL на текущем hosting/cPanel, потому что это дешевле и проще для старта.
 - Firebase Auth пока остаётся identity provider.
+- Backend уже выделен в отдельное направление/repository: `Football-Quiz-Backend`.
+- API subdomain уже использовался как целевая точка: `https://api.footballquiz.club/`.
+- Health endpoint: `https://api.footballquiz.club/health`.
+- Backend должен оставаться отдельным от Android app repo и web landing repo.
 - Backend в будущем должен хранить:
   - canonical question catalog;
   - content version;
@@ -99,12 +104,24 @@
   - позже admin/content page.
 - API лучше держать отдельно от web repo, когда начнётся полноценная backend-разработка.
 
+## Multiplatform / KMP Context
+
+- Старая подготовительная ветка: `codex/phase1-backend-kmp-compose-readiness`.
+- Новая рабочая ветка после ES/DE/IT production merge: `codex/multiplatform-foundation`.
+- Старую ветку нельзя blindly merge-ить целиком, потому что она создана до ES/DE/IT production rollout и содержит устаревшие question-audit changes.
+- Полезные материалы из старой ветки нужно переносить selectively:
+  - backend/KMP/Compose readiness plan;
+  - repository contract audit;
+  - auth/sync boundary ideas;
+  - backend/cPanel/API context.
+- Code changes из старой ветки переносить только маленькими отдельными slices после проверки на текущей `2.2.0` базе.
+
 ## Следующий безопасный шаг
 
-После загрузки `2.2.0 (58)` в Play Console:
+После production rollout `2.2.0 (58)`:
 
-1. Проверить install/update path из Play internal/open/production track.
-2. Проверить language switch для `es/de/it`.
-3. Проверить, что вопросы скачиваются из Firestore и кешируются локально.
-4. Проверить, что answered-state не ломается при смене языка.
-5. После ручной проверки можно обновить release docs и двигаться дальше к backend/content versioning.
+1. Объединить полезную архитектурную память из `codex/phase1-backend-kmp-compose-readiness` без отката ES/DE/IT файлов.
+2. Зафиксировать Phase 1 plan для `codex/multiplatform-foundation`.
+3. Начать с безопасного Android-side cleanup: repository/domain contracts, auth boundary, sync boundary, content-version boundary.
+4. Не создавать KMP module и не внедрять Compose до завершения boundary cleanup.
+5. Backend/content-version work вести отдельными маленькими задачами.
