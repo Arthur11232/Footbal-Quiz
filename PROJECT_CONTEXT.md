@@ -4,7 +4,7 @@
 
 ## 📌 Обзор проекта
 - **Название:** Football Quiz
-- **Версия:** 2.0.3
+- **Версия:** 2.2.0 (`versionCode 58`) release candidate.
 - **Основной стек:** Kotlin, Android SDK (`compileSdk 36`, `targetSdk 36`), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines, Koin.
 - **Цель:** Переход от legacy feature-driven UI-логики к сильной MVVM-архитектуре с `ViewModel`, `Repository`, `UseCase`, DI через Koin и заделом на будущую многомодульность.
 
@@ -17,6 +17,7 @@
 - **Язык:** Практически полная миграция на Kotlin.
 - **UI:** Поддержка Edge-to-Edge (Android 15), внедрены кастомные диалоги (New Game, Language) с дизайном из версии 1.8.
 - **Localization 2.0:** Реализован "Smart Sync" (авто-обновление вопросов при смене языка) и исправлено отображение локализованного UI через `BaseActivity` (`attachBaseContext`).
+- **ES/DE/IT Localization Release:** Добавлены Spanish, German и Italian как полноценные языки приложения. UI-ресурсы расширены до `values-es`, `values-de`, `values-it`, language picker поддерживает `en/hy/ru/es/de/it`, а Firestore `questions` обновлён до 6 языков по 689 вопросов на язык (`4134` документа).
 - **Cloud Sync 2.0:** Реализовано автоматическое восстановление и резервное копирование прогресса через Firestore. При входе в аккаунт и каждом открытии стартового экрана приложение сравнивает локальный и облачный прогресс, предлагает восстановление при необходимости и автоматически выгружает локальные данные, если они новее.
 - **Profile Action UI:** В профиле sync-действия signed-in пользователя оставлены компактными icon-actions рядом со статистикой, а `Sign Out` и `Delete Account` вынесены под статистику как аккуратные icon+text chips. Опасные действия по-прежнему требуют подтверждения через кастомный dialog.
 - **Profile Progress UI:** Профиль показывает понятный прогресс: общие `answered/total`, процент прохождения и отдельный блок по категориям `Top 5`, `UEFA`, `World Cup`, `Versus`. Расчёт `Versus` учитывает оба режима (`vsRM + vsRB`).
@@ -30,8 +31,9 @@
 - **Ads Disabled in First Release:** Рекламная инфраструктура сохранена в проекте для будущего включения, но в версии 1.0.0 фактически выключена через `Constant.ADS_ENABLED = false`: баннеры скрыты, AdMob не инициализируется, interstitial/rewarded не загружаются, reset/reload работают бесплатно.
 - **Release Store Hygiene:** Включён строгий release lint (`abortOnError=true`, `checkReleaseBuilds=true`), отключены AAB language splits для in-app language switcher, добавлены backup/data extraction rules без восстановления локальных user data.
 - **System Bars Styling:** Добавлен общий `SystemBarStyleHelper`; основные экраны (`Splash`, `StartPage`, `ChooseGame`, `CategoryPage`, `Play`, `Versus`, `Profile`, `Privacy`, `Terms`) теперь синхронно выставляют `status bar` и `navigation bar` под свой фон. Для экранов с изображением цвет берётся из верхней/нижней полосы drawable, для однотонных экранов используется целевой ресурс цвета.
-- **Questions Firestore Update:** Коллекция Firestore `questions` ранее обновлялась из локального audit snapshot, который теперь сохранён как архив `app/questions_audit_archive_2026_09_09.json`. Для нового rollout `es/de/it` источником истины считается свежий Firestore backup `app/questions_audit_backup_BEFORE_es_de_it_2026_09_09.json`.
+- **Questions Firestore Update:** Коллекция Firestore `questions` обновлена из финального файла `app/questions_audit_firestore_upload_es_de_it_2026_09_11.json`. Перед update сохранён backup `app/questions_audit_backup_BEFORE_es_de_it_firestore_update_2026_09_11.json`, после update сохранён backup `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`.
 - **Firestore Updater Tool:** Добавлен локальный инструмент `tools/update_firestore_questions.py` для `inspect`, `dry-run` и batch-обновления вопросов в Firestore. Service account хранится локально и игнорируется git-ом.
+- **Release 2.2.0 Prep:** Подготовлен release artifact `app/prod/release/Football_Quiz_prod_release_2.2.0_58.aab`; SHA-256 `b6519a7e10397bb842777459af5ad05def1f6d3552dbcc76e859d48940fa351c`. Проверки `:app:bundleProdRelease` и `:app:testProdDebugUnitTest` проходят успешно.
 - **Очистка:** Основной flow очищен перед релизом, но legacy/debug файлы (`TestActivity`, `TouchActivity`, `TestFragment`, `TouchFragment`, `VSFragment`, `FQ_Timer`) оставлены в проекте, чтобы не терять старый код до отдельного решения.
 - **Offline:** Реализована логика офлайн-игры (загрузка из Firestore -> сохранение в Realm).
 - **Debug Logging:** Добавлены точечные логи с тегом `FQ_Log` для сценариев `New Game`, загрузки вопросов из Firestore и cloud sync/recovery, чтобы упростить анализ `logcat`.
@@ -125,7 +127,7 @@
     - **Статус:** ✅ Завершено.
 
 6.  **Контент: Аудит актуальности вопросов**
-    - **Результат:** Проверены и экспортированы все **1938 вопросов** в `app/questions_audit.json`. Дополнительно исправлен `categoryType` для всех вопросов `Europa League` (`UEFA`), а повторяющиеся формулировки с разными наборами ответов признаны допустимыми и вынесены в отдельную заметку для ручного контент-аудита.
+    - **Результат:** На legacy-этапе были проверены и экспортированы **1938 вопросов** в `app/questions_audit.json` до ES/DE/IT rollout. Сейчас этот файл считается архивным снимком, а актуальное production-состояние Firestore — `4134` документа (`6 x 689`). Дополнительно исправлен `categoryType` для всех вопросов `Europa League` (`UEFA`), а повторяющиеся формулировки с разными наборами ответов признаны допустимыми и вынесены в отдельную заметку для ручного контент-аудита.
     - **Статус:** ✅ Завершено.
 
 7.  **UI Modernization: Google Sign-In Button**
@@ -141,7 +143,7 @@
     - **Статус:** ✅ Завершено.
 
 10. **Firestore Questions: Audit -> Production Update**
-    - **Результат:** Создан updater `tools/update_firestore_questions.py`, проверена текущая структура Firestore (`answers.a/b/c/d/right`), выполнены `inspect` и `dry-run`, затем реальный `--commit` успешно перезаписал 1938 документов в коллекции `questions`. После записи выполнен контрольный `inspect`.
+    - **Результат:** Создан updater `tools/update_firestore_questions.py`, проверена текущая структура Firestore (`answers.a/b/c/d/right`), выполнены `inspect` и `dry-run`, затем production update расширил коллекцию `questions` до 4134 документов: `en/ru/hy/es/de/it` по 689 вопросов на язык. До и после update сохранены отдельные backup-файлы.
     - **Статус:** ✅ Завершено.
 
 11. **Release Prep: GDPR, PlayFragment, Ads Disabled**
@@ -155,6 +157,10 @@
 13. **Architecture Modernization: Koin DI Phase 1**
     - **Результат:** В проект добавлен Koin; основные сервисы и SDK вынесены в DI-контейнер, ручное создание зависимостей в ключевых фрагментах и presenters сокращено, `debug` и `prodRelease` сборки успешно проверены после интеграции.
     - **Статус:** ✅ Завершено.
+
+14. **Localization Release: Spanish, German, Italian**
+    - **Результат:** Добавлены UI strings, language picker и Firestore question catalog для `es`, `de`, `it`. Все 12 content batches прошли human review, финальный upload-файл совпадает с post-update Firestore backup, а release подготовлен как `2.2.0 (58)`.
+    - **Статус:** ✅ Завершено / готово к Play Console upload.
 
 ---
 
@@ -173,9 +179,9 @@
 - **PlayFragment Release Notes:** `newGame()` больше не использует бесконечный `while(true)`, а выбирает из списка unanswered indexes. `save_question_state` больше не общий ключ, а scoped key по категории и place type. `CountDownTimer`, `goalAnimator` и temporary flying ball очищаются в `onDestroyView()`.
 - **Realm Lifecycle:** gameplay/category write-path больше не живут в `DB_Helper`. Методы `setAnswered()`, `setPlaceScores()`, `setCategoryScores()` и `deletePlaceScores()` удалены как dead legacy-path после выноса игрового state в `PlayProgressLocalDataSource` и repository-слой.
 - **Question Audit JSON:** После локального анализа `questions_audit.json` пустой `categoryType` для `Europa League` устранён. Повторы формулировок вопроса с разными вариантами ответов не считаются ошибкой автоматически и требуют отдельной редакторской проверки.
-- **Firestore Questions Updater:** Для обновления production-вопросов использовать `python3 tools/update_firestore_questions.py update --service-account tools/service-account.local.json --language-order en,ru,hy --dry-run`, затем только после явного подтверждения `--commit`. Инструмент не удаляет коллекцию, а перезаписывает numbered docs `questions/0..1937`; `tools/service-account.local.json` и admin SDK ключи игнорируются git-ом.
+- **Firestore Questions Updater:** Для обновления production-вопросов использовать `python3 tools/update_firestore_questions.py update --service-account tools/service-account.local.json --audit <audit.json> --language-order en,ru,hy,es,de,it --require-question-id --dry-run`, затем только после явного подтверждения `--commit`. Инструмент не удаляет коллекцию, а перезаписывает numbered docs; после ES/DE/IT rollout актуальный диапазон `questions/0..4133`. `tools/service-account.local.json` и admin SDK ключи игнорируются git-ом.
 - **Firestore Question Shape:** Текущая структура Firestore для ответов использует lower-case ключи `answers.a`, `answers.b`, `answers.c`, `answers.d`, `answers.right`. Updater пишет именно в этом формате, чтобы не ломать существующее чтение вопросов.
-- **Release Verification:** После восстановления dormant Ads-кода `./gradlew :app:clean :app:assembleDebug` проходит успешно. Перед финальным релизным commit/push нужно заново прогнать `./gradlew :app:lintRelease :app:bundleRelease` в strict lint mode; сформированный локальный `app-release.aab` будет unsigned, пока не добавлен upload/release keystore и signing config.
+- **Release Verification:** Для текущего release candidate `2.2.0 (58)` успешно пройдены `./gradlew :app:bundleProdRelease` и `./gradlew :app:testProdDebugUnitTest`. Свежий signed AAB сохранён как `app/prod/release/Football_Quiz_prod_release_2.2.0_58.aab`; SHA-256 `b6519a7e10397bb842777459af5ad05def1f6d3552dbcc76e859d48940fa351c`.
 - **Koin Verification:** После интеграции Koin успешно проходят `./gradlew :app:compileDevDebugKotlin`, `./gradlew :app:bundleProdRelease` и `./gradlew :app:assembleProdRelease`. На телефоне приложение запускается без fatal crash после qualifier-fix для параметризованного `DB_Helper`.
 - **MVVM Verification:** Первый MVVM-срез для `StartPage` и второй чекпоинт для `Profile` успешно проходят `./gradlew :app:compileDevDebugKotlin` и `./gradlew clean :app:bundleProdRelease`. Текущий bridge-подход подтверждён рабочим: `Repository`, `UseCase` и `ViewModel` слои уже обслуживают sign-in, localization sync, start-level cloud sync и profile-level account/progress flows без поломки release build.
 - **Profile MVVM Checkpoint:** `ProfileFragment` переведён на state/effect flow через `ProfileViewModel`; добавлены `UserStatsRepository` и `GameProgressRepository`, которые инкапсулируют удаление cloud stats, restore/upload sync, локальный progress snapshot, profile photo storage и очистку локальных user data. Фрагмент больше не orchestrates Firebase/DB напрямую и готов к дальнейшему выносу в feature-layer.
@@ -206,4 +212,4 @@
 - **European Championship Currentness Review:** Исправлены актуальные EURO-рекорды после `2024`: Spain как единоличный лидер по титулам, Cristiano Ronaldo как единоличный top scorer и tie `Germany, Spain` по странам тренеров-победителей; детали зафиксированы в `app/questions_european_championship_currentness_review.md`.
 
 ---
-*Последнее обновление: 23.07.2026 (зафиксировано закрытие Phase 5-6 app-side certificate UX: guest/auth/post-login/profile/no-duplicate/logout isolation; следующим фокусом остаются cloud-resilience certificate path и Phase 7 email delivery)*
+*Последнее обновление: 11.09.2026 (зафиксирован ES/DE/IT localization rollout: Firestore обновлён до 4134 docs, backup-и до/после сохранены, release candidate `2.2.0 (58)` собран и проверен)*
