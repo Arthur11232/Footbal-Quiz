@@ -203,18 +203,47 @@ Safe rollout order:
 
 Цель: не начинать Compose с самого сложного gameplay.
 
-Первые candidates:
+Candidates:
 
 - certificate preview/share screen;
 - profile certificate block;
 - notification center;
 - congratulations screen.
 
+Recommended first Compose proof-of-concept:
+
+- `Notification Center` / notification preferences details screen.
+
+Why:
+
+- не влияет на игровой цикл;
+- не зависит от question selection/timers/ads;
+- хорошо ложится на state-driven UI;
+- можно держать рядом с текущим Profile notification state;
+- позже пригодится для Web/iOS notification settings UX.
+
+Second candidate:
+
+- certificate preview/share screen.
+
+Why:
+
+- уже имеет относительно изолированный payload;
+- визуально важный экран;
+- может стать общим дизайн-ориентиром для будущих Compose screens.
+
 Не трогать первыми:
 
 - `PlayFragment`;
 - versus gameplay screens;
 - Start Page auth/sync flow.
+
+Phase 1E rules:
+
+- Не добавлять Compose runtime в этом slice без отдельного решения.
+- Не переписывать существующие XML screens прямо сейчас.
+- Сначала подготовить map, затем отдельным этапом выбрать dependency/setup strategy.
+- Первый Compose proof-of-concept должен быть feature-flagged или изолирован так, чтобы release можно было собрать без риска для gameplay.
 
 ## Проверки
 
@@ -257,13 +286,17 @@ Safe rollout order:
 - Phase 1D contract-only foundation закрыт:
   - migration notes для force update / minimum supported version добавлены;
   - backend catalog switch оставлен на будущий отдельный этап.
+- Начат Phase 1E:
+  - первым Compose proof-of-concept выбран notification center / notification preferences details screen;
+  - certificate preview/share screen выбран вторым кандидатом;
+  - gameplay, versus и Start Page auth/sync исключены из первых Compose переписываний.
 
 ## Текущий next step
 
-Перейти к Phase 1E: `Compose Candidate Map`.
+Подготовить Compose setup decision отдельно от gameplay.
 
 Перед следующим изменением кода:
 
-1. зафиксировать первые Compose candidates без переписывания gameplay;
-2. выбрать один безопасный screen для будущего Compose proof-of-concept;
-3. не трогать `PlayFragment`, versus gameplay и Start Page auth/sync flow первыми.
+1. проверить текущие Gradle/AGP/Kotlin версии и Compose compatibility;
+2. решить, добавляем ли Compose dependencies сейчас или откладываем до отдельной ветки;
+3. если добавляем, начать с изолированного notification screen, а не с gameplay.
