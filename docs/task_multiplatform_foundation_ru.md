@@ -162,15 +162,42 @@ Target direction:
 
 Tasks:
 
-- [ ] Проверить, какие question models уже pure Kotlin.
-- [ ] Не трогать production Firestore update flow.
-- [ ] Зафиксировать future backend contract отдельно от текущего legacy `QuestionsRepository`.
-- [ ] Подготовить migration notes для force update / minimum supported version.
+- [x] Проверить, какие question models уже pure Kotlin.
+- [x] Не трогать production Firestore update flow.
+- [x] Зафиксировать future backend contract отдельно от текущего legacy `QuestionsRepository`.
+- [x] Подготовить migration notes для force update / minimum supported version.
 
 Acceptance criteria:
 
 - текущий Firestore gameplay не меняется;
 - появляется понятный future API boundary для backend/Web/iOS.
+
+### Phase 1D Migration Notes
+
+Current production behavior:
+
+- Android `2.2.0 (58)` still loads questions from Firestore collection `questions`.
+- Local gameplay still reads Realm tables through `GameCatalogRepository` / `RealmGameCatalogLocalDataSource`.
+- Stable `questionId` is already required for safe answered-question preservation across language changes.
+- Firestore is currently the production source of truth for Android question content.
+
+Future backend catalog switch rules:
+
+- Do not switch Android runtime from Firestore to backend catalog without a force-update gate.
+- Before backend catalog becomes source of truth, define a server-side `minimum_supported_version_code`.
+- If the backend catalog format changes answered-state semantics, require users below the supported version to update before sync/restore.
+- Backend catalog must expose a stable `content_version` and stable `question_id` for every language.
+- A single logical question must keep the same `question_id` across languages.
+- Answer correctness must be represented by stable answer identity or canonical answer key, not by localized text comparison.
+- Old Firestore-backed Android versions must either continue receiving compatible Firestore content or be force-updated before incompatible catalog changes.
+
+Safe rollout order:
+
+1. Keep current Firestore flow for production Android.
+2. Add backend catalog read endpoints separately and test with Web/internal clients first.
+3. Add Android adapter behind a feature/config flag, disabled by default.
+4. Add force-update/minimum-version check before enabling backend catalog for Android.
+5. Enable backend catalog only after backup, dry-run validation, and a rollback plan.
 
 ## Phase 1E: Compose Candidate Map
 
@@ -223,13 +250,20 @@ Acceptance criteria:
 - Phase 1C app-side sync boundary cleanup закрыт после ручной проверки restore сценариев.
 - Проверены guest/auth/post-login/cancel restore сценарии без изменения user-facing UX.
 - Известный внешний cloud-config пункт: Firestore rules для `users/{uid}/devices/{installationId}` нужны отдельно для notification settings sync.
+- Начат Phase 1D:
+  - текущий question flow: `FirestoreQuestionService` загружает Firestore `questions` по `translation`, `QuestionsRepositoryImpl` мапит в `QuestionModel`, `DB_Helper` сохраняет в Realm, gameplay читает через `GameCatalogRepository` / `RealmGameCatalogLocalDataSource`;
+  - добавлен future contract `QuestionCatalogRepository` с `ContentVersion`, `QuestionId`, `QuestionCatalogFilter`, `QuestionCatalogSnapshot`;
+  - production Firestore update flow и gameplay runtime не переключались.
+- Phase 1D contract-only foundation закрыт:
+  - migration notes для force update / minimum supported version добавлены;
+  - backend catalog switch оставлен на будущий отдельный этап.
 
 ## Текущий next step
 
-Начать Phase 1D: `Question Catalog Boundary`.
+Перейти к Phase 1E: `Compose Candidate Map`.
 
 Перед следующим изменением кода:
 
-1. проверить текущий question loading flow: `FirestoreQuestionService`, `AllQuestions`, `QuestionsRepository`, `GameObjectSerializable`;
-2. зафиксировать future catalog contract без изменения Firestore gameplay;
-3. не трогать production question catalog и backend switch в этом slice.
+1. зафиксировать первые Compose candidates без переписывания gameplay;
+2. выбрать один безопасный screen для будущего Compose proof-of-concept;
+3. не трогать `PlayFragment`, versus gameplay и Start Page auth/sync flow первыми.
