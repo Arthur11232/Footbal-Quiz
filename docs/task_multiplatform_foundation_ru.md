@@ -132,7 +132,7 @@ Tasks:
 - [x] Проверить `SyncRepository` public contract.
 - [x] Убрать DTO leakage из effect/state там, где ещё осталось.
 - [x] Добавить delete-cloud-progress boundary через `SyncRepository`, если profile/delete flow всё ещё зависит от `UserStatsRepository` напрямую.
-- [ ] Проверить guest/auth/post-login/cancel restore сценарии.
+- [x] Проверить guest/auth/post-login/cancel restore сценарии.
 
 Acceptance criteria:
 
@@ -218,12 +218,18 @@ Acceptance criteria:
 - Backend/API часть намеренно отложена.
 - Проверка: `./gradlew :app:compileProdDebugKotlin` прошла успешно.
 
+### 2026-09-15
+
+- Phase 1C app-side sync boundary cleanup закрыт после ручной проверки restore сценариев.
+- Проверены guest/auth/post-login/cancel restore сценарии без изменения user-facing UX.
+- Известный внешний cloud-config пункт: Firestore rules для `users/{uid}/devices/{installationId}` нужны отдельно для notification settings sync.
+
 ## Текущий next step
 
-Продолжить Phase 1C: `Sync Boundary Cleanup`.
+Начать Phase 1D: `Question Catalog Boundary`.
 
 Перед следующим изменением кода:
 
-1. вручную проверить guest/auth/post-login/cancel restore сценарии;
-2. при успешной проверке закрыть Phase 1C как app-side sync boundary cleanup;
-3. перейти к Phase 1D question catalog boundary.
+1. проверить текущий question loading flow: `FirestoreQuestionService`, `AllQuestions`, `QuestionsRepository`, `GameObjectSerializable`;
+2. зафиксировать future catalog contract без изменения Firestore gameplay;
+3. не трогать production question catalog и backend switch в этом slice.
