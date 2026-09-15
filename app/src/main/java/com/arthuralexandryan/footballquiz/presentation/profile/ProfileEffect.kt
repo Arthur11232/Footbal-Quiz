@@ -1,8 +1,8 @@
 package com.arthuralexandryan.footballquiz.presentation.profile
 
 import androidx.annotation.StringRes
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
+import com.arthuralexandryan.footballquiz.presentation.sync.CloudRestorePromptUiModel
 
 sealed class ProfileEffect {
     data class ShowToastRes(
@@ -14,7 +14,7 @@ sealed class ProfileEffect {
     ) : ProfileEffect()
 
     data class ShowRestoreDialog(
-        val cloudStats: UserStatsDTO
+        val prompt: CloudRestorePromptUiModel
     ) : ProfileEffect()
 
     data class ShowOverwriteDialog(

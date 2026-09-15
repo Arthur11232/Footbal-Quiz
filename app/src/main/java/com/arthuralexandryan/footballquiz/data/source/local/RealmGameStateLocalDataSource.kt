@@ -18,11 +18,11 @@ import com.arthuralexandryan.footballquiz.db_app.UFA.DB_Super_Cup
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_RealM_Barcelona
 import com.arthuralexandryan.footballquiz.db_app.Versus.DB_VS_Ronaldo_Messi
 import com.arthuralexandryan.footballquiz.db_app.World.DB_World_Championship
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.models.GameState
 import com.arthuralexandryan.footballquiz.models.PlacesTop5DTO
 import com.arthuralexandryan.footballquiz.models.PlacesUFADTO
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
-import com.google.firebase.auth.FirebaseUser
 import io.realm.Realm
 import io.realm.RealmModel
 import io.realm.RealmResults
@@ -72,7 +72,7 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
         }
     }
 
-    override fun getUserStats(user: FirebaseUser): UserStatsDTO {
+    override fun getUserStats(user: AuthenticatedUser): UserStatsDTO {
         Realm.getDefaultInstance().use { realm ->
             val scores = ensureScores(realm)
             val totalScore = scores.top5_answered + scores.ufa_answered + scores.world_answered +
@@ -121,7 +121,7 @@ class RealmGameStateLocalDataSource : GameStateLocalDataSource {
                     }
                 ),
                 name = user.displayName.orEmpty(),
-                regId = user.uid
+                regId = user.id
             )
         }
     }

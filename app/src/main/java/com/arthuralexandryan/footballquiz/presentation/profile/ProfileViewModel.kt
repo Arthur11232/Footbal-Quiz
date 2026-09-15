@@ -10,8 +10,8 @@ import com.arthuralexandryan.footballquiz.data.repository.GameProgressRepository
 import com.arthuralexandryan.footballquiz.data.repository.NotificationRepository
 import com.arthuralexandryan.footballquiz.data.repository.PendingRewardRepository
 import com.arthuralexandryan.footballquiz.data.repository.SyncRepository
-import com.arthuralexandryan.footballquiz.data.repository.UserStatsRepository
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.DeleteNotificationDevicesUseCase
 import com.arthuralexandryan.footballquiz.domain.usecase.notifications.SyncNotificationSessionUseCase
@@ -21,8 +21,8 @@ import com.arthuralexandryan.footballquiz.domain.usecase.reward.ConsumePendingRe
 import com.arthuralexandryan.footballquiz.domain.usecase.reward.SyncIssuedCertificatesToCloudUseCase
 import com.arthuralexandryan.footballquiz.presentation.achievement.AchievementCertificatePayload
 import com.arthuralexandryan.footballquiz.presentation.progression.ProgressionUiModelMapper
+import com.arthuralexandryan.footballquiz.presentation.sync.CloudRestorePromptUiModel
 import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
-import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -39,7 +39,6 @@ class ProfileViewModel(
     private val gameProgressRepository: GameProgressRepository,
     private val syncRepository: SyncRepository,
     private val certificateRepository: CertificateRepository,
-    private val userStatsRepository: UserStatsRepository,
     private val notificationRepository: NotificationRepository,
     private val pendingRewardRepository: PendingRewardRepository,
     private val refreshProgressionUseCase: RefreshProgressionUseCase,
@@ -55,6 +54,7 @@ class ProfileViewModel(
 
     private val _effects = MutableSharedFlow<ProfileEffect>()
     val effects: SharedFlow<ProfileEffect> = _effects.asSharedFlow()
+    private var pendingManualRestoreStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO? = null
 
     fun loadProfile() {
         viewModelScope.launch {
@@ -63,12 +63,12 @@ class ProfileViewModel(
 
             if (user != null) {
                 consumePendingRewardsAfterAuthUseCase(
-                    userId = user.uid,
+                    userId = user.id,
                     recipientName = certificateRecipientFallback,
                     userEmail = user.email
                 )
                 syncIssuedCertificatesToCloudUseCase(
-                    userId = user.uid,
+                    userId = user.id,
                     recipientName = certificateRecipientFallback,
                     userEmail = user.email
                 )
@@ -104,7 +104,7 @@ class ProfileViewModel(
                 certificateRepository.saveIssuedCertificates(missingCertificates)
                 if (user != null) {
                     certificateRepository.uploadIssuedCertificates(
-                        userId = user.uid,
+                        userId = user.id,
                         recipientName = certificateRecipientFallback,
                         userEmail = user.email,
                         records = missingCertificates
@@ -116,7 +116,7 @@ class ProfileViewModel(
                 .sortedByDescending { it.issuedAtMillis }
                 .map { it.toProfileCertificateUiModel(certificateRecipientFallback) }
             val pendingRewardsCount = pendingRewardRepository.getPendingRewards().size
-            val userId = user?.uid ?: "guest"
+            val userId = user?.id ?: "guest"
             val localPhotoPath = gameProgressRepository.getProfilePhotoPath(userId)
 
             _uiState.update {
@@ -132,7 +132,7 @@ class ProfileViewModel(
                     updateNotificationsEnabled = notificationRepository.areUpdateNotificationsEnabled(),
                     notificationPermissionGranted = notificationRepository.hasNotificationPermission(),
                     localPhotoPath = localPhotoPath,
-                    remotePhotoUrl = user?.photoUrl?.toString(),
+                    remotePhotoUrl = user?.photoUrl,
                     totalScoreText = "${snapshot.progressPercent}%",
                     answeredCountText = progressText(snapshot.totalAnswered, snapshot.totalQuestions),
                     top5ProgressText = progressText(snapshot.top5Answered, snapshot.top5Total),
@@ -150,13 +150,8 @@ class ProfileViewModel(
         }
     }
 
-    private fun resolveRecipientName(user: FirebaseUser?): String {
-        return user?.displayName
-            ?.takeIf { it.isNotBlank() }
-            ?: user?.email
-                ?.substringBefore("@")
-                ?.takeIf { it.isNotBlank() }
-            ?: "Guest"
+    private fun resolveRecipientName(user: AuthenticatedUser?): String {
+        return user?.recipientName(fallback = "Guest") ?: "Guest"
     }
 
     fun onNotificationsEnabledChanged(enabled: Boolean) {
@@ -210,7 +205,7 @@ class ProfileViewModel(
     }
 
     fun onSignOutClicked() {
-        val currentUserId = authRepository.getCurrentUser()?.uid
+        val currentUserId = authRepository.getCurrentUser()?.id
         viewModelScope.launch {
             setLoading(true)
             unbindNotificationSessionUseCase(currentUserId)
@@ -233,21 +228,21 @@ class ProfileViewModel(
         viewModelScope.launch {
             setLoading(true)
 
-            val cloudDevicesDeleted = deleteNotificationDevicesUseCase(user.uid)
+            val cloudDevicesDeleted = deleteNotificationDevicesUseCase(user.id)
             if (cloudDevicesDeleted.isFailure) {
                 setLoading(false)
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
                 return@launch
             }
 
-            val cloudDeleted = userStatsRepository.deleteStats(user.uid)
+            val cloudDeleted = syncRepository.deleteCloudStats(user.id)
             if (cloudDeleted.isFailure) {
                 setLoading(false)
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
                 return@launch
             }
 
-            val cloudCertificatesDeleted = certificateRepository.deleteIssuedCertificates(user.uid)
+            val cloudCertificatesDeleted = certificateRepository.deleteIssuedCertificates(user.id)
             if (cloudCertificatesDeleted.isFailure) {
                 setLoading(false)
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
@@ -256,14 +251,14 @@ class ProfileViewModel(
 
             notificationRepository.clearLocalSession()
 
-            val localCleared = gameProgressRepository.clearLocalUserData(user.uid)
+            val localCleared = gameProgressRepository.clearLocalUserData(user.id)
             if (localCleared.isFailure) {
                 setLoading(false)
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_delete_error))
                 return@launch
             }
 
-            val deleteResult = authRepository.deleteUser(user)
+            val deleteResult = authRepository.deleteCurrentUser()
             authRepository.signOut()
 
             setLoading(false)
@@ -284,7 +279,7 @@ class ProfileViewModel(
     }
 
     fun onPhotoSelected(uri: Uri) {
-        val userId = authRepository.getCurrentUser()?.uid ?: "guest"
+        val userId = authRepository.getCurrentUser()?.id ?: "guest"
         viewModelScope.launch {
             setLoading(true)
             val result = gameProgressRepository.saveProfilePhoto(userId, uri)
@@ -308,20 +303,31 @@ class ProfileViewModel(
         val user = authRepository.getCurrentUser() ?: return
         viewModelScope.launch {
             setLoading(true)
-            val cloudStats = userStatsRepository.downloadStats(user.uid)
+            val cloudStats = syncRepository.getCloudStats(user.id)
             setLoading(false)
             if (cloudStats == null) {
+                pendingManualRestoreStats = null
                 _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_no_cloud_progress))
             } else {
-                _effects.emit(ProfileEffect.ShowRestoreDialog(cloudStats))
+                pendingManualRestoreStats = cloudStats
+                _effects.emit(
+                    ProfileEffect.ShowRestoreDialog(
+                        CloudRestorePromptUiModel(
+                            userId = user.id,
+                            totalScore = cloudStats.gameState.total
+                        )
+                    )
+                )
             }
         }
     }
 
-    fun onRestoreCloudConfirmed(cloudStats: com.arthuralexandryan.footballquiz.models.UserStatsDTO) {
-        val userId = authRepository.getCurrentUser()?.uid ?: return
+    fun onRestoreCloudConfirmed() {
+        val userId = authRepository.getCurrentUser()?.id ?: return
+        val cloudStats = pendingManualRestoreStats ?: return
         viewModelScope.launch {
             syncRepository.restoreCloudStats(userId, cloudStats)
+            pendingManualRestoreStats = null
             refreshProgressionUseCase()
             loadProfile()
             _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_progress_restored))
@@ -349,7 +355,7 @@ class ProfileViewModel(
             setLoading(false)
             result
                 .onSuccess {
-                    gameProgressRepository.markAutoRestorePromptDismissed(user.uid)
+                    gameProgressRepository.markAutoRestorePromptDismissed(user.id)
                     _effects.emit(ProfileEffect.ShowToastRes(R.string.profile_sync_success))
                 }
                 .onFailure {

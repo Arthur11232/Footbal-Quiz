@@ -2,8 +2,10 @@ package com.arthuralexandryan.footballquiz.data.repository.impl
 
 import android.content.Intent
 import com.arthuralexandryan.footballquiz.auth.AuthManager
+import com.arthuralexandryan.footballquiz.data.mapper.toAuthenticatedUser
 import com.arthuralexandryan.footballquiz.data.repository.AuthRepository
-import com.google.firebase.auth.FirebaseUser
+import com.arthuralexandryan.footballquiz.domain.auth.AuthSignInResult
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
@@ -11,16 +13,23 @@ class AuthRepositoryImpl(
     private val authManager: AuthManager
 ) : AuthRepository {
 
-    override fun getCurrentUser(): FirebaseUser? = authManager.getCurrentUser()
+    override fun getCurrentUser(): AuthenticatedUser? =
+        authManager.getCurrentUser()?.toAuthenticatedUser()
 
     override fun isUserSignedIn(): Boolean = authManager.isUserSignedIn()
 
     override fun getSignInIntent(): Intent = authManager.getSignInIntent()
 
-    override suspend fun signInWithFirebase(idToken: String): AuthManager.AuthResult {
+    override suspend fun signInWithFirebase(idToken: String): AuthSignInResult {
         return suspendCancellableCoroutine { continuation ->
             authManager.signInWithFirebase(idToken) { authResult ->
-                continuation.resume(authResult)
+                continuation.resume(
+                    AuthSignInResult(
+                        success = authResult.success,
+                        user = authResult.user?.toAuthenticatedUser(),
+                        errorMessage = authResult.errorMessage
+                    )
+                )
             }
         }
     }
@@ -37,7 +46,9 @@ class AuthRepositoryImpl(
         }
     }
 
-    override suspend fun deleteUser(user: FirebaseUser): Result<Unit> {
+    override suspend fun deleteCurrentUser(): Result<Unit> {
+        val user = authManager.getCurrentUser()
+            ?: return Result.failure(IllegalStateException("No authenticated user to delete"))
         return suspendCancellableCoroutine { continuation ->
             user.delete().addOnCompleteListener { task ->
                 if (task.isSuccessful) {

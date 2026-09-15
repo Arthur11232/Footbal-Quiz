@@ -15,12 +15,12 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.databinding.FragmentProfileBinding
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileEffect
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileCertificateUiModel
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileUiState
 import com.arthuralexandryan.footballquiz.presentation.profile.ProfileViewModel
 import com.arthuralexandryan.footballquiz.presentation.progression.CompletedStageUiModel
+import com.arthuralexandryan.footballquiz.presentation.sync.CloudRestorePromptUiModel
 import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import com.bumptech.glide.Glide
@@ -99,7 +99,7 @@ class ProfileFragment : Fragment() {
                             Toast.makeText(requireContext(), effect.message, Toast.LENGTH_LONG).show()
                         }
                         is ProfileEffect.ShowRestoreDialog -> {
-                            showRestoreDialog(effect.cloudStats)
+                            showRestoreDialog(effect.prompt)
                         }
                         is ProfileEffect.ShowOverwriteDialog -> {
                             showOverwriteCloudDialog(effect.localScore, effect.localAnswered)
@@ -274,16 +274,16 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun showRestoreDialog(cloudStats: UserStatsDTO) {
+    private fun showRestoreDialog(prompt: CloudRestorePromptUiModel) {
         DialogManager.showActionDialog(
             context = requireContext(),
             inflater = layoutInflater,
             title = getString(R.string.profile_restore_title),
-            message = getString(R.string.profile_manual_restore_message, cloudStats.gameState.total),
+            message = getString(R.string.profile_manual_restore_message, prompt.totalScore),
             primaryText = getString(R.string.profile_restore_confirm),
             secondaryText = getString(R.string.profile_restore_cancel),
             onPrimaryClick = {
-                profileViewModel.onRestoreCloudConfirmed(cloudStats)
+                profileViewModel.onRestoreCloudConfirmed()
             }
         )
     }

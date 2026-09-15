@@ -1,10 +1,10 @@
 package com.arthuralexandryan.footballquiz.data.repository
 
+import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.models.GameObjectScores
 import com.arthuralexandryan.footballquiz.models.GameObjectSerializable
 import com.arthuralexandryan.footballquiz.models.ScoreboardModel
 import com.arthuralexandryan.footballquiz.utils.CategoryType
-import com.google.firebase.auth.FirebaseUser
 
 interface PlaySessionRepository {
     fun consumeSavedQuestionIndex(categoryKey: String, placeType: String): Int?
@@ -18,5 +18,5 @@ interface PlaySessionRepository {
     fun resetSession(questionType: String, categoryType: CategoryType, answeredCount: Int): ScoreboardModel
     fun persistPlaceProgress(questionType: String, placeScores: GameObjectScores)
     fun getTotalScoreText(): String
-    suspend fun syncProgressIfSignedIn(user: FirebaseUser): Result<Unit>
+    suspend fun syncProgressIfSignedIn(user: AuthenticatedUser): Result<Unit>
 }

@@ -1,6 +1,6 @@
 # Task: Multiplatform Foundation
 
-Статус: Draft for implementation.
+Статус: In progress.
 
 Дата: 2026-09-14.
 
@@ -35,6 +35,7 @@ Base: `master` после production rollout ES/DE/IT localization `2.2.0 (58)`.
 - не переписываем screens на Compose;
 - не удаляем Realm;
 - не заменяем Firestore/backend одним большим switch;
+- временно не трогаем backend-реализацию и PHP/API часть;
 - не меняем production question catalog без отдельного backup/dry-run/commit flow;
 - не смешиваем backend repo changes с Android repo changes;
 - не ломаем release flow.
@@ -69,7 +70,7 @@ Tasks:
 - [x] Обновить `docs/web_android_chat_sync_ru.md` под production `2.2.0`.
 - [x] Создать review-файл:
   - `docs/multiplatform_foundation_branch_review_ru.md`.
-- [ ] После ревью пользователя закоммитить docs-only sync.
+- [x] После ревью пользователя закоммитить docs-only sync.
 
 Acceptance criteria:
 
@@ -96,11 +97,11 @@ Target direction:
 
 Tasks:
 
-- [ ] Найти все public contracts, где используется `FirebaseUser`.
-- [ ] Разделить Android sign-in launcher boundary и domain auth result.
-- [ ] Перенести Firebase-to-domain mapping в data mapper.
-- [ ] Не менять UX Google Sign-In.
-- [ ] Прогнать compile.
+- [x] Найти все public contracts, где используется `FirebaseUser`.
+- [x] Разделить Android sign-in launcher boundary и domain auth result.
+- [x] Перенести Firebase-to-domain mapping в data mapper.
+- [x] Не менять UX Google Sign-In.
+- [x] Прогнать compile.
 
 Acceptance criteria:
 
@@ -128,9 +129,9 @@ Target direction:
 
 Tasks:
 
-- [ ] Проверить `SyncRepository` public contract.
-- [ ] Убрать DTO leakage из effect/state там, где ещё осталось.
-- [ ] Добавить delete-cloud-progress boundary через `SyncRepository`, если profile/delete flow всё ещё зависит от `UserStatsRepository` напрямую.
+- [x] Проверить `SyncRepository` public contract.
+- [x] Убрать DTO leakage из effect/state там, где ещё осталось.
+- [x] Добавить delete-cloud-progress boundary через `SyncRepository`, если profile/delete flow всё ещё зависит от `UserStatsRepository` напрямую.
 - [ ] Проверить guest/auth/post-login/cancel restore сценарии.
 
 Acceptance criteria:
@@ -203,12 +204,26 @@ Acceptance criteria:
 ./gradlew :app:testProdDebugUnitTest
 ```
 
+## Progress Log
+
+### 2026-09-14
+
+- Добавлены domain-модели `AuthenticatedUser` и `AuthSignInResult`.
+- Firebase `FirebaseUser` оставлен внутри data/platform mapping через `FirebaseAuthMapper`.
+- `AuthRepository`, `SyncRepository`, `NotificationRepository`, `PlaySessionRepository` и связанные use cases переведены на domain user contract.
+- `StartPageViewModel`, `ProfileViewModel`, `PlayViewModel` больше не используют `FirebaseUser.uid` напрямую.
+- Начат `Sync Boundary Cleanup`: delete cloud progress вынесен из `ProfileViewModel` в `SyncRepository`.
+- Manual restore в `ProfileViewModel` теперь получает cloud stats через `SyncRepository`, без прямой зависимости от `UserStatsRepository`.
+- Restore dialogs в `StartPageFragment` и `ProfileFragment` больше не получают `UserStatsDTO`; вместо этого используется `CloudRestorePromptUiModel`.
+- Backend/API часть намеренно отложена.
+- Проверка: `./gradlew :app:compileProdDebugKotlin` прошла успешно.
+
 ## Текущий next step
 
-Начать с Phase 1B: `Auth Boundary Cleanup`.
+Продолжить Phase 1C: `Sync Boundary Cleanup`.
 
-Перед изменением кода:
+Перед следующим изменением кода:
 
-1. найти все использования `FirebaseUser` в public repository/usecase contracts;
-2. сравнить с идеями старой ветки;
-3. сделать маленький patch без изменения UI behavior.
+1. вручную проверить guest/auth/post-login/cancel restore сценарии;
+2. при успешной проверке закрыть Phase 1C как app-side sync boundary cleanup;
+3. перейти к Phase 1D question catalog boundary.

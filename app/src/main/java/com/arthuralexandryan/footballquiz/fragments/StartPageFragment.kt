@@ -26,9 +26,9 @@ import com.arthuralexandryan.footballquiz.auth.AuthManager
 import com.arthuralexandryan.footballquiz.data.repository.SettingsRepository
 import com.arthuralexandryan.footballquiz.data.source.local.GameStateLocalDataSource
 import com.arthuralexandryan.footballquiz.databinding.ActivityStartPageBinding
-import com.arthuralexandryan.footballquiz.models.UserStatsDTO
 import com.arthuralexandryan.footballquiz.presentation.start.StartPageEffect
 import com.arthuralexandryan.footballquiz.presentation.start.StartPageViewModel
+import com.arthuralexandryan.footballquiz.presentation.sync.CloudRestorePromptUiModel
 import com.arthuralexandryan.footballquiz.utils.DialogManager
 import com.arthuralexandryan.footballquiz.utils.SystemBarStyleHelper
 import kotlinx.coroutines.launch
@@ -152,10 +152,10 @@ class StartPageFragment : Fragment() {
         signInLauncher.launch(authManager.getSignInIntent())
     }
 
-    private fun showRestoreProgressDialog(userId: String, cloudStats: UserStatsDTO) {
+    private fun showRestoreProgressDialog(prompt: CloudRestorePromptUiModel) {
         if (!isAdded) return
         if (restoreDialogShowing) return
-        if (settingsRepository.isAutoRestorePromptDismissed(userId)) return
+        if (settingsRepository.isAutoRestorePromptDismissed(prompt.userId)) return
         restoreDialogShowing = true
 
         var handledByButton = false
@@ -163,24 +163,24 @@ class StartPageFragment : Fragment() {
             context = requireContext(),
             inflater = layoutInflater,
             title = getString(R.string.profile_restore_title),
-            message = getString(R.string.profile_restore_conflict_message, cloudStats.gameState.total),
+            message = getString(R.string.profile_restore_conflict_message, prompt.totalScore),
             primaryText = getString(R.string.profile_restore_confirm),
             secondaryText = getString(R.string.profile_restore_cancel),
             cancelOutside = false,
             cancelable = false,
             onDismiss = {
                 if (!handledByButton) {
-                    startPageViewModel.onKeepLocalProgressConfirmed(userId)
+                    startPageViewModel.onKeepLocalProgressConfirmed(prompt.userId)
                 }
                 restoreDialogShowing = false
             },
             onPrimaryClick = {
                 handledByButton = true
-                startPageViewModel.onCloudRestoreConfirmed(userId, cloudStats)
+                startPageViewModel.onCloudRestoreConfirmed(prompt.userId)
             },
             onSecondaryClick = {
                 handledByButton = true
-                startPageViewModel.onKeepLocalProgressConfirmed(userId)
+                startPageViewModel.onKeepLocalProgressConfirmed(prompt.userId)
             }
         )
     }
@@ -298,7 +298,7 @@ class StartPageFragment : Fragment() {
                             showNotificationPermissionDialog()
                         }
                         is StartPageEffect.PromptCloudRestore -> {
-                            showRestoreProgressDialog(effect.userId, effect.cloudStats)
+                            showRestoreProgressDialog(effect.prompt)
                         }
                         is StartPageEffect.ShowToastRes -> {
                             android.widget.Toast.makeText(
