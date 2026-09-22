@@ -197,7 +197,6 @@ class StartPageViewModel(
         val cloudStats = pendingCloudRestoreStats ?: return
         if (pendingCloudRestoreUserId != userId) return
         viewModelScope.launch {
-            settingsRepository.setAutoRestorePromptDismissed(userId, false)
             restoreStartCloudStatsUseCase(userId, cloudStats)
             pendingCloudRestoreStats = null
             pendingCloudRestoreUserId = null

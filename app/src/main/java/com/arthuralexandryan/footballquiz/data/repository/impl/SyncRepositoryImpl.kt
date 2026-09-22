@@ -79,7 +79,6 @@ class SyncRepositoryImpl(
         }
 
         setLocalSyncTimestamp(user.id, stats.gameState.lastSynced)
-        settingsRepository.setAutoRestorePromptDismissed(user.id, false)
         return Result.success(Unit)
     }
 
@@ -95,7 +94,7 @@ class SyncRepositoryImpl(
         Prefer.setBooleanPreference(context, "isFirstPlay", false)
         Prefer.setBooleanPreference(context, Constant.INIT_DB, true)
         setLocalSyncTimestamp(userId, cloudStats.gameState.lastSynced)
-        settingsRepository.setAutoRestorePromptDismissed(userId, false)
+        settingsRepository.setAutoRestorePromptDismissed(userId, true)
     }
 
     override suspend fun deleteCloudStats(userId: String): Result<Unit> {

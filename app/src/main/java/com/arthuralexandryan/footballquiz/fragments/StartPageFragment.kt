@@ -158,7 +158,6 @@ class StartPageFragment : Fragment() {
         if (settingsRepository.isAutoRestorePromptDismissed(prompt.userId)) return
         restoreDialogShowing = true
 
-        var handledByButton = false
         DialogManager.showActionDialog(
             context = requireContext(),
             inflater = layoutInflater,
@@ -169,17 +168,12 @@ class StartPageFragment : Fragment() {
             cancelOutside = false,
             cancelable = false,
             onDismiss = {
-                if (!handledByButton) {
-                    startPageViewModel.onKeepLocalProgressConfirmed(prompt.userId)
-                }
                 restoreDialogShowing = false
             },
             onPrimaryClick = {
-                handledByButton = true
                 startPageViewModel.onCloudRestoreConfirmed(prompt.userId)
             },
             onSecondaryClick = {
-                handledByButton = true
                 startPageViewModel.onKeepLocalProgressConfirmed(prompt.userId)
             }
         )
