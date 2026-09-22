@@ -1,6 +1,6 @@
 # Task: Multiplatform Foundation
 
-Статус: In progress.
+Статус: Phase 1 Android foundation завершена; ожидает merge в `master`.
 
 Дата: 2026-09-14.
 
@@ -291,12 +291,20 @@ Phase 1E rules:
   - certificate preview/share screen выбран вторым кандидатом;
   - gameplay, versus и Start Page auth/sync исключены из первых Compose переписываний.
 
+### 2026-09-23
+
+- Phase 1A–1E закрыты на уровне Android foundation и архитектурной карты; KMP-модуль и Compose UI ещё не добавлялись.
+- Исправлен повторный автоматический Restore-диалог после Cancel и успешного восстановления; ручное восстановление в Profile остаётся доступным.
+- Пользователь подтвердил ручную проверку Restore-сценария.
+- `./gradlew clean :app:compileProdDebugKotlin` завершилась успешно.
+- App-side исправление зафиксировано отдельно: `65d1dd2 Fix repeated cloud restore prompt after decision`.
+
 ## Текущий next step
 
-Подготовить Compose setup decision отдельно от gameplay.
+После проверки слить `codex/multiplatform-foundation` в `master`.
 
-Перед следующим изменением кода:
+Следующая отдельная KMP/iOS задача зафиксирована в:
 
-1. проверить текущие Gradle/AGP/Kotlin версии и Compose compatibility;
-2. решить, добавляем ли Compose dependencies сейчас или откладываем до отдельной ветки;
-3. если добавляем, начать с изолированного notification screen, а не с gameplay.
+- `docs/task_kmp_shared_ios_foundation_ru.md`.
+
+После merge начать с проверки совместимости Gradle/AGP/Kotlin/KMP и создания минимального `:shared`. Compose setup остаётся отдельным решением для Android UI.
