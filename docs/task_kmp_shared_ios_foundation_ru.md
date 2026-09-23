@@ -123,13 +123,14 @@ SwiftUI / Android UI
 - [x] Выполнить `:app:compileProdDebugKotlin` — успешно.
 - [x] Выполнить `:app:testProdDebugUnitTest` — 4 теста, 0 ошибок.
 - [x] Выполнить `:app:bundleProdRelease` — успешно; локальный bundle: `app/build/outputs/bundle/prodRelease/app-prod-release.aab`.
-- [ ] Ручная проверка запуска, игры, входа и Restore на устройстве после обновления Kotlin.
-- [ ] Проверка iOS framework и Simulator после создания `:shared`.
+- [x] Ручная проверка Android после обновления Kotlin подтверждена пользователем; коммит `9690780`.
+- [x] Сборка iOS simulator framework после создания `:shared`.
+- [ ] Запуск iOS-приложения в Simulator после создания iOS shell.
 
 ### Следующий проверяемый шаг
 
-1. Провести ручную проверку Android на устройстве и зафиксировать Kotlin upgrade после подтверждения пользователя.
-2. После этого создать `:shared` и проверить iOS framework на поддерживаемом Xcode.
+1. Kotlin upgrade проверен пользователем и зафиксирован коммитом `9690780`.
+2. Минимальный `:shared` собран с установленным Xcode 27; Android с подключённым модулем проверен пользователем.
 
 ### Acceptance criteria
 
@@ -141,21 +142,29 @@ SwiftUI / Android UI
 
 ### Задачи
 
-- [ ] Добавить `include ':shared'` в project settings.
-- [ ] Создать `shared/build.gradle.kts`.
-- [ ] Настроить targets:
+- [x] Добавить `include ':shared'` в project settings.
+- [x] Создать `shared/build.gradle.kts`.
+- [x] Настроить targets:
   - Android/JVM target;
   - `iosArm64`;
   - `iosSimulatorArm64`.
-- [ ] Создать source sets:
+- [x] Настроить source sets Kotlin Multiplatform (платформенные каталоги пока пусты):
   - `commonMain`;
   - `commonTest`;
   - `androidMain`;
   - `iosMain`.
-- [ ] Добавить минимальный pure Kotlin API `SharedBuildInfo` или аналогичный smoke-test contract.
-- [ ] Подключить `:shared` к Android `:app`.
-- [ ] Проверить, что Android production source set собирается как раньше.
-- [ ] Собрать iOS framework для симулятора.
+- [x] Добавить минимальный pure Kotlin API `SharedBuildInfo` и общий smoke-тест.
+- [x] Подключить `:shared` к Android `:app`.
+- [x] Проверить `:app:compileProdDebugKotlin` и `:app:testProdDebugUnitTest`.
+- [x] Собрать `:shared:linkDebugFrameworkIosSimulatorArm64` с установленным Xcode 27.
+- [x] Ручная проверка Android-приложения после подключения `:shared` подтверждена пользователем.
+
+### Результат сборки (2026-09-23)
+
+- `:shared:assembleAndroidMain`, `:app:compileProdDebugKotlin` и `:shared:linkDebugFrameworkIosSimulatorArm64` прошли успешно.
+- `:shared:compileTestKotlinIosSimulatorArm64` и существующие Android unit-тесты прошли успешно. Общий тест только скомпилирован, не запущен в Simulator.
+- Framework создан в `shared/build/bin/iosSimulatorArm64/debugFramework/FootballQuizShared.framework`.
+- iOS shell ещё нет, поэтому интеграция с Xcode и запуск на симуляторе пока не проверены.
 
 ### Acceptance criteria
 
