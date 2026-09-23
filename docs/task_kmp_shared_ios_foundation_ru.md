@@ -1,12 +1,12 @@
 # Task: KMP Shared + iOS Foundation
 
-Статус: Planned.
+Статус: Kotlin `2.4.20` проверен на Android; ожидается ручная проверка приложения перед `:shared`.
 
 Дата: 2026-09-22.
 
 Предлагаемая ветка: `codex/kmp-shared-ios-foundation`.
 
-Base: `master` после завершения и merge ветки `codex/multiplatform-foundation`.
+Текущая работа: `codex/multiplatform-foundation`. Merge в `master` и новая ветка отложены по решению пользователя.
 
 ## Цель
 
@@ -79,8 +79,8 @@ SwiftUI / Android UI
 - [x] Закоммитить только app-side restore changes отдельным коммитом (`65d1dd2`).
 - [x] Обновить статус `docs/task_multiplatform_foundation_ru.md`.
 - [x] Закоммитить обновление документов отдельно.
-- [ ] Merge `codex/multiplatform-foundation` в `master` после проверки.
-- [ ] Создать ветку `codex/kmp-shared-ios-foundation` от актуального `master`.
+- [ ] Merge `codex/multiplatform-foundation` в `master` после проверки (отложен пользователем).
+- [ ] Создать ветку `codex/kmp-shared-ios-foundation` от актуального `master` (после merge).
 
 ### Acceptance criteria
 
@@ -92,25 +92,48 @@ SwiftUI / Android UI
 
 ### Задачи
 
-- [ ] Зафиксировать текущие версии:
-  - Kotlin `2.2.10`;
+- [x] Зафиксировать исходные версии перед обновлением:
+  - Kotlin Gradle Plugin `2.3.20` из `gradle/libs.versions.toml`;
   - Gradle `9.4.1`;
   - Java/JVM target `17`;
-  - Android Gradle Plugin из version catalog.
-- [ ] Проверить совместимость Kotlin Multiplatform plugin с текущим Gradle/AGP.
-- [ ] Не обновлять Gradle, AGP и Kotlin одновременно с созданием KMP module без необходимости.
-- [ ] Выбрать формат Gradle для нового модуля: `shared/build.gradle.kts`.
-- [ ] Выбрать способ подключения iOS framework к Xcode:
-  - сначала direct framework / embed-and-sign task;
-  - CocoaPods или SPM рассматривать отдельно после первого успешного запуска.
-- [ ] Зафиксировать минимальные iOS targets:
+  - Android Gradle Plugin `9.1.0` из version catalog;
+  - установленный Xcode `27.0` на Apple Silicon.
+- [x] Проверить совместимость Kotlin Multiplatform plugin с текущим Gradle/AGP: текущая связка выходит за опубликованную матрицу KMP.
+- [x] Выбрать менять только Kotlin Gradle Plugin на `2.4.20` отдельным code slice с Android regression build; Gradle и AGP пока сохранить.
+- [x] Выбрать формат Gradle для нового модуля: `shared/build.gradle.kts`.
+- [x] Выбрать direct integration через `embedAndSignAppleFrameworkForXcode` после создания iOS shell.
+- [x] Зафиксировать минимальные iOS targets:
   - `iosArm64`;
   - `iosSimulatorArm64`;
-  - `iosX64` только если реально нужен Intel simulator.
+  - `iosX64` не нужен на текущем Apple Silicon Mac.
+
+### Результат аудита (2026-09-23)
+
+- До обновления Android build использовал KGP `2.3.20` через version catalog, а корневой `build.gradle` содержал устаревшую переменную `ext.kotlin_version = '2.2.10'`. Теперь обе записи указывают `2.4.20`; отдельного использования `ext.kotlin_version` в исходниках проекта не найдено.
+- По [матрице JetBrains](https://kotlinlang.org/docs/multiplatform/multiplatform-compatibility-guide.html), KMP `2.3.20` заявлен для Gradle до `9.3.0`, AGP до `9.0.0` и Xcode до `26.0`. Это ниже текущих Gradle `9.4.1`, AGP `9.1.0` и Xcode `27.0`.
+- KMP `2.4.20` в той же матрице покрывает Gradle `9.4.1` и AGP `9.1.0`, но опубликованная поддержка Xcode заканчивается на `26.4`. Xcode `27.0` может работать, однако не входит в официально проверенную комбинацию; успешную iOS-сборку нельзя обещать до проверки.
+- [AGP 9.1 требует Gradle минимум `9.3.1` и JDK 17](https://developer.android.com/build/releases/agp-9-1-0-release-notes); текущие `9.4.1` и JDK 17 подходят для Android части.
+- Для Android target в новом KMP-модуле использовать [`com.android.kotlin.multiplatform.library`](https://developer.android.com/kotlin/multiplatform/plugin) с `kotlin { android { ... } }`. `:app` остаётся Android application; новый shared-модуль не получит app flavors или View Binding.
+- Для Xcode выбрать [direct integration](https://kotlinlang.org/docs/multiplatform-direct-integration.html) с `embedAndSignAppleFrameworkForXcode`.
+- На машине установлен только `/Applications/Xcode.app` версии `27.0`. После обновления `xcodebuild -version` работает, но проверка `simctl` в текущем sandbox не смогла подключиться к CoreSimulatorService. Для iOS verification потребуется использовать Xcode версии, поддерживаемой выбранным Kotlin, либо отдельно подтвердить работоспособность Xcode 27.
+
+### Выполнение Kotlin upgrade (2026-09-23)
+
+- [x] Обновить KGP `2.3.20 -> 2.4.20` в version catalog и синхронизировать `ext.kotlin_version`; AGP `9.1.0` и Gradle `9.4.1` не менялись.
+- [x] Выполнить `:app:compileProdDebugKotlin` — успешно.
+- [x] Выполнить `:app:testProdDebugUnitTest` — 4 теста, 0 ошибок.
+- [x] Выполнить `:app:bundleProdRelease` — успешно; локальный bundle: `app/build/outputs/bundle/prodRelease/app-prod-release.aab`.
+- [ ] Ручная проверка запуска, игры, входа и Restore на устройстве после обновления Kotlin.
+- [ ] Проверка iOS framework и Simulator после создания `:shared`.
+
+### Следующий проверяемый шаг
+
+1. Провести ручную проверку Android на устройстве и зафиксировать Kotlin upgrade после подтверждения пользователя.
+2. После этого создать `:shared` и проверить iOS framework на поддерживаемом Xcode.
 
 ### Acceptance criteria
 
-- версии совместимы;
+- версия KGP обновлена и Android build проверен; для iOS доступен поддерживаемый Xcode или подтверждена работоспособность Xcode 27;
 - выбран один способ интеграции с Xcode;
 - нет лишнего массового Gradle migration.
 
