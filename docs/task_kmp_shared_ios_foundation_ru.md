@@ -372,16 +372,18 @@ SwiftUI / Android UI
 
 ## Definition of Done
 
-- [ ] `:shared` является настоящим KMP module;
-- [ ] `commonMain` не зависит от Android/Firebase/Realm;
-- [ ] progress/stage completion работает из shared кода;
-- [ ] shared rules покрыты common tests;
-- [ ] Android использует shared slice без изменения UX;
-- [ ] iOS SwiftUI app запускается в Simulator;
-- [ ] iOS вызывает тот же shared domain code;
+- [x] `:shared` является настоящим KMP module;
+- [x] `commonMain` не зависит от Android/Firebase/Realm;
+- [x] progress/stage completion работает из shared кода;
+- [x] shared rules покрыты common tests;
+- [x] Android использует shared slice без изменения UX;
+- [x] iOS SwiftUI app запускается в Simulator;
+- [x] iOS вызывает тот же shared domain code;
 - [ ] release Android bundle собирается;
-- [ ] документация обновлена;
-- [ ] backend и Web остаются отдельными последующими фазами.
+- [x] документация обновлена;
+- [x] backend и Web остаются отдельными последующими фазами.
+
+`bundleProdRelease` и merge оставлены до отдельной финальной проверки; Phase 8 mobile sync планируется новой задачей.
 
 ## План коммитов
 
