@@ -1,6 +1,6 @@
 # Task: KMP Shared + iOS Foundation
 
-Статус: progression-модели и общие правила завершения этапов проверены; далее shared-контракты хранения прогресса.
+Статус: Phase 5 с общим контрактом хранения прогресса проверена пользователем; далее iOS SwiftUI shell.
 
 Дата: 2026-09-22.
 
@@ -248,15 +248,18 @@ SwiftUI / Android UI
 
 На этом этапе переносим только контракты, которые действительно нужны первому shared slice.
 
+`ProgressionDataSource` задаёт чтение счётчиков и сохранённых достижений, сохранение новых и замену записей при restore. `ProgressionService` использует этот контракт для чтения и обновления. `AndroidProgressionDataSource` сохраняет прежние `GameProgressRepository` и `Prefer` ключи; `ProgressionRepository` остаётся точкой входа Android UI и cloud sync. Контракт выдачи сертификата оставляем до этапа, когда iOS получит реальную авторизацию и storage для сертификатов. Следующий checkpoint: открыть профиль и выполнить обычный progress refresh и cloud restore на Android.
+
 ### Задачи
 
-- [ ] Определить shared contract для чтения progress snapshot.
-- [ ] Определить shared contract для completed stage records.
-- [ ] Решить, нужен ли shared certificate eligibility contract сейчас или в следующей фазе.
-- [ ] Оставить Android Realm implementations в `:app`.
-- [ ] Создать Android adapters, реализующие shared contracts.
-- [ ] Не переносить `Context`, `Prefer`, Realm objects или Firestore DTO в shared API.
-- [ ] Не создавать универсальный repository только ради абстракции.
+- [x] Определить shared contract для чтения stage progress.
+- [x] Определить shared contract для completed stage records и restore.
+- [x] Отложить shared certificate eligibility contract до iOS auth/storage этапа.
+- [x] Оставить Android Realm implementations в `:app`.
+- [x] Создать `AndroidProgressionDataSource`, реализующий shared contract.
+- [x] Не переносить `Context`, `Prefer`, Realm objects или Firestore DTO в shared API.
+- [x] Использовать один контракт для progression, не создавать универсальный repository.
+- [x] Ручная проверка прогресса, сертификатов и restore на Android подтверждена пользователем.
 
 ### Acceptance criteria
 

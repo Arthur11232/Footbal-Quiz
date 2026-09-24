@@ -6,7 +6,7 @@
 - **Название:** Football Quiz
 - **Версия:** 2.2.0 (`versionCode 58`) release candidate.
 - **Основной стек:** Kotlin, Android SDK (`compileSdk 36`, `targetSdk 36`), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines, Koin.
-- **KMP-подготовка:** На ветке `codex/multiplatform-foundation` подключён `:shared` (Kotlin `2.4.20`) с Android и iOS Arm64 targets. `ProgressionStageId` и progression-модели уже перенесены и проверены пользователем. Расчёт завершения 16 этапов теперь выполняется общим `ProgressionRules`, Android-репозиторий отвечает за чтение и сохранение дат. Пройдены 12 общих тестов на Android JVM и iOS simulator, а также 5 Android unit-тестов; этот второй шаг ожидает ручной проверки перед коммитом. План: `docs/task_kmp_shared_ios_foundation_ru.md`.
+- **KMP-подготовка:** На ветке `codex/multiplatform-foundation` подключён `:shared` (Kotlin `2.4.20`) с Android и iOS Arm64 targets. Модели, правила завершения 16 этапов и контракт `ProgressionDataSource`/`ProgressionService` проверены на Android; `AndroidProgressionDataSource` сохраняет прежние локальные ключи и cloud restore path. Следующий этап: iOS SwiftUI shell. План: `docs/task_kmp_shared_ios_foundation_ru.md`.
 - **Цель:** Переход от legacy feature-driven UI-логики к сильной MVVM-архитектуре с `ViewModel`, `Repository`, `UseCase`, DI через Koin и заделом на будущую многомодульность.
 
 ---
