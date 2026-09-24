@@ -11,6 +11,7 @@ class SharedDiagnosticsTest {
         val diagnostics = SharedDiagnostics()
 
         assertEquals("FootballQuizShared", diagnostics.moduleName)
+        assertEquals(1, diagnostics.apiVersion)
         assertEquals(16, diagnostics.stageCount)
         assertTrue(diagnostics.stageIdsText.contains("top5_france_complete"))
         assertFalse(diagnostics.isFranceComplete(39))

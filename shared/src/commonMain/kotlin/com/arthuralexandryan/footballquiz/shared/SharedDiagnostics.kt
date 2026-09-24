@@ -6,6 +6,7 @@ import com.arthuralexandryan.footballquiz.domain.progression.StageProgress
 
 class SharedDiagnostics {
     val moduleName: String = SharedBuildInfo.name
+    val apiVersion: Int = 1
     val stageCount: Int = ProgressionStageId.entries.size
     val stageIdsText: String = ProgressionStageId.entries.joinToString("\n") { it.value }
 

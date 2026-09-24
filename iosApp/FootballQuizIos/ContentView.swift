@@ -42,6 +42,20 @@ struct ContentView: View {
                         .foregroundStyle(Palette.forest)
                         .background(Palette.lime, in: RoundedRectangle(cornerRadius: 18))
                     }
+
+                    NavigationLink {
+                        ProgressStagesView()
+                    } label: {
+                        HStack {
+                            Text("Preview stage progress")
+                            Spacer()
+                            Image(systemName: "list.bullet.rectangle")
+                        }
+                        .font(.system(size: 17, weight: .bold, design: .rounded))
+                        .padding(20)
+                        .foregroundStyle(.white)
+                        .overlay(RoundedRectangle(cornerRadius: 18).stroke(.white.opacity(0.5)))
+                    }
                 }
                 .padding(28)
             }
@@ -63,6 +77,10 @@ private struct SharedDiagnosticsView: View {
 
                 Text(diagnostics.moduleName)
                     .font(.system(size: 32, weight: .bold, design: .rounded))
+
+                Text("Shared API v\(diagnostics.apiVersion)")
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundStyle(Palette.forest)
 
                 Text("Demo data only. No account or cloud progress is loaded here.")
                     .foregroundStyle(.secondary)

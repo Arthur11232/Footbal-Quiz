@@ -8,6 +8,7 @@ This is the first SwiftUI integration checkpoint, not the full iOS game. It uses
 2. Select the `FootballQuizIos` scheme and an Apple Silicon iPhone Simulator.
 3. Press Run. The build phase runs `:shared:embedAndSignAppleFrameworkForXcode` automatically.
 4. Open **Inspect shared engine**. France 39/40 must be **In progress** and 40/40 must be **Complete**. The screen also lists all 16 shared stage IDs.
+5. Open **Preview stage progress**. France should show **Achieved**, Germany **Complete**, and Italy **To play**. The remaining stages are also **To play**. This is demo data only; no certificate can be issued from this screen.
 
 The current KMP targets are `iosArm64` and `iosSimulatorArm64`; an Intel (`x86_64`) Simulator is not configured. The project excludes that simulator architecture. Xcode 27.0 and iOS Simulator 26.5 were used for the initial build and launch check.
 

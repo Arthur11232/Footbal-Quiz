@@ -4,8 +4,9 @@ import androidx.annotation.StringRes
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.data.repository.ProfileProgressSnapshot
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionSnapshot
+import com.arthuralexandryan.footballquiz.domain.progression.ProgressionReadModelMapper
 import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageId
-import com.arthuralexandryan.footballquiz.domain.progression.ProgressionStageStatus
+import com.arthuralexandryan.footballquiz.domain.progression.StagePresentationState
 
 data class CompletedStageUiModel(
     @param:StringRes val titleResId: Int,
@@ -25,14 +26,14 @@ object ProgressionUiModelMapper {
         snapshot: ProgressionSnapshot,
         profile: ProfileProgressSnapshot
     ): List<CompletedStageUiModel> {
-        return snapshot.stages
-            .filter { it.isAchieved && it.achievedAtMillis != null }
+        return ProgressionReadModelMapper.map(snapshot)
+            .filter { it.state == StagePresentationState.ACHIEVED && it.achievedAtMillis != null }
             .sortedByDescending { it.achievedAtMillis }
             .mapNotNull { status ->
                 status.achievedAtMillis?.let { achievedAt ->
                     CompletedStageUiModel(
                         titleResId = titleResIdFor(status.stageId),
-                        progressText = progressText(status, profile),
+                        progressText = progressText(status.stageId, profile),
                         achievedAtMillis = achievedAt
                     )
                 }
@@ -60,8 +61,8 @@ object ProgressionUiModelMapper {
         )
     }
 
-    private fun progressText(status: ProgressionStageStatus, profile: ProfileProgressSnapshot): String {
-        val (answered, total) = progressNumbers(status.stageId, profile)
+    private fun progressText(stageId: ProgressionStageId, profile: ProfileProgressSnapshot): String {
+        val (answered, total) = progressNumbers(stageId, profile)
         return "$answered/$total"
     }
 

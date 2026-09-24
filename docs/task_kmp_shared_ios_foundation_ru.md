@@ -1,6 +1,6 @@
 # Task: KMP Shared + iOS Foundation
 
-Статус: Phase 5 с общим контрактом хранения прогресса проверена пользователем; далее iOS SwiftUI shell.
+Статус: Phase 5, Phase 6 и Phase 7 проверены пользователем; далее планирование следующего iOS checkpoint.
 
 Дата: 2026-09-22.
 
@@ -275,18 +275,20 @@ SwiftUI / Android UI
 
 ### Задачи
 
-- [ ] Создать отдельный Xcode project/app target `FootballQuizIos`.
-- [ ] Установить уникальный bundle identifier.
-- [ ] Подключить KMP framework.
-- [ ] Создать минимальную SwiftUI navigation structure.
-- [ ] Добавить первый экран диагностики shared слоя:
+- [x] Создать отдельный Xcode project/app target `FootballQuizIos`.
+- [x] Установить уникальный bundle identifier.
+- [x] Подключить KMP framework.
+- [x] Создать минимальную SwiftUI navigation structure.
+- [x] Добавить первый экран диагностики shared слоя:
   - версия shared module;
   - список stage definitions;
   - тестовый progress snapshot;
   - вычисленный completion result.
-- [ ] Не подключать Firebase Auth на этом шаге.
-- [ ] Проверить запуск на iOS Simulator.
-- [ ] Зафиксировать команды сборки и требования к Xcode.
+- [x] Не подключать Firebase Auth на этом шаге.
+- [x] Проверить запуск на iOS Simulator.
+- [x] Зафиксировать команды сборки и требования к Xcode в `iosApp/README.md`.
+
+Ручная проверка пользователем подтверждена 2026-09-24; коммит Phase 6: `81e5ad2`.
 
 ### Acceptance criteria
 
@@ -313,12 +315,14 @@ SwiftUI / Android UI
 
 ### Задачи
 
-- [ ] Создать shared presentation/read model без Android resources.
-- [ ] На Android оставить существующий Profile UI, используя shared result через adapter.
-- [ ] На iOS создать SwiftUI Progress screen.
-- [ ] Добавить preview/demo data для iOS до подключения реального storage.
-- [ ] Проверить одинаковый порядок и status stage IDs на Android/iOS.
-- [ ] Не выдавать настоящие cloud certificates из demo data.
+- [x] Создать shared presentation/read model без Android resources.
+- [x] На Android оставить существующий Profile UI, используя shared result через adapter.
+- [x] На iOS создать SwiftUI Progress screen.
+- [x] Добавить preview/demo data для iOS до подключения реального storage.
+- [x] Проверить одинаковый порядок и status stage IDs на Android/iOS автоматическими тестами.
+- [x] Не выдавать настоящие cloud certificates из demo data.
+
+Ручная проверка SwiftUI экрана пользователем подтверждена 2026-09-24: France = Achieved, Germany = Complete, Italy = To play.
 
 ### Acceptance criteria
 

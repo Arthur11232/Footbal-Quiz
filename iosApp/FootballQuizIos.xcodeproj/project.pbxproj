@@ -8,12 +8,14 @@
 /* Begin PBXBuildFile section */
 		A10000000000000000000001 /* FootballQuizIosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* FootballQuizIosApp.swift */; };
 		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* ContentView.swift */; };
+		A10000000000000000000003 /* ProgressStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* ProgressStagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A10000000000000000000010 /* FootballQuizIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballQuizIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000000000000000000011 /* FootballQuizIosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballQuizIosApp.swift; sourceTree = "<group>"; };
 		A10000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10000000000000000000013 /* ProgressStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -22,7 +24,7 @@
 
 /* Begin PBXGroup section */
 		A10000000000000000000030 = {isa = PBXGroup; children = (A10000000000000000000031 /* FootballQuizIos */, A10000000000000000000032 /* Products */); sourceTree = "<group>"; };
-		A10000000000000000000031 /* FootballQuizIos */ = {isa = PBXGroup; children = (A10000000000000000000011 /* FootballQuizIosApp.swift */, A10000000000000000000012 /* ContentView.swift */); path = FootballQuizIos; sourceTree = "<group>"; };
+		A10000000000000000000031 /* FootballQuizIos */ = {isa = PBXGroup; children = (A10000000000000000000011 /* FootballQuizIosApp.swift */, A10000000000000000000012 /* ContentView.swift */, A10000000000000000000013 /* ProgressStagesView.swift */); path = FootballQuizIos; sourceTree = "<group>"; };
 		A10000000000000000000032 /* Products */ = {isa = PBXGroup; children = (A10000000000000000000010 /* FootballQuizIos.app */); name = Products; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
@@ -39,7 +41,7 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A10000000000000000000021 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* FootballQuizIosApp.swift in Sources */, A10000000000000000000002 /* ContentView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+		A10000000000000000000021 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* FootballQuizIosApp.swift in Sources */, A10000000000000000000002 /* ContentView.swift in Sources */, A10000000000000000000003 /* ProgressStagesView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
