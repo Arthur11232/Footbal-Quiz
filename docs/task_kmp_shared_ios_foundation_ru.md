@@ -1,6 +1,6 @@
 # Task: KMP Shared + iOS Foundation
 
-Статус: Kotlin `2.4.20` проверен на Android; ожидается ручная проверка приложения перед `:shared`.
+Статус: минимальный `:shared` и перенос progression-моделей проверены пользователем; следующий шаг — общие правила завершения этапов.
 
 Дата: 2026-09-22.
 
@@ -181,6 +181,8 @@ SwiftUI / Android UI
 
 Первым переносим progress/stage completion. Не начинаем с Auth, Firebase sync или questions download.
 
+Первый checkpoint: `ProgressionStageId` и progression-модели перенесены в `:shared/commonMain` без изменения package или содержимого. Android-компиляция, существующие unit-тесты и iOS simulator framework собираются. Общие тесты скомпилированы для iOS, но не запущены. Ручная проверка прогресса и сертификатов подтверждена пользователем 2026-09-24.
+
 ### Кандидаты для переноса
 
 - `CompletedStageRecord`;
@@ -192,8 +194,8 @@ SwiftUI / Android UI
 
 ### Задачи
 
-- [ ] Отделить domain-модели от Android annotations/resources.
-- [ ] Перенести выбранные модели в `shared/src/commonMain`.
+- [x] Отделить `ProgressionStageId` и progression-модели от Android-модуля без изменения их API.
+- [ ] Перенести остальные выбранные модели в `shared/src/commonMain` после проверки первого checkpoint.
 - [ ] Перенести чистые stage completion rules в shared use case/service.
 - [ ] Не переносить Realm entities и Firebase DTO.
 - [ ] Добавить mapping Android data models -> shared domain, если он нужен временно.
