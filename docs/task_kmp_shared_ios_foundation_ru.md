@@ -1,6 +1,6 @@
 # Task: KMP Shared + iOS Foundation
 
-Статус: минимальный `:shared` и перенос progression-моделей проверены пользователем; следующий шаг — общие правила завершения этапов.
+Статус: progression-модели и общие правила завершения этапов проверены; далее shared-контракты хранения прогресса.
 
 Дата: 2026-09-22.
 
@@ -183,6 +183,8 @@ SwiftUI / Android UI
 
 Первый checkpoint: `ProgressionStageId` и progression-модели перенесены в `:shared/commonMain` без изменения package или содержимого. Android-компиляция, существующие unit-тесты и iOS simulator framework собираются. Общие тесты скомпилированы для iOS, но не запущены. Ручная проверка прогресса и сертификатов подтверждена пользователем 2026-09-24.
 
+Второй checkpoint: `ProgressionRules` рассчитывает 16 этапов из `StageProgress` и ранее выданных достижений. Android преобразует `ProfileProgressSnapshot` в общий формат, передаёт существующие даты и сохраняет только вновь завершённые этапы. Сохранены прежний порядок этапов, пороги `answered >= total`, режим чтения без выдачи наград и дата первого завершения после сброса. Отдельно сохранено прежнее поведение при явно нулевом пороге (`0 >= 0`); отсутствующий этап не завершается. Для ручной проверки требуется пройти этап, повторить его после сброса и сверить сертификаты в профиле.
+
 ### Кандидаты для переноса
 
 - `CompletedStageRecord`;
@@ -195,12 +197,13 @@ SwiftUI / Android UI
 ### Задачи
 
 - [x] Отделить `ProgressionStageId` и progression-модели от Android-модуля без изменения их API.
-- [ ] Перенести остальные выбранные модели в `shared/src/commonMain` после проверки первого checkpoint.
-- [ ] Перенести чистые stage completion rules в shared use case/service.
-- [ ] Не переносить Realm entities и Firebase DTO.
-- [ ] Добавить mapping Android data models -> shared domain, если он нужен временно.
-- [ ] Переключить Android progression calculation на shared rule.
-- [ ] Сохранить текущие stage IDs и production semantics.
+- [x] Добавить общий `StageProgress` в `shared/src/commonMain`.
+- [x] Перенести чистые stage completion rules в `ProgressionRules`.
+- [x] Оставить Realm entities и Firebase DTO в Android-модуле.
+- [x] Добавить mapping `ProfileProgressSnapshot -> StageProgress`.
+- [x] Переключить Android progression calculation на общие правила.
+- [x] Сохранить текущие stage IDs и production semantics; проверить пороги и даты тестами.
+- [x] Ручная проверка выдачи и отображения достижений после переноса правил подтверждена пользователем 2026-09-24.
 
 ### Acceptance criteria
 
@@ -216,21 +219,21 @@ SwiftUI / Android UI
 
 ### Обязательные сценарии
 
-- [ ] незавершённый этап не становится completed;
-- [ ] ровно достигнутый threshold завершает этап;
-- [ ] результат выше threshold остаётся completed;
-- [ ] один stage не выдаётся повторно;
-- [ ] завершение France/Germany/Italy/Spain/England считается одинаково;
-- [ ] aggregate stages `TOP5`, `UEFA`, `World`, `Versus`, `All App` считаются по текущим production rules;
-- [ ] неизвестный stage ID обрабатывается безопасно;
-- [ ] пустой progress snapshot не создаёт achievement.
+- [x] незавершённый этап не становится completed;
+- [x] ровно достигнутый threshold завершает этап;
+- [x] результат выше threshold остаётся completed;
+- [x] один stage не выдаётся повторно;
+- [x] завершение France/Germany/Italy/Spain/England считается одинаково;
+- [x] aggregate stages `TOP5`, `UEFA`, `World`, `Versus`, `All App` считаются по текущим production rules;
+- [x] неизвестный stage ID обрабатывается безопасно;
+- [x] пустой progress snapshot не создаёт achievement.
 
 ### Задачи
 
-- [ ] Создать tests в `shared/src/commonTest`.
-- [ ] Добавить regression fixtures для текущих 16 stages.
-- [ ] Выполнить shared tests на JVM.
-- [ ] Выполнить iOS simulator test target, если toolchain позволяет.
+- [x] Создать tests в `shared/src/commonTest`.
+- [x] Добавить regression fixtures для текущих 16 stages и Android mapping test.
+- [x] Выполнить 12 shared tests на Android JVM (`testAndroidHostTest`); 5 app unit tests также прошли.
+- [x] Выполнить `:shared:iosSimulatorArm64Test` — 12 тестов прошли на установленном Xcode 27.
 
 ### Acceptance criteria
 

@@ -8,6 +8,7 @@ kotlin {
         namespace = "com.arthuralexandryan.footballquiz.shared"
         compileSdk = 36
         minSdk = 23
+        withHostTestBuilder {}
 
         compilerOptions {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
