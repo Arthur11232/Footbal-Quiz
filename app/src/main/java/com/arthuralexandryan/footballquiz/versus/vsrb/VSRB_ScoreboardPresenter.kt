@@ -1,6 +1,7 @@
 package com.arthuralexandryan.footballquiz.versus.vsrb
 
 import android.content.Context
+import com.arthuralexandryan.footballquiz.BuildConfig
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.versus.AllCallBacks
@@ -22,7 +23,7 @@ internal class VSRB_ScoreboardPresenter(
 
     fun getTotalScores(): Int = gameCatalogRepository.getTotalScore()
     fun getTotalScoresText(): String = gameCatalogRepository.getTotalScoreText()
-    fun isReadyToPlay(): Boolean = getTotalScores() >= Constant.FOR_RB_SCORE
+    fun isReadyToPlay(): Boolean = BuildConfig.UNLOCK_ALL_STAGES || getTotalScores() >= Constant.FOR_RB_SCORE
 
     private fun getScoreboardScores() {
         val scoreboard = gameCatalogRepository.getRealBarcaScoreboard()

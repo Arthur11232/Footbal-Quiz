@@ -2,6 +2,7 @@ package com.arthuralexandryan.footballquiz.versus.vsrm
 
 import android.content.Context
 import android.util.Log
+import com.arthuralexandryan.footballquiz.BuildConfig
 import com.arthuralexandryan.footballquiz.constants.Constant
 import com.arthuralexandryan.footballquiz.data.repository.GameCatalogRepository
 import com.arthuralexandryan.footballquiz.versus.AllCallBacks
@@ -31,7 +32,7 @@ class VSRM_ScoreboardPresenter(val context: Context, private val checkScoreboard
     }
 
     fun isReadyToPlay(): Boolean {
-        return getTotalScores() >= Constant.FOR_RM_SCORE
+        return BuildConfig.UNLOCK_ALL_STAGES || getTotalScores() >= Constant.FOR_RM_SCORE
     }
     private fun getScoreboardScores() {
         val scoreboard = gameCatalogRepository.getRonMessiScoreboard()

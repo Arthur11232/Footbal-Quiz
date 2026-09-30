@@ -40,13 +40,29 @@ android {
             dimension "environment"
             versionNameSuffix "-dev"
             buildConfigField "String", "APP_ENV", "\"dev\""
+            buildConfigField "boolean", "UNLOCK_ALL_STAGES", "false"
+            manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
+        }
+
+        qa {
+            dimension "environment"
+            versionNameSuffix "-qa"
+            buildConfigField "String", "APP_ENV", "\"qa\""
+            buildConfigField "boolean", "UNLOCK_ALL_STAGES", "true"
             manifestPlaceholders = [crashlyticsCollectionEnabled: "false"]
         }
 
         prod {
             dimension "environment"
             buildConfigField "String", "APP_ENV", "\"prod\""
+            buildConfigField "boolean", "UNLOCK_ALL_STAGES", "false"
             manifestPlaceholders = [crashlyticsCollectionEnabled: "true"]
+        }
+    }
+
+    variantFilter { variant ->
+        if (variant.flavors.any { it.name == "qa" } && variant.buildType.name == "release") {
+            variant.ignore = true
         }
     }
     

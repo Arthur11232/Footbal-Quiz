@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.arthuralexandryan.footballquiz.BuildConfig
 import com.arthuralexandryan.footballquiz.R
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_UEFA_SCORE
 import com.arthuralexandryan.footballquiz.constants.Constant.FOR_WORLD_SCORE
@@ -62,7 +63,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
 
     private fun updateScores() {
         score = gameCatalogRepository.getTop5Answered()
-        if (score < FOR_UEFA_SCORE) {
+        if (!BuildConfig.UNLOCK_ALL_STAGES && score < FOR_UEFA_SCORE) {
             binding.txtScoreUefa.text = getString(R.string.text_score_uefa, "$score")
             binding.txtScoreUefa.visibility = View.VISIBLE
         } else {
@@ -70,7 +71,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
         }
 
         val totalScore = gameCatalogRepository.getTop5AndUefaAnswered()
-        if (totalScore < FOR_WORLD_SCORE) {
+        if (!BuildConfig.UNLOCK_ALL_STAGES && totalScore < FOR_WORLD_SCORE) {
             binding.txtScoreWorld.text = getString(R.string.text_score_world, "$totalScore")
             binding.txtScoreWorld.visibility = View.VISIBLE
         } else {
@@ -91,7 +92,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
                 args.putString("gameScore", "top5")
             }
             R.id.btnUefa -> {
-                if (currentScore >= FOR_UEFA_SCORE) {
+                if (BuildConfig.UNLOCK_ALL_STAGES || currentScore >= FOR_UEFA_SCORE) {
                     args.putString("gameScore", "uefa")
                 } else {
                     isOpen = false
@@ -99,7 +100,7 @@ class ChooseGameFragment : Fragment(), View.OnClickListener {
                 }
             }
             R.id.btnChamp -> {
-                if (totalScore >= FOR_WORLD_SCORE) {
+                if (BuildConfig.UNLOCK_ALL_STAGES || totalScore >= FOR_WORLD_SCORE) {
                     args.putString("gameScore", "world")
                 } else {
                     isOpen = false
