@@ -1,7 +1,8 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
+	classes = {
+	};
 	objectVersion = 60;
 	objects = {
 
@@ -9,6 +10,12 @@
 		A10000000000000000000001 /* FootballQuizIosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000011 /* FootballQuizIosApp.swift */; };
 		A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000012 /* ContentView.swift */; };
 		A10000000000000000000003 /* ProgressStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000013 /* ProgressStagesView.swift */; };
+		A10000000000000000000004 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000014 /* GoogleService-Info.plist */; };
+		A10000000000000000000005 /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000015 /* AuthSession.swift */; };
+		A10000000000000000000006 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000083 /* FirebaseAuth */; };
+		A10000000000000000000007 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000084 /* FirebaseCore */; };
+		A10000000000000000000008 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000085 /* GoogleSignIn */; };
+		A10000000000000000000009 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A10000000000000000000086 /* GoogleSignInSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,45 +23,376 @@
 		A10000000000000000000011 /* FootballQuizIosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballQuizIosApp.swift; sourceTree = "<group>"; };
 		A10000000000000000000012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A10000000000000000000013 /* ProgressStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStagesView.swift; sourceTree = "<group>"; };
+		A10000000000000000000014 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A10000000000000000000015 /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
+		A10000000000000000000016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A10000000000000000000020 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		A10000000000000000000020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000006 /* FirebaseAuth in Frameworks */,
+				A10000000000000000000007 /* FirebaseCore in Frameworks */,
+				A10000000000000000000008 /* GoogleSignIn in Frameworks */,
+				A10000000000000000000009 /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A10000000000000000000030 = {isa = PBXGroup; children = (A10000000000000000000031 /* FootballQuizIos */, A10000000000000000000032 /* Products */); sourceTree = "<group>"; };
-		A10000000000000000000031 /* FootballQuizIos */ = {isa = PBXGroup; children = (A10000000000000000000011 /* FootballQuizIosApp.swift */, A10000000000000000000012 /* ContentView.swift */, A10000000000000000000013 /* ProgressStagesView.swift */); path = FootballQuizIos; sourceTree = "<group>"; };
-		A10000000000000000000032 /* Products */ = {isa = PBXGroup; children = (A10000000000000000000010 /* FootballQuizIos.app */); name = Products; sourceTree = "<group>"; };
+		A10000000000000000000030 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000031 /* FootballQuizIos */,
+				A10000000000000000000032 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000031 /* FootballQuizIos */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000011 /* FootballQuizIosApp.swift */,
+				A10000000000000000000012 /* ContentView.swift */,
+				A10000000000000000000013 /* ProgressStagesView.swift */,
+				A10000000000000000000014 /* GoogleService-Info.plist */,
+				A10000000000000000000015 /* AuthSession.swift */,
+				A10000000000000000000016 /* Info.plist */,
+			);
+			path = FootballQuizIos;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000032 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000010 /* FootballQuizIos.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A10000000000000000000040 /* FootballQuizIos */ = {isa = PBXNativeTarget; buildConfigurationList = A10000000000000000000051 /* Build configuration list for PBXNativeTarget "FootballQuizIos" */; buildPhases = (A10000000000000000000022 /* Build Kotlin framework */, A10000000000000000000021 /* Sources */, A10000000000000000000020 /* Frameworks */); buildRules = (); dependencies = (); name = FootballQuizIos; productName = FootballQuizIos; productReference = A10000000000000000000010 /* FootballQuizIos.app */; productType = "com.apple.product-type.application"; };
+		A10000000000000000000040 /* FootballQuizIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000051 /* Build configuration list for PBXNativeTarget "FootballQuizIos" */;
+			buildPhases = (
+				A10000000000000000000022 /* Build Kotlin framework */,
+				A10000000000000000000021 /* Sources */,
+				A10000000000000000000020 /* Frameworks */,
+				A10000000000000000000023 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootballQuizIos;
+			packageProductDependencies = (
+				A10000000000000000000083 /* FirebaseAuth */,
+				A10000000000000000000084 /* FirebaseCore */,
+				A10000000000000000000085 /* GoogleSignIn */,
+				A10000000000000000000086 /* GoogleSignInSwift */,
+			);
+			productName = FootballQuizIos;
+			productReference = A10000000000000000000010 /* FootballQuizIos.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A10000000000000000000050 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {A10000000000000000000040 = {CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = A10000000000000000000052 /* Build configuration list for PBXProject "FootballQuizIos" */; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = A10000000000000000000030; productRefGroup = A10000000000000000000032 /* Products */; projectDirPath = ""; projectRoot = ""; targets = (A10000000000000000000040 /* FootballQuizIos */); };
+		A10000000000000000000050 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					A10000000000000000000040 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000052 /* Build configuration list for PBXProject "FootballQuizIos" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000030;
+			packageReferences = (
+				A10000000000000000000081 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A10000000000000000000082 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = A10000000000000000000032 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000040 /* FootballQuizIos */,
+			);
+		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000023 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000004 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
-		A10000000000000000000022 /* Build Kotlin framework */ = {isa = PBXShellScriptBuildPhase; alwaysOutOfDate = 1; buildActionMask = 2147483647; files = (); inputPaths = (); name = "Build Kotlin framework"; outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "if [ \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" = \"YES\" ]; then\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n"; };
+		A10000000000000000000022 /* Build Kotlin framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Kotlin framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" = \"YES\" ]; then\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A10000000000000000000021 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* FootballQuizIosApp.swift in Sources */, A10000000000000000000002 /* ContentView.swift in Sources */, A10000000000000000000003 /* ProgressStagesView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+		A10000000000000000000021 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* FootballQuizIosApp.swift in Sources */,
+				A10000000000000000000002 /* ContentView.swift in Sources */,
+				A10000000000000000000003 /* ProgressStagesView.swift in Sources */,
+				A10000000000000000000005 /* AuthSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A10000000000000000000060 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_PREVIEWS = YES; ENABLE_USER_SCRIPT_SANDBOXING = NO; "EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64; FRAMEWORK_SEARCH_PATHS = ("$(inherited)", "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)"); GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Football Quiz"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 0.1.0; OTHER_LDFLAGS = ("$(inherited)", "-framework", FootballQuizShared); PRODUCT_BUNDLE_IDENTIFIER = com.arthuralexandryan.footballquiz.ios; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
-		A10000000000000000000061 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; ENABLE_USER_SCRIPT_SANDBOXING = NO; "EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64; FRAMEWORK_SEARCH_PATHS = ("$(inherited)", "$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)"); GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "Football Quiz"; INFOPLIST_KEY_UILaunchScreen_Generation = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; MARKETING_VERSION = 0.1.0; OTHER_LDFLAGS = ("$(inherited)", "-framework", FootballQuizShared); PRODUCT_BUNDLE_IDENTIFIER = com.arthuralexandryan.footballquiz.ios; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
-		A10000000000000000000062 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; }; name = Debug; };
-		A10000000000000000000063 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; }; name = Release; };
+		A10000000000000000000060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9H2AL25SGC;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballQuizIos/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Quiz";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					FootballQuizShared,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthuralexandryan.footballquiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000000000000000000061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9H2AL25SGC;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballQuizIos/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Quiz";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-framework",
+					FootballQuizShared,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthuralexandryan.footballquiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A10000000000000000000062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+			};
+			name = Debug;
+		};
+		A10000000000000000000063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A10000000000000000000051 /* Build configuration list for PBXNativeTarget "FootballQuizIos" */ = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000060 /* Debug */, A10000000000000000000061 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
-		A10000000000000000000052 /* Build configuration list for PBXProject "FootballQuizIos" */ = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000062 /* Debug */, A10000000000000000000063 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+		A10000000000000000000051 /* Build configuration list for PBXNativeTarget "FootballQuizIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000060 /* Debug */,
+				A10000000000000000000061 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A10000000000000000000052 /* Build configuration list for PBXProject "FootballQuizIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000062 /* Debug */,
+				A10000000000000000000063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A10000000000000000000081 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.19.2;
+			};
+		};
+		A10000000000000000000082 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A10000000000000000000083 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000000000000000000081 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A10000000000000000000084 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000000000000000000081 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		A10000000000000000000085 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000000000000000000082 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		A10000000000000000000086 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A10000000000000000000082 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A10000000000000000000050 /* Project object */;
 }

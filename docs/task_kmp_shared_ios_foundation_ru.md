@@ -338,6 +338,8 @@ SwiftUI / Android UI
 
 После успешного Phase 7 отдельно спланировать mobile sync phase:
 
+Детальный черновик отдельной задачи: `docs/task_kmp_ios_mobile_sync_ru.md`.
+
 1. Firebase Auth для iOS или временный authenticated test flow.
 2. Общая identity model `AuthenticatedUser` в shared.
 3. Platform auth adapters для Android/iOS.

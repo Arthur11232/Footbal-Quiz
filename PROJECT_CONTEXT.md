@@ -4,9 +4,13 @@
 
 ## 📌 Обзор проекта
 - **Название:** Football Quiz
-- **Версия:** 2.2.0 (`versionCode 58`) release candidate.
+- **Версия:** 2.2.0 (`versionCode 58`) в production; незакоммиченные QA/iOS изменения не являются новым release.
 - **Основной стек:** Kotlin, Android SDK (`compileSdk 36`, `targetSdk 36`), Single Activity Architecture (SAA), Jetpack Navigation Component, Firebase (Firestore, Auth, Analytics), Realm DB, Coroutines, Koin.
-- **KMP-подготовка:** На ветке `codex/multiplatform-foundation` подключён `:shared` (Kotlin `2.4.20`) с Android и iOS Arm64 targets. Модели, правила завершения 16 этапов и контракт `ProgressionDataSource`/`ProgressionService` проверены на Android; `AndroidProgressionDataSource` сохраняет прежние локальные ключи и cloud restore path. Первый SwiftUI shell и read-only экран прогресса Phase 7 проверены пользователем на iOS Simulator. План: `docs/task_kmp_shared_ios_foundation_ru.md`.
+- **KMP-подготовка:** На ветке `codex/multiplatform-foundation` подключён `:shared` (Kotlin `2.4.20`) с Android и iOS Arm64 targets. Модели, правила завершения 16 этапов и контракт `ProgressionDataSource`/`ProgressionService` проверены на Android; `AndroidProgressionDataSource` сохраняет прежние локальные ключи и cloud restore path. SwiftUI shell и read-only экран прогресса проверены пользователем. Foundation-план: `docs/task_kmp_shared_ios_foundation_ru.md`; активная iOS-задача: `docs/task_kmp_ios_mobile_sync_ru.md`.
+- **iOS Firebase/Auth:** Отдельное Apple app зарегистрировано в Firebase-проекте `footbal-quiz-1f62a` с bundle ID `com.arthuralexandryan.footballquiz`. Локальный `iosApp/FootballQuizIos/GoogleService-Info.plist` включён в Xcode Resources и исключён из Git. Firebase Auth `12.19.2` и Google Sign-In `9.2.0` подключены через SPM; URL scheme настроен. Вход Google подтверждён на реальном iPhone; повторный запуск, выход и совпадение UID с Android ещё ожидают проверки. Общая модель `AuthenticatedUser` и чистый resolver четырёх sync-решений вынесены в `:shared`, проверены на Android/iOS; iOS Firestore sync отсутствует.
+- **QA capture flavor:** `qaDebug` снимает пороги UEFA, World Cup и двух Versus только для записи/теста; `dev/prod` не меняют правила, `qaRelease` отключён. QA использует тот же application ID/Firebase и не ставится рядом с обычной сборкой. Ручная проверка QA на устройстве ещё открыта. Задача: `docs/task_qa_unlocked_categories_ru.md`.
+- **Versus test answers:** Актуальные английские вопросы и ответы из post-update Firestore backup: `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`, по 71 вопросу. Это справочники для ручного теста, не новые игровые данные.
+- **Next iOS gate:** После проверки сохранения сессии, sign-out и совпадения UID Android/iOS можно обсуждать Checkpoint 3 (read-only cloud). До этого не подключать iOS Firestore write/restore и не использовать demo progress как пользовательский.
 - **Цель:** Переход от legacy feature-driven UI-логики к сильной MVVM-архитектуре с `ViewModel`, `Repository`, `UseCase`, DI через Koin и заделом на будущую многомодульность.
 
 ---

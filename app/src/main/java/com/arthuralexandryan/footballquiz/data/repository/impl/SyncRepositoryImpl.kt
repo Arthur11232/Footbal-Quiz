@@ -12,6 +12,10 @@ import com.arthuralexandryan.footballquiz.utils.Constants
 import com.arthuralexandryan.footballquiz.utils.Prefer
 import com.arthuralexandryan.footballquiz.domain.auth.AuthenticatedUser
 import com.arthuralexandryan.footballquiz.domain.certificate.IssuedCertificateRecord
+import com.arthuralexandryan.footballquiz.domain.sync.CloudProgressSummary
+import com.arthuralexandryan.footballquiz.domain.sync.LocalProgressSummary
+import com.arthuralexandryan.footballquiz.domain.sync.SyncDecisionResolver
+import com.arthuralexandryan.footballquiz.domain.sync.SyncDecision as SharedSyncDecision
 import com.arthuralexandryan.footballquiz.models.toCompletedStageRecords
 import com.arthuralexandryan.footballquiz.models.toProgressionStateDTO
 import com.arthuralexandryan.footballquiz.models.UserStatsDTO
@@ -30,32 +34,32 @@ class SyncRepositoryImpl(
         val cloudStats = userStatsRepository.downloadStats(user.id)
         val remoteCertificates = certificateRepository.downloadIssuedCertificates(user.id)
         mergeRemoteCertificatesIntoLocal(remoteCertificates)
-        val localHasProgress = localSnapshot.hasProgress
-
-        if (cloudStats == null || !cloudStats.hasProgress()) {
-            return if (localHasProgress) {
-                SyncRepository.SyncDecision.UploadLocal(user)
-            } else {
-                SyncRepository.SyncDecision.None
+        val decision = SyncDecisionResolver.resolve(
+            local = LocalProgressSummary(
+                hasProgress = localSnapshot.hasProgress,
+                totalScore = localSnapshot.totalScore,
+                lastSynced = getLocalSyncTimestamp(user.id)
+            ),
+            cloud = cloudStats?.let {
+                CloudProgressSummary(
+                    hasProgress = it.hasProgress(),
+                    totalScore = it.gameState.total,
+                    lastSynced = it.gameState.lastSynced
+                )
             }
-        }
+        )
 
-        if (!localHasProgress) {
-            return SyncRepository.SyncDecision.AutoRestoreCloud(
+        return when (decision) {
+            SharedSyncDecision.NONE -> SyncRepository.SyncDecision.None
+            SharedSyncDecision.UPLOAD_LOCAL -> SyncRepository.SyncDecision.UploadLocal(user)
+            SharedSyncDecision.AUTO_RESTORE_CLOUD -> SyncRepository.SyncDecision.AutoRestoreCloud(
                 userId = user.id,
-                cloudStats = cloudStats
+                cloudStats = requireNotNull(cloudStats)
             )
-        }
-
-        val cloudScore = cloudStats.gameState.total
-        val localScore = localSnapshot.totalScore
-        val cloudLastSynced = cloudStats.gameState.lastSynced
-        val localLastSynced = getLocalSyncTimestamp(user.id)
-
-        return if (cloudScore == localScore && cloudLastSynced == localLastSynced) {
-            SyncRepository.SyncDecision.None
-        } else {
-            SyncRepository.SyncDecision.PromptConflict(user.id, cloudStats)
+            SharedSyncDecision.PROMPT_CONFLICT -> SyncRepository.SyncDecision.PromptConflict(
+                userId = user.id,
+                cloudStats = requireNotNull(cloudStats)
+            )
         }
     }
 

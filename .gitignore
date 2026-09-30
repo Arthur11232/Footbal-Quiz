@@ -45,7 +45,7 @@ captures/
 
 # Xcode and macOS local files
 .DS_Store
-**/*.xcodeproj/project.xcworkspace/
+**/*.xcodeproj/project.xcworkspace/xcuserdata/
 **/*.xcodeproj/xcuserdata/
 *.xcuserstate
 
@@ -58,6 +58,7 @@ captures/
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json
+GoogleService-Info.plist
 service-account*.json
 firebase-admin*.json
 *-service-account.json
