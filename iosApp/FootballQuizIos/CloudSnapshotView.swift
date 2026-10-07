@@ -6,6 +6,7 @@ struct CloudSnapshotView: View {
   @StateObject private var reader = CloudProgressReader()
   @StateObject private var localStore = LocalProgressStore()
   @StateObject private var certificateStore = LocalCertificateStore()
+  @StateObject private var backupStore = CloudBackupStore()
   @State private var statusMessage: String?
   @State private var forceConflictReview = false
 
@@ -36,12 +37,14 @@ struct CloudSnapshotView: View {
     .task(id: userId) {
       localStore.load(userId: userId)
       certificateStore.load(userId: userId)
+      backupStore.loadLatest(userId: userId)
       await reloadCloud()
     }
     .onDisappear {
       reader.clear()
       localStore.clearInMemory()
       certificateStore.clearInMemory()
+      backupStore.clearInMemory()
     }
   }
 
@@ -66,6 +69,7 @@ struct CloudSnapshotView: View {
         isFromCache: certificatesFromCache
       )
       localCertificatesCard
+      backupCard(stats: payload, certificates: certificates)
       retryButton
     }
   }
@@ -276,6 +280,51 @@ struct CloudSnapshotView: View {
           .foregroundStyle(forest)
       }
       if let errorMessage = certificateStore.errorMessage {
+        Text(errorMessage)
+          .font(.footnote)
+          .foregroundStyle(.red)
+      }
+    }
+    .cardStyle()
+  }
+
+  private func backupCard(
+    stats: CloudUserStatsPayload?,
+    certificates: [CloudCertificate]
+  ) -> some View {
+    let matchesCurrent = backupStore.matchesCurrent(stats: stats, certificates: certificates)
+    return VStack(alignment: .leading, spacing: 12) {
+      Label("Pre-write backup", systemImage: "externaldrive.badge.checkmark")
+        .font(.headline)
+
+      Text(
+        matchesCurrent
+          ? "The current cloud document and certificate set have a matching protected backup."
+          : "Create a fresh backup before any future cloud write. Upload remains disabled."
+      )
+      .foregroundStyle(.secondary)
+
+      Button("Create current cloud backup") {
+        _ = backupStore.create(userId: userId, stats: stats, certificates: certificates)
+      }
+      .buttonStyle(.borderedProminent)
+      .tint(forest)
+
+      if let latest = backupStore.latest {
+        Text("Latest: \(Self.dateText(milliseconds: latest.createdAtMillis))")
+          .font(.footnote)
+          .foregroundStyle(.secondary)
+        ShareLink(item: latest.url) {
+          Label("Export backup file", systemImage: "square.and.arrow.up")
+        }
+        .font(.headline)
+      }
+
+      Text("The exported file contains account progress and certificate details. Store it privately.")
+        .font(.footnote)
+        .foregroundStyle(.orange)
+
+      if let errorMessage = backupStore.errorMessage {
         Text(errorMessage)
           .font(.footnote)
           .foregroundStyle(.red)

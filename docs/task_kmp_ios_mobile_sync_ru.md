@@ -82,7 +82,7 @@
 2. [x] Конфликт отображается как постоянный action card с явными Restore Cloud и Keep Local. После Keep Local он скрывается только для той же fingerprint-пары и возвращается при изменении любого snapshot.
 3. [x] Keep Local не загружает локальный прогресс и не восстанавливает cloud. UI явно сообщает, что cloud upload заблокирован.
 4. [~] Локальный restore выполняется atomic write и считается успешным только после сохранения файла. Cloud upload ещё не реализован.
-5. До первого write сделать backup тестового пользователя и прогнать сценарии на тестовом UID, затем отдельно согласовать production rollout.
+5. [~] Добавлен pre-write backup текущего user document и certificates: файл защищён локально, содержит hashed UID и fingerprints, доступен для ручного export. Нужно создать и сохранить backup на тестовом iPhone до включения первого write, затем отдельно согласовать production rollout.
 
 Гейт: одинаковые пользовательские решения на Android/iOS, без потери прогресса при cancel, сбоях сети и повторном входе.
 
@@ -101,7 +101,7 @@
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
 2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. До Checkpoint 4 подтвердить тестовый UID, Firestore rules и сделать backup. Никаких silent restore/upload.
+3. На iPhone создать и экспортировать **Pre-write backup** текущего snapshot. После этого подтвердить тестовый UID и Firestore rules перед включением первого write. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка

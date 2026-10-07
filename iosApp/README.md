@@ -20,6 +20,7 @@ Both Apple apps currently belong to Firebase project `footbal-quiz-1f62a`. This 
 7. While signed in, open **Read cloud snapshot**. It reads `users/{uid}` and `users/{uid}/certificates/{stageId}`, shows whether the result came from the server or offline cache, and handles missing data, permission errors, unknown top-level fields, and account changes.
 8. The sync card uses the shared KMP decision matrix. Cloud progress can be copied atomically into UID-scoped, file-protected local iOS storage. **Keep Local** never uploads or overwrites cloud data and is remembered only for the exact local/cloud snapshot pair. `UPLOAD_LOCAL` remains locked until a test-user backup and a safe write environment are confirmed.
 9. Valid cloud certificates are merged independently into UID-scoped local storage. A logout, empty cloud response, or progress restore does not erase them. The screen displays cloud and saved-local lists separately; it never issues or uploads certificates.
+10. Before any future write, use **Create current cloud backup** and then **Export backup file**. The protected JSON envelope includes the current user document, certificates, project/bundle metadata, a hashed UID, and fingerprints used to detect stale backups. Treat the exported file as private account data.
 
 The current KMP targets are `iosArm64` and `iosSimulatorArm64`; an Intel (`x86_64`) Simulator is not configured. The project excludes that simulator architecture. Xcode 27.0 and iOS Simulator 26.5 were used for the initial build and launch check.
 
