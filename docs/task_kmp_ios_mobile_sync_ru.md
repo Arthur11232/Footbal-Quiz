@@ -1,6 +1,6 @@
 # Task: iOS Auth and Mobile Sync
 
-Статус: Checkpoint 0 и код Checkpoint 1 собраны; вход Google на реальном iPhone подтверждён. Код Checkpoint 2 реализован и прошёл Android/iOS common tests и Xcode Simulator build. Проверка повторного запуска, sign-out и совпадения UID с Android ещё ожидается. iOS cloud sync не реализован.
+Статус: Checkpoint 0–3 собраны и ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05. Checkpoint 4 начат: добавлены защищённое локальное iOS-хранилище, общая KMP-матрица решений, локальный restore и безопасный Keep Local. Cloud upload по-прежнему заблокирован до backup тестового UID и выбора безопасной write-среды. Debug использует отдельный iOS dev app client, но тот же Firebase project/data backend.
 
 ## Цель
 
@@ -39,7 +39,7 @@
 
 ## Checkpoint 1: Только iOS Auth
 
-Реализовано локально: `AuthSession` создаёт Firebase credential из Google ID/access tokens, слушает Firebase session, обрабатывает sign-out и отмену account picker; SwiftUI экран показывает UID. Успешный вход подтверждён на реальном iPhone. Не подтверждены вручную: повторный запуск, выход и совпадение UID с Android. Firestore read/write отсутствуют.
+Реализовано локально: `AuthSession` создаёт Firebase credential из Google ID/access tokens, слушает Firebase session, обрабатывает sign-out и отмену account picker; SwiftUI экран показывает UID. Успешный вход, повторный запуск с сохранённой сессией, выход и повторный вход с тем же iOS UID подтверждены на реальном iPhone. Совпадение UID с Android ещё не подтверждено.
 
 1. Создать iOS `AuthAdapter` поверх официальных Google Sign-In и Firebase Auth SDK.
 2. Добавить вход, восстановление текущей сессии и выход. На экране показывать UID/email для диагностики, но не токены.
@@ -65,37 +65,43 @@
 
 ## Checkpoint 3: iOS local/cloud read-only
 
-1. Согласовать стратегию iOS local persistence до реализации restore. Варианты: платформенное локальное хранилище за общим интерфейсом или общий KMP storage; не использовать demo progress как реальное состояние.
-2. Создать read-only Firestore adapter для user stats и certificates с путями и схемой, совместимыми с Android.
-3. Отобразить cloud snapshot/сертификаты отдельно от demo screen; не выполнять автоматический restore или upload.
-4. Проверить offline, permission denied, пустой документ, устаревшую/неизвестную схему и смену аккаунта. Логи не должны содержать ID token или персональные данные.
+Реализовано локально 2026-10-01: Debug/dev (`com.arthuralexandryan.footballquiz.dev`) и Release/prod (`com.arthuralexandryan.footballquiz`) выбирают отдельные игнорируемые plist и URL scheme; обе Simulator-сборки прошли. Оба клиента пока используют один Firebase project `footbal-quiz-1f62a`, поэтому dev bundle не означает отдельную базу. SwiftUI экран читает `users/{uid}` и `users/{uid}/certificates/{stageId}`, показывает server/cache source и на этом checkpoint не содержит restore/upload/write операций. Ручная проверка пользователем подтверждена 2026-10-05.
+
+1. [x] Выбрано направление: платформенное локальное хранилище за общим интерфейсом; реализацию отложить до появления реального iOS game state. Demo progress не использовать как реальное состояние.
+2. [x] Создан read-only Firestore adapter для user stats и certificates с путями и схемой, совместимыми с Android.
+3. [x] Cloud snapshot/сертификаты отображаются отдельно от demo screen; автоматический restore и upload отсутствуют.
+4. [~] Код различает cache/server, permission denied, offline/unavailable, пустой документ, неизвестные top-level поля и смену аккаунта; основной ручной сценарий подтверждён пользователем. Отдельные fault-сценарии ещё стоит повторить перед write rollout. ID token и персональные данные в логи не пишутся.
 
 Гейт: пользователь видит только прочитанные данные своего UID; production данные не изменены.
 
 ## Checkpoint 4: Safe restore/upload
 
-1. Реализовать ту же матрицу решений: пустой local + cloud progress = auto restore; local progress + пустой cloud = upload только после согласованного условия; оба с прогрессом = явный выбор.
-2. Диалог конфликта не закрывается нажатием вне окна/Back; явные Restore и Keep Local. После Keep Local повторно не показывать его для того же UID/состояния без нового основания.
-3. Keep Local не должен неявно загружать локальный прогресс поверх cloud и не должен неявно восстанавливать cloud. Описать, когда пользователь сможет позже вручную синхронизироваться.
-4. Выполнять restore/upload атомарно насколько позволяет схема; не отмечать успешную синхронизацию до подтверждения cloud write.
+Промежуточный статус: iOS сохраняет реальный cloud snapshot отдельно для каждого UID в Application Support с atomic write и file protection; demo progress не используется. Решение вычисляет общий `SyncDecisionResolver` из KMP. Restore изменяет только локальный iOS snapshot. Keep Local ничего не загружает и запоминается по fingerprints конкретных local/cloud snapshot-ов, поэтому новый конфликт снова будет показан. Локальный restore проверен пользователем 2026-10-07. Cloud write API в iOS-коде отсутствует; сценарий `UPLOAD_LOCAL` отображается как заблокированный до backup и безопасной среды.
+
+1. [~] Та же матрица решений подключена: empty local + cloud предлагает безопасный local restore; local + empty cloud определяет `UPLOAD_LOCAL`, но upload пока заблокирован; конфликт требует явного выбора.
+2. [x] Конфликт отображается как постоянный action card с явными Restore Cloud и Keep Local. После Keep Local он скрывается только для той же fingerprint-пары и возвращается при изменении любого snapshot.
+3. [x] Keep Local не загружает локальный прогресс и не восстанавливает cloud. UI явно сообщает, что cloud upload заблокирован.
+4. [~] Локальный restore выполняется atomic write и считается успешным только после сохранения файла. Cloud upload ещё не реализован.
 5. До первого write сделать backup тестового пользователя и прогнать сценарии на тестовом UID, затем отдельно согласовать production rollout.
 
 Гейт: одинаковые пользовательские решения на Android/iOS, без потери прогресса при cancel, сбоях сети и повторном входе.
 
 ## Checkpoint 5: Сертификаты
 
-1. Читать и объединять сертификаты независимо от выбора прогресса, с дедупликацией по стабильному stage/certificate ID.
-2. Сохранять ранее выданный сертификат при logout/login, reset и restore; не выдавать его повторно из-за demo или cloud merge.
-3. Проверить Firestore rules для `users/{uid}/certificates/{stageId}` и обработку `PERMISSION_DENIED` без ложного сообщения об успехе.
-4. На iOS пока показывать read-only список/preview; email delivery и генерацию нового сертификата не смешивать с этой задачей.
+Промежуточный статус 2026-10-07: cloud certificates автоматически объединяются с защищённым локальным хранилищем отдельно для каждого UID. На один stage сохраняется один стабильный сертификат; при несовпадении ID сохраняется самый ранний выданный сертификат и показывается предупреждение. Пустой cloud response, logout, повторный login и progress restore не удаляют локальные сертификаты. Debug/dev и Release/prod Simulator builds прошли; ручная проверка на iPhone ожидается.
+
+1. [x] Сертификаты читаются и объединяются независимо от выбора progress, с дедупликацией по stage/certificate ID.
+2. [~] Ранее выданные сертификаты сохраняются по UID и не удаляются при logout/login или restore; нужна ручная проверка повторного запуска на iPhone.
+3. [~] `PERMISSION_DENIED` обрабатывается без ложного успеха; Firestore rules отдельно не изменялись и требуют проверки перед write rollout.
+4. [x] iOS показывает отдельные cloud/local read-only списки; email delivery и генерация новых сертификатов отсутствуют.
 
 Гейт: один и тот же UID видит одинаковый набор уже выданных сертификатов на Android и iOS.
 
 ## Следующий шаг для нового чата
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
-2. На iPhone проверить: вход сохраняется после закрытия и повторного запуска, sign-out работает, повторный sign-in успешен, UID при одном Google-аккаунте совпадает с Android. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. До следующего cloud-шагa подтвердить тестовый UID и Firestore rules. Checkpoint 3 начинать только с read-only user stats/certificates и выбранной стратегией локального iOS-хранилища. Никаких silent restore/upload.
+2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
+3. До Checkpoint 4 подтвердить тестовый UID, Firestore rules и сделать backup. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка
@@ -110,6 +116,6 @@
 
 ## Открытые решения перед кодом
 
-1. Используем существующий Firebase-проект с тестовым UID или создаём отдельный dev-проект для iOS sync испытаний? Рекомендация: отдельная безопасная dev-среда; если её сейчас нет, начать с Auth/read-only в текущем проекте и не делать write.
-2. Выбор iOS local persistence перед Checkpoint 3: платформенное хранилище за интерфейсом или общий KMP storage. Решить после инвентаризации реального game state/DTO, не сейчас.
+1. iOS dev app client создан в существующем Firebase-проекте. Для Checkpoint 4 всё ещё нужно решить: отдельный dev Firebase project или строго тестовый UID + backup в текущем проекте. До решения writes запрещены.
+2. Для будущего реального iOS game state выбрано платформенное local storage за общим интерфейсом; конкретную технологию выбрать при реализации game state, не подменяя его demo progress.
 3. Отдельный branch создавать после согласования этой задачи; merge foundation пока отложен.

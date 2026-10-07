@@ -60,6 +60,22 @@ struct ContentView: View {
               .foregroundStyle(.white)
               .overlay(RoundedRectangle(cornerRadius: 18).stroke(.white.opacity(0.5)))
             }
+            if let account = authSession.account {
+              NavigationLink {
+                CloudSnapshotView(userId: account.id)
+              } label: {
+                HStack {
+                  Text("Read cloud snapshot")
+                  Spacer()
+                  Image(systemName: "cloud")
+                }
+                .font(.system(size: 17, weight: .bold, design: .rounded))
+                .padding(20)
+                .foregroundStyle(.white)
+                .overlay(RoundedRectangle(cornerRadius: 18).stroke(Palette.lime.opacity(0.8)))
+              }
+              .id(account.id)
+            }
             authCard
           }
           .padding(28)
@@ -108,7 +124,7 @@ struct ContentView: View {
           .font(.footnote)
           .foregroundStyle(Color(red: 1, green: 0.73, blue: 0.63))
       }
-      Text("Authentication only. No progress is read or uploaded.")
+      Text("Cloud writes are disabled. The sync screen can restore a cloud snapshot only into protected local iOS storage.")
         .font(.footnote)
         .foregroundStyle(.white.opacity(0.6))
     }

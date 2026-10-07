@@ -1,8 +1,13 @@
 # Football Quiz iOS shell
 
-This is an early SwiftUI integration checkpoint, not the full iOS game. It supports Google/Firebase sign-in and uses shared progression/sync decision models, but stage progress is still demo data. It does not read or write cloud progress.
+This is an early SwiftUI integration checkpoint, not the full iOS game. It supports Google/Firebase sign-in, uses the shared progression/sync decision models, and has a separate Firestore snapshot screen. Stage progress remains demo data and is never treated as local account state. A signed-in user can copy a compatible cloud snapshot into protected local iOS storage; no iOS code uploads or otherwise writes Firestore data yet.
 
-The iOS Firebase app is registered in project `footbal-quiz-1f62a` with bundle ID `com.arthuralexandryan.footballquiz`. Place its `GoogleService-Info.plist` in `iosApp/FootballQuizIos/` before building. Xcode includes it in the app resources; the file is intentionally ignored by Git, like Android's `google-services.json`. Firebase Auth and Google Sign-In are installed with Swift Package Manager; `Package.resolved` is versioned for reproducible builds. Cloud progress and Firestore are not connected.
+The iOS target has two local Firebase configurations:
+
+- Debug: `com.arthuralexandryan.footballquiz.dev`, displayed as **Football Quiz Dev**, reads `iosApp/Firebase/Dev/GoogleService-Info.plist`.
+- Release: `com.arthuralexandryan.footballquiz`, displayed as **Football Quiz**, reads `iosApp/Firebase/Prod/GoogleService-Info.plist`.
+
+Both Apple apps currently belong to Firebase project `footbal-quiz-1f62a`. This separates bundle/client configuration, but it does **not** isolate Auth users or Firestore data into a different backend. The build phase copies only the selected plist into the app and fails when its `BUNDLE_ID` does not match the target. Both files are intentionally ignored by Git, like Android's `google-services.json`. Firebase Auth, Firestore, and Google Sign-In are installed with Swift Package Manager; `Package.resolved` is versioned for reproducible builds.
 
 ## Run in Simulator
 
@@ -11,11 +16,14 @@ The iOS Firebase app is registered in project `footbal-quiz-1f62a` with bundle I
 3. Press Run. The build phase runs `:shared:embedAndSignAppleFrameworkForXcode` automatically.
 4. Open **Inspect shared engine**. France 39/40 must be **In progress** and 40/40 must be **Complete**. The screen also lists all 16 shared stage IDs.
 5. Open **Preview stage progress**. France should show **Achieved**, Germany **Complete**, and Italy **To play**. The remaining stages are also **To play**. This is demo data only; no certificate can be issued from this screen.
-6. In **Account checkpoint**, tap **Sign in** and choose the same Google account used on Android. Compare the displayed Firebase UID with that account's UID in Firebase Console > Authentication > Users. Restart the app to check session persistence, then tap **Sign out**. Cancelling the account picker should not show an error. This is an auth-only test; it must not read or write progress.
+6. In **Account checkpoint**, tap **Sign in** and choose the same Google account used on Android. Compare the displayed Firebase UID with that account's UID in Firebase Console > Authentication > Users. Restart the app to check session persistence, then tap **Sign out**. Cancelling the account picker should not show an error.
+7. While signed in, open **Read cloud snapshot**. It reads `users/{uid}` and `users/{uid}/certificates/{stageId}`, shows whether the result came from the server or offline cache, and handles missing data, permission errors, unknown top-level fields, and account changes.
+8. The sync card uses the shared KMP decision matrix. Cloud progress can be copied atomically into UID-scoped, file-protected local iOS storage. **Keep Local** never uploads or overwrites cloud data and is remembered only for the exact local/cloud snapshot pair. `UPLOAD_LOCAL` remains locked until a test-user backup and a safe write environment are confirmed.
+9. Valid cloud certificates are merged independently into UID-scoped local storage. A logout, empty cloud response, or progress restore does not erase them. The screen displays cloud and saved-local lists separately; it never issues or uploads certificates.
 
 The current KMP targets are `iosArm64` and `iosSimulatorArm64`; an Intel (`x86_64`) Simulator is not configured. The project excludes that simulator architecture. Xcode 27.0 and iOS Simulator 26.5 were used for the initial build and launch check.
 
-The Firebase configuration was verified in a Debug Simulator build on 2026-09-25: `GoogleService-Info.plist` is present in the `.app` bundle and its bundle ID matches the built app. Google sign-in succeeded on a real iPhone. Session persistence, sign-out, and matching the Firebase UID with Android still need manual verification. If sign-in fails, confirm the Google provider is enabled in Firebase Authentication and the URL scheme in `Info.plist` matches `REVERSED_CLIENT_ID` from the local Firebase plist. The header safe-area adjustment made on 2026-09-30 also needs a visual recheck on iPhone.
+The Debug/dev and Release/prod configurations were both verified in Simulator builds on 2026-10-01: each `.app` contains only its selected Firebase plist, and bundle ID plus URL scheme match that configuration. Google sign-in, session persistence, sign-out, and repeat sign-in with the same iOS UID were confirmed on a real iPhone. Matching the UID with Android still needs manual verification. Firestore reads also need a real-account/device check. If sign-in fails, confirm the Google provider is enabled in Firebase Authentication and the selected local plist matches the build configuration. The header safe-area adjustment made on 2026-09-30 also needs a visual recheck on iPhone.
 
 CLI build (from the repository root):
 
@@ -26,4 +34,4 @@ xcodebuild -project iosApp/FootballQuizIos.xcodeproj \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
-For a physical iPhone, select a development team in Xcode and use an iOS device target. App Store distribution and cloud sync are not configured yet.
+For a physical iPhone, select a development team in Xcode and use an iOS device target. Debug installs beside production because it has a distinct bundle ID. App Store distribution and cloud writes are not configured yet.
