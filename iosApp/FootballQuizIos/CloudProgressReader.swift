@@ -34,6 +34,7 @@ final class CloudProgressReader: ObservableObject {
     case loading
     case loaded(
       stats: CloudUserStatsPayload?,
+      statsFromCache: Bool,
       certificates: [CloudCertificate],
       invalidCertificateCount: Int,
       certificatesFromCache: Bool
@@ -68,6 +69,7 @@ final class CloudProgressReader: ObservableObject {
       let parsedCertificates = Self.parseCertificates(certificatesResult)
       state = .loaded(
         stats: Self.parseStats(statsResult),
+        statsFromCache: statsResult.metadata.isFromCache,
         certificates: parsedCertificates.items,
         invalidCertificateCount: parsedCertificates.invalidCount,
         certificatesFromCache: certificatesResult.metadata.isFromCache

@@ -1,6 +1,6 @@
 # Task: iOS Auth and Mobile Sync
 
-Статус: Checkpoint 0–3 собраны и ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05. Checkpoint 4 начат: добавлены защищённое локальное iOS-хранилище, общая KMP-матрица решений, локальный restore и безопасный Keep Local. Cloud upload по-прежнему заблокирован до backup тестового UID и выбора безопасной write-среды. Debug использует отдельный iOS dev app client, но тот же Firebase project/data backend.
+Статус: Checkpoint 0–3 собраны и ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05. В Checkpoint 4 добавлены защищённое локальное iOS-хранилище, общая KMP-матрица решений, локальный restore, безопасный Keep Local и pre-write backup. Backup/export и предыдущие local/certificate сценарии подтверждены пользователем 2026-10-07. Первый cloud upload реализован только для Debug/dev и ждёт ручной проверки. Debug использует отдельный iOS dev app client, но тот же Firebase project/data backend.
 
 ## Цель
 
@@ -76,13 +76,13 @@
 
 ## Checkpoint 4: Safe restore/upload
 
-Промежуточный статус: iOS сохраняет реальный cloud snapshot отдельно для каждого UID в Application Support с atomic write и file protection; demo progress не используется. Решение вычисляет общий `SyncDecisionResolver` из KMP. Restore изменяет только локальный iOS snapshot. Keep Local ничего не загружает и запоминается по fingerprints конкретных local/cloud snapshot-ов, поэтому новый конфликт снова будет показан. Локальный restore проверен пользователем 2026-10-07. Cloud write API в iOS-коде отсутствует; сценарий `UPLOAD_LOCAL` отображается как заблокированный до backup и безопасной среды.
+Промежуточный статус: iOS сохраняет реальный cloud snapshot отдельно для каждого UID в Application Support с atomic write и file protection; demo progress не используется. Решение вычисляет общий `SyncDecisionResolver` из KMP. Restore изменяет только локальный iOS snapshot. Keep Local ничего не загружает и запоминается по fingerprints конкретных local/cloud snapshot-ов, поэтому новый конфликт снова будет показан. Локальный restore и backup/export проверены пользователем 2026-10-07. Добавлен первый строго контролируемый stats-only upload: он доступен только в Debug/dev, требует server snapshot и совпадающий backup, повторно сравнивает существование документа и fingerprint внутри Firestore transaction, проверяет текущий Firebase UID и требует отдельного подтверждения пользователя. Certificates этим write-путём не изменяются.
 
-1. [~] Та же матрица решений подключена: empty local + cloud предлагает безопасный local restore; local + empty cloud определяет `UPLOAD_LOCAL`, но upload пока заблокирован; конфликт требует явного выбора.
+1. [~] Та же матрица решений подключена: empty local + cloud предлагает безопасный local restore; local + empty cloud определяет `UPLOAD_LOCAL`; конфликт требует явного выбора. Controlled dev upload реализован и ждёт ручного теста.
 2. [x] Конфликт отображается как постоянный action card с явными Restore Cloud и Keep Local. После Keep Local он скрывается только для той же fingerprint-пары и возвращается при изменении любого snapshot.
 3. [x] Keep Local не загружает локальный прогресс и не восстанавливает cloud. UI явно сообщает, что cloud upload заблокирован.
-4. [~] Локальный restore выполняется atomic write и считается успешным только после сохранения файла. Cloud upload ещё не реализован.
-5. [~] Добавлен pre-write backup текущего user document и certificates: файл защищён локально, содержит hashed UID и fingerprints, доступен для ручного export. Нужно создать и сохранить backup на тестовом iPhone до включения первого write, затем отдельно согласовать production rollout.
+4. [~] Локальный restore выполняется atomic write и считается успешным только после сохранения файла. Первый upload обновляет `lastSynced`, выполняет stats-only transaction и обновляет локальный payload только после подтверждённого cloud commit; нужна ручная проверка на тестовом UID.
+5. [x] Добавлен и вручную проверен pre-write backup текущего user document и certificates: файл защищён локально, содержит hashed UID и fingerprints и доступен для ручного export. После успешного upload создаётся новый post-write backup. Production rollout остаётся отдельным решением.
 
 Гейт: одинаковые пользовательские решения на Android/iOS, без потери прогресса при cancel, сбоях сети и повторном входе.
 
@@ -101,7 +101,7 @@
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
 2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. На iPhone создать и экспортировать **Pre-write backup** текущего snapshot. После этого подтвердить тестовый UID и Firestore rules перед включением первого write. Никаких silent restore/upload.
+3. На iPhone в Debug/dev проверить первый controlled upload на тестовом UID: выполнить server read, создать свежий backup; если local/cloud fingerprints совпадают, использовать безопасную кнопку **Verify matching progress upload** (она меняет только `lastSynced`), иначе — **Upload local progress** только для заранее проверенного local snapshot. Подтвердить alert, затем проверить новый `lastSynced` и совпадение local/cloud summary. Отдельно проверить, что certificates не изменились. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка
@@ -116,6 +116,6 @@
 
 ## Открытые решения перед кодом
 
-1. iOS dev app client создан в существующем Firebase-проекте. Для Checkpoint 4 всё ещё нужно решить: отдельный dev Firebase project или строго тестовый UID + backup в текущем проекте. До решения writes запрещены.
+1. iOS dev app client создан в существующем Firebase-проекте. Для первого Checkpoint 4 write выбран строго контролируемый Debug/dev путь с тестовым UID, обязательным backup и transaction fingerprint check. Отдельный dev Firebase project или production write rollout остаются будущим решением.
 2. Для будущего реального iOS game state выбрано платформенное local storage за общим интерфейсом; конкретную технологию выбрать при реализации game state, не подменяя его demo progress.
 3. Отдельный branch создавать после согласования этой задачи; merge foundation пока отложен.

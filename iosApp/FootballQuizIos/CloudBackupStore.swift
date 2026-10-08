@@ -81,6 +81,7 @@ final class CloudBackupStore: ObservableObject {
 
   func matchesCurrent(stats: CloudUserStatsPayload?, certificates: [CloudCertificate]) -> Bool {
     guard let latest else { return false }
+    if stats != nil, stats?.fingerprint == nil { return false }
     guard latest.cloudFingerprint == stats?.fingerprint else { return false }
     guard let data = try? Self.certificatesData(certificates) else { return false }
     return latest.certificatesFingerprint == Self.fingerprint(data)

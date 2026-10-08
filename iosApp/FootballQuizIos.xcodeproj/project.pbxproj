@@ -21,6 +21,7 @@
 		A1000000000000000000000D /* LocalProgressStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000019 /* LocalProgressStore.swift */; };
 		A1000000000000000000000E /* LocalCertificateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001A /* LocalCertificateStore.swift */; };
 		A1000000000000000000000F /* CloudBackupStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000001B /* CloudBackupStore.swift */; };
+		A100000000000000000000AA /* ControlledCloudWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100000000000000000000AB /* ControlledCloudWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A10000000000000000000019 /* LocalProgressStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProgressStore.swift; sourceTree = "<group>"; };
 		A1000000000000000000001A /* LocalCertificateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCertificateStore.swift; sourceTree = "<group>"; };
 		A1000000000000000000001B /* CloudBackupStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudBackupStore.swift; sourceTree = "<group>"; };
+		A100000000000000000000AB /* ControlledCloudWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlledCloudWriter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				A10000000000000000000019 /* LocalProgressStore.swift */,
 				A1000000000000000000001A /* LocalCertificateStore.swift */,
 				A1000000000000000000001B /* CloudBackupStore.swift */,
+				A100000000000000000000AB /* ControlledCloudWriter.swift */,
 				A10000000000000000000016 /* Info.plist */,
 			);
 			path = FootballQuizIos;
@@ -209,6 +212,7 @@
 				A1000000000000000000000D /* LocalProgressStore.swift in Sources */,
 				A1000000000000000000000E /* LocalCertificateStore.swift in Sources */,
 				A1000000000000000000000F /* CloudBackupStore.swift in Sources */,
+				A100000000000000000000AA /* ControlledCloudWriter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

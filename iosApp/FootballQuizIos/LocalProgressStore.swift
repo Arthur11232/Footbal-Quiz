@@ -4,6 +4,7 @@ import Foundation
 struct LocalProgressRecord {
   let snapshot: CloudProgressSnapshot
   let fingerprint: String
+  let encodedData: Data
 }
 
 @MainActor
@@ -40,7 +41,8 @@ final class LocalProgressStore: ObservableObject {
       try encodedData.write(to: destination, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
       record = LocalProgressRecord(
         snapshot: payload.snapshot,
-        fingerprint: Self.fingerprint(encodedData)
+        fingerprint: Self.fingerprint(encodedData),
+        encodedData: encodedData
       )
       return true
     } catch {
@@ -54,6 +56,29 @@ final class LocalProgressStore: ObservableObject {
     errorMessage = nil
   }
 
+  @discardableResult
+  func replaceAfterConfirmedUpload(userId: String, encodedData: Data) -> Bool {
+    errorMessage = nil
+    do {
+      let object = try JSONSerialization.jsonObject(with: encodedData)
+      guard let dictionary = object as? [String: Any] else {
+        throw StoreError.invalidRoot
+      }
+      let snapshot = try Self.snapshot(from: dictionary)
+      let destination = try recordURL(userId: userId, createDirectory: true)
+      try encodedData.write(to: destination, options: [.atomic, .completeFileProtectionUntilFirstUserAuthentication])
+      record = LocalProgressRecord(
+        snapshot: snapshot,
+        fingerprint: Self.fingerprint(encodedData),
+        encodedData: encodedData
+      )
+      return true
+    } catch {
+      errorMessage = "Cloud upload succeeded, but the updated local snapshot could not be saved: \(error.localizedDescription)"
+      return false
+    }
+  }
+
   private func readRecord(userId: String) throws -> LocalProgressRecord? {
     let url = try recordURL(userId: userId, createDirectory: false)
     guard fileManager.fileExists(atPath: url.path) else { return nil }
@@ -64,7 +89,11 @@ final class LocalProgressStore: ObservableObject {
       throw StoreError.invalidRoot
     }
     let snapshot = try Self.snapshot(from: dictionary)
-    return LocalProgressRecord(snapshot: snapshot, fingerprint: Self.fingerprint(data))
+    return LocalProgressRecord(
+      snapshot: snapshot,
+      fingerprint: Self.fingerprint(data),
+      encodedData: data
+    )
   }
 
   private func recordURL(userId: String, createDirectory: Bool) throws -> URL {

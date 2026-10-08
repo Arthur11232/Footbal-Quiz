@@ -7,8 +7,10 @@ struct CloudSnapshotView: View {
   @StateObject private var localStore = LocalProgressStore()
   @StateObject private var certificateStore = LocalCertificateStore()
   @StateObject private var backupStore = CloudBackupStore()
+  @StateObject private var cloudWriter = ControlledCloudWriter()
   @State private var statusMessage: String?
   @State private var forceConflictReview = false
+  @State private var pendingUpload: PendingCloudUpload?
 
   private let background = Color(red: 0.95, green: 0.96, blue: 0.91)
   private let forest = Color(red: 0.06, green: 0.24, blue: 0.17)
@@ -24,7 +26,7 @@ struct CloudSnapshotView: View {
         Text("Account sync preview")
           .font(.system(size: 34, weight: .bold, design: .rounded))
 
-        Text("This screen compares Android-compatible cloud data with protected local iOS storage. Cloud writes remain disabled.")
+        Text("This screen compares Android-compatible cloud data with protected local iOS storage. Writes require the Debug dev app, a matching backup, and explicit confirmation.")
           .foregroundStyle(.secondary)
 
         content
@@ -45,6 +47,25 @@ struct CloudSnapshotView: View {
       localStore.clearInMemory()
       certificateStore.clearInMemory()
       backupStore.clearInMemory()
+      cloudWriter.reset()
+    }
+    .alert(
+      "Upload local progress to cloud?",
+      isPresented: Binding(
+        get: { pendingUpload != nil },
+        set: { if !$0 { pendingUpload = nil } }
+      )
+    ) {
+      Button("Cancel", role: .cancel) {
+        pendingUpload = nil
+      }
+      Button("Upload", role: .destructive) {
+        guard let request = pendingUpload else { return }
+        pendingUpload = nil
+        Task { await performUpload(request) }
+      }
+    } message: {
+      Text("Only the progress document will be written. The transaction will stop if Firestore changed after the matching backup. Certificates are not modified.")
     }
   }
 
@@ -59,7 +80,13 @@ struct CloudSnapshotView: View {
       localStatsCard
       localCertificatesCard
       retryButton
-    case .loaded(let payload, let certificates, let invalidCertificateCount, let certificatesFromCache):
+    case .loaded(
+      let payload,
+      let statsFromCache,
+      let certificates,
+      let invalidCertificateCount,
+      let certificatesFromCache
+    ):
       statsCard(payload?.snapshot)
       localStatsCard
       syncDecisionCard(payload)
@@ -70,6 +97,12 @@ struct CloudSnapshotView: View {
       )
       localCertificatesCard
       backupCard(stats: payload, certificates: certificates)
+      cloudWriteCard(
+        stats: payload,
+        statsFromCache: statsFromCache,
+        certificates: certificates,
+        certificatesFromCache: certificatesFromCache
+      )
       retryButton
     }
   }
@@ -123,7 +156,7 @@ struct CloudSnapshotView: View {
         .tint(forest)
         .disabled(cloudPayload?.encodedData == nil)
       } else if decision === SyncDecision.uploadLocal {
-        Text("Local progress exists and cloud progress is empty. Upload is locked until a test UID backup and a safe write environment are confirmed.")
+        Text("Local progress exists and cloud progress is empty. Use the controlled dev upload below only after creating a matching backup.")
           .foregroundStyle(.secondary)
       } else if decision === SyncDecision.promptConflict {
         if isKeepLocalChoiceSaved(cloudPayload), !forceConflictReview {
@@ -300,7 +333,7 @@ struct CloudSnapshotView: View {
       Text(
         matchesCurrent
           ? "The current cloud document and certificate set have a matching protected backup."
-          : "Create a fresh backup before any future cloud write. Upload remains disabled."
+          : "Create a fresh backup before a controlled dev upload. Upload stays locked until the backup matches."
       )
       .foregroundStyle(.secondary)
 
@@ -333,6 +366,91 @@ struct CloudSnapshotView: View {
     .cardStyle()
   }
 
+  @ViewBuilder
+  private func cloudWriteCard(
+    stats: CloudUserStatsPayload?,
+    statsFromCache: Bool,
+    certificates: [CloudCertificate],
+    certificatesFromCache: Bool
+  ) -> some View {
+    let decision = resolveDecision(stats)
+    let isExactMatch = localStore.record?.fingerprint == stats?.fingerprint
+      && localStore.record != nil
+      && stats != nil
+    let isRelevant = decision === SyncDecision.uploadLocal
+      || decision === SyncDecision.promptConflict
+      || (decision === SyncDecision.none && isExactMatch)
+
+    if isRelevant {
+      let hasServerSnapshot = !statsFromCache && !certificatesFromCache
+      let hasMatchingBackup = backupStore.matchesCurrent(stats: stats, certificates: certificates)
+      let hasLocalPayload = localStore.record?.encodedData != nil
+      let canUpload = ControlledCloudWriter.isAllowedBuild
+        && hasServerSnapshot
+        && hasMatchingBackup
+        && hasLocalPayload
+
+      VStack(alignment: .leading, spacing: 12) {
+        Label("Controlled dev upload", systemImage: "icloud.and.arrow.up")
+          .font(.headline)
+
+        Text(
+          isExactMatch
+            ? "Local and cloud fingerprints match. This first-write test changes only lastSynced; scores, stages, and certificates stay unchanged."
+            : "Writes only users/{uid} stats. Certificates are never written by this step."
+        )
+          .foregroundStyle(.secondary)
+
+        if !ControlledCloudWriter.isAllowedBuild {
+          Text("Locked: use the Debug dev app.")
+            .font(.footnote)
+            .foregroundStyle(.orange)
+        } else if !hasServerSnapshot {
+          Text("Locked: read the current data from the Firestore server while online.")
+            .font(.footnote)
+            .foregroundStyle(.orange)
+        } else if !hasMatchingBackup {
+          Text("Locked: create a fresh matching backup above.")
+            .font(.footnote)
+            .foregroundStyle(.orange)
+        } else if !hasLocalPayload {
+          Text("Locked: no valid local progress payload is available.")
+            .font(.footnote)
+            .foregroundStyle(.orange)
+        }
+
+        Button(isExactMatch ? "Verify matching progress upload" : "Upload local progress") {
+          guard let localData = localStore.record?.encodedData else { return }
+          pendingUpload = PendingCloudUpload(
+            localData: localData,
+            expectedCloudExists: stats != nil,
+            expectedCloudFingerprint: stats?.fingerprint
+          )
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(.orange)
+        .disabled(!canUpload || cloudWriter.isWriting)
+
+        switch cloudWriter.state {
+        case .failed(let message):
+          Text(message)
+            .font(.footnote)
+            .foregroundStyle(.red)
+        case .writing:
+          ProgressView("Verifying backup and writing transaction…")
+            .font(.footnote)
+        case .succeeded:
+          Text("The server confirmed the progress upload.")
+            .font(.footnote)
+            .foregroundStyle(forest)
+        case .idle:
+          EmptyView()
+        }
+      }
+      .cardStyle()
+    }
+  }
+
   private var retryButton: some View {
     Button {
       Task { await reloadCloud() }
@@ -346,8 +464,40 @@ struct CloudSnapshotView: View {
 
   private func reloadCloud() async {
     await reader.load(userId: userId)
-    if case .loaded(_, let certificates, _, _) = reader.state {
+    if case .loaded(_, _, let certificates, _, _) = reader.state {
       certificateStore.mergeCloud(certificates, userId: userId)
+    }
+  }
+
+  private func performUpload(_ request: PendingCloudUpload) async {
+    guard let result = await cloudWriter.uploadStats(
+      userId: userId,
+      localData: request.localData,
+      expectedCloudExists: request.expectedCloudExists,
+      expectedCloudFingerprint: request.expectedCloudFingerprint
+    ) else {
+      await reloadCloud()
+      return
+    }
+
+    clearKeepLocalChoice()
+    await reloadCloud()
+
+    var localSaved = false
+    var postWriteBackupCreated = false
+    if case .loaded(let stats, _, let certificates, _, _) = reader.state, let stats {
+      localSaved = localStore.restore(userId: userId, payload: stats)
+      postWriteBackupCreated = backupStore.create(userId: userId, stats: stats, certificates: certificates)
+    } else {
+      localSaved = localStore.replaceAfterConfirmedUpload(userId: userId, encodedData: result.encodedData)
+    }
+
+    if localSaved, postWriteBackupCreated {
+      statusMessage = "Local progress was uploaded, read back from Firestore, and saved with a new post-write backup."
+    } else if localSaved {
+      statusMessage = "Firestore confirmed the upload and local progress was saved. Read-back or post-write backup needs another online retry."
+    } else {
+      statusMessage = "Firestore confirmed the upload, but the refreshed local snapshot could not be saved. Read the local storage warning below."
     }
   }
 
@@ -413,6 +563,19 @@ struct CloudSnapshotView: View {
 
   private var keepLocalKey: String {
     "sync_keep_local_\(userId)"
+  }
+}
+
+private struct PendingCloudUpload {
+  let localData: Data
+  let expectedCloudExists: Bool
+  let expectedCloudFingerprint: String?
+}
+
+private extension ControlledCloudWriter {
+  var isWriting: Bool {
+    if case .writing = state { return true }
+    return false
   }
 }
 
