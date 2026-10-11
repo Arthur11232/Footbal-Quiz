@@ -1,6 +1,6 @@
 # Task: iOS Auth and Mobile Sync
 
-Статус: Checkpoint 0–3 собраны и ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05. В Checkpoint 4 добавлены защищённое локальное iOS-хранилище, общая KMP-матрица решений, локальный restore, безопасный Keep Local и pre-write backup. Backup/export и предыдущие local/certificate сценарии подтверждены пользователем 2026-10-07. Первый cloud upload реализован только для Debug/dev и ждёт ручной проверки. Debug использует отдельный iOS dev app client, но тот же Firebase project/data backend.
+Статус: Checkpoint 0–4 собраны. Ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05; local restore, certificates и backup/export подтверждены 2026-10-07; первый controlled stats upload с transaction/read-back/post-write backup подтверждён 2026-10-11. Cloud write остаётся доступен только в Debug/dev. Debug использует отдельный iOS dev app client, но тот же Firebase project/data backend.
 
 ## Цель
 
@@ -76,22 +76,22 @@
 
 ## Checkpoint 4: Safe restore/upload
 
-Промежуточный статус: iOS сохраняет реальный cloud snapshot отдельно для каждого UID в Application Support с atomic write и file protection; demo progress не используется. Решение вычисляет общий `SyncDecisionResolver` из KMP. Restore изменяет только локальный iOS snapshot. Keep Local ничего не загружает и запоминается по fingerprints конкретных local/cloud snapshot-ов, поэтому новый конфликт снова будет показан. Локальный restore и backup/export проверены пользователем 2026-10-07. Добавлен первый строго контролируемый stats-only upload: он доступен только в Debug/dev, требует server snapshot и совпадающий backup, повторно сравнивает существование документа и fingerprint внутри Firestore transaction, проверяет текущий Firebase UID и требует отдельного подтверждения пользователя. Certificates этим write-путём не изменяются.
+Статус Checkpoint 4: закрыт для Debug/dev 2026-10-11. iOS сохраняет реальный cloud snapshot отдельно для каждого UID в Application Support с atomic write и file protection; demo progress не используется. Решение вычисляет общий `SyncDecisionResolver` из KMP. Restore изменяет только локальный iOS snapshot. Keep Local ничего не загружает и запоминается по fingerprints конкретных local/cloud snapshot-ов, поэтому новый конфликт снова будет показан. Локальный restore и backup/export проверены пользователем 2026-10-07. Первый строго контролируемый stats-only upload проверен пользователем 2026-10-11: он доступен только в Debug/dev, требует server snapshot и совпадающий backup, повторно сравнивает существование документа и fingerprint внутри Firestore transaction, проверяет текущий Firebase UID и требует отдельного подтверждения пользователя. После commit выполняются server read-back, сохранение подтверждённого snapshot и post-write backup. Certificates этим write-путём не изменяются.
 
-1. [~] Та же матрица решений подключена: empty local + cloud предлагает безопасный local restore; local + empty cloud определяет `UPLOAD_LOCAL`; конфликт требует явного выбора. Controlled dev upload реализован и ждёт ручного теста.
+1. [x] Та же матрица решений подключена: empty local + cloud предлагает безопасный local restore; local + empty cloud определяет `UPLOAD_LOCAL`; конфликт требует явного выбора. Controlled dev upload вручную проверен.
 2. [x] Конфликт отображается как постоянный action card с явными Restore Cloud и Keep Local. После Keep Local он скрывается только для той же fingerprint-пары и возвращается при изменении любого snapshot.
-3. [x] Keep Local не загружает локальный прогресс и не восстанавливает cloud. UI явно сообщает, что cloud upload заблокирован.
-4. [~] Локальный restore выполняется atomic write и считается успешным только после сохранения файла. Первый upload обновляет `lastSynced`, выполняет stats-only transaction и обновляет локальный payload только после подтверждённого cloud commit; нужна ручная проверка на тестовом UID.
+3. [x] Keep Local не загружает локальный прогресс и не восстанавливает cloud. Controlled upload остаётся отдельным явно подтверждаемым действием.
+4. [x] Локальный restore выполняется atomic write и считается успешным только после сохранения файла. Первый upload обновляет `lastSynced`, выполняет stats-only transaction и обновляет локальный payload только после подтверждённого cloud commit и server read-back; ручная проверка на тестовом UID пройдена.
 5. [x] Добавлен и вручную проверен pre-write backup текущего user document и certificates: файл защищён локально, содержит hashed UID и fingerprints и доступен для ручного export. После успешного upload создаётся новый post-write backup. Production rollout остаётся отдельным решением.
 
 Гейт: одинаковые пользовательские решения на Android/iOS, без потери прогресса при cancel, сбоях сети и повторном входе.
 
 ## Checkpoint 5: Сертификаты
 
-Промежуточный статус 2026-10-07: cloud certificates автоматически объединяются с защищённым локальным хранилищем отдельно для каждого UID. На один stage сохраняется один стабильный сертификат; при несовпадении ID сохраняется самый ранний выданный сертификат и показывается предупреждение. Пустой cloud response, logout, повторный login и progress restore не удаляют локальные сертификаты. Debug/dev и Release/prod Simulator builds прошли; ручная проверка на iPhone ожидается.
+Промежуточный статус 2026-10-11: cloud certificates автоматически объединяются с защищённым локальным хранилищем отдельно для каждого UID. На один stage сохраняется один стабильный сертификат; при несовпадении ID сохраняется самый ранний выданный сертификат и показывается предупреждение. Пустой cloud response, logout, повторный login и progress restore не удаляют локальные сертификаты. Основной сценарий на iPhone подтверждён пользователем; Debug/dev и Release/prod Simulator builds прошли. Отдельная проверка `PERMISSION_DENIED` остаётся перед production rollout.
 
 1. [x] Сертификаты читаются и объединяются независимо от выбора progress, с дедупликацией по stage/certificate ID.
-2. [~] Ранее выданные сертификаты сохраняются по UID и не удаляются при logout/login или restore; нужна ручная проверка повторного запуска на iPhone.
+2. [x] Ранее выданные сертификаты сохраняются по UID и не удаляются при logout/login или restore; повторный запуск на iPhone проверен.
 3. [~] `PERMISSION_DENIED` обрабатывается без ложного успеха; Firestore rules отдельно не изменялись и требуют проверки перед write rollout.
 4. [x] iOS показывает отдельные cloud/local read-only списки; email delivery и генерация новых сертификатов отсутствуют.
 
@@ -101,7 +101,7 @@
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
 2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. На iPhone в Debug/dev проверить первый controlled upload на тестовом UID: выполнить server read, создать свежий backup; если local/cloud fingerprints совпадают, использовать безопасную кнопку **Verify matching progress upload** (она меняет только `lastSynced`), иначе — **Upload local progress** только для заранее проверенного local snapshot. Подтвердить alert, затем проверить новый `lastSynced` и совпадение local/cloud summary. Отдельно проверить, что certificates не изменились. Никаких silent restore/upload.
+3. Controlled Debug/dev upload подтверждён. Следующие проверки перед production rollout: offline/unavailable, `PERMISSION_DENIED`, изменение cloud между backup и transaction, а также явное решение по отдельному dev Firebase project. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка
