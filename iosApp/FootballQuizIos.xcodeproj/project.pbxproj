@@ -238,7 +238,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FootballQuizIos/Info.plist;
-				GOOGLE_REVERSED_CLIENT_ID = "com.googleusercontent.apps.978888880015-n0bur0lu8gm1lj3qri4d7fg5gv5q3v2a";
+				GOOGLE_REVERSED_CLIENT_ID = "com.googleusercontent.apps.1005906366747-fpdgn267ep3m8s4lqu9uur0obi3fb6hp";
 				INFOPLIST_KEY_CFBundleDisplayName = "Football Quiz Dev";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

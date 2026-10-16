@@ -1,5 +1,6 @@
 import CryptoKit
 import FirebaseAuth
+import FirebaseCore
 import FirebaseFirestore
 import Foundation
 
@@ -21,6 +22,7 @@ final class ControlledCloudWriter: ObservableObject {
   nonisolated static var isAllowedBuild: Bool {
     #if DEBUG
       Bundle.main.bundleIdentifier == "com.arthuralexandryan.footballquiz.dev"
+        && FirebaseApp.app()?.options.projectID == "football-quiz-dev"
     #else
       false
     #endif
@@ -145,7 +147,7 @@ final class ControlledCloudWriter: ObservableObject {
     var errorDescription: String? {
       switch self {
       case .devBuildRequired:
-        return "Cloud upload is available only in the Debug dev app."
+        return "Cloud upload is available only in the Debug app connected to the Firebase Dev project."
       case .accountChanged:
         return "The signed-in Firebase account changed. Sign in again before uploading."
       case .unverifiableBackup:

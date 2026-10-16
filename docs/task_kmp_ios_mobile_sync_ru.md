@@ -1,6 +1,6 @@
 # Task: iOS Auth and Mobile Sync
 
-Статус: Checkpoint 0–4 собраны. Ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05; local restore, certificates и backup/export подтверждены 2026-10-07; первый controlled stats upload с transaction/read-back/post-write backup подтверждён 2026-10-11. Cloud write остаётся доступен только в Debug/dev. Debug использует отдельный iOS dev app client, но тот же Firebase project/data backend.
+Статус: Checkpoint 0–4 собраны. Ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05; local restore, certificates и backup/export подтверждены 2026-10-07; первый controlled stats upload с transaction/read-back/post-write backup подтверждён 2026-10-11. 2026-10-17 создан отдельный Firebase Dev project `football-quiz-dev`: Google Sign-In включён, Firestore создан в `nam5`, опубликованы rules с доступом только к `users/{own UID}` и его `certificates`. Cloud write доступен только в Debug/dev и дополнительно проверяет Firebase project ID.
 
 ## Цель
 
@@ -65,7 +65,7 @@
 
 ## Checkpoint 3: iOS local/cloud read-only
 
-Реализовано локально 2026-10-01: Debug/dev (`com.arthuralexandryan.footballquiz.dev`) и Release/prod (`com.arthuralexandryan.footballquiz`) выбирают отдельные игнорируемые plist и URL scheme; обе Simulator-сборки прошли. Оба клиента пока используют один Firebase project `footbal-quiz-1f62a`, поэтому dev bundle не означает отдельную базу. SwiftUI экран читает `users/{uid}` и `users/{uid}/certificates/{stageId}`, показывает server/cache source и на этом checkpoint не содержит restore/upload/write операций. Ручная проверка пользователем подтверждена 2026-10-05.
+Реализовано локально 2026-10-01: Debug/dev (`com.arthuralexandryan.footballquiz.dev`) и Release/prod (`com.arthuralexandryan.footballquiz`) выбирают отдельные игнорируемые plist и URL scheme; обе Simulator-сборки прошли. С 2026-10-17 Debug/dev подключён к отдельному Firebase project `football-quiz-dev`, а Release/prod остаётся на `footbal-quiz-1f62a`. SwiftUI экран читает `users/{uid}` и `users/{uid}/certificates/{stageId}` и показывает server/cache source. Ручная read-only проверка на прежнем backend подтверждена пользователем 2026-10-05; отдельный Dev backend начинается пустым и требует нового device test.
 
 1. [x] Выбрано направление: платформенное локальное хранилище за общим интерфейсом; реализацию отложить до появления реального iOS game state. Demo progress не использовать как реальное состояние.
 2. [x] Создан read-only Firestore adapter для user stats и certificates с путями и схемой, совместимыми с Android.
@@ -101,7 +101,7 @@
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
 2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. Controlled Debug/dev upload подтверждён. Следующие проверки перед production rollout: offline/unavailable, `PERMISSION_DENIED`, изменение cloud между backup и transaction, а также явное решение по отдельному dev Firebase project. Никаких silent restore/upload.
+3. Отдельный Dev Firebase project готов; теперь повторить на реальном iPhone Google sign-in, read-only snapshot и controlled upload. Затем проверить offline/unavailable, `PERMISSION_DENIED` и изменение cloud между backup и transaction. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка
@@ -116,6 +116,6 @@
 
 ## Открытые решения перед кодом
 
-1. iOS dev app client создан в существующем Firebase-проекте. Для первого Checkpoint 4 write выбран строго контролируемый Debug/dev путь с тестовым UID, обязательным backup и transaction fingerprint check. Отдельный dev Firebase project или production write rollout остаются будущим решением.
+1. Отдельный Firebase Dev project `football-quiz-dev` создан и подключён к Debug bundle. Для controlled write сохранены backup, transaction fingerprint check и добавлена проверка project ID. Production write rollout остаётся отдельным будущим решением.
 2. Для будущего реального iOS game state выбрано платформенное local storage за общим интерфейсом; конкретную технологию выбрать при реализации game state, не подменяя его demo progress.
 3. Отдельный branch создавать после согласования этой задачи; merge foundation пока отложен.
