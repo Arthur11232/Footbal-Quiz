@@ -155,8 +155,8 @@
 ## News Local Integration — 2026-10-21
 
 - News развивается только в отдельных Web и Backend repositories; Android app не изменялся.
-- Backend branch: `codex/news-api-foundation`.
-- Web branch: `codex/news-web-integration`.
+- Backend staging branch: `codex/news-api-staging-deploy`.
+- Web staging branch: `codex/news-web-staging-deploy`.
 - MySQL/backend остаётся единственным источником истины для новостей.
 - Локально реализованы public read routes:
   - `/v1/news`;
@@ -183,14 +183,21 @@
 - На `390×844` все пять лиг видны без horizontal overflow; keyboard Tab navigation между league links проверена.
 - На mobile viewport `390×844` список загрузил все `6` карточек без horizontal overflow и без console errors.
 - `World Cup` пока корректно показывает пустое состояние; наличие World Cup material не блокирует технический News staging, но раздел нельзя считать контентно готовым до появления reviewed материала.
-- Для Web и Backend подготовлены отдельные неактивные staging templates и инструкции; active production `.cpanel.yml` не менялись.
+- Для Web и Backend подготовлены отдельные staging-конфигурации; production deployment не выполнялся.
 - `2026-10-21` в cPanel созданы `staging.footballquiz.club` → `/home/ixvldavx/public_html/staging` и `api-staging.footballquiz.club` → `/home/ixvldavx/public_html/api-staging`.
 - Оба DNS `A` указывают на `2.56.204.6`, HTTPS отвечает; до deployment пустые docroots ожидаемо возвращают `403`.
 - `2026-10-21` создан отдельный `/home/ixvldavx/private/football-quiz-api-staging.env`: права `600`, `APP_ENV=staging`, `APP_DEBUG=false`, CORS только для `https://staging.footballquiz.club`; секреты в вывод и Git не попадали.
 - Лимит MySQL тарифа — `1/1`, поэтому владелец подтвердил временное использование production DB для staging. Разрешены только добавочные `news_*` migrations; questions/scoring/legal tables нельзя менять. При расширении тарифа staging нужно вынести в отдельную database/user.
-- Отдельные Git checkouts, server-side News migrations и сам deployment ещё не создавались/не выполнялись.
-- Production DB/API/Web не изменялись. Commit, push и deployment не выполнялись.
-- Перед production нужны финальный human review, отдельное подтверждение commit/deployment и сохранение подхода без сторонних изображений до утверждения media rights workflow.
+- В cPanel зарегистрированы отдельные server checkouts `Football-Quiz-Backend-Staging` и `Football-Quiz-Web-Staging`.
+- Backend staging развернут из commit `ba7a54c`; Web staging после DNS-resolver fix развернут из commit `f225bd9`. Оба commit отправлены в origin.
+- На сервере через Composer установлены production dependencies backend; применены только три добавочные News migrations: foundation, categories и competitions.
+- Реальный каталог импортирован в staging: `6` статей, `18` переводов EN/RU/HY, `7` официальных источников, `6` клубов и `5` соревнований Top 5.
+- Staging smoke пройден: `/health`, News list/detail, clubs, competitions, CORS и фильтры всех пяти лиг отвечают корректно.
+- Web smoke пройден на `/`, `/en/news/`, `/ru/news/`, `/hy/news/`, `/en/news/top-5/` и отдельной статье; landing-кнопка `News` открывает раздел, карточки и источники отображаются.
+- Для hosting DNS self-resolution Web staging использует точечный cURL resolve `api-staging.footballquiz.club:443:2.56.204.6` с сохранённой TLS-проверкой сертификата и hostname; stream transport остаётся fallback.
+- Staging Web отдаёт `X-Robots-Tag: noindex, nofollow, noarchive`.
+- Production API/Web deployment не выполнялся. Существующие questions/scoring/legal данные и таблицы не изменялись; общая production DB затронута только новыми `news_*` таблицами из разрешённых additive migrations.
+- Перед production нужны финальный human review, отдельное подтверждение production deployment и сохранение подхода без сторонних изображений до утверждения media rights workflow.
 
 ## Multiplatform / KMP Context
 
