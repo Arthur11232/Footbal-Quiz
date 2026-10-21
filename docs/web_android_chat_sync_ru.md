@@ -1,6 +1,6 @@
 # Web / Android Chat Sync
 
-Дата обновления: 2026-09-14.
+Дата обновления: 2026-10-21.
 
 Этот файл нужен, чтобы разные чаты по Football Quiz не расходились в контексте. Здесь фиксируем только синхронизационную информацию между Android app, web/landing и backend-направлением.
 
@@ -86,6 +86,54 @@
   - hero question screenshot заменён на более короткий вопрос: `Which club won the German Cup the most?`;
   - добавлен OG image `assets/og/football-quiz-1200x630.png`;
   - добавлены SEO/social preview meta и funnel analytics events без PII.
+- Локально обновлена типографика hero без изменений Android app:
+  - demo `Garlic Sauce` отклонён из-за personal-use-only лицензии и отсутствия RU/HY glyph coverage;
+  - EN/RU hero использует self-hosted `Rubik` weight `900` под SIL OFL 1.1;
+  - HY hero использует self-hosted `Mardoto Black` под Apache 2.0;
+  - font-файлы и лицензии добавлены в Web `assets/fonts/rubik/` и `assets/fonts/mardoto/`;
+  - desktop EN/RU/HY и mobile `390×667` проверены: horizontal overflow отсутствует, primary CTA полностью видна;
+  - typography checkpoint пока не закоммичен, не отправлен и не задеплоен.
+  - эта же языковая схема применяется к главным заголовкам News list/detail: `Rubik 900` для EN/RU и `Mardoto Black` для HY;
+  - армянский News на mobile `390×667` дополнительно проверен: заголовок переносится без одиночной последней буквы, horizontal overflow отсутствует.
+
+## Social / Marketing Accounts
+
+- Отдельный статус-док по соцсетям:
+  - `docs/marketing/social_accounts_setup_status_ru.md`.
+- Facebook Page создана и базово настроена:
+  - page name: `Football Quiz`;
+  - category: `Video game`;
+  - page URL / username: `https://www.facebook.com/footballquiz.club`;
+  - website: `https://footballquiz.club/`;
+  - support email: `support@footballquiz.club`;
+  - profile photo и cover photo загружены.
+- Первый Facebook launch post опубликован и закреплён:
+  - `https://www.facebook.com/footballquiz.club/posts/pfbid026Ak6CdwJeRW8CC2M8GZevdWKHtJw88DnHmm1CVUA7UYxHgWsCtVWrGBomVf6w8yAl`.
+- Первый Facebook gameplay Reel опубликован:
+  - `https://www.facebook.com/reel/1837721100930548/`;
+  - source MP4: `docs/marketing/tiktok_challenge_02_gameplay/football_quiz_gameplay_reel_v2.mp4`;
+  - audience `Public`, ads/boost не включались.
+- Instagram `@footballquiz.club` проверен:
+  - bio обновлён и содержит `footballquiz.club`;
+  - clickable website link добавлен через мобильное приложение Instagram и визуально проверен в web;
+  - link target использует `https://footballquiz.club/` с UTM `utm_source=ig&utm_medium=social&utm_content=link_in_bio`.
+- Первый Instagram intro post опубликован:
+  - `https://www.instagram.com/footballquiz.club/p/DdRYsHMDBT6/`.
+- Первый Instagram gameplay Reel опубликован:
+  - `https://www.instagram.com/footballquiz.club/reel/DdTl2A_OUDJ/`;
+  - source MP4: `docs/marketing/tiktok_challenge_02_gameplay/football_quiz_gameplay_reel_v2.mp4`;
+  - Facebook cross-post/share был выключен.
+- TikTok `@footballquiz11232` проверен:
+  - bio обновлён и подтверждён в mobile app;
+  - web может временно показывать старое `Нет описания`;
+  - подготовлен первый TikTok/Reel challenge asset pack: `docs/marketing/tiktok_challenge_01/`;
+  - финальный MP4 собран через `ffmpeg`: `docs/marketing/tiktok_challenge_01/football_quiz_tiktok_challenge_01.mp4`;
+  - MP4 параметры: `1080 x 1920`, `30fps`, `12.0s`, H.264/AAC;
+  - подготовлен gameplay-based TikTok/Reel MP4 из screen recording: `docs/marketing/tiktok_challenge_02_gameplay/football_quiz_gameplay_reel_v2.mp4`;
+  - gameplay MP4 параметры: `1080 x 1920`, `30fps`, `13.45s`, H.264/AAC;
+  - gameplay MP4 опубликован в TikTok: `https://www.tiktok.com/@footballquiz11232/video/7685494419276958984`;
+  - privacy: `Все`, ads/boost не включались.
+- Любые публичные посты, reels, TikTok videos, LinkedIn posts, boosts/ads или массовые invites делать только после отдельного финального подтверждения.
 
 ## Backend Direction
 
@@ -104,10 +152,52 @@
   - позже admin/content page.
 - API лучше держать отдельно от web repo, когда начнётся полноценная backend-разработка.
 
+## News Local Integration — 2026-10-21
+
+- News развивается только в отдельных Web и Backend repositories; Android app не изменялся.
+- Backend branch: `codex/news-api-foundation`.
+- Web branch: `codex/news-web-integration`.
+- MySQL/backend остаётся единственным источником истины для новостей.
+- Локально реализованы public read routes:
+  - `/v1/news`;
+  - `/v1/news/clubs`;
+  - `/v1/news/competitions`;
+  - `/v1/news/{slug}`.
+- Локально реализованы PHP-rendered Web News list/detail, club filter, sources, cursor pagination и landing preview.
+- Локально реализована category taxonomy `All / Top 5 / UEFA / World Cup`; `Versus` отложен до появления сравнительных материалов.
+- `All` не хранится в БД; статьи связаны с `top-5`, `uefa`, `world-cup` через many-to-many и могут находиться сразу в нескольких разделах.
+- Внутри `Top 5` локально добавлены Premier League, La Liga, Serie A, Bundesliga и Ligue 1; теперь в каждой лиге есть минимум один реальный материал.
+- Article↔competition реализовано many-to-many; каталог содержит материалы Arsenal, Real Madrid, Barcelona, Inter, Bayern и Paris Saint-Germain.
+- Category, competition и club filters комбинируются в API и Web; clean routes поддерживают `/{locale}/news/top-5/{competition}/club/{club}/`.
+- Выбраны public clean URLs: `/en/news/...`, `/ru/news/...`, `/hy/news/...`.
+- На landing локально добавлена видимая кнопка News и блок трёх последних материалов.
+- В hero локально добавлен EN/RU/AM анонс нового News feature со ссылкой на соответствующий новостной раздел.
+- News links используют рабочий PHP query fallback, затем переключаются на clean routes в production; landing CSS/JS получили version query против старого browser cache.
+- Header-кнопка News локально получила контрастный зелёно-золотой стиль; адаптивность проверена на `320`, `360` и `390` px без обрезания и horizontal overflow.
+- Технический local fixture сохранён для тестов, но его три записи переведены в `archived` в `football_quiz_local`.
+- Подготовлен и импортирован только в локальную БД расширенный реальный каталог: `6` статей, `18` переводов EN/RU/HY, `7` официальных источников и `6` клубов.
+- Все шесть материалов перепроверены по официальным сайтам клубов; verification report: Backend `docs/news_source_verification_2026_10_21_ru.md`.
+- Тексты написаны специально для Football Quiz; сторонние изображения не используются, UI показывает собственный FQ placeholder.
+- Fixture технически запрещено импортировать в database без суффикса `_local`.
+- PHPUnit: `48` tests / `108` assertions; catalog dry-run, local API/Web smoke, category + competition + club filters, source links и visual QA пройдены на каталоге из шести материалов.
+- На `390×844` все пять лиг видны без horizontal overflow; keyboard Tab navigation между league links проверена.
+- На mobile viewport `390×844` список загрузил все `6` карточек без horizontal overflow и без console errors.
+- `World Cup` пока корректно показывает пустое состояние; наличие World Cup material не блокирует технический News staging, но раздел нельзя считать контентно готовым до появления reviewed материала.
+- Для Web и Backend подготовлены отдельные неактивные staging templates и инструкции; active production `.cpanel.yml` не менялись.
+- `2026-10-21` в cPanel созданы `staging.footballquiz.club` → `/home/ixvldavx/public_html/staging` и `api-staging.footballquiz.club` → `/home/ixvldavx/public_html/api-staging`.
+- Оба DNS `A` указывают на `2.56.204.6`, HTTPS отвечает; до deployment пустые docroots ожидаемо возвращают `403`.
+- `2026-10-21` создан отдельный `/home/ixvldavx/private/football-quiz-api-staging.env`: права `600`, `APP_ENV=staging`, `APP_DEBUG=false`, CORS только для `https://staging.footballquiz.club`; секреты в вывод и Git не попадали.
+- Лимит MySQL тарифа — `1/1`, поэтому владелец подтвердил временное использование production DB для staging. Разрешены только добавочные `news_*` migrations; questions/scoring/legal tables нельзя менять. При расширении тарифа staging нужно вынести в отдельную database/user.
+- Отдельные Git checkouts, server-side News migrations и сам deployment ещё не создавались/не выполнялись.
+- Production DB/API/Web не изменялись. Commit, push и deployment не выполнялись.
+- Перед production нужны финальный human review, отдельное подтверждение commit/deployment и сохранение подхода без сторонних изображений до утверждения media rights workflow.
+
 ## Multiplatform / KMP Context
 
 - Старая подготовительная ветка: `codex/phase1-backend-kmp-compose-readiness`.
 - Новая рабочая ветка после ES/DE/IT production merge: `codex/multiplatform-foundation`.
+- Актуально на 2026-09-25: `:shared` уже содержит progression model/contracts, Android adapter и тесты; iOS SwiftUI shell и read-only progress screen проверены в Simulator. Подробности: `docs/task_kmp_shared_ios_foundation_ru.md`.
+- Отдельное Apple app зарегистрировано в Firebase `footbal-quiz-1f62a` с bundle ID `com.arthuralexandryan.footballquiz`. Локальный `GoogleService-Info.plist` включён в iOS bundle и игнорируется Git. iOS Auth-код с Google Sign-In/Firebase уже собирается и запускается в Simulator; интерактивный вход и совпадение UID с Android ещё ждут ручного теста. Cloud sync не реализован. План: `docs/task_kmp_ios_mobile_sync_ru.md`.
 - Старую ветку нельзя blindly merge-ить целиком, потому что она создана до ES/DE/IT production rollout и содержит устаревшие question-audit changes.
 - Полезные материалы из старой ветки нужно переносить selectively:
   - backend/KMP/Compose readiness plan;
@@ -118,10 +208,6 @@
 
 ## Следующий безопасный шаг
 
-После production rollout `2.2.0 (58)`:
-
-1. Объединить полезную архитектурную память из `codex/phase1-backend-kmp-compose-readiness` без отката ES/DE/IT файлов.
-2. Зафиксировать Phase 1 plan для `codex/multiplatform-foundation`.
-3. Начать с безопасного Android-side cleanup: repository/domain contracts, auth boundary, sync boundary, content-version boundary.
-4. Не создавать KMP module и не внедрять Compose до завершения boundary cleanup.
-5. Backend/content-version work вести отдельными маленькими задачами.
+1. Подтвердить Google provider в Firebase Console и вручную проверить iOS Google Sign-In, повторный запуск, выход и совпадение UID с Android. Код и конфигурация готовы; cloud write отсутствует.
+2. После ручной приёмки согласовать дальнейшие mobile sync checkpoints по одному.
+3. Backend/content-version и Compose UI вести отдельными маленькими задачами; не смешивать их с первым iOS Auth шагом.
