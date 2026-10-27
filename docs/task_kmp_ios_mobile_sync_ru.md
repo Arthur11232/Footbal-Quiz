@@ -1,6 +1,6 @@
 # Task: iOS Auth and Mobile Sync
 
-Статус: Checkpoint 0–4 собраны. Ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05; local restore, certificates и backup/export подтверждены 2026-10-07; первый controlled stats upload с transaction/read-back/post-write backup подтверждён 2026-10-11. 2026-10-17 создан отдельный Firebase Dev project `football-quiz-dev`: Google Sign-In включён, Firestore создан в `nam5`, опубликованы rules с доступом только к `users/{own UID}` и его `certificates`. Cloud write доступен только в Debug/dev и дополнительно проверяет Firebase project ID.
+Статус: Checkpoint 0–4 собраны. Ручная проверка Checkpoint 3 подтверждена пользователем 2026-10-05; local restore, certificates и backup/export подтверждены 2026-10-07; первый controlled stats upload с transaction/read-back/post-write backup подтверждён 2026-10-11. 2026-10-17 создан отдельный Firebase Dev project `football-quiz-dev`: Google Sign-In включён, Firestore создан в `nam5`, опубликованы rules с доступом только к `users/{own UID}` и его `certificates`. 2026-10-27 пользователь подтвердил device test новой Dev-среды. Cloud write доступен только в Debug/dev и дополнительно проверяет Firebase project ID.
 
 ## Цель
 
@@ -92,7 +92,7 @@
 
 1. [x] Сертификаты читаются и объединяются независимо от выбора progress, с дедупликацией по stage/certificate ID.
 2. [x] Ранее выданные сертификаты сохраняются по UID и не удаляются при logout/login или restore; повторный запуск на iPhone проверен.
-3. [~] `PERMISSION_DENIED` обрабатывается без ложного успеха; Firestore rules отдельно не изменялись и требуют проверки перед write rollout.
+3. [~] `PERMISSION_DENIED` обрабатывается без ложного успеха. В Debug/dev добавлен read-only rules probe: он проверяет server reads чужого `users/{uid}` и его `certificates`, не выполняя записей. Ручной device test ещё не пройден.
 4. [x] iOS показывает отдельные cloud/local read-only списки; email delivery и генерация новых сертификатов отсутствуют.
 
 Гейт: один и тот же UID видит одинаковый набор уже выданных сертификатов на Android и iOS.
@@ -101,7 +101,7 @@
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
 2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. Отдельный Dev Firebase project готов; теперь повторить на реальном iPhone Google sign-in, read-only snapshot и controlled upload. Затем проверить offline/unavailable, `PERMISSION_DENIED` и изменение cloud между backup и transaction. Никаких silent restore/upload.
+3. Device test отдельного Dev Firebase project подтверждён. Теперь на реальном iPhone нажать `Verify UID isolation` и получить `Passed`. Затем проверить offline/unavailable и изменение cloud между backup и transaction. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка

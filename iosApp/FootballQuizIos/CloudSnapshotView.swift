@@ -1,4 +1,5 @@
 import FootballQuizShared
+import FirebaseFirestore
 import SwiftUI
 
 struct CloudSnapshotView: View {
@@ -11,6 +12,9 @@ struct CloudSnapshotView: View {
   @State private var statusMessage: String?
   @State private var forceConflictReview = false
   @State private var pendingUpload: PendingCloudUpload?
+  #if DEBUG
+    @State private var rulesProbeState: RulesProbeState = .idle
+  #endif
 
   private let background = Color(red: 0.95, green: 0.96, blue: 0.91)
   private let forest = Color(red: 0.06, green: 0.24, blue: 0.17)
@@ -37,6 +41,9 @@ struct CloudSnapshotView: View {
     .navigationTitle("Cloud data")
     .navigationBarTitleDisplayMode(.inline)
     .task(id: userId) {
+      #if DEBUG
+        rulesProbeState = .idle
+      #endif
       localStore.load(userId: userId)
       certificateStore.load(userId: userId)
       backupStore.loadLatest(userId: userId)
@@ -48,6 +55,9 @@ struct CloudSnapshotView: View {
       certificateStore.clearInMemory()
       backupStore.clearInMemory()
       cloudWriter.reset()
+      #if DEBUG
+        rulesProbeState = .idle
+      #endif
     }
     .alert(
       "Upload local progress to cloud?",
@@ -103,6 +113,9 @@ struct CloudSnapshotView: View {
         certificates: certificates,
         certificatesFromCache: certificatesFromCache
       )
+      #if DEBUG
+        rulesIsolationCard
+      #endif
       retryButton
     }
   }
@@ -451,6 +464,85 @@ struct CloudSnapshotView: View {
     }
   }
 
+  #if DEBUG
+    private var rulesIsolationCard: some View {
+      VStack(alignment: .leading, spacing: 12) {
+        Label("Firestore rules check", systemImage: "lock.shield")
+          .font(.headline)
+
+        Text("Performs server-only reads against a deliberately different UID. It never writes data and passes only when both the user document and certificate path return PERMISSION_DENIED.")
+          .foregroundStyle(.secondary)
+
+        Button("Verify UID isolation") {
+          Task { await verifyFirestoreIsolation() }
+        }
+        .buttonStyle(.borderedProminent)
+        .tint(forest)
+        .disabled(rulesProbeState.isRunning || !ControlledCloudWriter.isAllowedBuild)
+
+        switch rulesProbeState {
+        case .idle:
+          if !ControlledCloudWriter.isAllowedBuild {
+            Text("Locked: use the Debug app connected to the Firebase Dev project.")
+              .font(.footnote)
+              .foregroundStyle(.orange)
+          }
+        case .running:
+          ProgressView("Checking server rules…")
+            .font(.footnote)
+        case .passed:
+          Text("Passed: Firestore denied both foreign-UID reads.")
+            .font(.footnote)
+            .foregroundStyle(forest)
+        case .failed(let message):
+          Text(message)
+            .font(.footnote)
+            .foregroundStyle(.red)
+        }
+      }
+      .cardStyle()
+    }
+
+    private func verifyFirestoreIsolation() async {
+      rulesProbeState = .running
+      guard ControlledCloudWriter.isAllowedBuild else {
+        rulesProbeState = .failed("Rules check is available only in the Firebase Dev build.")
+        return
+      }
+
+      let probeUserId = "__firestore_rules_foreign_uid_probe__"
+      guard probeUserId != userId else {
+        rulesProbeState = .failed("Could not create a foreign-UID probe path.")
+        return
+      }
+
+      let foreignUser = Firestore.firestore().collection("users").document(probeUserId)
+      let references = [
+        foreignUser,
+        foreignUser.collection("certificates").document("__probe__")
+      ]
+
+      for reference in references {
+        do {
+          _ = try await reference.getDocument(source: .server)
+          rulesProbeState = .failed("Rules check failed: a foreign-UID path was readable. No data was written.")
+          return
+        } catch {
+          let nsError = error as NSError
+          guard
+            nsError.domain == FirestoreErrorDomain,
+            FirestoreErrorCode.Code(rawValue: nsError.code) == .permissionDenied
+          else {
+            rulesProbeState = .failed("Rules check could not finish online: \(error.localizedDescription)")
+            return
+          }
+        }
+      }
+
+      rulesProbeState = .passed
+    }
+  #endif
+
   private var retryButton: some View {
     Button {
       Task { await reloadCloud() }
@@ -565,6 +657,20 @@ struct CloudSnapshotView: View {
     "sync_keep_local_\(userId)"
   }
 }
+
+#if DEBUG
+  private enum RulesProbeState {
+    case idle
+    case running
+    case passed
+    case failed(String)
+
+    var isRunning: Bool {
+      if case .running = self { return true }
+      return false
+    }
+  }
+#endif
 
 private struct PendingCloudUpload {
   let localData: Data
