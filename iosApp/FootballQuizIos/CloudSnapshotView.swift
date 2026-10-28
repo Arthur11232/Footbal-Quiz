@@ -510,7 +510,7 @@ struct CloudSnapshotView: View {
         return
       }
 
-      let probeUserId = "__firestore_rules_foreign_uid_probe__"
+      let probeUserId = "codex_rules_foreign_uid_probe"
       guard probeUserId != userId else {
         rulesProbeState = .failed("Could not create a foreign-UID probe path.")
         return
@@ -519,7 +519,7 @@ struct CloudSnapshotView: View {
       let foreignUser = Firestore.firestore().collection("users").document(probeUserId)
       let references = [
         foreignUser,
-        foreignUser.collection("certificates").document("__probe__")
+        foreignUser.collection("certificates").document("rules_probe")
       ]
 
       for reference in references {
