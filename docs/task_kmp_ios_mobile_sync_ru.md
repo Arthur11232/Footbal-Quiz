@@ -88,11 +88,11 @@
 
 ## Checkpoint 5: Сертификаты
 
-Промежуточный статус 2026-10-11: cloud certificates автоматически объединяются с защищённым локальным хранилищем отдельно для каждого UID. На один stage сохраняется один стабильный сертификат; при несовпадении ID сохраняется самый ранний выданный сертификат и показывается предупреждение. Пустой cloud response, logout, повторный login и progress restore не удаляют локальные сертификаты. Основной сценарий на iPhone подтверждён пользователем; Debug/dev и Release/prod Simulator builds прошли. Отдельная проверка `PERMISSION_DENIED` остаётся перед production rollout.
+Статус: cloud certificates автоматически объединяются с защищённым локальным хранилищем отдельно для каждого UID. На один stage сохраняется один стабильный сертификат; при несовпадении ID сохраняется самый ранний выданный сертификат и показывается предупреждение. Пустой cloud response, logout, повторный login и progress restore не удаляют локальные сертификаты. Основной сценарий на iPhone подтверждён пользователем; Debug/dev и Release/prod Simulator builds прошли. 2026-10-29 read-only rules probe на реальном iPhone подтвердил `PERMISSION_DENIED` для чужого user document и certificates.
 
 1. [x] Сертификаты читаются и объединяются независимо от выбора progress, с дедупликацией по stage/certificate ID.
 2. [x] Ранее выданные сертификаты сохраняются по UID и не удаляются при logout/login или restore; повторный запуск на iPhone проверен.
-3. [~] `PERMISSION_DENIED` обрабатывается без ложного успеха. В Debug/dev добавлен read-only rules probe: он проверяет server reads чужого `users/{uid}` и его `certificates`, не выполняя записей. Ручной device test ещё не пройден.
+3. [x] `PERMISSION_DENIED` обрабатывается без ложного успеха. Debug/dev read-only rules probe на реальном iPhone подтвердил, что чужие `users/{uid}` и `certificates` недоступны; записи не выполнялись.
 4. [x] iOS показывает отдельные cloud/local read-only списки; email delivery и генерация новых сертификатов отсутствуют.
 
 Гейт: один и тот же UID видит одинаковый набор уже выданных сертификатов на Android и iOS.
@@ -101,7 +101,7 @@
 
 1. Не смешивать оставшиеся QA/маркетинговые/IDE-файлы с iOS sync. Коммитить только явно относящиеся к задаче файлы.
 2. На Android проверить UID того же Google-аккаунта и сравнить с уже подтверждённым iOS UID. На iPhone открыть read-only Cloud snapshot онлайн и offline, проверить данные/сертификаты и permission errors. Верхний отступ главного экрана после правки 2026-09-30 тоже проверить визуально.
-3. Device test отдельного Dev Firebase project подтверждён. Теперь на реальном iPhone нажать `Verify UID isolation` и получить `Passed`. Затем проверить offline/unavailable и изменение cloud между backup и transaction. Никаких silent restore/upload.
+3. Device test отдельного Dev Firebase project и UID isolation подтверждёны. Теперь на реальном iPhone проверить offline/unavailable, затем изменение cloud между backup и transaction. Никаких silent restore/upload.
 4. Текущий production question source — `app/questions_audit_backup_AFTER_es_de_it_firestore_update_2026_09_11.json`; test-reference для Versus — `docs/ronaldo_vs_messi_questions_answers_en.md` и `docs/real_madrid_vs_barcelona_questions_answers_en.md`.
 
 ## Приёмка
