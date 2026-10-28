@@ -647,7 +647,7 @@ Admin auth boundary
 ### Backend
 
 - ветка: `codex/news-api-staging-deploy`;
-- актуальный HEAD: `e08abe8 Add News competition and club editing`;
+- актуальный HEAD: `3e8593e Add safe News primary category backfill`;
 - реализована Firebase ID Token проверка и строгий `NEWS_ADMIN_UIDS` allowlist;
 - применена additive admin migration с `primary_category_id`, audit log и revisions;
 - работают защищённые session, list, create, read, update и delete-draft endpoints;
@@ -655,7 +655,8 @@ Admin auth boundary
 - publish и republish создают immutable revision, изменения пишутся в audit log;
 - добавлен защищённый taxonomy endpoint для активных competitions и clubs;
 - draft update сохраняет article↔competition и article↔club links и проверяет совместимость competition с primary category;
-- PHPUnit: `79` tests / `162` assertions.
+- добавлена dry-run-first CLI-команда для backfill основной категории с транзакцией и audit log;
+- PHPUnit: `85` tests / `168` assertions.
 
 ### Web Admin
 
@@ -692,7 +693,7 @@ real-madrid-wins-clasico-barcelona-2-1
 - scheduler discovery ещё не начат;
 - cPanel Cron не настроен;
 - archive action реализован и развёрнут, но destructive staging-проверка на реальной опубликованной статье сознательно не выполнялась;
-- старые импортированные статьи имеют category associations, но часть из них ещё не получила новый `primary_category_id`, поэтому Admin может показывать `без категории`;
+- `2026-10-28` backfill завершён: шесть legacy-статей получили `primary_category_id` категории `top-5`, созданы audit-записи; контрольный dry-run вернул `candidate_count: 0`, `unresolved: []`;
 - отдельный admin subdomain пока не создан: используется закрытый staging path.
 
-Следующий безопасный шаг: завершить Phase B backfill/verification для legacy primary categories, затем переходить к Phase C — source registry, candidates, fetch runs и одному официальному discovery adapter без автопубликации.
+Следующий безопасный шаг: переходить к Phase C — source registry, candidates, fetch runs и одному официальному discovery adapter без автопубликации.
